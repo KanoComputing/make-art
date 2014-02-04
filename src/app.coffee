@@ -1,1 +1,3 @@
-module.exports = {}
+editor = require './ui/editor'
+
+editor.init()

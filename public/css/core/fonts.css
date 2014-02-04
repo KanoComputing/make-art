@@ -1,0 +1,21 @@
+@font-face {
+  font-family: 'Proxima Nova Soft';
+  src: url("../fonts/proxima-nova-soft-black-webfont.eot");
+  src: url("../fonts/proxima-nova-soft-black-webfont.eot?#iefix") format('embedded-opentype'), url("../fonts/proxima-nova-soft-black-webfont.woff") format('woff'), url("../fonts/proxima-nova-soft-black-webfont.ttf") format('truetype'), url("../fonts/proxima-nova-soft-black-webfont.svg#proximanovasoft-buploadedfile") format('svg');
+  font-weight: light;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Proxima Nova Soft';
+  src: url("../fonts/proxima-nova-soft-light-webfont.eot");
+  src: url("../fonts/proxima-nova-soft-light-webfont.eot?#iefix") format('embedded-opentype'), url("../fonts/proxima-nova-soft-light-webfont.woff") format('woff'), url("../fonts/proxima-nova-soft-light-webfont.ttf") format('truetype'), url("../fonts/proxima-nova-soft-light-webfont.svg#proximanovasoft-ruploadedfile") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Proxima Nova Soft';
+  src: url("../fonts/proxima-nova-soft-normal-webfont.eot");
+  src: url("../fonts/proxima-nova-soft-normal-webfont.eot?#iefix") format('embedded-opentype'), url("../fonts/proxima-nova-soft-normal-webfont.woff") format('woff'), url("../fonts/proxima-nova-soft-normal-webfont.ttf") format('truetype'), url("../fonts/proxima-nova-soft-normal-webfont.svg#proximanovasoft-muploadedfile") format('svg');
+  font-weight: bold;
+  font-style: normal;
+}

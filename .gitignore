@@ -4,3 +4,4 @@ public/js/app.js
 .tmp
 node_modules
 **.DS_Store
+**.sublime-workspace

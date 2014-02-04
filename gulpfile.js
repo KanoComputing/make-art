@@ -1,45 +1,67 @@
 var gulp = require('gulp'),
     jade = require('gulp-jade'),
-    coffee = require('gulp-coffee'),
     browserify = require('gulp-browserify'),
-    stylus = require('gulp-stylus');
+    stylus = require('gulp-stylus'),
+    lr = require('tiny-lr'),
+    livereload = require('gulp-livereload'),
+    rename = require('gulp-rename');
+
+var server = lr(),
+    env = process.env.NODE_ENV === 'production' ? 'production' : 'develpoment',
+    production = env === 'production';
 
 var paths = {
-    views: { src: 'views/*.jade', out: 'public' },
-    coffee: { src: 'src/*.coffee', out: '.tmp' },
-    browserify: { src: '.tmp/app.js', out: 'public/js' },
-    styles: { src: 'styles/main.styl', out: 'public/css' }
+    views: { watch: 'views/**.jade', src: 'views/*.jade', out: 'public' },
+    browserify: { watch: [ 'src/*.coffee', 'src/*/**.coffee' ], src: 'src/app.coffee', out: 'public/js' },
+    styles: { watch: 'styles/*/**.styl', src: 'styles/main.styl', out: 'public/css' }
 };
 
-gulp.task('coffee', function () {
-    gulp.src(paths.coffee.src)
-    .pipe(coffee({ bare: true }))
-    .pipe(gulp.dest(paths.coffee.out));
-});
-
 gulp.task('browserify', function () {
-    gulp.src(paths.browserify.src)
-    .pipe(browserify())
-    .pipe(gulp.dest(paths.browserify.out));
+    gulp.src(paths.browserify.src,  { read: false })
+    .pipe(browserify({
+        transform: [ 'coffeeify' ],
+        extensions: [ '.coffee' ]
+    }))
+    .pipe(rename('app.js'))
+    .pipe(gulp.dest(paths.browserify.out))
+    .pipe(livereload(server));
 });
 
 gulp.task('styles', function () {
     gulp.src(paths.styles.src)
-    .pipe(stylus({ pretty: true }))
-    .pipe(gulp.dest(paths.styles.out));
+    .pipe(stylus({
+        pretty: !production,
+        use: [ 'griddy', 'nib' ]
+    }))
+    .pipe(gulp.dest(paths.styles.out))
+    .pipe(livereload(server));
 });
 
 gulp.task('views', function () {
     gulp.src(paths.views.src)
-    .pipe(jade({ pretty: true }))
-    .pipe(gulp.dest(paths.views.out));
+    .pipe(jade({
+        pretty: !production,
+        locals: {
+            env: env,
+            production: production
+        }
+    }))
+    .pipe(gulp.dest(paths.views.out))
+    .pipe(livereload(server));
 });
 
-gulp.task('watch', function () {
-    gulp.watch(paths.coffee.src, [ 'coffee' ]);
-    gulp.watch(paths.browserify.src, [ 'browserify' ]);
-    gulp.watch(paths.styles.src, [ 'styles' ]);
-    gulp.watch(paths.views.src, [ 'views' ]);
+gulp.task('livereload', function (next) {
+    livereload(server);
+    next();
 });
 
-gulp.task('default', [ 'coffee', 'browserify', 'styles', 'views' ]);
+gulp.task('listen', function (next) {
+    server.listen(35729, next);
+});
+
+gulp.task('watch', [ 'listen' ], function () {
+    gulp.watch(paths.browserify.watch, [ 'browserify' ]);
+    gulp.watch(paths.styles.watch, [ 'styles' ]);
+    gulp.watch(paths.views.watch, [ 'views' ]);
+});
+

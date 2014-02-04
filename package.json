@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "http-server -p 9000 public",
+    "watch": "gulp watch",
+    "build": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -11,8 +14,14 @@
   "dependencies": {
     "gulp": "~3.5.1",
     "gulp-jade": "~0.4.0",
-    "gulp-coffee": "~1.4.1",
     "gulp-browserify": "~0.4.2",
-    "gulp-stylus": "0.0.11"
+    "gulp-stylus": "0.0.11",
+    "griddy": "0.0.1",
+    "nib": "~1.0.2",
+    "gulp-livereload": "~0.3.1",
+    "tiny-lr": "0.0.5",
+    "coffeeify": "~0.6.0",
+    "gulp-rename": "~0.2.2",
+    "http-server": "~0.6.1"
   }
 }

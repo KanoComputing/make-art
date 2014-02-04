@@ -6,10 +6,26 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="orange">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
-    <link href="/css/main.css" rel="stylesheet" type="text/css">
-    <title>Draw!</title>
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lemon" rel="stylesheet" type="text/css">
+    <title>Draw with code</title>
   </head>
   <body>
-    <script src="/js/app.js" type="text/javascript"></script>
+    <section>
+      <div class="page-width">
+        <div class="row">
+          <div class="col-6">
+            <h3>Your spell:</h3>
+            <div class="editor-wrap">
+              <div id="editor"># Type some code...</div>
+            </div>
+          </div>
+          <div class="col-6">[ Preview here... ]</div>
+        </div>
+      </div>
+    </section>
+    <script src="js/vendor/ace/ace.js" type="text/javascript"></script>
+    <script src="js/app.js" type="text/javascript"></script>
+    <script src="http://localhost:35729/livereload.js?snipver=1" type="text/javascript"></script>
   </body>
 </html>

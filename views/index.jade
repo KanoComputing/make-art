@@ -11,10 +11,28 @@ html(lang='en', ng-app=ngApp)
         meta(name='viewport', content='initial-scale=1, maximum-scale=1, user-scalable=no')
 
         //- Styles
-        link(href='/css/main.css', rel='stylesheet', type='text/css')
+        link(href='css/main.css', rel='stylesheet', type='text/css')
+        link(href='http://fonts.googleapis.com/css?family=Lemon', rel='stylesheet', type='text/css')
 
-        title Draw!
+        title Draw with code
 
     body
-        //- Scripts
-        script(src='/js/app.js', type='text/javascript')
+        section: .page-width
+
+            .row
+                .col-6
+                    h3 Your spell:
+
+                    .editor-wrap: #editor # Type some code...
+
+                .col-6 [ Preview here... ]
+
+        //- Vendor
+        script(src='js/vendor/ace/ace.js', type='text/javascript')
+
+        //- App
+        script(src='js/app.js', type='text/javascript')
+
+        //- Livereload
+        if !production
+            script(src='http://localhost:35729/livereload.js?snipver=1', type='text/javascript')
