@@ -19,14 +19,16 @@ html(lang='en', ng-app=ngApp)
     body
         section: .page-width
 
+            h1.center Draw with code!
+
             .row
                 .col-6
-                    h3 Your spell:
-                    div#editor
+                    div#editor!= getCodeExample('default')
 
                 .col-6
-                    h3 Your Sketch
                     .display-wrap: canvas#display
+
+            include partials/docs
 
         //- Vendor
         script(src='js/vendor/ace/ace.js', type='text/javascript')

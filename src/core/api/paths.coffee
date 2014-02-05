@@ -4,6 +4,7 @@ utils = require './utils'
 
 lineTo = (x, y) ->
     ratio = session.ratio
+
     { x, y } = utils.parseCoordinates x, y
 
     space.moveTo session.pos.x, session.pos.y

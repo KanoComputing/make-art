@@ -26,13 +26,13 @@ parseCoordinate = (val, type = 'x') ->
     if typeof val is 'string'
         if type is 'x'
             switch val
-                when 'center' then return display.getCenter().x
-                when 'right' then return display.width
+                when 'center' then return session.display.getCenter().x
+                when 'right' then return session.display.width
                 when 'left' then return 0
         else if type is 'y'
             switch val
-                when 'center' then return display.getCenter().y
-                when 'bottom' then return display.height
+                when 'center' then return session.display.getCenter().y
+                when 'bottom' then return session.display.height
                 when 'top' then return 0
     val
 

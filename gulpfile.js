@@ -4,14 +4,16 @@ var gulp = require('gulp'),
     stylus = require('gulp-stylus'),
     lr = require('tiny-lr'),
     livereload = require('gulp-livereload'),
-    rename = require('gulp-rename');
+    rename = require('gulp-rename'),
+    jadeHelpers = require('./utils/jadeHelpers'),
+    _ = require('lodash');
 
 var server = lr(),
     env = process.env.NODE_ENV === 'production' ? 'production' : 'develpoment',
     production = env === 'production';
 
 var paths = {
-    views: { watch: 'views/**.jade', src: 'views/*.jade', out: 'public' },
+    views: { watch: [ 'views/*/**.jade', 'views/*.jade', 'content/*', 'content/*/**' ], src: 'views/*.jade', out: 'public' },
     browserify: { watch: [ 'src/*.coffee', 'src/*/**.coffee', 'src/*/**/***.coffee' ], src: 'src/app.coffee', out: 'public/js' },
     styles: { watch: 'styles/*/**.styl', src: 'styles/main.styl', out: 'public/css' }
 };
@@ -41,10 +43,10 @@ gulp.task('views', function () {
     gulp.src(paths.views.src)
     .pipe(jade({
         pretty: !production,
-        locals: {
+        locals: _.extend({
             env: env,
             production: production
-        }
+        }, jadeHelpers)
     }))
     .pipe(gulp.dest(paths.views.out))
     .pipe(livereload(server));

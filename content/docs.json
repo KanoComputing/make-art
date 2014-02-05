@@ -1,0 +1,128 @@
+[
+    {
+        "label": "Shapes",
+        "commands": [
+            {
+                "call": "circle",
+                "description": "Draw a circle centered on the current position",
+                "args": [
+                    [ "radius", "The circle size", true ]
+                ]
+            },
+            {
+                "call": "ellipse",
+                "description": "Draw an ellipse centered on the current position",
+                "args": [
+                    [ "radius-x", "The ellipse horizontal size", true ],
+                    [ "radius-y", "The ellipse vertical size", true ]
+                ]
+            },
+            {
+                "call": "square",
+                "description": "Draw a square centered on the current position",
+                "args": [
+                    [ "size", "The size of the square", true ]
+                ]
+            },
+            {
+                "call": "rectangle",
+                "description": "Draw a rectangle centered on the current position",
+                "args": [
+                    [ "width", "The rectangle width", true ],
+                    [ "height", "The rectangle height", true ]
+                ]
+            }
+        ]
+    },
+    {
+        "label": "Colors",
+        "commands": [
+            {
+                "call": "color",
+                "description": "Change the color in use",
+                "args": [
+                    [ "color", "The color to use", true ]
+                ]
+            },
+            {
+                "call": "stroke",
+                "description": "Change the line color and width in use",
+                "args": [
+                    [ "size", "(number) The line width to use", false ],
+                    [ "color", "A string with the color to use - E.g. 'red', 'blue'..", false ]
+                ]
+            },
+            {
+                "call": "strokeColor",
+                "description": "The stroke color to use",
+                "args": [
+                    [ "color", "A string with the color to use - E.g. 'red', 'blue'..", true ]
+                ]
+            },
+            {
+                "call": "strokeWidth",
+                "description": "The stroke width to use",
+                "args": [
+                    [ "size", "A number with the line width to use", true ]
+                ]
+            }
+        ]
+    },
+    {
+        "label": "Lines",
+        "commands": [
+            {
+                "call": "line",
+                "description": "Draw a line starting from the current position",
+                "args": [
+                    [ "x", "Horizontal distance", true ],
+                    [ "y", "Vertical distance", false ]
+                ]
+            },
+            {
+                "call": "lineTo",
+                "description": "Draw a line to any position",
+                "args": [
+                    [ "x", "The horizontal destination", true ],
+                    [ "y", "The vertical destination", true ]
+                ]
+            }
+        ]
+    },
+    {
+        "label": "Position",
+        "commands": [
+            {
+                "call": "move",
+                "description": "Move the cursor starting from the current position",
+                "args": [
+                    [ "x", "Horizontal distance", true ],
+                    [ "y", "Vertical distance", false ]
+                ]
+            },
+            {
+                "call": "moveTo",
+                "description": "Move the cursor to any position",
+                "args": [
+                    [ "x", "The horizontal destination", true ],
+                    [ "y", "The vertical destination", true ]
+                ]
+            }
+        ]
+    },
+    {
+        "label": "General",
+        "commands": [
+            {
+                "call": "clear",
+                "description": "Clear the sketch",
+                "args": []
+            },
+            {
+                "call": "reset",
+                "description": "Reset styles",
+                "args": []
+            }
+        ]
+    }
+]
