@@ -1,5 +1,7 @@
 session = require './session'
 
+CURSOR_SIZE = 10
+
 startShape = ->
     session.ctx.beginPath()
 
@@ -38,10 +40,22 @@ parseCoordinates = (x, y) ->
     y = @parseCoordinate y, 'y'
     { x, y }
 
+drawCursor = (pos, color = '#000') ->
+    startShape()
+    session.ctx.strokeStyle = color
+    session.ctx.moveTo pos.x - CURSOR_SIZE / 2, pos.y
+    session.ctx.lineTo pos.x + CURSOR_SIZE / 2, pos.y
+    session.ctx.moveTo pos.x, pos.y - CURSOR_SIZE / 2
+    session.ctx.lineTo pos.x, pos.y + CURSOR_SIZE / 2
+    endShape()
+    session.ctx.strokeStyle = session.settings.stroke.color
+    session.ctx.moveTo pos.x, pos.y
+
 module.exports = {
     startShape,
     endShape,
     parseLineStyle,
     parseCoordinate,
-    parseCoordinates
+    parseCoordinates,
+    drawCursor
 }

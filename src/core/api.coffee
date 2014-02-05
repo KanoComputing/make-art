@@ -1,6 +1,7 @@
 coffee = require 'coffee-script'
 session = require './api/session'
 general = require './api/general'
+utils = require './api/utils'
 
 { clear, reset } = require './api/general'
 { lineTo, line } = require './api/paths'
@@ -28,5 +29,7 @@ run = (display, code) ->
     catch error
         console.log "[ API error ] #{error}:"
         return
+
+    utils.drawCursor session.pos
 
 module.exports = { run }
