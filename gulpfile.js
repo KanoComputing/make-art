@@ -66,3 +66,5 @@ gulp.task('watch', [ 'listen' ], function () {
     gulp.watch(paths.styles.watch, [ 'styles' ]);
     gulp.watch(paths.views.watch, [ 'views' ]);
 });
+
+gulp.task('default', [ 'browserify', 'styles', 'views' ]);

@@ -4,7 +4,7 @@
 
 ## Setup
 
-    git clone git@github.com:tancredi/draw.js.git
+    git clone git@github.com:tancredi/draw.git
     cd draw
     npm install
 
