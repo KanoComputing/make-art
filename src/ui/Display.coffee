@@ -15,9 +15,14 @@ class Display
     update: => api.run @, @code or ''
 
     resize: ->
-        @width = @canvas.width = @canvas.offsetWidth
-        @height = @canvas.height = @canvas.offsetHeight
+        @ratio = window.devicePixelRatio or 1
 
-    getCenter: -> x: @canvas.width / 2, y: @canvas.height / 2
+        @width = @canvas.offsetWidth
+        @height = @canvas.offsetHeight
+
+        @canvas.width = @width * @ratio
+        @canvas.height = @height * @ratio
+
+    getCenter: -> x: @width / 2, y: @height / 2
 
 module.exports = Display

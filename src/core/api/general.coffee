@@ -3,10 +3,13 @@ space = require './space'
 setters = require './setters'
 
 clear = ->
-    session.ctx.clearRect 0, 0, session.display.width, session.display.height
+    width = session.display.width * session.ratio
+    height = session.display.height * session.ratio
+
+    session.ctx.clearRect 0, 0, width, height
     session.ctx.fillStyle = session.settings.bg
     session.ctx.beginPath()
-    session.ctx.rect 0, 0, session.display.width, session.display.height
+    session.ctx.rect 0, 0, width, height
     session.ctx.closePath()
     session.ctx.fill()
 

@@ -3,11 +3,13 @@ space = require './space'
 utils = require './utils'
 
 lineTo = (x, y) ->
-    space.moveTo session.pos.x, session.pos.y
+    ratio = session.ratio
     { x, y } = utils.parseCoordinates x, y
+
+    space.moveTo session.pos.x, session.pos.y
     utils.startShape()
-    session.ctx.moveTo session.pos.x, session.pos.y
-    session.ctx.lineTo x, y
+    session.ctx.moveTo session.pos.x * ratio, session.pos.y * ratio
+    session.ctx.lineTo x * ratio, y * ratio
     utils.endShape()
     space.moveTo x, y
 

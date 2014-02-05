@@ -14,6 +14,7 @@ reset = (display) ->
     session.ctx = display.ctx
     session.settings = null
     general.reset()
+    session.ratio = display.ratio
 
 run = (display, code) ->
     reset display
