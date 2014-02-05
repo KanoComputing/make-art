@@ -11,7 +11,7 @@
   },
   "author": "",
   "license": "BSD-2-Clause",
-  "dependencies": {
+  "devDependencies": {
     "gulp": "~3.5.1",
     "gulp-jade": "~0.4.0",
     "gulp-browserify": "~0.4.2",
