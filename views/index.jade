@@ -22,10 +22,11 @@ html(lang='en', ng-app=ngApp)
             .row
                 .col-6
                     h3 Your spell:
+                    div#editor # Type some code...
 
-                    .editor-wrap: #editor # Type some code...
-
-                .col-6 [ Preview here... ]
+                .col-6
+                    h3 Your Sketch
+                    .display-wrap: canvas#display
 
         //- Vendor
         script(src='js/vendor/ace/ace.js', type='text/javascript')
