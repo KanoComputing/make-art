@@ -2,6 +2,8 @@
 
 > App to learn programming using a basic CoffeeScript drawing API
 
+![Screenshot of the App](http://oi61.tinypic.com/23trsj8.jpg)
+
 ## Setup
 
     git clone git@github.com:tancredi/draw.git
