@@ -1,7 +1,7 @@
 {
   "name": "draw",
   "version": "0.0.0",
-  "description": "",
+  "description": "App to learn programming using a basic CoffeeScript drawing API",
   "main": "index.js",
   "scripts": {
     "start": "http-server -p 9000 public",
