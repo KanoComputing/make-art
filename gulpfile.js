@@ -12,7 +12,7 @@ var server = lr(),
 
 var paths = {
     views: { watch: 'views/**.jade', src: 'views/*.jade', out: 'public' },
-    browserify: { watch: [ 'src/*.coffee', 'src/*/**.coffee' ], src: 'src/app.coffee', out: 'public/js' },
+    browserify: { watch: [ 'src/*.coffee', 'src/*/**.coffee', 'src/*/**/***.coffee' ], src: 'src/app.coffee', out: 'public/js' },
     styles: { watch: 'styles/*/**.styl', src: 'styles/main.styl', out: 'public/css' }
 };
 

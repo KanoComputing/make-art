@@ -12,10 +12,12 @@ init = ->
     editor.focus()
     bind()
 
+update = ->
+    display.setCode(editor.value()).update()
+
 bind = ->
-    editor.engine.on 'change', =>
-        lines = editor.value()
-        display.setCode(lines).update()
+    update()
+    editor.engine.on 'change', update
 
 init()
 

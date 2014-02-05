@@ -23,6 +23,7 @@
     "coffeeify": "~0.6.0",
     "gulp-rename": "~0.2.2",
     "http-server": "~0.6.1",
-    "lodash": "~2.4.1"
+    "lodash": "~2.4.1",
+    "coffee-script": "~1.7.1"
   }
 }
