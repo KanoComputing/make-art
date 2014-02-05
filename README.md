@@ -18,7 +18,7 @@ Build the app before running it
 
     npm start
 
-Open your browser at [http://localhost:8000](http://localhost:8000)
+Open your browser at [http://localhost:9000](http://localhost:9000)
 
 ## Develop
 
