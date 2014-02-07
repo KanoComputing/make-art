@@ -13,8 +13,8 @@ var server = lr(),
     production = env === 'production';
 
 var paths = {
-    views: { watch: [ 'views/*/**.jade', 'views/*.jade', 'content/*', 'content/*/**' ], src: 'views/*.jade', out: 'public' },
-    browserify: { watch: [ 'src/*.coffee', 'src/*/**.coffee', 'src/*/**/***.coffee' ], src: 'src/app.coffee', out: 'public/js' },
+    views: { watch: [ 'views/*/**.jade', 'views/*.jade', 'content/*', 'content/*/**' ], src: [ 'views/*/**.jade', 'views/*.jade' ], out: 'public' },
+    browserify: { watch: [ 'src/*.coffee', 'src/*/**.coffee', 'src/*/**/***.coffee' ], src: 'src/index.coffee', out: 'public/js' },
     styles: { watch: 'styles/*/**.styl', src: 'styles/main.styl', out: 'public/css' }
 };
 
@@ -24,7 +24,7 @@ gulp.task('browserify', function () {
         transform: [ 'coffeeify' ],
         extensions: [ '.coffee' ]
     }))
-    .pipe(rename('app.js'))
+    .pipe(rename('index.js'))
     .pipe(gulp.dest(paths.browserify.out))
     .pipe(livereload(server));
 });

@@ -1,0 +1,11 @@
+section: .page-width
+
+    h1.center Draw with code!
+
+    .row
+        .col-6
+            editor(ng-model='test')
+        .col-6
+            canvas(display, ng-source='test')
+
+    include partial/docs

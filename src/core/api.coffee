@@ -1,4 +1,5 @@
 coffee = require 'coffee-script'
+config = require '../core/config'
 session = require './api/session'
 general = require './api/general'
 utils = require './api/utils'
@@ -22,13 +23,15 @@ run = (display, code) ->
     try
         compiled = coffee.compile code
     catch error
-        console.log "[ Compile error ] #{error}"
+        if config.DEBUG_LEVEL > 0
+            console.warn "[ Compile error ] #{error}"
         return
 
     try
         eval compiled
     catch error
-        console.log "[ API error ] #{error}:"
+        if config.DEBUG_LEVEL > 0
+            console.warn "[ API error ] #{error}:"
         return
 
     utils.drawCursor session.pos

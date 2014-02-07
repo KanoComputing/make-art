@@ -1,14 +1,3 @@
-_ = require 'lodash'
-
-defaults =
-    theme: 'ace/theme/dawn',
-    wrapMode: false,
-    highlighLine: false,
-    showRuler: true
-    readOnly: false
-    mode: 'ace/mode/coffee'
-    softTabs: true
-
 class Editor
 
     constructor: (@element, options) ->
