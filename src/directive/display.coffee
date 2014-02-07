@@ -3,11 +3,11 @@ app = require '../app'
 app.directive 'display', ($window) ->
 
     {
-        restrict: 'A'
+        restrict: 'E'
         templateUrl: 'directive/display.html'
         scope: ngSource: '=ngSource'
         link: (scope, element, attrs) ->
-            scope.canvas = element[0]
+            scope.canvas = element.find('canvas')[0]
             scope.ctx = scope.canvas.getContext '2d'
 
             scope.getCenter = -> x: scope.width / 2, y: scope.height / 2
