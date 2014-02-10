@@ -1,6 +1,6 @@
-public/*/**.html
-public/css/main.css
-public/js/app.js
+www/*/**.html
+www/css/main.css
+www/js/app.js
 .tmp
 node_modules
 **.DS_Store
