@@ -4,6 +4,8 @@
 
 ![Screenshot of the App](http://oi61.tinypic.com/23trsj8.jpg)
 
+You can try the app [here »](http://drawwithcode.herokuapp.com/)
+
 ## Setup
 
     git clone git@github.com:tancredi/draw.git
