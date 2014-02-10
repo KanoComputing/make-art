@@ -8,7 +8,7 @@
     "watch": "gulp watch",
     "build": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "node ./node_modules/gulp/bin/gulp.js"
+    "postinstall": "./node_modules/.bin/gulp"
   },
   "author": "",
   "license": "BSD-2-Clause",
