@@ -1,18 +1,17 @@
 {
   "name": "draw",
-  "version": "0.0.0-1",
+  "version": "0.0.0-2",
   "description": "App to learn programming using a basic CoffeeScript drawing API",
   "main": "index.js",
   "scripts": {
     "start": "http-server -p 80 www",
     "watch": "gulp watch",
     "build": "gulp",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "./node_modules/.bin/gulp"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "BSD-2-Clause",
-  "devDependencies": {
+  "dependencies": {
     "gulp": "~3.5.X",
     "gulp-jade": "~0.4.x",
     "gulp-browserify": "~0.4.x",
