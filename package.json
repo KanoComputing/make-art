@@ -7,7 +7,8 @@
     "start": "http-server -p 80 www",
     "watch": "gulp watch",
     "build": "gulp",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "npm run build"
   },
   "author": "",
   "license": "BSD-2-Clause",
@@ -25,5 +26,9 @@
     "http-server": "~0.6.1",
     "lodash": "~2.4.1",
     "coffee-script": "~1.7.1"
+  },
+  "engines": {
+    "node": "0.10.x"
   }
+
 }
