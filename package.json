@@ -13,22 +13,22 @@
   "author": "",
   "license": "BSD-2-Clause",
   "dependencies": {
-    "gulp": "~3.5.1",
-    "gulp-jade": "~0.4.0",
-    "gulp-browserify": "~0.4.2",
-    "gulp-stylus": "0.0.11",
-    "griddy": "0.0.1",
-    "nib": "~1.0.2",
-    "gulp-livereload": "~0.3.1",
-    "tiny-lr": "0.0.5",
-    "coffeeify": "~0.6.0",
-    "gulp-rename": "~0.2.2",
-    "http-server": "~0.6.1",
-    "lodash": "~2.4.1",
-    "coffee-script": "~1.7.1"
+    "gulp": "~3.5.X",
+    "gulp-jade": "~0.4.x",
+    "gulp-browserify": "~0.4.x",
+    "gulp-stylus": "0.0.x",
+    "griddy": "0.0.x",
+    "nib": "~1.0.x",
+    "gulp-livereload": "~0.3.x",
+    "tiny-lr": "0.0.x",
+    "coffeeify": "~0.6.x",
+    "gulp-rename": "~0.2.x",
+    "http-server": "~0.6.x",
+    "lodash": "~2.4.x",
+    "coffee-script": "~1.7.x"
   },
   "engines": {
     "node": "0.10.x"
-  }
-
+  },
+  "subdomain": "drawwithcode"
 }
