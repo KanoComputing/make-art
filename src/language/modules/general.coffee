@@ -1,10 +1,11 @@
-session = require './session'
+session = require '../session'
 space = require './space'
 setters = require './setters'
+utils = require '../utils'
 
 clear = ->
-    width = session.display.width * session.ratio
-    height = session.display.height * session.ratio
+    width = session.width * session.ratio
+    height = session.height * session.ratio
 
     session.ctx.clearRect 0, 0, width, height
     session.ctx.fillStyle = session.settings.bg
@@ -14,7 +15,7 @@ clear = ->
     session.ctx.fill()
 
 reset = ->
-    session.pos = session.display.getCenter()
+    session.pos = utils.getCenter()
 
     session.settings =
         bg: '#fff'

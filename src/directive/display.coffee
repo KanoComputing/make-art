@@ -12,22 +12,28 @@ app.directive 'display', ($window) ->
 
             scope.getCenter = -> x: scope.width / 2, y: scope.height / 2
 
-            scope.update = -> # api.run scope, scope.ngSource or ''
+            scope.update = ->
+                language = require '../language/index'
+
+                settings = scope
+
+                language.run scope.ngSource, settings
 
             scope.resize = ->
                 scope.ratio = window.devicePixelRatio or 1
 
                 scope.width = scope.canvas.offsetWidth
-                height = scope.canvas.offsetHeight
+                scope.height = scope.canvas.offsetHeight
 
                 scope.canvas.width = scope.width * scope.ratio
                 scope.canvas.height = scope.height * scope.ratio
+
+                scope.update()
 
             win = angular.element $window
             win.bind 'resize', -> scope.$apply scope.resize
 
             scope.resize()
-            scope.update()
 
             scope.$watch 'ngSource', scope.update
     }

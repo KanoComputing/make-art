@@ -1,5 +1,5 @@
-session = require './session'
-utils = require './utils'
+session = require '../session'
+utils = require '../utils'
 
 moveTo = (x = 0, y = 0) ->
     { x, y } = utils.parseCoordinates x, y

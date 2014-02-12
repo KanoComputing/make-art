@@ -1,5 +1,5 @@
-session = require './session'
-utils = require './utils'
+session = require '../session'
+utils = require '../utils'
 
 background = (color) ->
     session.settings.bg = color

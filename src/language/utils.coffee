@@ -26,13 +26,13 @@ parseCoordinate = (val, type = 'x') ->
     if typeof val is 'string'
         if type is 'x'
             switch val
-                when 'center' then return session.display.getCenter().x
-                when 'right' then return session.display.width
+                when 'center' then return getCenter().x
+                when 'right' then return session.width
                 when 'left' then return 0
         else if type is 'y'
             switch val
-                when 'center' then return session.display.getCenter().y
-                when 'bottom' then return session.display.height
+                when 'center' then return getCenter().y
+                when 'bottom' then return session.height
                 when 'top' then return 0
     val
 
@@ -57,11 +57,14 @@ drawCursor = (pos, color = 'rgba(0, 0, 0, .4)') ->
     session.ctx.lineWidth = session.settings.stroke.width * ratio
     session.ctx.moveTo pos.x, pos.y
 
+getCenter = -> x: session.width / 2, y: session.height / 2
+
 module.exports = {
     startShape,
     endShape,
     parseLineStyle,
     parseCoordinate,
     parseCoordinates,
-    drawCursor
+    drawCursor,
+    getCenter
 }

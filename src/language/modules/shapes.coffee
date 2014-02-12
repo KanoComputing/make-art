@@ -1,5 +1,5 @@
-session = require './session'
-utils = require './utils'
+session = require '../session'
+utils = require '../utils'
 
 rectangle = (width, height) ->
     utils.startShape()

@@ -1,6 +1,6 @@
-session = require './session'
 space = require './space'
-utils = require './utils'
+session = require '../session'
+utils = require '../utils'
 
 lineTo = (x, y) ->
     ratio = session.ratio
