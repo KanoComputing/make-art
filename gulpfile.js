@@ -13,9 +13,9 @@ var server = lr(),
     production = env === 'production';
 
 var paths = {
-    views: { watch: [ 'views/*/**.jade', 'views/*.jade', 'content/*', 'content/*/**' ], src: [ 'views/*/**.jade', 'views/*.jade' ], out: 'public' },
-    browserify: { watch: [ 'src/*.coffee', 'src/*/**.coffee', 'src/*/**/***.coffee' ], src: 'src/index.coffee', out: 'public/js' },
-    styles: { watch: 'styles/*/**.styl', src: 'styles/main.styl', out: 'public/css' }
+    views: { watch: [ 'views/*/**.jade', 'views/*.jade', 'content/*', 'content/*/**' ], src: 'views/*.jade', out: 'www' },
+    browserify: { watch: [ 'src/*.coffee', 'src/*/**.coffee', 'src/*/**/***.coffee' ], src: 'src/app.coffee', out: 'www/js' },
+    styles: { watch: 'styles/*/**.styl', src: 'styles/main.styl', out: 'www/css' }
 };
 
 gulp.task('browserify', function () {
