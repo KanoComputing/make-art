@@ -1,6 +1,7 @@
-www/*/**.html
-www/css/main.css
-www/js/index.js
+www/*.html
+www/*/*.html
+www/css/*.css.html
+www/js/*
 .tmp
 node_modules
 **.DS_Store
