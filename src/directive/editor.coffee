@@ -19,6 +19,8 @@ app.directive 'editor', () ->
         link: (scope, element, attrs) ->
             options = defaults
 
+            scope.ngModel = scope.ngModel or element[0].innerHTML
+
             engine = ace.edit element[0]
             session = engine.getSession()
 
