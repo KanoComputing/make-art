@@ -22,8 +22,15 @@ bg-inverse()
         color color-white
 
         &.ruled
-            border-bottom 1px solid rgba(#fff, .2)
+            border-bottom 1px solid color-ruler-inverse
+
+    hr
+        background color-ruler-inverse
 
     code
         background rgba(#fff, .7)
         color darken(color-primary, 40%)
+
+button-color(bg-color=color-primary, type-color=color-white)
+    background bg-color
+    color type-color

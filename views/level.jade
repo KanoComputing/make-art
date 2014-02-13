@@ -2,12 +2,22 @@ section: .page-width
 
     .row
         .col-6
-            editor(ng-model='test')
+            editor(ng-model='content.code')
         .col-6
             .tutorial-wrap
-                display(ng-source='test')
+                display(ng-source='content.code')
+
                 .tutorial-display(ng-if='mode=="reading"')
+
                     h3.ruled.center {{ content.title }}
-                    div(ng-bind-html='content.intro | markdown')
+
+                    div.content(ng-bind-html='content.slides[slide] | markdown')
+
+                    hr
+
+                    .center
+                        button.button-inverse.large(ng-click='nextSlide()', ng-show='slide < content.slides.length - 1') Next
+                        button.button-inverse.large(ng-click='doneReading()', ng-show='slide >= content.slides.length - 1') Done
+
 
     include partial/docs

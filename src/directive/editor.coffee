@@ -1,5 +1,6 @@
 app = require '../app'
 
+dont =false
 defaults =
     theme: 'ace/theme/dawn',
     wrapMode: false,
@@ -18,8 +19,6 @@ app.directive 'editor', () ->
         link: (scope, element, attrs) ->
             options = defaults
 
-            scope.ngModel = element[0].innerHTML
-
             engine = ace.edit element[0]
             session = engine.getSession()
 
@@ -32,8 +31,19 @@ app.directive 'editor', () ->
             session.setMode options.mode
             session.setUseSoftTabs options.softTabs
 
-            engine.on 'change', -> scope.$apply ->
-                scope.ngModel = session.getValue()
+            engine.on 'change', ->
+                val = session.getValue()
+
+                if val isnt scope.ngModel and not scope.$root.$$phase
+                    scope.ngModel = val
+                    scope.$apply()
+
+            scope.$watch 'ngModel', ->
+                if session.getValue() isnt scope.ngModel
+                    dont = true
+                    engine.setValue scope.ngModel
+                    engine.focus()
+                    engine.getSession().selection.clearSelection();
 
             focus: => engine.focus()
     }

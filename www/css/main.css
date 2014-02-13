@@ -245,7 +245,8 @@ ol,
 input,
 button,
 textarea,
-code {
+code,
+hr {
   margin-top: 0;
   margin-bottom: 20px;
 }
@@ -261,7 +262,8 @@ ol:last-child,
 input:last-child,
 button:last-child,
 textarea:last-child,
-code:last-child {
+code:last-child,
+hr:last-child {
   margin-bottom: 0;
 }
 ul {
@@ -275,6 +277,47 @@ code {
   background: rgba(0,0,0,0.1);
   color: #516934;
   font-size: 15px;
+}
+hr {
+  background: rgba(0,0,0,0.06);
+  border: 0;
+  height: 1px;
+}
+button,
+a.button,
+input[type='submit'],
+input[type='reset'] {
+  border-radius: 3px;
+  font-family: 'Museo Sans', Helvetica, Arial, sans-serif;
+  display: inline-block;
+  padding: 10px 25px;
+  font-size: 18px;
+}
+button,
+a.button,
+input[type='submit'],
+input[type='reset'],
+button.button-default,
+a.button.button-default,
+input[type='submit'].button-default,
+input[type='reset'].button-default {
+  background: #a0be7c;
+  color: #f5f5f5;
+  border: 0;
+}
+button.button-inverse,
+a.button.button-inverse,
+input[type='submit'].button-inverse,
+input[type='reset'].button-inverse {
+  background: #f5f5f5;
+  color: #617e3e;
+}
+button.large,
+a.button.large,
+input[type='submit'].large,
+input[type='reset'].large {
+  padding: 13px 30px;
+  font-size: 20px;
 }
 editor {
   min-height: 460px;
@@ -331,9 +374,15 @@ display canvas {
 .tutorial-display h6.ruled {
   border-bottom: 1px solid rgba(255,255,255,0.2);
 }
+.tutorial-display hr {
+  background: rgba(255,255,255,0.2);
+}
 .tutorial-display code {
   background: rgba(255,255,255,0.7);
   color: #617e3e;
+}
+.tutorial-display .content {
+  margin-bottom: 20px;
 }
 .docs {
   margin-top: 100px;
