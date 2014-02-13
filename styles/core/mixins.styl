@@ -12,3 +12,18 @@ absolute-cover()
 
 border-radius(radius = 3px)
     border-radius radius
+
+bg-inverse()
+    background color-primary
+    color color-white
+
+    h1, h2, h3, h4, h5, h6
+        text-shadow 0 2px rgba(#000, .07)
+        color color-white
+
+        &.ruled
+            border-bottom 1px solid rgba(#fff, .2)
+
+    code
+        background rgba(#fff, .7)
+        color darken(color-primary, 40%)

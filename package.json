@@ -24,7 +24,8 @@
     "gulp-rename": "~0.2.x",
     "http-server": "~0.6.x",
     "lodash": "~2.4.x",
-    "coffee-script": "~1.7.x"
+    "coffee-script": "~1.7.x",
+    "marked": "~0.3.x"
   },
   "engines": {
     "node": "0.10.x"

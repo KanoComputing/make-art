@@ -1,0 +1,13 @@
+section: .page-width
+
+    .row
+        .col-6
+            editor(ng-model='test')
+        .col-6
+            .tutorial-wrap
+                display(ng-source='test')
+                .tutorial-display(ng-if='mode=="reading"')
+                    h3.ruled.center {{ content.title }}
+                    div(ng-bind-html='content.intro | markdown')
+
+    include partial/docs
