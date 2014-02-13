@@ -15,7 +15,11 @@ html(lang='en', ng-app='draw')
 
         title Draw with code
 
+        //- Base location (Required for html5 routing)
+        base(href='#')
+
     body
+        header: a.logo(href='/') Draw with code
         ng-view
 
         //- Vendor
