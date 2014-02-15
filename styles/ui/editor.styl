@@ -1,5 +1,35 @@
+editor-tag(color=color-primary, color-text=#fff)
+    background color
+    padding 2px
+    margin 0 -2px
+    border-radius()
+    color color-text
+
 editor
     min-height 460px
     font-size 15px
     display block
     border-radius()
+
+    &.ace_editor
+        line-height 20px
+
+        .ace_content .ace_line
+
+            .ace_comment
+                color #aaa
+
+            .ace_keyword
+                editor-tag(rgba(#eeceeb, .4), color-black)
+
+            .ace_string
+                editor-tag(#df491a)
+
+            .ace_numeric
+                editor-tag(#3e93db)
+
+            .ace_identifier
+                editor-tag(color-primary)
+
+            // .ace_keyword.ace_operator
+            //     editor-tag(darken(#3e93db, 20%))

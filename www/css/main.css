@@ -325,6 +325,40 @@ editor {
   display: block;
   border-radius: 3px;
 }
+editor.ace_editor {
+  line-height: 20px;
+}
+editor.ace_editor .ace_content .ace_line .ace_comment {
+  color: #aaa;
+}
+editor.ace_editor .ace_content .ace_line .ace_keyword {
+  background: rgba(238,206,235,0.4);
+  padding: 2px;
+  margin: 0 -2px;
+  border-radius: 3px;
+  color: color-black;
+}
+editor.ace_editor .ace_content .ace_line .ace_string {
+  background: #df491a;
+  padding: 2px;
+  margin: 0 -2px;
+  border-radius: 3px;
+  color: #fff;
+}
+editor.ace_editor .ace_content .ace_line .ace_numeric {
+  background: #3e93db;
+  padding: 2px;
+  margin: 0 -2px;
+  border-radius: 3px;
+  color: #fff;
+}
+editor.ace_editor .ace_content .ace_line .ace_identifier {
+  background: #a0be7c;
+  padding: 2px;
+  margin: 0 -2px;
+  border-radius: 3px;
+  color: #fff;
+}
 display {
   display: block;
   width: 100%;
