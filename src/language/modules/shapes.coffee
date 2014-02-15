@@ -25,7 +25,15 @@ ellipse = (rx, ry) ->
     rx *= session.ratio
     ry *= session.ratio
 
-    session.ctx.ellipse x, y, rx, ry, 0, 0, 2 * Math.PI, false
+    startingAngle = 0
+    endingAngle = 2 * Math.PI; # 360 degrees is equal to 2π radians
+
+    session.ctx.save()
+    session.ctx.translate x, y
+    session.ctx.scale rx, ry
+    session.ctx.arc 0, 0, 1, startingAngle, endingAngle, -1
+    session.ctx.restore()
+
     utils.endShape()
 
 circle = (radius) ->
