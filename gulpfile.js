@@ -6,7 +6,8 @@ var gulp = require('gulp'),
     livereload = require('gulp-livereload'),
     rename = require('gulp-rename'),
     jadeHelpers = require('./utils/jadeHelpers'),
-    _ = require('lodash');
+    _ = require('lodash'),
+    color = require('cli-color');
 
 var server = lr(),
     env = process.env.NODE_ENV === 'production' ? 'production' : 'develpoment',
@@ -18,12 +19,22 @@ var paths = {
     styles: { watch: 'styles/**/*.styl', src: 'styles/main.styl', out: 'www/css' }
 };
 
+function beep () {
+    console.log('\007');
+}
+
+function handleError (error) {
+    beep(error);
+    console.log(color.bold('[ error caught ]:\n') + color.red(error));
+}
+
 gulp.task('browserify', function () {
     gulp.src(paths.browserify.src,  { read: false })
     .pipe(browserify({
         transform: [ 'coffeeify' ],
         extensions: [ '.coffee' ]
     }))
+    .on('error', handleError)
     .pipe(rename('index.js'))
     .pipe(gulp.dest(paths.browserify.out))
     .pipe(livereload(server));
@@ -35,6 +46,7 @@ gulp.task('styles', function () {
         pretty: !production,
         use: [ 'griddy', 'nib' ]
     }))
+    .on('error', handleError)
     .pipe(gulp.dest(paths.styles.out))
     .pipe(livereload(server));
 });
@@ -48,6 +60,7 @@ gulp.task('views', function () {
             production: production
         }, jadeHelpers)
     }))
+    .on('error', handleError)
     .pipe(gulp.dest(paths.views.out))
     .pipe(livereload(server));
 });
