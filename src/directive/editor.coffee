@@ -15,7 +15,7 @@ app.directive 'editor', () ->
     {
         restrict: 'E'
         templateUrl: '/directive/editor.html'
-        scope: ngModel: '=ngModel', ngChange: '=ngChange'
+        scope: ngModel: '=ngModel', ngChange: '&ngChange'
         link: (scope, element, attrs) ->
             options = defaults
 
@@ -41,6 +41,9 @@ app.directive 'editor', () ->
                     scope.$apply()
 
             scope.$watch 'ngModel', ->
+                if scope.ngChange
+                    scope.ngChange()
+
                 if session.getValue() isnt scope.ngModel
                     dont = true
                     engine.setValue scope.ngModel
