@@ -4,7 +4,7 @@ app.directive 'display', ($window) ->
 
     {
         restrict: 'E'
-        templateUrl: 'directive/display.html'
+        templateUrl: '/directive/display.html'
         scope: ngSource: '=ngSource'
         link: (scope, element, attrs) ->
             scope.canvas = element.find('canvas')[0]

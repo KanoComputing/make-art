@@ -14,7 +14,7 @@ app.directive 'editor', () ->
 
     {
         restrict: 'E'
-        templateUrl: 'directive/editor.html'
+        templateUrl: '/directive/editor.html'
         scope: ngModel: '=ngModel'
         link: (scope, element, attrs) ->
             options = defaults
