@@ -1,6 +1,6 @@
 www/*.html
 www/*/*.html
-www/css/*.css.html
+www/css/*.css
 www/js/*
 .tmp
 node_modules
