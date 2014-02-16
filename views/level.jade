@@ -3,7 +3,7 @@ section.page-level: .page-width
     .row
         .col-6
             .editor-wrap
-                editor(ng-model='code', ng-change='validate()', editable='mode=="coding"')
+                editor(ng-model='code', ng-class='{ completed: completed, disabled: mode == "reading" }', ng-change='validate()', editable='mode=="coding"')
                 .box.box-success(ng-show='completed && hasNext')
                     h4.left Level completed!
                     .right: a.button.button-inverse(ng-href='/level/{{id + 1}}') Next &rsaquo;

@@ -10,6 +10,21 @@ editor
     display block
     border-radius()
 
+    &.disabled
+        background #eee
+
+        .ace_cursor
+            display none
+
+        > *
+            opacity .3
+
+    &.completed
+        background mix(#fff, color-success, 20%)
+
+        > *
+            opacity .4
+
     &.ace_editor
         line-height 26px
         font-size 15px
