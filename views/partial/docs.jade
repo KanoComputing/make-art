@@ -1,10 +1,7 @@
 mixin arguments-short (args)
-    for arg, i in args 
-        span.argument
-            if !arg[2]
-                = '[ ' + arg[0] + ' ]'
-            else
-                = arg[0]
+    for arg, i in args
+        span(class='argument argument-' + arg[1] + (arg[3] ? '' : ' optional'))
+            = arg[0]
 
         if i < args.length - 1
             | , 
@@ -25,9 +22,9 @@ mixin arguments-short (args)
                     .command
 
                         h4
-                            = command.call + '('
+                            span.identifier= command.call + (!command.args.length ? '()' : '')
+                            |  
                             +arguments-short(command.args)
-                            = ')'
 
                         p.description= command.description
 
@@ -35,4 +32,4 @@ mixin arguments-short (args)
                             for arg in command.args
                                 li
                                     = arg[0] + ': '
-                                    span= arg[1]
+                                    span= arg[2]

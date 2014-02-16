@@ -6,30 +6,30 @@
                 "call": "circle",
                 "description": "Draw a circle centered on the current position",
                 "args": [
-                    [ "radius", "The circle size", true ]
+                    [ "radius", "number", "The circle size", true ]
                 ]
             },
             {
                 "call": "ellipse",
                 "description": "Draw an ellipse centered on the current position",
                 "args": [
-                    [ "radius-x", "The ellipse horizontal size", true ],
-                    [ "radius-y", "The ellipse vertical size", true ]
+                    [ "radius-x", "number", "The ellipse horizontal size", true ],
+                    [ "radius-y", "number", "The ellipse vertical size", true ]
                 ]
             },
             {
                 "call": "square",
                 "description": "Draw a square centered on the current position",
                 "args": [
-                    [ "size", "The size of the square", true ]
+                    [ "size", "number", "The size of the square", true ]
                 ]
             },
             {
                 "call": "rectangle",
                 "description": "Draw a rectangle centered on the current position",
                 "args": [
-                    [ "width", "The rectangle width", true ],
-                    [ "height", "The rectangle height", true ]
+                    [ "width", "number", "The rectangle width", true ],
+                    [ "height", "number", "The rectangle height", true ]
                 ]
             }
         ]
@@ -41,29 +41,29 @@
                 "call": "color",
                 "description": "Change the color in use",
                 "args": [
-                    [ "color", "The color to use", true ]
+                    [ "color", "string", "The color to use", true ]
                 ]
             },
             {
                 "call": "stroke",
                 "description": "Change the line color and width in use",
                 "args": [
-                    [ "size", "(number) The line width to use", false ],
-                    [ "color", "A string with the color to use - E.g. 'red', 'blue'..", false ]
+                    [ "size", "number", "(number) The line width to use", false ],
+                    [ "color", "string", "A string with the color to use - E.g. 'red', 'blue'..", false ]
                 ]
             },
             {
                 "call": "strokeColor",
                 "description": "The stroke color to use",
                 "args": [
-                    [ "color", "A string with the color to use - E.g. 'red', 'blue'..", true ]
+                    [ "color", "string", "A string with the color to use - E.g. 'red', 'blue'..", true ]
                 ]
             },
             {
                 "call": "strokeWidth",
                 "description": "The stroke width to use",
                 "args": [
-                    [ "size", "A number with the line width to use", true ]
+                    [ "size", "number", "A number with the line width to use", true ]
                 ]
             }
         ]
@@ -75,16 +75,16 @@
                 "call": "line",
                 "description": "Draw a line starting from the current position",
                 "args": [
-                    [ "x", "Horizontal distance", true ],
-                    [ "y", "Vertical distance", false ]
+                    [ "x", "number", "Horizontal distance", true ],
+                    [ "y", "number", "Vertical distance", false ]
                 ]
             },
             {
                 "call": "lineTo",
                 "description": "Draw a line to any position",
                 "args": [
-                    [ "x", "The horizontal destination", true ],
-                    [ "y", "The vertical destination", true ]
+                    [ "x", "number", "The horizontal destination", true ],
+                    [ "y", "number", "The vertical destination", true ]
                 ]
             }
         ]
@@ -96,16 +96,16 @@
                 "call": "move",
                 "description": "Move the cursor starting from the current position",
                 "args": [
-                    [ "x", "Horizontal distance", true ],
-                    [ "y", "Vertical distance", false ]
+                    [ "x", "number", "Horizontal distance", true ],
+                    [ "y", "number", "Vertical distance", false ]
                 ]
             },
             {
                 "call": "moveTo",
                 "description": "Move the cursor to any position",
                 "args": [
-                    [ "x", "The horizontal destination", true ],
-                    [ "y", "The vertical destination", true ]
+                    [ "x", "number", "The horizontal destination", true ],
+                    [ "y", "number", "The vertical destination", true ]
                 ]
             }
         ]

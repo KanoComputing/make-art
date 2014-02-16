@@ -1,3 +1,10 @@
+doc-tag-color(color, color-text = #fff)
+    display inline-block
+    background color
+    border-radius()
+    padding 4px 10px
+    color color-text
+
 .docs
     margin-top 100px
     
@@ -26,8 +33,17 @@
                 font-size 18px
                 margin-bottom 15px
 
-                .argument
-                    color #aaa
+                .identifier
+                    doc-tag-color(color-language-identifier)
+
+                .argument-number
+                    doc-tag-color(color-language-number)
+
+                .argument-string
+                    doc-tag-color(color-language-string)
+
+                .argument.optional
+                    opacity .2
 
             .description
                 font-style italic
