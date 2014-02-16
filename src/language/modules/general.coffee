@@ -13,6 +13,7 @@ clear = ->
     session.ctx.rect 0, 0, width, height
     session.ctx.closePath()
     session.ctx.fill()
+    session.ctx.fillStyle = session.settings.fill
 
 reset = ->
     session.pos = utils.getCenter()

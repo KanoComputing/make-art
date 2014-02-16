@@ -15,7 +15,7 @@ app.directive 'editor', () ->
     {
         restrict: 'E'
         templateUrl: '/directive/editor.html'
-        scope: ngModel: '=', editable: '=', ngChange: '&'
+        scope: ngModel: '=', editable: '=', autoSelect: '=', ngChange: '&'
         link: (scope, element, attrs) ->
             options = defaults
 
@@ -61,7 +61,7 @@ app.directive 'editor', () ->
                 engine.setReadOnly not scope.editable
 
                 if scope.editable
-                    scope.focus true
+                    scope.focus scope.autoSelect
                 else
                     engine.blur()
     }
