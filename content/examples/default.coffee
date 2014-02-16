@@ -1,6 +1,6 @@
-# 
-# Edit this code to draw!
-# 
+###
+Edit this code to draw!
+###
 
 # Use the color black
 color 'black'
@@ -23,5 +23,6 @@ square 40
 # Use a stroke of width 5 and color white
 stroke 5, 'white'
 
-# Draw a line to the end of the first rectangle
+# Draw a line to the end of the
+# first rectangle
 line 80, 80
