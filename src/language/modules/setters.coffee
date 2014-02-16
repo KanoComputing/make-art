@@ -12,7 +12,7 @@ strokeWidth = (val) ->
     session.settings.stroke.width = val
     session.ctx.lineWidth = val * session.ratio
 
-stroke = (style) ->
+stroke = ->
     style = utils.parseLineStyle arguments
 
     if style.color? then strokeColor style.color
