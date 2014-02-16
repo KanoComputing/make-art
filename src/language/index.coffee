@@ -36,4 +36,11 @@ run = (code, settings) ->
 
     utils.drawCursor session.pos
 
-module.exports = { run }
+strip = (code) ->
+    code = code.replace /###((.|\n)*)###/gm, ''
+    code = code.replace /(#.*(\n|$))/g, ''
+    code = code.replace /^\s*[\r\n]/gm, ''
+
+    return code.trim()
+
+module.exports = { run, strip }

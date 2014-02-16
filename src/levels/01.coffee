@@ -2,7 +2,8 @@ module.exports =
 
     title: 'Draw!'
 
-    validate: -> true
+    validate: (code) ->
+        /^circle\s+[0-9]+$/.test code
 
     code:
         '''

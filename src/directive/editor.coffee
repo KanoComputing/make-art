@@ -15,7 +15,7 @@ app.directive 'editor', () ->
     {
         restrict: 'E'
         templateUrl: '/directive/editor.html'
-        scope: ngModel: '=ngModel', ngChange: '&ngChange'
+        scope: ngModel: '=', editable: '=', ngChange: '&'
         link: (scope, element, attrs) ->
             options = defaults
 
@@ -33,6 +33,14 @@ app.directive 'editor', () ->
             session.setMode options.mode
             session.setUseSoftTabs options.softTabs
 
+            scope.focus = (selectAll = false) ->
+                engine.focus()
+
+                if not selectAll
+                    engine.getSession().selection.clearSelection();
+                else
+                    engine.getSession().selection.selectAll();
+
             engine.on 'change', ->
                 val = session.getValue()
 
@@ -47,8 +55,13 @@ app.directive 'editor', () ->
                 if session.getValue() isnt scope.ngModel
                     dont = true
                     engine.setValue scope.ngModel
-                    engine.focus()
-                    engine.getSession().selection.clearSelection();
+                    scope.focus()
 
-            focus: => engine.focus()
+            scope.$watch 'editable', ->
+                engine.setReadOnly not scope.editable
+
+                if scope.editable
+                    scope.focus true
+                else
+                    engine.blur()
     }

@@ -5,7 +5,7 @@ app.directive 'display', ($window) ->
     {
         restrict: 'E'
         templateUrl: '/directive/display.html'
-        scope: ngSource: '=ngSource'
+        scope: ngSource: '='
         link: (scope, element, attrs) ->
             scope.canvas = element.find('canvas')[0]
             scope.ctx = scope.canvas.getContext '2d'

@@ -1,0 +1,18 @@
+box-color(color = #dfdfdf, color-text = color-black)
+    background color
+    color color-text
+
+    h1, h2, h3, h4, h5, h6
+        color color-text
+
+.box
+    padding 20px
+    box-sizing border-box
+    border-radius()
+    box-color()
+
+    &.box-success
+        box-color(color-green, #fff)
+
+    &.box-danger
+        box-color(color-danger, #fff)

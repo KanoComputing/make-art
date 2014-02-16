@@ -1,11 +1,18 @@
-section: .page-width
+section.page-level: .page-width
 
     .row
         .col-6
-            editor(ng-model='content.code')
+            .editor-wrap
+                editor(ng-model='code', ng-change='validate()', editable='mode=="coding"')
+                .box.box-success(ng-show='completed && hasNext')
+                    h4.left Level completed!
+                    .right: a.button.button-inverse(href='#') Next &rsaquo;
+                .box.box-success(ng-show='completed && !hasNext')
+                    h4.left Tutorial completed!!!
+                    .right: a.button.button-inverse(href='/') Sandbox &rsaquo;
         .col-6
             .tutorial-wrap
-                display(ng-source='content.code')
+                display(ng-source='code')
 
                 .tutorial-display(ng-if='mode=="reading"')
 
