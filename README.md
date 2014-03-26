@@ -2,7 +2,7 @@
 
 > App to learn programming using a basic CoffeeScript drawing API
 
-![Screenshot of the App](http://oi61.tinypic.com/23trsj8.jpg)
+![Screenshot of the App](http://oi60.tinypic.com/24qoaj9.jpg)
 
 You can try the app [here »](http://drawwithcode.herokuapp.com/)
 
