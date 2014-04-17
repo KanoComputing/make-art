@@ -1,0 +1,3 @@
+bin/* /usr/bin
+
+www/* /usr/share/kano-draw
