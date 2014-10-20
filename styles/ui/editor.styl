@@ -29,6 +29,9 @@ editor
         line-height 26px
         font-size 15px
 
+        .ace_gutter
+            background color-editor-gutter
+
         .ace_content .ace_line
 
             .ace_comment
@@ -47,7 +50,10 @@ editor
                 editor-tag(color-language-identifier)
 
         .ace_gutter-cell
-            color #ccc
+            color darken(color-editor-gutter, 20)
+
+        .ace_gutter-active-line
+            background darken(color-editor-gutter, 5)
 
         .ace_marker-layer .ace_selection
-            background rgba(color-primary, .3)
+            background color-editor-selection

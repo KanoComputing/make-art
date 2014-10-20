@@ -15,7 +15,10 @@ html(lang='en', ng-app='draw')
         title Draw with code
 
     body
-        header: a.logo(href='/') Draw with code
+        header: .page-width
+            a.logo(href='/')
+                span.logo-image
+                span.logo-title Draw
         ng-view
 
         //- Vendor

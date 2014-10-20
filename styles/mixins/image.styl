@@ -1,0 +1,77 @@
+assets-path = 'assets/'
+static-root = '../www/'
+
+get-image-size(image-name)
+    image-size(static-root + image-name)
+
+get-image-url(image-name, ext = 'png', retina = true)
+    if retina
+        out = image-name + '@2x.' + ext
+    else
+        out = image-name + '.' + ext
+
+    return '/' + assets-path + out
+
+get-image-path(image-name, ext = 'png', retina = true)
+    if retina
+        return assets-path + image-name + '@2x.' + ext
+    else
+        return assets-path + image-name + '.' + ext
+
+bg-image(image-name, size = false, position = false, repeat = false, ext = 'png')
+    background-image url(get-image-url(image-name, ext, false))
+
+    if size
+        background-size size
+
+    if position
+        background-position position
+
+    if repeat
+        background-repeat repeat
+
+    @media screen and (-webkit-min-device-pixel-ratio: 1.5),
+        screen and (min--moz-device-pixel-ratio: 1.5),
+        screen and (-o-min-device-pixel-ratio: 1.5 / 1)
+        background-image url(get-image-url(image-name, ext, true))
+
+bg-image-sized(image-name, position = false, repeat = false, ext = 'png')
+    image-size = get-image-size(get-image-path(image-name, ext))
+    bg-size = (image-size[0] / 2) (image-size[1] / 2)
+    bg-image(image-name, bg-size, position, repeat, ext)
+
+illustration-fixed(image-name, width = false, ext = 'png')
+    image-size = get-image-size(get-image-path(image-name, ext))
+
+    ratio = 1
+    if width
+        ratio = ( width * 2 ) / image-size[0]
+
+    bg-image image-name, 100% auto, center center, no-repeat
+    width (image-size[0] / 2) * ratio
+    height (image-size[1] / 2) * ratio
+
+illustration-fluid(image-name, width-percent = 100, ext = 'png')
+    image-size = get-image-size(get-image-path(image-name, ext))
+
+    width = image-size[1] / 2
+    height = image-size[0] / 2
+
+    height-percent = (width / height * width-percent)
+
+    bg-image image-name, 100% 100%
+    background-repeat no-repeat
+    width (width-percent)%
+    padding-top (height-percent)%
+
+illustration-fit-height(image-name, height, ext = 'png')
+    image-size = get-image-size(get-image-path(image-name, ext))
+
+    img-width = image-size[1] / 2
+    img-height = image-size[0] / 2
+
+    width = (img-height / img-width * height)
+
+    bg-image image-name, 100% 100%
+    width width
+    height height
