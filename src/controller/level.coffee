@@ -3,7 +3,7 @@ levels = require '../levels/index'
 language = require '../language/index'
 
 app.controller 'level', ($scope, $routeParams) ->
-    $scope.id = parseInt $routeParams.id, 10
+    $scope.id = if $routeParams.id then parseInt($routeParams.id, 10) else 1
     $scope.mode = 'reading'
     $scope.content = levels[$scope.id - 1]
     $scope.code = $scope.content.code

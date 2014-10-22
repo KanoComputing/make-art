@@ -1,0 +1,25 @@
+category-icon(name)
+    bg-image('category-icons/' + name)
+
+.category-icon
+    width 50px
+    height @width
+    display inline-block
+    background-size contain
+    margin-right 20px
+    margin-bottom -10px
+
+    &.category-icon-shapes
+        category-icon('shapes')
+
+    &.category-icon-colors
+        category-icon('colors')
+
+    &.category-icon-lines
+        category-icon('lines')
+
+    &.category-icon-general
+        category-icon('general')
+
+    &.category-icon-position
+        category-icon('position')

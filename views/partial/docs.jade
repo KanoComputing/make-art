@@ -10,7 +10,7 @@ mixin arguments-short (args)
             | , 
 
 .docs
-    h1.center Need help?
+    h1.center Spellbook
 
     .row
         for category, i in jsonContent('docs')
@@ -19,7 +19,9 @@ mixin arguments-short (args)
                 </div><div class="row">
 
             .col-6: .docs-category
-                h3= category.label
+                h3
+                    .category-icon(class='category-icon-' + category.label.toLowerCase())
+                    = category.label
 
                 for command in category.commands
                     .command
