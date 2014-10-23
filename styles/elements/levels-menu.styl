@@ -1,0 +1,24 @@
+level-button-size = 50px
+level-button-gutter = 10px
+
+.levels-menu
+
+    ul.levels-list
+        debullet()
+        margin -(level-button-gutter / 2)
+        clearfix()
+
+        li
+            margin (level-button-gutter / 2)
+            float left
+
+            .button
+                button-color(saturate(darken(color-green, 6), 10))
+                width level-button-size
+                height level-button-size
+                line-height level-button-size
+                padding 0
+                margin 0
+                text-align center
+                font-weight bold
+                font-size 18px

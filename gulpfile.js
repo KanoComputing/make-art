@@ -7,16 +7,17 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     jadeHelpers = require('./utils/jadeHelpers'),
     _ = require('lodash'),
-    color = require('cli-color');
+    color = require('cli-color'),
+    partialify = require('partialify/custom');
 
 var server = lr(),
     env = process.env.NODE_ENV === 'production' ? 'production' : 'develpoment',
     production = env === 'production';
 
 var paths = {
-    views: { watch: [ 'views/**/*.jade', 'content/**/*' ], src: 'views/**/*.jade', out: 'www' },
-    browserify: { watch: 'lib/**/*.js' , src: 'lib/index.js', out: 'www/js' },
-    styles: { watch: 'styles/**/*.styl', src: 'styles/main.styl', out: 'www/css' }
+    views      : { watch: [ 'views/**/*.jade', 'content/**/*' ], src: 'views/**/*.jade', out: 'www' },
+    browserify : { watch: 'lib/**/*' , src: 'lib/index.js', out: 'www/js' },
+    styles     : { watch: 'styles/**/*.styl', src: 'styles/main.styl', out: 'www/css' }
 };
 
 function beep () {
@@ -31,8 +32,7 @@ function handleError (error) {
 gulp.task('browserify', function () {
     gulp.src(paths.browserify.src,  { read: false })
     .pipe(browserify({
-        // transform: [ 'coffeeify' ],
-        // extensions: [ '.coffee' ]
+        transform : [ partialify.alsoAllow('md') ],
     }))
     .on('error', handleError)
     .pipe(rename('index.js'))
@@ -43,8 +43,8 @@ gulp.task('browserify', function () {
 gulp.task('styles', function () {
     gulp.src(paths.styles.src)
     .pipe(stylus({
-        pretty: !production,
-        use: [ 'griddy', 'nib' ]
+        pretty : !production,
+        use    : [ 'griddy', 'nib' ]
     }))
     .on('error', handleError)
     .pipe(gulp.dest(paths.styles.out))

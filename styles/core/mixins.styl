@@ -13,8 +13,8 @@ absolute-cover()
 border-radius(radius = 3px)
     border-radius radius
 
-bg-inverse()
-    background color-primary
+bg-inverse(bg-color = color-primary)
+    background bg-color
     color color-white
 
     h1, h2, h3, h4, h5, h6
@@ -30,3 +30,10 @@ bg-inverse()
     code
         background rgba(#fff, .7)
         color darken(color-primary, 40%)
+
+debullet()
+    list-style none
+    padding-left 0
+
+    li
+        margin-left 0

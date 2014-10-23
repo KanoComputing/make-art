@@ -7,7 +7,9 @@ button, a.button, input[type='submit'], input[type='reset']
     font-family font-body
     display inline-block
     padding 10px 25px
-    font-size 18px
+    font-size 14px
+    text-transform uppercase
+    font-weight bold
 
     &, &.button-default
         button-color(color-primary)
@@ -16,6 +18,9 @@ button, a.button, input[type='submit'], input[type='reset']
     &.button-inverse
         button-color(color-white, darken(color-primary, 40%))
 
+    &.button-inverse-success
+        button-color(color-white, darken(color-success, 40%))
+
     &.large
         padding 13px 30px
-        font-size 20px
+        font-size 17px

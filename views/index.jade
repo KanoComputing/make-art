@@ -19,7 +19,14 @@ html(lang='en', ng-app='draw')
             a.logo(href='/')
                 span.logo-image
                 span.logo-title Draw
+
+            ul.nav-main
+                li: a.button(href='#', ng-click='menuOpen = !menuOpen') Levels
         ng-view
+
+        .modal-overlay(ng-show='menuOpen'): .modal-inner.levels-menu
+            ul.levels-list
+                li(ng-repeat='level in levels'): a.button(ng-href='level/{{ $index + 1 }}') {{ $index + 1 }}
 
         //- Vendor
         script(src='/js/vendor/angular.min.js', type='text/javascript')
