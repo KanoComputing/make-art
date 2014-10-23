@@ -6,8 +6,7 @@ section.page-level(ng-class='"mode-" + mode'): .page-width
                     ng-model='code',
                     ng-class='{ completed: completed, disabled: mode == "reading" }',
                     ng-change='validate()',
-                    editable='mode=="coding"',
-                    auto-select='true'
+                    editable='mode=="coding"'
                     )
 
         .col-6.tutorial-wrap
