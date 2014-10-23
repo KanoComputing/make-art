@@ -1,0 +1,11 @@
+{
+  "browser": true,
+  "esnext": true,
+  "globals": { "angular": true },
+  "globalstrict": false,
+  "quotmark": true,
+  "undef": true,
+  "unused": true,
+  "node": true,
+  "evil": true
+}
