@@ -6,28 +6,34 @@ section.page-level(ng-class='"mode-" + mode'): .page-width
                     ng-model='code',
                     ng-class='{ completed: completed, disabled: mode == "reading" }',
                     ng-change='validate()',
-                    editable='mode=="coding"'
+                    editable='mode=="coding"',
+                    start-at-line='content.startAt'
                     )
 
         .col-6.tutorial-wrap
+            .display-wrap(v-show='mode === "editing"')
                 display(ng-source='code')
 
-                .tutorial-display(ng-if='mode=="reading"')
+                .actions
+                    a.button(ng-click='mode = "reading"; slide = 0') Help
+                    a.button.button-info(ng-click='code = content.code') Reset
 
-                    h3.ruled.center {{ content.title }}
+            .tutorial-display(ng-if='mode=="reading"')
 
-                    div.content(ng-bind-html='slides[slide] | markdown')
+                h3.ruled {{ content.title }}
 
-                    .center
-                        button.button-inverse.button-next.large(ng-click='nextSlide()', ng-show='slide < slides.length - 1') Next
-                        button.button-inverse.button-next.large(ng-click='doneReading()', ng-show='slide >= slides.length - 1') Make it
+                div.content(ng-bind-html='slides[slide] | markdown')
 
-                .success-display(ng-show='completed && hasNext')
-                    h3 Level completed!
-                    a.button.button-inverse-success.large(ng-href='/level/{{id + 1}}') Next &rsaquo;
+                .next-action
+                    button.button-inverse.button-next.large(ng-click='nextSlide()', ng-show='slide < slides.length - 1') Next
+                    button.button-inverse.button-next.large(ng-click='doneReading()', ng-show='slide >= slides.length - 1') Got it
 
-                .success-display(ng-show='completed && !hasNext')
-                    h3 Tutorial completed!!!
-                    a.button.button-inverse-success.large(href='/') Sandbox &rsaquo;
+            .success-display(ng-if='completed && hasNext')
+                h3 {{ successMessage() }}
+                a.button.button-inverse-success.large(ng-href='/level/{{id + 1}}') Next &rsaquo;
+
+            .success-display(ng-show='completed && !hasNext')
+                h3 Tutorial completed!!!
+                a.button.button-inverse-success.large(href='/') Sandbox &rsaquo;
 
     include partial/docs

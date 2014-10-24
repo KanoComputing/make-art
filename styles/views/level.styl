@@ -16,13 +16,48 @@
             text-transform uppercase
 
     editor.disabled
-        background color-white
         position relative
+
+        > *
+            blur-fx .9px
 
         &:after
             content ''
             display block
             absolute-cover()
             bg-image-sized('characters/judoka/explaining', center center, no-repeat)
-            margin-top 100px
-            margin-left 40px
+            margin-left 30px
+
+    .tutorial-wrap
+        position relative
+
+    .tutorial-display
+        absolute-cover()
+        bg-inverse()
+        box-sizing border-box
+        padding 10px 30px
+        font-size 20px
+        border-radius()
+
+        .content
+            margin-bottom 20px
+
+        &:before
+            content ''
+            position absolute
+            tooltip-tail(left, @background, 15px)
+            top 70px
+
+        .next-action
+            margin-top 30px
+
+    .display-wrap
+        position relative
+
+        .actions
+            position absolute
+            right 10px
+            bottom 10px
+
+            .button
+                margin-left 10px

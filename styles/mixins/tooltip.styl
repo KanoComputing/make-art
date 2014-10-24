@@ -1,0 +1,44 @@
+tooltip-tail(direction = bottom, color = black, size = 10px)
+
+    if direction is bottom
+        dir = 'top'
+        top 100%
+        left 50%
+        margin-left ( - size )
+    else if direction is top
+        dir = 'bottom'
+        bottom 100%
+        left 50%
+        margin-left ( - size )
+    else if direction is left
+        dir = 'right'
+        right 100%
+        top 50%
+        margin-top ( - size )
+    else if direction is right
+        left 100%
+        top 50%
+        dir = 'left'
+        margin-top ( - size )
+
+    border size solid transparent
+    border-{dir}-color color
+
+tooltip(direction = bottom, tail-size = 10px)
+    color = @background-color or @background
+    border-color = @border-color
+    border-width = @border-width
+
+    position relative
+    display inline-block
+
+    &:after
+        content ''
+        position absolute
+        tooltip-tail(direction, color, tail-size)
+
+    if border-width
+        &:before
+            content ''
+            position absolute
+            tooltip-tail(direction, border-color, (tail-size + border-width))
