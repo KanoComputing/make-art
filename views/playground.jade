@@ -1,0 +1,12 @@
+section: .page-width
+
+    h2.center Playground
+    h4.center Draw whatever you want
+
+    .row
+        .col-6
+            editor(ng-model='code', editable='true', auto-select='false')
+        .col-6
+            display(ng-source='code')
+
+    include partial/docs

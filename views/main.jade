@@ -1,9 +1,20 @@
 section: .page-width
 
+    h2.center Draw with Code!
+    h4.center Code can be simple and fun to learn, and you can use it to do creative things.
+
+    h5.center Check out some examples:
+
+    ul.examples-list
+        li(ng-repeat='example in examples')
+            a(href='#', ng-click='selectExample($index)', ng-class='{ active: $index === current }') {{ example.title }}
+
     .row
         .col-6
-            editor(ng-model='test', editable='true', auto-select='false')
+            editor(ng-model='code', editable='true')
         .col-6
-            display(ng-source='test')
+            display(ng-source='code')
 
-    include partial/docs
+    .center
+        a.button.button-success(href='/level').success Learn
+        a.button(href='/playground') Draw something

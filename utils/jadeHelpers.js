@@ -16,10 +16,6 @@ module.exports = {
 
     jsonContent: function (file) {
         return JSON.parse(getFileContent(file + '.json'));
-    },
-
-    getCodeExample: function (file) {
-        return getFileContent(path.join(examplesPath, file + '.coffee'));
     }
 
 };

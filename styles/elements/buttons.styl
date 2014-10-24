@@ -10,6 +10,10 @@ button, a.button, input[type='submit'], input[type='reset']
     font-size 14px
     text-transform uppercase
     font-weight bold
+    margin-right 10px
+
+    &:last-child
+        margin-right 0
 
     &, &.button-default
         button-color(color-primary)
@@ -17,6 +21,9 @@ button, a.button, input[type='submit'], input[type='reset']
 
     &.button-info
         button-color(color-blue)
+
+    &.button-success
+        button-color(color-green)
 
     &.button-inverse
         button-color(color-white, darken(color-primary, 40%))

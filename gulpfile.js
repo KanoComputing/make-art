@@ -16,7 +16,7 @@ var server = lr(),
 
 var paths = {
     views      : { watch: [ 'views/**/*.jade', 'content/**/*' ], src: 'views/**/*.jade', out: 'www' },
-    browserify : { watch: 'lib/**/*' , src: 'lib/index.js', out: 'www/js' },
+    browserify : { watch: [ 'lib/**/*', 'content/**/*' ] , src: 'lib/index.js', out: 'www/js' },
     styles     : { watch: 'styles/**/*.styl', src: 'styles/main.styl', out: 'www/css' }
 };
 
@@ -32,7 +32,10 @@ function handleError (error) {
 gulp.task('browserify', function () {
     gulp.src(paths.browserify.src,  { read: false })
     .pipe(browserify({
-        transform : [ partialify.alsoAllow('md') ],
+        transform : [
+            partialify.alsoAllow('md'),
+            partialify.alsoAllow('coffee')
+        ],
     }))
     .on('error', handleError)
     .pipe(rename('index.js'))
