@@ -69,7 +69,7 @@ gulp.task('views', function () {
 });
 
 gulp.task('livereload', function (next) {
-    livereload(server);
+    if (server) { livereload(server); }
     next();
 });
 
