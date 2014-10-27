@@ -41,6 +41,16 @@
                     [ "end", "number", "The ending angle (0 to 2)", true ],
                     [ "close", "bool", "Close the path in the middle", false ]
                 ]
+            },
+            {
+                "call": "polygon",
+                "description": "Draw a polygon with given points",
+                "args": [
+                    [ "x1", "number", "Point X position", true ],
+                    [ "x2", "number", "Point Y position", true ],
+                    [ "...", "", "More polygon points positions", true ],
+                    [ "close", "bool", "Close the path in the middle", false ]
+                ]
             }
         ]
     },
