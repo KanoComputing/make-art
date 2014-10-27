@@ -2,9 +2,9 @@
 
 > App to learn programming using a basic CoffeeScript drawing API
 
-![Screenshot of the App](http://oi60.tinypic.com/24qoaj9.jpg)
+![Screenshot of the App](http://oi59.tinypic.com/2mfge4k.jpg)
 
-You can try the app [here »](http://drawwithcode.herokuapp.com/)
+You can try the app [here »](http://kano-draw.herokuapp.com/)
 
 ## Setup
 
