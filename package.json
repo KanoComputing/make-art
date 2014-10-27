@@ -7,7 +7,7 @@
     "start": "node ./server/index.js",
     "watch": "gulp watch",
     "build": "gulp",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postinstall": "node node_modules/.bin/gulp default"
   },
   "author": "",
   "license": "BSD-2-Clause",
