@@ -1,3 +1,6 @@
+# Disable stroke
+stroke 0
+
 # Choose a background color
 color '#555'
 
@@ -6,9 +9,6 @@ moveTo 'left', 'top'
 
 # Draw the background
 square 500
-
-# Define the lines color
-stroke '#333', 3
 
 # Define the fill color
 color 'rgba(255, 255, 255, .5)'
