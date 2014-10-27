@@ -1,5 +1,9 @@
 module.exports = [
     {
+        title : 'Car',
+        code  : require('./car.coffee')
+    },
+    {
         title : 'Abstract',
         code  : require('./default.coffee')
     },
