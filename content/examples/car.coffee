@@ -3,7 +3,7 @@ colors =
     tyre: 'black'
     rim: 'grey'
     win: 'lightblue'
-    ground: '#333',
+    ground: '#333'
     bg: '#63879d'
 
 bg = ->
