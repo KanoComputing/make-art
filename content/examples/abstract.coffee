@@ -1,7 +1,3 @@
-###
-Edit this code to draw!
-###
-
 # Use the color black
 color 'black'
 

@@ -5,7 +5,7 @@ module.exports = [
     },
     {
         title : 'Abstract',
-        code  : require('./default.coffee')
+        code  : require('./abstract.coffee')
     },
     {
         title : 'Arcs',
@@ -22,5 +22,9 @@ module.exports = [
     {
         title : 'Tunnel',
         code  : require('./squares-tunnel.coffee')
+    },
+    {
+        title : 'Diamonds pattern',
+        code  : require('./diamonds-pattern.coffee')
     }
 ];

@@ -21,7 +21,8 @@ html(lang='en', ng-app='draw')
                 span.logo-title Draw
 
             ul.nav-main
-                li: a.button(href='#', ng-click='menuOpen = !menuOpen') Levels
+                li: a.button.button-success(href='#', ng-click='menuOpen = !menuOpen') Levels
+                li: a.button(href='#', ng-click='menuOpen = !menuOpen') Playground
         ng-view
 
         .modal-overlay(ng-show='menuOpen'): .modal-inner.levels-menu

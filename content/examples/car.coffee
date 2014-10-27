@@ -1,16 +1,19 @@
+# Define variables for car colors
 colors =
-    car: '#e96a38'
-    tyre: 'black'
-    rim: 'grey'
-    win: 'lightblue'
-    ground: '#333'
-    bg: '#63879d'
+    car    : '#e96a38'
+    tyre   : 'black'
+    rim    : 'grey'
+    win    : 'lightblue'
+    ground : '#333'
+    bg     : '#63879d'
 
-bg = ->
+# Define function to draw background
+bg = (bgColor) ->
     moveTo 'left', 'top'
-    color colors.bg
+    color bgColor
     square 500
 
+# Define function to draw a wheel
 wheel = ->
     color colors.tyre
     circle 50
@@ -18,10 +21,12 @@ wheel = ->
     circle 30
     stroke 0
 
+# Define function to draw a window
 wind = ->
     color colors.win
     rectangle 90, 60
 
+# Define function to draw the car
 car = ->
     move -150, -20
     color colors.car
@@ -39,12 +44,13 @@ car = ->
     wind()
     move -240, 210
 
-ground= ->
+# Define function to draw the ground
+ground = ->
     color colors.ground
     rectangle 460, 100
 
 stroke 0
-bg()
+bg colors.bg
 moveTo 'center', 'center'
 car()
 ground()
