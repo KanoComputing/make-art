@@ -4,5 +4,6 @@
 	dh $@
 
 override_dh_auto_build:
+	npm config set registry http://registry.npmjs.org/
 	npm install
 	npm run build
