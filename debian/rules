@@ -4,4 +4,5 @@
 	dh $@
 
 override_dh_auto_build:
+	npm install
 	npm run build
