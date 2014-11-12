@@ -6,6 +6,6 @@ Standards-Version: 3.9.4
 Build-Depends: debhelper (>= 9), npm
 
 Package: kano-draw
-Architecture: armhf
+Architecture: all
 Depends: ${shlibs:Depends}, ${misc:Depends}, kano-toolset
 Description: Draw with code
