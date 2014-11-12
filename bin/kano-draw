@@ -9,12 +9,15 @@
 #
 
 import os
+import subprocess
 import time
 import errno
+import atexit
 
 from kano.webapp import WebApp
 
 app_name = 'kano-draw'
+server_pid = None
 
 
 class Draw(WebApp):
@@ -40,13 +43,24 @@ class Draw(WebApp):
             else:
                 raise
 
-# TODO: this is not the most eficient way to initialise the server
-# TODO: when the python script is killed, the server keeps running in the background
+def start_server():
+    global server_pid
 
-# Initialise the local server
-os.system('python -m SimpleHTTPServer &')
-# What for the server to be up
-time.sleep(2)
+    # Initialise the local server
+    # TODO: this is not the most eficient way to initialise the server
+    server_proc = subprocess.Popen(['python', '-m', 'SimpleHTTPServer'])
+    server_pid = server_proc.pid
+
+    # Wait for the server to be up
+    time.sleep(2)
+
+def stop_server():
+    os.system('kill {}'.format(server_pid))
+
+
+start_server()
+atexit.register(stop_server)
+
 # Init the web app
 draw = Draw()
 draw.run()
