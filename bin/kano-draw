@@ -9,6 +9,7 @@
 #
 
 import os
+import sys
 import subprocess
 import time
 import errno
@@ -17,7 +18,6 @@ import atexit
 from kano.webapp import WebApp
 
 app_name = 'kano-draw'
-server_pid = None
 
 
 class Draw(WebApp):
@@ -43,23 +43,37 @@ class Draw(WebApp):
             else:
                 raise
 
-def start_server():
-    global server_pid
 
-    # Initialise the local server
-    # TODO: this is not the most eficient way to initialise the server
-    server_proc = subprocess.Popen(['python', '-m', 'SimpleHTTPServer'])
-    server_pid = server_proc.pid
+class Server(object):
+    _server_pid = None
 
-    # Wait for the server to be up
-    time.sleep(2)
+    def __init__(self):
+        atexit.register(self.stop)
 
-def stop_server():
-    os.system('kill {}'.format(server_pid))
+    def _get_root_dir(self):
+        bin_path = os.path.abspath(os.path.dirname(__file__))
 
+        if bin_path.startswith('/usr'):
+            return '/usr/share/kano-draw'
+        else:
+            return os.path.join(bin_path, '../www')
 
-start_server()
-atexit.register(stop_server)
+    def start(self):
+        # TODO: this is not the most eficient way to initialise the server
+
+        os.chdir(self._get_root_dir())
+        server_proc = subprocess.Popen(['python', '-m', 'SimpleHTTPServer'])
+        self._server_pid = server_proc.pid
+
+        # Wait for the server to be up
+        time.sleep(2)
+
+    def stop(self):
+        os.system('kill {}'.format(self._server_pid))
+
+# Initialise the local server
+server = Server()
+server.start()
 
 # Init the web app
 draw = Draw()
