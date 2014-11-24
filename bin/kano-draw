@@ -10,71 +10,23 @@
 
 import os
 import sys
-import subprocess
-import time
-import errno
-import atexit
+import multiprocessing
 
-from kano.webapp import WebApp
+if __name__ == '__main__' and __package__ is None:
+    DIR_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 
-app_name = 'kano-draw'
+    if not DIR_PATH.startswith('/usr'):
+        sys.path.insert(1, DIR_PATH)
 
+from kano_draw.draw import Draw
+import kano_draw.server
 
-class Draw(WebApp):
-    def __init__(self):
-        self._index = "http://localhost:8000"
-        self._title = "Draw with code"
-
-        self._decoration = False
-        self._maximized = True
-
-        self._home_dir = os.path.expanduser('~')
-        self._save_dir = self._home_dir + '/Draw-content/'
-        self._parent_dir = '..'
-
-        self._mkdir_p(self._save_dir)
-
-    def _mkdir_p(self, path):
-        try:
-            os.makedirs(path)
-        except OSError as exc:
-            if exc.errno == errno.EEXIST and os.path.isdir(path):
-                pass
-            else:
-                raise
-
-
-class Server(object):
-    _server_pid = None
-
-    def __init__(self):
-        atexit.register(self.stop)
-
-    def _get_root_dir(self):
-        bin_path = os.path.abspath(os.path.dirname(__file__))
-
-        if bin_path.startswith('/usr'):
-            return '/usr/share/kano-draw'
-        else:
-            return os.path.join(bin_path, '../www')
-
-    def start(self):
-        # TODO: this is not the most eficient way to initialise the server
-
-        os.chdir(self._get_root_dir())
-        server_proc = subprocess.Popen(['python', '-m', 'SimpleHTTPServer'])
-        self._server_pid = server_proc.pid
-
-        # Wait for the server to be up
-        time.sleep(2)
-
-    def stop(self):
-        os.system('kill {}'.format(self._server_pid))
 
 # Initialise the local server
-server = Server()
-server.start()
+SERVER_PROC = multiprocessing.Process(target=kano_draw.server.start)
+SERVER_PROC.daemon = True
+SERVER_PROC.start()
 
 # Init the web app
-draw = Draw()
-draw.run()
+DRAW = Draw()
+DRAW.run()
