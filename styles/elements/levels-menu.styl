@@ -9,6 +9,7 @@ level-button-gutter = 10px
         clearfix()
 
         li
+            position relative
             margin (level-button-gutter / 2)
             float left
 
@@ -22,3 +23,42 @@ level-button-gutter = 10px
                 text-align center
                 font-weight bold
                 font-size 18px
+
+            .button.locked
+                background #cccccc
+                color #dddddd
+
+            .button:not(.locked):hover
+                button-color(saturate(darken(color-green, 1), 10))
+
+            .button ~ .challenge-title,
+            .button ~ .challenge-title:after
+                position absolute
+                left 50%
+                -webkit-transform translate(-50%, 0)
+                transform translate(-50%, 0)
+
+            .button ~ .challenge-title
+                display none
+                background #44423d
+                color #ffffff
+                padding 10px
+                font-weight bold
+                font-size 14px
+                line-height 14px
+                white-space nowrap
+                border-radius 3px
+                bottom 65px
+
+            .button:hover ~ .challenge-title
+                display block
+
+            .button ~ .challenge-title:after
+                content ''
+                display block
+                bottom -15px
+                width 0
+                height 0
+                border-left 15px solid transparent
+                border-right 15px solid transparent
+                border-top 15px solid #44423d
