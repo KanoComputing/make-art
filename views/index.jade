@@ -29,8 +29,8 @@ html(lang='en', ng-app='draw')
             ul.levels-list
                 li(ng-repeat='level in levels'
                    ng-controller='challengeMenuItem')
-                    a.button(ng-href="{{ isLocked ? '' : 'level/' + challengeNo }}"
-                             ng-class="{ 'locked' : isLocked }") {{ challengeNo }}
+                    a.button(ng-href="{{ isLocked() ? '' : 'level/' + challengeNo }}"
+                             ng-class="{ 'locked' : isLocked() }") {{ challengeNo }}
                     div.challenge-title {{ level.title }}
 
         //- Vendor
