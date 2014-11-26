@@ -6,3 +6,5 @@ www/js/*
 node_modules
 **.DS_Store
 **.sublime-workspace
+*.pyc
+*.swp
