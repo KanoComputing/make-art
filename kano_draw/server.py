@@ -56,10 +56,11 @@ def load_challenge(filename):
                                as_attachment=True)
 
 @server.route('/progress/<int:level>', methods=['POST'])
-def _save_level(number):
+def _save_level(level):
+    print 'saving level'
     old_xp = calculate_xp()
 
-    value = int(number) - 1
+    value = int(level) - 1
 
     save_app_state_variable_with_dialog(APP_NAME, 'level', value)
     new_xp = calculate_xp()
