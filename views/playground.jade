@@ -9,4 +9,10 @@ section: .page-width
         .col-6
             display(ng-source='code')
 
+    span(ng-repeat="dialog in exportDialogs"
+         ng-controller='export')
+        a.button(ng-click='openDialog()') {{ dialog }}
+
+        include partial/export
+
     include partial/docs

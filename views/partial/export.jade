@@ -1,0 +1,11 @@
+.modal-overlay(ng-show='isOpen'): .modal-inner.export-menu
+    h2.center {{ dialog }}
+    .row
+        .col-6
+            img.created-image(ng-src='{{ getImageSrc() }}')
+    .row
+        .col-6
+            input.filename(ng-model='filename')
+            textarea.description(ng-model='description')
+
+    a.button(ng-click='export()') {{ dialog }}

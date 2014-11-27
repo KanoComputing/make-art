@@ -36,24 +36,43 @@ def static_proxy(path):
     # send_static_file will guess the correct MIME type
     return server.send_static_file(path)
 
+
 @server.route("/challenge/local", methods=['POST'])
 def save_challenge():
+    import base64
+
     data = json.loads(request.data)
+
     filename = data['filename']
-    content = data['content']
+    desc = data['description']
+    code = data['code']
+    image_str = data['image']
 
     filepath = os.path.join(CHALLENGE_DIR, filename + '.draw')
+    img_path = os.path.join(CHALLENGE_DIR, filename + '.png')
 
     with open(filepath, 'w') as f:
-        f.write(content)
+        f.write(
+            json.dumps({
+                'filename': filename,
+                'description': desc,
+                'code' : code
+            })
+        )
 
-    return 200
+    with open(img_path, 'wb') as f:
+        image_b64 = image_str.split(',')[-1]
+        image_data = base64.b64decode(image_b64)
+        f.write(image_data)
+
+    return ''
 
 @server.route('/challenge/local/<path:filename>', methods=['GET'])
 def load_challenge(filename):
     print 'looking for', CHALLENGE_DIR, filename
     return send_from_directory(CHALLENGE_DIR, filename + '.draw',
                                as_attachment=True)
+
 
 @server.route('/progress/<int:level>', methods=['POST'])
 def _save_level(level):
