@@ -7,6 +7,7 @@ from kano.utils import ensure_dir
 from kano_profile.badges import save_app_state_variable_with_dialog, \
     calculate_xp
 from kano_profile.apps import load_app_state_variable
+from kano_world.share import upload_share
 
 
 APP_NAME = 'kano-draw'
@@ -23,30 +24,19 @@ def _get_static_dir():
     else:
         return os.path.abspath(os.path.join(bin_path, '../www'))
 
-
-server = Flask(__name__, static_folder=_get_static_dir(), static_url_path='/')
-
-
-@server.route('/')
-def root():
-    return server.send_static_file('index.html')
-
-@server.route('/<path:path>')
-def static_proxy(path):
-    # send_static_file will guess the correct MIME type
-    return server.send_static_file(path)
-
-
-@server.route("/challenge/local", methods=['POST'])
-def save_challenge():
+def _get_image_from_str(img_str):
     import base64
 
-    data = json.loads(request.data)
+    image_b64 = img_str.split(',')[-1]
+    image_data = base64.b64decode(image_b64)
 
+    return image_data
+
+def _save(data):
     filename = data['filename']
     desc = data['description']
     code = data['code']
-    image_str = data['image']
+    image = _get_image_from_str(data['image'])
 
     filepath = os.path.join(CHALLENGE_DIR, filename + '.draw')
     img_path = os.path.join(CHALLENGE_DIR, filename + '.png')
@@ -61,22 +51,63 @@ def save_challenge():
         )
 
     with open(img_path, 'wb') as f:
-        image_b64 = image_str.split(',')[-1]
-        image_data = base64.b64decode(image_b64)
-        f.write(image_data)
+        f.write(image)
+
+    return (filename, filepath)
+
+
+server = Flask(__name__, static_folder=_get_static_dir(), static_url_path='/')
+
+
+@server.route('/')
+def root():
+    return server.send_static_file('index.html')
+
+@server.route('/<path:path>')
+def static_proxy(path):
+    # send_static_file will guess the correct MIME type
+    return server.send_static_file(path)
+
+
+@server.route("/challenge/local/<path:filename>", methods=['POST'])
+def save_challenge(filename):
+    data = json.loads(request.data)
+
+    _save(data)
 
     return ''
 
-@server.route('/challenge/local/<path:filename>', methods=['GET'])
-def load_challenge(filename):
-    print 'looking for', CHALLENGE_DIR, filename
-    return send_from_directory(CHALLENGE_DIR, filename + '.draw',
-                               as_attachment=True)
+@server.route("/challenge/web/<path:filename>", methods=['POST'])
+def share(filename):
+    data = json.loads(request.data)
+
+    filename, filepath = _save(data)
+    upload_share(filepath, filename, APP_NAME)
+
+    return ''
+
+@server.route('/challenge/web', methods=['GET'])
+def load_share():
+    # TODO: Import kano-share python module and use return code instead
+    import subprocess
+
+    p = subprocess.Popen(["kano-share", APP_NAME],
+                         stdin=subprocess.PIPE,
+                         stdout=subprocess.PIPE)
+
+    for line in p.stdout:
+        path = line.split('File Path: ')[-1]
+        if len(line) == len(path):
+            continue
+
+        path = path.replace('$HOME', os.path.expanduser('~')).rstrip('\n')
+        directory, _, filename = path.rpartition('/')
+
+        return send_from_directory(directory, filename, as_attachment=True)
 
 
 @server.route('/progress/<int:level>', methods=['POST'])
 def _save_level(level):
-    print 'saving level'
     old_xp = calculate_xp()
 
     value = int(level) - 1

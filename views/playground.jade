@@ -5,14 +5,19 @@ section: .page-width
 
     .row
         .col-6
-            editor(ng-model='code', editable='true', auto-select='false')
+            editor(ng-model='playground.code', editable='true', auto-select='false')
         .col-6
-            display(ng-source='code')
+            display(ng-source='playground.code')
 
     span(ng-repeat="dialog in exportDialogs"
          ng-controller='export')
         a.button(ng-click='openDialog()') {{ dialog }}
 
         include partial/export
+
+    span(ng-controller='loadDialog')
+        a.button(ng-click='openDialog()') Load
+
+        include partial/load
 
     include partial/docs
