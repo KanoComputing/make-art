@@ -21,6 +21,7 @@ html(lang='en', ng-app='draw')
                 span.logo-title Draw
 
             ul.nav-main
+                li: a.button.button-success(href='/') Examples
                 li: a.button.button-success(href='#', ng-click='menuOpen = !menuOpen') Challenges
                 li: a.button(href='/playground') Playground
         ng-view
