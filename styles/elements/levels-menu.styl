@@ -6,6 +6,7 @@ level-button-gutter = 10px
     ul.levels-list
         debullet()
         margin -(level-button-gutter / 2)
+        margin-top 25px
         clearfix()
 
         li
@@ -14,7 +15,7 @@ level-button-gutter = 10px
             float left
 
             .button
-                button-color(saturate(darken(color-green, 6), 10))
+                button-color(color-blue)
                 width level-button-size
                 height level-button-size
                 line-height level-button-size
@@ -24,41 +25,44 @@ level-button-gutter = 10px
                 font-weight bold
                 font-size 18px
 
-            .button.locked
-                background #cccccc
-                color #dddddd
+                &.locked
+                    button-color(#dddddd)
 
-            .button:not(.locked):hover
-                button-color(saturate(darken(color-green, 1), 10))
+                &.playground
+                    button-color(saturate(darken(color-green, 6), 10))
+                &:hover
+                    &:not(.locked)
+                        button-color(lighten(color-blue, 5))
+                    &.playground
+                        button-color(saturate(darken(color-green, 1), 10))
+                    & ~ .challenge-title
+                        display block
 
-            .button ~ .challenge-title,
-            .button ~ .challenge-title:after
-                position absolute
-                left 50%
-                -webkit-transform translate(-50%, 0)
-                transform translate(-50%, 0)
+                & ~ .challenge-title
+                    display none
+                    background #44423d
+                    color #ffffff
+                    padding 10px
+                    font-weight bold
+                    font-size 14px
+                    line-height 14px
+                    white-space nowrap
+                    border-radius 3px
+                    bottom 65px
 
-            .button ~ .challenge-title
-                display none
-                background #44423d
-                color #ffffff
-                padding 10px
-                font-weight bold
-                font-size 14px
-                line-height 14px
-                white-space nowrap
-                border-radius 3px
-                bottom 65px
+                    &:after
+                        content ''
+                        display block
+                        bottom -15px
+                        width 0
+                        height 0
+                        border-left 15px solid transparent
+                        border-right 15px solid transparent
+                        border-top 15px solid #44423d
 
-            .button:hover ~ .challenge-title
-                display block
-
-            .button ~ .challenge-title:after
-                content ''
-                display block
-                bottom -15px
-                width 0
-                height 0
-                border-left 15px solid transparent
-                border-right 15px solid transparent
-                border-top 15px solid #44423d
+                    &,
+                    &:after
+                        position absolute
+                        left 50%
+                        -webkit-transform translate(-50%, 0)
+                        transform translate(-50%, 0)
