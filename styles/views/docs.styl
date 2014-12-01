@@ -7,7 +7,7 @@ doc-tag-color(color, color-text = #fff)
 
 .docs
     margin-top 100px
-    
+
     h1
         margin-bottom 20px
 
@@ -21,11 +21,38 @@ doc-tag-color(color, color-text = #fff)
             margin-bottom 20px
             font-weight normal
 
+    .docs-details
         .command
+            position relative
             border-radius()
             margin-bottom 20px
             background color-white
-            padding 30px
+            overflow hidden
+
+            .col-6
+                padding 30px
+
+                &.command-code
+                    background color-grey
+                    padding-bottom 999px
+                    margin-bottom -999px
+                    padding-left 45px
+
+                    &:before
+                        content '1'
+                        background darken(color-grey, 5)
+                        color color-white
+                        position absolute
+                        top 0
+                        bottom 0
+                        left 0
+                        width 40px
+                        padding-top 35px
+                        text-align center
+                        font-weight bold
+
+                &.command-usage
+                    background color-light-grey
 
             &:last-child
                 padding-bottom 15px
@@ -51,6 +78,9 @@ doc-tag-color(color, color-text = #fff)
 
                 .argument.optional
                     opacity .2
+
+                .argument.separator
+                    color color-white
 
             .description
                 font-style italic

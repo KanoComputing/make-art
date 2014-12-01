@@ -4,6 +4,7 @@ editor-tag(color=color-primary, color-text=#fff)
     margin 0 -2px
     border-radius()
     color color-text
+    font-weight bold
 
 editor
     min-height 460px
@@ -28,6 +29,7 @@ editor
     &.ace_editor
         line-height 26px
         font-size 15px
+        background color-grey
 
         .ace_gutter
             background color-editor-gutter
@@ -53,7 +55,8 @@ editor
                 editor-tag(color-language-language)
 
         .ace_gutter-cell
-            color darken(color-editor-gutter, 20)
+            font-weight bold
+            color color-white
 
         .ace_gutter-active-line
             background darken(color-editor-gutter, 5)

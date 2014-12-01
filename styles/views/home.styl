@@ -1,4 +1,4 @@
-ul.examples-list
+ul.list
     debullet()
     text-align center
     margin-bottom 25px
@@ -8,9 +8,15 @@ ul.examples-list
         padding 0 10px
         border-right 1px solid color-ruler
         text-transform uppercase
+        font-weight bold
 
         &:last-child
             border 0
 
-        a.active
-            color color-black
+        a
+            padding 5px
+            border-radius 3px
+
+            &.active
+                color color-white
+                background color-orange

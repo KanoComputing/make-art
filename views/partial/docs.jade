@@ -7,34 +7,42 @@ mixin arguments-short (args)
                 = arg[0]
 
         if i < args.length - 1
-            | , 
+            span(class='argument separator')
+                | , 
 
-.docs
+.docs(ng-controller='docs',
+      ng-init='categories = []')
     h1.center Spellbook
+    h4.center Collection of all your spells
 
-    .row
+    ul.list.category-list
         for category, i in jsonContent('docs')
 
-            if i % 2 === 0 && i !== 0
-                </div><div class="row">
+            li.docs-category(ng-init="categories.push('" + category.label.toLowerCase() + "')")
 
-            .col-6: .docs-category
-                h3
-                    .category-icon(class='category-icon-' + category.label.toLowerCase())
+                a(ng-class="{ active: '" + category.label.toLowerCase() + "' === current }",
+                         ng-click="selectCategory('" + category.label.toLowerCase() + "')")
                     = category.label
 
+    .row
+
+        for category, i in jsonContent('docs')
+            .docs-details
                 for command in category.commands
-                    .command
+                    .row.command(ng-show="'" + category.label.toLowerCase() + "' === current")
 
-                        h4
-                            span.identifier= command.call + (!command.args.length ? '()' : '')
-                            |  
-                            +arguments-short(command.args)
+                        .col-6.command-code
+                            h4
+                                span.identifier= command.call + (!command.args.length ? '()' : '')
+                                |  
+                                +arguments-short(command.args)
 
-                        p.description= command.description
+                        .col-6.command-usage
+                            h3= command.call
+                            p.description= command.description
 
-                        ul.arguments
-                            for arg in command.args
-                                li
-                                    = arg[0] + ': '
-                                    span= arg[2]
+                            ul.arguments
+                                for arg in command.args
+                                    li
+                                        = arg[0] + ': '
+                                        span= arg[2]
