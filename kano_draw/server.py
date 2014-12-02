@@ -84,6 +84,7 @@ def save_wallpaper(filename):
     data = json.loads(request.data)
 
     imgs = {
+        'medium': _get_image_from_str(data['image_medium']),
         '4-3': _get_image_from_str(data['image_4_3']),
         '16-9': _get_image_from_str(data['image_16_9'])
     }
