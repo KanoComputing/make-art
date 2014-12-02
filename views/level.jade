@@ -31,11 +31,11 @@ section.page-level(ng-class='"mode-" + mode'): .page-width
                     button.button-inverse.button-next.large(ng-click='doneReading()', ng-show='slide >= slides.length - 1') Got it
 
             .success-display(ng-if='completed && hasNext')
-                h3 {{ successMessage() }}
+                h5 {{ successMessage() }}
                 a.button.button-inverse-success.large(ng-href='/level/{{id + 1}}') Next &rsaquo;
 
             .success-display(ng-show='completed && !hasNext')
-                h3 Tutorial completed!!!
+                h5 Tutorial completed!!!
                 a.button.button-inverse-success.large(href='/') Sandbox &rsaquo;
 
     include partial/docs

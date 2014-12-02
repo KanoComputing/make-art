@@ -1,19 +1,33 @@
 .page-level
 
     .success-display
-        absolute-cover()
+        position absolute
+        top 0
+        left 0
+        right 0
         bg-inverse color-green
         padding 20px
+        padding-bottom 0
+        margin 20px
         box-sizing border-box
         clearfix()
         text-align center
-        background-image radial-gradient(rgba(#fff, .3), rgba(#fff, .0))
+        background lighten(color-green, 5)
         border-radius()
 
-        h3
-            margin-top 120px
+        h5
+            padding-right 100px
+
+        a
+            position absolute
+            right 0
+            top 0
+            height 100%
+            box-sizing border-box
+            background color-green
+            line-height 64px
+            color color-white
             font-weight bold
-            text-transform uppercase
 
     editor.disabled
         position relative
