@@ -38,7 +38,7 @@ html(lang='en', ng-app='draw')
                    ng-controller='challengeMenuItem')
                     a.button(ng-href="{{ isLocked() ? '' : 'level/' + challengeNo }}"
                              ng-class="{ 'locked' : isLocked() }") {{ challengeNo }}
-                    div.challenge-title {{ level.title }}
+                    div.challenge-title {{ level.title.toUpperCase() }}
                 li
                     a.button.playground(ng-href='/playground') Playground
                     div.challenge-title BE CREATIVE

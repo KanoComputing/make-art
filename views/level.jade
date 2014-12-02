@@ -1,5 +1,7 @@
 section.page-level(ng-class='"mode-" + mode'): .page-width
 
+    h2.center Challenge {{ id }}: {{ levels[ id - 1 ].title }}
+    h4.center {{ levels[ id - 1 ].description }}
     .row
         .col-6.editor-wrap
                 editor(
