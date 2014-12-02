@@ -6,6 +6,7 @@ class Draw(WebApp):
 
         self._index = "http://localhost:8000"
         self._title = "Draw with code"
+        self._app_icon = '/usr/share/icons/Kano/88x88/apps/kano-draw.png'
 
         self._decoration = False
         self._maximized = True

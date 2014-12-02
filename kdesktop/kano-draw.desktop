@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Type=Application
+Exec=/usr/bin/kano-launcher /usr/bin/kano-draw
+Icon=/usr/share/kano-desktop/icons/kano-draw.png
+Terminal=false
+Name=Kano Draw
+Comment=Draw with code
+Categories=Application;Education;Development;Kano;
+MimeType=application/x-kano-draw
