@@ -20,10 +20,15 @@
             outline none
 
     textarea
-        height 140px
+        height 96px
 
     .button
+        clear both
         float right
+        margin-right 0
+
+        &:not(:first-of-type)
+            margin-top 10px
 
     input:invalid ~ .button
         background color-disabled

@@ -11,3 +11,5 @@
                                  placeholder='Description')
 
             a.button.export(ng-click='export()') {{ dialog }}
+            a.button.export-wallpaper(ng-show="dialog === 'save'",
+                                      ng-click='exportWallpaper()') Create Wallpaper

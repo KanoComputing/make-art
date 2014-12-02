@@ -12,8 +12,10 @@ from kano_world.share import upload_share
 
 APP_NAME = 'kano-draw'
 CHALLENGE_DIR = os.path.expanduser('~/Draw-content')
+WALLPAPER_DIR = os.path.join(CHALLENGE_DIR, 'wallpapers')
 
 ensure_dir(CHALLENGE_DIR)
+ensure_dir(WALLPAPER_DIR)
 
 
 def _get_static_dir():
@@ -74,6 +76,24 @@ def save_challenge(filename):
     data = json.loads(request.data)
 
     _save(data)
+
+    return ''
+
+@server.route("/challenge/local/wallpaper/<path:filename>", methods=['POST'])
+def save_wallpaper(filename):
+    data = json.loads(request.data)
+
+    imgs = {
+        '4-3': _get_image_from_str(data['image_4_3']),
+        '16-9': _get_image_from_str(data['image_16_9'])
+    }
+
+    img_path = os.path.join(WALLPAPER_DIR,
+        '{filename}-{{ratio}}.png'.format(filename=filename))
+
+    for ratio, img_data in imgs.iteritems():
+        with open(img_path.format(ratio=ratio), 'wb') as f:
+            f.write(img_data)
 
     return ''
 
