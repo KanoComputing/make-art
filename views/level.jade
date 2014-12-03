@@ -17,18 +17,8 @@ section.page-level(ng-class='"mode-" + mode'): .page-width
                 display(ng-source='code')
 
                 .actions
-                    a.button(ng-click='mode = "reading"; slide = 0') Help
+                    a.button(ng-click='openIntro()') Help
                     a.button.button-info(ng-click='code = content.code') Reset
-
-            .tutorial-display(ng-if='mode=="reading"')
-
-                h3.ruled {{ content.title }}
-
-                div.content(ng-bind-html='slides[slide] | markdown')
-
-                .next-action
-                    button.button-inverse.button-next.large(ng-click='nextSlide()', ng-show='slide < slides.length - 1') Next
-                    button.button-inverse.button-next.large(ng-click='doneReading()', ng-show='slide >= slides.length - 1') Got it
 
             .success-display(ng-if='completed && hasNext')
                 h5 {{ successMessage() }}
@@ -36,6 +26,18 @@ section.page-level(ng-class='"mode-" + mode'): .page-width
 
             .success-display(ng-show='completed && !hasNext')
                 h5 Tutorial completed!!!
-                a.button.button-inverse-success.large(href='/') Sandbox &rsaquo;
+                a.button.button-inverse-success.large(href='/') Playground &rsaquo;
+
+    .modal-overlay(ng-show='isIntroOpen'): .modal-inner.challenge-intro
+        button.close(ng-click='closeIntro()') &times
+        .tutorial-display(ng-if='mode=="reading"')
+
+            h3.center Challenge {{ id }}: {{ content.title }}
+
+            div.center.content(ng-bind-html='slides[slide] | markdown')
+
+            .next-action.center.bottom-section
+                button.button-inverse.button-next.large(ng-click='nextSlide()', ng-show='slide < slides.length - 1') Next
+                button.button-inverse.button-next.large(ng-click='closeIntro()', ng-show='slide >= slides.length - 1') Got it
 
     include partial/docs

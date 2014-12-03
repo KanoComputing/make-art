@@ -27,14 +27,18 @@
     min-height 50px
 
     button.close
-        button-color(color-grey-light, color-black)
+        button-color(color-white, color-grey)
         padding 0
-        width 30px
-        line-height 30px
+        font-size 22px
+        width 36px
+        line-height 36px
         text-align center
         position absolute
         right 10px
         top 10px
+
+        &:hover
+            background color-mid-grey
 
         i
             position relative
@@ -51,3 +55,20 @@
 
         &:first-child
             margin-top -10px
+
+    .bottom-section
+        position absolute
+        bottom 0
+        left 0
+        right 0
+        background color-mid-grey
+        border-bottom-left-radius 3px
+        border-bottom-right-radius 3px
+
+        button
+            margin 20px
+            color color-white
+            background color-green
+
+            &:hover
+                background lighten(color-green, 5)

@@ -35,21 +35,11 @@
         > *
             blur-fx .9px
 
-        &:after
-            content ''
-            display block
-            absolute-cover()
-            bg-image-sized('characters/judoka/explaining', center center, no-repeat)
-            margin-left 30px
-
     .tutorial-wrap
         position relative
 
     .tutorial-display
-        absolute-cover()
-        bg-inverse()
-        box-sizing border-box
-        padding 10px 30px
+        padding 10px 30px 60px 30px
         font-size 20px
         border-radius()
 
@@ -61,9 +51,6 @@
             position absolute
             tooltip-tail(left, @background, 15px)
             top 70px
-
-        .next-action
-            margin-top 30px
 
     .display-wrap
         position relative
