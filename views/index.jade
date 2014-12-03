@@ -33,7 +33,7 @@ html(lang='en', ng-app='draw')
                 h4.center {{ levels[lastChallengeVisited.get() - 1].description }}
                 div.center
                     a.button(ng-href='level/{{ lastChallengeVisited.get() }}') GO!
-            ul.levels-list
+            ul.levels-list.bottom-section
                 li(ng-repeat='level in levels'
                    ng-controller='challengeMenuItem')
                     a.button(ng-href="{{ isLocked() ? '' : 'level/' + challengeNo }}"
