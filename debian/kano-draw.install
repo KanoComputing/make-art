@@ -1,3 +1,8 @@
 bin/* /usr/bin
 kano_draw /usr/lib/python2.7/dist-packages
 www/* /usr/share/kano-draw
+
+kdesktop/Draw.lnk usr/share/kano-desktop/kdesk/kdesktop/
+icon/kano-draw.png usr/share/icons/Kano/88x88/apps
+icon/kano-draw-hover.png usr/share/icons/Kano/88x88/apps
+icon/kano-draw.app usr/share/applications

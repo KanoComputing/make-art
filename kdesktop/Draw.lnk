@@ -1,0 +1,12 @@
+table Icon
+  Caption:
+  AppID: kano-[d]raw
+  Command: /usr/bin/kano-launcher /usr/bin/kano-draw
+  Singleton: true
+  Icon: /usr/share/icons/Kano/88x88/apps/kano-draw.png
+  IconHover: /usr/share/icons/Kano/88x88/apps/kano-draw-hover.png
+  HoverXOffset: 0
+  Relative-To: grid
+  X: 0
+  Y: 1
+end
