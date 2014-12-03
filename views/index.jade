@@ -27,6 +27,7 @@ html(lang='en', ng-app='draw')
         ng-view
 
         .modal-overlay(ng-show='menuOpen'): .modal-inner.levels-menu
+            button.close(ng-click='menuOpen = false') &times
             div.challenge-info
                 h6.center CHALLENGE {{ lastChallengeVisited.get() }} OF {{ levels.length }}
                 h2.center {{ levels[lastChallengeVisited.get() - 1].title }}
