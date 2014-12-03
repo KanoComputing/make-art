@@ -4,6 +4,7 @@
         "commands": [
             {
                 "call": "circle",
+                "unlockedAt": 1,
                 "description": "Draw a circle centered on the current position",
                 "args": [
                     [ "radius", "number", "The circle size", true ]
@@ -11,6 +12,7 @@
             },
             {
                 "call": "ellipse",
+                "unlockedAt": 999,
                 "description": "Draw an ellipse centered on the current position",
                 "args": [
                     [ "radius-x", "number", "The ellipse horizontal size", true ],
@@ -19,6 +21,7 @@
             },
             {
                 "call": "square",
+                "unlockedAt": 2,
                 "description": "Draw a square centered on the current position",
                 "args": [
                     [ "size", "number", "The size of the square", true ]
@@ -26,6 +29,7 @@
             },
             {
                 "call": "rectangle",
+                "unlockedAt": 999,
                 "description": "Draw a rectangle centered on the current position",
                 "args": [
                     [ "width", "number", "The rectangle width", true ],
@@ -34,6 +38,7 @@
             },
             {
                 "call": "arc",
+                "unlockedAt": 999,
                 "description": "Draw a rectangle centered on the current position",
                 "args": [
                     [ "radius", "number", "The arc size", true ],
@@ -44,6 +49,7 @@
             },
             {
                 "call": "polygon",
+                "unlockedAt": 999,
                 "description": "Draw a polygon with given points",
                 "args": [
                     [ "x1", "number", "Point X position", true ],
@@ -59,6 +65,7 @@
         "commands": [
             {
                 "call": "color",
+                "unlockedAt": 4,
                 "description": "Change the color in use",
                 "args": [
                     [ "color", "string", "The color to use", true ]
@@ -66,6 +73,7 @@
             },
             {
                 "call": "stroke",
+                "unlockedAt": 5,
                 "description": "Change the line color and width in use",
                 "args": [
                     [ "size", "number", "(number) The line width to use", false ],
@@ -74,6 +82,7 @@
             },
             {
                 "call": "strokeColor",
+                "unlockedAt": 999,
                 "description": "The stroke color to use",
                 "args": [
                     [ "color", "string", "A string with the color to use - E.g. 'red', 'blue'..", true ]
@@ -81,6 +90,7 @@
             },
             {
                 "call": "strokeWidth",
+                "unlockedAt": 999,
                 "description": "The stroke width to use",
                 "args": [
                     [ "size", "number", "A number with the line width to use", true ]
@@ -93,6 +103,7 @@
         "commands": [
             {
                 "call": "line",
+                "unlockedAt": 3,
                 "description": "Draw a line starting from the current position",
                 "args": [
                     [ "x", "number", "Horizontal distance", true ],
@@ -101,6 +112,7 @@
             },
             {
                 "call": "lineTo",
+                "unlockedAt": 999,
                 "description": "Draw a line to any position",
                 "args": [
                     [ "x", "number", "The horizontal destination", true ],
@@ -114,6 +126,7 @@
         "commands": [
             {
                 "call": "move",
+                "unlockedAt": 6,
                 "description": "Move the cursor starting from the current position",
                 "args": [
                     [ "x", "number", "Horizontal distance", true ],
@@ -122,6 +135,7 @@
             },
             {
                 "call": "moveTo",
+                "unlockedAt": 999,
                 "description": "Move the cursor to any position",
                 "args": [
                     [ "x", "number", "The horizontal destination", true ],
@@ -135,11 +149,13 @@
         "commands": [
             {
                 "call": "clear",
+                "unlockedAt": 999,
                 "description": "Clear the sketch",
                 "args": []
             },
             {
                 "call": "reset",
+                "unlockedAt": 999,
                 "description": "Reset styles",
                 "args": []
             }

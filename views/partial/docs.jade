@@ -29,7 +29,7 @@ mixin arguments-short (args)
         for category, i in jsonContent('docs')
             .docs-details
                 for command in category.commands
-                    .row.command(ng-show="'" + category.label.toLowerCase() + "' === current")
+                    .row.command(ng-show="'" + category.label.toLowerCase() + "' === current && ( " + command.unlockedAt + " <= id || playground !== undefined )")
 
                         .col-6.command-code
                             h4
