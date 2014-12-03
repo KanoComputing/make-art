@@ -5,7 +5,7 @@ class Draw(WebApp):
         super(Draw, self).__init__()
 
         self._index = "http://localhost:8000"
-        self._title = "Draw with code"
+        self._title = "Draw"
         self._app_icon = '/usr/share/icons/Kano/88x88/apps/kano-draw.png'
 
         self._decoration = False
