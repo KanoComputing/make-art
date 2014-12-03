@@ -20,13 +20,10 @@ section.page-level(ng-class='"mode-" + mode'): .page-width
                     a.button(ng-click='openIntro()') Help
                     a.button.button-info(ng-click='code = content.code') Reset
 
-            .success-display(ng-if='completed && hasNext')
+            .success-display(ng-if='completed')
                 h5 {{ successMessage() }}
-                a.button.button-inverse-success.large(ng-href='/level/{{id + 1}}') Next &rsaquo;
-
-            .success-display(ng-show='completed && !hasNext')
-                h5 Tutorial completed!!!
-                a.button.button-inverse-success.large(href='/') Playground &rsaquo;
+                a.button.button-inverse-success.large(ng-if='hasNext', ng-href='/level/{{id + 1}}') Next &rsaquo;
+                a.button.button-inverse-success.large(ng-if='!hasNext', ng-href='/playground') Playground &rsaquo;
 
     .modal-overlay(ng-show='isIntroOpen'): .modal-inner.challenge-intro
         button.close(ng-click='closeIntro()') &times
