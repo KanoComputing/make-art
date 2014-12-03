@@ -12,6 +12,9 @@ button, a.button, input[type='submit'], input[type='reset']
     font-weight bold
     margin-right 10px
 
+    &:hover
+        cursor pointer
+
     &:last-child
         margin-right 0
 
@@ -19,17 +22,32 @@ button, a.button, input[type='submit'], input[type='reset']
         button-color(color-primary)
         border 0
 
+        &:hover
+            button-color(lighten(color-primary, 5))
+
     &.button-info
         button-color(color-blue)
+
+        &:hover
+            button-color(lighten(color-blue, 5))
 
     &.button-success
         button-color(color-green)
 
+        &:hover
+            button-color(lighten(color-green, 5))
+
     &.button-inverse
         button-color(color-white, darken(color-primary, 40%))
 
+        &:hover
+            button-color(color-white, color-primary)
+
     &.button-inverse-success
         button-color(color-white, darken(color-success, 40%))
+
+        &:hover
+            button-color(color-white, color-success)
 
     &.large
         padding 13px 30px
