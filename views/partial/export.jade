@@ -1,4 +1,5 @@
 .modal-overlay(ng-show='isOpen'): .modal-inner.export-menu
+    button.close(ng-click='isOpen = false') &times
     h2.center {{ dialog }}
     .row
         .col-6
