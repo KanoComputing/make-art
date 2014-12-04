@@ -23,7 +23,9 @@ section.page-level(ng-class='"mode-" + mode'): .page-width
             .success-display(ng-if='completed')
                 h5 {{ successMessage() }}
                 a.button.button-success.large(ng-if='hasNext', ng-href='/level/{{id + 1}}') Next &rsaquo;
-                a.button.button-success.large(ng-if='!hasNext', ng-href='/playground') Playground &rsaquo;
+                a.button.button-success.large(ng-if='!hasNext', ng-click='openLevelComplete()') Next &rsaquo;
+
+    include partial/level-complete
 
     .modal-overlay(ng-show='isIntroOpen'): .modal-inner.challenge-intro
         button.close(ng-click='closeIntro()') &times

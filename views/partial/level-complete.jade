@@ -1,0 +1,10 @@
+.modal-overlay(ng-show='isLevelCompleteOpen'): .modal-inner.level-complete.center
+    button.close(ng-click='closeLevelComplete()') &times
+    h2 Congratulations
+    h4 You've completed
+    .logo-title.center
+        img(src='/assets/layout/header-logo.png')
+        img(src='/assets/layout/draw-logo.png')
+
+    .center.bottom-section
+        button.button.large(ng-href='/playground') Playground
