@@ -51,6 +51,16 @@ doc-tag-color(color, color-text = #fff)
                         text-align center
                         font-weight bold
 
+                    .command-example
+                        border-top 1px solid color-ruler
+                        padding-top 10px
+
+                        h4, h5
+                            color color-white
+
+                        .command-example-code
+                            white-space pre
+
                 &.command-usage
                     background color-light-grey
 
@@ -100,5 +110,6 @@ doc-tag-color(color, color-text = #fff)
                 font-weight normal
 
                 span
-                    color #999
+                    font-style italic
+                    color darken(color-grey, 15)
                     font-weight 100

@@ -36,6 +36,10 @@ mixin arguments-short (args)
                                 span.identifier= command.call + (!command.args.length ? '()' : '')
                                 |  
                                 +arguments-short(command.args)
+                            if command.example
+                                .command-example
+                                    h4 Example
+                                    h5.command-example-code= command.example
 
                         .col-6.command-usage
                             h3= command.call

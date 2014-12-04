@@ -158,6 +158,15 @@
                 "unlockedAt": 999,
                 "description": "Reset styles",
                 "args": []
+            },
+            {
+                "call": "for",
+                "unlockedAt": 9,
+                "description": "Repeat code",
+                "args": [
+                    ["i in [x..y]", "number", "The start and end point for the variable i", "true"]
+                ],
+                "example": "for i in [1..5]\n    circle i"
             }
         ]
     }
