@@ -5,6 +5,7 @@ section.page-level(ng-class='"mode-" + mode'): .page-width
     .row
         .col-6.editor-wrap
                 editor(
+                    workspace,
                     ng-model='code',
                     ng-class='{ completed: completed, disabled: mode == "reading" }',
                     ng-change='validate()',
@@ -14,7 +15,7 @@ section.page-level(ng-class='"mode-" + mode'): .page-width
 
         .col-6.tutorial-wrap
             .display-wrap(v-show='mode === "editing"')
-                display(ng-source='code')
+                display(ng-source='code', workspace)
 
                 .actions
                     a.button(ng-click='openIntro()') Help
