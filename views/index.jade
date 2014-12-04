@@ -26,6 +26,8 @@ html(lang='en', ng-app='draw')
                 li: a.button(href='/playground') Playground
         ng-view
 
+        include partial/splash
+
         .modal-overlay(ng-show='menuOpen'): .modal-inner.levels-menu
             button.close(ng-click='menuOpen = false') &times
             div.challenge-info
