@@ -68,7 +68,7 @@
                 "unlockedAt": 4,
                 "description": "Change the color in use",
                 "args": [
-                    [ "color", "string", "The color to use", true ]
+                    [ "color", "string", "The color to use ('orange', 'blue', 'red', 'yellow', 'green'...)", true ]
                 ]
             },
             {
