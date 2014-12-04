@@ -17,3 +17,7 @@ circle 20
 ---
 
 Try removing the `#` symbols and enable the spells in the next example, and see what happens!
+
+---
+
+Remember to remove **ALL** of the `#`'s
