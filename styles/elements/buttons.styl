@@ -2,6 +2,11 @@ button-color(bg-color = color-primary, type-color = color-white)
     background bg-color
     color type-color
 
+button, a
+    &:hover
+        cursor pointer
+
+
 button, a.button, input[type='submit'], input[type='reset']
     border-radius()
     font-family font-body
@@ -11,9 +16,6 @@ button, a.button, input[type='submit'], input[type='reset']
     text-transform uppercase
     font-weight bold
     margin-right 10px
-
-    &:hover
-        cursor pointer
 
     &:last-child
         margin-right 0
