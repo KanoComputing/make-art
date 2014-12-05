@@ -5,9 +5,9 @@ section: .page-width
 
     .row
         .col-6
-            editor(ng-model='playground.code', editable='true', auto-select='false')
+            editor(ng-model='playground.code', editable='true', auto-select='false', workspace)
         .col-6
-            display(ng-source='playground.code')
+            display(ng-source='playground.code', workspace)
 
     span(ng-repeat="dialog in exportDialogs"
          ng-controller='export')
