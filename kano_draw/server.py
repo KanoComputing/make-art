@@ -2,6 +2,7 @@ from flask import Flask, Response, request, send_from_directory
 import json
 import os
 import time
+import logging
 
 from kano.utils import ensure_dir
 from kano_profile.badges import save_app_state_variable_with_dialog, \
@@ -62,6 +63,8 @@ def _save(data):
 
 
 server = Flask(__name__, static_folder=_get_static_dir(), static_url_path='/')
+server_logger = logging.getLogger('werkzeug')
+server_logger.setLevel(logging.ERROR)
 
 
 @server.route('/')
