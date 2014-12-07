@@ -8,7 +8,10 @@ from kano.utils import ensure_dir
 from kano_profile.badges import save_app_state_variable_with_dialog, \
     calculate_xp
 from kano_profile.apps import load_app_state_variable
+from kano_profile.badges import increment_app_state_variable_with_dialog
+from kano_world.functions import login_using_token
 from kano_world.share import upload_share
+from kano.network import is_internet
 
 
 APP_NAME = 'kano-draw'
@@ -106,10 +109,30 @@ def save_wallpaper(filename):
 
 @server.route("/challenge/web/<path:filename>", methods=['POST'])
 def share(filename):
-    data = json.loads(request.data)
+    # TODO: Move this connection handling into a function in Kano Utils
+    import subprocess
 
+    if not is_internet():
+        subprocess.call(['sudo', 'kano-settings', '4'])
+
+    if not is_internet():
+        return 'You have no internet'
+
+    success, _ = login_using_token()
+    if not success:
+        os.system('kano-login 3')
+        success, _ = login_using_token()
+        if not success:
+            return 'Cannot login'
+
+    data = json.loads(request.data)
     filename, filepath = _save(data)
-    upload_share(filepath, filename, APP_NAME)
+    success, msg = upload_share(filepath, filename, APP_NAME)
+
+    if not success:
+        return msg
+
+    increment_app_state_variable_with_dialog(APP_NAME, 'shared', 1)
 
     return ''
 
