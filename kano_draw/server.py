@@ -36,7 +36,10 @@ def _get_image_from_str(img_str):
 
 def _save(data):
     filename = data['filename']
-    desc = data['description']
+    try:
+        desc = data['description']
+    except KeyError:
+        desc = ''
     code = data['code']
     image = _get_image_from_str(data['image'])
 
