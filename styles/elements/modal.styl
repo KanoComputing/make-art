@@ -24,7 +24,6 @@
     width 600px
     box-sizing border-box
     padding 25px
-    padding-bottom 85px
     min-height 50px
 
     button.close
@@ -57,19 +56,22 @@
         &:first-child
             margin-top -10px
 
-    .bottom-section
-        position absolute
-        bottom 0
-        left 0
-        right 0
-        background color-mid-grey
-        border-bottom-left-radius 3px
-        border-bottom-right-radius 3px
+    &.split-modal
+        padding-bottom 85px
 
-        button
-            margin 20px
-            color color-white
-            background color-green
+        .bottom-section
+            position absolute
+            bottom 0
+            left 0
+            right 0
+            background color-mid-grey
+            border-bottom-left-radius 3px
+            border-bottom-right-radius 3px
 
-            &:hover
-                background lighten(color-green, 5)
+            button
+                margin 20px
+                color color-white
+                background color-green
+
+                &:hover
+                    background lighten(color-green, 5)

@@ -28,7 +28,7 @@ section.page-level(ng-class='"mode-" + mode'): .page-width
 
     include partial/level-complete
 
-    .modal-overlay(ng-show='isIntroOpen'): .modal-inner.challenge-intro
+    .modal-overlay(ng-show='isIntroOpen'): .modal-inner.split-modal.challenge-intro
         button.close(ng-click='closeIntro()') &times
         .tutorial-display(ng-if='mode=="reading"')
 

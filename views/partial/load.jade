@@ -1,12 +1,11 @@
-.modal-overlay(ng-show='isOpen'): .modal-inner.load-menu
+.modal-overlay(ng-show='isOpen'): .modal-inner.split-modal.load-menu
     button.close(ng-click='isOpen = false') &times
     h2.center Load
     h4.center Load from where
 
-    .row
-        .col-6.center
-            input.transparent(type='file'
-                onChange='angular.element(this).scope().load.local(this)')
-            a.button() Your Kano
-        .col-6.center
-            a.button(ng-click='load.web()') Internet
+    .bottom-section.center
+        span
+            button.button.large() Your Kano
+                input.transparent(type='file'
+                    onChange='angular.element(this).scope().load.local(this)')
+        button.button.large(ng-click='load.web()') Internet

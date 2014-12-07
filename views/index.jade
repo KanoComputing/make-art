@@ -28,7 +28,7 @@ html(lang='en', ng-app='draw')
 
         include partial/splash
 
-        .modal-overlay(ng-show='menuOpen'): .modal-inner.levels-menu
+        .modal-overlay(ng-show='menuOpen'): .modal-inner.split-modal.levels-menu
             button.close(ng-click='menuOpen = false') &times
             div.challenge-info
                 h6.center CHALLENGE {{ lastChallengeVisited.get() }} OF {{ levels.length }}
