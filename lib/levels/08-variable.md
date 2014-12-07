@@ -1,4 +1,4 @@
-Variables are shortcuts, they allow you to give a name to a value (A color, a number) and re-use it in your spells.
+Variables are shortcuts, they allow you to give a name to a value (a color, a number) and re-use it in your spells.
 
 You can define a variable by using the equal sign, for example:
 
