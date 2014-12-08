@@ -18,9 +18,11 @@ if __name__ == '__main__' and __package__ is None:
     if not DIR_PATH.startswith('/usr'):
         sys.path.insert(1, DIR_PATH)
 
+from kano_profile.tracker import Tracker
+kanotracker = Tracker()
+
 from kano_draw.draw import Draw
 import kano_draw.server
-
 
 # Initialise the local server
 SERVER_PROC = multiprocessing.Process(target=kano_draw.server.start)
