@@ -17,7 +17,6 @@ level-button-gutter = 10px
             float left
 
             .button
-                button-color(color-blue)
                 width level-button-size
                 height level-button-size
                 line-height level-button-size
@@ -27,6 +26,11 @@ level-button-gutter = 10px
                 font-weight bold
                 font-size 18px
 
+                &.unlocked
+                    button-color(saturate(darken(color-green, 6), 10))
+                    &.lastUnlocked
+                        button-color(color-blue)
+
                 &.locked
                     button-color(#dddddd)
 
@@ -34,8 +38,10 @@ level-button-gutter = 10px
                     button-color(saturate(darken(color-green, 6), 10))
                     width (3 * level-button-size) + (2 * level-button-gutter)
                 &:hover
-                    &:not(.locked)
-                        button-color(lighten(color-blue, 5))
+                    &.unlocked
+                        button-color(lighten(color-green, 5))
+                        &.lastUnlocked
+                            button-color(lighten(color-blue, 5))
                     &.playground
                         button-color(saturate(darken(color-green, 1), 10))
                     & ~ .challenge-title
