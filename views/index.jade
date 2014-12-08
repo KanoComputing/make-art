@@ -40,7 +40,7 @@ html(lang='en', ng-app='draw')
                 li(ng-repeat='level in levels'
                    ng-controller='challengeMenuItem')
                     a.button(ng-href="{{ isLocked() ? '' : '/level/' + challengeNo }}"
-                             ng-click='closeChallengeMenu()'
+                             ng-click="!isLocked() ? closeChallengeMenu() : '' "
                              ng-class="{ 'locked' : isLocked(), 'unlocked' : !isLocked(), 'lastUnlocked' : isLastUnlocked() }") {{ challengeNo }}
                     div.challenge-title {{ level.title.toUpperCase() }}
                 li
