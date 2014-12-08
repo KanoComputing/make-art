@@ -19,9 +19,9 @@ section.page-level(ng-class='"mode-" + mode'): .page-width
 
                 .actions
                     a.button(ng-click='openIntro()') Help
-                    a.button.button-info(ng-click='code = content.code') Reset
+                    a.button.button-info(ng-click='code = content.code; completed = false') Reset
 
-            .success-display(ng-if='completed')
+            .success-display(ng-if='showNextBanner')
                 h5 {{ successMessage() }}
                 a.button.button-success.large(ng-if='hasNext', ng-href='/level/{{id + 1}}') Next &rsaquo;
                 a.button.button-success.large(ng-if='!hasNext', ng-click='openLevelComplete()') Next &rsaquo;
