@@ -15,6 +15,8 @@ from kano.network import is_internet
 
 
 APP_NAME = 'kano-draw'
+PARENT_PID = None
+
 CHALLENGE_DIR = os.path.expanduser('~/Draw-content')
 WALLPAPER_DIR = os.path.join(CHALLENGE_DIR, 'wallpapers')
 
@@ -181,6 +183,13 @@ def _load_level():
         _save_level(1)
         return Response('1')
 
+@server.route('/shutdown', methods=['POST'])
+def _shutdown():
+    import signal
+
+    # Send signal to parent to initiate shutdown
+    os.kill(PARENT_PID, signal.SIGINT)
+
 
 @server.errorhandler(404)
 def page_not_found(err):
@@ -189,6 +198,15 @@ def page_not_found(err):
     return err_msg, 404
 
 
-def start():
+def start(parent_pid=None):
+    """
+    The server process will receive any requests to shutdown but
+    the app that runs this as a daemon will be unaware of this
+    request so store the PID of the parent.
+    """
+    global PARENT_PID
+    PARENT_PID = parent_pid
+
+    # Run the server
     server.run(port=8000)
     time.sleep(2)

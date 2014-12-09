@@ -24,6 +24,7 @@ html(lang='en', ng-app='draw')
                 li: a.button.button-success(href='/') Examples
                 li: a.button.button-success(href='#', ng-click='menuOpen = !menuOpen') Challenges
                 li: a.button(href='/playground') Playground
+                li: button.close(ng-click='server.shutdown()') &times
         ng-view
 
         include partial/splash

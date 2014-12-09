@@ -24,8 +24,12 @@ kanotracker = Tracker()
 from kano_draw.draw import Draw
 import kano_draw.server
 
+APP_PID = os.getpid()
 # Initialise the local server
-SERVER_PROC = multiprocessing.Process(target=kano_draw.server.start)
+SERVER_PROC = multiprocessing.Process(target=kano_draw.server.start,
+                                      kwargs={
+                                          'parent_pid': APP_PID
+                                      })
 SERVER_PROC.daemon = True
 SERVER_PROC.start()
 
