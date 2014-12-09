@@ -47,15 +47,18 @@ def _save(data):
     code = data['code']
     image = _get_image_from_str(data['image'])
 
-    filepath = os.path.join(CHALLENGE_DIR, filename + '.draw')
-    img_path = os.path.join(CHALLENGE_DIR, filename + '.png')
+    filepath = os.path.join(CHALLENGE_DIR, '{}.draw'.format(filename))
+    json_path = os.path.join(CHALLENGE_DIR, '{}.json'.format(filename))
+    img_path = os.path.join(CHALLENGE_DIR, '{}.png'.format(filename))
 
     with open(filepath, 'w') as f:
+        f.write(code)
+
+    with open(json_path, 'w') as f:
         f.write(
             json.dumps({
                 'filename': filename,
-                'description': desc,
-                'code' : code
+                'description': desc
             })
         )
 
