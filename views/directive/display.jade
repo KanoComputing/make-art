@@ -1,1 +1,7 @@
-canvas
+.draw-display
+    canvas
+    .error-display(ng-if='error')
+        h3 Error on line {{ error.row + 1 }}
+        p {{ error.text }}
+
+
