@@ -7,6 +7,6 @@ Build-Depends: debhelper (>= 9)
 
 Package: kano-draw
 Architecture: all
-Depends: ${shlibs:Depends}, ${misc:Depends}, kano-toolset, kano-profile,
-    python-flask
+Depends: ${shlibs:Depends}, ${misc:Depends}, kano-toolset (>= 1.3-2),
+    kano-profile, python-flask
 Description: Draw with code

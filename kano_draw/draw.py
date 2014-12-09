@@ -10,3 +10,6 @@ class Draw(WebApp):
 
         self._decoration = False
         self._maximized = True
+
+        # Enable developer extras to allow error reporting to work
+        self._inspector = True
