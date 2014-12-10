@@ -6,6 +6,6 @@
     .bottom-section.center
         span
             button.button.large() Your Kano
-                input.transparent(type='file'
+                input.transparent(type='file' accept='.draw'
                     onChange='angular.element(this).scope().load.local(this)')
         button.button.large(ng-click='load.web()') Internet
