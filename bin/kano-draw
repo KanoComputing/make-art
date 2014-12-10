@@ -11,6 +11,7 @@
 import os
 import sys
 import multiprocessing
+import signal
 
 if __name__ == '__main__' and __package__ is None:
     DIR_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
@@ -23,6 +24,13 @@ kanotracker = Tracker()
 
 from kano_draw.draw import Draw
 import kano_draw.server
+
+
+def cleanup(signum, frame):
+    sys.exit(0)
+
+signal.signal(signal.SIGINT, cleanup)
+
 
 APP_PID = os.getpid()
 # Initialise the local server
