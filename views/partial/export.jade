@@ -1,5 +1,5 @@
 .modal-overlay(ng-show='isOpen'): .modal-inner.export-menu
-    button.close(ng-click='isOpen = false') &times
+    button.close(ng-click='isOpen = false') &times;
     h2.center {{ dialog }}
     .row
         .col-6
@@ -11,6 +11,7 @@
             textarea.description(ng-model='description',
                                  placeholder='Description')
 
-            a.button.export(ng-click='export()') {{ dialog }}
+            a.button.export(ng-if='offline', ng-click='export()') {{ dialog }}
+            a.button.export(ng-if='!offline', ng-click='share()') {{ dialog }}
             a.button.export-wallpaper(ng-show="dialog === 'save'",
                                       ng-click='exportWallpaper()') Create Wallpaper

@@ -60,6 +60,10 @@ html(lang='en', ng-app='draw')
         script(src='/js/vendor/ace/ace.js', type='text/javascript')
 
         script(type='text/javascript').
+            window.KANO_WORLD_CONFIG = {
+                TEST_MODE : #{!production}
+            };
+
             window.CONFIG = {
                 PRODUCTION : #{production},
                 OFFLINE    : #{offline}
