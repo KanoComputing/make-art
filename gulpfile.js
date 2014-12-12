@@ -13,7 +13,7 @@ var gulp = require('gulp'),
 var server = lr(),
     env = process.env.NODE_ENV === 'production' ? 'production' : 'develpoment',
     production = env === 'production',
-    offline = env.OFFLINE === 'true';
+    offline = process.env.OFFLINE === 'true';
 
 var paths = {
     views      : { watch: [ 'views/**/*.jade', 'content/**/*' ], src: 'views/**/*.jade', out: 'www' },
