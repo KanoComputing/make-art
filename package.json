@@ -12,10 +12,11 @@
   "author": "",
   "license": "BSD-2-Clause",
   "dependencies": {
+    "api-service": "1.0.0",
     "cli-color": "~0.2.x",
     "coffee-script": "~1.7.x",
     "coffeeify": "~0.6.x",
-    "express": "~3.4.x",
+    "express": "^4.10.5",
     "griddy": "0.0.x",
     "gulp": "~3.5.X",
     "gulp-browserify": "~0.4.x",
@@ -24,12 +25,12 @@
     "gulp-rename": "~0.2.x",
     "gulp-stylus": "0.0.x",
     "http-server": "~0.6.x",
+    "kano-world-sdk": "0.0.1",
     "lodash": "~2.4.x",
     "marked": "~0.3.x",
     "nib": "~1.0.x",
     "partialify": "^3.1.1",
-    "tiny-lr": "0.0.9",
-    "api-service": "1.0.0"
+    "tiny-lr": "0.0.9"
   },
   "engines": {
     "node": "0.10.x"

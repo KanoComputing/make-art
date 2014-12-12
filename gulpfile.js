@@ -12,7 +12,8 @@ var gulp = require('gulp'),
 
 var server = lr(),
     env = process.env.NODE_ENV === 'production' ? 'production' : 'develpoment',
-    production = env === 'production';
+    production = env === 'production',
+    offline = env.OFFLINE === 'true';
 
 var paths = {
     views      : { watch: [ 'views/**/*.jade', 'content/**/*' ], src: 'views/**/*.jade', out: 'www' },
@@ -57,10 +58,11 @@ gulp.task('styles', function () {
 gulp.task('views', function () {
     gulp.src(paths.views.src)
     .pipe(jade({
-        pretty: !production,
-        locals: _.extend({
-            env: env,
-            production: production
+        pretty : !production,
+        locals : _.extend({
+            env        : env,
+            production : production,
+            offline    : offline
         }, jadeHelpers)
     }))
     .on('error', handleError)

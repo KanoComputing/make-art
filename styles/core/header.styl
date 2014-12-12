@@ -36,5 +36,24 @@ header
                 height 38px
                 line-height 38px
                 padding 0
+
                 &:hover
                     background lighten(color-red, 5)
+
+    .user-display
+        color color-white
+        margin-top 10px
+        display block
+        
+        .avatar
+            width 35px
+            height @width
+            border-radius @width
+            overflow hidden
+            display inline-block
+            margin -10px 10px
+            
+            img
+                width @width + 2px
+                height @width
+                margin -1px

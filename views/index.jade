@@ -24,13 +24,19 @@ html(lang='en', ng-app='draw')
                 li: a.button.button-success(href='/') Examples
                 li: a.button.button-success(href='#', ng-click='menuOpen = !menuOpen') Challenges
                 li: a.button(href='/playground') Playground
-                li: button.close(ng-click='server.shutdown()') &times
+                li: button.close(ng-click='shutdown()', ng-if='offline') &times;
+                li(ng-if='!offline && !loggedIn'): a.button(href='#', ng-click='login()') Login
+                li(ng-if='!offline && loggedIn'): a.button(href='#', ng-click='logout()') Logout
+                li(ng-if='!offline && loggedIn')
+                    a.user-display(ng-href='http://world.kano.me/users/{{ user.username }}', target='_blank')
+                        .avatar: img(ng-src='http://avatar.kano.me/username/{{ user.username }}.png')
+                        | {{ user.username }}
         ng-view
 
         include partial/splash
 
         .modal-overlay(ng-show='menuOpen'): .modal-inner.split-modal.levels-menu
-            button.close(ng-click='menuOpen = false') &times
+            button.close(ng-click='menuOpen = false') &times;
             div.challenge-info
                 h6.center CHALLENGE {{ lastChallengeVisited.get() }} OF {{ levels.length }}
                 h2.center {{ levels[lastChallengeVisited.get() - 1].title }}
@@ -41,12 +47,11 @@ html(lang='en', ng-app='draw')
                 li(ng-repeat='level in levels'
                    ng-controller='challengeMenuItem')
                     a.button(ng-href="{{ isLocked() ? '' : '/level/' + challengeNo }}"
-                             ng-click="!isLocked() ? closeChallengeMenu() : '' "
+                             ng-click="!isLocked() ? menuOpen = false : ''"
                              ng-class="{ 'locked' : isLocked(), 'unlocked' : !isLocked(), 'lastUnlocked' : isLastUnlocked() }") {{ challengeNo }}
                     div.challenge-title {{ level.title.toUpperCase() }}
                 li
-                    a.button.playground(ng-href='/playground'
-                                        ng-click='closeChallengeMenu()') Playground
+                    a.button.playground(ng-href='/playground', ng-click='menuOpen = false') Playground
                     div.challenge-title BE CREATIVE
 
         //- Vendor
@@ -55,7 +60,10 @@ html(lang='en', ng-app='draw')
         script(src='/js/vendor/ace/ace.js', type='text/javascript')
 
         script(type='text/javascript').
-            window.CONFIG = { PRODUCTION: #{production} };
+            window.CONFIG = {
+                PRODUCTION : #{production},
+                OFFLINE    : #{offline}
+            };
 
         //- App
         script(src='/js/index.js', type='text/javascript')
