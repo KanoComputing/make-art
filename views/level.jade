@@ -18,7 +18,7 @@ section.page-level(ng-class='"mode-" + mode'): .page-width
                 display(ng-source='code', workspace)
 
                 .actions
-                    a.button(ng-click='openIntro()') Help
+                    a.button(ng-click='openIntro()') Instructions
                     a.button.button-info(ng-click='code = content.code; completed = false') Reset
 
             .success-display(ng-if='showNextBanner')
