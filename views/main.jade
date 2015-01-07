@@ -7,7 +7,11 @@ section: .page-width
 
     ul.list.examples-list
         li(ng-repeat='example in examples')
-            a(href='#', ng-click='selectExample($index)', ng-class='{ active: $index === current }') {{ example.title }}
+            a(
+                href='#',
+                ng-click='selectExample($index)',
+                ng-class='{ active: $index === current }'
+                ) {{ example.title }}
 
     .row
         .col-6
