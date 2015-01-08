@@ -1,7 +1,14 @@
 .draw-display
-    canvas
+    canvas(
+        ng-mousemove='displayMousePos($event)'
+        ng-mouseleave='displayCursorPos()')
     .error-display(ng-if='error')
         h3 Error on line {{ error.row + 1 }}
         p {{ error.text }}
 
-
+    .toolbar
+        .position-indicator
+            span.x-pos x:
+                span.pos-value
+            span.y-pos y:
+                span.pos-value

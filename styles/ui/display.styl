@@ -28,3 +28,40 @@ display
 
         p
             font-size 20px
+
+    .toolbar
+        position absolute
+        bottom 0
+        left 0
+        right 0
+        padding 10px
+
+        .position-indicator
+            lineheight=58px
+            fontsize=14px
+
+            position absolute
+            bottom 0
+            right ((lineheight - fontsize) / 2)
+            line-height lineheight
+
+            text-transform: uppercase;
+            color darken(color-mid-grey, 5)
+            font-size fontsize
+            pointer-events none
+
+            &:before
+                content '+'
+                font-size 20px
+                width 20px
+                height 20px
+                font-weight bold
+                padding-right 10px
+
+            .pos-value
+                position relative
+                display inline-block
+                width 30px
+                margin-left 3px
+
+
