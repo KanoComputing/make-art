@@ -5,10 +5,7 @@
         h2.center {{ levels[lastChallengeVisited.get() - 1].title }}
         h4.center {{ levels[lastChallengeVisited.get() - 1].description }}
 
-        div.center
-            a.button(ng-href='/level/{{ lastChallengeVisited.get() }}') GO!
-
-    ul.levels-list.bottom-section
+    ul.levels-list
         li(ng-repeat='level in levels'
            ng-controller='ChallengeMenuItemController')
             a.button(ng-href="{{ isLocked() ? '' : '/level/' + challengeNo }}"
@@ -19,3 +16,6 @@
         li
             a.button.playground(ng-href='/playground', ng-click='menuOpen = false') Playground
             div.challenge-title BE CREATIVE
+
+        div.center.bottom-section
+            a.button(ng-href='/level/{{ lastChallengeVisited.get() }}') START
