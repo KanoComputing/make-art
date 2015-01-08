@@ -1,0 +1,12 @@
+.modal-overlay(ng-show='isIntroOpen'): .modal-inner.split-modal.challenge-intro
+    button.close(ng-click='closeIntro()') &times
+    .tutorial-display(ng-if='mode=="reading"')
+
+        h3.center Challenge {{ id }}: {{ content.title }}
+
+        div.center.content(ng-bind-html='slides[slide] | markdown')
+
+        .next-action.center.bottom-section
+            button.button-inverse.button-next.large(ng-click='nextSlide()', ng-show='slide < slides.length - 1') Next
+            button.button-inverse.button-next.large(ng-click='closeIntro()', ng-show='slide >= slides.length - 1') Got it
+

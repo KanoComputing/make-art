@@ -2,6 +2,10 @@ section.page-level(ng-class='"mode-" + mode'): .page-width
 
     h2.center Challenge {{ id }}: {{ levels[ id - 1 ].title }}
     h4.center {{ levels[ id - 1 ].description }}
+
+    a.button.help(ng-click='openIntro()') ?
+    include partial/level-intro
+
     .row
         .col-6.editor-wrap
                 editor(
@@ -18,7 +22,6 @@ section.page-level(ng-class='"mode-" + mode'): .page-width
                 display(ng-source='code', workspace)
 
                 .actions
-                    a.button(ng-click='openIntro()') Instructions
                     a.button.button-info(ng-click='code = content.code; completed = false') Reset
 
             .success-display(ng-if='showNextBanner')
@@ -27,17 +30,5 @@ section.page-level(ng-class='"mode-" + mode'): .page-width
                 a.button.button-success.large(ng-if='!hasNext', ng-click='openLevelComplete()') Next &rsaquo;
 
     include partial/level-complete
-
-    .modal-overlay(ng-show='isIntroOpen'): .modal-inner.split-modal.challenge-intro
-        button.close(ng-click='closeIntro()') &times
-        .tutorial-display(ng-if='mode=="reading"')
-
-            h3.center Challenge {{ id }}: {{ content.title }}
-
-            div.center.content(ng-bind-html='slides[slide] | markdown')
-
-            .next-action.center.bottom-section
-                button.button-inverse.button-next.large(ng-click='nextSlide()', ng-show='slide < slides.length - 1') Next
-                button.button-inverse.button-next.large(ng-click='closeIntro()', ng-show='slide >= slides.length - 1') Got it
 
     include partial/docs
