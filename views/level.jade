@@ -22,7 +22,7 @@ section.page-level(ng-class='"mode-" + mode'): .page-width
                 display(ng-source='code', workspace)
 
                 .actions
-                    a.button.button-info(ng-click='code = content.code; completed = false') Reset
+                    a.button.workspace-action-button.reset(ng-click='code = content.code; completed = false') Reset
 
             .success-display(ng-if='showNextBanner')
                 h5 {{ successMessage() }}
