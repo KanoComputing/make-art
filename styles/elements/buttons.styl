@@ -54,3 +54,47 @@ button, a.button, input[type='submit'], input[type='reset']
     &.large
         padding 13px 30px
         font-size 17px
+
+    &.workspace-action-button
+        position relative
+        color darken(color-mid-grey, 5)
+        background transparent
+        padding-right 10px
+
+        &:before
+            position absolute
+            left 0
+            content ' '
+            height 20px
+            width 20px
+
+        &.save:before
+            background url(../assets/button-icons/down.png) no-repeat
+
+        &.share:before
+            background url(../assets/button-icons/share.png) no-repeat
+
+        &.load:before
+            background url(../assets/button-icons/down.png) no-repeat
+
+        &.reset:before
+            background url(../assets/button-icons/reset.png) no-repeat
+
+    &.help
+        position absolute
+        top 10px
+        right 0
+        color color-white
+        background darken(color-mid-grey, 14)
+        font-weight bold
+        width 44px
+        height 44px
+        line-height 44px
+        font-size 24px
+        padding 0
+        margin 0
+        text-align center
+
+        &:hover
+            background darken(color-mid-grey, 10)
+

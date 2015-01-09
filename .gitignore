@@ -4,6 +4,7 @@ www/css/*.css
 www/js/*
 .tmp
 node_modules
+npm-debug.log
 **.DS_Store
 **.sublime-workspace
 *.pyc

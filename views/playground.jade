@@ -9,12 +9,12 @@ section: .page-width
         .col-6
             display(ng-source='playground.code', workspace)
 
-    span(ng-repeat="dialog in exportDialogs", ng-controller='export')
+    span(ng-repeat="dialog in exportDialogs", ng-controller='ExportController')
         a.button(ng-if='!(dialog === "save" && !offline)',  ng-click='openDialog()') {{ dialog }}
 
         include partial/export
 
-    span(ng-controller='loadDialog' ng-if='offline')
+    span(ng-controller='LoadDialogController' ng-if='offline')
         a.button(ng-click='openDialog()') Load
 
         include partial/load
