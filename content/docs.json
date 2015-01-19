@@ -1,46 +1,46 @@
 [
     {
-        "label": "Shapes",
-        "commands": [
+        "label"    : "Shapes",
+        "commands" : [
             {
-                "call": "circle",
-                "unlockedAt": 1,
-                "description": "Draw a circle centered on the current position",
-                "args": [
+                "call"        : "circle",
+                "unlockedAt"  : 1,
+                "description" : "Draw a circle centered on the current position",
+                "args"        : [
                     [ "radius", "number", "The circle size", true ]
                 ]
             },
             {
-                "call": "ellipse",
-                "unlockedAt": 999,
-                "description": "Draw an ellipse centered on the current position",
-                "args": [
+                "call"        : "ellipse",
+                "unlockedAt"  : 999,
+                "description" : "Draw an ellipse centered on the current position",
+                "args"        : [
                     [ "radius-x", "number", "The ellipse horizontal size", true ],
                     [ "radius-y", "number", "The ellipse vertical size", true ]
                 ]
             },
             {
-                "call": "square",
-                "unlockedAt": 2,
-                "description": "Draw a square centered on the current position",
-                "args": [
+                "call"        : "square",
+                "unlockedAt"  : 2,
+                "description" : "Draw a square centered on the current position",
+                "args"        : [
                     [ "size", "number", "The size of the square", true ]
                 ]
             },
             {
-                "call": "rectangle",
-                "unlockedAt": 999,
-                "description": "Draw a rectangle centered on the current position",
-                "args": [
+                "call"        : "rectangle",
+                "unlockedAt"  : 999,
+                "description" : "Draw a rectangle centered on the current position",
+                "args"        : [
                     [ "width", "number", "The rectangle width", true ],
                     [ "height", "number", "The rectangle height", true ]
                 ]
             },
             {
-                "call": "arc",
-                "unlockedAt": 999,
-                "description": "Draw a rectangle centered on the current position",
-                "args": [
+                "call"        : "arc",
+                "unlockedAt"  : 999,
+                "description" : "Draw a rectangle centered on the current position",
+                "args"        : [
                     [ "radius", "number", "The arc size", true ],
                     [ "start", "number", "The starting angle (0 to 2)", true ],
                     [ "end", "number", "The ending angle (0 to 2)", true ],
@@ -48,10 +48,10 @@
                 ]
             },
             {
-                "call": "polygon",
-                "unlockedAt": 999,
-                "description": "Draw a polygon with given points",
-                "args": [
+                "call"        : "polygon",
+                "unlockedAt"  : 999,
+                "description" : "Draw a polygon with given points",
+                "args"        : [
                     [ "x1", "number", "Point X position", true ],
                     [ "x2", "number", "Point Y position", true ],
                     [ "...", "", "More polygon points positions", true ],
@@ -61,60 +61,68 @@
         ]
     },
     {
-        "label": "Colors",
-        "commands": [
+        "label"    : "Colors",
+        "commands" : [
             {
-                "call": "color",
-                "unlockedAt": 4,
-                "description": "Change the color in use",
-                "args": [
+                "call"        : "background",
+                "unlockedAt"  : 999,
+                "description" : "Change the background color (Only to use once)",
+                "args"        : [
+                    [ "color", "string", "Apply a background color ('orange', 'blue', 'red', 'yellow', 'green'...)", true ]
+                ]
+            },
+            {
+                "call"        : "color",
+                "unlockedAt"  : 4,
+                "description" : "Change the color in use",
+                "args"        : [
                     [ "color", "string", "The color to use ('orange', 'blue', 'red', 'yellow', 'green'...)", true ]
                 ]
             },
             {
-                "call": "stroke",
-                "unlockedAt": 5,
-                "description": "Change the line color and width in use",
-                "args": [
+                "call"        : "stroke",
+                "unlockedAt"  : 5,
+                "description" : "Change the line color and width in use",
+                "args"        : [
                     [ "size", "number", "(number) The line width to use", false ],
                     [ "color", "string", "A string with the color to use - E.g. 'red', 'blue'..", false ]
                 ]
             },
             {
-                "call": "strokeColor",
-                "unlockedAt": 999,
-                "description": "The stroke color to use",
-                "args": [
+                "call"        : "strokeColor",
+                "unlockedAt"  : 999,
+                "description" : "The stroke color to use",
+                "args"        : [
                     [ "color", "string", "A string with the color to use - E.g. 'red', 'blue'..", true ]
                 ]
             },
             {
-                "call": "strokeWidth",
-                "unlockedAt": 999,
-                "description": "The stroke width to use",
-                "args": [
+                "call"        : "strokeWidth",
+                "unlockedAt"  : 999,
+                "description" : "The stroke width to use",
+                "args"        : [
                     [ "size", "number", "A number with the line width to use", true ]
                 ]
             }
         ]
     },
     {
-        "label": "Lines",
-        "commands": [
+        "label"    : "Lines",
+        "commands" : [
             {
-                "call": "line",
-                "unlockedAt": 3,
-                "description": "Draw a line starting from the current position",
-                "args": [
+                "call"        : "line",
+                "unlockedAt"  : 3,
+                "description" : "Draw a line starting from the current position",
+                "args"        : [
                     [ "x", "number", "Horizontal distance", true ],
                     [ "y", "number", "Vertical distance", false ]
                 ]
             },
             {
-                "call": "lineTo",
-                "unlockedAt": 999,
-                "description": "Draw a line to any position",
-                "args": [
+                "call"        : "lineTo",
+                "unlockedAt"  : 999,
+                "description" : "Draw a line to any position",
+                "args"        : [
                     [ "x", "number", "The horizontal destination", true ],
                     [ "y", "number", "The vertical destination", true ]
                 ]
@@ -122,22 +130,22 @@
         ]
     },
     {
-        "label": "Position",
-        "commands": [
+        "label"    : "Position",
+        "commands" : [
             {
-                "call": "move",
-                "unlockedAt": 6,
-                "description": "Move the cursor starting from the current position",
-                "args": [
+                "call"        : "move",
+                "unlockedAt"  : 6,
+                "description" : "Move the cursor starting from the current position",
+                "args"        : [
                     [ "x", "number", "Horizontal distance", true ],
                     [ "y", "number", "Vertical distance", false ]
                 ]
             },
             {
-                "call": "moveTo",
-                "unlockedAt": 999,
-                "description": "Move the cursor to any position",
-                "args": [
+                "call"        : "moveTo",
+                "unlockedAt"  : 999,
+                "description" : "Move the cursor to any position",
+                "args"        : [
                     [ "x", "number", "The horizontal destination", true ],
                     [ "y", "number", "The vertical destination", true ]
                 ]
@@ -145,28 +153,28 @@
         ]
     },
     {
-        "label": "General",
-        "commands": [
+        "label"    : "General",
+        "commands" : [
             {
-                "call": "clear",
-                "unlockedAt": 999,
-                "description": "Clear the sketch",
-                "args": []
+                "call"        : "clear",
+                "unlockedAt"  : 999,
+                "description" : "Clear the sketch",
+                "args"        : []
             },
             {
-                "call": "reset",
-                "unlockedAt": 999,
-                "description": "Reset styles",
-                "args": []
+                "call"        : "reset",
+                "unlockedAt"  : 999,
+                "description" : "Reset styles",
+                "args"        : []
             },
             {
-                "call": "for",
-                "unlockedAt": 9,
-                "description": "Repeat code",
-                "args": [
+                "call"        : "for",
+                "unlockedAt"  : 9,
+                "description" : "Repeat code",
+                "args"        : [
                     ["i in [x..y]", "number", "The start and end point for the variable i", "true"]
                 ],
-                "example": "for i in [1..5]\n    circle i"
+                "example"     : "for i in [1..5]\n    circle i"
             }
         ]
     }
