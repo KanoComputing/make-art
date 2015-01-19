@@ -1,4 +1,4 @@
-.modal-overlay(ng-show='menuOpen'): .modal-inner.split-modal.levels-menu
+.modal-overlay(ng-show='menuOpen', ng-cloak): .modal-inner.split-modal.levels-menu
     button.close(ng-click='menuOpen = false') &times;
     div.challenge-info
         h6.center CHALLENGE {{ lastChallengeVisited.get() }} OF {{ levels.length }}
@@ -6,16 +6,17 @@
         h4.center {{ levels[lastChallengeVisited.get() - 1].description }}
 
     ul.levels-list
-        li(ng-repeat='level in levels'
-           ng-controller='ChallengeMenuItemController')
-            a.button(ng-href="{{ isLocked() ? '' : '/level/' + challengeNo }}"
-                     ng-click="!isLocked() ? menuOpen = false : ''"
-                     ng-class="{ 'locked' : isLocked(), 'unlocked' : !isLocked(), 'lastUnlocked' : isLastUnlocked() }") {{ challengeNo }}
-            div.challenge-title {{ level.title.toUpperCase() }}
+        li(ng-repeat='level in levels', ng-controller='ChallengeMenuItemController')
+            a.button(
+                ng-href='{{ isLocked() ? "" : "/level/" + challengeNo }}',
+                ng-click='!isLocked() ? menuOpen = false : ""',
+                ng-class='{ "locked" : isLocked(), "unlocked" : !isLocked(), "lastUnlocked" : isLastUnlocked() }'
+                ) {{ challengeNo }}
+            .challenge-title {{ level.title.toUpperCase() }}
 
         li
             a.button.playground(ng-href='/playground', ng-click='menuOpen = false') Playground
             div.challenge-title BE CREATIVE
 
-        div.center.bottom-section
+        .center.bottom-section
             a.button(ng-href='/level/{{ lastChallengeVisited.get() }}') START
