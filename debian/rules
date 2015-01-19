@@ -16,6 +16,6 @@ override_dh_auto_build:
 	# See about actually doing the install
 	ls ./nodejs
 	PATH=$(NODE_DIR):$(PATH) npm install
-	PATH=$(NODE_DIR):$(PATH) NODE_ENV=production npm run build
+	PATH=$(NODE_DIR):$(PATH) NODE_ENV=production OFFLINE=true npm run build
 
 override_dh_auto_install override_dh_auto_test:
