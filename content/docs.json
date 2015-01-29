@@ -39,7 +39,7 @@
             {
                 "call"        : "arc",
                 "unlockedAt"  : 999,
-                "description" : "Draw a rectangle centered on the current position",
+                "description" : "Draw an arc in current position with given opening and closing angle",
                 "args"        : [
                     [ "radius", "number", "The arc size", true ],
                     [ "start", "number", "The starting angle (0 to 2)", true ],
@@ -148,6 +148,60 @@
                 "args"        : [
                     [ "x", "number", "The horizontal destination", true ],
                     [ "y", "number", "The vertical destination", true ]
+                ]
+            }
+        ]
+    },
+    {
+        "label"    : "Text",
+        "commands" : [
+            {
+                "call"        : "text",
+                "unlockedAt"  : 999,
+                "description" : "Write text at current position",
+                "args"        : [
+                    [ "message", "string", "The message to write", true ]
+                ]
+            },
+            {
+                "call"        : "textSize",
+                "unlockedAt"  : 999,
+                "description" : "Change text size in use",
+                "args"        : [
+                    [ "size", "number", "The text size in pixels (Default is 25)", true ]
+                ]
+            },
+            {
+                "call"        : "fontFamily",
+                "unlockedAt"  : 999,
+                "description" : "Change the font in use (Default is Bariol)",
+                "args"        : [
+                    [ "font", "string", "The font family name", true ]
+                ]
+            },
+            {
+                "call"        : "font",
+                "unlockedAt"  : 999,
+                "description" : "Shortcut to set font family and size at the same time",
+                "args"        : [
+                    [ "font", "string", "The font family name", false ],
+                    [ "size", "number", "The text size in pixels", false ]
+                ]
+            },
+            {
+                "call"        : "bold",
+                "unlockedAt"  : 999,
+                "description" : "Set text to bold. Call with false to reset",
+                "args"        : [
+                    [ "state", "bool", "Bold state (True by default)", false ]
+                ]
+            },
+            {
+                "call"        : "italic",
+                "unlockedAt"  : 999,
+                "description" : "Set text to italic. Call with false to reset",
+                "args"        : [
+                    [ "state", "bool", "Italic state (True by default)", false ]
                 ]
             }
         ]
