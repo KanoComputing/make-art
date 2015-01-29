@@ -42,5 +42,8 @@ SERVER_PROC.daemon = True
 SERVER_PROC.start()
 
 # Init the web app
-DRAW = Draw()
+if len(sys.argv) > 1:
+    DRAW = Draw(load_path=sys.argv[1])
+else:
+    DRAW = Draw()
 DRAW.run()

@@ -76,8 +76,11 @@ server_logger.setLevel(logging.ERROR)
 
 
 @server.route('/')
-def root():
+# Redirect a localLoad back to index for routing in Angular
+@server.route('/localLoad/<path:path>')
+def root(path=None):
     return server.send_static_file('index.html')
+
 
 @server.route('/<path:path>')
 def static_proxy(path):
@@ -92,6 +95,12 @@ def save_challenge(filename):
     _save(data)
 
     return ''
+
+@server.route("/challenge/local/<path:path>", methods=['GET'])
+def load_challenge(path):
+    directory, filename = os.path.split(path)
+
+    return send_from_directory('/{}'.format(directory), filename, as_attachment=True)
 
 @server.route("/challenge/local/wallpaper/<path:filename>", methods=['POST'])
 def save_wallpaper(filename):
