@@ -5,60 +5,113 @@ editor-tag(color=color-primary, color-text=#fff)
     border-radius()
     color color-text
 
+body.full-screen-editor
+    overflow hidden
+
+    .editor-area
+        position fixed
+        left 0
+        top 0
+        width 100%
+        height 100%
+        z-index 5
+        
+    display
+        position fixed
+        right 10px
+        top 10px
+        z-index 5
+        width 460px
+        height @width
+        padding-top 0
+        
+    .button-full-screen
+        position fixed
+
 editor
-    min-height 460px
     display block
-    border-radius()
+    height 100%
+    position relative
+    
+    .button-full-screen
+        width 40px
+        height @width
+        line-height @width
+        text-align center
+        background-color #585858
+        bg-image-sized 'button-icons/full-screen', center center, no-repeat
+        display inline-block
+        position absolute
+        z-index 1
+        right 10px
+        bottom 10px
+        border-radius()
+        transition background-color .2s
+        z-index 8
+        
+        &:hover
+            background-color #333
 
-    &.disabled
-        background #eee
+    .editor-area
+        border-radius()
+        min-height 460px
+        height 100%
+        
+        &.full-screen
 
-        .ace_cursor
-            display none
+        &.disabled
+            background #eee
 
-        > *
-            opacity .3
+            .ace_cursor
+                display none
 
-    &.completed
-        background mix(#fff, color-success, 20%)
+            > *
+                opacity .3
 
-        > *
-            opacity .4
+        &.completed
+            background mix(#fff, color-success, 20%)
 
-    &.ace_editor
-        line-height 26px
-        font-size 15px
-        background color-grey
+            > *
+                opacity .4
 
-        .ace_gutter
-            background color-editor-gutter
+        &.ace_editor
+            line-height 26px
+            font-size 15px
+            background color-grey
 
-        .ace_content .ace_line
+            .ace_gutter
+                background color-editor-gutter
 
-            .ace_comment
-                color #aaa
+            .ace_content .ace_line
 
-            .ace_keyword
-                editor-tag(color-language-keyword, color-black)
+                .ace_comment
+                    color #aaa
 
-            .ace_string
-                editor-tag(color-language-string)
+                .ace_keyword
+                    editor-tag(color-language-keyword, color-black)
 
-            .ace_numeric
-                editor-tag(color-language-number)
+                .ace_string
+                    editor-tag(color-language-string)
 
-            .ace_identifier
-                editor-tag(color-language-identifier)
+                .ace_numeric
+                    editor-tag(color-language-number)
 
-            .ace_language
-                editor-tag(color-language-language)
+                .ace_identifier
+                    editor-tag(color-language-identifier)
 
-        .ace_gutter-cell
-            font-weight bold
-            color color-white
+                .ace_language
+                    editor-tag(color-language-language)
 
-        .ace_gutter-active-line
-            background darken(color-editor-gutter, 5)
+            .ace_gutter-cell
+                font-weight bold
+                color color-white
 
-        .ace_marker-layer .ace_selection
-            background color-editor-selection
+            .ace_gutter-active-line
+                background darken(color-editor-gutter, 5)
+
+            .ace_marker-layer .ace_selection
+                background color-editor-selection
+
+            .ace_print-margin
+                background rgba(#fff, .2)
+                display none
