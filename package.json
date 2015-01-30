@@ -16,6 +16,7 @@
     "cli-color": "~0.2.x",
     "coffee-script": "~1.7.x",
     "coffeeify": "~0.6.x",
+    "color": "^0.7.3",
     "express": "^4.10.5",
     "griddy": "0.0.x",
     "gulp": "~3.5.X",
