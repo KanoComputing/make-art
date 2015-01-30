@@ -28,7 +28,7 @@ body.full-screen-editor
         height @width
         padding-top 0
         
-    .button-full-screen
+    .controls
         position fixed
 
 editor
@@ -36,24 +36,38 @@ editor
     height 100%
     position relative
     
-    .button-full-screen
-        width 40px
-        height @width
-        line-height @width
-        text-align center
-        background-color #585858
-        bg-image-sized 'button-icons/full-screen', center center, no-repeat
-        display inline-block
+    .controls
         position absolute
         z-index 1
         right 10px
         bottom 10px
-        border-radius()
-        transition background-color .2s
         z-index 8
+
+        a
+            width 40px
+            height @width
+            line-height @width
+            text-align center
+            background-color #585858
+            display inline-block
+            border-radius()
+            transition background-color .2s
+            margin-left 10px
         
-        &:hover
-            background-color #333
+            &:hover
+                background-color #333
+
+            &.active
+                background-color #aaa
+                
+                &:hover
+                    background-color #bbb
+
+        .button-full-screen
+            bg-image-sized 'button-icons/full-screen', center center, no-repeat
+
+        .button-autocomplete
+            bg-image-sized 'button-icons/autocomplete', center center, no-repeat
 
     .editor-area
         border-radius()
