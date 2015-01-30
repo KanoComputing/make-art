@@ -226,9 +226,20 @@
                 "unlockedAt"  : 9,
                 "description" : "Repeat code",
                 "args"        : [
-                    ["i in [x..y]", "number", "The start and end point for the variable i", "true"]
+                    [ "i in [x..y]", "number", "The start and end point for the variable i", true ]
                 ],
                 "example"     : "for i in [1..5]\n    circle i"
+            },
+            {
+                "call"        : "random",
+                "unlockedAt"  : 9,
+                "description" : "Get a random number in a range. If called with no arguments will return a float between 0 and 1",
+                "args"        : [
+                    [ "min", "number", "The minimum value", true ],
+                    [ "max", "number", "The maximum value", true ],
+                    [ "float", "number", "Return float values (Will be floored otherwise)", false ]
+                ],
+                "example"     : "random 5, 10"
             }
         ]
     }
