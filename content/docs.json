@@ -61,52 +61,6 @@
         ]
     },
     {
-        "label"    : "Colors",
-        "commands" : [
-            {
-                "call"        : "background",
-                "unlockedAt"  : 999,
-                "description" : "Change the background color (Only to use once)",
-                "args"        : [
-                    [ "color", "string", "Apply a background color ('orange', 'blue', 'red', 'yellow', 'green'...)", true ]
-                ]
-            },
-            {
-                "call"        : "color",
-                "unlockedAt"  : 4,
-                "description" : "Change the color in use",
-                "args"        : [
-                    [ "color", "string", "The color to use ('orange', 'blue', 'red', 'yellow', 'green'...)", true ]
-                ]
-            },
-            {
-                "call"        : "stroke",
-                "unlockedAt"  : 5,
-                "description" : "Change the line color and width in use",
-                "args"        : [
-                    [ "size", "number", "(number) The line width to use", false ],
-                    [ "color", "string", "A string with the color to use - E.g. 'red', 'blue'..", false ]
-                ]
-            },
-            {
-                "call"        : "strokeColor",
-                "unlockedAt"  : 999,
-                "description" : "The stroke color to use",
-                "args"        : [
-                    [ "color", "string", "A string with the color to use - E.g. 'red', 'blue'..", true ]
-                ]
-            },
-            {
-                "call"        : "strokeWidth",
-                "unlockedAt"  : 999,
-                "description" : "The stroke width to use",
-                "args"        : [
-                    [ "size", "number", "A number with the line width to use", true ]
-                ]
-            }
-        ]
-    },
-    {
         "label"    : "Lines",
         "commands" : [
             {
@@ -237,9 +191,154 @@
                 "args"        : [
                     [ "min", "number", "The minimum value", true ],
                     [ "max", "number", "The maximum value", true ],
-                    [ "float", "number", "Return float values (Will be floored otherwise)", false ]
+                    [ "float", "bool", "Return float values (Will be floored otherwise)", false ]
                 ],
                 "example"     : "random 5, 10"
+            }
+        ]
+    },
+    {
+        "label"    : "Colors",
+        "commands" : [
+            {
+                "call"        : "background",
+                "unlockedAt"  : 999,
+                "description" : "Change the background color (Only to use once)",
+                "args"        : [
+                    [ "color", "string", "Apply a background color ('orange', 'blue', 'red', 'yellow', 'green'...)", true ]
+                ]
+            },
+            {
+                "call"        : "color",
+                "unlockedAt"  : 4,
+                "description" : "Change the color in use",
+                "args"        : [
+                    [ "color", "string", "The color to use ('orange', 'blue', 'red', 'yellow', 'green'...)", true ]
+                ]
+            },
+            {
+                "call"        : "stroke",
+                "unlockedAt"  : 5,
+                "description" : "Change the line color and width in use",
+                "args"        : [
+                    [ "size", "number", "(number) The line width to use", false ],
+                    [ "color", "string", "A string with the color to use - E.g. 'red', 'blue'..", false ]
+                ]
+            },
+            {
+                "call"        : "strokeColor",
+                "unlockedAt"  : 999,
+                "description" : "The stroke color to use",
+                "args"        : [
+                    [ "color", "string", "A string with the color to use - E.g. 'red', 'blue'..", true ]
+                ]
+            },
+            {
+                "call"        : "strokeWidth",
+                "unlockedAt"  : 999,
+                "description" : "The stroke width to use",
+                "args"        : [
+                    [ "size", "number", "A number with the line width to use", true ]
+                ]
+            },
+            {
+                "call"        : "brightness",
+                "unlockedAt"  : 999,
+                "description" : "Get a colour's brightness, set it to a given number if an amount is passed",
+                "args"        : [
+                    [ "color", "string", "Color", true ],
+                    [ "amount", "number", "amount of brightness to set (0 - 100)", false ]
+                ]
+            },
+            {
+                "call"        : "darken",
+                "unlockedAt"  : 999,
+                "description" : "Make a color darken by given amount",
+                "args"        : [
+                    [ "float", "string", "Color to darken", true ],
+                    [ "amount", "number", "amount of brightness to subtract (0 - 100)", true ]
+                ]
+            },
+            {
+                "call"        : "lighten",
+                "unlockedAt"  : 999,
+                "description" : "Make a color lighter by given amount",
+                "args"        : [
+                    [ "color", "string", "Color to lighten", true ],
+                    [ "amount", "number", "amount of brightness to add (0 - 100)", true ]
+                ]
+            },
+            {
+                "call"        : "saturation",
+                "unlockedAt"  : 999,
+                "description" : "Get a colour's saturation, set it to a given number if an amount is passed",
+                "args"        : [
+                    [ "color", "string", "Color", true ],
+                    [ "amount", "number", "amount of saturation to set (0 - 100)", false ]
+                ]
+            },
+            {
+                "call"        : "saturate",
+                "unlockedAt"  : 999,
+                "description" : "Increase a color's saturation by given amount",
+                "args"        : [
+                    [ "float", "string", "Color to saturate", true ],
+                    [ "amount", "number", "amount of brightness to subtract (0 - 100)", true ]
+                ]
+            },
+            {
+                "call"        : "desaturate",
+                "unlockedAt"  : 999,
+                "description" : "Lower a color's saturation by given amount",
+                "args"        : [
+                    [ "color", "string", "Color to desaturate", true ],
+                    [ "amount", "number", "amount of brightness to add  (0 - 100)", true ]
+                ]
+            },
+            {
+                "call"        : "hue",
+                "unlockedAt"  : 999,
+                "description" : "Get a colour's hue angle, set it to a given number if an amount is passed",
+                "args"        : [
+                    [ "color", "string", "Color", true ],
+                    [ "amount", "number", "hue angle to set (0 - 360)", false ]
+                ]
+            },
+            {
+                "call"        : "rotate",
+                "unlockedAt"  : 999,
+                "description" : "Rotate a color's hue angle by given amount",
+                "args"        : [
+                    [ "float", "string", "Color to rotate", true ],
+                    [ "amount", "number", "angle to rotate (-360 - 360)", true ]
+                ]
+            },
+            {
+                "call"        : "opacity",
+                "unlockedAt"  : 999,
+                "description" : "Get a colour's opacity, set it to a given number if an amount is passed",
+                "args"        : [
+                    [ "color", "string", "Color", true ],
+                    [ "amount", "number", "amount of opacity to set (0 - 1)", false ]
+                ]
+            },
+            {
+                "call"        : "transparentize",
+                "unlockedAt"  : 999,
+                "description" : "Lower a color's opacity by given amount",
+                "args"        : [
+                    [ "float", "string", "Color to saturate", true ],
+                    [ "amount", "number", "amount of opacity to subtract (0 - 1)", true ]
+                ]
+            },
+            {
+                "call"        : "opacize",
+                "unlockedAt"  : 999,
+                "description" : "Increase a color's opacity by given amount",
+                "args"        : [
+                    [ "color", "string", "Color to desaturate", true ],
+                    [ "amount", "number", "amount of opacity to add  (0 - 1)", true ]
+                ]
             }
         ]
     }
