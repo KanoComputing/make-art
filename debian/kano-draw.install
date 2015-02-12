@@ -6,4 +6,4 @@ kdesktop/Draw.lnk usr/share/kano-desktop/kdesk/kdesktop/
 icon/kano-draw.png usr/share/icons/Kano/88x88/apps
 icon/kano-draw-hover.png usr/share/icons/Kano/88x88/apps
 icon/kano-draw.app usr/share/applications
-splash.png /usr/share/kano-draw/
+media /usr/share/kano-draw/
