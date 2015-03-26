@@ -7,5 +7,5 @@
   "undef": true,
   "unused": true,
   "node": true,
-  "evil": true
+  "evil": false
 }
