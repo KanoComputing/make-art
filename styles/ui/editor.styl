@@ -7,11 +7,11 @@ gutter-size(width)
     .ace_gutter-layer
         width 30px !important
 
-editor-tag(color=color-primary, color-text=#fff)
+editor-tag(color = color-primary, color-text = #fff)
+    border-radius()
     background color
     padding 2px
     margin 0 -2px
-    border-radius()
     color color-text
 
 autocomplete-tag(color)
@@ -79,7 +79,7 @@ editor
             bg-image-sized 'button-icons/autocomplete', center center, no-repeat
 
     .editor-area
-        border-radius()
+        border-radius(0 0 3px 3px)
         min-height 460px
         height 100%
         
@@ -193,3 +193,30 @@ editor
         background darken(color-editor-box, 5)
         border 0
         padding-top 1px
+
+ul.editor-tabs
+    debullet()
+    clearfix()
+    border-radius(3px 3px 0 0)
+    background color-editor-bg
+    padding-bottom 10px
+    margin 0
+    overflow hidden
+
+    li
+        smooth-font()
+        cursor pointer
+        width 50%
+        float left
+        background color-editor-bg
+        color color-white
+        padding 15px
+        box-sizing border-box
+        background lighten(color-editor-bg, 10)
+        text-align center
+        font-weight bold
+        text-transform uppercase
+        font-size 14px
+
+        &.active
+            background color-editor-bg
