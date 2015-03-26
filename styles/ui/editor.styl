@@ -1,3 +1,12 @@
+// HACK: Force the ACE gutter size to a fixed width
+gutter-size(width)
+
+    .ace_scroller
+        left 30px !important
+
+    .ace_gutter-layer
+        width 30px !important
+
 editor-tag(color=color-primary, color-text=#fff)
     background color
     padding 2px
@@ -93,18 +102,29 @@ editor
 
         &.ace_editor
             line-height 26px
-            font-size 15px
-            background color-grey
+            font-size 13px
+            background color-editor-bg
+
+            .ace_cursor
+                color rgba(#fff, .5)
+
+            gutter-size(35px)
 
             .ace_gutter
                 background color-editor-gutter
-                
+                // width 20px !important
+
             .ace_gutter-cell
+                color lighten(color-editor-gutter, 20)
+                font-family font-body
                 font-weight bold
-                color color-white
+                padding 0
+                padding-right 10px
+                // width 20px !important
 
             .ace_gutter-active-line
-                background darken(color-editor-gutter, 5)
+                // Disable active line state background 
+                background transparent
 
             .ace_marker-layer .ace_selection
                 background color-editor-selection
@@ -134,28 +154,37 @@ editor
                 
 .ace-dawn.ace_editor.ace_autocomplete
     border-radius()
-    background color-black
+    background color-editor-box
     border 0
     color color-white
     box-shadow none
-    
-    .ace_content .ace_line
-        
-        .ace_command
-            autocomplete-tag(color-language-identifier)
+    font-family font-body
+    font-size 15px
+
+    &, .ace_line
+        line-height 30px
+
+        ::-webkit-scrollbar
+            display: none
+
+        // .ace_command
+        //     autocomplete-tag(color-language-identifier)
 
         .ace_color
-            autocomplete-tag(color-language-string)
+            // autocomplete-tag(color-language-string)
+            autocomplete-tag(mix(color-editor-box, color-white, 30))
 
-        &.ace_selected
+    .ace_line
+        padding 0 10px
 
-            span
-                color color-white
-                
+    .ace_rightAlignedText
+        padding-right 5px
+        font-style italic
+
     .ace_marker-layer .ace_active-line
-        background color-orange
+        background darken(color-editor-box, 10)
         
     .ace_marker-layer .ace_line-hover
-        background rgba(color-white, .2)
+        background darken(color-editor-box, 5)
         border 0
         padding-top 1px

@@ -1,14 +1,19 @@
 .draw-display
-    canvas(
-        ng-mousemove='displayMousePos($event)'
-        ng-mouseleave='displayCursorPos()')
-    .error-display(ng-if='error')
-        h3 Error on line {{ error.row + 1 }}
-        p {{ error.text }}
 
-    .toolbar
-        .position-indicator
-            span.x-pos x:
-                span.pos-value
-            span.y-pos y:
-                span.pos-value
+    .display: .padded: .inner
+
+        canvas(
+            ng-mousemove='displayMousePos($event)'
+            ng-mouseleave='displayCursorPos()'
+            )
+
+        .error-display(ng-if='error')
+            h3 Error on line {{ error.row + 1 || 0  }}
+            p {{ error.text || 0 }}
+
+        .toolbar
+            .position-indicator x: {{ cursorPosition.x }} y: {{ cursorPosition.x }}
+
+    .actions
+        a.action-share Share
+        a.action-save Save
