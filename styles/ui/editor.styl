@@ -105,9 +105,14 @@ editor
             font-size 13px
             background color-editor-bg
 
+            // Hide default ACE editor error icon (Since we handle errors in display directive)
+            .ace_error
+                background-image none
+
             .ace_cursor
                 color rgba(#fff, .5)
 
+            // Force custom gutter size
             gutter-size(35px)
 
             .ace_gutter

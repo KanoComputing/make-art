@@ -1,9 +1,11 @@
-section: .page-width
+section: .page-width: .workspace
 
-    h2.center Playground
-    h4.center Draw whatever you want
+    .workspace-header
+        a
+            span.title Playground
+            span.subtitle Draw whatever you want
 
-    .row
+    .workspace-body: .row
         .col-6
             editor(ng-model='playground.code', editable='true', auto-select='false', workspace)
         .col-6
