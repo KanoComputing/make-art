@@ -8,7 +8,8 @@
                 "description" : "Draw a circle centered on the current position",
                 "args"        : [
                     [ "radius", "number", "The circle size", true ]
-                ]
+                ],
+                "defaults": [ 100 ]
             },
             {
                 "call"        : "ellipse",
@@ -17,7 +18,8 @@
                 "args"        : [
                     [ "radius-x", "number", "The ellipse horizontal size", true ],
                     [ "radius-y", "number", "The ellipse vertical size", true ]
-                ]
+                ],
+                "defaults": [ 50, 100 ]
             },
             {
                 "call"        : "square",
@@ -25,7 +27,8 @@
                 "description" : "Draw a square centered on the current position",
                 "args"        : [
                     [ "size", "number", "The size of the square", true ]
-                ]
+                ],
+                "defaults": [ 200 ]
             },
             {
                 "call"        : "rectangle",
@@ -34,7 +37,8 @@
                 "args"        : [
                     [ "width", "number", "The rectangle width", true ],
                     [ "height", "number", "The rectangle height", true ]
-                ]
+                ],
+                "defaults": [ 100, 200 ]
             },
             {
                 "call"        : "arc",
@@ -45,7 +49,8 @@
                     [ "start", "number", "The starting angle (0 to 2)", true ],
                     [ "end", "number", "The ending angle (0 to 2)", true ],
                     [ "close", "bool", "Close the path in the middle", false ]
-                ]
+                ],
+                "defaults": [ 100, 1, 2, true, true ]
             },
             {
                 "call"        : "polygon",
@@ -56,7 +61,8 @@
                     [ "x2", "number", "Point Y position", true ],
                     [ "...", "", "More polygon points positions", true ],
                     [ "close", "bool", "Close the path in the middle", false ]
-                ]
+                ],
+                "defaults": [ 0, 0, 100, 0, 100, 100 ]
             }
         ]
     },
@@ -70,7 +76,8 @@
                 "args"        : [
                     [ "x", "number", "Horizontal distance", true ],
                     [ "y", "number", "Vertical distance", false ]
-                ]
+                ],
+                "defaults": [ 100, 50 ]
             },
             {
                 "call"        : "lineTo",
@@ -79,7 +86,8 @@
                 "args"        : [
                     [ "x", "number", "The horizontal destination", true ],
                     [ "y", "number", "The vertical destination", true ]
-                ]
+                ],
+                "defaults": [ 0, 0 ]
             }
         ]
     },
@@ -93,7 +101,8 @@
                 "args"        : [
                     [ "x", "number", "Horizontal distance", true ],
                     [ "y", "number", "Vertical distance", false ]
-                ]
+                ],
+                "defaults": [ 100, 50 ]
             },
             {
                 "call"        : "moveTo",
@@ -102,7 +111,8 @@
                 "args"        : [
                     [ "x", "number", "The horizontal destination", true ],
                     [ "y", "number", "The vertical destination", true ]
-                ]
+                ],
+                "defaults": [ "center", "center" ]
             }
         ]
     },
@@ -115,7 +125,8 @@
                 "description" : "Write text at current position",
                 "args"        : [
                     [ "message", "string", "The message to write", true ]
-                ]
+                ],
+                "defaults": [ "Say something!" ]
             },
             {
                 "call"        : "textSize",
@@ -123,7 +134,8 @@
                 "description" : "Change text size in use",
                 "args"        : [
                     [ "size", "number", "The text size in pixels (Default is 25)", true ]
-                ]
+                ],
+                "defaults": [ 30 ]
             },
             {
                 "call"        : "fontFamily",
@@ -131,7 +143,8 @@
                 "description" : "Change the font in use (Default is Bariol)",
                 "args"        : [
                     [ "font", "string", "The font family name", true ]
-                ]
+                ],
+                "defaults": [ "Arial" ]
             },
             {
                 "call"        : "font",
@@ -140,7 +153,8 @@
                 "args"        : [
                     [ "font", "string", "The font family name", false ],
                     [ "size", "number", "The text size in pixels", false ]
-                ]
+                ],
+                "defaults": [ "Bariol", 30 ]
             },
             {
                 "call"        : "bold",
@@ -148,7 +162,8 @@
                 "description" : "Set text to bold. Call with false to reset",
                 "args"        : [
                     [ "state", "bool", "Bold state (True by default)", false ]
-                ]
+                ],
+                "defaults": [ true ]
             },
             {
                 "call"        : "italic",
@@ -156,7 +171,8 @@
                 "description" : "Set text to italic. Call with false to reset",
                 "args"        : [
                     [ "state", "bool", "Italic state (True by default)", false ]
-                ]
+                ],
+                "defaults": [ true ]
             }
         ]
     },
@@ -167,13 +183,15 @@
                 "call"        : "clear",
                 "unlockedAt"  : 999,
                 "description" : "Clear the sketch",
-                "args"        : []
+                "args"        : [],
+                "defaults": []
             },
             {
                 "call"        : "reset",
                 "unlockedAt"  : 999,
                 "description" : "Reset styles",
-                "args"        : []
+                "args"        : [],
+                "defaults": []
             },
             {
                 "call"        : "for",
@@ -182,7 +200,8 @@
                 "args"        : [
                     [ "i in [x..y]", "number", "The start and end point for the variable i", true ]
                 ],
-                "example"     : "for i in [1..5]\n    circle i"
+                "example"     : "for i in [1..5]\n    circle i",
+                "defaults": null
             },
             {
                 "call"        : "random",
@@ -193,7 +212,8 @@
                     [ "max", "number", "The maximum value", true ],
                     [ "float", "bool", "Return float values (Will be floored otherwise)", false ]
                 ],
-                "example"     : "random 5, 10"
+                "example"     : "random 5, 10",
+                "defaults": [ 5, 10 ]
             }
         ]
     },
@@ -206,7 +226,8 @@
                 "description" : "Change the background color (Only to use once)",
                 "args"        : [
                     [ "color", "string", "Apply a background color ('orange', 'blue', 'red', 'yellow', 'green'...)", true ]
-                ]
+                ],
+                "defaults": [ "blue" ]
             },
             {
                 "call"        : "color",
@@ -214,7 +235,8 @@
                 "description" : "Change the color in use",
                 "args"        : [
                     [ "color", "string", "The color to use ('orange', 'blue', 'red', 'yellow', 'green'...)", true ]
-                ]
+                ],
+                "defaults": [ "red" ]
             },
             {
                 "call"        : "stroke",
@@ -223,7 +245,8 @@
                 "args"        : [
                     [ "size", "number", "(number) The line width to use", false ],
                     [ "color", "string", "A string with the color to use - E.g. 'red', 'blue'..", false ]
-                ]
+                ],
+                "defaults": [ 10, "purple" ]
             },
             {
                 "call"        : "strokeColor",
@@ -231,7 +254,8 @@
                 "description" : "The stroke color to use",
                 "args"        : [
                     [ "color", "string", "A string with the color to use - E.g. 'red', 'blue'..", true ]
-                ]
+                ],
+                "defaults": [ "green" ]
             },
             {
                 "call"        : "strokeWidth",
@@ -239,7 +263,8 @@
                 "description" : "The stroke width to use",
                 "args"        : [
                     [ "size", "number", "A number with the line width to use", true ]
-                ]
+                ],
+                "defaults": [ 15 ]
             },
             {
                 "call"        : "brightness",
@@ -248,7 +273,8 @@
                 "args"        : [
                     [ "color", "string", "Color", true ],
                     [ "amount", "number", "amount of brightness to set (0 - 100)", false ]
-                ]
+                ],
+                "defaults": [ "yellow", 30 ]
             },
             {
                 "call"        : "darken",
@@ -257,7 +283,8 @@
                 "args"        : [
                     [ "float", "string", "Color to darken", true ],
                     [ "amount", "number", "amount of brightness to subtract (0 - 100)", true ]
-                ]
+                ],
+                "defaults": [ "lightblue", 30 ]
             },
             {
                 "call"        : "lighten",
@@ -266,7 +293,8 @@
                 "args"        : [
                     [ "color", "string", "Color to lighten", true ],
                     [ "amount", "number", "amount of brightness to add (0 - 100)", true ]
-                ]
+                ],
+                "defaults": [ "black", 50 ]
             },
             {
                 "call"        : "saturation",
@@ -275,7 +303,8 @@
                 "args"        : [
                     [ "color", "string", "Color", true ],
                     [ "amount", "number", "amount of saturation to set (0 - 100)", false ]
-                ]
+                ],
+                "defaults": [ "grey" ]
             },
             {
                 "call"        : "saturate",
@@ -284,7 +313,8 @@
                 "args"        : [
                     [ "float", "string", "Color to saturate", true ],
                     [ "amount", "number", "amount of brightness to subtract (0 - 100)", true ]
-                ]
+                ],
+                "defaults": [ "brown", 100 ]
             },
             {
                 "call"        : "desaturate",
@@ -293,7 +323,8 @@
                 "args"        : [
                     [ "color", "string", "Color to desaturate", true ],
                     [ "amount", "number", "amount of brightness to add  (0 - 100)", true ]
-                ]
+                ],
+                "defaults": [ "red", 50 ]
             },
             {
                 "call"        : "hue",
@@ -302,7 +333,8 @@
                 "args"        : [
                     [ "color", "string", "Color", true ],
                     [ "amount", "number", "hue angle to set (0 - 360)", false ]
-                ]
+                ],
+                "defaults": [ "red" ]
             },
             {
                 "call"        : "rotate",
@@ -311,7 +343,8 @@
                 "args"        : [
                     [ "float", "string", "Color to rotate", true ],
                     [ "amount", "number", "angle to rotate (-360 - 360)", true ]
-                ]
+                ],
+                "defaults": [ "red", 100 ]
             },
             {
                 "call"        : "opacity",
@@ -320,7 +353,8 @@
                 "args"        : [
                     [ "color", "string", "Color", true ],
                     [ "amount", "number", "amount of opacity to set (0 - 1)", false ]
-                ]
+                ],
+                "defaults": [ "black" ]
             },
             {
                 "call"        : "transparentize",
@@ -329,7 +363,8 @@
                 "args"        : [
                     [ "float", "string", "Color to saturate", true ],
                     [ "amount", "number", "amount of opacity to subtract (0 - 1)", true ]
-                ]
+                ],
+                "defaults": [ "black", 50 ]
             },
             {
                 "call"        : "opacize",
@@ -338,7 +373,8 @@
                 "args"        : [
                     [ "color", "string", "Color to desaturate", true ],
                     [ "amount", "number", "amount of opacity to add  (0 - 1)", true ]
-                ]
+                ],
+                "defaults": [ "black", 50 ]
             }
         ]
     }

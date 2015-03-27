@@ -1,9 +1,50 @@
 ul.editor-tabs
-    li.active Code
-    li Spellbook
+    li(ng-class='{ active: !showDocs }', ng-click='showDocs = false') Code
+    li(ng-class='{ active: showDocs }', ng-click='showDocs = true') Spellbook
 
-.controls
-    a.button-autocomplete(href='#', ng-click='autocomplete = !autocomplete', title='Toggle autocomplete', ng-class='{ active: autocomplete }')
-    a.button-full-screen(href='#', ng-click='fullScreen = !fullScreen', title='Toggle fullscreen', ng-class='{ active: fullScreen }')
+.editor-docs(ng-show='showDocs', , ng-class='{ scrolled: docsScrolled }')
 
-.editor-area
+    ul.category-tabs
+        li(
+            ng-repeat='category in docs',
+            ng-class='{ active: docsCategory === category.label }',
+            ng-click='selectDocsCategory(category)'
+            ) {{ category.label.substr(0, 1) }}
+
+    .inner(scrollable-pane): ul.category-panes
+
+        li(ng-repeat='category in docs', ng-show='docsCategory === category.label')
+            h4 {{ category.label }}
+
+            p.hint
+                | Click 
+                span.add-button 
+                |  to add a shape to your code
+
+                .command(ng-repeat='command in category.commands')
+
+                    .command-parts
+
+                        span.tag.call {{ command.call }}
+
+                        span(ng-repeat='arg in command.args')
+                            span.tag(ng-class='arg[1]') {{ arg[0] }}
+                            span.divide(ng-if='$index !== command.args.length -1') , 
+
+                        a.add-button(ng-click='addCommand(command)')
+
+                    p.explain {{ command.description }}
+
+                    p.explain-parts
+
+                        span(ng-repeat='arg in command.args')
+                            span(ng-class='arg[1]') {{ arg[0] }}: {{ arg[2] }}
+                            span(ng-if='$index !== command.args.length -1')  | 
+
+div(ng-show='!showDocs')
+
+    .controls
+        a.button-autocomplete(href='#', ng-click='autocomplete = !autocomplete', title='Toggle autocomplete', ng-class='{ active: autocomplete }')
+        a.button-full-screen(href='#', ng-click='fullScreen = !fullScreen', title='Toggle fullscreen', ng-class='{ active: fullScreen }')
+
+    .editor-area(editor)

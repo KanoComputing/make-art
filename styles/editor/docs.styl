@@ -1,0 +1,129 @@
+editor .editor-docs
+    docs-header-height = 80px
+
+    border-radius(0 0 3px 3px)
+    background color-editor-bg
+
+    &:before
+        absolute-cover()
+        content ''
+        height 20px
+        transition opacity .2s
+        top auto
+        bottom 0
+        background linear-gradient(rgba(color-editor-bg, 0), rgba(color-editor-bg, 1))
+        border-radius(0 0 3px 3px)
+
+    ul.category-tabs
+        debullet()
+        padding-top 15px
+        margin-bottom 0
+        text-align center
+        height docs-header-height
+        box-sizing border-box
+        position relative
+
+        &:after
+            absolute-cover()
+            content ''
+            height 20px
+            transition opacity .2s
+            top 100%
+            background linear-gradient(rgba(#000, .1), rgba(#000, 0))
+            opacity 0
+            transition opacity .2s
+
+        li
+            border-radius()
+            cursor pointer
+            display inline-block
+            width 45px
+            line-height @width
+            text-align center
+            background lighten(color-editor-bg, 10)
+            color color-white
+            margin 5px
+
+            &:hover
+                background lighten(color-editor-bg, 15)
+
+            &.active
+                background darken(color-editor-bg, 10)
+
+    .inner
+        height editor-height - docs-header-height
+        overflow auto
+
+    &.scrolled ul.category-tabs:after
+        opacity 1
+
+    ul.category-panes
+
+        li
+            debullet()
+
+            &, h4, p
+                color color-white
+
+            h4
+                smooth-font()
+                font-size 20px
+                font-weight bold
+                margin-bottom 5px
+                
+            p.hint
+                margin-bottom 30px
+                    
+            .command-parts
+                margin-bottom 8px
+
+                .tag
+                    editor-tag(color-language-keyword)
+                    smooth-font()
+                    font-weight bold
+                    margin-right 3px
+                    margin-left 10px
+
+                    &:first-child
+                        margin-left 0
+
+                    &.call
+                        background color-language-identifier
+                        margin-right 5px
+
+                    &.number
+                        background color-language-number
+                        
+                .divide
+                    smooth-font()
+                    font-size 17px
+                    line-height 0
+                    font-weight bold
+                    
+            p.explain
+                margin-bottom 3px
+
+            p.explain-parts
+                margin-bottom 20px
+                font-size 13px
+                color mix(color-editor-bg, color-white, 40%)
+
+    .add-button
+        circle(25px, lighten(color-editor-bg, 10))
+        smooth-font()
+        display inline-block
+        color rgba(color-white, .4)
+        font-weight bold
+        margin 0 3px
+
+        &:after
+            content '+'
+            line-height 0
+            font-size 22px
+
+    a.add-button
+        pointer cursor
+
+        &:hover
+            background lighten(color-editor-bg, 15)
+            color rgba(color-white, .8)

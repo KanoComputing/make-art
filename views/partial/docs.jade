@@ -1,4 +1,4 @@
-mixin arguments-short (args)
+//- mixin arguments-short (args)
     for arg, i in args
         span(class='argument argument-' + arg[1] + (arg[3] ? '' : ' optional'))
             if arg[1] == 'string'
@@ -10,7 +10,7 @@ mixin arguments-short (args)
             span(class='argument separator')
                 | , 
 
-.docs(ng-controller='DocsController', ng-init='categories = []')
+//- .docs(ng-controller='DocsController', ng-init='categories = []')
     h1.center Spellbook
     h4.center Collection of all your spells
 
