@@ -1,0 +1,42 @@
+color-token-handler = darken(color-editor-bg, 20)
+
+.token-handler
+    border-radius()
+    no-select()
+    position absolute
+    padding 10px
+    box-sizing border-box
+    background color-token-handler
+    min-width 50px
+    min-height 10px
+    display inline-block
+    z-index 5
+
+    &:after
+        tooltip-tail(bottom, color-token-handler, 8px)
+        content ''
+        position absolute
+        left 50%
+        margin-left -8px
+        top 100%
+
+.token-handler.token-handler-number
+    padding 10px 17px
+
+    .slider
+        border-radius()
+        display block
+        height 2px
+        background lighten(color-token-handler, 15)
+        position relative
+
+        .handle
+            border-radius()
+            display inline-block
+            background lighten(color-token-handler, 30)
+            width 20px
+            height 10px
+            margin-left -(@width / 2)
+            margin-top -(@height / 2)
+            position absolute
+            top 50%

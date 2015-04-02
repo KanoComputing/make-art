@@ -17,6 +17,7 @@
     "coffee-script": "~1.7.x",
     "coffeeify": "~0.6.x",
     "color": "^0.7.3",
+    "deep-equal": "^1.0.0",
     "express": "^4.10.5",
     "griddy": "0.0.x",
     "gulp": "~3.5.X",
