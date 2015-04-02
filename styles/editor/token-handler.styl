@@ -40,3 +40,25 @@ color-token-handler = darken(color-editor-bg, 20)
             margin-top -(@height / 2)
             position absolute
             top 50%
+            
+.token-handler.token-handler-color
+    padding 10px
+    
+    .palette
+        border-radius()
+        overflow hidden
+
+    .palette-row
+        clearfix()
+
+    .color
+        border-radius(1px)
+        display inline-block
+        width 20px
+        height @width
+        float: left
+        margin: 1px 1px 0 0
+        cursor pointer
+
+        &:hover
+            opacity .8
