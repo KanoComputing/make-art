@@ -3,17 +3,19 @@ section.page-level(ng-class='"mode-" + mode'): .page-width
     h2.center Challenge {{ id }}: {{ levels[ id - 1 ].title }}
     h4.center {{ levels[ id - 1 ].description }}
 
+    | step {{ step }}
+    h5.center(ng-bind-html='guidance | markdown')
+
     a.button.help(ng-click='openIntro()') ?
-    include partial/level-intro
 
     .row
         .col-6.editor-wrap
                 editor(
                     workspace,
                     ng-model='code',
-                    ng-class='{ completed: completed, disabled: mode == "reading" }',
+                    ng-class='{ completed: completed }',
                     ng-change='validate()',
-                    editable='mode=="coding" && !completed',
+                    editable='!completed',
                     start-at-line='content.startAt'
                     )
 
