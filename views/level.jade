@@ -1,6 +1,6 @@
 .page-level: .page-width
 
-    .workspace-header(ng-class='{ success: showNextBanner }')
+    .workspace-header(ng-class='{ success: completed }')
 
         .inner.center(ng-if='!started')
 
@@ -8,13 +8,13 @@
             h4 {{ levels[ id - 1 ].description }}
             button.button-success(ng-click='start()') Start
 
-        .inner(ng-if='started && !showNextBanner')
+        .inner(ng-if='started && !completed')
 
             progress-circle(value='step', max='content.steps.length')
             h3 {{ levels[ id - 1 ].title }}
-            h4.hint(ng-bind-html='guidance | markdown')
+            h4.hint(ng-bind-html='guidance | markdown', ng-if='guidance')
 
-        .inner.center(ng-if='showNextBanner')
+        .inner.center(ng-if='completed')
             h4 {{ successMessage() }}
             a.button.button-success(ng-if='hasNext', ng-href='/level/{{id + 1}}') Next &rsaquo;
             a.button.button-success(ng-if='!hasNext', ng-click='openLevelComplete()') Next &rsaquo;
@@ -36,7 +36,7 @@
                 ng-model='code',
                 ng-class='{ completed: completed }',
                 ng-change='validate()',
-                editable='!completed && started',
+                editable='started',
                 start-at-line='content.startAt'
                 )
 

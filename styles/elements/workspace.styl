@@ -21,9 +21,6 @@
 
     .inner
         padding 20px
-        
-    .hint
-        font-size 20px
 
     progress-circle
         float left
@@ -39,7 +36,7 @@
         margin-bottom 5px
         font-size 15px
         font-weight bold
-        opacity .7
+        opacity .5
 
     h4
         smooth-font()
@@ -49,6 +46,14 @@
         
         &:last-child
             margin-bottom 0
+
+    .hint
+        smooth-font(false)
+        font-size 20px
+        font-weight normal
+
+        strong
+            smooth-font()
 
     &.success
         background-color color-success
