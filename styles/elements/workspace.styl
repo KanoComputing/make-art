@@ -25,6 +25,10 @@
     .hint
         font-size 20px
 
+    progress-circle
+        float left
+        margin-right 20px
+
     h1, h2, h3, h4, h5, h6
         color color-white
         font-weight normal
@@ -33,11 +37,14 @@
         smooth-font()
         text-transform uppercase
         margin-bottom 5px
-        font-size 20px
+        font-size 15px
         font-weight bold
+        opacity .7
 
     h4
-        font-style italic
+        smooth-font()
+        font-weight bold
+        font-size 20px
         margin-bottom 20px
         
         &:last-child
@@ -77,9 +84,10 @@
 
     code
         background color-editor-bg
-        color color-white
+        color rgba(color-white, .8)
         margin 0 3px
         position relative
         top -1px
-        font-size 14px
+        font-size 15px
         padding 5px
+        font-weight 100

@@ -8,14 +8,16 @@
             h4 {{ levels[ id - 1 ].description }}
             button.button-success(ng-click='start()') Start
 
-        .inner.center(ng-if='started && !showNextBanner')
+        .inner(ng-if='started && !showNextBanner')
 
+            progress-circle(value='step', max='content.steps.length')
+            h3 {{ levels[ id - 1 ].title }}
             h4.hint(ng-bind-html='guidance | markdown')
 
         .inner.center(ng-if='showNextBanner')
             h4 {{ successMessage() }}
-            a.button.button-success.large(ng-if='hasNext', ng-href='/level/{{id + 1}}') Next &rsaquo;
-            a.button.button-success.large(ng-if='!hasNext', ng-click='openLevelComplete()') Next &rsaquo;
+            a.button.button-success(ng-if='hasNext', ng-href='/level/{{id + 1}}') Next &rsaquo;
+            a.button.button-success(ng-if='!hasNext', ng-click='openLevelComplete()') Next &rsaquo;
 
 
         //- .drop-down
