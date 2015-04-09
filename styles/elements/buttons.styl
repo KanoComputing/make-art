@@ -2,6 +2,10 @@ button-color(bg-color = color-primary, type-color = color-white)
     background bg-color
     color type-color
 
+    &:hover
+        background lighten(bg-color, 10)
+        color lighten(type-color, 10)
+
 button, a, input[type='file']
     &:hover
         cursor pointer
@@ -16,6 +20,7 @@ button, a.button, input[type='submit'], input[type='reset']
     text-transform uppercase
     font-weight bold
     margin-right 10px
+    smooth-font()
 
     &:last-child
         margin-right 0
@@ -24,32 +29,17 @@ button, a.button, input[type='submit'], input[type='reset']
         button-color(color-primary)
         border 0
 
-        &:hover
-            button-color(lighten(color-primary, 5))
-
     &.button-info
         button-color(color-blue)
-
-        &:hover
-            button-color(lighten(color-blue, 5))
 
     &.button-success
         button-color(color-green)
 
-        &:hover
-            button-color(lighten(color-green, 5))
-
     &.button-inverse
         button-color(color-white, darken(color-primary, 40%))
 
-        &:hover
-            button-color(color-white, color-primary)
-
     &.button-inverse-success
         button-color(color-white, darken(color-success, 40%))
-
-        &:hover
-            button-color(color-white, color-success)
 
     &.large
         padding 13px 30px

@@ -6,26 +6,80 @@
 
 .workspace-header
     clearfix()
-    background lighten(color-black, 5)
+    border-radius()
+    background #787d86
     margin-bottom 20px
+    color color-white
     
-    a
-        background color-black
+    .drop-down
+        // background color-black
         display block
-        color color-white
         padding 20px
         box-sizing border-box
         width 50%
-        
-        .title, .subtitle
-            display block
+        float left
 
-        .title
-            font-size 14px
-            color color-grey-lighter
-            text-transform uppercase
-            
-        .subtitle
-            smooth-font()
-            font-weight bold
-            font-size 20px
+    .inner
+        padding 20px
+        
+    .hint
+        font-size 20px
+
+    h1, h2, h3, h4, h5, h6
+        color color-white
+        font-weight normal
+
+    h3
+        smooth-font()
+        text-transform uppercase
+        margin-bottom 5px
+        font-size 20px
+        font-weight bold
+
+    h4
+        font-style italic
+        margin-bottom 20px
+        
+        &:last-child
+            margin-bottom 0
+
+    &.success
+        background-color color-success
+        
+        .button
+            button-color(color-white, darken(color-success, 10))
+
+    .step-display
+        width 50%
+        float left
+        padding 20px
+        box-sizing border-box
+        color color-white
+
+    .title, .subtitle
+        display block
+
+    .title
+        font-size 14px
+        color color-grey-lighter
+        text-transform uppercase
+        
+    .subtitle
+        smooth-font()
+        font-weight bold
+        font-size 20px
+
+    .step-display .subtitle
+        smooth-font(false)
+        font-size 16px
+        font-weight normal
+        margin-top 5px
+
+    code
+        background color-editor-bg
+        color color-white
+        margin 0 3px
+        position relative
+        top -1px
+        font-size 14px
+        padding 5px

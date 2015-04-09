@@ -41,9 +41,13 @@ debullet()
 blur-fx(amt = 5px)
     -webkit-filter blur(amt)
 
-smooth-font()
-    font-smoothing: antialiased
-    -moz-osx-font-smoothing: grayscale
+smooth-font(state = true)
+    if state == false
+        font-smoothing: subpixel-antialiased
+        -moz-osx-font-smoothing: auto
+    else
+        font-smoothing: antialiased
+        -moz-osx-font-smoothing: grayscale
 
 circle(size = 10px, color = color-grey-lighter)
     width size

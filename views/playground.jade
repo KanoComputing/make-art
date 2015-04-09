@@ -1,15 +1,14 @@
 .page-width: .workspace
 
-    .workspace-header
-        a
-            span.title Playground
-            span.subtitle Draw whatever you want
+    .workspace-header: .inner.center
+        h3 Playground
+        h4 Draw whatever you want
 
     .workspace-body: .row
         .col-6
             editor(ng-model='playground.code', editable='true', auto-select='false', workspace)
         .col-6
-            display(ng-source='playground.code', workspace)
+            display(ng-source='playground.code', workspace, mode='"playground"')
 
     span(ng-repeat="dialog in exportDialogs", ng-controller='ExportController')
         a.button(ng-if='!(dialog === "save" && !offline)',  ng-click='openDialog()') {{ dialog }}

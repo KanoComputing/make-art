@@ -1,34 +1,48 @@
-section.page-level(ng-class='"mode-" + mode'): .page-width
+.page-level: .page-width
 
-    h2.center Challenge {{ id }}: {{ levels[ id - 1 ].title }}
-    h4.center {{ levels[ id - 1 ].description }}
+    .workspace-header(ng-class='{ success: showNextBanner }')
 
-    | step {{ step }}
-    h5.center(ng-bind-html='guidance | markdown')
+        .inner.center(ng-if='!started')
 
-    a.button.help(ng-click='openIntro()') ?
+            h3 Challenge {{ id }}: {{ levels[ id - 1 ].title }}
+            h4 {{ levels[ id - 1 ].description }}
+            button.button-success(ng-click='start()') Start
 
-    .row
+        .inner.center(ng-if='started && !showNextBanner')
+
+            h4.hint(ng-bind-html='guidance | markdown')
+
+        .inner.center(ng-if='showNextBanner')
+            h4 {{ successMessage() }}
+            a.button.button-success.large(ng-if='hasNext', ng-href='/level/{{id + 1}}') Next &rsaquo;
+            a.button.button-success.large(ng-if='!hasNext', ng-click='openLevelComplete()') Next &rsaquo;
+
+
+        //- .drop-down
+        //-     .title Challenge {{ id }}: {{ levels[ id - 1 ].title }}
+        //-     .subtitle {{ levels[ id - 1 ].description }}
+
+        //- .step-display
+        //-     .title step {{ step + 1 }}
+        //-     .subtitle(ng-bind-html='guidance | markdown')
+
+    .row(ng-if='started')
         .col-6.editor-wrap
-                editor(
-                    workspace,
-                    ng-model='code',
-                    ng-class='{ completed: completed }',
-                    ng-change='validate()',
-                    editable='!completed',
-                    start-at-line='content.startAt'
-                    )
+
+            editor(
+                workspace,
+                ng-model='code',
+                ng-class='{ completed: completed }',
+                ng-change='validate()',
+                editable='!completed && started',
+                start-at-line='content.startAt'
+                )
 
         .col-6.tutorial-wrap
-            .display-wrap(v-show='mode === "editing"')
-                display(ng-source='code', workspace)
 
-                .actions
-                    a.button.workspace-action-button.reset(ng-click='code = content.code; completed = false') Reset
+            display(ng-source='code', workspace, mode='"level"', ng-class='{ disabled: !started }')
 
-            .success-display(ng-if='showNextBanner')
-                h5 {{ successMessage() }}
-                a.button.button-success.large(ng-if='hasNext', ng-href='/level/{{id + 1}}') Next &rsaquo;
-                a.button.button-success.large(ng-if='!hasNext', ng-click='openLevelComplete()') Next &rsaquo;
+            //- .actions
+                a.button.workspace-action-button.reset(ng-click='code = content.code; completed = false') Reset
 
     include partial/level-complete
