@@ -1,0 +1,12 @@
+.page-levels: .page-width
+
+    h3.center Levels
+
+    ul.levels-list
+
+        li(ng-repeat='level in levels')
+
+            .cover(ng-style='{ background-image: "url(" + ")" }')
+
+            .detail
+                h5 {{ level.title }}

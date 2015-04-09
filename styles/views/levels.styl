@@ -1,0 +1,24 @@
+.page-levels
+
+    ul.levels-list
+        debullet()
+        clearfix()
+        margin -10px
+
+        &, h1, h2, h3, h4, h5, h6
+            color color-black
+
+        li
+            border-radius()
+            width (100% / 5)
+            float left
+            background color-white
+            margin 0 10px 10px
+
+            .detail
+                padding 10px
+
+                h5
+                    ellipsis()
+                    font-weight bold
+                    font-size: 15px
