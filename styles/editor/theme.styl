@@ -48,21 +48,6 @@ editor
         min-height editor-height
         height 100%
 
-        &.disabled
-            background #eee
-
-            .ace_cursor
-                display none
-
-            > *
-                opacity .3
-
-        &.completed
-            background mix(#fff, color-success, 20%)
-
-            > *
-                opacity .4
-
         &.ace_editor
             line-height 26px
             font-size 13px
@@ -121,3 +106,23 @@ editor
 
                 .ace_language
                     editor-tag(color-language-language)
+
+editor.solution .editor-area.ace_editor
+
+    .ace_gutter
+        display none
+
+    .ace_scroller
+        left 20px !important
+
+editor .editor-area.disabled .ace_cursor
+        display none
+
+editor:not(.solution) .editor-area.disabled
+    background #eee
+
+    .ace_cursor
+        display none
+
+    > *
+        opacity .3

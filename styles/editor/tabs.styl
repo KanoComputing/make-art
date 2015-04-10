@@ -1,14 +1,24 @@
+editor .editor-title, editor ul.editor-tabs
+    border-radius(3px 3px 0 0)
+    smooth-font()
+    background color-editor-bg
+    text-align center
+    font-weight bold
+    text-transform uppercase
+    font-size 14px
+
+editor .editor-title
+    padding 15px
+    padding-bottom 24px
+
 editor ul.editor-tabs
     debullet()
     clearfix()
-    border-radius(3px 3px 0 0)
-    background color-editor-bg
     padding-bottom 10px
     margin 0
     overflow hidden
 
     li
-        smooth-font()
         cursor pointer
         width 50%
         float left
@@ -16,10 +26,6 @@ editor ul.editor-tabs
         box-sizing border-box
         background darken(color-editor-bg, 5)
         color mix(color-editor-bg, color-white, 50)
-        text-align center
-        font-weight bold
-        text-transform uppercase
-        font-size 14px
 
         &:hover
             background darken(color-editor-bg, 8)
