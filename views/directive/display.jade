@@ -15,6 +15,14 @@
             .position-indicator x: {{ cursorPosition.x }} y: {{ cursorPosition.x }}
 
     .actions
-        a.action-share(ng-if='mode === "playground"') Share
-        a.action-save(ng-if='mode === "playground"') Save
-        a.action-reset(ng-if='mode === "level"') Reset
+        a.action-share(ng-if='mode === "playground"')
+            i.icon-share
+            |  Share
+
+        a.action-save(ng-if='mode === "playground"')
+            i.icon-save
+            |  Save
+
+        a.action-reset(ng-if='mode === "level"')
+            i.icon-reset
+            |  Reset

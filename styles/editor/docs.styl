@@ -44,11 +44,22 @@ editor .editor-docs
             color color-white
             margin 5px
 
+            i
+                position relative
+                top 2px
+                opacity .5
+
             &:hover
                 background lighten(color-editor-bg, 15)
 
+                i
+                    opacity .8
+
             &.active
                 background darken(color-editor-bg, 10)
+
+                i
+                    opacity 1
 
     .inner
         height editor-height - docs-header-height

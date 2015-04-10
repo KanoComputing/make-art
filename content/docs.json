@@ -1,6 +1,7 @@
 [
     {
         "label"    : "Shapes",
+        "icon"     : "shapes",
         "commands" : [
             {
                 "call"        : "circle",
@@ -68,6 +69,7 @@
     },
     {
         "label"    : "Lines",
+        "icon"     : "lines",
         "commands" : [
             {
                 "call"        : "line",
@@ -93,6 +95,7 @@
     },
     {
         "label"    : "Position",
+        "icon"     : "position",
         "commands" : [
             {
                 "call"        : "move",
@@ -118,6 +121,7 @@
     },
     {
         "label"    : "Text",
+        "icon"     : "text",
         "commands" : [
             {
                 "call"        : "text",
@@ -178,6 +182,7 @@
     },
     {
         "label"    : "General",
+        "icon"     : "general",
         "commands" : [
             {
                 "call"        : "clear",
@@ -219,6 +224,7 @@
     },
     {
         "label"    : "Colors",
+        "icon"     : "colors",
         "commands" : [
             {
                 "call"        : "background",

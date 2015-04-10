@@ -10,7 +10,10 @@
 
         .inner(ng-if='started && !completed')
 
-            button.right(ng-click='toggleSolution()') Solution
+            button.button-editor.large.right(ng-click='toggleSolution()', ng-class='{ active: showSolution }')
+                i.icon-hint
+                | Solution
+
             progress-circle(value='step', max='content.steps.length')
             h3 {{ levels[ id - 1 ].title }}
             h4.hint(ng-bind-html='hint | markdown', ng-if='hint')
@@ -43,8 +46,5 @@
                 ng-model='solution',
                 title='"Solution"'
                 ) {{ solution }}
-
-            //- .actions
-                a.button.workspace-action-button.reset(ng-click='code = content.code; completed = false') Reset
 
     include partial/level-complete

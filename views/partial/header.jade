@@ -5,12 +5,22 @@ header: .page-width
         span.logo-title
 
     ul.nav.nav-left
-        li: a(href='#', ng-click='menuOpen = !menuOpen') Challenges
-        li: a(href='/playground') Playground
+        li: a(href='#', ng-click='menuOpen = !menuOpen')
+            i.icon-menu
+            |  Challenges
+
+        li: a(href='/playground')
+            i.icon-draw
+            |  Playground
 
     ul.nav.nav-right
-        li(ng-if='!offline && !loggedIn'): a(href='#', ng-click='login()') Login
-        li(ng-if='!offline && loggedIn'): a(href='#', ng-click='logout()') Logout
+        li(ng-if='!offline && !loggedIn'): a(href='#', ng-click='login()')
+            i.icon-login
+            |  Login
+
+        li(ng-if='!offline && loggedIn'): a(href='#', ng-click='logout()')
+            i.icon-logout
+            |  Logout
 
         li(ng-if='!offline && loggedIn')
             a.user-display(ng-href='http://world.kano.me/users/{{ user.username }}', target='_blank')
@@ -18,4 +28,4 @@ header: .page-width
                 | {{ user.username }}
 
 
-        li: button.close(ng-click='shutdown()', ng-if='offline') &times;
+        li: button.close(ng-click='shutdown()', ng-if='offline'): i.icon-cross

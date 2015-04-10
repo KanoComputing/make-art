@@ -1,8 +1,16 @@
-.editor-title(ng-if='title') {{ title }}
+.editor-title(ng-if='title')
+    i.icon-hint
+    | &nbsp; {{ title }}
 
 ul.editor-tabs(ng-if='tabbed')
-    li(ng-class='{ active: tab === "code" }', ng-click='switchTab("code")') Code
-    li(ng-class='{ active: tab === "docs" }', ng-click='switchTab("docs")') Spellbook
+
+    li(ng-class='{ active: tab === "code" }', ng-click='switchTab("code")')
+        i.icon-code
+        | &nbsp; Code
+
+    li(ng-class='{ active: tab === "docs" }', ng-click='switchTab("docs")')
+        i.icon-wand
+        | &nbsp; Spellbook
 
 .editor-docs(ng-show='tab === "docs"', , ng-class='{ scrolled: docsScrolled }')
 
@@ -11,11 +19,13 @@ ul.editor-tabs(ng-if='tabbed')
             ng-repeat='category in docs',
             ng-class='{ active: docsCategory === category.label }',
             ng-click='selectDocsCategory(category)'
-            ) {{ category.label.substr(0, 1) }}
+            )
+            i(ng-class='"icon-" + category.icon')
 
     .inner(scrollable-pane): ul.category-panes
 
         li(ng-repeat='category in docs', ng-show='docsCategory === category.label')
+
             h4 {{ category.label }}
 
             p.hint
@@ -46,7 +56,21 @@ ul.editor-tabs(ng-if='tabbed')
 div(ng-show='tab === "code"')
 
     .controls(ng-if='controls')
-        a.button-autocomplete(href='#', ng-click='autocomplete = !autocomplete', title='Toggle autocomplete', ng-class='{ active: autocomplete }')
-        a.button-full-screen(href='#', ng-click='fullScreen = !fullScreen', title='Toggle fullscreen', ng-class='{ active: fullScreen }')
+
+        a.button(
+            href='#',
+            ng-click='autocomplete = !autocomplete',
+            title='Toggle autocomplete',
+            ng-class='{ active: autocomplete }'
+            )
+            i.icon-autocomplete
+
+        a.button(
+            href='#',
+            ng-click='fullScreen = !fullScreen',
+            title='Toggle fullscreen',
+            ng-class='{ active: fullScreen }'
+            )
+            i.icon-fullscreen
 
     .editor-area(editor, ng-class='{ disabled: !editable }')

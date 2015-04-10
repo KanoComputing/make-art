@@ -3,8 +3,12 @@ button-color(bg-color = color-primary, type-color = color-white)
     color type-color
 
     &:hover
-        background lighten(bg-color, 10)
+        background lighten(bg-color, 5)
         color lighten(type-color, 10)
+
+    &.active, &:active
+        background lighten(bg-color, 15)
+        color mix(type-color, bg-color, 70)
 
 button, a, input[type='file']
     &:hover
@@ -40,6 +44,9 @@ button, a.button, input[type='submit'], input[type='reset']
 
     &.button-inverse-success
         button-color(color-white, darken(color-success, 40%))
+
+    &.button-editor
+        button-color(darken(color-editor-bg, 5%))
 
     &.large
         padding 13px 30px
@@ -88,3 +95,7 @@ button, a.button, input[type='submit'], input[type='reset']
         &:hover
             background darken(color-grey-mid, 10)
 
+    i
+        position relative
+        left -7px
+        opacity .6
