@@ -1,8 +1,9 @@
-ul.editor-tabs
-    li(ng-class='{ active: !showDocs }', ng-click='showDocs = false') Code
-    li(ng-class='{ active: showDocs }', ng-click='showDocs = true') Spellbook
+ul.editor-tabs(ng-class='{ "split-three": solution }')
+    li(ng-class='{ active: tab === "code" }', ng-click='switchTab("code")') Code
+    li(ng-if='solution', ng-class='{ active: tab === "solution" }', ng-click='switchTab("solution")') Solution
+    li(ng-class='{ active: tab === "docs" }', ng-click='switchTab("docs")') Spellbook
 
-.editor-docs(ng-show='showDocs', , ng-class='{ scrolled: docsScrolled }')
+.editor-docs(ng-show='tab === "docs"', , ng-class='{ scrolled: docsScrolled }')
 
     ul.category-tabs
         li(
@@ -41,10 +42,13 @@ ul.editor-tabs
                             span(ng-class='arg[1]') {{ arg[0] }}: {{ arg[2] }}
                             span(ng-if='$index !== command.args.length -1')  | 
 
-div(ng-show='!showDocs')
+div(ng-show='tab === "code"')
 
     .controls
         a.button-autocomplete(href='#', ng-click='autocomplete = !autocomplete', title='Toggle autocomplete', ng-class='{ active: autocomplete }')
         a.button-full-screen(href='#', ng-click='fullScreen = !fullScreen', title='Toggle fullscreen', ng-class='{ active: fullScreen }')
 
     .editor-area(editor, ng-class='{ disabled: !editable }')
+
+.editor-solution(ng-show='tab === "solution"')
+    pre: code {{ solution }}

@@ -12,14 +12,22 @@ editor ul.editor-tabs
         cursor pointer
         width 50%
         float left
-        background color-editor-bg
         padding 15px
         box-sizing border-box
-        background lighten(color-editor-bg, 10)
+        background darken(color-editor-bg, 5)
+        color mix(color-editor-bg, color-white, 50)
         text-align center
         font-weight bold
         text-transform uppercase
         font-size 14px
 
+        &:hover
+            background darken(color-editor-bg, 8)
+            color mix(color-editor-bg, color-white, 30)
+
         &.active
             background color-editor-bg
+            color color-white
+
+    &.split-three li
+        width (100% / 3)
