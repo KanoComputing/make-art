@@ -6,7 +6,13 @@
 
     .workspace-body: .row
         .col-6
-            editor(ng-model='playground.code', editable='true', auto-select='false', workspace)
+            editor(
+                ng-model='playground.code',
+                editable='true',
+                auto-select='false',
+                workspace,
+                tabbed='true'
+                )
         .col-6
             display(ng-source='playground.code', workspace, mode='"playground"')
 

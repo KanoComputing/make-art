@@ -57,7 +57,7 @@ div(ng-show='tab === "code"')
 
     .controls(ng-if='controls')
 
-        a.button(
+        a.button.button-editor.button-icon(
             href='#',
             ng-click='autocomplete = !autocomplete',
             title='Toggle autocomplete',
@@ -65,7 +65,7 @@ div(ng-show='tab === "code"')
             )
             i.icon-autocomplete
 
-        a.button(
+        a.button.button-editor.button-icon(
             href='#',
             ng-click='fullScreen = !fullScreen',
             title='Toggle fullscreen',
