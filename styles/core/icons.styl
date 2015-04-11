@@ -9,18 +9,30 @@
     font-style: normal;
 }
 
-[class^="icon-"], [class*=" icon-"] {
-    font-family: 'icomoon';
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
+icon()
+    smooth-font()
+    font-family 'icomoon'
+    speak none
+    font-style normal
+    font-weight normal
+    font-variant normal
+    text-transform none
+    position relative
 
-    /* Better Font Rendering =========== */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+[class^="icon-"], [class*=" icon-"] {
+    icon()
+}
+
+.icon-menu:before {
+    content: "\e614";
+}
+
+.icon-locked:before {
+    content: "\e621";
+}
+
+.icon-unlocked:before {
+    content: "\e622";
 }
 
 .icon-arrow-down:before {
@@ -101,10 +113,6 @@
 
 .icon-logout:before {
     content: "\e613";
-}
-
-.icon-menu:before {
-    content: "\e614";
 }
 
 .icon-play:before {
