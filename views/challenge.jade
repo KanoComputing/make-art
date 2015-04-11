@@ -39,7 +39,13 @@
 
         .col-6.tutorial-wrap
 
-            display(ng-source='code', workspace, mode='"challenge"', ng-class='{ disabled: !started }', ng-show='!showSolution')
+            display(
+                source='code',
+                workspace,
+                mode='"challenge"',
+                ng-class='{ disabled: !started }',
+                ng-show='!showSolution'
+                )
 
             editor.solution(
                 ng-if='showSolution && solution',
