@@ -9,3 +9,4 @@ npm-debug.log
 **.sublime-workspace
 *.pyc
 *.swp
+dist

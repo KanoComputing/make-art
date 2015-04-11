@@ -11,7 +11,7 @@ var gulp = require('gulp'),
     partialify = require('partialify/custom');
 
 var server = lr(),
-    env = process.env.NODE_ENV === 'production' ? 'production' : 'develpoment',
+    env = process.env.NODE_ENV === 'production' ? 'production' : 'development',
     production = env === 'production',
     offline = process.env.OFFLINE === 'true';
 

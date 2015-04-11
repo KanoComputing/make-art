@@ -7,6 +7,7 @@
     "start": "node ./server/index.js",
     "watch": "gulp watch",
     "build": "gulp",
+    "bundle": "./bundle",
     "postinstall": "node node_modules/.bin/gulp default"
   },
   "author": "",
