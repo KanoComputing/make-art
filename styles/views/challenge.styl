@@ -1,6 +1,8 @@
 .page-challenge
 
     .success-display
+        clearfix()
+        border-radius()
         position absolute
         top 0
         left 0
@@ -10,10 +12,8 @@
         padding-bottom 0
         margin 20px
         box-sizing border-box
-        clearfix()
         text-align center
         background lighten(color-green, 5)
-        border-radius()
 
         h5
             padding-right 100px
@@ -39,17 +39,17 @@
         position relative
 
     .tutorial-display
+        border-radius()
         padding 10px 30px
         font-size 20px
-        border-radius()
 
         .content
             margin-bottom 20px
 
         &:before
+            tooltip-tail(left, @background, 15px)
             content ''
             position absolute
-            tooltip-tail(left, @background, 15px)
             top 70px
 
     .display-wrap
