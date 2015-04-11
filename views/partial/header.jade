@@ -1,19 +1,22 @@
 header: .page-width
 
     a.logo(href='/')
+
         span.logo-image
         span.logo-title
 
     ul.nav.nav-left
-        li: a(href='#', ng-click='menuOpen = !menuOpen')
+
+        li: a(href='/challenges', ng-class='{ active: basePath === "challenge" || basePath === "challenges" }')
             i.icon-menu
             |  Challenges
 
-        li: a(href='/playground')
+        li: a(href='/playground', ng-class='{ active: basePath === "playground" }')
             i.icon-game
             |  Playground
 
     ul.nav.nav-right
+
         li(ng-if='!offline && !loggedIn'): a(href='#', ng-click='login()')
             i.icon-login
             |  Login
