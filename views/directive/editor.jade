@@ -59,7 +59,7 @@ div(ng-show='tab === "code"')
 
         a.button.button-editor.button-icon(
             href='#',
-            ng-click='autocomplete = !autocomplete',
+            ng-click='toggleAutocomplete()',
             title='Toggle autocomplete',
             ng-class='{ active: autocomplete }'
             )
@@ -67,7 +67,7 @@ div(ng-show='tab === "code"')
 
         a.button.button-editor.button-icon(
             href='#',
-            ng-click='fullScreen = !fullScreen',
+            ng-click='toggleFullScreen()',
             title='Toggle fullscreen',
             ng-class='{ active: fullScreen }'
             )
