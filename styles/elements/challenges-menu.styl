@@ -1,22 +1,22 @@
-level-button-size = 50px
-level-button-gutter = 10px
+challenge-button-size = 50px
+challenge-button-gutter = 10px
 
+.modal-inner.challenges-menu
 
-.modal-inner.levels-menu
-    ul.levels-list
+    ul.challenges-list
         debullet()
         padding: 20px 90px
         clearfix()
 
         li
             position relative
-            margin (level-button-gutter / 2)
+            margin (challenge-button-gutter / 2)
             float left
 
             .button
-                width level-button-size
-                height level-button-size
-                line-height level-button-size
+                width challenge-button-size
+                height challenge-button-size
+                line-height challenge-button-size
                 padding 0
                 margin 0
                 text-align center
@@ -33,7 +33,7 @@ level-button-gutter = 10px
 
                 &.playground
                     button-color(saturate(darken(color-green, 6), 10))
-                    width (3 * level-button-size) + (2 * level-button-gutter)
+                    width (3 * challenge-button-size) + (2 * challenge-button-gutter)
                 &:hover
                     &.unlocked
                         button-color(lighten(color-green, 5))

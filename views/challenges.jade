@@ -1,0 +1,18 @@
+.page-challenges: .page-width
+
+    h3.page-title
+        i.icon-menu
+        | Challenges
+
+    ul.challenges-list
+
+        li(ng-repeat='challenge in challenges')
+            a(
+                href='/challenge/{{ $index + 1 }}',
+                ng-class='{ locked: isLocked($index), completed: isCompleted($index), current: isCurrent($index) }'
+                )
+
+                .cover(ng-style='{ "background-image": "url(/assets/challenges/" + challenge.id + ".png)" }')
+
+                .detail
+                    h5 {{ challenge.title }}
