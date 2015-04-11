@@ -1,4 +1,4 @@
-
+npm run build
 echo "Creating bundle in ./dist..."
 rm -rf dist
 mkdir dist
