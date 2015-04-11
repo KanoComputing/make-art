@@ -10,8 +10,8 @@ gutter-size(width)
 editor-tag(color = color-primary, color-text = #fff)
     border-radius()
     background color
-    padding 2px
-    margin 0 -2px
+    padding 2px 1px
+    margin 0 -1px
     color color-text
     position relative
 
@@ -50,8 +50,9 @@ editor
 
         &.ace_editor
             line-height 26px
-            font-size 13px
+            font-size 14px
             background color-editor-bg
+            color color-white
 
             // Hide default ACE editor error icon (Since we handle errors in display directive)
             .ace_error

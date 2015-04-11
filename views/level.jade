@@ -10,7 +10,7 @@
 
         .inner(ng-if='started && !completed')
 
-            button.button-editor.large.right(ng-click='toggleSolution()', ng-class='{ active: showSolution }')
+            a.button.button-editor.large.right(ng-click='toggleSolution()', ng-class='{ active: showSolution }')
                 i.icon-hint
                 | Solution
 
