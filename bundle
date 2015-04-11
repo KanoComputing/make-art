@@ -1,3 +1,5 @@
+export OFFLINE=true
+export NODE_ENV=production
 npm run build
 echo "Creating bundle in ./dist..."
 rm -rf dist

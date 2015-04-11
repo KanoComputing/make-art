@@ -15,6 +15,8 @@ var server = lr(),
     production = env === 'production',
     offline = process.env.OFFLINE === 'true';
 
+console.log(offline);
+
 var paths = {
     views      : { watch: [ 'views/**/*.jade', 'content/**/*' ], src: 'views/**/*.jade', out: 'www' },
     browserify : { watch: [ 'lib/**/*', 'content/**/*' ] , src: 'lib/index.js', out: 'www/js' },
