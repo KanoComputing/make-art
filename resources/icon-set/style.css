@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'icomoon';
-	src:url('fonts/icomoon.eot?-czet1d');
-	src:url('fonts/icomoon.eot?#iefix-czet1d') format('embedded-opentype'),
-		url('fonts/icomoon.woff?-czet1d') format('woff'),
-		url('fonts/icomoon.ttf?-czet1d') format('truetype'),
-		url('fonts/icomoon.svg?-czet1d#icomoon') format('svg');
+	src:url('fonts/icomoon.eot?3f7wqu');
+	src:url('fonts/icomoon.eot?#iefix3f7wqu') format('embedded-opentype'),
+		url('fonts/icomoon.woff?3f7wqu') format('woff'),
+		url('fonts/icomoon.ttf?3f7wqu') format('truetype'),
+		url('fonts/icomoon.svg?3f7wqu#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -23,95 +23,135 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.icon-autocomplete:before {
+.icon-arrow-down:before {
 	content: "\e600";
 }
 
-.icon-code:before {
+.icon-arrow-left:before {
 	content: "\e601";
 }
 
-.icon-colors:before {
+.icon-arrow-right:before {
 	content: "\e602";
 }
 
-.icon-cross:before {
+.icon-arrow-up:before {
 	content: "\e603";
 }
 
-.icon-draw:before {
+.icon-autocomplete:before {
 	content: "\e604";
 }
 
-.icon-fullscreen:before {
+.icon-chevron-down:before {
 	content: "\e605";
 }
 
-.icon-general:before {
+.icon-chevron-left:before {
 	content: "\e606";
 }
 
-.icon-hint:before {
+.icon-chevron-right:before {
 	content: "\e607";
 }
 
-.icon-lines:before {
+.icon-chevron-up:before {
 	content: "\e608";
 }
 
-.icon-login:before {
+.icon-code:before {
 	content: "\e609";
 }
 
-.icon-logout:before {
+.icon-colors:before {
 	content: "\e60a";
 }
 
-.icon-menu:before {
+.icon-cross:before {
 	content: "\e60b";
 }
 
-.icon-play:before {
+.icon-draw:before {
 	content: "\e60c";
 }
 
-.icon-plus:before {
+.icon-full-screen:before {
 	content: "\e60d";
 }
 
-.icon-position:before {
+.icon-game:before {
 	content: "\e60e";
 }
 
-.icon-reset:before {
+.icon-general:before {
 	content: "\e60f";
 }
 
-.icon-save:before {
+.icon-hint:before {
 	content: "\e610";
 }
 
-.icon-shapes:before {
+.icon-lines:before {
 	content: "\e611";
 }
 
-.icon-share:before {
+.icon-login:before {
 	content: "\e612";
 }
 
-.icon-text:before {
+.icon-logout:before {
 	content: "\e613";
 }
 
-.icon-tick:before {
+.icon-menu:before {
 	content: "\e614";
 }
 
-.icon-trophy:before {
+.icon-play:before {
 	content: "\e615";
 }
 
-.icon-wand:before {
+.icon-plus:before {
 	content: "\e616";
+}
+
+.icon-position:before {
+	content: "\e617";
+}
+
+.icon-reset:before {
+	content: "\e618";
+}
+
+.icon-save:before {
+	content: "\e619";
+}
+
+.icon-shapes:before {
+	content: "\e61a";
+}
+
+.icon-share:before {
+	content: "\e61b";
+}
+
+.icon-text:before {
+	content: "\e61c";
+}
+
+.icon-tick:before {
+	content: "\e61d";
+}
+
+.icon-tooltips:before {
+	content: "\e61e";
+}
+
+.icon-trophy:before {
+	content: "\e61f";
+}
+
+.icon-wand:before {
+	content: "\e620";
 }
 
