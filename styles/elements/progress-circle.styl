@@ -2,6 +2,8 @@ progress-circle svg
     width 60px
     height @width
     margin-top -5px
+    -webkit-animation-iteration-count: 1; 
+
 
     path, circle
         fill none
@@ -13,3 +15,23 @@ progress-circle svg
 
     circle
         stroke rgba(0, 0, 0, .08)
+
+$keyframe-name = pulsate
+@keyframes {$keyframe-name}    
+
+    0%
+        -webkit-transform scale(1, 1, 1)
+
+    50% 
+        -webkit-transform scale(1.15, 1.15)
+    
+    100% 
+        -webkit-transform scale(1, 1, 1)
+    
+
+                
+.enable_animation
+    -webkit-animation: pulsate 1s ease-out;
+    
+
+        

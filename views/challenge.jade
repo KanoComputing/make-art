@@ -14,7 +14,7 @@
                 i.icon-hint
                 | Solution
 
-            progress-circle(value='step', max='content.steps.length')
+            progress-circle(value='step', max='content.steps.length', ng-class='animationClass' )
             h3 {{ challenges[ id - 1 ].title }}
             h4.hint(ng-bind-html='hint | markdown', ng-if='hint')
 
