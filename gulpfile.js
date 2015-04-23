@@ -79,10 +79,12 @@ gulp.task('listen', function (next) {
     server.listen(35729, next);
 });
 
-gulp.task('watch', [ 'listen' ], function () {
+gulp.task('build', [ 'browserify', 'styles', 'views' ]);
+
+gulp.task('watch', [ 'build', 'listen' ], function () {
     gulp.watch(paths.browserify.watch, [ 'browserify' ]);
     gulp.watch(paths.styles.watch, [ 'styles' ]);
     gulp.watch(paths.views.watch, [ 'views' ]);
 });
 
-gulp.task('default', [ 'browserify', 'styles', 'views' ]);
+gulp.task('default', [ 'build' ]);
