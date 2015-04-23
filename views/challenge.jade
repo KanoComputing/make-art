@@ -28,7 +28,7 @@
 
             editor(
                 workspace,
-                ng-model='code',
+                ng-model='challenge.code',
                 ng-class='{ completed: completed }',
                 ng-change='validate()',
                 editable='started',
@@ -40,7 +40,7 @@
         .col-6.tutorial-wrap
 
             display(
-                source='code',
+                source='challenge.code',
                 workspace,
                 mode='"challenge"',
                 ng-class='{ disabled: !started }',

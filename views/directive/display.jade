@@ -7,8 +7,12 @@
             ng-mouseleave='displayCursorPos()'
             )
 
-        .error-display(ng-if='error')
-            h3 Error on line {{ error.row + 1 || 0  }}
+        .error-display(ng-if='error', ng-class='"error-" + error.type')
+
+            h3
+                | {{ error.type | upperfirst }} Error 
+                span(ng-if='error.row !== null') on line {{ error.row + 1 || 0  }}
+
             p {{ error.text || 0 }}
 
         .toolbar
