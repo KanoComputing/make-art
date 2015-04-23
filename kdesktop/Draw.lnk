@@ -7,6 +7,6 @@ table Icon
   IconHover: /usr/share/icons/Kano/88x88/apps/kano-draw-hover.png
   HoverXOffset: 0
   Relative-To: grid
-  X: 4
-  Y: 0
+  X: 0
+  Y: 1
 end

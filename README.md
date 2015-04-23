@@ -9,7 +9,7 @@ You can try the app [here »](http://kano-draw.herokuapp.com/)
 ## Setup
 
     git clone git@github.com:tancredi/draw.git
-    cd draw
+    cd kano-draw
     npm install
 
 ## Build
