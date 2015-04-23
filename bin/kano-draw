@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/kano-splash /usr/share/kano-draw/media/splash.png /usr/bin/env python
 
 # kano-draw
 #
@@ -7,6 +7,10 @@
 #
 # The Draw App implementation
 #
+
+# Before loading anything else, declare a profiling timepoint                                                      
+from kano.profiling import declare_timepoint
+declare_timepoint("load",True)
 
 import os
 import sys
@@ -42,5 +46,8 @@ SERVER_PROC.daemon = True
 SERVER_PROC.start()
 
 # Init the web app
-DRAW = Draw()
+if len(sys.argv) > 1:
+    DRAW = Draw(load_path=sys.argv[1])
+else:
+    DRAW = Draw()
 DRAW.run()

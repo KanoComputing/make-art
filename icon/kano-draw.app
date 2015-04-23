@@ -8,6 +8,7 @@
     "colour": "#7BAA64",
 
     "categories": ["code"],
+    "mime_type": "application/x-kano-draw",
 
     "packages": [],
     "dependencies": ["kano-draw"],
