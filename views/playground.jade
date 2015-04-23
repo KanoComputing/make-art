@@ -5,7 +5,9 @@
         | Playground
 
     .workspace-body: .row
+
         .col-6
+
             editor(
                 ng-model='playground.code',
                 editable='true',
@@ -14,15 +16,11 @@
                 tabbed='true',
                 controls='true'
                 )
+
         .col-6
-            display(ng-source='playground.code', workspace, mode='"playground"')
 
-    span(ng-repeat="dialog in exportDialogs", ng-controller='ExportController')
-        a.button(ng-if='!(dialog === "save" && !offline)',  ng-click='openDialog()') {{ dialog }}
-
-        include partial/export
-
-    span(ng-controller='LoadDialogController' ng-if='offline')
-        a.button(ng-click='openDialog()') Load
-
-        include partial/load
+            display(
+                source='playground.code',
+                workspace,
+                mode='"playground"'
+                )

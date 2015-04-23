@@ -7,22 +7,35 @@
             ng-mouseleave='displayCursorPos()'
             )
 
-        .error-display(ng-if='error')
-            h3 Error on line {{ error.row + 1 || 0  }}
+        .error-display(ng-if='error', ng-class='"error-" + error.type')
+
+            h3
+                | {{ error.type | upperfirst }} Error 
+                span(ng-if='error.row !== null') on line {{ error.row + 1 || 0  }}
+
             p {{ error.text || 0 }}
 
         .toolbar
             .position-indicator x: {{ cursorPosition.x }} y: {{ cursorPosition.x }}
 
     .actions
-        a.action-share(ng-if='mode === "playground"')
+
+        a.action-share(ng-if='mode === "playground"', ng-click='setOpenModal("share")')
             i.icon-share
             |  Share
 
-        a.action-save(ng-if='mode === "playground"')
+        a.action-save(ng-if='mode === "playground"', ng-click='setOpenModal("save")')
             i.icon-save
             |  Save
 
         a.action-reset(ng-if='mode === "challenge"')
             i.icon-reset
             |  Reset
+
+        export-modal(display='this', action='"save"')
+        export-modal(display='this', action='"share"')
+
+        //- span(ng-controller='LoadDialogController' ng-if='offline')
+            a.button(ng-click='openDialog()') Load
+
+            include partial/load
