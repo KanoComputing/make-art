@@ -20,11 +20,16 @@ editor
             margin-bottom 10px
             background lighten(color-editor-bg, 20)
             cursor pointer
+            
+            &:hover
+                background lighten(color-editor-bg, 30)
 
             &.active
                 background color-orange
-                
+
             &.divide
                 cursor default
                 height 3px
-                background rgba(color-editor-bg, .6)
+
+                &, &:hover
+                    background rgba(color-editor-bg, .6)
