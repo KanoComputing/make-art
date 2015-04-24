@@ -42,7 +42,7 @@
             display(
                 source='challenge.code',
                 workspace,
-                mode='"challenge"',
+                mode='completed ? "playground" : "challenge"',
                 ng-class='{ disabled: !started }',
                 ng-show='!showSolution'
                 )
