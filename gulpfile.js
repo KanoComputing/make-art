@@ -36,9 +36,7 @@ gulp.task('browserify', function () {
     .pipe(browserify({
         transform : [
             partialify.alsoAllow('md'),
-            partialify.alsoAllow('coffee'),
-            'debowerify'
-        ],
+            partialify.alsoAllow('coffee')        ],
     }))
     .on('error', handleError)
     .pipe(rename('index.js'))
