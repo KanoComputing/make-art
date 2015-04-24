@@ -8,9 +8,7 @@ var gulp = require('gulp'),
     jadeHelpers = require('./utils/jadeHelpers'),
     _ = require('lodash'),
     color = require('cli-color'),
-    partialify = require('partialify/custom'),
-    griddy = require('griddy'),
-    nib = require('nib');
+    partialify = require('partialify/custom');
 
 var server = lr(),
     env = process.env.NODE_ENV === 'production' ? 'production' : 'development',
@@ -50,7 +48,7 @@ gulp.task('styles', function () {
     gulp.src(paths.styles.src)
     .pipe(stylus({
         pretty : !production,
-        use    : [ griddy(), nib() ]
+        use    : [ 'griddy', 'nib' ]
     }))
     .on('error', handleError)
     .pipe(gulp.dest(paths.styles.out))

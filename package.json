@@ -34,7 +34,7 @@
     "gulp-jade": "~0.4.x",
     "gulp-livereload": "1.2.0",
     "gulp-rename": "~0.2.x",
-    "gulp-stylus": "^2.0.1",
+    "gulp-stylus": "0.0.x",
     "nib": "~1.0.x",
     "partialify": "^3.1.1",
     "tiny-lr": "0.0.9"
