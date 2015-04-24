@@ -29,7 +29,7 @@ display
         padding-top 10px
         text-align center
 
-        a
+        .action
             smooth-font()
             display inline-block
             margin 0 15px
@@ -38,6 +38,7 @@ display
             font-weight bold
             position relative
             top 4px
+            cursor pointer
 
             &.action-share
                 color color-blue
@@ -47,6 +48,18 @@ display
 
             &.action-reset
                 color color-grey-light
+
+            &.action-load
+                color color-orange
+
+            i
+                top 1px
+                opacity .5
+
+            input[type='file']
+                absolute-cover()
+                opacity .0000001
+                cursor pointer
 
     .error-display
         border-radius(0 0 3px 3px)
