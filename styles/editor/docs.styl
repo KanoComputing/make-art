@@ -1,123 +1,77 @@
 editor .editor-docs
-    docs-header-height = 80px
-
-    border-radius(0 0 3px 3px)
+    border-radius()
     background color-editor-bg
+    position relative
+
+    .inner
+        padding 20px 30px
+        height editor-height
+        overflow auto
+        box-sizing border-box
+
+    &, h4, p
+        color color-white
+
+    &:before, &:after
+        absolute-cover()
+        content ''
+        height 30px
+        transition opacity .2s
+        top 0
+        z-index 2
 
     &:before
-        absolute-cover()
+        border-radius(3px 3px 0 0)
+        background linear-gradient(rgba(color-editor-bg, 1), rgba(color-editor-bg, 0))
+
+    &:after
         border-radius(0 0 3px 3px)
-        content ''
-        height 20px
-        transition opacity .2s
         top auto
         bottom 0
         background linear-gradient(rgba(color-editor-bg, 0), rgba(color-editor-bg, 1))
 
-    ul.category-tabs
-        debullet()
-        padding-top 15px
-        margin-bottom 0
-        text-align center
-        height docs-header-height
-        box-sizing border-box
-        position relative
+    h4
+        smooth-font()
+        font-size 20px
+        font-weight bold
+        margin-bottom 5px
+        
+    p.hint
+        margin-bottom 30px
+            
+    .command-parts
+        margin-bottom 8px
 
-        &:after
-            absolute-cover()
-            content ''
-            height 20px
-            transition opacity .2s
-            top 100%
-            background linear-gradient(rgba(#000, .1), rgba(#000, 0))
-            opacity 0
-            transition opacity .2s
+        .tag
+            editor-tag(color-language-keyword)
+            smooth-font()
+            font-weight bold
+            margin-right 3px
+            margin-left 10px
 
-        li
-            border-radius()
-            cursor pointer
-            display inline-block
-            width 45px
-            line-height @width
-            text-align center
-            background lighten(color-editor-bg, 10)
-            color color-white
-            margin 5px
+            &:first-child
+                margin-left 0
 
-            i
-                position relative
-                top 2px
-                opacity .5
+            &.call
+                background color-language-identifier
+                margin-right 5px
 
-            &:hover
-                background lighten(color-editor-bg, 15)
-
-                i
-                    opacity .8
-
-            &.active
-                background darken(color-editor-bg, 10)
-
-                i
-                    opacity 1
-
-    .inner
-        height editor-height - docs-header-height
-        overflow auto
-
-    &.scrolled ul.category-tabs:after
-        opacity 1
-
-    ul.category-panes
-
-        li
-            debullet()
-
-            &, h4, p
-                color color-white
-
-            h4
-                smooth-font()
-                font-size 20px
-                font-weight bold
-                margin-bottom 5px
+            &.number
+                background color-language-number
                 
-            p.hint
-                margin-bottom 30px
-                    
-            .command-parts
-                margin-bottom 8px
+        .divide
+            smooth-font()
+            font-size 17px
+            line-height 0
+            font-weight bold
+            
+    p.explain
+        margin-bottom 3px
 
-                .tag
-                    editor-tag(color-language-keyword)
-                    smooth-font()
-                    font-weight bold
-                    margin-right 3px
-                    margin-left 10px
-
-                    &:first-child
-                        margin-left 0
-
-                    &.call
-                        background color-language-identifier
-                        margin-right 5px
-
-                    &.number
-                        background color-language-number
-                        
-                .divide
-                    smooth-font()
-                    font-size 17px
-                    line-height 0
-                    font-weight bold
-                    
-            p.explain
-                margin-bottom 3px
-
-            p.explain-parts
-                margin-bottom 20px
-                font-size 13px
-                color mix(color-editor-bg, color-white, 40%)
+    p.explain-parts
+        margin-bottom 20px
+        font-size 13px
+        color mix(color-editor-bg, color-white, 40%)
 
     .add-button
         circle(25px, lighten(color-editor-bg, 10))

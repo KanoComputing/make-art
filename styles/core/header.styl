@@ -6,21 +6,10 @@ header
     margin-bottom 20px
 
     a.logo
-        display inline-block
-        line-height header-height
+        illustration-fit-height 'layout/draw-logo', header-height
         margin auto
-
-        .logo-image
-            illustration-fit-height 'layout/header-logo', header-height
-            display inline-block
-            float left
-
-        .logo-title
-            illustration-fit-height 'layout/draw-logo', header-height
-            display inline-block
-            float left
-            margin-left 15px
-            margin-top -2px
+        display inline-block
+        margin-top 5px
 
     ul.nav
         debullet()
@@ -51,14 +40,12 @@ header
                 text-transform uppercase
                 font-weight bold
                 position relative
-                top -2px
-                opacity 0.2
 
                 &:hover
                     opacity .7
 
                 &.active
-                    opacity 1
+                    opacity .2
                     
                     i
                         opacity 1
@@ -86,8 +73,10 @@ header
 
     .user-display
         color color-white
-        margin-top 10px
+        margin-top 0
         display block
+        position relative
+        margin-top 2px
         
         .avatar
             width 35px

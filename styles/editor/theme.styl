@@ -18,13 +18,14 @@ editor-tag(color = color-primary, color-text = #fff)
 body.full-screen-editor
     overflow hidden
 
-    .editor-area
+    .editor-wrap
         position fixed
         left 0
         top 0
         width 100%
         height 100%
         z-index 5
+        margin-left 0
         
     display
         position fixed
@@ -46,16 +47,22 @@ editor
     height 100%
     position relative
 
-    .editor-area
-        border-radius(0 0 3px 3px)
+    .editor-wrap
+        border-radius()
         min-height editor-height
         height 100%
+        background color-editor-bg
+        overflow hidden
+        padding 10px 0
+        box-sizing border-box
 
-        &.ace_editor
+    .editor-area.ace_editor
             line-height 26px
             font-size 14px
-            background color-editor-bg
             color color-white
+            background transparent
+            min-height editor-height - 20px
+            height 100%
 
             // Hide default ACE editor error icon (Since we handle errors in display directive)
             .ace_error
