@@ -15,6 +15,10 @@
                 input.filename(ng-model='meta.title', placeholder='Title', type='text', required)
                 textarea.description(ng-model='meta.description', placeholder='Description')
 
-                button.button-success(type='submit')
-                    i(ng-class='"icon-" + action')
-                    |  {{ action }}
+                .buttons
+
+                    button.export-wallpaper(ng-if='offline', ng-click='exportWallpaper()') Save Wallpaper
+
+                    button.button-success(type='submit')
+                        i(ng-class='"icon-" + action')
+                        |  {{ action }}

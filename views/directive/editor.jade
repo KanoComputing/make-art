@@ -7,6 +7,8 @@ ul.editor-tabs(ng-if='tabbed')
     li(ng-class='{ active: tab === "code" }', ng-click='switchTab("code")')
         i.icon-code
 
+    li.divide
+
     li(
         ng-repeat='category in docs',
         ng-class='{ active: tab === "docs-" + category.label }',
@@ -63,4 +65,4 @@ div(ng-show='tab === "code"')
             )
             i.icon-full-screen
 
-    .editor-wrap: .editor-area(editor, ng-class='{ disabled: !editable }')
+    .editor-wrap(ng-class='{ "has-title": !!title }'): .editor-area(editor, ng-class='{ disabled: !editable }')

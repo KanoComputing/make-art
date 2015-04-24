@@ -8,13 +8,14 @@ var gulp = require('gulp'),
     jadeHelpers = require('./utils/jadeHelpers'),
     _ = require('lodash'),
     color = require('cli-color'),
-    partialify = require('partialify/custom');
+    partialify = require('partialify/custom'),
+    griddy = require('griddy'),
+    nib = require('nib');
 
 var server = lr(),
     env = process.env.NODE_ENV === 'production' ? 'production' : 'development',
     production = env === 'production',
     offline = process.env.OFFLINE === 'true';
-
 
 var paths = {
     views      : { watch: [ 'views/**/*.jade', 'content/**/*' ], src: 'views/**/*.jade', out: 'www' },
@@ -36,7 +37,8 @@ gulp.task('browserify', function () {
     .pipe(browserify({
         transform : [
             partialify.alsoAllow('md'),
-            partialify.alsoAllow('coffee')        ],
+            partialify.alsoAllow('coffee')
+        ],
     }))
     .on('error', handleError)
     .pipe(rename('index.js'))
@@ -48,7 +50,7 @@ gulp.task('styles', function () {
     gulp.src(paths.styles.src)
     .pipe(stylus({
         pretty : !production,
-        // use    : [ 'griddy', 'nib' ]
+        use    : [ griddy(), nib() ]
     }))
     .on('error', handleError)
     .pipe(gulp.dest(paths.styles.out))

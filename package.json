@@ -14,11 +14,20 @@
   "license": "BSD-2-Clause",
   "dependencies": {
     "api-service": "1.0.0",
-    "cli-color": "~0.2.x",
     "coffee-script": "~1.7.x",
-    "coffeeify": "~0.6.x",
     "color": "^0.7.3",
     "deep-equal": "^1.0.0",
+    "http-server": "~0.6.x",
+    "kano-world-sdk": "0.0.2",
+    "lodash": "~2.4.x",
+    "marked": "~0.3.x"
+  },
+  "engines": {
+    "node": "0.10.x"
+  },
+  "subdomain": "drawwithcode",
+  "devDependencies": {
+    "cli-color": "~0.2.x",
     "express": "^4.10.5",
     "griddy": "0.0.x",
     "gulp": "~3.5.X",
@@ -26,20 +35,9 @@
     "gulp-jade": "~0.4.x",
     "gulp-livereload": "1.2.0",
     "gulp-rename": "~0.2.x",
-    "gulp-stylus": "2.0.x",
-    "http-server": "~0.6.x",
-    "kano-world-sdk": "0.0.2",
-    "lodash": "~2.4.x",
-    "marked": "~0.3.x",
+    "gulp-stylus": "^2.0.1",
     "nib": "~1.0.x",
     "partialify": "^3.1.1",
     "tiny-lr": "0.0.9"
-  },
-  "engines": {
-    "node": "0.10.x"
-  },
-  "subdomain": "drawwithcode",
-  "devDependencies": {
-    "gulp-stylus": "0.0.14"
   }
 }
