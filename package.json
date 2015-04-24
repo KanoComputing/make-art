@@ -20,7 +20,8 @@
     "http-server": "~0.6.x",
     "kano-world-sdk": "0.0.2",
     "lodash": "~2.4.x",
-    "marked": "~0.3.x"
+    "marked": "~0.3.x",
+    "play-audio": "^0.1.0"
   },
   "engines": {
     "node": "0.10.x"
