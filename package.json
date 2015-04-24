@@ -25,7 +25,6 @@
   "engines": {
     "node": "0.12.x"
   },
-  "subdomain": "drawwithcode",
   "devDependencies": {
     "cli-color": "~0.2.x",
     "express": "^4.10.5",
