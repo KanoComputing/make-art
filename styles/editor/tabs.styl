@@ -18,14 +18,20 @@ editor
             line-height editor-tabs-size
             text-align center
             margin-bottom 10px
-            background lighten(color-editor-bg, 20)
+            background lighten(color-editor-bg, 15)
             cursor pointer
-            
+
+            i
+                opacity .5
+
             &:hover
                 background lighten(color-editor-bg, 30)
 
             &.active
                 background color-orange
+
+                i
+                    opacity 1
 
             &.divide
                 cursor default
