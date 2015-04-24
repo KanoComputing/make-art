@@ -12,6 +12,7 @@ from kano_profile.badges import increment_app_state_variable_with_dialog
 from kano_world.functions import login_using_token
 from kano_world.share import upload_share
 from kano.network import is_internet
+from kano.utils import play_sound
 
 
 APP_NAME = 'kano-draw'
@@ -210,3 +211,10 @@ def start(parent_pid=None):
     # Run the server
     server.run(port=8000)
     time.sleep(2)
+
+@server.route('/play_sound/<path:filename>', methods=['POST'])
+def play_sounds(filename):
+    sound_file = os.path.realpath(os.path.join('.', filename))
+    play_sound(sound_file)
+
+    return ''
