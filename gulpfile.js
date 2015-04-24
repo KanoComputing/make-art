@@ -36,7 +36,8 @@ gulp.task('browserify', function () {
     .pipe(browserify({
         transform : [
             partialify.alsoAllow('md'),
-            partialify.alsoAllow('coffee')
+            partialify.alsoAllow('coffee'),
+            'debowerify'
         ],
     }))
     .on('error', handleError)
