@@ -7,6 +7,8 @@ ul.editor-tabs(ng-if='tabbed')
     li(ng-class='{ active: tab === "code" }', ng-click='switchTab("code")')
         i.icon-code
 
+    li.divide
+
     li(
         ng-repeat='category in docs',
         ng-class='{ active: tab === "docs-" + category.label }',
