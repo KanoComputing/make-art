@@ -4,12 +4,17 @@ header
     padding 20px
     text-align center
     margin-bottom 20px
+    position relative
 
     a.logo
         illustration-fit-height 'layout/draw-logo', header-height
         margin auto
         display inline-block
         margin-top 5px
+        position absolute
+        left 50%
+        top 0
+        margin-left -(@width / 2)
 
     ul.nav
         debullet()
