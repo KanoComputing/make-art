@@ -65,4 +65,4 @@ div(ng-show='tab === "code"')
             )
             i.icon-full-screen
 
-    .editor-wrap: .editor-area(editor, ng-class='{ disabled: !editable }')
+    .editor-wrap(ng-class='{ "has-title": !!title }'): .editor-area(editor, ng-class='{ disabled: !editable }')

@@ -26,7 +26,7 @@ body.full-screen-editor
         height 100%
         z-index 5
         margin-left 0
-        
+
     display
         position fixed
         right 10px
@@ -47,6 +47,17 @@ editor
     height 100%
     position relative
 
+    .editor-title
+        border-radius(3px 3px 0 0)
+        line-height editor-title-height
+        background darken(color-editor-bg, 5)
+        text-align center
+        text-transform uppercase
+        color rgba(color-white , .9)
+
+        i
+            opacity .4
+
     .editor-wrap
         border-radius()
         min-height editor-height
@@ -55,6 +66,15 @@ editor
         overflow hidden
         padding 10px 0
         box-sizing border-box
+
+        &.has-title
+            border-radius(0 0 3px 3px)
+            min-height 0
+            min-height editor-height - editor-title-height
+            margin-left 0
+
+            .editor-area.ace_editor
+                min-height editor-height - editor-title-height - 20px
 
     .editor-area.ace_editor
             line-height 26px
