@@ -70,22 +70,23 @@ header
                 &:hover
                     background lighten(color-red, 5)
 
-    .user-display
-        color color-white
-        margin-top 0
-        display block
-        position relative
-        margin-top 2px
-        
-        .avatar
-            width 35px
-            height @width
-            border-radius @width
-            overflow hidden
-            display inline-block
-            margin -10px 10px
+        a.user-display
+            color color-white
+            margin-top 0
+            display block
+            position relative
+            margin-top 2px
+            opacity 1
             
-            img
-                width @width + 2px
+            .avatar
+                width 35px
                 height @width
-                margin -1px
+                border-radius @width
+                overflow hidden
+                display inline-block
+                margin -10px 10px
+                
+                img
+                    width @width + 2px
+                    height @width
+                    margin -1px
