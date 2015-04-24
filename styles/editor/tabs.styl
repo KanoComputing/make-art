@@ -1,42 +1,25 @@
-editor .editor-title, editor ul.editor-tabs
-    border-radius(3px 3px 0 0)
-    smooth-font()
-    background color-editor-bg
-    text-align center
-    font-weight bold
-    text-transform uppercase
-    font-size 14px
+editor
+    position relative
 
-editor .editor-title
-    padding 15px
-    padding-bottom 24px
+    .editor-docs, .editor-wrap
+        margin-left editor-tabs-size + 20px
 
-editor ul.editor-tabs
-    debullet()
-    clearfix()
-    padding-bottom 10px
-    margin 0
-    overflow hidden
+    ul.editor-tabs
+        debullet()
+        position absolute
+        left 0
+        top 0
 
-    li
-        cursor pointer
-        width 50%
-        float left
-        padding 15px
-        box-sizing border-box
-        background darken(color-editor-bg, 5)
-        color mix(color-editor-bg, color-white, 50)
+        li
+            border-radius()
+            font-size 20px
+            width editor-tabs-size
+            height editor-tabs-size
+            line-height editor-tabs-size
+            text-align center
+            margin-bottom 10px
+            background lighten(color-editor-bg, 20)
+            cursor pointer
 
-        i
-            opacity .5
-
-        &:hover
-            background darken(color-editor-bg, 8)
-            color mix(color-editor-bg, color-white, 30)
-
-        &.active
-            background color-editor-bg
-            color color-white
-
-    &.split-three li
-        width (100% / 3)
+            &.active
+                background color-orange

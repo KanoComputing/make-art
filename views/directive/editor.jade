@@ -6,52 +6,42 @@ ul.editor-tabs(ng-if='tabbed')
 
     li(ng-class='{ active: tab === "code" }', ng-click='switchTab("code")')
         i.icon-code
-        | &nbsp; Code
 
-    li(ng-class='{ active: tab === "docs" }', ng-click='switchTab("docs")')
-        i.icon-wand
-        | &nbsp; Spellbook
+    li(
+        ng-repeat='category in docs',
+        ng-class='{ active: tab === "docs-" + category.label }',
+        ng-click='switchTab("docs-" + category.label)'
+        )
+        i(ng-class='"icon-" + category.icon')
 
-.editor-docs(ng-show='tab === "docs"', , ng-class='{ scrolled: docsScrolled }')
+.editor-docs(ng-repeat='category in docs', ng-show='tab === "docs-" + category.label'): .inner
 
-    ul.category-tabs
-        li(
-            ng-repeat='category in docs',
-            ng-class='{ active: docsCategory === category.label }',
-            ng-click='selectDocsCategory(category)'
-            )
-            i(ng-class='"icon-" + category.icon')
+    h4 {{ category.label }}
 
-    .inner(scrollable-pane): ul.category-panes
+    p.hint
+        | Click 
+        span.add-button 
+        |  to add a shape to your code
 
-        li(ng-repeat='category in docs', ng-show='docsCategory === category.label')
+        .command(ng-repeat='command in category.commands')
 
-            h4 {{ category.label }}
+            .command-parts
 
-            p.hint
-                | Click 
-                span.add-button 
-                |  to add a shape to your code
+                span.tag.call {{ command.call }}
 
-                .command(ng-repeat='command in category.commands')
+                span(ng-repeat='arg in command.args')
+                    span.tag(ng-class='arg[1]') {{ arg[0] }}
+                    span.divide(ng-if='$index !== command.args.length -1') , 
 
-                    .command-parts
+                a.add-button(ng-click='addCommand(command)')
 
-                        span.tag.call {{ command.call }}
+            p.explain {{ command.description }}
 
-                        span(ng-repeat='arg in command.args')
-                            span.tag(ng-class='arg[1]') {{ arg[0] }}
-                            span.divide(ng-if='$index !== command.args.length -1') , 
+            p.explain-parts
 
-                        a.add-button(ng-click='addCommand(command)')
-
-                    p.explain {{ command.description }}
-
-                    p.explain-parts
-
-                        span(ng-repeat='arg in command.args')
-                            span(ng-class='arg[1]') {{ arg[0] }}: {{ arg[2] }}
-                            span(ng-if='$index !== command.args.length -1')  | 
+                span(ng-repeat='arg in command.args')
+                    span(ng-class='arg[1]') {{ arg[0] }}: {{ arg[2] }}
+                    span(ng-if='$index !== command.args.length -1')  | 
 
 div(ng-show='tab === "code"')
 
@@ -73,4 +63,4 @@ div(ng-show='tab === "code"')
             )
             i.icon-full-screen
 
-    .editor-area(editor, ng-class='{ disabled: !editable }')
+    .editor-wrap: .editor-area(editor, ng-class='{ disabled: !editable }')
