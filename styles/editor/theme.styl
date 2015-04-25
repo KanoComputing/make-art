@@ -50,7 +50,7 @@ editor
     .editor-title
         border-radius(3px 3px 0 0)
         line-height editor-title-height
-        background darken(color-editor-bg, 5)
+        background darken(color-editor-bg, 10)
         text-align center
         text-transform uppercase
         color rgba(color-white , .9)
@@ -138,13 +138,18 @@ editor
                 .ace_language
                     editor-tag(color-language-language)
 
-editor.solution .editor-area.ace_editor
+editor.solution
 
-    .ace_gutter
-        display none
+    .editor-wrap
+        background darken(color-editor-bg, 5)
 
-    .ace_scroller
-        left 20px !important
+    .editor-area.ace_editor
+
+        .ace_gutter
+            display none
+
+        .ace_scroller
+            left 20px !important
 
 editor .editor-area.disabled .ace_cursor
         display none
