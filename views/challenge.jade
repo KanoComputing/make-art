@@ -24,7 +24,7 @@
         .inner.center(ng-if='completed')
             h4 {{ successMessage() }}
             a.button.button-success(ng-if='hasNext', ng-href='/challenge/{{id + 1}}') Next &rsaquo;
-            a.button.button-success(ng-if='!hasNext', ng-click='openChallengeComplete()') Done &rsaquo;
+            a.button.button-success(ng-if='!hasNext', ng-click='openFinishedGame()') Done &rsaquo;
 
     .row(ng-if='started')
         .col-6.editor-wrap
@@ -57,10 +57,10 @@
                 title='"Solution"'
                 ) {{ solution }}
 
-    .modal-overlay(ng-if='challengeCompleteOpen')
+    .modal-overlay(ng-if='gameCompleteOpen')
         .modal-inner.split-modal.challenge-complete.center
 
-            button.close(ng-click='closeChallengeComplete()'): i.icon-cross
+            button.close(ng-click='clocseFinishedGame()'): i.icon-cross
 
             h3 Congratulations
 
