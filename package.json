@@ -10,8 +10,12 @@
     "bundle": "./bundle",
     "postinstall": "node node_modules/.bin/gulp default"
   },
-  "author": "",
-  "license": "BSD-2-Clause",
+  "author": "Tancredi Trugenberger",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KanoComputing/kano-draw"
+  },
+  "license": "MIT2",
   "dependencies": {
     "api-service": "1.0.0",
     "coffee-script": "~1.7.x",
@@ -21,13 +25,7 @@
     "kano-world-sdk": "0.0.2",
     "lodash": "~2.4.x",
     "marked": "~0.3.x",
-    "play-audio": "^0.1.0"
-  },
-  "engines": {
-    "node": "0.10.x"
-  },
-  "subdomain": "drawwithcode",
-  "devDependencies": {
+    "play-audio": "^0.1.0",
     "cli-color": "~0.2.x",
     "express": "^4.10.5",
     "griddy": "0.0.x",
@@ -40,5 +38,8 @@
     "nib": "~1.0.x",
     "partialify": "^3.1.1",
     "tiny-lr": "0.0.9"
+  },
+  "engines": {
+    "node": "0.12.x"
   }
 }

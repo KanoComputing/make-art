@@ -3,7 +3,7 @@
     .display: .padded: .inner
 
         canvas(
-            ng-mousemove='displayMousePos($event)'
+            ng-mousemove='displayMousePos($event)',
             ng-mouseleave='displayCursorPos()'
             )
 
@@ -20,17 +20,23 @@
 
     .actions
 
-        a.action-share(ng-if='mode === "playground"', ng-click='setOpenModal("share")')
+        a.action.action-share(ng-if='mode === "playground" || sharing', ng-click='setOpenModal("share")')
             i.icon-share
             |  Share
 
-        a.action-save(ng-if='mode === "playground" && offline', ng-click='setOpenModal("save")')
-            i.icon-save
-            |  Save
+        if offline
+            a.action.action-save(ng-if='mode === "playground"', ng-click='setOpenModal("save")')
+                i.icon-save
+                |  Save
 
-        a.action-reset(ng-if='mode === "challenge"', ng-click='resetCode()')
+        a.action.action-reset(ng-if='mode === "challenge"', ng-click='resetCode()')
             i.icon-reset
             |  Reset
+
+        .action.action-load(ng-show='mode === "playground"')
+            i.icon-arrow-up
+            |  Load
+            input.file-load(type='file', accept='.draw')
 
         export-modal(display='this', action='"save"')
         export-modal(display='this', action='"share"')

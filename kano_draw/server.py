@@ -191,6 +191,11 @@ def _shutdown():
     # Send signal to parent to initiate shutdown
     os.kill(PARENT_PID, signal.SIGINT)
 
+@server.route('/browsemore', methods=['POST'])
+def _browsemore():
+    import subprocess
+
+    p = subprocess.Popen(["chromium", "http://world.kano.me/shares/kano-draw"])
 
 @server.errorhandler(404)
 def page_not_found(err):
@@ -198,6 +203,12 @@ def page_not_found(err):
 
     return err_msg, 404
 
+@server.route('/play_sound/<path:filename>', methods=['POST'])
+def play_sounds(filename):
+    sound_file = os.path.realpath(os.path.join('.', filename))
+    play_sound(sound_file)
+
+    return ''
 
 def start(parent_pid=None):
     """
@@ -211,10 +222,3 @@ def start(parent_pid=None):
     # Run the server
     server.run(port=8000)
     time.sleep(2)
-
-@server.route('/play_sound/<path:filename>', methods=['POST'])
-def play_sounds(filename):
-    sound_file = os.path.realpath(os.path.join('.', filename))
-    play_sound(sound_file)
-
-    return ''
