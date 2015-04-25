@@ -20,7 +20,7 @@
 
     .actions
 
-        a.action.action-share(ng-if='mode === "playground"', ng-click='setOpenModal("share")')
+        a.action.action-share(ng-if='mode === "playground" || sharing', ng-click='setOpenModal("share")')
             i.icon-share
             |  Share
 

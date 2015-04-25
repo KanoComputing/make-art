@@ -42,7 +42,8 @@
             display(
                 source='challenge.code',
                 workspace,
-                mode='completed ? "playground" : "challenge"',
+                mode='"challenge"',
+                sharing='completed',
                 ng-class='{ disabled: !started }',
                 ng-show='!showSolution'
                 )
