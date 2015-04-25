@@ -1,6 +1,6 @@
 .page-challenge: .page-width
 
-    .workspace-header(ng-class='{ success: completed }')
+    .workspace-header(ng-class='(animationClass || "") + (completed ? " success" : "")')
 
         .inner.center(ng-if='!started')
 
@@ -14,7 +14,7 @@
                 i.icon-hint
                 | Help
 
-            progress-circle(value='step', max='content.steps.length', ng-class='animationClass' )
+            progress-circle(value='step', max='content.steps.length')
             h3 {{ challenges[ id - 1 ].title }}
             h4.hint(ng-bind-html='hint | markdown', ng-if='hint')
 
