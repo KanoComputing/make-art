@@ -26,10 +26,9 @@
             i.icon-share
             |  Share
 
-        if offline
-            a.action.action-save(ng-if='mode === "playground"', ng-click='setOpenModal("save")')
-                i.icon-save
-                |  Save
+        a.action.action-save(ng-if='mode === "playground"', ng-click='save()')
+            i.icon-save
+            |  Save
 
         a.action.action-reset(ng-if='mode === "challenge"', ng-click='resetCode()')
             i.icon-reset
