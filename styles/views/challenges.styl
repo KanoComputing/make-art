@@ -1,9 +1,10 @@
 .page-challenges
 
-    ul.challenges-list
+    ul.challenges-list, ul.shares-list
         debullet()
         clearfix()
         margin -10px
+        margin-bottom 30px
 
         &, h1, h2, h3, h4, h5, h6
             color color-black
@@ -28,6 +29,11 @@
                     smooth-font()
                     font-weight bold
                     font-size: 15px
+
+                    em
+                        smooth-font(false)
+                        font-weight normal
+                        font-style normal
 
                 .cover
                     width 100%
@@ -71,7 +77,7 @@
                             color color-black
                             opacity .3
 
-                &.playground
+                &.highlight
 
                     .cover
                         background-color mix(color-orange, color-grey-lightest, 40)
@@ -80,4 +86,12 @@
                         background-color color-orange
 
                         h5
-                            color color-white
+                            color #fff
+
+                &.browse
+
+                    .cover
+                        background-color #46ddeb
+
+                    .detail
+                        background-color #1cb2c0
