@@ -8,7 +8,7 @@
 
         li(ng-repeat='challenge in challenges')
             a(
-                href='/challenge/{{ $index + 1 }}',
+                ng-click='selectChallenge(challenge)',
                 ng-class='{ locked: isLocked($index), completed: isCompleted($index), current: isCurrent($index) }'
                 )
 
@@ -55,3 +55,18 @@
 
                     .detail
                         h5 Browse more
+
+.modal-overlay(ng-if='selectedChallenge')
+    .modal-inner.modal-challenge-info.center
+
+        .cover(ng-style='{ "background-image": "url(/assets/challenges/" + selectedChallenge.id + ".png)" }')
+
+        button.close(ng-click='deselectedChallenge()'): i.icon-cross
+
+        .detail
+
+            h3 {{ selectedChallenge.title }}
+
+            p.description {{ selectedChallenge.description }}
+
+            a.button.button-success(ng-href='/challenge/{{ selectedChallenge.index + 1 }}') Start
