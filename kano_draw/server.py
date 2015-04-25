@@ -205,7 +205,8 @@ def page_not_found(err):
 
 @server.route('/play_sound/<path:filename>', methods=['POST'])
 def play_sounds(filename):
-    sound_file = os.path.realpath(os.path.join('.', filename))
+    print os.path.realpath(os.path.join(_get_static_dir(), filename))
+    sound_file = os.path.realpath(os.path.join(_get_static_dir(), filename))
     play_sound(sound_file)
 
     return ''
