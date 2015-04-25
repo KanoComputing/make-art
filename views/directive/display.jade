@@ -4,8 +4,10 @@
 
         canvas(
             ng-mousemove='displayMousePos($event)',
-            ng-mouseleave='displayCursorPos()'
+            ng-mouseleave='displayCoordsPos()'
             )
+
+        .cursor(ng-style='{ left: cursorPosition.x + "px", top: cursorPosition.y + "px" }')
 
         .error-display(ng-if='error', ng-class='"error-" + error.type')
 
@@ -16,7 +18,7 @@
             p {{ error.text || 0 }}
 
         .toolbar
-            .position-indicator x: {{ cursorPosition.x }} y: {{ cursorPosition.x }}
+            .position-indicator x: {{ coordsPosition.x }} y: {{ coordsPosition.x }}
 
     .actions
 
