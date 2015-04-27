@@ -15,11 +15,11 @@ html(lang='en', ng-app='draw')
         title Draw
 
     body
+        .loading-overlay(ng-cloak): .spinner
+
         include partial/header
         ng-view
-
         include partial/splash
-        include partial/challenge-menu
 
         //- Vendor
         script(src='/js/vendor/angular.min.js', type='text/javascript')

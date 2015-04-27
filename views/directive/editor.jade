@@ -1,4 +1,68 @@
-.controls
-    a.button-autocomplete(href='#', ng-click='autocomplete = !autocomplete', title='Toggle autocomplete', ng-class='{ active: autocomplete }')
-    a.button-full-screen(href='#', ng-click='fullScreen = !fullScreen', title='Toggle fullscreen', ng-class='{ active: fullScreen }')
-.editor-area
+.editor-title(ng-if='title')
+    i.icon-hint
+    | &nbsp; {{ title }}
+
+ul.editor-tabs(ng-if='tabbed')
+
+    li(ng-class='{ active: tab === "code" }', ng-click='switchTab("code")')
+        i.icon-code
+
+    li.divide
+
+    li(
+        ng-repeat='category in docs',
+        ng-class='{ active: tab === "docs-" + category.label }',
+        ng-click='switchTab("docs-" + category.label)'
+        )
+        i(ng-class='"icon-" + category.icon')
+
+.editor-docs(ng-repeat='category in docs', ng-show='tab === "docs-" + category.label'): .inner
+
+    h4 {{ category.label }}
+
+    p.hint
+        | Click 
+        span.add-button 
+        |  to add a shape to your code
+
+        .command(ng-repeat='command in category.commands')
+
+            .command-parts
+
+                span.tag.call {{ command.call }}
+
+                span(ng-repeat='arg in command.args')
+                    span.tag(ng-class='arg[1]') {{ arg[0] }}
+                    span.divide(ng-if='$index !== command.args.length -1') , 
+
+                a.add-button(ng-click='addCommand(command)')
+
+            p.explain {{ command.description }}
+
+            p.explain-parts
+
+                span(ng-repeat='arg in command.args')
+                    span(ng-class='arg[1]') {{ arg[0] }}: {{ arg[2] }}
+                    span(ng-if='$index !== command.args.length -1')  | 
+
+div(ng-show='tab === "code"')
+
+    .controls(ng-if='controls')
+
+        a.button.button-editor.button-icon(
+            href='#',
+            ng-click='toggleAutocomplete()',
+            title='Toggle autocomplete',
+            ng-class='{ active: autocomplete }'
+            )
+            i.icon-autocomplete
+
+        a.button.button-editor.button-icon(
+            href='#',
+            ng-click='toggleFullScreen()',
+            title='Toggle fullscreen',
+            ng-class='{ active: fullScreen }'
+            )
+            i.icon-full-screen
+
+    .editor-wrap(ng-class='{ "has-title": !!title }'): .editor-area(editor, ng-class='{ disabled: !editable }')

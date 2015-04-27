@@ -1,0 +1,164 @@
+// HACK: Force the ACE gutter size to a fixed width
+gutter-size(width)
+
+    .ace_scroller
+        left 30px !important
+
+    .ace_gutter-layer
+        width 30px !important
+
+editor-tag(color = color-primary, color-text = #fff)
+    border-radius()
+    background color
+    padding 2px 1px
+    margin 0 -1px
+    color color-text
+    position relative
+
+body.full-screen-editor
+    overflow hidden
+
+    .editor-wrap
+        position fixed
+        left 0
+        top 0
+        width 100%
+        height 100%
+        z-index 5
+        margin-left 0
+
+    display
+        position fixed
+        right 10px
+        top 10px
+        z-index 5
+        width 460px
+        height @width
+        padding-top 0
+
+    .actions
+        display none
+
+    .controls
+        position fixed
+
+editor
+    display block
+    height 100%
+    position relative
+
+    .editor-title
+        border-radius(3px 3px 0 0)
+        line-height editor-title-height
+        background darken(color-editor-bg, 10)
+        text-align center
+        text-transform uppercase
+        color rgba(color-white , .9)
+
+        i
+            opacity .4
+
+    .editor-wrap
+        border-radius()
+        min-height editor-height
+        height 100%
+        background color-editor-bg
+        overflow hidden
+        padding 10px 0
+        box-sizing border-box
+
+        &.has-title
+            border-radius(0 0 3px 3px)
+            min-height 0
+            min-height editor-height - editor-title-height
+            margin-left 0
+
+            .editor-area.ace_editor
+                min-height editor-height - editor-title-height - 20px
+
+    .editor-area.ace_editor
+            line-height 26px
+            font-size 14px
+            color color-white
+            background transparent
+            min-height editor-height - 20px
+            height 100%
+
+            // Hide default ACE editor error icon (Since we handle errors in display directive)
+            .ace_error
+                background-image none
+
+            .ace_cursor
+                color rgba(#fff, .5)
+
+            // Force custom gutter size
+            gutter-size(35px)
+
+            .ace_gutter
+                background color-editor-gutter
+                // width 20px !important
+
+            .ace_gutter-cell
+                color lighten(color-editor-gutter, 20)
+                font-family font-body
+                font-weight bold
+                padding 0
+                padding-right 10px
+                // width 20px !important
+
+            .ace_gutter-active-line
+                // Disable active line state background 
+                background transparent
+
+            .ace_marker-layer .ace_selection
+                background color-editor-selection
+
+            .ace_print-margin
+                background rgba(#fff, .2)
+                display none
+                
+            .ace_content .ace_line
+                smooth-font()
+
+                .ace_comment
+                    color #aaa
+
+                .ace_keyword
+                    editor-tag(color-language-keyword, color-black)
+
+                .ace_string
+                    editor-tag(color-language-string)
+
+                .ace_numeric
+                    editor-tag(color-language-number)
+
+                .ace_identifier
+                    editor-tag(color-language-identifier)
+
+                .ace_language
+                    editor-tag(color-language-language)
+
+editor.solution
+
+    .editor-wrap
+        background darken(color-editor-bg, 5)
+
+    .editor-area.ace_editor
+
+        .ace_gutter
+            display none
+
+        .ace_scroller
+            left 20px !important
+
+editor .editor-area.disabled .ace_cursor
+        display none
+
+editor:not(.solution) .editor-area.disabled
+    background #eee
+
+    .ace_cursor
+        display none
+
+    > *
+        opacity .3

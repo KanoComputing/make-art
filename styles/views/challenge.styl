@@ -1,0 +1,70 @@
+.page-challenge
+
+    .button-hint
+        button-color(color-editor-bg)
+
+        &.highlight
+            background red
+
+    .success-display
+        clearfix()
+        border-radius()
+        position absolute
+        top 0
+        left 0
+        right 0
+        bg-inverse color-green
+        padding 20px
+        padding-bottom 0
+        margin 20px
+        box-sizing border-box
+        text-align center
+        background lighten(color-green, 5)
+
+        h5
+            padding-right 100px
+
+        a
+            position absolute
+            right 0
+            top 0
+            height 100%
+            box-sizing border-box
+            background color-green
+            line-height 64px
+            color color-white
+            font-weight bold
+
+    editor.disabled
+        position relative
+
+        > *
+            blur-fx .9px
+
+    .tutorial-wrap
+        position relative
+
+    .tutorial-display
+        border-radius()
+        padding 10px 30px
+        font-size 20px
+
+        .content
+            margin-bottom 20px
+
+        &:before
+            tooltip-tail(left, @background, 15px)
+            content ''
+            position absolute
+            top 70px
+
+    .display-wrap
+        position relative
+
+        .actions
+            position absolute
+            left 10px
+            bottom 10px
+
+            .button
+                margin-left 10px

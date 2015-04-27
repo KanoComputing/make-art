@@ -1,59 +1,103 @@
 header
-    background color-header
-    padding 15px
     clearfix()
+    background color-header
+    padding 20px
+    text-align center
+    margin-bottom 20px
+    position relative
 
     a.logo
+        illustration-fit-height 'layout/draw-logo', header-height
+        margin auto
         display inline-block
-        float left
-        line-height header-height
+        margin-top 5px
+        position absolute
+        left 50%
+        top 0
+        margin-left -(@width / 2)
 
-        .logo-image
-            illustration-fit-height 'layout/header-logo', header-height
-            display inline-block
-            float left
-
-        .logo-title
-            illustration-fit-height 'layout/draw-logo', header-height
-            display inline-block
-            float left
-            margin-left 15px
-            margin-top -2px
-
-    ul.nav-main
+    ul.nav
         debullet()
         float right
         margin 2px
+        font-size 16px
+
+        &.nav-left
+            float left
+
+        &.nav-right
+            float right
 
         li
-            margin-left 10px
+            margin 0 15px
             float left
+
+            &:first-child
+                margin-left 0
+
+            &:last-child
+                margin-right 0
+
+            a
+                smooth-font()
+                color color-white
+                line-height header-height
+                text-transform uppercase
+                font-weight bold
+                position relative
+                top -2px
+                opacity 0.5
+
+                &:hover
+                    opacity .7
+
+                &.active
+                    opacity 1
+
+            i
+                opacity .5
+                font-size 18px
+                margin-right 5px
+                position relative
+                top 2px
+
+                &.icon-game
+                    zoom 1.2
 
             button.close
                 background color-red
-                font-size 18px
-                width 38px
-                height 38px
-                line-height 38px
+                width 25px
+                height @width
+                line-height @width
                 padding 0
+                margin-top 5px
+
+                i
+                    font-size 9px
+                    opacity 1
+                    margin 0
+                    position static
 
                 &:hover
                     background lighten(color-red, 5)
 
-    .user-display
-        color color-white
-        margin-top 10px
-        display block
-        
-        .avatar
-            width 35px
-            height @width
-            border-radius @width
-            overflow hidden
-            display inline-block
-            margin -10px 10px
+        a.user-display
+            color color-white
+            margin-top 0
+            display block
+            position relative
+            margin-top 2px
+            opacity 1
             
-            img
-                width @width + 2px
+            .avatar
+                width 35px
                 height @width
-                margin -1px
+                border-radius @width
+                overflow hidden
+                display inline-block
+                margin -10px 10px
+                
+                img
+                    width @width + 2px
+                    height @width
+                    margin -1px

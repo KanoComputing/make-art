@@ -1,7 +1,7 @@
 www/*.html
 www/*/*.html
 www/css/*.css
-www/js/*
+www/js/index.js
 .tmp
 node_modules
 npm-debug.log
@@ -9,3 +9,4 @@ npm-debug.log
 **.sublime-workspace
 *.pyc
 *.swp
+dist

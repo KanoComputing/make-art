@@ -1,180 +1,172 @@
 [
     {
         "label"    : "Shapes",
+        "icon"     : "shapes",
         "commands" : [
             {
                 "call"        : "circle",
                 "unlockedAt"  : 1,
-                "description" : "Draw a circle centered on the current position",
+                "description" : "Draw a circle",
                 "args"        : [
                     [ "radius", "number", "The circle size", true ]
-                ]
+                ],
+                "defaults": [ 100 ]
             },
             {
                 "call"        : "ellipse",
                 "unlockedAt"  : 999,
-                "description" : "Draw an ellipse centered on the current position",
+                "description" : "Draw an ellipse",
                 "args"        : [
-                    [ "radius-x", "number", "The ellipse horizontal size", true ],
-                    [ "radius-y", "number", "The ellipse vertical size", true ]
-                ]
+                    [ "radius-x", "number", "The ellipse width", true ],
+                    [ "radius-x", "number", "The ellipse width", true ],
+                    [ "radius-y", "number", "The ellipse height", true ]
+                ],
+                "defaults": [ 50, 100 ]
             },
             {
                 "call"        : "square",
                 "unlockedAt"  : 2,
-                "description" : "Draw a square centered on the current position",
+                "description" : "Draw a square",
                 "args"        : [
-                    [ "size", "number", "The size of the square", true ]
-                ]
+                    [ "size", "number", "The square size", true ]
+                ],
+                "defaults": [ 200 ]
             },
             {
                 "call"        : "rectangle",
                 "unlockedAt"  : 999,
-                "description" : "Draw a rectangle centered on the current position",
+                "description" : "Draw a rectangle",
                 "args"        : [
                     [ "width", "number", "The rectangle width", true ],
                     [ "height", "number", "The rectangle height", true ]
-                ]
+                ],
+                "defaults": [ 100, 200 ]
             },
             {
                 "call"        : "arc",
                 "unlockedAt"  : 999,
-                "description" : "Draw an arc in current position with given opening and closing angle",
+                "description" : "Draw part of a circle",
                 "args"        : [
-                    [ "radius", "number", "The arc size", true ],
-                    [ "start", "number", "The starting angle (0 to 2)", true ],
-                    [ "end", "number", "The ending angle (0 to 2)", true ],
-                    [ "close", "bool", "Close the path in the middle", false ]
-                ]
+                    [ "radius", "number", "The size", true ],
+                    [ "start", "number", "The start point (between 0 to 2)", true ],
+                    [ "end", "number", "The end point (between 0 to 2)", true ],
+                    [ "close", "bool", "Close the shape", false ]
+                ],
+                "defaults": [ 100, 1, 2, true, true ]
             },
             {
                 "call"        : "polygon",
                 "unlockedAt"  : 999,
-                "description" : "Draw a polygon with given points",
+                "description" : "Draw a many sided shape",
                 "args"        : [
                     [ "x1", "number", "Point X position", true ],
-                    [ "x2", "number", "Point Y position", true ],
+                    [ "y1", "number", "Point Y position", true ],
                     [ "...", "", "More polygon points positions", true ],
                     [ "close", "bool", "Close the path in the middle", false ]
-                ]
+                ],
+                "defaults": [ 0, 0, 100, 0, 100, 100 ]
             }
         ]
     },
     {
         "label"    : "Lines",
+        "icon"     : "lines",
         "commands" : [
             {
                 "call"        : "line",
                 "unlockedAt"  : 3,
-                "description" : "Draw a line starting from the current position",
+                "description" : "Draw a line of a certain size",
                 "args"        : [
                     [ "x", "number", "Horizontal distance", true ],
                     [ "y", "number", "Vertical distance", false ]
-                ]
+                ],
+                "defaults": [ 100, 50 ]
             },
             {
                 "call"        : "lineTo",
                 "unlockedAt"  : 999,
-                "description" : "Draw a line to any position",
+                "description" : "Draw a line to a certain point",
                 "args"        : [
                     [ "x", "number", "The horizontal destination", true ],
                     [ "y", "number", "The vertical destination", true ]
-                ]
+                ],
+                "defaults": [ 0, 0 ]
             }
         ]
     },
     {
         "label"    : "Position",
+        "icon"     : "position",
         "commands" : [
             {
                 "call"        : "move",
                 "unlockedAt"  : 6,
-                "description" : "Move the cursor starting from the current position",
+                "description" : "Move the cursor a certain distance away",
                 "args"        : [
                     [ "x", "number", "Horizontal distance", true ],
                     [ "y", "number", "Vertical distance", false ]
-                ]
+                ],
+                "defaults": [ 100, 50 ]
             },
             {
                 "call"        : "moveTo",
                 "unlockedAt"  : 999,
-                "description" : "Move the cursor to any position",
+                "description" : "Move the cursor to a particular position",
                 "args"        : [
                     [ "x", "number", "The horizontal destination", true ],
                     [ "y", "number", "The vertical destination", true ]
-                ]
+                ],
+                "defaults": [ "center", "center" ]
             }
         ]
     },
     {
         "label"    : "Text",
+        "icon"     : "text",
         "commands" : [
             {
                 "call"        : "text",
                 "unlockedAt"  : 999,
-                "description" : "Write text at current position",
+                "description" : "Write text",
                 "args"        : [
                     [ "message", "string", "The message to write", true ]
-                ]
-            },
-            {
-                "call"        : "textSize",
-                "unlockedAt"  : 999,
-                "description" : "Change text size in use",
-                "args"        : [
-                    [ "size", "number", "The text size in pixels (Default is 25)", true ]
-                ]
-            },
-            {
-                "call"        : "fontFamily",
-                "unlockedAt"  : 999,
-                "description" : "Change the font in use (Default is Bariol)",
-                "args"        : [
-                    [ "font", "string", "The font family name", true ]
-                ]
+                ],
+                "defaults": [ "Say something!" ]
             },
             {
                 "call"        : "font",
                 "unlockedAt"  : 999,
-                "description" : "Shortcut to set font family and size at the same time",
+                "description" : "Set size and/or font",
                 "args"        : [
                     [ "font", "string", "The font family name", false ],
                     [ "size", "number", "The text size in pixels", false ]
-                ]
+                ],
+                "defaults": [ "Bariol", 30 ]
             },
             {
                 "call"        : "bold",
                 "unlockedAt"  : 999,
-                "description" : "Set text to bold. Call with false to reset",
+                "description" : "Sets bold text on (true) or off (false)",
                 "args"        : [
                     [ "state", "bool", "Bold state (True by default)", false ]
-                ]
+                ],
+                "defaults": [ true ]
             },
             {
                 "call"        : "italic",
                 "unlockedAt"  : 999,
-                "description" : "Set text to italic. Call with false to reset",
+                "description" : "Sets italic text on (true) or off (false)",
                 "args"        : [
                     [ "state", "bool", "Italic state (True by default)", false ]
-                ]
+                ],
+                "defaults": [ true ]
             }
         ]
     },
     {
         "label"    : "General",
+        "icon"     : "general",
         "commands" : [
-            {
-                "call"        : "clear",
-                "unlockedAt"  : 999,
-                "description" : "Clear the sketch",
-                "args"        : []
-            },
-            {
-                "call"        : "reset",
-                "unlockedAt"  : 999,
-                "description" : "Reset styles",
-                "args"        : []
-            },
             {
                 "call"        : "for",
                 "unlockedAt"  : 9,
@@ -182,7 +174,8 @@
                 "args"        : [
                     [ "i in [x..y]", "number", "The start and end point for the variable i", true ]
                 ],
-                "example"     : "for i in [1..5]\n    circle i"
+                "example"     : "for i in [1..5]\n    circle i",
+                "defaults": null
             },
             {
                 "call"        : "random",
@@ -193,116 +186,62 @@
                     [ "max", "number", "The maximum value", true ],
                     [ "float", "bool", "Return float values (Will be floored otherwise)", false ]
                 ],
-                "example"     : "random 5, 10"
+                "example"     : "random 5, 10",
+                "defaults": [ 5, 10 ]
             }
         ]
     },
     {
         "label"    : "Colors",
+        "icon"     : "colors",
         "commands" : [
             {
                 "call"        : "background",
                 "unlockedAt"  : 999,
-                "description" : "Change the background color (Only to use once)",
+                "description" : "Set the background color",
                 "args"        : [
-                    [ "color", "string", "Apply a background color ('orange', 'blue', 'red', 'yellow', 'green'...)", true ]
-                ]
+                    [ "color", "string", "The background color to set", true ]
+                ],
+                "defaults": [ "blue" ]
             },
             {
                 "call"        : "color",
                 "unlockedAt"  : 4,
                 "description" : "Change the color in use",
                 "args"        : [
-                    [ "color", "string", "The color to use ('orange', 'blue', 'red', 'yellow', 'green'...)", true ]
-                ]
+                    [ "color", "string", "The object color to set", true ]
+                ],
+                "defaults": [ "red" ]
             },
             {
                 "call"        : "stroke",
                 "unlockedAt"  : 5,
-                "description" : "Change the line color and width in use",
+                "description" : "Change the color and width of the stroke (border)",
                 "args"        : [
-                    [ "size", "number", "(number) The line width to use", false ],
+                    [ "size", "number", "(number) The width to use", false ],
                     [ "color", "string", "A string with the color to use - E.g. 'red', 'blue'..", false ]
-                ]
+                ],
+                "defaults": [ 10, "purple" ]
             },
             {
-                "call"        : "strokeColor",
+                "call"        : "setBrightness",
                 "unlockedAt"  : 999,
-                "description" : "The stroke color to use",
-                "args"        : [
-                    [ "color", "string", "A string with the color to use - E.g. 'red', 'blue'..", true ]
-                ]
-            },
-            {
-                "call"        : "strokeWidth",
-                "unlockedAt"  : 999,
-                "description" : "The stroke width to use",
-                "args"        : [
-                    [ "size", "number", "A number with the line width to use", true ]
-                ]
-            },
-            {
-                "call"        : "brightness",
-                "unlockedAt"  : 999,
-                "description" : "Get a colour's brightness, set it to a given number if an amount is passed",
+                "description" : "Set a colour's brightness",
                 "args"        : [
                     [ "color", "string", "Color", true ],
-                    [ "amount", "number", "amount of brightness to set (0 - 100)", false ]
-                ]
+                    [ "amount", "number", "amount of brightness to set (-100 to 100)", false ]
+                ],
+                "defaults": [ "yellow", 30 ]
             },
             {
-                "call"        : "darken",
+                "call"        : "setSaturation",
                 "unlockedAt"  : 999,
-                "description" : "Make a color darken by given amount",
-                "args"        : [
-                    [ "float", "string", "Color to darken", true ],
-                    [ "amount", "number", "amount of brightness to subtract (0 - 100)", true ]
-                ]
-            },
-            {
-                "call"        : "lighten",
-                "unlockedAt"  : 999,
-                "description" : "Make a color lighter by given amount",
-                "args"        : [
-                    [ "color", "string", "Color to lighten", true ],
-                    [ "amount", "number", "amount of brightness to add (0 - 100)", true ]
-                ]
-            },
-            {
-                "call"        : "saturation",
-                "unlockedAt"  : 999,
-                "description" : "Get a colour's saturation, set it to a given number if an amount is passed",
+                "description" : "Set a colour's saturation",
                 "args"        : [
                     [ "color", "string", "Color", true ],
-                    [ "amount", "number", "amount of saturation to set (0 - 100)", false ]
-                ]
-            },
-            {
-                "call"        : "saturate",
-                "unlockedAt"  : 999,
-                "description" : "Increase a color's saturation by given amount",
-                "args"        : [
-                    [ "float", "string", "Color to saturate", true ],
-                    [ "amount", "number", "amount of brightness to subtract (0 - 100)", true ]
-                ]
-            },
-            {
-                "call"        : "desaturate",
-                "unlockedAt"  : 999,
-                "description" : "Lower a color's saturation by given amount",
-                "args"        : [
-                    [ "color", "string", "Color to desaturate", true ],
-                    [ "amount", "number", "amount of brightness to add  (0 - 100)", true ]
-                ]
-            },
-            {
-                "call"        : "hue",
-                "unlockedAt"  : 999,
-                "description" : "Get a colour's hue angle, set it to a given number if an amount is passed",
-                "args"        : [
-                    [ "color", "string", "Color", true ],
-                    [ "amount", "number", "hue angle to set (0 - 360)", false ]
-                ]
+                    [ "amount", "number", "amount of saturation to set (-100 to 100)", false ]
+                ],
+                "defaults": [ "grey", 30 ]
             },
             {
                 "call"        : "rotate",
@@ -311,35 +250,20 @@
                 "args"        : [
                     [ "float", "string", "Color to rotate", true ],
                     [ "amount", "number", "angle to rotate (-360 - 360)", true ]
-                ]
+                ],
+                "defaults": [ "red", 100 ]
             },
             {
-                "call"        : "opacity",
+                "call"        : "setTransparency",
                 "unlockedAt"  : 999,
-                "description" : "Get a colour's opacity, set it to a given number if an amount is passed",
-                "args"        : [
-                    [ "color", "string", "Color", true ],
-                    [ "amount", "number", "amount of opacity to set (0 - 1)", false ]
-                ]
-            },
-            {
-                "call"        : "transparentize",
-                "unlockedAt"  : 999,
-                "description" : "Lower a color's opacity by given amount",
+                "description" : "Set how see through a color is",
                 "args"        : [
                     [ "float", "string", "Color to saturate", true ],
-                    [ "amount", "number", "amount of opacity to subtract (0 - 1)", true ]
-                ]
-            },
-            {
-                "call"        : "opacize",
-                "unlockedAt"  : 999,
-                "description" : "Increase a color's opacity by given amount",
-                "args"        : [
-                    [ "color", "string", "Color to desaturate", true ],
-                    [ "amount", "number", "amount of opacity to add  (0 - 1)", true ]
-                ]
+                    [ "amount", "number", "amount of opacity to subtract (-100 to 100)", true ]
+                ],
+                "defaults": [ "black", 50 ]
             }
+
         ]
     }
 ]

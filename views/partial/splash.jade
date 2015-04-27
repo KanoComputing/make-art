@@ -1,9 +1,12 @@
-.modal-overlay(ng-controller='SplashController'
-               ng-show='isSplashOpen'): .modal-inner.split-modal.splash
-    .logo-title.center
-        img(src='/assets/layout/header-logo@2x.png')
-        img(src='/assets/layout/draw-logo@2x.png')
-    h4.center Draw with code
+.modal-overlay(ng-controller='SplashController', ng-show='isSplashOpen')
+    .modal-inner.split-modal.splash
 
-    .center.bottom-section
-        button.button.large(ng-click='isSplashOpen = false; challengeMenu.open()') Start
+        //- Logo
+        .logo-title
+
+        h4.center Draw with code
+
+        //- Start button
+        .center.bottom-section
+
+            button.button.large(ng-click='isSplashOpen = false') Start

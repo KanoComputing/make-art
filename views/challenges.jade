@@ -1,0 +1,72 @@
+.page-challenges: .page-width
+
+    h3.page-title
+        i.icon-menu
+        | Challenges
+
+    ul.challenges-list
+
+        li(ng-repeat='challenge in challenges')
+            a(
+                ng-click='selectChallenge(challenge)',
+                ng-class='{ locked: isLocked($index), completed: isCompleted($index), current: isCurrent($index) }'
+                )
+
+                .cover(ng-style='{ "background-image": "url(/assets/challenges/" + challenge.id + ".png)" }')
+
+                .detail
+                    h5 {{ challenge.title }}
+
+        li
+
+            a.highlight.completed(href='/playground')
+
+                .cover(style='background-image: url(/assets/challenges/playground.png)')
+
+                .detail
+                    h5 Playground
+
+    div(ng-if='shares')
+
+        h3.page-title
+            i.icon-share
+            | Latest Shares
+
+        ul.shares-list
+
+            li(ng-repeat='share in shares')
+                a(href='/share/{{ share.id }}')
+
+                    .cover(ng-style='{ "background-image": "url(" + share.cover_url + ")" }')
+
+                    .detail
+                        h5
+                            | {{ share.title }} 
+                            em by {{ share.user.username }}
+
+            li
+                a.highlight.browse.completed(
+                    href='http://world.kano.me/shares/kano-draw',
+                    ng-click='browseMore($event)',
+                    target='_blank'
+                    )
+
+                    .cover(style='background-image: url(/assets/challenges/browse.png)')
+
+                    .detail
+                        h5 Browse more
+
+.modal-overlay(ng-if='selectedChallenge')
+    .modal-inner.modal-challenge-info.center
+
+        .cover(ng-style='{ "background-image": "url(/assets/challenges/" + selectedChallenge.id + ".png)" }')
+
+        button.close(ng-click='deselectedChallenge()'): i.icon-cross
+
+        .detail
+
+            h3 {{ selectedChallenge.title }}
+
+            p.description {{ selectedChallenge.description }}
+
+            a.button.button-success(ng-href='/challenge/{{ selectedChallenge.index + 1 }}') Start

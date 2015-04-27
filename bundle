@@ -1,0 +1,13 @@
+export OFFLINE=true
+export NODE_ENV=production
+npm run build
+echo "Creating bundle in ./dist..."
+rm -rf dist
+mkdir dist
+cp -r www dist/www
+cp -r kano_draw dist/kano_draw
+cp -r kdesktop dist/kdesktop
+cp -r icon dist/icon
+cp -r debian dist/debian
+cp -r bin dist/bin
+echo "Done"

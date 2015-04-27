@@ -8,10 +8,12 @@ var gulp = require('gulp'),
     jadeHelpers = require('./utils/jadeHelpers'),
     _ = require('lodash'),
     color = require('cli-color'),
-    partialify = require('partialify/custom');
+    partialify = require('partialify/custom'),
+    griddy = require('griddy'),
+    nib = require('nib');
 
 var server = lr(),
-    env = process.env.NODE_ENV === 'production' ? 'production' : 'develpoment',
+    env = process.env.NODE_ENV === 'production' ? 'production' : 'development',
     production = env === 'production',
     offline = process.env.OFFLINE === 'true';
 
@@ -48,7 +50,7 @@ gulp.task('styles', function () {
     gulp.src(paths.styles.src)
     .pipe(stylus({
         pretty : !production,
-        use    : [ 'griddy', 'nib' ]
+        use    : [ griddy(), nib() ]
     }))
     .on('error', handleError)
     .pipe(gulp.dest(paths.styles.out))
@@ -79,10 +81,12 @@ gulp.task('listen', function (next) {
     server.listen(35729, next);
 });
 
-gulp.task('watch', [ 'listen' ], function () {
+gulp.task('build', [ 'browserify', 'styles', 'views' ]);
+
+gulp.task('watch', [ 'build', 'listen' ], function () {
     gulp.watch(paths.browserify.watch, [ 'browserify' ]);
     gulp.watch(paths.styles.watch, [ 'styles' ]);
     gulp.watch(paths.views.watch, [ 'views' ]);
 });
 
-gulp.task('default', [ 'browserify', 'styles', 'views' ]);
+gulp.task('default', [ 'build' ]);

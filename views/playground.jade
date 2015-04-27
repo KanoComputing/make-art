@@ -1,22 +1,26 @@
-section: .page-width
+.page-width: .workspace
 
-    h2.center Playground
-    h4.center Draw whatever you want
+    h3.page-title
+        i.icon-game
+        | Playground
 
-    .row
+    .workspace-body: .row
+
         .col-6
-            editor(ng-model='playground.code', editable='true', auto-select='false', workspace)
+
+            editor(
+                ng-model='playground.code',
+                editable='true',
+                auto-select='false',
+                workspace,
+                tabbed='true',
+                controls='true'
+                )
+
         .col-6
-            display(ng-source='playground.code', workspace)
 
-    span(ng-repeat="dialog in exportDialogs", ng-controller='ExportController')
-        a.button(ng-if='!(dialog === "save" && !offline)',  ng-click='openDialog()') {{ dialog }}
-
-        include partial/export
-
-    span(ng-controller='LoadDialogController' ng-if='offline')
-        a.button(ng-click='openDialog()') Load
-
-        include partial/load
-
-    include partial/docs
+            display(
+                source='playground.code',
+                workspace,
+                mode='"playground"'
+                )

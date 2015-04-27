@@ -1,0 +1,94 @@
+editor .editor-docs
+    border-radius()
+    background color-editor-bg
+    position relative
+
+    .inner
+        padding 20px 30px
+        height editor-height
+        overflow auto
+        box-sizing border-box
+
+    &, h4, p
+        color color-white
+
+    &:before, &:after
+        absolute-cover()
+        content ''
+        height 30px
+        transition opacity .2s
+        top 0
+        z-index 2
+
+    &:before
+        border-radius(3px 3px 0 0)
+        background linear-gradient(rgba(color-editor-bg, 1), rgba(color-editor-bg, 0))
+
+    &:after
+        border-radius(0 0 3px 3px)
+        top auto
+        bottom 0
+        background linear-gradient(rgba(color-editor-bg, 0), rgba(color-editor-bg, 1))
+
+    h4
+        smooth-font()
+        font-size 20px
+        font-weight bold
+        margin-bottom 5px
+
+    p.hint
+        margin-bottom 30px
+            
+    .command-parts
+        margin-bottom 8px
+
+        .tag
+            editor-tag(color-language-keyword)
+            smooth-font()
+            font-weight bold
+            margin-right 3px
+            margin-left 10px
+
+            &:first-child
+                margin-left 0
+
+            &.call
+                background color-language-identifier
+                margin-right 5px
+
+            &.number
+                background color-language-number
+                
+        .divide
+            smooth-font()
+            font-size 17px
+            line-height 0
+            font-weight bold
+            
+    p.explain
+        margin-bottom 3px
+
+    p.explain-parts
+        margin-bottom 20px
+        font-size 13px
+        color mix(color-editor-bg, color-white, 40%)
+
+    .add-button
+        circle(25px, lighten(color-editor-bg, 10))
+        smooth-font()
+        display inline-block
+        color rgba(color-white, .4)
+        font-weight bold
+        margin 0 3px
+
+        &:after
+            content '+'
+            line-height 0
+            font-size 22px
+
+    a.add-button
+        pointer cursor
+
+        &:hover
+            background lighten(color-editor-bg, 15)
+            color rgba(color-white, .8)

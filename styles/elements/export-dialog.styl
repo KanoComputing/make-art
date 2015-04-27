@@ -3,8 +3,7 @@
     .created-image
         width 100%
 
-    input
-    textarea
+    input, textarea
         width 100%
         box-sizing border-box
         padding 10px
@@ -18,13 +17,20 @@
             border 2px solid #ababab
             outline none
 
+    img
+        border-radius()
+        background #fff
+
     textarea
         height 96px
 
-    .button
-        clear both
-        float right
-        margin-right 0
+    .buttons
+        text-align right
+
+        button
+            display inline-block
+            margin-bottom 0
+            padding 10px 19px
 
         &:not(:first-of-type)
             margin-top 10px

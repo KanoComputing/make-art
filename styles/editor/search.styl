@@ -1,0 +1,30 @@
+editor .ace_search.right
+    border-radius()
+    background-color color-editor-box
+    border 0
+    color color-white
+    padding 10px 10px 7px 10px
+    margin 10px
+    right 100px
+    top 0
+
+    .ace_search_form
+        border-color color-white
+
+        &.ace_nomatch
+            outline none
+            border-color color-red
+
+    .ace_button, .ace_searchbtn, .ace_replace_form
+        display none
+
+    .ace_searchbtn_close
+        background-image none
+        color color-white
+        width auto
+        height auto
+        margin 3px 0 3px 10px
+
+        &:before
+            content: '\274C'
+            font-family: 'bariol'

@@ -1,22 +1,22 @@
-
-
 .modal-overlay
-    full-cover()
+    absolute-cover()
     background rgba(#000, .8)
     transition opacity .2s
     position fixed
-    width 100%
-    height 100%
-    left 0
-    top 0
     z-index 9
+
+    &, h1, h2, h3, h4, h5
+        color color-black
+        font-weight normal
+        text-transform uppercase
+        margin-bottom 30px
 
     &.out
         opacity 0
 
 .modal-inner
-    background color-white
     border-radius()
+    background color-white
     position absolute
     left 50%
     top 150px
@@ -29,20 +29,21 @@
     button.close
         button-color(color-white, color-grey)
         padding 0
-        font-size 22px
-        width 36px
-        line-height 36px
+        font-size 12px
         text-align center
         position absolute
         right 10px
-        top 10px
+        top 20px
+        width 30px
+        line-height @width
 
         &:hover
-            background color-mid-grey
+            background color-grey-mid
 
         i
             position relative
-            top 2px
+            left 0
+            top 1px
 
     &.size-small
         width 300px
@@ -64,12 +65,11 @@
             bottom 0
             left 0
             right 0
-            background color-mid-grey
+            background color-grey-mid
             border-bottom-left-radius 3px
             border-bottom-right-radius 3px
 
-            button
-            .button
+            button, .button
                 margin 20px
                 color color-white
                 background color-green
