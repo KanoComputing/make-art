@@ -5,7 +5,7 @@
 
     .row
 
-        form(ng-submit='submit()')
+        form(ng-submit='submit()' name='exportForm')
             .box.box-danger(ng-if='error') {{ error }}
 
             .col-6
@@ -20,6 +20,6 @@
                     if offline
                         button.export-wallpaper(ng-click='exportWallpaper()') Save Wallpaper
 
-                    button.button-success(type='submit')
+                    button.button-success(type='submit', ng-disabled='exportForm.$invalid', ng-class='{ "disabled" : exportForm.$invalid }')
                         i(ng-class='"icon-" + action')
                         |  {{ action }}
