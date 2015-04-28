@@ -18,7 +18,7 @@
                 .buttons
 
                     if offline
-                        button.export-wallpaper(ng-click='exportWallpaper()') Save Wallpaper
+                        button.export-wallpaper(ng-click='exportWallpaper()', ng-disabled='exportForm.$invalid', ng-class='{ "disabled" : exportForm.$invalid }') Save Wallpaper
 
                     button.button-success(type='submit', ng-disabled='exportForm.$invalid', ng-class='{ "disabled" : exportForm.$invalid }')
                         i(ng-class='"icon-" + action')
