@@ -47,7 +47,7 @@
                     box-shadow rgba(color-white, .2) 0 0 0 5px
 
                     .cover
-                        filter(grayscale(100%))
+                        filter(grayscale(50%))
 
                 &.current, &.locked
 
@@ -63,11 +63,10 @@
                         opacity .5
 
                     .cover
-                        background-image none !important
+                        filter(grayscale(100%))
 
                         &:after
                             icon()
-                            content '\e621'
                             position absolute
                             left 50%
                             top 50%
