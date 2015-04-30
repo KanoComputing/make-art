@@ -180,11 +180,11 @@
             {
                 "call"        : "random",
                 "unlockedAt"  : 9,
-                "description" : "Get a random number in a range. If called with no arguments will return a float between 0 and 1",
+                "description" : "Get a random number in a range.",
                 "args"        : [
                     [ "min", "number", "The minimum value", true ],
                     [ "max", "number", "The maximum value", true ],
-                    [ "float", "bool", "Return float values (Will be floored otherwise)", false ]
+                    [ "float", "bool", "Set the true to return decimal values", false ]
                 ],
                 "example"     : "random 5, 10",
                 "defaults": [ 5, 10 ]
