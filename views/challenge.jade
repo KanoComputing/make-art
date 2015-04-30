@@ -60,7 +60,7 @@
     .modal-overlay(ng-if='gameCompleteOpen')
         .modal-inner.split-modal.challenge-complete.center
 
-            button.close(ng-click='clocseFinishedGame()'): i.icon-cross
+            //- button.close(ng-click='clocseFinishedGame()'): i.icon-cross
 
             h3 Congratulations
 
@@ -69,6 +69,11 @@
             .logo-title
 
             .center.bottom-section
+
+                a.button.secondary.large(ng-href='/challenges')
+                    i.icon-menu
+                    |  Menu
+
                 a.button.large(ng-href='/playground')
                     i.icon-game
                     |  Playground
