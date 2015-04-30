@@ -19,7 +19,7 @@
 
         li
 
-            a.highlight.completed(href='/playground')
+            a.highlight(href='/playground', ng-class='{ locked: isLocked(challenges.length) }')
 
                 .cover(style='background-image: url(/assets/challenges/playground.png)')
 
@@ -45,7 +45,7 @@
                             em by {{ share.user.username }}
 
             li
-                a.highlight.browse.completed(
+                a.highlight.browse(
                     href='http://world.kano.me/shares/kano-draw',
                     ng-click='browseMore($event)',
                     target='_blank'

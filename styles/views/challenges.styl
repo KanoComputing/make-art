@@ -17,6 +17,7 @@
 
             a
                 border-radius()
+                no-select()
                 display block
                 overflow hidden
                 background color-white
@@ -35,6 +36,13 @@
                         font-weight normal
                         font-style normal
 
+                    &:after
+                        icon()
+                        float right
+                        font-size 12px
+                        margin-top 3px
+                        margin-right 3px
+
                 .cover
                     width 100%
                     padding-bottom 100%
@@ -45,56 +53,51 @@
 
                 &.current
                     box-shadow rgba(color-white, .2) 0 0 0 5px
+                    background color-blue
+
+                    h5
+                        color color-white
+
+                        &:after
+                            content '\e615'
 
                     .cover
-                        filter(grayscale(100%))
-
-                &.current, &.locked
-
-                    .cover
-                        opacity .5
+                        opacity 1
 
                 &.completed h5
                     opacity 1
 
+                    &:after
+                        content '\e61d'
+                        color color-green
+
                 &.locked
+                    filter(grayscale(100%))
 
-                    h5
-                        opacity .5
+                    .cover, h5
+                        opacity .3
 
-                    .cover
-                        background-image none !important
-
-                        &:after
-                            icon()
-                            content '\e621'
-                            position absolute
-                            left 50%
-                            top 50%
-                            font-size 100px
-                            margin-top -(@font-size / 2)
-                            margin-left -(@font-size / 2)
-                            color color-black
-                            opacity .3
+                    h5:after
+                        content '\e621'
+                        font-size 15px
+                        margin-top 0
 
                 &.highlight
+                    background-color color-orange
 
                     .cover
                         background-color mix(color-orange, color-grey-lightest, 40)
 
                     .detail
-                        background-color color-orange
 
                         h5
                             color #fff
 
                 &.browse
+                    background-color #1cb2c0
 
                     .cover
                         background-color #46ddeb
-
-                    .detail
-                        background-color #1cb2c0
 
 .modal-challenge-info
     top 50px

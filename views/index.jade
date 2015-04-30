@@ -21,6 +21,9 @@ html(lang='en', ng-app='draw')
         ng-view
         include partial/splash
 
+        if !offline
+            a.kano-logo(href='http://www.kano.me', target='_blank')
+
         //- Vendor
         script(src='/js/vendor/angular.min.js', type='text/javascript')
         script(src='/js/vendor/angular-route.min.js', type='text/javascript')
