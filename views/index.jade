@@ -14,7 +14,7 @@ html(lang='en', ng-app='draw')
 
         title Draw
 
-    body
+    body(class=offline ? 'offline' : 'online')
         .loading-overlay(ng-cloak): .spinner
 
         include partial/header
