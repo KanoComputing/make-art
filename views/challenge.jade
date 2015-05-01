@@ -15,7 +15,7 @@
                 ng-class='{ active: showSolution, "animate-pulse-highlight": highlightHelp }'
                 )
                 i.icon-hint
-                | Help
+                | Hint
 
             progress-circle(value='step', max='content.steps.length')
             h3 {{ challenges[ id - 1 ].title }}
@@ -43,6 +43,7 @@
         .col-6.tutorial-wrap
 
             display(
+                reset-fn='restart'
                 source='challenge.code',
                 workspace,
                 mode='"challenge"',
@@ -60,15 +61,20 @@
     .modal-overlay(ng-if='gameCompleteOpen')
         .modal-inner.split-modal.challenge-complete.center
 
-            button.close(ng-click='clocseFinishedGame()'): i.icon-cross
+            //- button.close(ng-click='clocseFinishedGame()'): i.icon-cross
 
-            h3 Congratulations
+            h3 Challenges complete
 
-            h4 You've completed
+            h4 Now make something new!
 
             .logo-title
 
             .center.bottom-section
+
+                a.button.secondary.large(ng-href='/challenges')
+                    i.icon-menu
+                    |  Menu
+
                 a.button.large(ng-href='/playground')
                     i.icon-game
                     |  Playground

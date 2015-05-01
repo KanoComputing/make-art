@@ -23,10 +23,15 @@
         transform scale(1)
         background lighten(color-editor-bg, 10)
 
-.animate-pulse
-    animation pulsate 0.5s ease-out
-    background red
+body.online
 
-.animate-pulse-highlight
-    animation pulsate-highlight 3s ease-out infinite
-    background red
+    .animate-pulse
+        animation pulsate 0.5s ease-out
+
+    .animate-pulse-highlight
+        animation pulsate-highlight 3s ease-out infinite
+
+body.offline
+
+    .animate-pulse-highlight
+        background color-blue

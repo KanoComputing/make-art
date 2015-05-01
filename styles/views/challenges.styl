@@ -17,6 +17,7 @@
 
             a
                 border-radius()
+                no-select()
                 display block
                 overflow hidden
                 background color-white
@@ -28,12 +29,24 @@
                     ellipsis()
                     smooth-font()
                     font-weight bold
-                    font-size: 15px
+                    font-size 15px
+                    overflow visible
 
                     em
                         smooth-font(false)
                         font-weight normal
                         font-style normal
+
+                    &:after
+                        icon()
+                        circle(20px, transparent)
+                        float right
+                        font-size 9px
+                        margin-top 3px
+                        margin-right 3px
+                        color color-white
+                        line-height 22px
+                        margin 0
 
                 .cover
                     width 100%
@@ -44,57 +57,51 @@
                     position relative
 
                 &.current
-                    box-shadow rgba(color-white, .2) 0 0 0 5px
+                    box-shadow rgba(color-blue, 1) 0 0 0 5px
 
-                    .cover
-                        filter(grayscale(100%))
-
-                &.current, &.locked
+                    h5:after
+                        content '\e615'
+                        background color-blue
 
                     .cover
                         opacity .5
 
-                &.completed h5
-                    opacity 1
-
-                &.locked
+                &.completed
+                    background color-green
 
                     h5
-                        opacity .5
-
-                    .cover
-                        background-image none !important
+                        opacity 1
+                        color #fff
 
                         &:after
-                            icon()
-                            content '\e621'
-                            position absolute
-                            left 50%
-                            top 50%
-                            font-size 100px
-                            margin-top -(@font-size / 2)
-                            margin-left -(@font-size / 2)
-                            color color-black
-                            opacity .3
+                            content '\e61d'
+                            background darken(color-green, 5)
+
+                &.locked
+                    filter(grayscale(100%))
+
+                    .cover, h5
+                        opacity .3
+
+                    h5:after
+                        content '\e621'
+                        margin-top 0
+                        background color-grey
 
                 &.highlight
+                    background-color color-orange
 
                     .cover
                         background-color mix(color-orange, color-grey-lightest, 40)
 
-                    .detail
-                        background-color color-orange
-
-                        h5
-                            color #fff
+                    .detail h5
+                        color #fff
 
                 &.browse
+                    background-color #1cb2c0
 
                     .cover
                         background-color #46ddeb
-
-                    .detail
-                        background-color #1cb2c0
 
 .modal-challenge-info
     top 50px

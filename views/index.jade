@@ -14,12 +14,15 @@ html(lang='en', ng-app='draw')
 
         title Draw
 
-    body
+    body(class=offline ? 'offline' : 'online')
         .loading-overlay(ng-cloak): .spinner
 
         include partial/header
         ng-view
         include partial/splash
+
+        if !offline
+            a.kano-logo(href='http://www.kano.me', target='_blank')
 
         //- Vendor
         script(src='/js/vendor/angular.min.js', type='text/javascript')
