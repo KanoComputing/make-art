@@ -19,7 +19,7 @@
 
         li
 
-            a.highlight(href='/playground', ng-class='{ locked: isLocked(challenges.length) }')
+            a(href='/playground' ng-class= "{locked: progress.challengeNo == 1, highlight: progress.challengeNo > 1, completed: progress.challengeNo > 1 }")
 
                 .cover(style='background-image: url(/assets/challenges/playground.png)')
 
