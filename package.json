@@ -24,7 +24,7 @@
     "deep-equal": "^1.0.0",
     "express": "^4.10.5",
     "griddy": "0.0.x",
-    "gulp": "~3.5.X",
+    "gulp": "~3.5.x",
     "gulp-browserify": "~0.4.x",
     "gulp-jade": "~0.4.x",
     "gulp-livereload": "1.2.0",
