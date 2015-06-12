@@ -1,6 +1,6 @@
 .page-challenge: .page-width
 
-    .workspace-header(ng-class='(animationClass || "") + (completed ? " success" : "")')
+    .workspace-header(ng-class='(animationClass || "") + (completed ? " success" : "") + (fatherDay ? " father-day" : "")')
 
         .inner.center(ng-if='!started')
 
@@ -29,21 +29,27 @@
         .inner.center(ng-if='completed && fatherDay')
 
             div(ng-if='!user')
-                h4 Create your Father's day card!
+
+                img(src='/assets/layout/father-day-closed.png')
+
+                h4 Make it into a Father's day card!
 
                 p.
                     Now sign-up to Kano World to share your creation and send 
                     a card to your dad!
 
-                a.button.button-success(ng-click='login()', href='#') Sign-up
+                a.button.large.button-success(ng-click='login()', href='#') Log In / Sign Up
 
             div(ng-if='user')
+
+                img(src='/assets/layout/father-day-open.png')
+
                 h4 Share your Father's day card!
 
                 p.
                     Now you can share the card on Kano World and share it to your dad!
 
-                a.button.button-success(ng-click='shareFatherDay()', href='#') Share it!
+                a.button.large.button-success(ng-click='shareFatherDay()', href='#') Share it!
 
     .row(ng-if='started')
         .col-6.editor-wrap
