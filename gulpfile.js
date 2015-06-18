@@ -15,6 +15,7 @@ var gulp = require('gulp'),
 var server = lr(),
     env = process.env.NODE_ENV === 'production' ? 'production' : 'development',
     production = env === 'production',
+    segmentioId = process.env.SEGMENTIO_ID || null,
     offline = process.env.OFFLINE === 'true';
 
 var paths = {
@@ -62,9 +63,10 @@ gulp.task('views', function () {
     .pipe(jade({
         pretty : !production,
         locals : _.extend({
-            env        : env,
-            production : production,
-            offline    : offline
+            env         : env,
+            production  : production,
+            offline     : offline,
+            segmentioId : segmentioId
         }, jadeHelpers)
     }))
     .on('error', handleError)
