@@ -8,7 +8,7 @@
 # The Draw App implementation
 #
 
-# Before loading anything else, declare a profiling timepoint                                                      
+# Before loading anything else, declare a profiling timepoint
 from kano.profiling import declare_timepoint
 declare_timepoint("load",True)
 
@@ -26,6 +26,7 @@ if __name__ == '__main__' and __package__ is None:
 from kano_profile.tracker import Tracker
 kanotracker = Tracker()
 
+from kano_draw.video import play_intro
 from kano_draw.draw import Draw
 import kano_draw.server
 
@@ -35,6 +36,7 @@ def cleanup(signum, frame):
 
 signal.signal(signal.SIGINT, cleanup)
 
+play_intro()
 
 APP_PID = os.getpid()
 # Initialise the local server
