@@ -3,7 +3,6 @@
 # Copyright (C) 2015 Kano Computing Ltd.
 # License: http://www.gnu.org/licenses/gpl-2.0.txt GNU GPLv2
 #
-# Program that generates character assets to be used with a Kano World profile
 
 import os
 
