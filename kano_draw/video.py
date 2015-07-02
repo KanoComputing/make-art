@@ -9,7 +9,7 @@ import os
 from kano_profile.apps import load_app_state_variable
 from kano_draw.server import APP_NAME
 
-VIDEO_PATH = '/usr/share/kano-media/videos/monkey.mkv'
+VIDEO_PATH = '/usr/share/kano-media/videos/art.mp4'
 
 
 def play_intro():
