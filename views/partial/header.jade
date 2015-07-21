@@ -12,6 +12,10 @@ header: .page-width
             i.icon-game
             |  Playground
 
+        li: a(href='/summer-camp', ng-class='{ active: basePath === "summer-camp" }')
+            i.icon-game
+            |  Summer Camp
+
     ul.nav.nav-right
 
         li(ng-if='!offline && !loggedIn'): a(href='#', ng-click='login()')
