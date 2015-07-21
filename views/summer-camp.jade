@@ -1,0 +1,42 @@
+.page-challenges: .page-width
+
+    h3.page-title
+        i.icon-menu
+        | Summer Camp
+
+    ul.challenges-list
+
+        li(ng-repeat='challenge in summerChallenges')
+            a(
+                ng-click='selectChallenge(challenge)',
+                ng-class='{ locked: isLocked($index), completed: isCompleted($index), current: isCurrent($index) }'
+                )
+
+                .cover(ng-style='{ "background-image": "url(/assets/challenges/" + challenge.id + ".png)" }')
+
+                .detail
+                    h5 {{ challenge.title }}
+
+        li
+
+            a.highlight(href='/playground', ng-class='{ locked: isLocked(challenges.length) }')
+
+                .cover(style='background-image: url(/assets/challenges/playground.png)')
+
+                .detail
+                    h5 Playground
+
+.modal-overlay(ng-if='selectedSummerChallenge')
+    .modal-inner.modal-challenge-info.center
+
+        .cover(ng-style='{ "background-image": "url(/assets/challenges/" + selectedSummerChallenge.id + ".png)" }')
+
+        button.close(ng-click='deselectedChallenge()'): i.icon-cross
+
+        .detail
+
+            h3 {{ selectedSummerChallenge.title }}
+
+            p.description {{ selectedSummerChallenge.description }}
+
+            a.button.button-success(ng-href='/challenge/{{ selectedSummerChallenge.index + 1 }}') Start
