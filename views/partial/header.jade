@@ -16,7 +16,7 @@ header: .page-width
             i.icon-game
             |  Summer Camp
 
-    ul.nav.nav-right
+    ul.nav.nav-right(ng-cloak)
 
         li(ng-if='!offline && !loggedIn'): a(href='#', ng-click='login()')
             i.icon-login

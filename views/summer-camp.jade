@@ -1,42 +1,32 @@
-.page-challenges: .page-width
+.summer-camp: .page-width
 
     h3.page-title
         i.icon-menu
-        | Summer Camp
+        | Summer Camp Calendar
 
-    ul.challenges-list
-
-        li(ng-repeat='challenge in summerChallenges')
+    ul.calendar
+        li.weekdays(ng-repeat='weekday in weekdays') {{weekday}}
+        li.day(ng-repeat='day in range(21)') 
             a(
-                ng-click='selectChallenge(challenge)',
-                ng-class='{ locked: isLocked($index), completed: isCompleted($index), current: isCurrent($index) }'
+                ng-click='selectChallenge(day)',
+                ng-class='{ locked: isLocked(day), completed: isCompleted(day), current: isCurrent(day) }',
                 )
-
-                .cover(ng-style='{ "background-image": "url(/assets/challenges/" + challenge.id + ".png)" }')
-
+                .cover(style='background-image: url("/assets/challenges/playground.png")')
+                    span  {{day}}
                 .detail
-                    h5 {{ challenge.title }}
-
-        li
-
-            a.highlight(href='/playground', ng-class='{ locked: isLocked(challenges.length) }')
-
-                .cover(style='background-image: url(/assets/challenges/playground.png)')
-
-                .detail
-                    h5 Playground
+                    h5 Challenge {{ day }}
 
 .modal-overlay(ng-if='selectedSummerChallenge')
     .modal-inner.modal-challenge-info.center
 
-        .cover(ng-style='{ "background-image": "url(/assets/challenges/" + selectedSummerChallenge.id + ".png)" }')
+        .cover(style='background-image: url("/assets/challenges/playground.png")')
 
         button.close(ng-click='deselectedChallenge()'): i.icon-cross
 
         .detail
 
-            h3 {{ selectedSummerChallenge.title }}
+            h3 Day {{ selectedSummerChallenge }}
 
-            p.description {{ selectedSummerChallenge.description }}
+            p.description Challenge {{ selectedSummerChallenge }}
 
-            a.button.button-success(ng-href='/summer-camp/challenge/{{ selectedSummerChallenge.index + 1 }}') Start
+            a.button.button-success(ng-href='/summer-camp/challenge/{{ selectedSummerChallenge }}') Start
