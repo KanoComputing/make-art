@@ -4,6 +4,8 @@
         i.icon-menu
         | Summer Camp Calendar
 
+    a.button(ng-click='register = true') Register
+
     ul.calendar
         li.weekdays(ng-repeat='weekday in weekdays') {{weekday}}
         li.day(ng-repeat='day in range(21)') 
@@ -30,3 +32,20 @@
             p.description Challenge {{ selectedSummerChallenge }}
 
             a.button.button-success(ng-href='/summer-camp/challenge/{{ selectedSummerChallenge }}') Start
+
+.modal-overlay(ng-if='register')
+    .modal-inner.modal-register.center
+
+        button.close(ng-click='closeModal()'): i.icon-cross
+
+        .register-form
+
+            h3 Register For Summer Camp
+
+            input.block(type='text' placeholder='Enter your email address')
+
+            input.block(type='text' placeholder='Enter your kid\'s email address')
+
+            input.block(type='text' placeholder='Enter your kid\'s username')
+
+            a.button.button-success Register
