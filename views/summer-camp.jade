@@ -2,36 +2,10 @@
 
     h3.page-title
         i.icon-menu
-        | Summer Camp Calendar
+        | Summer Camp
 
     a.button(ng-click='register = true') Register
-
-    ul.calendar
-        li.weekdays(ng-repeat='weekday in weekdays') {{weekday}}
-        li.day(ng-repeat='day in range(21)') 
-            a(
-                ng-click='selectChallenge(day)',
-                ng-class='{ locked: isLocked(day), completed: isCompleted(day), current: isCurrent(day) }',
-                )
-                .cover(style='background-image: url("/assets/challenges/playground.png")')
-                    span  {{day}}
-                .detail
-                    h5 Challenge {{ day }}
-
-.modal-overlay(ng-if='selectedSummerChallenge')
-    .modal-inner.modal-challenge-info.center
-
-        .cover(style='background-image: url("/assets/challenges/playground.png")')
-
-        button.close(ng-click='deselectedChallenge()'): i.icon-cross
-
-        .detail
-
-            h3 Day {{ selectedSummerChallenge }}
-
-            p.description Challenge {{ selectedSummerChallenge }}
-
-            a.button.button-success(ng-href='/summer-camp/challenge/{{ selectedSummerChallenge }}') Start
+    a.button.right(href='/summer-camp/calendar') View Calendar
 
 .modal-overlay(ng-if='register')
     .modal-inner.modal-register.center
