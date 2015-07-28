@@ -15,6 +15,11 @@
                     span  {{day + 1}}
                 .detail
                     h5 Challenge {{ day + 1 }}
+    span {{ days }} {{ days == 1 ? 'day' : 'days' }}
+    span {{ hours }} {{ hours == 1 ? 'hour' : 'hours' }}
+    span {{ minutes }} {{ minutes == 1 ? 'second' : 'minutes' }}
+    span {{ seconds }} {{ seconds == 1 ? 'second' : 'seconds' }}
+
 
 .modal-overlay(ng-if='selectedSummerChallenge')
     .modal-inner.modal-challenge-info.center
