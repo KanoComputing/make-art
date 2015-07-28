@@ -98,7 +98,7 @@
 						background-color color-blue
 					
 					.cover
-						opacity .5
+						opacity .8
 					
 					.detail
 						background color-blue
@@ -139,6 +139,22 @@
 							content '\e621'
 							margin-top 0
 							background darken(color-grey-light, 10)
+				
+				&.unlocked
+					
+					&:hover
+						background-color color-orange
+					
+					.cover
+						opacity .5
+					
+					.detail
+						background color-grey
+						opacity .8
+						
+						h5:after
+							content '\e613'
+							background darken(color-orange, 2)
 
 .modal-register
 	h3

@@ -9,12 +9,12 @@
         li.day(ng-repeat='day in range(21)') 
             a(
                 ng-click='selectChallenge(day)',
-                ng-class='{ locked: isLocked(day), completed: isCompleted(day), current: isCurrent(day) }',
+                ng-class='{ locked: isLocked(day) && !currentDay(day), completed: isCompleted(day), current: isCurrent(day), unlocked: currentDay(day) }',
                 )
                 .cover(style='background-image: url("/assets/challenges/playground.png")')
-                    span  {{day}}
+                    span  {{day + 1}}
                 .detail
-                    h5 Challenge {{ day }}
+                    h5 Challenge {{ day + 1 }}
 
 .modal-overlay(ng-if='selectedSummerChallenge')
     .modal-inner.modal-challenge-info.center
