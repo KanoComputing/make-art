@@ -4,29 +4,12 @@
         i.icon-menu
         | Summer Camp
 
-    .countdown.box.center
+    h2.title.center Summer Camp is starting in 
+    .countdown.center
         span.days {{ days }} {{ days == 1 ? 'day' : 'days' }}
         span.hours {{ hours }} {{ hours == 1 ? 'hour' : 'hours' }}
         span.minutes {{ minutes }} {{ minutes == 1 ? 'second' : 'minutes' }}
         span.seconds {{ seconds }} {{ seconds == 1 ? 'second' : 'seconds' }}
 
-    a.button(ng-click='register = true') Register
-    a.button.right(href='/summer-camp/calendar') View Calendar
-
-
-.modal-overlay(ng-if='register')
-    .modal-inner.modal-register.center
-
-        button.close(ng-click='closeModal()'): i.icon-cross
-
-        .register-form
-
-            h3 Register For Summer Camp
-
-            input.block(type='text' placeholder='Enter your email address')
-
-            input.block(type='text' placeholder='Enter your kid\'s email address')
-
-            input.block(type='text' placeholder='Enter your kid\'s username')
-
-            a.button.button-success Register
+    .center
+        a.button(href='http://www.kano.me/summercamp') More Info...
