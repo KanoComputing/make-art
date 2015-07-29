@@ -4,8 +4,15 @@
         i.icon-menu
         | Summer Camp
 
+    .countdown.box.center
+        span.days {{ days }} {{ days == 1 ? 'day' : 'days' }}
+        span.hours {{ hours }} {{ hours == 1 ? 'hour' : 'hours' }}
+        span.minutes {{ minutes }} {{ minutes == 1 ? 'second' : 'minutes' }}
+        span.seconds {{ seconds }} {{ seconds == 1 ? 'second' : 'seconds' }}
+
     a.button(ng-click='register = true') Register
     a.button.right(href='/summer-camp/calendar') View Calendar
+
 
 .modal-overlay(ng-if='register')
     .modal-inner.modal-register.center
