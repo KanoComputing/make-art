@@ -5,10 +5,10 @@
         | Summer Camp
 
     h2.title.center Summer Camp is starting in 
-    .countdown.center
+    .countdown.center(ng-if='!loading')
         span.days {{ days }} {{ days == 1 ? 'day' : 'days' }}
         span.hours {{ hours }} {{ hours == 1 ? 'hour' : 'hours' }}
-        span.minutes {{ minutes }} {{ minutes == 1 ? 'second' : 'minutes' }}
+        span.minutes {{ minutes }} {{ minutes == 1 ? 'minute' : 'minutes' }}
         span.seconds {{ seconds }} {{ seconds == 1 ? 'second' : 'seconds' }}
 
     .center
