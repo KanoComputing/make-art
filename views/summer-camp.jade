@@ -1,15 +1,15 @@
 .summer-camp: .page-width
 
     h3.page-title
-        i.icon-menu
-        | Summer Camp
-
-    h2.title.center Summer Camp is starting in 
-    .countdown.center(ng-if='!loading')
+        i.icon-campfire
+        | Summer Camp is starting in
+        
+    .box.countdown.center(ng-if='!loading')
         span.days {{ days }} {{ days == 1 ? 'day' : 'days' }}
-        span.hours {{ hours }} {{ hours == 1 ? 'hour' : 'hours' }}
-        span.minutes {{ minutes }} {{ minutes == 1 ? 'minute' : 'minutes' }}
-        span.seconds {{ seconds }} {{ seconds == 1 ? 'second' : 'seconds' }}
+        span.time {{ hours + ' : ' + minutes + ' : ' + seconds }}
+        //- span.hours {{ hours }} {{ hours == 1 ? 'hour' : 'hours' }}
+        //- span.minutes {{ minutes }} {{ minutes == 1 ? 'minute' : 'minutes' }}
+        //- span.seconds {{ seconds }} {{ seconds == 1 ? 'second' : 'seconds' }}
 
     .center
-        a.button(href='http://www.kano.me/summercamp') More Info...
+        a.button.button-success(href='http://www.kano.me/summercamp') Enroll Now!
