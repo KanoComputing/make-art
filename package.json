@@ -34,6 +34,7 @@
     "kano-world-sdk": "0.0.2",
     "lodash": "~2.4.x",
     "marked": "~0.3.x",
+    "moment": "^2.10.6",
     "nib": "~1.0.x",
     "partialify": "^3.1.1",
     "play-audio": "^0.1.0",

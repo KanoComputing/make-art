@@ -1,0 +1,177 @@
+.summer-camp
+	
+	.countdown
+		padding 80px 0
+		background url("/assets/summercamp/wood-asset.png") no-repeat
+		background-size contain
+		background-position center center
+		
+		span
+			margin 0 10px
+			font-size 4em
+			font-weight 500
+			color #fff
+			
+			&:first-child
+				margin-left 0
+
+			&:last-child
+				margin-right 0
+		
+		.days
+			display block
+			font-size 6em
+			margin-bottom 20px
+
+	.calendar
+		list-style none
+		padding 0
+		margin 20px 0
+		
+		li
+			display inline-block
+			min-width 14.2857%
+			
+		.weekdays
+			background-color color-grey-darker
+			padding 10px 0
+			text-align center
+			text-transform uppercase
+			
+		.day
+			background-color color-grey-mid
+			float left
+			box-shadow 0 0 0 0.1px darken(color-grey-darker, 2)
+				
+			&:nth-child(7n+6), &:nth-child(7n)
+				background-color color-grey-lighter
+				
+			a
+				display block
+				position relative
+				text-align center
+				
+				.cover
+					position relative
+					background-position center center
+					background-size cover
+					background-repeat none
+					padding-bottom 100%
+					
+					span
+						border-radius(0 0 0 5px)
+						display block
+						padding 4px 10px
+						position absolute
+						right 0
+						top 0
+						background-color #fff
+						color color-orange
+						font-size 1.2rem
+
+				.detail
+					padding 10px
+					
+					h5
+						ellipsis()
+						smooth-font()
+						font-weight bold
+						font-size 15px
+						overflow visible
+						text-align left
+					
+						&:after
+							icon()
+							circle(20px, transparent)
+							float right
+							font-size 9px
+							margin-top 3px
+							margin-right 3px
+							color color-white
+							line-height 22px
+							margin 0
+				
+				&.current
+					box-shadow rgba(color-blue, 1) 0 0 0 1px
+					
+					&:hover
+						background-color color-blue
+					
+					.cover
+						opacity .5
+					
+					.detail
+						background color-blue
+						
+						h5:after
+							content '\e615'
+							background darken(color-blue, 10)
+				
+				&.completed
+					box-shadow rgba(color-green, 1) 0 0 0 1px
+					
+					&:hover
+						background-color color-green
+						box-shadow 0 0 0 0.5px darken(color-grey-darker, 2)
+					
+					.detail
+						background color-green
+						box-shadow 0 0 0 0.2px color-grey-lightest
+						
+						h5
+							color #fff
+							
+							&:after
+								content '\e61d'
+								background darken(color-green, 5)
+						
+				&.locked
+					filter(grayscale(100%))
+					cursor default
+					
+					.cover, h5
+						opacity .3
+						
+					.detail
+						background color-grey-light
+						
+						h5:after
+							content '\e621'
+							margin-top 0
+							background darken(color-grey-light, 10)
+
+.modal-register
+	h3
+		smooth-font()
+		font-weight bold
+		margin-bottom 20px
+		
+	input[type='text']
+	input[type='password']
+	input[type='email']
+	input[type='number']
+	input[type='tel'],
+	input[type='date']
+	textarea
+		padding 9px 15px
+		background color-white
+		display inline-block
+		border 1px solid color-ruler-contrast
+		border-radius()
+		font-family type-body-font
+		type-size 1.3
+		margin-right 0px
+		margin-bottom 20px
+		box-sizing border-box
+		box-shadow 0 2px 0 0 rgba(#000, .03) inset
+		
+		&:last-child
+			margin-right 0
+			margin-bottom 0
+			
+		&:focus
+			border 1px solid color-primary
+			outline 0
+		
+		&.block
+			width 100%

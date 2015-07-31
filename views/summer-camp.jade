@@ -1,0 +1,13 @@
+.summer-camp: .page-width
+
+    h3.page-title
+        i.icon-campfire
+        | Summer Camp is starting in
+
+    .countdown.center(ng-if='!loading')
+        span.days {{ days }} {{ days == 1 ? 'Day' : 'Days' }}
+        //- span.time {{ hours + ' : ' + minutes + ' : ' + seconds }}
+        h3 Come back August 10th for challenges!
+
+    //- .center
+    //-     a.button.button-success(href='http://www.kano.me/summercamp') Enroll Now!
