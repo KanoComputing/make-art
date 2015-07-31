@@ -12,7 +12,12 @@ header: .page-width
             i.icon-game
             |  Playground
 
-    ul.nav.nav-right
+        li.coming-soon: a(href='http://www.kano.me/summercamp', ng-class='{ active: basePath === "summercamp" }')
+            i.icon-campfire
+            |  Summer Camp
+            div Coming soon
+
+    ul.nav.nav-right(ng-cloak)
 
         li(ng-if='!offline && !loggedIn'): a(href='#', ng-click='login()')
             i.icon-login
@@ -28,3 +33,9 @@ header: .page-width
             |  Logout
 
         li: button.close(ng-click='shutdown()', ng-if='offline'): i.icon-cross
+
+.summercamp
+    a(href="http://www.kano.me/summercamp" class="banner")
+        img(src="/assets/summercamp/logo.png")
+        span Free coding challenges:
+        |   Everyday for three weeks this summer. Enroll now
