@@ -3,7 +3,6 @@ header
     background color-header
     padding 20px
     text-align center
-    margin-bottom 20px
     position relative
 
     a.logo
@@ -33,6 +32,26 @@ header
         li
             margin 0 15px
             float left
+            
+            &.coming-soon
+                position relative
+                
+                a
+                    opacity 1
+                    color darken(color-grey-darker, 0.2)
+                
+                    div
+                        background-color color-primary
+                        position absolute
+                        top 5px
+                        left 35px
+                        color #fff
+                        transform rotate(-15deg)
+                        font-size 0.65em
+                        font-weight bold
+                        line-height 0
+                        padding 8px 10px
+                        border-radius(5px)
 
             &:first-child
                 margin-left 0
@@ -103,3 +122,28 @@ header
                     width @width + 2px
                     height @width
                     margin -1px
+
+.summercamp
+    width 100%
+    text-align center
+    background-color #7fc04b
+    padding 7px 0
+    margin-bottom 20px
+    font-size 90%
+    
+    a
+        color #fff
+        position relative
+        
+        &:hover
+            text-decoration underline
+        
+        img
+            position absolute
+            width 50px
+            top 0
+            margin-top -15px
+            left -70px
+        
+        span
+            font-weight 600
