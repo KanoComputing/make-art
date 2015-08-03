@@ -81,7 +81,7 @@ color: #693A17\
 }\
 .ace-dawn .ace_storage {\
 font-style: italic;\
-color: #A71D5D\
+color: lightblue\
 }\
 .ace-dawn .ace_string {\
 color: #0B6125\
@@ -98,7 +98,7 @@ color: #5A525F\
 color: #19356D\
 }\
 .ace-dawn .ace_variable {\
-color: #234A97\
+color: lightblue\
 }\
 .ace-dawn .ace_indent-guide {\
 background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWNgYGBgYLh/5+x/AAizA4hxNNsZAAAAAElFTkSuQmCC) right repeat-y\
