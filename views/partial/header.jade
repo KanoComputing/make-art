@@ -28,10 +28,6 @@ header: .page-width
                 .avatar: img(ng-src='http://avatar.kano.me/username/{{ user.username }}.png')
                 | {{ user.username }}
 
-        li(ng-if='!offline && loggedIn'): a(href='#', ng-click='logout()')
-            i.icon-logout
-            |  Logout
-
         li: button.close(ng-click='shutdown()', ng-if='offline'): i.icon-cross
 
 .summercamp
