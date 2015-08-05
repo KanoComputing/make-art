@@ -139,6 +139,68 @@
 							content '\e621'
 							margin-top 0
 							background darken(color-grey-light, 10)
+	.challenge-info
+
+		.pic 
+			display inline-block
+			background-color #fff
+			width 40%
+			height 401px
+		.detail
+			font-family bariol
+			display inline-block
+			box-sizing border-box
+			width 59%
+			vertical-align top
+			padding 10px 0 0 25px
+			color #ada799
+			h4
+				text-transform uppercase
+				font-size 12px
+				font-weight bold
+				margin 0 0 10px 0
+				color #ada799
+
+			h3 
+				color #fff
+				margin 0 0 10px 0
+			.description
+				p
+					font-size 17px
+					line-height 27px
+					min-height 180px
+			span.difficulty
+				font-size 12px
+				margin 10 0 0 0
+
+			.difficulty-level
+				display block
+				margin 0 0 20px 0
+				padding 0
+				span
+					display inline-block
+					background-color white
+					width 40px
+					height 40px
+					&.l-easy
+						background url("/assets/summercamp/off_easy.png") no-repeat
+					&.l-medium
+						background url("/assets/summercamp/off_medium.png") no-repeat
+					&.l-hard
+						background url("/assets/summercamp/off_hard.png") no-repeat
+				&[data-level="l-1"]
+					span
+						&.l-easy
+							background url("/assets/summercamp/easy.png") no-repeat
+				&[data-level="l-2"]
+					span
+						&.l-medium
+							background url("/assets/summercamp/medium.png") no-repeat
+				&[data-level="l-3"]
+					span
+						&.l-hard
+							background url("/assets/summercamp/hard.png") no-repeat
+
 
 .modal-register
 	h3
@@ -175,3 +237,5 @@
 		
 		&.block
 			width 100%
+
+

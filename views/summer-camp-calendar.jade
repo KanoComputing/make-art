@@ -4,6 +4,25 @@
         i.icon-menu
         | Summer Camp Calendar
 
+    .challenge-info(ng-if='selectedSummerChallenge !== null')
+            .pic
+                img(src='{{selectedSummerChallengeObj.img}}')
+            .detail
+
+                h4 August {{selectedSummerChallenge + 1 | ordinal}}
+                h3 {{ selectedSummerChallengeObj.title }}
+
+                div.description(ng-bind-html='selectedSummerChallengeObj.description | markdown ')
+                span.difficulty DIFFICULTY
+                .difficulty-level(data-level='{{ "l-" + selectedSummerChallengeObj.difficulty }}')
+
+                    span.l-easy
+                    span.l-medium
+                    span.l-hard
+                a.button(ng-if="!started" ng-href='/summer-camp/challenge/{{ selectedSummerChallenge }}') Start Making
+                a.button.button-success(ng-if="started" ng-href='/summer-camp/challenge/{{ selectedSummerChallenge }}') Continue
+                a.button(ng-if="started" ng-href='/summer-camp/challenge/{{ selectedSummerChallenge }}')
+                    span.icon-reset
     ul.calendar
         li.weekdays(ng-repeat='weekday in weekdays') {{weekday}}
         li.day(ng-repeat='day in range(21)') 
@@ -16,17 +35,4 @@
                 .detail
                     h5 Challenge {{ day }}
 
-.modal-overlay(ng-if='selectedSummerChallenge')
-    .modal-inner.modal-challenge-info.center
 
-        .cover(style='background-image: url("/assets/challenges/playground.png")')
-
-        button.close(ng-click='deselectedChallenge()'): i.icon-cross
-
-        .detail
-
-            h3 Day {{ selectedSummerChallenge }}
-
-            p.description Challenge {{ selectedSummerChallenge }}
-
-            a.button.button-success(ng-href='/summer-camp/challenge/{{ selectedSummerChallenge }}') Start
