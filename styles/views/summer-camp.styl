@@ -228,6 +228,68 @@
 						&.l-hard
 							background url("/assets/summercamp/hard.png") no-repeat
 
+	.summercamp-leaderboard
+		background: #5c5951
+		padding: 40px
+		color: #8d887c
+		font-weight: bold
+
+		h1
+			color: white
+			text-align: center
+
+		h2
+			text-transform: uppercase
+			text-align: center
+
+		.leaderboard
+			padding: 0
+			.leaderboard-entry
+				list-style-type: none;
+				height: 155px
+				line-height: 155px
+				position: relative
+				background: white
+				margin: 18px 0
+				font-size: 30px
+				border-radius: 5px
+				overflow: hidden;
+
+				&:nth-of-type(1) .position
+					background: linear-gradient(-45deg, #fbd951 50%, #fce675 50%);
+
+				&:nth-of-type(2) .position
+					background: linear-gradient(-45deg, #ededed 50%, #e3e3e3 50%);
+
+				&:nth-of-type(3) .position
+					background: linear-gradient(-45deg, #ffc39b 50%, #ffb98d 50%);
+
+
+				.position
+					float: left
+					height: 155px
+					width: 155px
+					background: #b7ae97
+					font-size: 40px
+					text-align: center
+				.detail
+					width: 100%
+					*
+						margin-left: 30px
+					.avatar
+						vertical-align: middle
+						text-align: center
+						width: 100px
+						height: 100px
+					.user
+						color: black
+					.challenges-complete
+						float: right
+						margin-right: 155px
+					.points
+						float: right
+						margin-right: 80px
+
 .modal-register
 	h3
 		smooth-font()
