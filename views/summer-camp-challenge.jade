@@ -6,7 +6,7 @@
 
             h3 Challenge {{ id }}: {{ challenges[ id - 1 ].title }}
             h4 {{ challenges[ id - 1 ].description }}
-            button.button-success(ng-click='start()') Start
+            button.button-success(ng-click='start()') Start 
 
         .inner(ng-if='started && !completed')
 
@@ -21,10 +21,12 @@
             h3 {{ summerChallenges[ id - 1 ].title }}
             h4.hint(ng-bind-html='hint | markdown', ng-if='hint')
 
-        .inner.center(ng-if='completed && !fatherDay')
+        .inner.center(ng-if='completed')
             h4 {{ successMessage() }}
-            a.button.button-success(ng-if='hasNext', ng-href='/summercamp/challenge/{{id + 1}}') Next &rsaquo;
-            a.button.button-success(ng-if='!hasNext', ng-click='openFinishedGame()') Done &rsaquo;
+
+            a.action.button.button-success(ng-click='setOpenModal("share")') 
+                i.icon-share 
+                span Share
 
     .row(ng-if='started')
         .col-6.editor-wrap
@@ -49,7 +51,8 @@
                 mode='"challenge"',
                 sharing='completed',
                 ng-class='{ disabled: !started }',
-                ng-show='!showSolution'
+                ng-show='!showSolution',
+                open-modal-override='openModal'
                 )
 
             editor.solution(
