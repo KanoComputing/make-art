@@ -5,8 +5,8 @@
         | Summer Camp is starting in
 
     .countdown.center(ng-if='!loading')
-        span.days {{ days }} {{ days == 1 ? 'Day' : 'Days' }}
-        //- span.time {{ hours + ' : ' + minutes + ' : ' + seconds }}
+        span.days(ng-if='days') {{ days }} {{ days == 1 ? 'Day' : 'Days' }}
+        span.days(ng-if='!days') {{ hours + ' : ' + minutes + ' : ' + seconds }}
         h3 Come back August 10th for challenges!
 
     //- .center
