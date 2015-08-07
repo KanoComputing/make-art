@@ -21,8 +21,7 @@
                     span.l-hard
                 a.button(ng-if="!started" ng-href='/summercamp/challenge/{{ selectedSummerChallenge + 1 }}') Start Making
                 a.button.button-success(ng-if="started" ng-href='/summercamp/challenge/{{ selectedSummerChallenge + 1 }}') Continue
-                a.button(ng-if="started" ng-href='/summercamp/challenge/{{ selectedSummerChallenge + 1 }}')
-                    span.icon-reset
+
     ul.calendar
         li.weekdays(ng-repeat='weekday in weekdays') {{weekday}}
         li.day(ng-repeat='day in range(21)') 
