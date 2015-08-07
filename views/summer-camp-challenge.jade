@@ -1,0 +1,83 @@
+.page-challenge: .page-width
+
+    .workspace-header(ng-class='(animationClass || "") + (completed ? " success" : "") + (fatherDay ? " father-day" : "")')
+
+        .inner.center(ng-if='!started')
+
+            h3 Challenge {{ id }}: {{ challenges[ id - 1 ].title }}
+            h4 {{ challenges[ id - 1 ].description }}
+            button.button-success(ng-click='start()') Start 
+
+        .inner(ng-if='started && !completed')
+
+            a.button.button-hint.large.right(
+                ng-click='toggleSolution()',
+                ng-class='{ active: showSolution, "animate-pulse-highlight": highlightHelp }'
+                )
+                i.icon-hint
+                | Hint
+
+            progress-circle(value='step', max='content.steps.length')
+            h3 {{ summerChallenges[ id - 1 ].title }}
+            h4.hint(ng-bind-html='hint | markdown', ng-if='hint')
+
+        .inner.center(ng-if='completed')
+            h4 {{ successMessage() }}
+
+            a.action.button.button-success(ng-click='setOpenModal("share")') 
+                i.icon-share 
+                span Share
+
+    .row(ng-if='started')
+        .col-6.editor-wrap
+
+            editor(
+                workspace,
+                ng-model='challenge.code',
+                ng-class='{ completed: completed }',
+                ng-change='validate()',
+                editable='started',
+                start-at-line='content.startAt'
+                tabbed='true',
+                controls='true'
+                )
+
+        .col-6.tutorial-wrap
+
+            display(
+                reset-fn='restart'
+                source='challenge.code',
+                workspace,
+                mode='"challenge"',
+                sharing='completed',
+                ng-class='{ disabled: !started }',
+                ng-show='!showSolution',
+                open-modal-override='openModal'
+                )
+
+            editor.solution(
+                ng-if='showSolution && solution',
+                ng-model='solution',
+                title='"Solution"'
+                ) {{ solution }}
+
+    .modal-overlay(ng-if='gameCompleteOpen')
+        .modal-inner.split-modal.challenge-complete.center
+
+            //- button.close(ng-click='clocseFinishedGame()'): i.icon-cross
+
+            h3 Challenges complete
+
+            h4 Now make something new!
+
+            .logo-title
+
+            .center.bottom-section
+
+                a.button.secondary.large(ng-href='/challenges')
+                    i.icon-menu
+                    |  Menu
+
+                a.button.large(ng-href='/playground')
+                    i.icon-game
+                    |  Playground
