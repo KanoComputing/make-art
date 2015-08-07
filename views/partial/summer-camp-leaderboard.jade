@@ -3,7 +3,13 @@
     h2 Can you reach the top?
 
     ol.leaderboard
-        li.leaderboard-entry(ng-repeat='leaderboard_entry in leaderboard_entries')
+        li.leaderboard-entry.header
+            .position Rank
+            .detail
+                span.points Points
+                span.challenges-complete Challenges
+        li.leaderboard-entry(ng-repeat='leaderboard_entry in leaderboard_entries',
+                             ng-class='{user: leaderboard_entry.isUser}')
             .position {{ leaderboard_entry.rank }}
             .detail
                 img.avatar(ng-src="{{ leaderboard_entry.avatar }}")

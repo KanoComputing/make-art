@@ -273,12 +273,19 @@ challenge_icon(img)
 		font-weight: bold
 
 		h1
+			font-size: 42px
 			color: white
 			text-align: center
+			font-weight: bold
+			margin-bottom: 10px
 
 		h2
+			font-size: 20px
+			color: #a8a394
 			text-transform: uppercase
 			text-align: center
+			margin-bottom: 50px
+			font-weight: bold
 
 		.leaderboard
 			padding: 0
@@ -293,25 +300,55 @@ challenge_icon(img)
 				border-radius: 5px
 				overflow: hidden;
 
-				&:nth-of-type(1) .position
-					background: linear-gradient(-45deg, #fbd951 50%, #fce675 50%);
+				&.header
+					height: 30px
+					line-height: 30px
+					margin: 15px 0
+					font-size: 16px
+					background: none
+					text-transform: uppercase
+					color: #a8a394
+
+					.position
+						font-size: 16px
+						color: #a8a394
+						background: none
+
+					.detail
+						color: #a8a394
+
+						.challenges-complete
+							position: relative
+							left: 35px
 
 				&:nth-of-type(2) .position
-					background: linear-gradient(-45deg, #ededed 50%, #e3e3e3 50%);
+					color: #a19248
+					background: linear-gradient(-45deg, #fbd951 50%, #fce675 50%);
 
 				&:nth-of-type(3) .position
+					color: #979797
+					background: linear-gradient(-45deg, #ededed 50%, #e3e3e3 50%);
+
+				&:nth-of-type(4) .position
+					color: #a37558
 					background: linear-gradient(-45deg, #ffc39b 50%, #ffb98d 50%);
+
+				&.user .position
+					color: #617f2c
+					background: #9bc94b
 
 
 				.position
 					float: left
 					height: 155px
 					width: 155px
+					color: #736d5e
 					background: #b7ae97
 					font-size: 40px
 					text-align: center
 				.detail
 					width: 100%
+					color: #8b8b8b
 					*
 						margin-left: 30px
 					.avatar
