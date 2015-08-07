@@ -9,7 +9,7 @@
                 img(src='{{selectedSummerChallengeObj.img}}')
             .detail
 
-                h4 August {{selectedSummerChallenge + 1 | ordinal}}
+                h4 August {{selectedSummerChallengeDay| ordinal}}
                 h3 {{ selectedSummerChallengeObj.title }}
 
                 div.description(ng-bind-html='selectedSummerChallengeObj.description | markdown ')
