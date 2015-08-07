@@ -1,0 +1,18 @@
+.summercamp-leaderboard(ng-controller='SummerCampLeaderboardController')
+    h1 Leaderboard
+    h2 Can you reach the top?
+
+    ol.leaderboard
+        li.leaderboard-entry.header
+            .position Rank
+            .detail
+                span.points Points
+                span.challenges-complete Challenges
+        li.leaderboard-entry(ng-repeat='leaderboard_entry in leaderboard_entries',
+                             ng-class='{user: leaderboard_entry.isUser}')
+            .position {{ leaderboard_entry.rank }}
+            .detail
+                img.avatar(ng-src="{{ leaderboard_entry.avatar }}")
+                span.user {{ leaderboard_entry.username }}
+                span.points {{ leaderboard_entry.xp }}
+                span.challenges-complete {{ leaderboard_entry.challengeNo - 1 }}
