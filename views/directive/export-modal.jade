@@ -1,7 +1,7 @@
 .modal-overlay(ng-if='open'): .modal-inner.export-menu
 
-    button.close(ng-click='close()') &times;
-    h2.center {{ action }} drawing
+    button.close(ng-click='close()' ng-if='!category') &times;
+    h2.center(ng-if='!category') {{ action }} drawing
 
     .row
 
@@ -14,12 +14,22 @@
             .col-6
                 input.filename(ng-model='meta.title', placeholder='Title', type='text', required)
                 textarea.description(ng-model='meta.description', placeholder='Description')
+                a.facebook-share(ng-if='category' href='#')
+                    i.icon-facebook
+                    |   Share on Facebook
+                a.email-share(ng-if='category' href='#')
+                    i.icon-email
+                    |   Send as email
 
                 .buttons
 
                     if offline
                         button.export-wallpaper(ng-click='exportWallpaper()', ng-disabled='exportForm.$invalid', ng-class='{ "disabled" : exportForm.$invalid }') Save Wallpaper
 
-                    button.button-success(type='submit', ng-disabled='exportForm.$invalid', ng-class='{ "disabled" : exportForm.$invalid }')
+                    button.button-success(type='submit', ng-disabled='exportForm.$invalid', ng-class='{ "disabled" : exportForm.$invalid }' ng-if='!category')
                         i(ng-class='"icon-" + action')
                         |  {{ action }}
+
+                    button.button-success(type='submit', ng-disabled='exportForm.$invalid', ng-class='{ "disabled" : exportForm.$invalid }' ng-if='category')
+                        span Finish &amp; Share
+                        span.xp +5xp
