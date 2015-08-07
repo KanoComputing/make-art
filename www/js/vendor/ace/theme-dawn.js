@@ -38,7 +38,7 @@ background: rgba(36, 99, 180, 0.12)\
 background-color : #dcdcdc\
 }\
 .ace-dawn .ace_marker-layer .ace_selected-word {\
-border: 1px solid rgba(39, 95, 255, 0.30)\
+border-bottom: 1px solid lightblue\
 }\
 .ace-dawn .ace_invisible {\
 color: rgba(75, 75, 126, 0.50)\
