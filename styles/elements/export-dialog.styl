@@ -23,17 +23,36 @@
 
     textarea
         height 96px
+        margin-bottom 5px
 
     .buttons
         text-align right
+        margin-top 20px
 
         button
             display inline-block
             margin-bottom 0
-            padding 10px 19px
+            padding 20px
+            
+            .xp
+                margin-left 10px
+                color #ddd
 
         &:not(:first-of-type)
             margin-top 10px
 
     input:invalid ~ .button
         background color-disabled
+    
+    .facebook-share, .email-share
+        font-size 14px
+        text-decoration underline
+        text-transform none
+        font-weight 600
+        font-smoothing antialiased
+        text-align left
+        i
+            margin-right 10px
+        
+    .facebook-share
+        color #3C599B
