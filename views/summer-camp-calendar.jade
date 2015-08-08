@@ -42,7 +42,7 @@
                     )
                     div(class='cover {{additionalBgClass(day)}}')
                         span  {{day + 10}}
-                    h5  {{currentDay(day) || !isLocked(day) ?  summerCampChallenges[day].short_title || summerCampChallenges[day].title : "&nbsp;"}}
+                    h5  {{summerCampChallenges[day].short_title || summerCampChallenges[day].title || "&nbsp;"}}
         span {{ days }} {{ days == 1 ? 'day' : 'days' }}
         span {{ hours }} {{ hours == 1 ? 'hour' : 'hours' }}
         span {{ minutes }} {{ minutes == 1 ? 'second' : 'minutes' }}
