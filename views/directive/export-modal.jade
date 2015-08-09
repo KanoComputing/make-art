@@ -14,13 +14,6 @@
             .col-6
                 input.filename(ng-model='meta.title', placeholder='Title', type='text', required)
                 textarea.description(ng-model='meta.description', placeholder='Description')
-                a.facebook-share(ng-if='category' href='#')
-                    i.icon-facebook
-                    | Share on Facebook
-                a.email-share(ng-if='category' href='#')
-                    i.icon-email
-                    | Send as email
-
                 .buttons
 
                     if offline
