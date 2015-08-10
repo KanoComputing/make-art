@@ -24,7 +24,7 @@
         .inner.center(ng-if='completed')
             h4 {{ successMessage() }}
 
-            a.action.button.button-success(ng-click='setOpenModal("share")') 
+            a.action.button.button-success(ng-click='setOpenModal()') 
                 span Finished (+5 XP)
 
     .row(ng-if='started')
@@ -50,8 +50,7 @@
                 mode='"challenge"',
                 sharing='completed',
                 ng-class='{ disabled: !started }',
-                ng-show='!showSolution',
-                open-modal-override='openModal'
+                ng-show='!showSolution'
                 )
 
             editor.solution(
