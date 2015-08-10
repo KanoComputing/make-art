@@ -25,6 +25,7 @@
 	div.sc-calendar
 		background-color white
 		border-radius 5px
+		padding 20px
 		h2
 			color black
 			text-align center
@@ -39,11 +40,27 @@
 			margin 0
 			font-weight bold
 			
+	.weekdays_list
+		list-style none
+		padding 0
+		margin 20px 0
+		.weekdays
+				box-sizing border-box
+				display inline-block
+				width 14.2857%
+				color color-grey-darker
+				padding 10px 0
+				text-align center
+				text-transform uppercase
 			
 	.calendar
 		list-style none
 		padding 0
 		margin 20px 0
+		border 3px solid #cecece
+		border-radius 3px
+		display inline-block
+		width 100%
 		
 		li
 			box-sizing border-box
@@ -51,19 +68,11 @@
 			width 14.2857%
 			
 			
-		.weekdays
-			
-			color color-grey-darker
-			padding 10px 0
-			text-align center
-			text-transform uppercase
+		
 			
 		.day
 			background-color white
 			float left
-			box-shadow 0 0 0 0.1px darken(color-grey-darker, 2)
-
-				
 			&:nth-child(7n+6), &:nth-child(7n)
 				background-color white
 				
@@ -80,17 +89,14 @@
 					background-repeat none
 					height 90px 
 					span
-						border-radius(0 0 0 5px)
 						display block
 						padding 4px 10px
 						position absolute
-						right 0
+						left 0
 						top 0
-						background-color #fff
-						color color-orange
+						color color-grey
 						font-size 1.2rem
-					&.challenge_1 
-						bg-image('assets/summercamp/ch_icons/')
+					
 
 
 				.detail
@@ -107,23 +113,37 @@
 						color color-grey-darker
 
 				&.current
+					&:hover
+						background-color color-orange
+						border 3px solid color-orange
+						border-radius 3px
+						h5, span
+							color white
+
 					.cover
 						opacity .8
+						&.challenge_1 
+							bg-image('summercamp/ch_icons/campsign', 70px 70px, false, no-repeat)
+						&.challenge_2 
+							bg-image('summercamp/ch_icons/location', 70px 70px, false, no-repeat)
+						&.challenge_3 
+							bg-image('summercamp/ch_icons/setcamp', 70px 70px, false, no-repeat)
+						&.challenge_4 
+							bg-image('summercamp/ch_icons/flag', 70px 70px, false, no-repeat)
+						&.challenge_5 
+							bg-image('summercamp/ch_icons/badge', 70px 70px, false, no-repeat)
+						&.challenge_6 
+							bg-image('summercamp/ch_icons/fire', 70px 70px, false, no-repeat)
+						&.challenge_7
+							bg-image('summercamp/ch_icons/ghost', 70px 70px, false, no-repeat)
 				
 				&.completed
-			
+					bg-image('summercamp/ch_icons/completed', 70px 70px, false, no-repeat)
+					background-position center 22px
+					
 					&:hover
 						background-color color-green
 				
-					.detail
-						
-						h5
-							color #fff
-							
-							&:after
-								content '\e61d'
-								background darken(color-green, 5)
-						
 				&.locked
 					filter(grayscale(100%))
 					cursor default
@@ -137,9 +157,27 @@
 					
 					&:hover
 						background-color color-orange
-					
+						border 3px solid color-orange
+						border-radius 3px
+						h5, span
+							color white
+
 					.cover
 						opacity .5
+						&.challenge_1 
+							bg-image('summercamp/ch_icons/campsign', 70px 70px, false, no-repeat)
+						&.challenge_2 
+							bg-image('summercamp/ch_icons/location', 70px 70px, false, no-repeat)
+						&.challenge_3 
+							bg-image('summercamp/ch_icons/setcamp', 70px 70px, false, no-repeat)
+						&.challenge_4 
+							bg-image('summercamp/ch_icons/flag', 70px 70px, false, no-repeat)
+						&.challenge_5 
+							bg-image('summercamp/ch_icons/badge', 70px 70px, false, no-repeat)
+						&.challenge_6 
+							bg-image('summercamp/ch_icons/fire', 70px 70px, false, no-repeat)
+						&.challenge_7
+							bg-image('summercamp/ch_icons/ghost', 70px 70px, false, no-repeat)
 					
 	.challenge-info
 

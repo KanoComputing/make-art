@@ -29,15 +29,16 @@
     div.sc-calendar
         h2 Camp Calendar
         h4 August
-        ul.calendar
+        ul.weekdays_list
             li.weekdays(ng-repeat='weekday in weekdays') {{weekday}}
+        ul.calendar
             li.day(ng-repeat='day in range(21)') 
                 a(
                     ng-click='selectChallenge(day)',
                     ng-class='{ locked: isLocked(day) && !currentDay(day), completed: isCompleted(day), current: isCurrent(day), unlocked: currentDay(day) }',
                     )
-                    {{summerc}}
-                    .cover(ng_class='{".challenge" + day}')
+
+                    div(class='cover {{additionalBgClass(day)}}')
                         span  {{day + 10}}
                     .detail
                         h5  {{currentDay(day) || !isLocked(day) ?  summerCampChallenges[day].short_title || summerCampChallenges[day].title : "&nbsp;"}}
