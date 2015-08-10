@@ -183,7 +183,7 @@
                 "args"        : [
                     [ "min", "number", "The minimum value", true ],
                     [ "max", "number", "The maximum value", true ],
-                    [ "float", "bool", "Set the true to return decimal values", false ]
+                    [ "float", "bool", "Set to true to return decimal values", false ]
                 ],
                 "example"     : "random 5, 10",
                 "defaults": [ 5, 10 ]
