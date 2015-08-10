@@ -18,7 +18,6 @@
                 "description" : "Draw an ellipse",
                 "args"        : [
                     [ "radius-x", "number", "The ellipse width", true ],
-                    [ "radius-x", "number", "The ellipse width", true ],
                     [ "radius-y", "number", "The ellipse height", true ]
                 ],
                 "defaults": [ 50, 100 ]
@@ -52,7 +51,7 @@
                     [ "end", "number", "The end point (between 0 to 2)", true ],
                     [ "close", "bool", "Close the shape", false ]
                 ],
-                "defaults": [ 100, 1, 2, true, true ]
+                "defaults": [ 100, 1, 2, true ]
             },
             {
                 "call"        : "polygon",
@@ -184,7 +183,7 @@
                 "args"        : [
                     [ "min", "number", "The minimum value", true ],
                     [ "max", "number", "The maximum value", true ],
-                    [ "float", "bool", "Set the true to return decimal values", false ]
+                    [ "float", "bool", "Set to true to return decimal values", false ]
                 ],
                 "example"     : "random 5, 10",
                 "defaults": [ 5, 10 ]
