@@ -1,9 +1,5 @@
 .summer-camp: .page-width
 
-    h3.page-title
-        i.icon-menu
-        | Summer Camp Calendar
-
     .challenge-info(ng-if='selectedSummerChallenge !== null')
             .pic
                 img(src='{{selectedSummerChallengeObj.img}}')
@@ -13,27 +9,41 @@
                 h3 {{ selectedSummerChallengeObj.title }}
 
                 div.description(ng-bind-html='selectedSummerChallengeObj.description | markdown ')
-                span.difficulty DIFFICULTY
-                .difficulty-level(data-level='{{ "l-" + selectedSummerChallengeObj.difficulty }}')
+                .diff-container
+                    span.cont-label DIFFICULTY
+                    .difficulty-level(data-level='{{ "l-" + selectedSummerChallengeObj.difficulty }}')
 
-                    span.l-easy
-                    span.l-medium
-                    span.l-hard
-                a.button(ng-if="!started" ng-href='/summercamp/challenge/{{ selectedSummerChallenge + 1 }}') Start Making
-                a.button.button-success(ng-if="started" ng-href='/summercamp/challenge/{{ selectedSummerChallenge + 1 }}') Continue
+                        span.l-easy
+                        span.l-medium
+                        span.l-hard
+                .rewards-container 
+                    span.cont-label(ng-if='selectedSummerChallengeObj.rewards') REWARDS
+                    .rewards-icons(ng-if='selectedSummerChallengeObj.rewards')
+                        a(class='rew-wallpaper', ng-if='selectedSummerChallengeObj.rewards.wallpaper', href='http://www.kano.me/summercamp-faq#extracontent', title='This special content is exclusive to Kano Kit owners. To access, turn on your kit and make sure it is connected to WiFi.')
+                        a(class='rew-outfit',  ng-if='selectedSummerChallengeObj.rewards.outfit', href='http://www.kano.me/summercamp-faq#extracontent', title='This special content is exclusive to Kano Kit owners. To access, turn on your kit and make sure it is connected to WiFi.')
 
-    ul.calendar
-        li.weekdays(ng-repeat='weekday in weekdays') {{weekday}}
-        li.day(ng-repeat='day in range(21)') 
-            a(
-                ng-click='selectChallenge(day)',
-                ng-class='{ locked: isLocked(day) && !currentDay(day), completed: isCompleted(day), current: isCurrent(day), unlocked: currentDay(day) }',
-                )
-                .cover(style='background-image: url("/assets/challenges/playground.png")')
-                    span  {{day + 1}}
-                .detail
-                    h5 Challenge {{ day + 1 }}
-    span {{ days }} {{ days == 1 ? 'day' : 'days' }}
-    span {{ hours }} {{ hours == 1 ? 'hour' : 'hours' }}
-    span {{ minutes }} {{ minutes == 1 ? 'second' : 'minutes' }}
-    span {{ seconds }} {{ seconds == 1 ? 'second' : 'seconds' }}
+                .btn-container
+                    a.button(ng-if="!started" ng-href='/summercamp/challenge/{{ selectedSummerChallenge + 1 }}') Start Making
+                    a.button.button-success(ng-if="started" ng-href='/summercamp/challenge/{{ selectedSummerChallenge + 1 }}') Continue
+
+    div.sc-calendar
+        h2 Camp Calendar
+        h4 August
+        ul.weekdays_list
+             li.weekdays(
+                ng-repeat='weekday in weekdays',
+                ng-class='{ current: isCurrentDayIndex($index) }'
+                ) {{weekday}}
+        ul.calendar
+            li.day(ng-repeat='day in range(21)') 
+                a(
+                    ng-click='selectChallenge(day)',
+                    ng-class='{ locked: isLocked(day) && !currentDay(day), completed: isCompleted(day), current: isCurrent(day), unlocked: currentDay(day) }',
+                    )
+                    div(class='cover {{additionalBgClass(day)}}')
+                        span  {{day + 10}}
+                    h5  {{summerCampChallenges[day].short_title || summerCampChallenges[day].title || "&nbsp;"}}
+        span {{ days }} {{ days == 1 ? 'day' : 'days' }}
+        span {{ hours }} {{ hours == 1 ? 'hour' : 'hours' }}
+        span {{ minutes }} {{ minutes == 1 ? 'second' : 'minutes' }}
+        span {{ seconds }} {{ seconds == 1 ? 'second' : 'seconds' }}
