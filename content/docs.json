@@ -18,7 +18,6 @@
                 "description" : "Draw an ellipse",
                 "args"        : [
                     [ "radius-x", "number", "The ellipse width", true ],
-                    [ "radius-x", "number", "The ellipse width", true ],
                     [ "radius-y", "number", "The ellipse height", true ]
                 ],
                 "defaults": [ 50, 100 ]
