@@ -51,7 +51,7 @@
                     [ "end", "number", "The end point (between 0 to 2)", true ],
                     [ "close", "bool", "Close the shape", false ]
                 ],
-                "defaults": [ 100, 1, 2, true, true ]
+                "defaults": [ 100, 1, 2, true ]
             },
             {
                 "call"        : "polygon",
