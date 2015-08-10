@@ -16,7 +16,7 @@
                         span.l-easy
                         span.l-medium
                         span.l-hard
-                .rewards-container 
+                .rewards-container
                     span.cont-label(ng-if='selectedSummerChallengeObj.rewards') REWARDS
                     .rewards-icons(ng-if='selectedSummerChallengeObj.rewards')
                         a(class='rew-wallpaper', ng-if='selectedSummerChallengeObj.rewards.wallpaper', href='http://www.kano.me/summercamp-faq#extracontent', title='This special content is exclusive to Kano Kit owners. To access, turn on your kit and make sure it is connected to WiFi.')
@@ -35,7 +35,7 @@
                 ng-class='{ current: isCurrentDayIndex($index) }'
                 ) {{weekday}}
         ul.calendar
-            li.day(ng-repeat='day in range(21)') 
+            li.day(ng-repeat='day in range(21)')
                 a(
                     ng-click='selectChallenge(day)',
                     ng-class='{ locked: isLocked(day) && !currentDay(day), completed: isCompleted(day), current: isCurrent(day), unlocked: currentDay(day) }',

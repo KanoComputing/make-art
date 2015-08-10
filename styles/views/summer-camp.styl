@@ -1,7 +1,7 @@
 challenge_icon(img)
 	&.challenge_{img}
 		bg-image('summercamp/ch_icons/' + img, 70px 70px, false, no-repeat)
-		
+
 .summer-camp
 	
 	.countdown
@@ -26,7 +26,7 @@ challenge_icon(img)
 			display block
 			font-size 6em
 			margin-bottom 20px
-			
+
 	div.sc-calendar
 		background-color white
 		border-radius 5px
@@ -37,19 +37,19 @@ challenge_icon(img)
 			margin 0 0 0 0
 			padding 20px 0 0 0
 			font-weight bold
-		h4 
+		h4
 			color black
 			text-align center
 			text-transform uppercase
 			font-size 14px
 			margin 0
 			font-weight bold
-			
+
 	.weekdays_list
 		list-style none
 		padding 0
 		margin 20px 0 0 0
-		
+
 		.weekdays
 				box-sizing border-box
 				display inline-block
@@ -59,10 +59,10 @@ challenge_icon(img)
 				text-align center
 				text-transform uppercase
 				font-size 0.8rem
-				
+
 				&.current
 					color color-grey-darker
-			
+
 	.calendar
 		list-style none
 		padding 0
@@ -76,7 +76,7 @@ challenge_icon(img)
 			box-sizing border-box
 			display inline-block
 			width 14.2857%
-	
+
 		.day
 			background-color white
 			float left
@@ -92,7 +92,7 @@ challenge_icon(img)
 					background-position center 25px
 					background-size cover
 					background-repeat none
-					height 100px 
+					height 100px
 					
 					span
 						display block
@@ -102,11 +102,11 @@ challenge_icon(img)
 						top 0
 						color color-grey
 						font-size 1.2rem
-						
+
 					&.unknown
 						bg-image('summercamp/ch_icons/question', 70px 70px, false, no-repeat)
 					
-					for icon in 'campsign' 'location' 'setcamp' 'flag' 'badge' 'fire' 'ghost' 
+					for icon in 'campsign' 'location' 'setcamp' 'flag' 'badge' 'fire' 'ghost'
 						challenge_icon(icon)
 					
 				.detail
@@ -141,13 +141,13 @@ challenge_icon(img)
 					
 					&:hover
 						background-color color-green
-				
+
 				&.locked
 					filter(grayscale(100%))
 					cursor default
-					border 3px solid color-grey 
+					border 3px solid color-grey
 					opacity .3
-						
+
 				&.unlocked
 					
 					&:hover
@@ -159,7 +159,7 @@ challenge_icon(img)
 
 					.cover
 						opacity .5
-					
+
 	.challenge-info
 
 		.pic 
@@ -183,7 +183,7 @@ challenge_icon(img)
 				margin 10 0 0 0
 				display block
 				color white
-			div 
+			div
 				border none
 				margin 10px 0 0 0
 				padding 0
@@ -192,7 +192,7 @@ challenge_icon(img)
 				width 45%
 				text-align right
 				vertical-align top
-				padding 18px 0 0 0 
+				padding 18px 0 0 0
 			div.rewards-container
 				display inline-block
 				width 25%
@@ -205,15 +205,15 @@ challenge_icon(img)
 					margin-right 15px
 				a.rew-wallpaper
 					bg-image('summercamp/wallpaper', 40px 40px, false, no-repeat)
-					
+
 				a.rew-outfit
 					bg-image('summercamp/suit', 40px 40px, false, no-repeat)
-					
-				
+
+
 			div.diff-container
 				display inline-block
 				width 25%
-			
+
 				.difficulty-level
 					display inline-block
 					width 100%
@@ -227,13 +227,13 @@ challenge_icon(img)
 
 						&.l-easy
 							bg-image('summercamp/off_easy', 40px 40px, false, no-repeat)
-							
+
 						&.l-medium
 							bg-image('summercamp/off_medium', 40px 40px, false, no-repeat)
-							
+
 						&.l-hard
 							bg-image('summercamp/off_hard', 40px 40px, false, no-repeat)
-							
+
 
 					&[data-level="l-1"]
 						span
@@ -244,12 +244,12 @@ challenge_icon(img)
 						span
 							&.l-medium
 								bg-image('summercamp/medium', 40px 40px, false, no-repeat)
-								
+
 					&[data-level="l-3"]
 						span
 							&.l-hard
 								bg-image('summercamp/hard', 40px 40px, false, no-repeat)
-								
+
 			h4
 				text-transform uppercase
 				font-size 11px
