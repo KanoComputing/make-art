@@ -22,8 +22,18 @@
                         a(class='rew-wallpaper', ng-if='selectedSummerChallengeObj.rewards.wallpaper', href='http://www.kano.me/summercamp-faq#extracontent', title='This special content is exclusive to Kano Kit owners. To access, turn on your kit and make sure it is connected to WiFi.')
                         a(class='rew-outfit',  ng-if='selectedSummerChallengeObj.rewards.outfit', href='http://www.kano.me/summercamp-faq#extracontent', title='This special content is exclusive to Kano Kit owners. To access, turn on your kit and make sure it is connected to WiFi.')
 
-                .btn-container(ng-if="!isFutureChallenge") 
-                    a.button(ng-if="!started" ng-href='/summercamp/challenge/{{ selectedSummerChallenge + 1 }}') Start Making
+                .btn-container(ng-if="!isFutureChallenge || timeToNext") 
+                    .countdown-next(ng-if="timeToNext")
+                        i.icon-locked
+                        span
+                            {{timeToNext.h | zeropad }}
+                            span.sup H 
+                            {{timeToNext.m | zeropad }}
+                            span.sup M 
+                            {{timeToNext.s | zeropad }}
+                            span.sup S 
+
+                    a.button(ng-if="!started && !isFutureChallenge" ng-href='/summercamp/challenge/{{ selectedSummerChallenge + 1 }}') Start Making
                     a.button.button-success(ng-if="started" ng-href='/summercamp/challenge/{{ selectedSummerChallenge + 1 }}') Continue
 
     div.sc-calendar
