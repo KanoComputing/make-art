@@ -16,3 +16,5 @@
                 span.user {{ leaderboard_entry.username }}
                 span.points {{ leaderboard_entry.xp }}
                 span.challenges-complete {{ leaderboard_entry.challengeNo - 1 }}
+
+        .spinner(ng-if='!leaderboard_entries || !leaderboard_entries.length')
