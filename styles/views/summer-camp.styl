@@ -100,6 +100,20 @@ challenge_icon(img)
 				display block
 				position relative
 				text-align center
+				transition border .2s ease-out
+				
+				span
+					display block
+					padding 4px 10px
+					position absolute
+					left 0
+					top 0
+					color color-grey
+					font-size 1.2rem
+					font-weight bold
+					font-smoothing antialiased
+					z-index 2
+					transition color .3s ease-out
 				
 				.cover
 					position relative
@@ -107,21 +121,22 @@ challenge_icon(img)
 					background-size cover
 					background-repeat none
 					height 100px
-					
-					span
-						display block
-						padding 4px 10px
-						position absolute
-						left 0
-						top 0
-						color color-grey
-						font-size 1.2rem
 
 					&.unknown
 						bg-image('summercamp/ch_icons/question', 70px 70px, false, no-repeat)
 					
 					for icon in 'campsign' 'location' 'setcamp' 'flag' 'badge' 'fire' 'ghost'
 						challenge_icon(icon)
+				
+				.img-cover
+					position relative
+					background-position center center
+					background-size cover
+					background-repeat none
+					height 129px
+					opacity .5
+					z-index 1
+					transition opacity .3s ease-out
 					
 				.detail
 					padding 10px
@@ -137,6 +152,7 @@ challenge_icon(img)
 					text-align center
 					color color-grey-darker
 					padding 0 0 10px 0;
+					transition color .3s ease-out
 
 				&.current
 					
@@ -144,8 +160,11 @@ challenge_icon(img)
 						background-color color-orange
 						border 3px solid color-orange
 						border-radius 3px
+						transition background-color .3s ease-in, border .2s ease-in
+
 						h5, span
 							color white
+							transition color .3s ease-in
 
 					.cover
 						opacity .8
@@ -156,6 +175,11 @@ challenge_icon(img)
 					
 					&:hover
 						background-color color-green
+						transition background-color .3s ease-in
+						
+						.img-cover
+							opacity 1
+							transition opacity .3s ease-in
 
 				&.locked
 					filter(grayscale(100%))

@@ -50,9 +50,10 @@
                     ng-click='selectChallenge(day)',
                     ng-class='{ locked: isLocked(day) && !currentDay(day), completed: isCompleted(day), current: isCurrent(day), unlocked: currentDay(day) }',
                     )
-                    div(class='cover {{additionalBgClass(day)}}')
-                        span  {{day + 10}}
-                    h5  {{summerCampChallenges[day].short_title || summerCampChallenges[day].title || "&nbsp;"}}
+                    div(ng-if="!summerCampChallenges[day].cover_url" class='cover {{additionalBgClass(day)}}')
+                    span  {{day + 10}}
+                    h5(ng-if="!summerCampChallenges[day].cover_url")  {{summerCampChallenges[day].short_title || summerCampChallenges[day].title || "&nbsp;"}}
+                    .img-cover(ng-if="summerCampChallenges[day].cover_url" ng-style="{ 'background-image': 'url(' + summerCampChallenges[day].cover_url + ')' }")
         span {{ days }} {{ days == 1 ? 'day' : 'days' }}
         span {{ hours }} {{ hours == 1 ? 'hour' : 'hours' }}
         span {{ minutes }} {{ minutes == 1 ? 'second' : 'minutes' }}
