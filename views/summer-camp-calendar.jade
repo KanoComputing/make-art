@@ -2,7 +2,8 @@
     .deco-leaves
     .challenge-info(ng-if='selectedSummerChallenge !== null')
             .pic
-                img(src='{{selectedSummerChallengeObj.img}}')
+                img(src='{{selectedSummerChallengeObj.img}}' ng-if='!selectedSummerChallengeObj.cover_url')
+                img(ng-src='{{selectedSummerChallengeObj.cover_url}}' ng-if='selectedSummerChallengeObj.cover_url')
             .detail
 
                 h4 August {{selectedSummerChallengeDay| ordinal}}
@@ -28,9 +29,9 @@
                         span
                             {{timeToNext.h | zeropad }}
                             span.sup H 
-                            {{timeToNext.m | zeropad }}
+                            |   {{timeToNext.m | zeropad }}
                             span.sup M 
-                            {{timeToNext.s | zeropad }}
+                            |   {{timeToNext.s | zeropad }}
                             span.sup S 
 
                     a.button(ng-if="!started && !isFutureChallenge" ng-href='/summercamp/challenge/{{ selectedSummerChallenge + 1 }}') Start Making
