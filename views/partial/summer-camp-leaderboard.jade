@@ -10,9 +10,12 @@
                 span.challenges-complete Challenges
         li.leaderboard-entry(ng-repeat='leaderboard_entry in leaderboard_entries',
                              ng-class='{user: leaderboard_entry.isUser}')
+            a(href='http://world.kano.me/users/{{ leaderboard_entry.username }}')
             .position {{ leaderboard_entry.rank }}
             .detail
                 img.avatar(ng-src="{{ leaderboard_entry.avatar }}")
                 span.user {{ leaderboard_entry.username }}
                 span.points {{ leaderboard_entry.xp }}
                 span.challenges-complete {{ leaderboard_entry.challengeNo - 1 }}
+
+        .spinner(ng-if='!leaderboard_entries || !leaderboard_entries.length')
