@@ -16,7 +16,8 @@ var server = lr(),
     env = process.env.NODE_ENV === 'production' ? 'production' : 'development',
     production = env === 'production',
     segmentioId = process.env.SEGMENTIO_ID || null,
-    offline = process.env.OFFLINE === 'true';
+    offline = process.env.OFFLINE === 'true',
+    testmode = process.env.TEST_MODE === 'true';
 
 var paths = {
     views      : { watch: [ 'views/**/*.jade', 'content/**/*' ], src: 'views/**/*.jade', out: 'www' },
@@ -66,7 +67,8 @@ gulp.task('views', function () {
             env         : env,
             production  : production,
             offline     : offline,
-            segmentioId : segmentioId
+            segmentioId : segmentioId,
+            testmode    : testmode
         }, jadeHelpers)
     }))
     .on('error', handleError)
