@@ -48,10 +48,13 @@
 				box-sizing border-box
 				display inline-block
 				width 14.2857%
-				color color-grey-darker
+				color color-grey-lighter
 				padding 10px 0
 				text-align center
 				text-transform uppercase
+				font-size 0.8rem
+				&.current
+					color color-grey-darker
 			
 	.calendar
 		list-style none
@@ -66,16 +69,11 @@
 			box-sizing border-box
 			display inline-block
 			width 14.2857%
-			
-			
-		
-			
+	
 		.day
 			background-color white
 			float left
-			&:nth-child(7n+6), &:nth-child(7n)
-				background-color white
-				
+
 			a
 				border 3px solid #A6DA3B
 				display block
@@ -87,7 +85,7 @@
 					background-position center 25px
 					background-size cover
 					background-repeat none
-					height 90px 
+					height 100px 
 					span
 						display block
 						padding 4px 10px
@@ -96,21 +94,20 @@
 						top 0
 						color color-grey
 						font-size 1.2rem
-					
-
 
 				.detail
 					padding 10px
 					text-align center
-					h5
-						ellipsis()
-						smooth-font()
-						width 100%
-						font-weight bold
-						font-size 15px
-						overflow visible
-						text-align center
-						color color-grey-darker
+				h5
+					ellipsis()
+					smooth-font()
+					width 100%
+					font-weight bold
+					font-size 15px
+					overflow visible
+					text-align center
+					color color-grey-darker
+					padding 0 0 10px 0;
 
 				&.current
 					&:hover
@@ -139,7 +136,7 @@
 				
 				&.completed
 					bg-image('summercamp/ch_icons/completed', 70px 70px, false, no-repeat)
-					background-position center 22px
+					background-position center 25px
 					
 					&:hover
 						background-color color-green

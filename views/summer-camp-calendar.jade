@@ -30,18 +30,19 @@
         h2 Camp Calendar
         h4 August
         ul.weekdays_list
-            li.weekdays(ng-repeat='weekday in weekdays') {{weekday}}
+             li.weekdays(
+                ng-repeat='weekday in weekdays',
+                ng-class='{ current: isCurrentDayIndex($index) }'
+                ) {{weekday}}
         ul.calendar
             li.day(ng-repeat='day in range(21)') 
                 a(
                     ng-click='selectChallenge(day)',
                     ng-class='{ locked: isLocked(day) && !currentDay(day), completed: isCompleted(day), current: isCurrent(day), unlocked: currentDay(day) }',
                     )
-
                     div(class='cover {{additionalBgClass(day)}}')
                         span  {{day + 10}}
-                    .detail
-                        h5  {{currentDay(day) || !isLocked(day) ?  summerCampChallenges[day].short_title || summerCampChallenges[day].title : "&nbsp;"}}
+                    h5  {{currentDay(day) || !isLocked(day) ?  summerCampChallenges[day].short_title || summerCampChallenges[day].title : "&nbsp;"}}
         span {{ days }} {{ days == 1 ? 'day' : 'days' }}
         span {{ hours }} {{ hours == 1 ? 'hour' : 'hours' }}
         span {{ minutes }} {{ minutes == 1 ? 'second' : 'minutes' }}
