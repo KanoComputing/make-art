@@ -2,7 +2,8 @@
     .deco-leaves
     .challenge-info(ng-if='selectedSummerChallenge !== null')
             .pic
-                img(src='{{selectedSummerChallengeObj.img}}')
+                img(src='{{selectedSummerChallengeObj.img}}' ng-if='!selectedSummerChallengeObj.cover_url')
+                img(ng-src='{{selectedSummerChallengeObj.cover_url}}' ng-if='selectedSummerChallengeObj.cover_url')
             .detail
 
                 h4 August {{selectedSummerChallengeDay| ordinal}}
@@ -28,9 +29,9 @@
                         span
                             {{timeToNext.h | zeropad }}
                             span.sup H 
-                            {{timeToNext.m | zeropad }}
+                            |   {{timeToNext.m | zeropad }}
                             span.sup M 
-                            {{timeToNext.s | zeropad }}
+                            |   {{timeToNext.s | zeropad }}
                             span.sup S 
 
                     a.button(ng-if="!started && !isFutureChallenge" ng-href='/summercamp/challenge/{{ selectedSummerChallenge + 1 }}') Start Making
@@ -50,9 +51,10 @@
                     ng-click='selectChallenge(day)',
                     ng-class='{ locked: isLocked(day) && !currentDay(day), completed: isCompleted(day), current: isCurrent(day), unlocked: currentDay(day) }',
                     )
-                    div(class='cover {{additionalBgClass(day)}}')
-                        span  {{day + 10}}
-                    h5  {{summerCampChallenges[day].short_title || summerCampChallenges[day].title || "&nbsp;"}}
+                    div(ng-if="!summerCampChallenges[day].cover_url" class='cover {{additionalBgClass(day)}}')
+                    span  {{day + 10}}
+                    h5(ng-if="!summerCampChallenges[day].cover_url")  {{summerCampChallenges[day].short_title || summerCampChallenges[day].title || "&nbsp;"}}
+                    .img-cover(ng-if="summerCampChallenges[day].cover_url" ng-style="{ 'background-image': 'url(' + summerCampChallenges[day].cover_url + ')' }")
         span {{ days }} {{ days == 1 ? 'day' : 'days' }}
         span {{ hours }} {{ hours == 1 ? 'hour' : 'hours' }}
         span {{ minutes }} {{ minutes == 1 ? 'second' : 'minutes' }}
