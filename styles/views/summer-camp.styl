@@ -100,7 +100,6 @@ challenge_icon(img)
 				display block
 				position relative
 				text-align center
-				transition border .2s ease-out
 				
 				span
 					display block
@@ -113,7 +112,6 @@ challenge_icon(img)
 					font-weight bold
 					font-smoothing antialiased
 					z-index 2
-					transition color .3s ease-out
 				
 				.cover
 					position relative
@@ -136,7 +134,6 @@ challenge_icon(img)
 					height 129px
 					opacity .5
 					z-index 1
-					transition opacity .3s ease-out
 					
 				.detail
 					padding 10px
@@ -152,7 +149,6 @@ challenge_icon(img)
 					text-align center
 					color color-grey-darker
 					padding 0 0 10px 0;
-					transition color .3s ease-out
 
 				&.current
 					
@@ -160,11 +156,9 @@ challenge_icon(img)
 						background-color color-orange
 						border 3px solid color-orange
 						border-radius 3px
-						transition background-color .3s ease-in, border .2s ease-in
 
 						h5, span
 							color white
-							transition color .3s ease-in
 
 					.cover
 						opacity .8
@@ -175,11 +169,9 @@ challenge_icon(img)
 					
 					&:hover
 						background-color color-green
-						transition background-color .3s ease-in
 						
 						.img-cover
 							opacity 1
-							transition opacity .3s ease-in
 
 				&.locked
 					filter(grayscale(100%))
