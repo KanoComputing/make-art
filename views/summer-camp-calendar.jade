@@ -48,6 +48,7 @@
         ul.calendar
             li.day(ng-repeat='day in range(21)')
                 a(
+                    ng-dblClick='openChallenge(day)',
                     ng-click='selectChallenge(day)',
                     ng-class='{ locked: isLocked(day) && !currentDay(day), completed: isCompleted(day), current: isCurrent(day), unlocked: currentDay(day) }',
                     )
