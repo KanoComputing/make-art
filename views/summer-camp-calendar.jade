@@ -4,8 +4,6 @@
         span Play more on a computer that you can make yourself, just like Lego!
 
 .summer-camp: .page-width
-   
-    .deco-leaves
     .challenge-info(ng-if='selectedSummerChallenge !== null')
             .pic
                 img(src='{{selectedSummerChallengeObj.img}}' ng-if='!selectedSummerChallengeObj.cover_url')
@@ -20,9 +18,9 @@
                     span.cont-label DIFFICULTY
                     .difficulty-level(data-level='{{ "l-" + selectedSummerChallengeObj.difficulty }}')
 
-                        span.l-easy
-                        span.l-medium
-                        span.l-hard
+                        span(title='Easy').l-easy
+                        span(title='Medium').l-medium
+                        span(title='Hard').l-hard
                 .rewards-container
                     span.cont-label(ng-if='selectedSummerChallengeObj.rewards') REWARDS
                     .rewards-icons(ng-if='selectedSummerChallengeObj.rewards')
@@ -62,10 +60,5 @@
                     span  {{day + 10}}
                     h5(ng-if="!summerCampChallenges[day].cover_url")  {{summerCampChallenges[day].short_title || summerCampChallenges[day].title || "&nbsp;"}}
                     .img-cover(ng-if="summerCampChallenges[day].cover_url" ng-style="{ 'background-image': 'url(' + summerCampChallenges[day].cover_url + ')' }")
-        span {{ days }} {{ days == 1 ? 'day' : 'days' }}
-        span {{ hours }} {{ hours == 1 ? 'hour' : 'hours' }}
-        span {{ minutes }} {{ minutes == 1 ? 'second' : 'minutes' }}
-        span {{ seconds }} {{ seconds == 1 ? 'second' : 'seconds' }}
-    .deco-big-branch
 
     include ./partial/summer-camp-leaderboard
