@@ -25,8 +25,15 @@ challenge_icon(img)
 		z-index 2
 .summer-camp
 	z-index 1
+	
+.top
 	background-color #504e48
-	padding-top 20px
+	
+.bottom
+	background-color #44423d
+	
+.summer-camp 
+	padding 20px 0
 	.countdown
 		padding 80px 0
 		background url("/assets/summercamp/wood-asset.png") no-repeat
@@ -263,17 +270,25 @@ challenge_icon(img)
 				display inline-block
 				width 25%
 				vertical-align top
-				a
+				
+				.rewards-icons
 					display inline-block
-					float left
-					width 40px
-					height 40px
-					margin-right 15px
-				a.rew-wallpaper
-					bg-image('summercamp/wallpaper', 40px 40px, false, no-repeat)
+					width 100%
+					margin 0
+					padding 0
+					
+					a
+						display inline-block
+						float left
+						width 40px
+						height 40px
+						margin-right 15px
+						margin-top 0
+					a.rew-wallpaper
+						bg-image('summercamp/wallpaper', 40px 40px, false, no-repeat)
 
-				a.rew-outfit
-					bg-image('summercamp/suit', 40px 40px, false, no-repeat)
+					a.rew-outfit
+						bg-image('summercamp/suit', 40px 40px, false, no-repeat)
 
 
 			div.diff-container
@@ -283,7 +298,7 @@ challenge_icon(img)
 				.difficulty-level
 					display inline-block
 					width 100%
-					margin 0 0 20px 0
+					margin 0
 					padding 0
 
 					span
@@ -335,32 +350,35 @@ challenge_icon(img)
 					font-size 16px
 					color #ada799
 					line-height 20px
-					min-height 145px
+					min-height 140px
 
 	.summercamp-leaderboard
-		padding: 40px
+		padding: 30px 20px 20px
 		color: #8d887c
 		font-weight: bold
+		background-color #67645B
+		border-radius 5px
+		margin-bottom 20px
 
 		h1
-			font-size: 25px
+			font-size: 30px
 			color: white
 			text-align: center
 			font-weight: bold
 			margin-bottom: 0
+			font-smoothing antialiased
 
 		h2
-			font-size: 13px
+			font-size: 14px
 			color: #a8a394
 			text-transform: uppercase
 			text-align: center
 			margin-bottom: 25px
 			font-weight: bold
+			font-smoothing antialiased
 
 		.leaderboard
 			padding: 0
-			max-width: 450px
-			margin: auto
 
 			.leaderboard-entry
 				list-style-type: none;
@@ -368,10 +386,17 @@ challenge_icon(img)
 				line-height: 74px
 				position: relative
 				background: white
-				margin: 7px 0
+				margin: 0 0 5px 0
 				font-size: 20px
 				border-radius: 5px
 				overflow: hidden;
+				width 49.5%
+				display inline-block
+				margin-right 1%
+				
+				&:nth-child(2n + 2)
+					margin-right 0
+					width 49.5%
 
 				a
 					position: absolute
@@ -386,7 +411,6 @@ challenge_icon(img)
 					background: none
 					text-transform: uppercase
 					color: #a8a394
-
 
 					.position
 						font-size: 12px
@@ -405,17 +429,17 @@ challenge_icon(img)
 							position: relative
 							left: 20px
 
-				&:nth-of-type(2) .position
+				&:nth-of-type(3) .position
 					color: #a19248
 					background: linear-gradient(-45deg, #fbd951 50%, #fce675 50%);
 
-				&:nth-of-type(3) .position
-					color: #979797
-					background: linear-gradient(-45deg, #ededed 50%, #e3e3e3 50%);
-
 				&:nth-of-type(4) .position
+					color: #979797
+					background: linear-gradient(-45deg, #e3e3e3 50%, #ededed 50%);
+
+				&:nth-of-type(5) .position
 					color: #a37558
-					background: linear-gradient(-45deg, #ffc39b 50%, #ffb98d 50%);
+					background: linear-gradient(-45deg, #ffb98d 50%, #ffc39b 50%);
 
 				&.user .position
 					color: #617f2c
@@ -430,6 +454,7 @@ challenge_icon(img)
 					background: #b7ae97
 					font-size: 25px
 					text-align: center
+					font-smoothing antialiased
 				.detail
 					width: 100%
 					color: #8b8b8b

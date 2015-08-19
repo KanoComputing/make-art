@@ -3,7 +3,7 @@
         img(src="/assets/summercamp/logo.png")
         span Play more on a computer that you can make yourself, just like Lego!
 
-.summer-camp: .page-width
+.summer-camp.top: .page-width
     .challenge-info(ng-if='selectedSummerChallenge !== null')
             .pic
                 img(src='{{selectedSummerChallengeObj.img}}' ng-if='!selectedSummerChallengeObj.cover_url')
@@ -40,7 +40,7 @@
 
                     a.button(ng-if="!started && !isFutureChallenge" ng-href='/summercamp/challenge/{{ selectedSummerChallenge + 1 }}') Start Making
                     a.button.button-success(ng-if="started" ng-href='/summercamp/challenge/{{ selectedSummerChallenge + 1 }}') Continue
-
+.summer-camp.bottom: .page-width
     div.sc-calendar
         h2 Camp Calendar
         h4 August
