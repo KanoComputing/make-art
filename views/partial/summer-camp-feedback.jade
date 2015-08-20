@@ -1,0 +1,42 @@
+.modal-overlay(ng-if='!feedbackOpen')
+    .modal-inner.split-modal.center.summercamp-feedback(ng-controller='SummerCampFeedbackController')
+
+        .top
+            h3 Make us better
+            h4 And get a Summer Camp badge!
+
+        .bottom
+            ul
+                li.prompt
+                    .question What did you like the most?
+                    input.answer
+                li.prompt
+                    .question What didn't you like?
+                    input.answer
+                li.prompt
+                    .question How likely are you to reccomend Kano to a friend?
+                    .answer.rating
+                        ul.scale
+                            - var n = 1
+                            while n <= 10
+                                li.rating-number
+                                    input(id=n type='radio' name='reccomend' value=n)
+                                    label(for=n)=n++
+                        span.rating-label.left Never
+                        span.rating-label.right Likely
+                        .clear
+                li.prompt
+                    .question What should we do next?
+                    input.answer
+
+            .logo-title
+
+            .center.bottom-section
+
+                a.button.secondary.large(ng-href='/challenges')
+                    i.icon-menu
+                    |  Skip
+
+                a.button.large(ng-href='/playground')
+                    i.icon-game
+                    |  Send and claim badge

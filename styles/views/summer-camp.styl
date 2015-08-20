@@ -582,6 +582,96 @@ challenge_icon(img)
 						margin-right: 30px
 						width: 30px
 
+	.summercamp-feedback
+		padding: 0
+
+		*
+			text-transform: none
+
+		.top, .bottom
+			padding: 25px
+
+		.top
+			padding: 38px
+			background: #ff842a
+			*
+				color: white
+			h3
+				font-weight: bold
+				margin: 0 0 16px 0
+			h4
+				margin: 0
+		.bottom
+			padding: 50px
+			background: white
+
+			.prompt
+				list-style-type: none;
+				&:first-of-type .question
+					margin-top: 0
+			.question
+				font-weight: bold
+				text-align: left;
+				margin-top: 25px
+				margin-bottom: 10px
+
+			input.answer
+					height: 50px
+					width: 100%
+					border: 5px solid #d8d8d8
+					border-radius: 7px
+
+			.scale
+				font-size: 0
+				margin-bottom: 0
+
+				.rating-number
+					display: inline-block
+					margin-top: 14px
+					width: 46px
+					height: 65px
+					box-sizing: border-box
+					position: relative
+
+					input
+						display: none;
+
+						&:checked + label
+							background: #ff842a
+							color: white
+							border: 2px solid #db7124
+
+					label
+						position: absolute
+						left: 0
+						right: 0
+						top: 0
+						bottom: 0
+						font-size: 20px
+						border: 2px solid #dfdfdf
+						border-radius: 3px
+						padding: 20px 15px
+						margin: 0
+
+						&:not(:first-of-type)
+							border-left: 0;
+
+
+						&:hover
+							background: #ff842a
+							color: white
+							border: 2px solid #db7124
+
+			.rating-label
+				margin-top: 12px
+				color: #a6a6a6
+				font-size: 12px
+
+			.clear
+				clear: both
+
+
+
 .modal-register
 	h3
 		smooth-font()
