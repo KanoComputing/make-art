@@ -54,7 +54,7 @@
                 a(
                     ng-dblClick='openChallenge(day)',
                     ng-click='selectChallenge(day)',
-                    ng-class='{ locked: isLocked(day) && !currentDay(day), completed: isCompleted(day), current: isCurrent(day), unlocked: currentDay(day) }',
+                    ng-class='{ locked: isLocked(day) && !isCompleted(day), completed: isCompleted(day), current: isCurrent(day) }',
                     )
                     div(ng-if="!summerCampChallenges[day].cover_url" class='cover {{additionalBgClass(day)}}')
                     span  {{day + 10}}

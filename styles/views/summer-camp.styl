@@ -31,9 +31,11 @@ challenge_icon(img)
 	
 .bottom
 	background-color #44423d
+
+.top, .bottom
+	padding 30px 0
 	
 .summer-camp 
-	padding 20px 0
 	.countdown
 		padding 80px 0
 		background url("/assets/summercamp/wood-asset.png") no-repeat
@@ -62,8 +64,7 @@ challenge_icon(img)
 		background-color white
 		border-radius 5px
 		padding 20px
-		margin-bottom 100px
-		margin-top 20px
+		margin-bottom 40px
 		h2
 			color black
 			text-align center
@@ -114,6 +115,42 @@ challenge_icon(img)
 		.day
 			background-color white
 			float left
+			
+			&:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(5), &:nth-child(6), &:nth-child(7)
+				a
+					border-top-width 5px
+					border-top-style solid
+					
+			&:nth-child(15), &:nth-child(16), &:nth-child(17), &:nth-child(18), &:nth-child(19), &:nth-child(20), &:nth-child(21)
+				a
+					border-bottom-width 5px
+					border-bottom-style solid
+			
+			&:nth-child(1), &:nth-child(8), &:nth-child(15)
+				a
+					border-left-width 5px
+					border-left-style solid
+					
+			&:nth-child(7), &:nth-child(14), &:nth-child(21)
+				a
+					border-right-width 5px
+					border-right-style solid
+					
+			&:nth-child(1)
+				a
+					border-radius(4px 0 0 0)
+					
+			&:nth-child(7)
+				a
+					border-radius(0 4px 0 0)
+					
+			&:nth-child(21)
+				a
+					border-radius(0 0 4px 0)
+				
+			&:nth-child(15)
+				a
+					border-radius(0 0 0 4px)
 
 			a
 				border 3px solid #A6DA3B
@@ -196,28 +233,26 @@ challenge_icon(img)
 				&.locked
 					filter(grayscale(100%))
 					cursor default
-					border 3px solid color-grey
-					opacity .3
+					// border 3px solid color-grey
+					opacity .5
 
 				&.unlocked
 					
 					&:hover
 						background-color color-orange
-						border 3px solid color-orange
+						// border 3px solid color-orange
 						border-radius 3px
 						h5, span
 							color white
 
 					.cover
-						opacity .5
+						opacity 1
 
 	.challenge-info
-		margin-top 30px
-
 		.pic 
 			display inline-block
-			width 295.797px
-			height 295.797px
+			width 300px
+			height 300px
 			img 
 				border-radius 4px
 				height 100%
@@ -358,7 +393,6 @@ challenge_icon(img)
 		font-weight: bold
 		background-color #67645B
 		border-radius 5px
-		margin-bottom 20px
 
 		h1
 			font-size: 30px
