@@ -583,6 +583,11 @@ challenge_icon(img)
 						width: 30px
 
 	.summercamp-feedback
+		width: 400px
+		height: 600px
+		top: 50%
+		margin-top: -300px
+		margin-left: -200px
 		padding: 0
 
 		*
@@ -592,49 +597,59 @@ challenge_icon(img)
 			padding: 25px
 
 		.top
-			padding: 38px
 			background: #ff842a
-			*
-				color: white
-			h3
+
+			h5
 				font-weight: bold
-				margin: 0 0 16px 0
-			h4
+				margin: 0 0 5px 0
+				color: white
+			h6
 				margin: 0
+				color: #ffd2b1
 		.bottom
-			padding: 50px
 			background: white
+
+			ul
+				padding: 0
 
 			.prompt
 				list-style-type: none;
 				&:first-of-type .question
 					margin-top: 0
 			.question
+				font-size: 14px
 				font-weight: bold
-				text-align: left;
-				margin-top: 25px
-				margin-bottom: 10px
+				color: #686868
+				text-align: left
+				margin-top: 22px
+				margin-bottom: 8px
 
 			input.answer
-					height: 50px
+					height: 44px
+					box-sizing: border-box
 					width: 100%
-					border: 5px solid #d8d8d8
-					border-radius: 7px
+					border: 3px solid #d8d8d8
+					border-radius: 5px
+					font-size: 14px
+					padding: 10px
+
+					&:focus
+						border-color: #a1a1a1
 
 			.scale
 				font-size: 0
-				margin-bottom: 0
+				margin: 0
 
 				.rating-number
 					display: inline-block
-					margin-top: 14px
-					width: 46px
-					height: 65px
+					width: 35px
+					height: 44px
+					line-height: 44px
 					box-sizing: border-box
 					position: relative
 
 					input
-						display: none;
+						display: none
 
 						&:checked + label
 							background: #ff842a
@@ -647,28 +662,36 @@ challenge_icon(img)
 						right: 0
 						top: 0
 						bottom: 0
-						font-size: 20px
-						border: 2px solid #dfdfdf
-						border-radius: 3px
-						padding: 20px 15px
+						font-size: 12px
+						border: 3px solid #d8d8d8
 						margin: 0
-
-						&:not(:first-of-type)
-							border-left: 0;
-
 
 						&:hover
 							background: #ff842a
 							color: white
 							border: 2px solid #db7124
 
+					&:not(:first-of-type) label
+							border-left: 0;
+
+					&:first-of-type label
+						border-top-left-radius: 3px
+						border-bottom-left-radius: 3px
+
+					&:last-of-type label
+						border-top-right-radius: 3px
+						border-bottom-right-radius: 3px
+
 			.rating-label
-				margin-top: 12px
+				margin-top: 5px
 				color: #a6a6a6
 				font-size: 12px
 
 			.clear
 				clear: both
+
+			.button
+				text-transform: uppercase
 
 
 

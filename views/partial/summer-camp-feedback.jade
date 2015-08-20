@@ -1,9 +1,9 @@
 .modal-overlay(ng-if='!feedbackOpen')
-    .modal-inner.split-modal.center.summercamp-feedback(ng-controller='SummerCampFeedbackController')
+    .modal-inner.center.summercamp-feedback(ng-controller='SummerCampFeedbackController')
 
         .top
-            h3 Make us better
-            h4 And get a Summer Camp badge!
+            h5 Make us better
+            h6 And get a Summer Camp badge!
 
         .bottom
             ul
@@ -31,11 +31,11 @@
 
             .logo-title
 
-            .center.bottom-section
+            .center
 
-                a.button.secondary.large(ng-href='/challenges')
-                    i.icon-menu
-                    |  Skip
+                //a.button.secondary.large(ng-href='/challenges')
+                //    i.icon-menu
+                //    |  Skip
 
                 a.button.large(ng-href='/playground')
                     i.icon-game
