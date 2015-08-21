@@ -1,8 +1,8 @@
-.modal-overlay(ng-if='!feedbackOpen')
+.modal-overlay(ng-if='feedbackOpen')
     .modal-inner.center.summercamp-feedback(ng-controller='SummerCampFeedbackController'
                                             ng-class='screen_no != 2 ? "badge-screen" : "form-screen"')
 
-        button.cross &times;
+        button.cross(ng-click='closeFeedback()') &times;
 
         .screen(ng-if='screen_no == 1')
             .top
@@ -23,32 +23,32 @@
                 h6.byline And get a Summer Camp badge!
 
             .bottom
-                ul
-                    li.prompt
-                        .question What did you like the most?
-                        input.answer
-                    li.prompt
-                        .question What didn't you like?
-                        input.answer
-                    li.prompt
-                        .question How likely are you to recommend Kano to a friend?
-                        .answer.rating
-                            ul.scale
-                                - var n = 1
-                                while n <= 10
-                                    li.rating-number
-                                        input(id=n type='radio' name='recommend' value=n)
-                                        label(for=n)=n++
-                            span.rating-label.left Never
-                            span.rating-label.right Likely
-                            .clear
-                    li.prompt
-                        .question What should we do next?
-                        input.answer
+                form(name='responseForm')
+                    ul
+                        li.prompt
+                            .question What did you like the most?
+                            input.answer(ng-model='responses.like_most' required)
+                        li.prompt
+                            .question What didn't you like?
+                            input.answer(ng-model='responses.like_least' required)
+                        li.prompt
+                            .question How likely are you to recommend Kano to a friend?
+                            .answer.rating
+                                ul.scale
+                                    - var n = 1
+                                    while n <= 10
+                                        li.rating-number
+                                            input(id=n type='radio' name='recommend' ng-model='responses.recommend_scale' ng-value=n required)
+                                            label(for=n)=n++
+                                span.rating-label.left Never
+                                span.rating-label.right Likely
+                                .clear
+                        li.prompt
+                            .question What should we do next?
+                            input.answer(ng-model='responses.what_next' required)
 
-                .center
-
-                    a.button.large.button-success(ng-click='next()') Send and claim badge
+                    .center
+                        a.button.large.button-success(ng-click='responseForm.$valid && next()' ng-class="responseForm.$invalid ? 'disabled': '' ") Send and claim badge
 
 
 
@@ -62,4 +62,4 @@
 
                 .center
 
-                    a.button.large.button-success(ng-click='next()') Go to profile
+                    a.button.large.button-success(ng-href='http://world.kano.me/users/{{ user.username }}/progress') Go to profile
