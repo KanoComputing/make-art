@@ -628,13 +628,23 @@ challenge_icon(img)
 				text-transform: uppercase
 
 		&.badge-screen
-			width: 500px
+			width: 640px
+			margin-left: -320px
+			height: 580px
+			margin-top: -290px
 
-			.badge
-				&.locked
-					//bg-image('summercamp/summercamp_badge_locked', 640px 500px, ext='png')
-					height: 500px
-					width: 640px
+			.bottom
+				padding: 0
+
+				.badge
+					height: 400px
+					&.locked
+						background: #efefef
+						bg-image('summercamp/summercamp_badge_locked', 325px 325px, center center, no-repeat)
+					&.unlocked
+						bg-image('summercamp/summercamp_badge_unlocked', 640px 400px, center center, no-repeat)
+				.button
+					margin: 21px
 
 		&.form-screen
 			ul

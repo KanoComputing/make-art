@@ -49,3 +49,17 @@
                 .center
 
                     a.button.large.button-success(ng-click='next()') Send and claim badge
+
+
+
+        .screen(ng-if='screen_no == 3')
+            .top
+                h4.title Thanks! Here's your badge
+                h6.byline Check it out on your Kano World profile
+
+            .bottom
+                .badge.unlocked
+
+                .center
+
+                    a.button.large.button-success(ng-click='next()') Go to profile
