@@ -115,42 +115,6 @@ challenge_icon(img)
 		.day
 			background-color white
 			float left
-			
-			&:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(5), &:nth-child(6), &:nth-child(7)
-				a
-					border-top-width 5px
-					border-top-style solid
-					
-			&:nth-child(15), &:nth-child(16), &:nth-child(17), &:nth-child(18), &:nth-child(19), &:nth-child(20), &:nth-child(21)
-				a
-					border-bottom-width 5px
-					border-bottom-style solid
-			
-			&:nth-child(1), &:nth-child(8), &:nth-child(15)
-				a
-					border-left-width 5px
-					border-left-style solid
-					
-			&:nth-child(7), &:nth-child(14), &:nth-child(21)
-				a
-					border-right-width 5px
-					border-right-style solid
-					
-			&:nth-child(1)
-				a
-					border-radius(4px 0 0 0)
-					
-			&:nth-child(7)
-				a
-					border-radius(0 4px 0 0)
-					
-			&:nth-child(21)
-				a
-					border-radius(0 0 4px 0)
-				
-			&:nth-child(15)
-				a
-					border-radius(0 0 0 4px)
 
 			a
 				border 3px solid #A6DA3B
@@ -206,13 +170,33 @@ challenge_icon(img)
 					text-align center
 					color color-grey-darker
 					padding 0 0 10px 0;
-
-				&.current
+					
+				&.active
+					background-color color-orange
+					border-color color-orange !important
+					border-radius 4px
 					
 					&:hover
 						background-color color-orange
-						border 3px solid color-orange
-						border-radius 3px
+						border-color color-orange !important
+						
+						.img-cover
+							opacity 0.1 !important
+							
+					h5, span
+						color white
+
+					.img-cover
+						opacity 0.1
+					
+					.cover
+						opacity 0
+
+				&.current
+					&:hover
+						background-color color-orange
+						border-color color-orange
+						border-radius 4px
 
 						h5, span
 							color white
@@ -221,11 +205,12 @@ challenge_icon(img)
 						opacity .8
 				
 				&.completed
+					border-color #A6DA3B
 					bg-image('summercamp/ch_icons/completed', 70px 70px, false, no-repeat)
 					background-position center 25px
 					
 					&:hover
-						background-color color-green
+						border-color #80A42E
 						
 						.img-cover
 							opacity 1
@@ -233,20 +218,47 @@ challenge_icon(img)
 				&.locked
 					filter(grayscale(100%))
 					cursor default
-					// border 3px solid color-grey
 					opacity .5
 
-				&.unlocked
+				// &.unlocked
 					
-					&:hover
-						background-color color-orange
-						// border 3px solid color-orange
-						border-radius 3px
-						h5, span
-							color white
+				// 	&:hover
+				// 		background-color color-orange
+				// 		// border 3px solid color-orange
+				// 		border-radius 3px
+				// 		h5, span
+				// 			color white
 
-					.cover
-						opacity 1
+				// 	.cover
+				// 		opacity 1
+			
+			&:nth-child(-n+7) a
+				border-top-width 6px
+				border-top-style solid
+					
+			&:nth-child(n+15) a
+				border-bottom-width 6px
+				border-bottom-style solid
+			
+			&:nth-child(7n+1) a
+				border-left-width 6px
+				border-left-style solid
+					
+			&:nth-child(7n+7) a
+				border-right-width 6px
+				border-right-style solid
+					
+			&:nth-child(1) a
+				border-radius(5px 0 0 0)
+					
+			&:nth-child(7) a
+				border-radius(0 5px 0 0)
+					
+			&:nth-child(21) a
+				border-radius(0 0 5px 0)
+				
+			&:nth-child(15) a
+				border-radius(0 0 0 5px)
 
 	.challenge-info
 		.pic 
@@ -371,6 +383,12 @@ challenge_icon(img)
 
 			h3 
 				header-text(30pt)
+				
+				span
+					color color-orange
+					
+					&.done
+						color #A6DA3B
 				
 			.description
 				p
