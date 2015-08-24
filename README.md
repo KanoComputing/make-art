@@ -1,15 +1,15 @@
-# Draw
+# Make Art
 
-> App to learn programming using a basic CoffeeScript drawing API
+> An app for learning programming using a basic CoffeeScript drawing API
 
 ![Screenshot of the App](make-art-screenshot.png)
 
-You can try the app [here »](http://kano-draw.herokuapp.com/)
+You can try the app [here »](http://art.kano.me/)
 
 ## Setup
 
-    git clone git@github.com:KanoComputing/kano-draw.git
-    cd kano-draw
+    git clone git@github.com:KanoComputing/make-art.git
+    cd make-art
     npm install
 
 ## Build
