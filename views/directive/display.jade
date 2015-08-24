@@ -18,7 +18,9 @@
             p {{ error.text || 0 }}
 
         .toolbar
-            .position-indicator x: {{ coordsPosition.x }} y: {{ coordsPosition.y }}
+            .position-indicator
+                i(ng-class="{'icon-mouse-pointer': mouse, 'icon-plus': !mouse}")
+                |  x: {{ coordsPosition.x }} y: {{ coordsPosition.y }}
 
     .actions
 
