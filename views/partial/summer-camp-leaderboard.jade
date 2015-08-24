@@ -2,17 +2,18 @@
     h1 Leaderboard
     h2 Can you reach the top?
 
-    ol.leaderboard
-        li.leaderboard-entry.header
-            .position Rank
+    .leaderboard-title(ng-if='leaderboard_entries')
+        .header
+            span.position Rank
             .detail
+                span.challenges Challenges
                 span.points Points
-                span.challenges-complete Challenges
-        li.leaderboard-entry.header
-            .position Rank
+        .header
+            span.position Rank
             .detail
+                span.challenges Challenges
                 span.points Points
-                span.challenges-complete Challenges
+    ul.leaderboard
         li.leaderboard-entry(ng-repeat='leaderboard_entry in leaderboard_entries',
                              ng-class='{user: leaderboard_entry.isUser}')
             a(href='http://world.kano.me/users/{{ leaderboard_entry.username }}')
