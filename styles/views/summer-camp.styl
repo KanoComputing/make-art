@@ -170,27 +170,6 @@ challenge_icon(img)
 					text-align center
 					color color-grey-darker
 					padding 0 0 10px 0;
-					
-				&.active
-					background-color color-orange
-					border-color color-orange !important
-					border-radius 4px
-					
-					&:hover
-						background-color color-orange
-						border-color color-orange !important
-						
-						.img-cover
-							opacity 0.1 !important
-							
-					h5, span
-						color white
-
-					.img-cover
-						opacity 0.1
-					
-					.cover
-						opacity 0
 
 				&.current
 					&:hover
@@ -219,18 +198,24 @@ challenge_icon(img)
 					filter(grayscale(100%))
 					cursor default
 					opacity .5
-
-				// &.unlocked
 					
-				// 	&:hover
-				// 		background-color color-orange
-				// 		// border 3px solid color-orange
-				// 		border-radius 3px
-				// 		h5, span
-				// 			color white
+				&.active
+					background-color color-orange
+					border-color color-orange
+					border-radius 4px
+					
+					&:hover
+						background-color color-orange
+						border-color color-orange
+						
+						.img-cover
+							opacity 0.1
+							
+					h5, span
+						color white
 
-				// 	.cover
-				// 		opacity 1
+					.img-cover
+						opacity 0.1
 			
 			&:nth-child(-n+7) a
 				border-top-width 6px
