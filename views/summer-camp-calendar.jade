@@ -3,9 +3,7 @@
         img(src="/assets/summercamp/logo.png")
         span Play more on a computer that you can make yourself, just like Lego!
 
-.summer-camp: .page-width
-   
-    .deco-leaves
+.summer-camp.top: .page-width
     .challenge-info(ng-if='selectedSummerChallenge !== null')
             .pic
                 img(src='{{selectedSummerChallengeObj.img}}' ng-if='!selectedSummerChallengeObj.cover_url')
@@ -14,15 +12,16 @@
 
                 h4 August {{selectedSummerChallengeDay| ordinal}}
                 h3 {{ selectedSummerChallengeObj.title }}
+                    span(ng-class='{ done : isCompleted(selectedSummerChallengeDay - 10)}') {{ isCompleted(selectedSummerChallengeDay - 10) ? ' - Completed' : ' - In Progress' }}
 
                 div.description(ng-bind-html='selectedSummerChallengeObj.description | markdown ')
                 .diff-container
                     span.cont-label DIFFICULTY
                     .difficulty-level(data-level='{{ "l-" + selectedSummerChallengeObj.difficulty }}')
 
-                        span.l-easy
-                        span.l-medium
-                        span.l-hard
+                        span(title='Easy').l-easy
+                        span(title='Medium').l-medium
+                        span(title='Hard').l-hard
                 .rewards-container
                     span.cont-label(ng-if='selectedSummerChallengeObj.rewards') REWARDS
                     .rewards-icons(ng-if='selectedSummerChallengeObj.rewards')
@@ -40,9 +39,9 @@
                             |   {{timeToNext.s | zeropad }}
                             span.sup S 
 
-                    a.button(ng-if="!started && !isFutureChallenge" ng-href='/summercamp/challenge/{{ selectedSummerChallenge + 1 }}') Start Making
-                    a.button.button-success(ng-if="started" ng-href='/summercamp/challenge/{{ selectedSummerChallenge + 1 }}') Continue
-
+                    a.button(ng-if="!isCompleted(selectedSummerChallengeDay - 10) && !isFutureChallenge" ng-href='/summercamp/challenge/{{ selectedSummerChallenge + 1 }}') Start Making
+                    a.button.button-success(ng-if="isCompleted(selectedSummerChallengeDay - 10)" ng-href='/summercamp/challenge/{{ selectedSummerChallenge + 1 }}') Continue
+.summer-camp.bottom: .page-width
     div.sc-calendar
         h2 Camp Calendar
         h4 August
@@ -56,16 +55,11 @@
                 a(
                     ng-dblClick='openChallenge(day)',
                     ng-click='selectChallenge(day)',
-                    ng-class='{ locked: isLocked(day) && !currentDay(day), completed: isCompleted(day), current: isCurrent(day), unlocked: currentDay(day) }',
+                    ng-class='{ locked: isLocked(day) && !isCompleted(day), completed: isCompleted(day), current: isCurrent(day) }',
                     )
                     div(ng-if="!summerCampChallenges[day].cover_url" class='cover {{additionalBgClass(day)}}')
                     span  {{day + 10}}
                     h5(ng-if="!summerCampChallenges[day].cover_url")  {{summerCampChallenges[day].short_title || summerCampChallenges[day].title || "&nbsp;"}}
                     .img-cover(ng-if="summerCampChallenges[day].cover_url" ng-style="{ 'background-image': 'url(' + summerCampChallenges[day].cover_url + ')' }")
-        span {{ days }} {{ days == 1 ? 'day' : 'days' }}
-        span {{ hours }} {{ hours == 1 ? 'hour' : 'hours' }}
-        span {{ minutes }} {{ minutes == 1 ? 'second' : 'minutes' }}
-        span {{ seconds }} {{ seconds == 1 ? 'second' : 'seconds' }}
-    .deco-big-branch
 
     include ./partial/summer-camp-leaderboard
