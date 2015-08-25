@@ -15,20 +15,25 @@
                     span(ng-class='{ done : isCompleted(selectedSummerChallengeDay - 10)}') {{ isCompleted(selectedSummerChallengeDay - 10) ? ' - Completed' : ' - In Progress' }}
 
                 div.description(ng-bind-html='selectedSummerChallengeObj.description | markdown ')
-                .diff-container
+                .diff-container(ng-if='isCompleted(selectedSummerChallengeDay - 10)')
+                    span.cont-label SHARE IT:
+                    .share-buttons
+                        .btn-facebook
+                        .btn-mail
+                .diff-container(ng-if='!isCompleted(selectedSummerChallengeDay - 10)')
                     span.cont-label DIFFICULTY
                     .difficulty-level(data-level='{{ "l-" + selectedSummerChallengeObj.difficulty }}')
 
                         span(title='Easy').l-easy
                         span(title='Medium').l-medium
                         span(title='Hard').l-hard
-                .rewards-container
+                .rewards-container(ng-if='!isCompleted(selectedSummerChallengeDay - 10)')
                     span.cont-label(ng-if='selectedSummerChallengeObj.rewards') REWARDS
                     .rewards-icons(ng-if='selectedSummerChallengeObj.rewards')
                         a(class='rew-wallpaper', ng-if='selectedSummerChallengeObj.rewards.wallpaper', href='http://www.kano.me/summercamp-faq#extracontent', title='This special content is exclusive to Kano Kit owners. To access, turn on your kit and make sure it is connected to WiFi.')
                         a(class='rew-outfit',  ng-if='selectedSummerChallengeObj.rewards.outfit', href='http://www.kano.me/summercamp-faq#extracontent', title='This special content is exclusive to Kano Kit owners. To access, turn on your kit and make sure it is connected to WiFi.')
 
-                .btn-container(ng-if="!isFutureChallenge || timeToNext") 
+                .btn-container.right(ng-if="!isFutureChallenge || timeToNext") 
                     .countdown-next(ng-if="timeToNext")
                         i.icon-locked
                         span
