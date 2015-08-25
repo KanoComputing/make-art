@@ -40,6 +40,7 @@
                             span.sup S 
 
                     a.button(ng-if="!isCompleted(selectedSummerChallengeDay - 10) && !isFutureChallenge" ng-href='/summercamp/challenge/{{ selectedSummerChallenge + 1 }}') Start Making
+                    a.see-on-world(ng-if="isCompleted(selectedSummerChallengeDay - 10)" ng-href='{{selectedSummerChallengeObj.world_url}}') See On World
                     a.button.button-success(ng-if="isCompleted(selectedSummerChallengeDay - 10)" ng-href='/summercamp/challenge/{{ selectedSummerChallenge + 1 }}') Continue
 .summer-camp.bottom: .page-width
     div.sc-calendar
