@@ -15,10 +15,10 @@
                     span(ng-class='{ done : isCompleted(selectedSummerChallengeDay - 10)}') {{ isCompleted(selectedSummerChallengeDay - 10) ? ' - Completed' : '' }}
 
                 div.description(ng-bind-html='selectedSummerChallengeObj.description | markdown ')
-                .diff-container(ng-if='isCompleted(selectedSummerChallengeDay - 10)')
-                    span.cont-label SHARE IT:
-                    .share-buttons
-                        a.btn-facebook(ng-click='facebookShare(selectedSummerChallengeObj)')
+                //- .diff-container(ng-if='isCompleted(selectedSummerChallengeDay - 10)')
+                //-     span.cont-label SHARE IT:
+                //-     .share-buttons
+                //-         a.btn-facebook(ng-click='facebookShare(selectedSummerChallengeObj)')
                         
                 .diff-container(ng-if='!isCompleted(selectedSummerChallengeDay - 10)')
                     span.cont-label DIFFICULTY
