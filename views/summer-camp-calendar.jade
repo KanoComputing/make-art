@@ -20,14 +20,14 @@
                 //-     .share-buttons
                 //-         a.btn-facebook(ng-click='facebookShare(selectedSummerChallengeObj)')
                         
-                .diff-container(ng-if='!isCompleted(selectedSummerChallengeDay - 10)')
+                .diff-container
                     span.cont-label DIFFICULTY
                     .difficulty-level(data-level='{{ "l-" + selectedSummerChallengeObj.difficulty }}')
 
                         span(title='Easy').l-easy
                         span(title='Medium').l-medium
                         span(title='Hard').l-hard
-                .rewards-container(ng-if='!isCompleted(selectedSummerChallengeDay - 10)')
+                .rewards-container
                     span.cont-label(ng-if='selectedSummerChallengeObj.rewards') REWARDS
                     .rewards-icons(ng-if='selectedSummerChallengeObj.rewards')
                         a(class='rew-wallpaper', ng-if='selectedSummerChallengeObj.rewards.wallpaper', href='http://www.kano.me/summercamp-faq#extracontent', title='This special content is exclusive to Kano Kit owners. To access, turn on your kit and make sure it is connected to WiFi.')
