@@ -247,7 +247,7 @@
                 "unlockedAt"  : 999,
                 "description" : "Rotate a color's hue angle by given amount",
                 "args"        : [
-                    [ "float", "string", "Color to rotate", true ],
+                    [ "color", "string", "Color to rotate", true ],
                     [ "amount", "number", "angle to rotate (-360 - 360)", true ]
                 ],
                 "defaults": [ "red", 100 ]
@@ -257,7 +257,7 @@
                 "unlockedAt"  : 999,
                 "description" : "Set how see through a color is",
                 "args"        : [
-                    [ "float", "string", "Color to saturate", true ],
+                    [ "color", "string", "Color to saturate", true ],
                     [ "amount", "number", "amount of opacity to subtract (-100 to 100)", true ]
                 ],
                 "defaults": [ "black", 50 ]
