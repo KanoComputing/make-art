@@ -215,10 +215,10 @@
             {
                 "call"        : "stroke",
                 "unlockedAt"  : 5,
-                "description" : "Change the color and width of the stroke (border)",
+                "description" : "Change the width and color of the stroke (border)",
                 "args"        : [
-                    [ "size", "number", "(number) The width to use", false ],
-                    [ "color", "string", "A string with the color to use - E.g. 'red', 'blue'..", false ]
+                    [ "color", "string", "A string with the color to use - E.g. 'red', 'blue'..", false ],
+                    [ "size", "number", "(number) The width to use", false ]
                 ],
                 "defaults": [ 10, "purple" ]
             },
