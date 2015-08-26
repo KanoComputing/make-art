@@ -12,14 +12,14 @@
 
                 h4 August {{selectedSummerChallengeDay| ordinal}}
                 h3 {{ selectedSummerChallengeObj.title }}
-                    span(ng-class='{ done : isCompleted(selectedSummerChallengeDay - 10)}') {{ isCompleted(selectedSummerChallengeDay - 10) ? ' - Completed' : ' - In Progress' }}
+                    span(ng-class='{ done : isCompleted(selectedSummerChallengeDay - 10)}') {{ isCompleted(selectedSummerChallengeDay - 10) ? ' - Completed' : '' }}
 
                 div.description(ng-bind-html='selectedSummerChallengeObj.description | markdown ')
                 .diff-container(ng-if='isCompleted(selectedSummerChallengeDay - 10)')
                     span.cont-label SHARE IT:
                     .share-buttons
-                        .btn-facebook
-                        .btn-mail
+                        a.btn-facebook(ng-click='facebookShare(selectedSummerChallengeObj)')
+                        
                 .diff-container(ng-if='!isCompleted(selectedSummerChallengeDay - 10)')
                     span.cont-label DIFFICULTY
                     .difficulty-level(data-level='{{ "l-" + selectedSummerChallengeObj.difficulty }}')
@@ -44,9 +44,9 @@
                             |   {{timeToNext.s | zeropad }}
                             span.sup S 
 
-                    a.button(ng-if="!isCompleted(selectedSummerChallengeDay - 10) && !isFutureChallenge" ng-href='/summercamp/challenge/{{ selectedSummerChallenge + 1 }}') Start Making
                     a.see-on-world(ng-if="isCompleted(selectedSummerChallengeDay - 10)" ng-href='{{selectedSummerChallengeObj.world_url}}') See On World
-                    a.button.button-success(ng-if="isCompleted(selectedSummerChallengeDay - 10)" ng-href='/summercamp/challenge/{{ selectedSummerChallenge + 1 }}') Continue
+                    a.button(ng-if="isCompleted(selectedSummerChallengeDay - 10) || (!isCompleted(selectedSummerChallengeDay - 10) && !isFutureChallenge) " ng-href='/summercamp/challenge/{{ selectedSummerChallenge + 1 }}') Start Making
+
 .summer-camp.bottom: .page-width
     div.sc-calendar
         h2 Camp Calendar

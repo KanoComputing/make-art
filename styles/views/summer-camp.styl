@@ -258,9 +258,8 @@ challenge_icon(img)
 			vertical-align top
 			padding 0px 0 0 25px
 			color #ada799
-			position absolute
-			bottom 0
-			top 0
+			absolute-position(0, false, 0, false)
+			
 			span.cont-label
 				font-size 12pt
 				font-weight bold
@@ -276,9 +275,7 @@ challenge_icon(img)
 				width 45%
 				text-align right
 				vertical-align top
-				position absolute
-				bottom 0
-				right 0
+				absolute-position(false, 0, 0, false)
 				
 				.see-on-world
 					background-color #fff
@@ -323,8 +320,7 @@ challenge_icon(img)
 				display inline-block
 				width 25%
 				vertical-align top
-				position absolute
-				bottom 0
+				absolute-position(false, false, 0, 160px)
 				
 				.rewards-icons
 					display inline-block
@@ -349,8 +345,7 @@ challenge_icon(img)
 			div.diff-container
 				display inline-block
 				width 25%
-				position absolute
-				bottom 0
+				absolute-position(false, false, 0, false)
 
 				.difficulty-level, .share-buttons
 					display inline-block
@@ -398,10 +393,16 @@ challenge_icon(img)
 					.btn-facebook
 						bg-image('summercamp/facebook', 25px 25px, center center, no-repeat)
 						background-color #3B5998
+						
+						&:hover
+							background-color lighten(#3B5998, 5)
 					
 					.btn-mail
 						bg-image('summercamp/mail', 25px 25px, center center, no-repeat)
 						background-color #EE5050
+						
+						&:hover
+							background-color lighten(#EE5050, 5)
 					
 
 			h4
