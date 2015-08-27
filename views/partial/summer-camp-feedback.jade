@@ -27,10 +27,10 @@
                     ul
                         li.prompt
                             .question What did you like the most?
-                            input.answer(ng-model='responses.like_most' required)
+                            input.answer(ng-model='responses.like_most' maxlength='100' required)
                         li.prompt
                             .question What didn't you like?
-                            input.answer(ng-model='responses.like_least' required)
+                            input.answer(ng-model='responses.like_least' maxlength='100' required)
                         li.prompt
                             .question How likely are you to recommend Kano to a friend?
                             .answer.rating
@@ -45,7 +45,7 @@
                                 .clear
                         li.prompt
                             .question What should we do next?
-                            input.answer(ng-model='responses.what_next' required)
+                            input.answer(ng-model='responses.what_next' maxlength='100' required)
 
                     .center
                         a.button.large.button-success(ng-click='responseForm.$valid && next()' ng-class="responseForm.$invalid ? 'disabled': '' ") Send and claim badge
