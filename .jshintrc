@@ -3,7 +3,7 @@
   "esnext": true,
   "globals": { "angular": true },
   "globalstrict": false,
-  "quotmark": true,
+  "quotmark": false,
   "undef": true,
   "unused": true,
   "node": true,
