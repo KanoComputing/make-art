@@ -38,8 +38,8 @@
                                     - var n = 1
                                     while n <= 10
                                         li.rating-number
-                                            input(id=n type='radio' name='recommend' ng-model='responses.recommend_scale' ng-value=n required)
-                                            label(for=n)=n++
+                                            input(id='rating-scale-' + n type='radio' name='recommend' ng-model='responses.recommend_scale' ng-value=n required)
+                                            label(for='rating-scale-' + n)=n++
                                 span.rating-label.left Never
                                 span.rating-label.right Likely
                                 .clear
