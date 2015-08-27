@@ -583,6 +583,21 @@ challenge_icon(img)
 						width: 30px
 
 	.summercamp-feedback
+		.cross
+			position: absolute
+			right: 15px
+			top: 15px
+			padding: 0
+			margin: 0
+			width: 25px
+			height: 25px
+			line-height: 25px
+			font-size: 30px
+			font-weight: bold
+			color: #bf631f
+			&:hover
+				color: #954d18
+				background: transparent
 		width: 420px
 		margin-left: -210px
 		height: 600px
@@ -609,6 +624,19 @@ challenge_icon(img)
 			padding: 30px 40px
 			background: white
 
+			.button
+				text-transform: uppercase
+
+		&.badge-screen
+			width: 500px
+
+			.badge
+				&.locked
+					//bg-image('summercamp/summercamp_badge_locked', 640px 500px, ext='png')
+					height: 500px
+					width: 640px
+
+		&.form-screen
 			ul
 				padding: 0
 
@@ -691,8 +719,6 @@ challenge_icon(img)
 			.clear
 				clear: both
 
-			.button
-				text-transform: uppercase
 
 
 
