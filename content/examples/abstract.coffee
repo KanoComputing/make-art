@@ -17,7 +17,7 @@ move -40, -40
 square 40
 
 # Use a stroke of width 5 and color white
-stroke 5, 'white'
+stroke 'white', 5
 
 # Draw a line to the end of the
 # first rectangle
