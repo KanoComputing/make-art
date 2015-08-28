@@ -1,0 +1,148 @@
+.summercamp-feedback
+    .cross
+        position absolute
+        right 15px
+        top 15px
+        padding 0
+        margin 0
+        width 25px
+        height 25px
+        line-height 25px
+        font-size 30px
+        font-weight bold
+        color #bf631f
+        &:hover
+            color #954d18
+            background transparent
+    width 420px
+    margin-left -210px
+    height 600px
+    top 50%
+    margin-top -300px
+    padding 0
+
+    *
+        text-transform none
+
+    .top
+        padding 20px 35px
+        background #ff842a
+
+        .title
+            font-size 20px
+            font-weight bold
+            margin 0 0 5px 0
+            color white
+        .byline
+            font-size 15px
+            margin 0
+            color #ffd2b1
+            font-weight bold
+    .bottom
+        padding 30px 40px
+        background white
+
+        .button
+            text-transform uppercase
+
+    &.badge-screen
+        width 640px
+        margin-left -320px
+        height 580px
+        margin-top -290px
+
+        .bottom
+            padding 0
+
+            .badge
+                height 400px
+                &.locked
+                    background #efefef
+                    bg-image('summercamp/summercamp_badge_locked', 325px 325px, center center, no-repeat)
+                &.unlocked
+                    bg-image('summercamp/summercamp_badge_unlocked', 640px 400px, center center, no-repeat)
+            .button
+                margin 21px
+
+    &.form-screen
+        ul
+            padding 0
+
+        .prompt
+            list-style-type none;
+            &:first-of-type .question
+                margin-top 0
+        .question
+            font-size 14px
+            font-weight bold
+            color #686868
+            text-align left
+            margin-top 22px
+            margin-bottom 5px
+
+        input.answer
+                height 50px
+                box-sizing border-box
+                width 100%
+                border 3px solid #d8d8d8
+                border-radius 5px
+                font-size 14px
+                padding 10px
+
+                &:focus
+                    border-color #a1a1a1
+
+        .scale
+            font-size 0
+            margin 0
+
+            .rating-number
+                display inline-block
+                width 34px
+                height 50px
+                line-height 44px
+                box-sizing border-box
+                position relative
+
+                input
+                    display none
+
+                    &:checked + label
+                        background #ff842a
+                        color white
+                        border 2px solid #db7124
+
+                label
+                    position absolute
+                    left 0
+                    right 0
+                    top 0
+                    bottom 0
+                    font-size 14px
+                    font-weight bold
+                    border 3px solid #d8d8d8
+                    margin 0
+
+                    &:hover
+                        background #ff842a
+                        color white
+                        border 2px solid #db7124
+
+                &:not(:first-of-type) label
+                        border-left 0;
+
+                &:first-of-type label
+                    border-top-left-radius 3px
+                    border-bottom-left-radius 3px
+
+                &:last-of-type label
+                    border-top-right-radius 3px
+                    border-bottom-right-radius 3px
+
+        .rating-label
+            margin-top 5px
+            color #a6a6a6
+            font-size 12px
+
+        .clear
+            clear both

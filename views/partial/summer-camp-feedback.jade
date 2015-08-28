@@ -1,0 +1,65 @@
+.modal-overlay(ng-if='feedbackOpen')
+    .modal-inner.center.summercamp-feedback(ng-controller='SummerCampFeedbackController'
+                                            ng-class='screen_no != 2 ? "badge-screen" : "form-screen"')
+
+        button.cross(ng-click='closeFeedback()') &times;
+
+        .screen(ng-if='screen_no == 1')
+            .top
+                h3.title Summer Camp Completed!
+                h4.byline Give us some feedback to claim your badge
+
+            .bottom
+                .badge.locked
+
+                .center
+
+                    a.button.large.button-success(ng-click='next()') unlock badge
+
+
+        .screen(ng-if='screen_no == 2')
+            .top
+                h3.title Make us better
+                h4.byline And get a Summer Camp badge!
+
+            .bottom
+                form(name='responseForm')
+                    ul
+                        li.prompt
+                            .question What did you like the most?
+                            input.answer(ng-model='responses.like_most' maxlength='100' required)
+                        li.prompt
+                            .question What didn't you like?
+                            input.answer(ng-model='responses.like_least' maxlength='100' required)
+                        li.prompt
+                            .question How likely are you to recommend Kano to a friend?
+                            .answer.rating
+                                ul.scale
+                                    - var n = 1
+                                    while n <= 10
+                                        li.rating-number
+                                            input(id='rating-scale-' + n type='radio' name='recommend' ng-model='responses.recommend_scale' ng-value=n required)
+                                            label(for='rating-scale-' + n)=n++
+                                span.rating-label.left Never
+                                span.rating-label.right Likely
+                                .clear
+                        li.prompt
+                            .question What should we do next?
+                            input.answer(ng-model='responses.what_next' maxlength='100' required)
+
+                    .center
+                        a.button.large.button-success(ng-click='responseForm.$valid && next()' ng-class="responseForm.$invalid ? 'disabled': '' ") Send and claim badge
+
+
+
+        .screen(ng-if='screen_no == 3')
+            .top
+                h3.title Thanks! Here's your badge
+                h4.byline Check it out on your Kano World profile
+
+            .bottom
+                .badge.unlocked
+
+                .center
+
+                    a.button.large.button-success(ng-href='http://world.kano.me/users/{{ user.username }}/progress') Go to profile
