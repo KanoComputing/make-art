@@ -68,6 +68,8 @@
                     h5(ng-if="!summerCampChallenges[day].cover_url")  {{summerCampChallenges[day].short_title || summerCampChallenges[day].title || "&nbsp;"}}
                     .img-cover(ng-if="summerCampChallenges[day].cover_url" ng-style="{ 'background-image': 'url(' + summerCampChallenges[day].cover_url + ')' }")
 
+        .final-call
+            
     include ./partial/summer-camp-leaderboard
     include ./partial/promo-popup
     include ./partial/summer-camp-feedback
