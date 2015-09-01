@@ -15,19 +15,20 @@
                     span(ng-class='{ done : isCompleted(selectedSummerChallengeDay - 10)}') {{ isCompleted(selectedSummerChallengeDay - 10) ? ' - Completed' : '' }}
 
                 div.description(ng-bind-html='selectedSummerChallengeObj.description | markdown ')
-                //- .diff-container(ng-if='isCompleted(selectedSummerChallengeDay - 10)')
-                //-     span.cont-label SHARE IT:
-                //-     .share-buttons
-                //-         a.btn-facebook(ng-click='facebookShare(selectedSummerChallengeObj)')
+                .diff-container(ng-if='isCompleted(selectedSummerChallengeDay - 10)')
+                    span.cont-label SHARE IT:
+                    .share-buttons
+                        a.btn-facebook(ng-click='facebookShare(selectedSummerChallengeObj)')
+                        a.btn-mail(ng-click='preview()')
                         
-                .diff-container
+                .diff-container(ng-if='!isCompleted(selectedSummerChallengeDay - 10)')
                     span.cont-label DIFFICULTY
                     .difficulty-level(data-level='{{ "l-" + selectedSummerChallengeObj.difficulty }}')
 
                         span(title='Easy').l-easy
                         span(title='Medium').l-medium
                         span(title='Hard').l-hard
-                .rewards-container
+                .rewards-container(ng-if='!isCompleted(selectedSummerChallengeDay - 10)')
                     span.cont-label(ng-if='selectedSummerChallengeObj.rewards') REWARDS
                     .rewards-icons(ng-if='selectedSummerChallengeObj.rewards')
                         a(class='rew-wallpaper', ng-if='selectedSummerChallengeObj.rewards.wallpaper', href='http://www.kano.me/summercamp-faq#extracontent', title='This special content is exclusive to Kano Kit owners. To access, turn on your kit and make sure it is connected to WiFi.')
@@ -73,3 +74,21 @@
     include ./partial/summer-camp-leaderboard
     include ./partial/promo-popup
     include ./partial/summer-camp-feedback
+
+.modal-overlay(ng-if='mailPreview')
+    .modal-inner.modal-mail-preview.center
+        button.close(ng-click='closePreview()'): i.icon-cross
+        .preview
+            .header Share by email
+            h4 "{{ selectedSummerChallengeObj.shareTitle }}"
+            .content
+                .left-content
+                    input(type='email' ng-model='selectedSummerChallengeObj.email' placeholder='Enter an email address')
+                    textarea(ng-model='selectedSummerChallengeObj.message' placeholder="I just made this with code! Want to try your own? It's easy, fun and for everyone")
+                    input(type='text' ng-model='selectedSummerChallengeObj.name' placeholder='Your name...')
+                .right-content
+                    .pic
+                        img(ng-src='{{selectedSummerChallengeObj.img}}' ng-if='!selectedSummerChallengeObj.cover_url')
+                        img(ng-src='{{selectedSummerChallengeObj.cover_url}}' ng-if='selectedSummerChallengeObj.cover_url')
+            
+                    a.button.button-success(ng-disabled="true" ng-click='sendMail(selectedSummerChallengeObj)') Send
