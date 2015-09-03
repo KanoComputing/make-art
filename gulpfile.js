@@ -25,11 +25,11 @@ var paths = {
     styles     : { watch: 'styles/**/*.styl', src: 'styles/main.styl', out: 'www/css' }
 };
 
-function beep () {
+function beep() {
     console.log('\007');
 }
 
-function handleError (error) {
+function handleError(error) {
     beep(error);
     console.log(color.bold('[ error caught ]:\n') + color.red(error));
 }
