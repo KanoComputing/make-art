@@ -1,0 +1,17 @@
+.modal-overlay(ng-if='mailPreview')
+    .modal-inner.modal-mail-preview.center
+        button.close(ng-click='closePreview()'): i.icon-cross
+        .preview
+            .header Share by email
+            h4 "{{ selectedSummerChallengeObj.shareTitle }}"
+            .content
+                .left-content
+                    input(type='email' ng-model='selectedSummerChallengeObj.email' placeholder='Enter an email address')
+                    textarea(ng-model='selectedSummerChallengeObj.message' placeholder="I just made this with code! Want to try your own? It's easy, fun and for everyone")
+                    input(type='text' ng-model='selectedSummerChallengeObj.name' placeholder='Your name...')
+                .right-content
+                    .pic
+                        img(ng-src='{{selectedSummerChallengeObj.img}}' ng-if='!selectedSummerChallengeObj.cover_url')
+                        img(ng-src='{{selectedSummerChallengeObj.cover_url}}' ng-if='selectedSummerChallengeObj.cover_url')
+            
+                    a.button.button-success(ng-click='sendMail(selectedSummerChallengeObj)') Send

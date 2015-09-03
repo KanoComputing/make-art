@@ -15,19 +15,20 @@
                     span(ng-class='{ done : isCompleted(selectedSummerChallengeDay - 10)}') {{ isCompleted(selectedSummerChallengeDay - 10) ? ' - Completed' : '' }}
 
                 div.description(ng-bind-html='selectedSummerChallengeObj.description | markdown ')
-                //- .diff-container(ng-if='isCompleted(selectedSummerChallengeDay - 10)')
-                //-     span.cont-label SHARE IT:
-                //-     .share-buttons
-                //-         a.btn-facebook(ng-click='facebookShare(selectedSummerChallengeObj)')
+                .diff-container(ng-if='isCompleted(selectedSummerChallengeDay - 10)')
+                    span.cont-label SHARE IT:
+                    .share-buttons
+                        a.btn-facebook(ng-click='facebookShare(selectedSummerChallengeObj)')
+                        a.btn-mail(ng-click='openPreview()')
                         
-                .diff-container
+                .diff-container(ng-if='!isCompleted(selectedSummerChallengeDay - 10)')
                     span.cont-label DIFFICULTY
                     .difficulty-level(data-level='{{ "l-" + selectedSummerChallengeObj.difficulty }}')
 
                         span(title='Easy').l-easy
                         span(title='Medium').l-medium
                         span(title='Hard').l-hard
-                .rewards-container
+                .rewards-container(ng-if='!isCompleted(selectedSummerChallengeDay - 10)')
                     span.cont-label(ng-if='selectedSummerChallengeObj.rewards') REWARDS
                     .rewards-icons(ng-if='selectedSummerChallengeObj.rewards')
                         a(class='rew-wallpaper', ng-if='selectedSummerChallengeObj.rewards.wallpaper', href='http://www.kano.me/summercamp-faq#extracontent', title='This special content is exclusive to Kano Kit owners. To access, turn on your kit and make sure it is connected to WiFi.')
@@ -73,3 +74,4 @@
     include ./partial/summer-camp-leaderboard
     include ./partial/promo-popup
     include ./partial/summer-camp-feedback
+    include ./partial/mail-preview
