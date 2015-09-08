@@ -13,8 +13,7 @@ var gulp = require('gulp'),
     nib = require('nib');
 
 var server = lr(),
-    env = process.env.NODE_ENV === 'production' ? 'production' : 'development',
-    production = env === 'production',
+    env = process.env.NODE_ENV || 'development',
     segmentioId = process.env.SEGMENTIO_ID || null,
     offline = process.env.OFFLINE === 'true',
     testmode = process.env.TEST_MODE === 'true';
