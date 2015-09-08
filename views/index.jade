@@ -40,11 +40,14 @@ html(lang='en', ng-app='draw')
                 TEST_MODE : #{!production}
             };
 
-            window.CONFIG = {
+            window.ENV = '#{env}';
+            window.CFG = {
                 PRODUCTION   : #{production},
+                STAGING      : #{staging},
                 OFFLINE      : #{offline},
                 SEGMENTIO_ID : '#{segmentioId}',
-                TEST_MODE    : #{testmode}
+                TEST_MODE    : #{testmode},
+                ENV          : '#{env}'
             };
 
         //- App

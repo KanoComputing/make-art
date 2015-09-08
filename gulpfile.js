@@ -13,8 +13,9 @@ var gulp = require('gulp'),
     nib = require('nib');
 
 var server = lr(),
-    env = process.env.NODE_ENV === 'production' ? 'production' : 'development',
+    env = process.env.NODE_ENV || 'development',
     production = env === 'production',
+    staging = env === 'staging',
     segmentioId = process.env.SEGMENTIO_ID || null,
     offline = process.env.OFFLINE === 'true',
     testmode = process.env.TEST_MODE === 'true';
@@ -66,6 +67,7 @@ gulp.task('views', function () {
         locals : _.extend({
             env         : env,
             production  : production,
+            staging     : staging,
             offline     : offline,
             segmentioId : segmentioId,
             testmode    : testmode
