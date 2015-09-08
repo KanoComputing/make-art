@@ -36,14 +36,10 @@ html(lang='en', ng-app='draw')
             script(src='/js/vendor/segmentio.min.js', type='text/javascript')
 
         script(type='text/javascript').
-            window.KANO_WORLD_CONFIG = {
-                TEST_MODE : #{!production}
-            };
-
             window.ENV = '#{env}';
+
             window.CFG = {
                 PRODUCTION   : #{production},
-                STAGING      : #{staging},
                 OFFLINE      : #{offline},
                 SEGMENTIO_ID : '#{segmentioId}',
                 TEST_MODE    : #{testmode},
