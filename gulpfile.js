@@ -14,6 +14,7 @@ var gulp = require('gulp'),
 
 var server = lr(),
     env = process.env.NODE_ENV || 'development',
+    production = env === 'production',
     segmentioId = process.env.SEGMENTIO_ID || null,
     offline = process.env.OFFLINE === 'true',
     testmode = process.env.TEST_MODE === 'true';
