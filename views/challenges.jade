@@ -21,7 +21,7 @@
 
             a.highlight(href='/playground', ng-class='{ locked: isLocked(challenges.length) }')
 
-                .cover(ng-style='background-image: url(/assets/challenges/playground.png)')
+                .cover(ng-style='{"background-image": "url(/assets/challenges/playground.png)"}')
 
                 .detail
                     h5 Playground
@@ -51,7 +51,7 @@
                     target='_blank'
                     )
 
-                    .cover(ng-style='background-image: url(/assets/challenges/browse.png)')
+                    .cover(ng-style='{"background-image": "url(/assets/challenges/browse.png)"}')
 
                     .detail
                         h5 Browse more
