@@ -23,7 +23,7 @@ include partial/summercamp-bar
 
             a.highlight(href='/playground', ng-class='{ locked: isLocked(challenges.length) }')
 
-                .cover(style='background-image: url(/assets/challenges/playground.png)')
+                .cover(ng-style='background-image: url(/assets/challenges/playground.png)')
 
                 .detail
                     h5 Playground
@@ -53,7 +53,7 @@ include partial/summercamp-bar
                     target='_blank'
                     )
 
-                    .cover(style='background-image: url(/assets/challenges/browse.png)')
+                    .cover(ng-style='background-image: url(/assets/challenges/browse.png)')
 
                     .detail
                         h5 Browse more
