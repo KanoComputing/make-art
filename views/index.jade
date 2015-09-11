@@ -1,5 +1,5 @@
 doctype html
-html(lang='en', ng-app='draw')
+html(lang='en', ng-app='draw', id="ng-app")
     head
         //- Generic
         meta(charset='UTF-8')
@@ -19,7 +19,7 @@ html(lang='en', ng-app='draw')
         .loading-overlay(ng-cloak): .spinner
 
         include partial/header
-        ng-view
+        div(ng-view)
         include partial/splash
 
         if !offline

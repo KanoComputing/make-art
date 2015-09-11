@@ -9,7 +9,8 @@
     "build": "gulp",
     "bundle": "./bundle",
     "postinstall": "node node_modules/.bin/gulp default",
-    "jshint": "jshint lib"
+    "jshint": "jshint lib",
+    "jscs": "jscs lib"
   },
   "author": "Tancredi Trugenberger",
   "repository": {
