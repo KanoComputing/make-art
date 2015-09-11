@@ -39,12 +39,16 @@ html(lang='en', ng-app='draw', id="ng-app")
         script(type='text/javascript').
             window.ENV = '#{env}';
 
-            window.CFG = {
-                PRODUCTION   : #{production},
-                OFFLINE      : #{offline},
-                SEGMENTIO_ID : '#{segmentioId}',
-                TEST_MODE    : #{testmode},
-                ENV          : '#{env}'
+            window.CONFIG = {
+                PRODUCTION      : #{production},
+                OFFLINE         : #{offline},
+                SEGMENTIO_ID    : '#{segmentioId}',
+                FACEBOOK_APP_ID : '#{facebookAppId}',
+                MAILSERVER      : '#{mailServer}',
+                API_URL         : '#{api_url}',
+                WORLD_URL       : '#{world_url}',
+                TEST_MODE       : #{testmode},
+                ENV             : '#{env}'
             };
 
         //- App
