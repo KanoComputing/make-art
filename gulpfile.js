@@ -16,6 +16,10 @@ var server = lr(),
     env = process.env.NODE_ENV || 'development',
     production = env === 'production',
     segmentioId = process.env.SEGMENTIO_ID || null,
+    facebookAppId = process.env.FACEBOOK_APP_ID || null,
+    mailServer = process.env.MAILSERVER || null,
+    api_url = process.env.API_URL || null,
+    world_url = process.env.WORLD_URL || null,
     offline = process.env.OFFLINE === 'true',
     testmode = process.env.TEST_MODE === 'true';
 
@@ -64,11 +68,15 @@ gulp.task('views', function () {
     .pipe(jade({
         pretty : !production,
         locals : _.extend({
-            env         : env,
-            production  : production,
-            offline     : offline,
-            segmentioId : segmentioId,
-            testmode    : testmode
+            env             : env,
+            production      : production,
+            offline         : offline,
+            segmentioId     : segmentioId,
+            facebookAppId   : facebookAppId,
+            mailServer      : mailServer,
+            api_url         : api_url,
+            world_url       : world_url,
+            testmode        : testmode
         }, jadeHelpers)
     }))
     .on('error', handleError)
