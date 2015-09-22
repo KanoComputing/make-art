@@ -10,7 +10,8 @@
     "bundle": "./bundle",
     "postinstall": "node node_modules/.bin/gulp default",
     "jshint": "jshint lib",
-    "jscs": "jscs lib"
+    "jscs": "jscs lib",
+    "test": "./node_modules/.bin/mocha test/**/*"
   },
   "author": "Tancredi Trugenberger",
   "repository": {
@@ -42,6 +43,10 @@
     "play-audio": "^0.1.0",
     "throttle-debounce": "^0.1.1",
     "tiny-lr": "0.0.9"
+  },
+  "devDependencies": {
+    "mocha": "2.3.x",
+    "chai": "3.2.x"
   },
   "engines": {
     "node": "0.12.x"
