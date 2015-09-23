@@ -28,17 +28,17 @@
         {
             "hint": "Draw your first rectangle - **type** `rectangle 50, 500`",
             "solution": "rectangle 50, 500",
-            "validate": "^rectangle 50, 500$"
+            "validate": "^rectangle 50, *500$"
         },
         {
             "hint": "Move to the left and down - in a new line, **type** `moveTo 0, 150`",
             "solution": "moveTo 0, 150",
-            "validate": "^moveTo 0, 150$"
+            "validate": "^moveTo 0, *150$"
         },
         {
             "hint": "Draw another rectangle with width 500 and height 50 - in a new line, **type** `rectangle 500, 50`",
             "solution": "rectangle 500, 50",
-            "validate": "^rectangle 500, 50$"
+            "validate": "^rectangle 500, *50$"
         }
     ],
     "completion_text": "Cool beans - enough of flags, let's try something else!"

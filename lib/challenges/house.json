@@ -28,7 +28,7 @@
         {
             "hint": "Now draw rectangle, **type** `rectangle 300, 200`",
             "solution": "rectangle 300, 200",
-            "validate": "^rectangle 300, 200$"
+            "validate": "^rectangle 300, *200$"
         },
         {
             "hint": "Move to the right and up, **type** `move 150, -100`",

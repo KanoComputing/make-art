@@ -22,27 +22,27 @@
         {
             "hint": "Move down by 100 - **type** `move 0, 100`",
             "solution": "move 0, 100",
-            "validate": "^move 0, 100$"
+            "validate": "^move 0, *100$"
         },
         {
             "hint": "Draw the knot - **type** `polygon 15, 15, -15, 15`",
             "solution": "polygon 15, 15, -15, 15",
-            "validate": "^polygon 15, 15, -15, 15$"
+            "validate": "^polygon 15, *15, *\\-15, *15$"
         },
         {
             "hint": "Move down a little more - **type** `move 0, 15`",
             "solution": "move 0, 15",
-            "validate": "^move 0, 15$"
+            "validate": "^move 0, *15$"
         },
         {
             "hint": "Choose a thick black stroke - **type** `stroke black, 5`",
             "solution": "stroke black, 5",
-            "validate": "^stroke black, 5$"
+            "validate": "^stroke black, *5$"
         },
         {
             "hint": "Draw the line of the balloon thread - **type** `line 0, 200`",
             "solution": "line 0, 200",
-            "validate": "^line 0, 200$"
+            "validate": "^line 0, *200$"
         }
     ],
     "completion_text": "Awesome balloon! Why not change the color before moving on?"
