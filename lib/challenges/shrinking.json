@@ -7,23 +7,21 @@
     "steps": [
         {
             "hint": "Set the stroke - **type** `stroke gray, 3`",
-            "solution": "stroke gray, 3",
-            "validate": "^stroke gray, 3$"
+            "solution": "stroke gray, 3"
+
         },
         {
             "hint": "Set the color to see through - **type** `color null`",
-            "solution": "color null",
-            "validate": "^color null$"
+            "solution": "color null"
         },
         {
             "hint": "Let's draw 32 circles all at once - **type** `for i in [ 0 .. 32 ]`",
-            "solution": "for i in [ 0 .. 32 ]",
-            "validate": "@@for i in [ 0 .. 32 ]"
+            "solution": "for i in [ 0..32 ]"
         },
         {
             "hint": "Awesome, now for the circles - inside the for loop **type** `circle 10 * i`",
             "solution": "    circle 10 * i",
-            "validate": "^    circle 10 \\* i$"
+            "validate": "    circle 10 *\\* *i"
         }
     ],
     "completion_text": "Great! For loops let us repeat bits of code (it saves on all the typing)!"

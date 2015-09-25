@@ -11,28 +11,23 @@
         },
         {
             "hint": "Now set the stroke to 0",
-            "solution": "stroke 0",
-            "validate": "^stroke 0$"
+            "solution": "stroke 0"
         },
         {
             "hint": "And set the drawing color to yellow",
-            "solution": "color yellow",
-            "validate": "^color yellow$"
+            "solution": "color yellow"
         },
         {
             "hint": "Now let's open a loop - **type** `for i in [ 0 .. 32 ]`",
-            "solution": "for i in [ 0 .. 32 ]",
-            "validate": "^for i in \\[ *0 *.. *32 *\\]$"
+            "solution": "for i in [ 0..32 ]"
         },
         {
             "hint": "Now to set where each star will go -  **type** `moveTo (random 1, 500), (random 1, 500)`",
-            "solution": "    moveTo (random 1, 500), (random 1, 500)",
-            "validate": "^    moveTo \\(random 1, *500\\), *\\(random 1, *500\\)$"
+            "solution": "    moveTo (random 1, 500), (random 1, 500)"
         },
         {
             "hint": "Finally draw each star as a circle with a size of 5",
-            "solution": "    circle 5",
-            "validate": "^    circle 5$"
+            "solution": "    circle 5"
         }
     ],
     "completion_text": "Awesome! Press space and see what happens to the stars..."

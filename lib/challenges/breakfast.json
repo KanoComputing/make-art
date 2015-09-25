@@ -38,7 +38,7 @@
         {
             "hint": "Move up and left - **type** `move -70, -70`",
             "solution": "\n#Egg\nmove -70, -70",
-            "validate": "^move \\-70, *\\-70$"
+            "validate": "^move \\-70, \\-70$"
         },
         {
             "hint": "Set the color to white",
@@ -63,7 +63,7 @@
         {
             "hint": "Move up and right - **type** `move 90, -60`",
             "solution": "\n#Bacon 1\nmove 90, -60",
-            "validate": "^move 90, *\\-60$"
+            "validate": "^move 90, \\-60$"
         },
         {
             "hint": "Set the color to red",
@@ -73,7 +73,7 @@
         {
             "hint": "Draw a rectangle with a size of 60 and 200 - **type** `rectangle 60, 200`",
             "solution": "rectangle 60, 200",
-            "validate": "^rectangle 60, *200$"
+            "validate": "^rectangle 60, 200$"
         },
         {
             "hint": "Move 30 to the right - **type** `move 30`",
@@ -88,7 +88,7 @@
         {
             "hint": "Draw a rectangle with a size of 30 and 200 - **type** `rectangle 30, 200`",
             "solution": "rectangle 30, 200",
-            "validate": "^rectangle 30, *200$"
+            "validate": "^rectangle 30, 200$"
         },
         {
             "hint": "Move down and left - **type** `move -3, 10`",
@@ -108,7 +108,7 @@
         {
             "hint": "Move down and right - **type** `move 40, 50`",
             "solution": "\n#Bacon 2\nmove 40, 50",
-            "validate": "^move 40, *50$"
+            "validate": "^move 40, 50$"
         },
         {
             "hint": "Set the color to red",
@@ -118,7 +118,7 @@
         {
             "hint": "Draw a rectangle with a size of 60 and 200 - **type** `rectangle 60, 200`",
             "solution": "rectangle 60, 200",
-            "validate": "^rectangle 60, *200$"
+            "validate": "^rectangle 60, 200$"
         },
         {
             "hint": "Move 30 to the right - **type** `move 30`",
@@ -133,12 +133,12 @@
         {
             "hint": "Draw a rectangle with a size of 30 and 200 - **type** `rectangle 30, 200`",
             "solution": "rectangle 30, 200",
-            "validate": "^rectangle 30, *200$"
+            "validate": "^rectangle 30, 200$"
         },
         {
             "hint": "Move down and left - **type** `move -3, 10`",
             "solution": "move -3, 10",
-            "validate": "^move \\-3, *10$"
+            "validate": "^move \\-3, 10$"
         },
         {
             "hint": "Set the color to white",
@@ -148,12 +148,12 @@
         {
             "hint": "Draw a rectangle with a size of 6 and 180 - **type** `rectangle 6, 180`",
             "solution": "rectangle 6, 180",
-            "validate": "^rectangle 6, *180$"
+            "validate": "^rectangle 6, 180$"
         },
         {
             "hint": "Move down and left - **type** `move -200, 150`",
             "solution": "\n#Tomato 1\nmove -200, 150",
-            "validate": "^move \\-200, *150$"
+            "validate": "^move \\-200, 150$"
         },
         {
             "hint": "Set the color to red",
@@ -188,7 +188,7 @@
         {
             "hint": "Draw an ellipse with a size of 10 and 30",
             "solution": "ellipse 10, 30",
-            "validate": "^ellipse 10, *30$"
+            "validate": "^ellipse 10, 30$"
         },
         {
             "hint": "Move down and right - **type** `move 70, 50`",
@@ -228,7 +228,7 @@
         {
             "hint": "Draw an ellipse with a size of 10 and 30",
             "solution": "ellipse 10, 30",
-            "validate": "^ellipse 10, *30$"
+            "validate": "^ellipse 10, 30$"
         }
     ],
     "completion_text": "Well done!"

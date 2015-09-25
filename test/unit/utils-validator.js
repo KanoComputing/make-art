@@ -104,7 +104,7 @@ describe("validator", function () {
 
 
     it("should validate an array of rules in a single step", function () {
-        var rules = ["print a, b", "a = c", "b *= *c"],
+        var rules = ["print a, b", "a = c", "b = c"],
             v = getValidator([{validate: rules}]),
             r = v.validate("print a, b\na = c\nb    = c");
         assert.deepEqual(r,
@@ -121,7 +121,7 @@ describe("validator", function () {
 
 
     it("should validate an array of steps with a single rule each", function () {
-        var rules = ["print a, b", "a = c", "b *= *c"],
+        var rules = ["print a, b", "a = c", "b = c"],
             v = getValidator([
                     {validate: rules[0]},
                     {validate: rules[1]},
@@ -145,7 +145,7 @@ describe("validator", function () {
 
 
     it("should partially validate an array of steps with a single rule", function () {
-        var rules = ["print a, b", "a = c", "d *= *c"],
+        var rules = ["print a, b", "a = c", "d = c"],
             v = getValidator([
                     {validate: rules[0]},
                     {validate: rules[1]},
@@ -168,7 +168,7 @@ describe("validator", function () {
 
 
     it("should partially validate an array of steps with a single rule, with a `hole` ", function () {
-        var rules = ["^print a, b$", "^a = c$", "^d *= *c$"],
+        var rules = ["print a, b", "a = c", "d = c"],
             v = getValidator([
                     {validate: rules[0]},
                     {validate: rules[1]},
@@ -197,7 +197,7 @@ describe("validator", function () {
     });
 
     it("should partially validate an array of steps with multiple rules, with a `hole` ", function () {
-        var rules = ["^print a, b$", "^a = c$", "^d *= *c$"],
+        var rules = ["print a, b", "a = c *-20", "d = c"],
             v = getValidator([
                     {validate: rules[0]},
                     {validate: rules[1]},
@@ -207,7 +207,7 @@ describe("validator", function () {
                     {validate: rules[2]},
                     {validate: rules[2]}
                 ]),
-            r = v.validate("print a, b\na = c\nb = c\nprint a, b\na = c\nd=c\nd=c\nd=c\np=q");
+            r = v.validate("print a, b\na = c -20\nb = c\nprint a, b\na = c -20\nd=c\nd=c\nd=c\np=q");
         assert.deepEqual(r,
             {
                 lastValidStep: 5,
@@ -226,7 +226,7 @@ describe("validator", function () {
     });
 
     it("should validate an array of steps with multiple rules, with a `hole` ", function () {
-        var rules = ["^print a, b$", "^a = c$", "^d *= *c$"],
+        var rules = ["print a, b", "a = c", "d = c"],
             v = getValidator([
                     {validate: rules[0]},
                     {validate: rules[1]},
@@ -253,6 +253,26 @@ describe("validator", function () {
                 complete: true
             });
     });
+    describe(" - Internal functions",  function () {
+        var priv = getValidator([]).private;
+        describe(" - completeRegex ", function () {
+            it("should replace the first space after the command with a .", function () {
+                var res = priv.completeRegex("rectangle 500, 50");
+                assert.equal(res, "^rectangle +500 *, *50 *$");
+            });
 
+            it("should replace the other spaces with a *", function () {
+                var res = priv.completeRegex("command 12, 32");
+                assert.equal(res, "^command +12 *, *32 *$");
+            });
+            it("should replace the other spaces with a *", function () {
+                var res = priv.completeRegex("command 12, ..32");
+
+                assert.equal(res, "^command +12 *, * *\\.\\. *32 *$");
+            });
+        });
+
+    });
 
 });
+
