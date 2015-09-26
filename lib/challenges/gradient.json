@@ -7,28 +7,26 @@
     "steps": [
         {
             "hint": "Start by opening a for loop - **type** `for x in [ 0 .. 25 ]`",
-            "solution": "for x in [ 0 .. 25 ]",
-            "validate": "^for x in \\[ *0 *\\.\\. *25 *\\]$"
+            "solution": "for x in [ 0..25 ]"
         },
         {
             "hint": "Now lets open a second for loop inside - **type** `for y in [ 0 .. 25 ]`",
-            "solution": "    for y in [ 0 .. 25 ]",
-            "validate": "^    for y in \\[ *0 \\.\\. *25 *\\]$"
+            "solution": "    for y in [ 0..25 ]"
         },
         {
             "hint": "Let's rotate through the color spectrum - **type** `color rotate red, 10 * x + 10 * y`",
             "solution": "        color rotate red, 10 * x + 10 * y",
-            "validate": "^        color rotate red, *10 *\\* *x *\\+ *10 *\\* *y$"
+            "validate": "        color rotate +red,10 *\\* *x *\\+ *10 *\\* *y"
+
         },
         {
             "hint": "Now we need to move every time we draw - **type** `moveTo 20 * x , 20 * y`",
             "solution": "        moveTo 20 * x , 20 * y",
-            "validate": "^        moveTo 20 \\* *x *, *20 *\\* *y$"
+            "validate": "        moveTo 20 *\\* *x,20 *\\* *y"
         },
         {
             "hint": "Now for the shapes draw a square of size 20",
-            "solution": "        square 20",
-            "validate": "^        square 20$"
+            "solution": "        square 20"
         }
     ],
     "completion_text": "Try changing the numbers in the rotate function and see what happens."

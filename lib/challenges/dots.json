@@ -19,11 +19,11 @@
         },
         {
             "hint": "Now open a loop - **type** `for x in [ 0 .. 25 ]`",
-            "solution": "for x in [ 0 .. 25 ]"
+            "solution": "for x in [ 0..25 ]"
         },
         {
             "hint": "Inside this loop, open a second loop - **type** `for y in [ 0 .. 25 ]`",
-            "solution": "    for y in [ 0 .. 25 ]"
+            "solution": "    for y in [ 0..25 ]"
         },
         {
             "hint": "Move around, **type** `moveTo x * 20, y * 20`",
