@@ -4,7 +4,18 @@
         i.icon-menu
         | Challenges
 
-    ul.challenges-list
+    ul.worlds-list(ng-if='!selectedWorld')
+        li.world-item(ng-repeat='world in worlds')
+            a.world-cover(
+                ng-click='loadWorld(world)'
+                )
+            h4 {{world.name}}
+
+    h4(ng-if='selectedWorld') 
+        a(ng-click='unloadWorld()')
+            i.icon-arrow-left
+        {{selectedWorld.name}}
+    ul.challenges-list(ng-if='selectedWorld')
 
         li(ng-repeat='challenge in challenges')
             a(
@@ -12,10 +23,10 @@
                 ng-class='{ locked: isLocked($index), completed: isCompleted($index), current: isCurrent($index) }'
                 )
 
-                .cover(ng-style='{ "background-image": "url(/assets/challenges/" + challenge.id + ".png)" }')
+                .cover(ng-style='{ "background-image": "url(/assets/challenges/images/" + challenge.cover + ")" }')
 
                 .detail
-                    h5 {{ challenge.title }}
+                    h5 {{ challenge.short_title || challenge.title }}
 
         li
 
@@ -59,7 +70,7 @@
 .modal-overlay(ng-if='selectedChallenge')
     .modal-inner.modal-challenge-info.center
 
-        .cover(ng-style='{ "background-image": "url(/assets/challenges/" + selectedChallenge.id + ".png)" }')
+        .cover(ng-style='{ "background-image": "url(/assets/challenges/images/" + selectedChallenge.cover +")" }')
 
         button.close(ng-click='deselectedChallenge()'): i.icon-cross
 
@@ -69,6 +80,6 @@
 
             p.description {{ selectedChallenge.description }}
 
-            a.button.button-success(ng-href='/challenge/{{ selectedChallenge.index + 1 }}') Start
+            a.button.button-success(ng-href='/challenge/{{selectedWorld.id}}/{{selectedChallenge.id}}') Start
 
 include ./partial/promo-popup

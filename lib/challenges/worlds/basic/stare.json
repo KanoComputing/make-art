@@ -1,0 +1,55 @@
+{
+    "id": "stare",
+    "title": "Stare in the dark",
+    "description": "Draw a pair of staring eyes in the dark",
+    "startAt": 2,
+    "steps": [
+        {
+            "hint": "Set the background to black",
+            "solution": "background black"
+        },
+        {
+            "hint": "Move to the left by 80 - **type** `move -80`",
+            "solution": "move -80",
+            "validate": "move -80"
+        },
+        {
+            "hint": "Set the drawing color to white",
+            "solution": "color white"
+        },
+        {
+            "hint": "Draw an ellipse, it's like a stretched circle - **type** `ellipse 60, 40`",
+            "solution": "ellipse 60, 40"
+        },
+        {
+            "hint": "Set the drawing color to black - **type** `color black`",
+            "solution": "color black"
+        },
+        {
+            "hint": "Draw a circle with a size of 10 - **type** `circle 10`",
+            "solution": "circle 10"
+        },
+        {
+            "hint": "Move to the right by 160 - **type** `move 160`",
+            "solution": "move 160"
+        },
+        {
+            "hint": "Set the drawing color to white again",
+            "solution": "color white"
+        },
+        {
+            "hint": "Now draw another ellipse with width 60 and height 40 -  **type** `ellipse 60, 40`",
+            "solution": "ellipse 60, 40"
+        },
+        {
+            "hint": "Set the drawing color to black",
+            "solution": "color black"
+        },
+        {
+            "hint": "Finish it up by drawing a circle with a size of 10",
+            "solution": "circle 10"
+        }
+    ],
+    "completion_text": "You Wizard! The next time I need spooky eyes I know who to call!",
+    "cover": "stare.png"
+}
