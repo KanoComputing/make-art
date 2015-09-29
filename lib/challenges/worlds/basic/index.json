@@ -1,0 +1,22 @@
+{
+    "id": "basic",
+    "name": "Getting Started",
+    "description": "This is a first set of challenges which will make you started with Make-Art",
+    "cover": "img/blahblavhblb",
+    "challenges": [
+        "./japan",
+        "./sweden",
+        "./stare",
+        "./smiley",
+        "./baloon",
+        "./stickman",
+        "./shrinking",
+        "./random",
+        "./starry",
+        "./house",
+        "./dots",
+        "./gradient",
+        "./planet",
+        "./pizza"
+    ]
+}

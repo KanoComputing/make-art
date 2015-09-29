@@ -29,6 +29,7 @@
     "griddy": "0.0.x",
     "gulp": "~3.5.x",
     "gulp-browserify": "~0.4.x",
+    "gulp-callback": "0.0.3",
     "gulp-jade": "~0.4.x",
     "gulp-livereload": "1.2.0",
     "gulp-rename": "~0.2.x",

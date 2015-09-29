@@ -1,0 +1,18 @@
+{
+    "worlds": [
+        {
+            "id": "basic",
+            "name": "Getting Started",
+            "description": "This is a first set of challenges which will make you started with Make-Art",
+            "cover": "assets/img/blahblavhblb",
+            "world_path": "worlds/basic"
+        },
+        {
+            "id": "summercamp",
+            "name": "Summercamp",
+            "description": "This is a first set of challenges which will make you started with Make-Art",
+            "cover": "assets/img/blahblavhblb",
+            "world_path": "worlds/summercamp"
+        }
+    ]
+}

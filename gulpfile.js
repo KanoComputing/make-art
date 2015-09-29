@@ -1,5 +1,7 @@
+"use strict";
 var gulp = require('gulp'),
     jade = require('gulp-jade'),
+    gcallback = require('gulp-callback'),
     browserify = require('gulp-browserify'),
     stylus = require('gulp-stylus'),
     lr = require('tiny-lr'),
@@ -10,9 +12,9 @@ var gulp = require('gulp'),
     color = require('cli-color'),
     partialify = require('partialify/custom'),
     griddy = require('griddy'),
-    nib = require('nib');
-
-var server = lr(),
+    nib = require('nib'),
+    fs = require('fs'),
+    server = lr(),
     env = process.env.NODE_ENV || 'development',
     production = env === 'production',
     segmentioId = process.env.SEGMENTIO_ID || null,
@@ -21,16 +23,18 @@ var server = lr(),
     api_url = process.env.API_URL || null,
     world_url = process.env.WORLD_URL || null,
     offline = process.env.OFFLINE === 'true',
-    testmode = process.env.TEST_MODE === 'true';
+    testmode = process.env.TEST_MODE === 'true',
+    contentPath = 'www/assets/challenges/descriptors/';
 
 var paths = {
     views      : { watch: [ 'views/**/*.jade', 'content/**/*' ], src: 'views/**/*.jade', out: 'www' },
     browserify : { watch: [ 'lib/**/*', 'content/**/*', 'lib/**/**/*' ] , src: 'lib/index.js', out: 'www/js' },
-    styles     : { watch: 'styles/**/*.styl', src: 'styles/main.styl', out: 'www/css' }
+    styles     : { watch: 'styles/**/*.styl', src: 'styles/main.styl', out: 'www/css' },
+    content    : {watch: 'lib/challenges/**/*'}
 };
 
 function beep() {
-    console.log('\007');
+    //console.log('\007');
 }
 
 function handleError(error) {
@@ -76,7 +80,8 @@ gulp.task('views', function () {
             mailServer      : mailServer,
             api_url         : api_url,
             world_url       : world_url,
-            testmode        : testmode
+            testmode        : testmode,
+            challenges_url  : "/assets/challenges/descriptors"
         }, jadeHelpers)
     }))
     .on('error', handleError)
@@ -84,21 +89,93 @@ gulp.task('views', function () {
     .pipe(livereload(server));
 });
 
+/**
+ * This task modifies the challenge index to contain basic
+ * information about the single challenges, so that we
+ * can show a calendar without loading all the single challenges.
+ */
+gulp.task('apify-challenges', ['copy-challenges'], function (next) {
+    var index,
+        worldsNum,
+        countNext = 0;
+    function localNext() {
+        if (++countNext === worldsNum) {
+            next();
+        }
+    }
+    //work with them
+    index = require('./' + contentPath + 'index.json');
+    worldsNum = index.worlds.length;
+    index.worlds.forEach(function (world) {
+        var worldPath = './' + contentPath + world.world_path,
+            worldObj = require(worldPath + '/index.json'),
+            challenges = [],
+            formattedJSON;
+
+        //load all the challenges in an array
+        worldObj.challenges.forEach(function (ch) {
+            var challenge = require(worldPath + ch.substr(1, ch.length - 1)),
+                ch_obj = {
+                    id: challenge.id,
+                    title: challenge.title,
+                    short_title: challenge.short_title,
+                    cover: challenge.cover
+                };
+            challenges.push(ch_obj);
+        });
+
+        worldObj.challenges = challenges;
+        formattedJSON = JSON.stringify(worldObj, null, 4);
+        //write the challenges with headers
+        fs.writeFile(worldPath + '/index.json', formattedJSON, function (err) {
+            if (err) {
+                throw err;
+            } else {
+                localNext();
+            }
+        });
+
+    });
+
+
+});
+
+gulp.task('copy-challenges', function (next) {
+    var counter = 0, stream1, stream2;
+    function localNext() {
+        if (++counter === 2) {
+            next();
+        }
+    }
+    stream1 = gulp.src('lib/challenges/worlds/**/*.json')
+        .pipe(gulp.dest(contentPath + "/worlds"));
+    //copy the files
+    stream2 = gulp.src('lib/challenges/index.json')
+        .pipe(gulp.dest(contentPath));
+    stream1.on('end', localNext);
+    stream2.on('end', localNext);
+
+});
+
 gulp.task('livereload', function (next) {
-    if (server) { livereload(server); }
+    if (server) {
+        livereload(server);
+    }
     next();
 });
 
 gulp.task('listen', function (next) {
     server.listen(35729, next);
 });
+gulp.task('prepare-challenges', ['copy-challenges', 'apify-challenges']);
 
-gulp.task('build', [ 'browserify', 'styles', 'views' ]);
+gulp.task('build', ['browserify', 'styles', 'views', 'prepare-challenges']);
 
-gulp.task('watch', [ 'build', 'listen' ], function () {
-    gulp.watch(paths.browserify.watch, [ 'browserify' ]);
-    gulp.watch(paths.styles.watch, [ 'styles' ]);
-    gulp.watch(paths.views.watch, [ 'views' ]);
+gulp.task('watch', ['build', 'listen'], function () {
+    gulp.watch(paths.browserify.watch, ['browserify']);
+    gulp.watch(paths.styles.watch, ['styles']);
+    gulp.watch(paths.content.watch, ['prepare-challenges']);
+    gulp.watch(paths.views.watch, ['views']);
 });
 
 gulp.task('default', [ 'build' ]);
