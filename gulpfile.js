@@ -113,14 +113,27 @@ gulp.task('apify-challenges', ['copy-challenges'], function (next) {
             formattedJSON;
 
         //load all the challenges in an array
-        worldObj.challenges.forEach(function (ch) {
-            var challenge = require(worldPath + ch.substr(1, ch.length - 1)),
+        worldObj.challenges.forEach(function (ch, idx, arr) {
+            var chFileName = worldPath + ch.substr(1, ch.length - 1),
+                challenge = require(chFileName),
+                index = idx + 1,
+                hasNext = index !== (arr.length),
                 ch_obj = {
                     id: challenge.id,
                     title: challenge.title,
                     short_title: challenge.short_title,
-                    cover: challenge.cover
+                    cover: challenge.cover,
+                    index: index,
+                    hasNext: hasNext
                 };
+            challenge.index = index ;
+            challenge.hasNext = hasNext;
+
+            fs.writeFile(chFileName + ".json", JSON.stringify(challenge, null, 4), function (err) {
+                if (err) {
+                    throw err;
+                }
+            });
             challenges.push(ch_obj);
         });
 
