@@ -20,7 +20,7 @@
         li(ng-repeat='challenge in challenges')
             a(
                 ng-click='selectChallenge(challenge)',
-                ng-class='{ locked: isLocked($index), completed: isCompleted($index), current: isCurrent($index) }'
+                ng-class='{ locked: isLocked(challenge.index), completed: isCompleted(challenge.index), current: isCurrent(challenge.index) }'
                 )
 
                 .cover(ng-style='{ "background-image": "url(/assets/challenges/images/" + challenge.cover + ")" }')
@@ -30,7 +30,7 @@
 
         li
 
-            a.highlight(href='/playground', ng-class='{ locked: isLocked(challenges.length) }')
+            a.highlight(href='/playground', ng-class='{ locked: false}')
 
                 .cover(ng-style='{"background-image": "url(/assets/challenges/playground.png)"}')
 
