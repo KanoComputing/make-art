@@ -176,37 +176,49 @@ def _save_level(world, challengeNo):
 
     old_xp = calculate_xp()
     needsToSave = False
+    
 
     groups = load_app_state_variable(APP_NAME, 'groups')
 
     #We might need to load the worlds file here so that we're sure that 
     #noone is abusing the API from the OS
-    if groups[world] is not None:
-        if groups[world].challengeNo < challengeNo:
-            groups[world].challengeNo = challengeNo
+    if groups is None:
+        groups = {}
+
+
+    if world in groups:
+        if groups[world]['challengeNo'] < challengeNo:
+            groups[world]['challengeNo'] = challengeNo
             needsToSave = True
+
     else:
         groups[world] = {'challengeNo': challengeNo}
         needsToSave = True
 
     if needsToSave:
-        save_app_state_variable_with_dialog(APP_NAME, 'groups', json.dumps(value))
-    
+        save_app_state_variable_with_dialog(APP_NAME, 'groups', groups)
+
     new_xp = calculate_xp()
     return str(new_xp - old_xp)
 
+
+
 @server.route('/progress', methods=['GET'])
 def _load_level():
-    #RCNOTE: This function needs to create the whole 'groups' element
     value = {
         'groups': load_app_state_variable(APP_NAME, 'groups'),
         'challenge': load_app_state_variable(APP_NAME, 'challenge')
     }
     #Previously we used to save the progress as "level"
     level = load_app_state_variable(APP_NAME, 'level')
+    if (value['groups'] is None):
+        value['groups'] = {}
+
 
     #Replace the Challege var here.
-    #if ()
+    if level > value['challenge'] :
+        value['challenge'] = level
+
 
     value = json.dumps(value)
 
