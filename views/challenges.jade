@@ -8,6 +8,7 @@
         li.world-item(ng-repeat='world in worlds')
             a.world-cover(
                 ng-click='loadWorld(world)'
+                ng-class='{locked: isWorldLocked(world)}'
                 )
             h4 {{world.name}}
 

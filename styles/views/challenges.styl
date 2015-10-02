@@ -19,6 +19,16 @@
                 display block
                 height 200px
                 background-color #e4aaf1
+                &.locked
+                    filter(grayscale(100%))
+
+                    .cover, h5
+                        opacity .3
+
+                    h5:after
+                        content '\e621'
+                        margin-top 0
+                        background color-grey
             h4
                 background-color color-white
                 color color-black

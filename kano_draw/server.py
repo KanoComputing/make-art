@@ -171,28 +171,48 @@ def load_share():
         return send_from_directory(directory, filename, as_attachment=True)
 
 
-@server.route('/progress/<int:level>', methods=['POST'])
-def _save_level(level):
+@server.route('/progress/<world>/<int:challengeNo>', methods=['POST'])
+def _save_level(world, challengeNo):
+
     old_xp = calculate_xp()
+    needsToSave = False
 
-    value = int(level) - 1
+    groups = load_app_state_variable(APP_NAME, 'groups')
 
-    save_app_state_variable_with_dialog(APP_NAME, 'level', value)
+    #We might need to load the worlds file here so that we're sure that 
+    #noone is abusing the API from the OS
+    if groups[world] is not None:
+        if groups[world].challengeNo < challengeNo:
+            groups[world].challengeNo = challengeNo
+            needsToSave = True
+    else:
+        groups[world] = {'challengeNo': challengeNo}
+        needsToSave = True
+
+    if needsToSave:
+        save_app_state_variable_with_dialog(APP_NAME, 'groups', json.dumps(value))
+    
     new_xp = calculate_xp()
-
     return str(new_xp - old_xp)
 
 @server.route('/progress', methods=['GET'])
 def _load_level():
-    value = load_app_state_variable(APP_NAME, 'level')
-    # If every challenge is unlocked, value is 999
+    #RCNOTE: This function needs to create the whole 'groups' element
+    value = {
+        'groups': load_app_state_variable(APP_NAME, 'groups'),
+        'challenge': load_app_state_variable(APP_NAME, 'challenge')
+    }
+    #Previously we used to save the progress as "level"
+    level = load_app_state_variable(APP_NAME, 'level')
 
-    if value is not None:
-        return str(value + 1)
-    else:
-        _save_level(1)
-        return Response('1')
+    #Replace the Challege var here.
+    #if ()
 
+    value = json.dumps(value)
+
+    return Response(value)
+    
+    
 @server.route('/shutdown', methods=['POST'])
 def _shutdown():
     import signal

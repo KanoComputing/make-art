@@ -13,6 +13,14 @@
             "description": "This is a first set of challenges which will make you started with Make-Art",
             "cover": "assets/img/blahblavhblb",
             "world_path": "worlds/summercamp"
+        },
+        {
+            "id": "halloween2015",
+            "name": "Halloween",
+            "description": "This is a Halloween dedicated world",
+            "cover": "assets/img/blahblavhblb",
+            "world_path": "worlds/halloween2015",
+            "start_date": "2015-10-26 06:00:00"
         }
     ]
 }
