@@ -1,4 +1,4 @@
-.page-challenges: .page-width
+.page-challenges(ng-class="[ selectedWorldClass ]"): .page-width
 
     h3.page-title
         i.icon-menu
@@ -16,12 +16,12 @@
         a(ng-click='unloadWorld()')
             i.icon-arrow-left
         {{selectedWorld.name}}
-    ul.challenges-list(ng-if='selectedWorld')
+    ul.challenges-list(ng-if='selectedWorld' )
 
         li(ng-repeat='challenge in challenges')
             a(
                 ng-click='selectChallenge(challenge)',
-                ng-class='{ locked: isLocked(challenge.index), completed: isCompleted(challenge.index), current: isCurrent(challenge.index) }'
+                ng-class='{ locked: isLocked(challenge), completed: isCompleted(challenge.index), current: isCurrent(challenge.index) }'
                 )
 
                 .cover(ng-style='{ "background-image": "url(/assets/challenges/images/" + challenge.cover + ")" }')
