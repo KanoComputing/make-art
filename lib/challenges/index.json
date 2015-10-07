@@ -5,14 +5,18 @@
             "name": "Getting Started",
             "description": "This is a first set of challenges which will make you started with Make-Art",
             "cover": "assets/img/blahblavhblb",
-            "world_path": "worlds/basic"
+            "world_path": "worlds/basic",
+            "css_class": "basic-challenges"
+
         },
         {
             "id": "summercamp",
             "name": "Summercamp",
             "description": "This is a first set of challenges which will make you started with Make-Art",
             "cover": "assets/img/blahblavhblb",
-            "world_path": "worlds/summercamp"
+            "world_path": "worlds/summercamp",
+            "css_class": "_summercamp"
+
         },
         {
             "id": "halloween2015",
@@ -20,7 +24,8 @@
             "description": "This is a Halloween dedicated world",
             "cover": "assets/img/blahblavhblb",
             "world_path": "worlds/halloween2015",
-            "start_date": "2015-10-26 06:00:00"
+            "start_date": "2015-10-26T06:00:00",
+            "css_class": "halloween"
         }
     ]
 }

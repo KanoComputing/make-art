@@ -8,6 +8,7 @@
     "img": "/assets/summercamp/ch_pics/day_5.png",
     "difficulty": 1,
     "startAt": 4,
+    "start_date": "2015-10-07 06:00:00",
     "summerCamp": true,
     "rewards": null,
     "steps": [

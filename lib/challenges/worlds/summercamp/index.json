@@ -1,8 +1,5 @@
 {
-    "id": "summercamp",
-    "name": "Summer Camp",
-    "description": "Start your summer with fun",
-    "cover": "img/blahblavhblb",
+
     "challenges": [
         "./camp_sign",
         "./campsite",

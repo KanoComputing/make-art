@@ -24,7 +24,8 @@ var gulp = require('gulp'),
     world_url = process.env.WORLD_URL || null,
     offline = process.env.OFFLINE === 'true',
     testmode = process.env.TEST_MODE === 'true',
-    contentPath = 'www/assets/challenges/descriptors/';
+    contentPath = 'www/assets/challenges/descriptors/',
+    libPath = 'lib/challenges/';
 
 var paths = {
     views      : { watch: [ 'views/**/*.jade', 'content/**/*' ], src: 'views/**/*.jade', out: 'www' },
@@ -97,6 +98,8 @@ gulp.task('views', function () {
 gulp.task('apify-challenges', ['copy-challenges'], function (next) {
     var index,
         worldsNum,
+        //fields that are copied from ./index.json to /world/<world>/index.json
+        copyWorldFields = ['id', 'name', 'description', 'world_path', 'cover', 'css_class'],
         countNext = 0;
     function localNext() {
         if (++countNext === worldsNum) {
@@ -106,11 +109,21 @@ gulp.task('apify-challenges', ['copy-challenges'], function (next) {
     //work with them
     index = require('./' + contentPath + 'index.json');
     worldsNum = index.worlds.length;
+
     index.worlds.forEach(function (world) {
         var worldPath = './' + contentPath + world.world_path,
-            worldObj = require(worldPath + '/index.json'),
+            libWorldPath = './' + libPath + world.world_path,
+            worldObj = {},
             challenges = [],
             formattedJSON;
+
+        worldObj = JSON.parse(JSON.stringify(require(libWorldPath + '/index.json')));
+
+        copyWorldFields.forEach(function (field) {
+            if (world[field]) {
+                worldObj[field] = world[field];
+            }
+        });
 
         //load all the challenges in an array
         worldObj.challenges.forEach(function (ch, idx, arr) {
@@ -124,7 +137,8 @@ gulp.task('apify-challenges', ['copy-challenges'], function (next) {
                     short_title: challenge.short_title,
                     cover: challenge.cover,
                     index: index,
-                    hasNext: hasNext
+                    hasNext: hasNext,
+                    start_date: challenge.start_date
                 };
             challenge.index = index ;
             challenge.hasNext = hasNext;
@@ -136,6 +150,7 @@ gulp.task('apify-challenges', ['copy-challenges'], function (next) {
             });
             challenges.push(ch_obj);
         });
+
 
         worldObj.challenges = challenges;
         formattedJSON = JSON.stringify(worldObj, null, 4);
@@ -154,7 +169,9 @@ gulp.task('apify-challenges', ['copy-challenges'], function (next) {
 });
 
 gulp.task('copy-challenges', function (next) {
-    var counter = 0, stream1, stream2;
+    var counter = 0,
+        stream1,
+        stream2;
     function localNext() {
         if (++counter === 2) {
             next();
