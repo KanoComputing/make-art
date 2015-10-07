@@ -4,7 +4,7 @@
     "short_title": "Fireworks",
     "icon_class": "challenge_fireworks",
     "description": "Camp is almost all wrapped up, and to celebrate we have fireworks! Fireworks have been around for centuries and are believed to have been invented by the Chinese. We are almost ready to put on the show, but need a little bit of help designing the fireworks. Can you give it a shot?",
-    "img": "/assets/summercamp/ch_pics/day_21.png",
+    "cover": "summercamp/day_21.png",
     "completion_text": "Well done! You made a function that can draw fireworks! Can you improve upon it? Draw them all over the screen, add in other creations and share it!",
     "difficulty": 3,
     "startAt": 0,

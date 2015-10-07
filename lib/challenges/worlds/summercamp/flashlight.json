@@ -4,7 +4,7 @@
     "short_title": "Flashlight",
     "icon_class": "challenge_flashlight",
     "description": "Torches started life as ignited sticks; their flames would light the way for explorers and settlers. With the advent of electricity, and the invention of the dry cell battery in 1887, the road was paved to use incandescent bulbs as a replacement. While the technology inside flashlights has evolved, they are still as useful as ever. Meanwhile, the original torch has found a second coming in circus acts where they are thrown skywards in miraculous fashion.",
-    "img": "/assets/summercamp/ch_pics/day_12.png",
+    "cover": "summercamp/day_12.png",
     "completion_text": "You are an adventurer in the dark with your torch. What might you have uncovered as its light passes over the room? Try drawing that fox that you’ve unearthed or that owl hooting in the trees.",
     "difficulty": 1,
     "startAt": 0,

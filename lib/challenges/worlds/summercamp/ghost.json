@@ -6,7 +6,7 @@
     "icon_class": "challenge_ghost",
     "completion_text": "Spooky! Can you make the ghost scarier? Maybe if it could say \"Boo!\"...",
     "difficulty": 2,
-    "img": "/assets/summercamp/ch_pics/day_7.png",
+    "cover": "summercamp/day_7.png",
     "startAt": 6,
     "summerCamp": true,
     "rewards": null,

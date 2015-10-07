@@ -4,7 +4,7 @@
     "short_title": "Compass",
     "icon_class": "challenge_compass",
     "description": "Essentially a compass is a magnet, generally a magnetized needle. Since opposites attract the southern pole of the needle is attracted to the Earth's natural magnetic north pole. Did you know that you can create your own simply with a paperclip, cork and a magnet?",
-    "img": "/assets/summercamp/ch_pics/day_9.png",
+    "cover": "summercamp/day_9.png",
     "completion_text": "Now try adding the rest of the 'compass rose' components: the other cardinal directions (E, S, W and even NE, NW, SE and SW). Why not a hand holding it?",
     "difficulty": 1,
     "startAt": 0,

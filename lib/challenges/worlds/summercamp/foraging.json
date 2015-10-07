@@ -4,7 +4,7 @@
     "short_title": "Foraging",
     "icon_class": "challenge_foraging",
     "description": "The wild is full of plants and fauna to eat. From stinging nettles, to mushrooms, and a multitude of berries, any meal can be improved with naturally growing foods. Berries are common in many parts of the world, and at Camp Kano they run wild even though they are hard to find. You might need to use your coding skills to find them.",
-    "img": "/assets/summercamp/ch_pics/day_19.png",
+    "cover": "summercamp/day_19.png",
     "completion_text": "But wait! Where are the berries you are meant to be foraging for? Use `color red`, `moveTo`, and `square 25` to add some extra berries to the scene!",
     "difficulty": 1,
     "startAt": 0,

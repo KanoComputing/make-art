@@ -4,7 +4,7 @@
     "short_title": "Bow and Arrow",
     "icon_class": "challenge_bow",
     "description": "Shooting a bow and arrow at a target is an art that requires lots of focus. This challenge is to draw a bow and try to hold it steady while your hand jitters...just like the other humans who have used the bow and arrow for hunting since the dawn of civilization over ten thousand years ago. The oldest known bow, found in Denmark, dates from 9000 BCE!",
-    "img": "/assets/summercamp/ch_pics/day_15.png",
+    "cover": "summercamp/day_15.png",
     "completion_text": "Click Refresh and watch the target move while you try to hold your bow steady! Try getting rid of the moving background to make it easier to hit the target, converting your bow to a crossbow, or drawing an arrow in the bullseye.",
     "difficulty": 1,
     "startAt": 0,

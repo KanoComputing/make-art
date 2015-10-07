@@ -4,16 +4,18 @@
         i.icon-menu
         | Challenges
 
-    ul.worlds-list(ng-if='!selectedWorld')
-        li.world-item(ng-repeat='world in worlds')
+    ul.worlds-list(ng-if='!selectedWorld' )
+        li.world-item(ng-repeat='world in worlds'  ng-if='isWorldInIndex(world)')
             a.world-cover(
-                ng-click='loadWorld(world)'
+
+                href='/challenges/{{world.id}}'
                 ng-class='{locked: isWorldLocked(world)}'
+                ng-style='{ "background-image": "url(/assets/challenges/images/" + world.cover + ".png)" }'
                 )
-            h4 {{world.name}}
+            h4(ng-class='{completed: isWorldCompleted(world)}') {{world.name}}
 
     h4(ng-if='selectedWorld') 
-        a(ng-click='unloadWorld()')
+        a(href='/challenges')
             i.icon-arrow-left
         {{selectedWorld.name}}
     ul.challenges-list(ng-if='selectedWorld' )

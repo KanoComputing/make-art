@@ -6,7 +6,7 @@
     "icon_class": "challenge_fire",
     "completion_text": "Try adding a starry sky, more flames, a ring of rocks to make it safer or even marshmallows!",
     "difficulty": 2,
-    "img": "/assets/summercamp/ch_pics/day_6.png",
+    "cover": "summercamp/day_6.png",
     "startAt": 5,
     "summerCamp": true,
     "rewards": {
