@@ -24,7 +24,7 @@ var gulp = require('gulp'),
     world_url = process.env.WORLD_URL || null,
     offline = process.env.OFFLINE === 'true',
     testmode = process.env.TEST_MODE === 'true',
-    contentPath = 'www/assets/challenges/descriptors/',
+    chDescriptorsPath = 'www/assets/challenges/descriptors/',
     libPath = 'lib/challenges/';
 
 var paths = {
@@ -100,18 +100,19 @@ gulp.task('apify-challenges', ['copy-challenges'], function (next) {
         worldsNum,
         //fields that are copied from ./index.json to /world/<world>/index.json
         copyWorldFields = ['id', 'name', 'description', 'world_path', 'cover', 'css_class'],
-        countNext = 0;
+        countNext = 0,
+        formattedIndex;
     function localNext() {
-        if (++countNext === worldsNum) {
+        if (++countNext === worldsNum + 1 ) {
             next();
         }
     }
     //work with them
-    index = require('./' + contentPath + 'index.json');
+    index = require('./' + chDescriptorsPath + 'index.json');
     worldsNum = index.worlds.length;
 
     index.worlds.forEach(function (world) {
-        var worldPath = './' + contentPath + world.world_path,
+        var worldPath = './' + chDescriptorsPath + world.world_path,
             libWorldPath = './' + libPath + world.world_path,
             worldObj = {},
             challenges = [],
@@ -153,6 +154,9 @@ gulp.task('apify-challenges', ['copy-challenges'], function (next) {
 
 
         worldObj.challenges = challenges;
+
+        world.challenges_num = challenges.length;
+
         formattedJSON = JSON.stringify(worldObj, null, 4);
         //write the challenges with headers
         fs.writeFile(worldPath + '/index.json', formattedJSON, function (err) {
@@ -162,7 +166,15 @@ gulp.task('apify-challenges', ['copy-challenges'], function (next) {
                 localNext();
             }
         });
-
+    });
+    //copy back the index
+    formattedIndex = JSON.stringify(index, null, 4);
+    fs.writeFile(chDescriptorsPath + 'index.json', formattedIndex, function (err) {
+        if (err) {
+            throw err;
+        } else {
+            localNext();
+        }
     });
 
 
@@ -178,10 +190,10 @@ gulp.task('copy-challenges', function (next) {
         }
     }
     stream1 = gulp.src('lib/challenges/worlds/**/*.json')
-        .pipe(gulp.dest(contentPath + "/worlds"));
+        .pipe(gulp.dest(chDescriptorsPath + "/worlds"));
     //copy the files
     stream2 = gulp.src('lib/challenges/index.json')
-        .pipe(gulp.dest(contentPath));
+        .pipe(gulp.dest(chDescriptorsPath));
     stream1.on('end', localNext);
     stream2.on('end', localNext);
 

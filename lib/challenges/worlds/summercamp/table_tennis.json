@@ -4,7 +4,7 @@
     "short_title": "Table Tennis",
     "icon_class": "challenge_tennis",
     "description": "Table Tennis is a game played with one or two people on each side of a table with the outline of a miniaturized tennis court drawn on it. Games are played to 11 or 21, and upon completion the victor’s paddle is thrown to the ground as they let out their battle cry.",
-    "img": "/assets/summercamp/ch_pics/day_16.png",
+    "cover": "summercamp/day_16.png",
     "completion_text": "Well done! You made a beautiful 3D ping pong table. But there isn’t anyone playing or watching the game! Use your creativity and code to draw some fellow campers enjoying the game.",
     "difficulty": 2,
     "startAt": 0,

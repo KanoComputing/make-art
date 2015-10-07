@@ -4,7 +4,7 @@
     "short_title": "Guitar",
     "icon_class": "challenge_guitar",
     "description": "Did you know the oldest surviving guitar-like instrument is actually around 3,500 years old? It is a 3-string instrument with a plectrum suspended from the neck, it was owned by an Egyptian singer called Har-Mose and was buried alongside him - You can still see the instrument on display at the Archaeological Museum in Cairo, Egypt.",
-    "img": "/assets/summercamp/ch_pics/day_13.png",
+    "cover": "summercamp/day_13.png",
     "completion_text": "What good is a guitar if we don't have a campfire to sing songs around? Try drawing a nice big campfire with some marshmallows for toasting! Maybe a big moon on the horizon too? Be wild, be creative!",
     "difficulty": 2,
     "startAt": 0,

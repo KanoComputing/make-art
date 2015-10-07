@@ -5,14 +5,7 @@
         "./stare",
         "./smiley",
         "./baloon",
-        "./stickman",
-        "./shrinking",
-        "./random",
-        "./starry",
-        "./house",
-        "./dots",
-        "./gradient",
-        "./planet",
-        "./pizza"
+        "./stickman"
+
     ]
 }

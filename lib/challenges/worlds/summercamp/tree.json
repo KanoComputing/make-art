@@ -4,7 +4,7 @@
     "short_title": "Tree",
     "icon_class": "challenge_tree",
     "description": "Time to play! Our counselors made you something to play with. A tree which can grow branches that expand outwards, and contract inwards. It can blossom fully, or shrivel to nothing. All with code. Make it yours.",
-    "img": "/assets/summercamp/ch_pics/day_20.png",
+    "cover": "summercamp/day_20.png",
     "completion_text": "Play around with the blue numbers at the top of the code. What do they do? Why do they do that? Shape the tree to your liking. If things mess up, go back to the main menu and start again.",
     "difficulty": 3,
     "startAt": 0,
