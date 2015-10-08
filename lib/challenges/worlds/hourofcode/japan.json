@@ -1,0 +1,27 @@
+{
+    "id": "japan",
+    "title": "Japanese flag",
+    "description": "Code a flag with a few simple commands",
+    "code": "",
+    "startAt": 2,
+    "steps": [
+        {
+            "hint": "Set the background to white - **type** `background white`",
+            "solution": "background white"
+        },
+        {
+            "hint": "Set the drawing color to red - in a new line **type** `color red`",
+            "solution": "color red"
+        },
+        {
+            "hint": "Set the stroke to 0, the stroke is the outline of a shape - in a new line **type** `stroke 0`",
+            "solution": "stroke 0"
+        },
+        {
+            "hint": "Draw a circle with a size of 100 - in a new line **type** `circle 100`",
+            "solution": "circle 100"
+        }
+    ],
+    "completion_text": "Nice work! That is one cool flag!",
+    "cover": "flag-japan.png"
+}

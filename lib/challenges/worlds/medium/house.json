@@ -1,0 +1,87 @@
+{
+    "id": "house",
+    "title": "House",
+    "description": "Draw a cosy house!",
+    "code": "",
+    "startAt": 1,
+    "steps": [
+        {
+            "hint": "Let's start with the sky! Set the `background` to `blue`",
+            "solution": "background blue"
+        },
+        {
+            "hint": "Now set the stroke to 0",
+            "solution": "stroke 0"
+        },
+        {
+            "hint": "Move to the left and up, **type** `move -150, -50`",
+            "solution": "move -150, -50"
+        },
+        {
+            "hint": "Now set the color to beige",
+            "solution": "color beige"
+        },
+        {
+            "hint": "Now draw rectangle, **type** `rectangle 300, 200`",
+            "solution": "rectangle 300, 200"
+        },
+        {
+            "hint": "Move to the right and up, **type** `move 150, -100`",
+            "solution": "move 150, -100"
+        },
+        {
+            "hint": "Set the color to darkred for the roof",
+            "solution": "color darkred"
+        },
+        {
+            "hint": "Now let's draw the roof, **type** `polygon 170, 100, -170, 100`",
+            "solution": "polygon 170, 100, -170, 100"
+        },
+        {
+            "hint": "Move to the left and down, **type** `move -250, 300`",
+            "solution": "move -250, 300"
+        },
+        {
+            "hint": "Now set the color to green for the grass",
+            "solution": "color green"
+        },
+        {
+            "hint": "Draw rectangle for the grass, width a size of 500, 100",
+            "solution": "rectangle 500, 100"
+        },
+        {
+            "hint": "Move to the right and up, **type** `move 220, -80`",
+            "solution": "move 220, -80"
+        },
+        {
+            "hint": "Now set the color to brown for the wooden door",
+            "solution": "color brown"
+        },
+        {
+            "hint": "Draw rectangle for the door, with a size of 60, 80",
+            "solution": "rectangle 60, 80"
+        },
+        {
+            "hint": "Set the color to aqua for the windows",
+            "solution": "color aqua"
+        },
+        {
+            "hint": "Move to the left and up, **type** `move -80, -80`",
+            "solution": "move -80, -80"
+        },
+        {
+            "hint": "Draw square with a size of 50",
+            "solution": "square 50"
+        },
+        {
+            "hint": "Move to the right, **type** `move 170`",
+            "solution": "move 170"
+        },
+        {
+            "hint": "Draw square with a size of 50",
+            "solution": "square 50"
+        }
+    ],
+    "completion_text": "You built an awesome house with code!",
+    "cover": "house.png"
+}

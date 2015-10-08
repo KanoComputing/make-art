@@ -1,27 +1,41 @@
-.page-challenges: .page-width
+.page-challenges(ng-class="[ selectedWorldClass ]"): .page-width
 
     h3.page-title
         i.icon-menu
         | Challenges
 
-    ul.challenges-list
+    ul.worlds-list(ng-if='!selectedWorld' )
+        li.world-item(ng-repeat='world in worlds'  ng-if='isWorldInIndex(world)')
+            a.world-cover(
+
+                href='/challenges/{{world.id}}'
+                ng-class='{locked: isWorldLocked(world)}'
+                ng-style='{ "background-image": "url(/assets/challenges/images/" + world.cover + ".png)" }'
+                )
+            h4(ng-class='{completed: isWorldCompleted(world)}') {{world.name}}
+
+    h4(ng-if='selectedWorld') 
+        a(ng-if="isWorldInIndex(selectedWorld)" href='/challenges')
+            i.icon-arrow-left
+        {{selectedWorld.name}}
+    ul.challenges-list(ng-if='selectedWorld' )
 
         li(ng-repeat='challenge in challenges')
             a(
                 ng-click='selectChallenge(challenge)',
-                ng-class='{ locked: isLocked($index), completed: isCompleted($index), current: isCurrent($index) }'
+                ng-class='{ locked: isLocked(challenge), completed: isCompleted(challenge.index), current: isCurrent(challenge.index) }'
                 )
 
-                .cover(ng-style='{ "background-image": "url(/assets/challenges/" + challenge.id + ".png)" }')
+                .cover(ng-style='{ "background-image": "url(/assets/challenges/images/" + challenge.cover + ")" }')
 
                 .detail
-                    h5 {{ challenge.title }}
+                    h5 {{ challenge.short_title || challenge.title }}
 
         li
 
-            a.highlight(href='/playground', ng-class='{ locked: isLocked(challenges.length) }')
+            a.highlight(href='/playground', ng-class='{ locked: false}')
 
-                .cover(ng-style='{"background-image": "url(/assets/challenges/playground.png)"}')
+                .cover(ng-style='{"background-image": "url(/assets/challenges/images/playground.png)"}')
 
                 .detail
                     h5 Playground
@@ -51,7 +65,7 @@
                     target='_blank'
                     )
 
-                    .cover(ng-style='{"background-image": "url(/assets/challenges/browse.png)"}')
+                    .cover(ng-style='{"background-image": "url(/assets/challenges/images/browse.png)"}')
 
                     .detail
                         h5 Browse more
@@ -59,7 +73,7 @@
 .modal-overlay(ng-if='selectedChallenge')
     .modal-inner.modal-challenge-info.center
 
-        .cover(ng-style='{ "background-image": "url(/assets/challenges/" + selectedChallenge.id + ".png)" }')
+        .cover(ng-style='{ "background-image": "url(/assets/challenges/images/" + selectedChallenge.cover +")" }')
 
         button.close(ng-click='deselectedChallenge()'): i.icon-cross
 
@@ -69,6 +83,6 @@
 
             p.description {{ selectedChallenge.description }}
 
-            a.button.button-success(ng-href='/challenge/{{ selectedChallenge.index + 1 }}') Start
+            a.button.button-success(ng-href='/challenge/{{selectedWorld.id}}/{{selectedChallenge.id}}') Start
 
 include ./partial/promo-popup
