@@ -18,7 +18,7 @@
         a(ng-if="isWorldInIndex(selectedWorld)" href='/challenges')
             i.icon-arrow-left
         {{selectedWorld.name}}
-    ul.challenges-list(ng-if='selectedWorld' )
+    ul.challenges-list(ng-if='selectedWorld')
 
         li(ng-repeat='challenge in challenges')
             a(
