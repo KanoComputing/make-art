@@ -1,7 +1,6 @@
 "use strict";
 var gulp = require('gulp'),
     jade = require('gulp-jade'),
-    gcallback = require('gulp-callback'),
     browserify = require('gulp-browserify'),
     stylus = require('gulp-stylus'),
     lr = require('tiny-lr'),
@@ -99,11 +98,11 @@ gulp.task('apify-challenges', ['copy-challenges'], function (next) {
     var index,
         worldsNum,
         //fields that are copied from ./index.json to /world/<world>/index.json
-        copyWorldFields = ['id', 'name', 'description', 'world_path', 'cover', 'css_class'],
+        copyWorldFields = ['id', 'name', 'description', 'world_path', 'cover', 'css_class', 'visibility'],
         countNext = 0,
         formattedIndex;
     function localNext() {
-        if (++countNext === worldsNum + 1 ) {
+        if (++countNext === worldsNum + 1) {
             next();
         }
     }

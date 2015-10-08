@@ -1,0 +1,42 @@
+{
+    "id": "baloon",
+    "title": "Blue Balloon",
+    "cover": "blue-baloon.png",
+    "description": "Draw a balloon floating in the air using polygons!",
+    "startAt": 2,
+    "steps": [
+        {
+            "hint": "Set the color to blue - **type** `color blue`",
+            "solution": "color blue"
+        },
+        {
+            "hint": "Set the stroke to 0, to avoid drawing lines",
+            "solution": "stroke 0"
+        },
+        {
+            "hint": "Draw a circle with a size of 100",
+            "solution": "circle 100"
+        },
+        {
+            "hint": "Move down by 100 - **type** `move 0, 100`",
+            "solution": "move 0, 100"
+        },
+        {
+            "hint": "Draw the knot - **type** `polygon 15, 15, -15, 15`",
+            "solution": "polygon 15, 15, -15, 15"
+        },
+        {
+            "hint": "Move down a little more - **type** `move 0, 15`",
+            "solution": "move 0, 15"
+        },
+        {
+            "hint": "Choose a thick black stroke - **type** `stroke black, 5`",
+            "solution": "stroke black, 5"
+        },
+        {
+            "hint": "Draw the line of the balloon thread - **type** `line 0, 200`",
+            "solution": "line 0, 200"
+        }
+    ],
+    "completion_text": "Awesome balloon! Why not change the color before moving on?"
+}

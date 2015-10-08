@@ -27,6 +27,15 @@
 
         },
         {
+            "id": "hourofcode",
+            "name": "Hour of Code",
+            "description": "This is a group of challenges for the hour of code",
+            "cover": "world_covers/basic",
+            "world_path": "worlds/hourofcode",
+            "visibility": "hidden",
+            "css_class": "hourofcode"
+        },
+        {
             "id": "halloween2015",
             "name": "Halloween",
             "description": "This is a Halloween dedicated world",

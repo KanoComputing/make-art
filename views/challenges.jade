@@ -15,7 +15,7 @@
             h4(ng-class='{completed: isWorldCompleted(world)}') {{world.name}}
 
     h4(ng-if='selectedWorld') 
-        a(href='/challenges')
+        a(ng-if="isWorldInIndex(selectedWorld)" href='/challenges')
             i.icon-arrow-left
         {{selectedWorld.name}}
     ul.challenges-list(ng-if='selectedWorld' )
