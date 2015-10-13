@@ -1,3 +1,9 @@
+kano-draw (2.2.0-1) unstable; urgency=low
+
+  * Introduce Art Worlds for grouping challenges
+
+ -- Team Kano <dev@kano.me>  Wed, 14 Oct 2015 00:23:58 +0100
+
 kano-draw (1.0-1) UNRELEASED; urgency=low
 
   * Initial release. (Closes: #XXXXXX)
