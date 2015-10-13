@@ -6,7 +6,9 @@
             "description": "This is a first set of challenges which will make you started with Make-Art",
             "cover": "world_covers/basic",
             "world_path": "worlds/basic",
-            "css_class": "basic-challenges"
+            "css_class": "basic-challenges",
+            "dependency": [],
+            "type": "normal"
 
         },
         {
@@ -15,7 +17,9 @@
             "description": "Medium challenges",
             "cover": "world_covers/medium",
             "world_path": "worlds/medium",
-            "css_class": "medium"
+            "css_class": "medium",
+            "dependency": ["basic"],
+            "type": "normal"
         },
         {
             "id": "summercamp",
@@ -23,7 +27,9 @@
             "description": "This is a first set of challenges which will make you started with Make-Art",
             "cover": "world_covers/summercamp",
             "world_path": "worlds/summercamp",
-            "css_class": "_summercamp"
+            "css_class": "_summercamp",
+            "dependency": ["medium"],
+            "type": "campaign"
 
         },
         {
@@ -33,7 +39,9 @@
             "cover": "world_covers/basic",
             "world_path": "worlds/hourofcode",
             "visibility": "hidden",
-            "css_class": "hourofcode"
+            "css_class": "hourofcode",
+            "dependency": ["medium"],
+            "type": "campaign"
         },
         {
             "id": "halloween2015",
@@ -43,7 +51,9 @@
             "world_path": "worlds/halloween2015",
             "start_date": "2015-10-26T06:00:00",
             "visibility": "hidden",
-            "css_class": "medium"
+            "css_class": "medium",
+            "dependency": [],
+            "type": "campaign"
         }
     ]
 }
