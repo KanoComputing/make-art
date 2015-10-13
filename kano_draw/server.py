@@ -377,11 +377,13 @@ def _shutdown():
     # Send signal to parent to initiate shutdown
     os.kill(PARENT_PID, signal.SIGINT)
 
+
 @server.route('/browsemore', methods=['POST'])
 def _browsemore():
-    import subprocess
+    from kano import run_bg
 
-    p = subprocess.Popen(["chromium", "http://world.kano.me/shares/kano-draw"])
+    run_bg("chromium http://world.kano.me/shares/kano-draw")
+
 
 @server.errorhandler(404)
 def page_not_found(err):
