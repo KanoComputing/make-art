@@ -171,6 +171,7 @@ def _get_co_index_apply_order(fname):
 def _get_static_dir():
     return STATIC_ASSET_DIR
 
+
 def _get_image_from_str(img_str):
     import base64
 
@@ -178,6 +179,7 @@ def _get_image_from_str(img_str):
     image_data = base64.b64decode(image_b64)
 
     return image_data
+
 
 def _save(data):
     filename = data['filename']
@@ -237,11 +239,15 @@ def save_challenge(filename):
 
     return ''
 
+
 @server.route("/challenge/local/<path:path>", methods=['GET'])
 def load_challenge(path):
     directory, filename = os.path.split(path)
 
-    return send_from_directory('/{}'.format(directory), filename, as_attachment=True)
+    return send_from_directory('/{}'.format(directory),
+                               filename,
+                               as_attachment=True)
+
 
 @server.route("/challenge/local/wallpaper/<path:filename>", methods=['POST'])
 def save_wallpaper(filename):
@@ -253,14 +259,17 @@ def save_wallpaper(filename):
         '16-9': _get_image_from_str(data['image_16_9'])
     }
 
-    img_path = os.path.join(WALLPAPER_DIR,
-        '{filename}-{{ratio}}.png'.format(filename=filename))
+    img_path = os.path.join(
+        WALLPAPER_DIR,
+        '{filename}-{{ratio}}.png'.format(filename=filename)
+    )
 
     for ratio, img_data in imgs.iteritems():
         with open(img_path.format(ratio=ratio), 'wb') as f:
             f.write(img_data)
 
     return ''
+
 
 @server.route("/challenge/web/<path:filename>", methods=['POST'])
 def share(filename):
@@ -291,6 +300,7 @@ def share(filename):
 
     return ''
 
+
 @server.route('/challenge/web', methods=['GET'])
 def load_share():
     # TODO: Import kano-share python module and use return code instead
@@ -316,15 +326,13 @@ def _save_level(world, challengeNo):
 
     old_xp = calculate_xp()
     needsToSave = False
-    
 
     groups = load_app_state_variable(APP_NAME, 'groups')
 
-    #We might need to load the worlds file here so that we're sure that 
-    #noone is abusing the API from the OS
+    # We might need to load the worlds file here so that we're sure that
+    # no one is abusing the API from the OS
     if groups is None:
         groups = {}
-
 
     if world in groups:
         if groups[world]['challengeNo'] < challengeNo:
@@ -342,29 +350,26 @@ def _save_level(world, challengeNo):
     return str(new_xp - old_xp)
 
 
-
 @server.route('/progress', methods=['GET'])
 def _load_level():
     value = {
         'groups': load_app_state_variable(APP_NAME, 'groups'),
         'challenge': load_app_state_variable(APP_NAME, 'challenge')
     }
-    #Previously we used to save the progress as "level"
+    # Previously we used to save the progress as "level"
     level = load_app_state_variable(APP_NAME, 'level')
-    if (value['groups'] is None):
+    if value['groups'] is None:
         value['groups'] = {}
 
-
-    #Replace the Challege var here.
-    if level > value['challenge'] :
+    # Replace the Challege var here.
+    if level > value['challenge']:
         value['challenge'] = level
-
 
     value = json.dumps(value)
 
     return Response(value)
-    
-    
+
+
 @server.route('/shutdown', methods=['POST'])
 def _shutdown():
     import signal
@@ -384,6 +389,7 @@ def page_not_found(err):
 
     return err_msg, 404
 
+
 @server.route('/play_sound/<path:filename>', methods=['POST'])
 def play_sounds(filename):
     print os.path.realpath(os.path.join(_get_static_dir(), filename))
@@ -391,6 +397,7 @@ def play_sounds(filename):
     play_sound(sound_file)
 
     return ''
+
 
 def start(parent_pid=None):
     """
