@@ -32,7 +32,7 @@
             "validate": "        square 32"
         },
         {
-            "hint": "Get out of the loop by bringing your cursor to the beginning of the line with BACKSPACE. We’ll start a new pair of loops to draw the diamond. **Type** `for x in [2 ... 14]`",
+            "hint": "Get out of the loop by bringing your cursor to the beginning of the line with **BACKSPACE**. We’ll start a new pair of loops to draw the diamond. **Type** `for x in [2 ... 14]`",
             "solution": "for x in [2 ... 14]"
         },
         {
@@ -40,9 +40,9 @@
             "solution": "    for y in [2 ... 14]"
         },
         {
-            "hint": "The diamond should appear randomly, this if statement will only randomly draw the diamond. **Type** `if random(0, 4) > 2`",
-            "solution": "        if (random 0, 4) > 2",
-            "validate": "        if \\(random 0, 4\\) > 2"
+            "hint": "The diamond should appear randomly, this if statement will only randomly draw the diamond. **Type** `if 1 == random 0, 4`",
+            "solution": "        if 1 == random 0, 4",
+            "validate": "        if 1 == random 0, 4"
         },
         {
             "hint": "Set the diamond color with `color lighten lightblue, random 0, 40`",
