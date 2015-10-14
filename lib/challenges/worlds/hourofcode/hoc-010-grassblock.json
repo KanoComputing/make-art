@@ -33,9 +33,9 @@
             "validate": "        square 32"
         },
         {
-            "hint": "The grass should only appear on the top of the block, so we’ll decide if the block should have a green bit drawn over it with `if y + (random 0, 3) < 4`",
-            "solution": "        if y + (random 0, 3) < 4",
-            "validate": "        if y \\+ \\(random 0, 3\\) < 4"
+            "hint": "The grass should only appear on the top of the block, so we’ll decide if the block should have a green bit drawn over it with `if 4 >  y + random 0, 3`",
+            "solution": "        if 4 > y + random 0, 3",
+            "validate": "        if 4 > y \\+ random 0, 3"
         },
         {
             "hint": "Set the green color with the darken function. **Type** `color darken green, random 0, 25`",
