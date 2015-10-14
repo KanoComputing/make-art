@@ -33,12 +33,7 @@ var paths = {
     content    : {watch: 'lib/challenges/**/*'}
 };
 
-function beep() {
-    //console.log('\007');
-}
-
 function handleError(error) {
-    beep(error);
     console.log(color.bold('[ error caught ]:\n') + color.red(error));
 }
 
@@ -98,7 +93,7 @@ gulp.task('apify-challenges', ['copy-challenges'], function (next) {
     var index,
         worldsNum,
         //fields that are copied from ./index.json to /world/<world>/index.json
-        copyWorldFields = ['id', 'name', 'description', 'world_path', 'cover', 'css_class', 'visibility'],
+        copyWorldFields = ['id', 'name', 'description', 'world_path', 'cover', 'css_class', 'visibility', 'dependency', 'type'],
         countNext = 0,
         formattedIndex;
     function localNext() {

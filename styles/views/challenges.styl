@@ -1,7 +1,14 @@
 
 .page-challenges
-
-
+    
+    .page-title
+        position relative
+        
+        .quests
+            position absolute
+            left 0
+            display inline-block
+    
     ul.worlds-list
         debullet()
         clearfix()
@@ -12,32 +19,67 @@
         li.world-item
             display inline-block
             box-sizing: border-box
-            margin 0 10px 10px 0 
+            margin 0 20px 20px 0
             width 48%
-            border-radius()
+            
             a.world-cover
                 width 100%
                 display block
-                height 200px
+                height 240px
                 background-color #e4aaf1
+                position relative
+                border-radius(0 0 3px 3px)
+                        
+                h4
+                    position absolute
+                    bottom 0
+                    left 0
+                    right 0
+                    background-color color-white
+                    color color-black
+                    padding 10px
+                    font-weight 700
+                    font-size 16px
+                    smooth-font()
+                    border-radius(0 0 3px 3px)
+                    
+                    &:after
+                        icon()
+                        circle(20px, transparent)
+                        float right
+                        font-size 9px
+                        margin-top 3px
+                        margin-right 3px
+                        color color-white
+                        line-height 22px
+                        margin 0
+                
+                &.current
+                    box-shadow color-blue 0 0 0 4px
+                    border-radius(3px)
+                    
+                    h4:after
+                        content '\e615'
+                        background-color color-blue
+                    
+                &.completed
+                    h4
+                        background-color color-green
+                        color color-white
+                        &:after
+                            content '\e61d'
+                            background-color darken(color-green, 5)
+                            
                 &.locked
                     filter(grayscale(100%))
 
-                    .cover, h5
-                        opacity .3
-
-                    h5:after
-                        content '\e621'
-                        margin-top 0
-                        background color-grey
-            h4
-                background-color color-white
-                color color-black
-                padding 5px 10px
-                font-weight 500
-                &.completed
-                    background-color color-green
-                    color color-white
+                    h4
+                        color darken(color-grey-lighter, 10)
+                        &:after
+                            content '\e621'
+                            margin-top 0
+                            background darken(color-grey-lighter, 10)
+                        
     ul.challenges-list, ul.shares-list
         debullet()
         clearfix()
