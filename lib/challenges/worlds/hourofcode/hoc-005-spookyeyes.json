@@ -1,6 +1,6 @@
 {
-    "id": "stare",
-    "title": "Stare in the dark",
+    "id": "hoc-005-spookyeyes",
+    "title": "Spooky Eyes",
     "description": "Draw a pair of staring eyes in the dark",
     "startAt": 2,
     "steps": [
@@ -9,9 +9,12 @@
             "solution": "background black"
         },
         {
-            "hint": "Move to the left by 80 - **type** `move -80`",
-            "solution": "move -80",
-            "validate": "move -80"
+            "hint": "To be extra spooky, we want to be able to move our eyes around. Let’s use a variable. **Type** `y = 250`.",
+            "solution": "y = 250"
+        },
+        {
+            "hint": "We'll move into position with a fixed x value and the variable 'y' that we created. **Type** `moveTo 150, y`.",
+            "solution": "moveTo 150, y"
         },
         {
             "hint": "Set the drawing color to white",
@@ -30,8 +33,8 @@
             "solution": "circle 10"
         },
         {
-            "hint": "Move to the right by 160 - **type** `move 160`",
-            "solution": "move 160"
+            "hint": "Move to the right by 200 - **type** `move 200`",
+            "solution": "move 200"
         },
         {
             "hint": "Set the drawing color to white again",
@@ -50,6 +53,6 @@
             "solution": "circle 10"
         }
     ],
-    "completion_text": "You Wizard! The next time I need spooky eyes I know who to call!",
-    "cover": "stare.png"
+    "completion_text": "You Wizard! The next time I need spooky eyes I know who to call! Click and drag the slider over the y value on line two for a spooky effect.",
+    "cover": "hoc-005-spookyeyes.png"
 }
