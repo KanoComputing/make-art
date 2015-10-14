@@ -2,6 +2,7 @@ www/*.html
 www/*/*.html
 www/css/*.css
 www/js/index.js
+www/assets/challenges/descriptors
 .tmp
 node_modules
 npm-debug.log

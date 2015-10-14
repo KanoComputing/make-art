@@ -1,0 +1,49 @@
+{
+    "worlds": [
+        {
+            "id": "basic",
+            "name": "Getting Started",
+            "description": "This is a first set of challenges which will make you started with Make-Art",
+            "cover": "world_covers/basic",
+            "world_path": "worlds/basic",
+            "css_class": "basic-challenges"
+
+        },
+        {
+            "id": "medium",
+            "name": "Medium",
+            "description": "Medium challenges",
+            "cover": "world_covers/medium",
+            "world_path": "worlds/medium",
+            "css_class": "medium"
+        },
+        {
+            "id": "summercamp",
+            "name": "Summercamp",
+            "description": "This is a first set of challenges which will make you started with Make-Art",
+            "cover": "world_covers/summercamp",
+            "world_path": "worlds/summercamp",
+            "css_class": "_summercamp"
+
+        },
+        {
+            "id": "hourofcode",
+            "name": "Hour of Code",
+            "description": "This is a group of challenges for the hour of code",
+            "cover": "world_covers/basic",
+            "world_path": "worlds/hourofcode",
+            "visibility": "hidden",
+            "css_class": "hourofcode"
+        },
+        {
+            "id": "halloween2015",
+            "name": "Halloween",
+            "description": "This is a Halloween dedicated world",
+            "cover": "world_covers/",
+            "world_path": "worlds/halloween2015",
+            "start_date": "2015-10-26T06:00:00",
+            "visibility": "hidden",
+            "css_class": "medium"
+        }
+    ]
+}
