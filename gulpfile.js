@@ -33,12 +33,7 @@ var paths = {
     content    : {watch: 'lib/challenges/**/*'}
 };
 
-function beep() {
-    //console.log('\007');
-}
-
 function handleError(error) {
-    beep(error);
     console.log(color.bold('[ error caught ]:\n') + color.red(error));
 }
 
