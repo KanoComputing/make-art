@@ -5,17 +5,9 @@
 
 override_dh_auto_build:
 	# NodeJS and npm
-	mkdir -p nodejs
-	cd ./nodejs
-	NODE_DIR=`pwd`
-	curl http://nodejs.org/dist/node-latest.tar.gz | tar xz --strip-components=1
-	./configure --prefix=.
-	make
-	ln -sf ./deps/npm/bin/npm-cli.js ./npm
-	cd ..
-	# See about actually doing the install
-	ls ./nodejs
-	PATH=$(NODE_DIR):$(PATH) npm install
-	PATH=$(NODE_DIR):$(PATH) NODE_ENV=production OFFLINE=true npm run build
+	curl --silent --location https://deb.nodesource.com/setup_0.12 | bash -
+	apt-get install --yes nodejs
+	npm install
+	NODE_ENV=production OFFLINE=true npm run build
 
 override_dh_auto_install override_dh_auto_test:

@@ -1,5 +1,43 @@
+
 .page-challenges
 
+
+    ul.worlds-list
+        debullet()
+        clearfix()
+        width 100%
+        padding 0
+        margin 0 0 30px 0
+
+        li.world-item
+            display inline-block
+            box-sizing: border-box
+            margin 0 10px 10px 0 
+            width 48%
+            border-radius()
+            a.world-cover
+                width 100%
+                display block
+                height 200px
+                background-color #e4aaf1
+                &.locked
+                    filter(grayscale(100%))
+
+                    .cover, h5
+                        opacity .3
+
+                    h5:after
+                        content '\e621'
+                        margin-top 0
+                        background color-grey
+            h4
+                background-color color-white
+                color color-black
+                padding 5px 10px
+                font-weight 500
+                &.completed
+                    background-color color-green
+                    color color-white
     ul.challenges-list, ul.shares-list
         debullet()
         clearfix()

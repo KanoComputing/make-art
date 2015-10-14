@@ -1,8 +1,15 @@
+# server.py
+#
+# Copyright (C) 2014-2015 Kano Computing Ltd.
+# License: http://www.gnu.org/licenses/gpl-2.0.txt GNU GPL v2
+#
+
 from flask import Flask, Response, request, send_from_directory
 import json
 import os
 import time
 import logging
+import shutil
 
 from kano.utils import ensure_dir
 from kano_profile.badges import save_app_state_variable_with_dialog, \
@@ -13,6 +20,7 @@ from kano_world.functions import login_using_token
 from kano_world.share import upload_share
 from kano.network import is_internet
 from kano.utils import play_sound
+from kano.logging import logger
 
 
 APP_NAME = 'kano-draw'
@@ -20,18 +28,149 @@ PARENT_PID = None
 
 CHALLENGE_DIR = os.path.expanduser('~/Draw-content')
 WALLPAPER_DIR = os.path.join(CHALLENGE_DIR, 'wallpapers')
+STATIC_ASSET_DIR = os.path.join(os.path.expanduser('~'),
+                                '.make-art-assets')
 
 ensure_dir(CHALLENGE_DIR)
 ensure_dir(WALLPAPER_DIR)
+ensure_dir(STATIC_ASSET_DIR)
 
 
-def _get_static_dir():
+def _copy_package_assets():
+    src_dir = _get_package_static_dir()
+    dest_dir = STATIC_ASSET_DIR
+
+    # First Clear this cache
+    for existing_file in os.listdir(dest_dir):
+        cur_file = os.path.abspath(os.path.join(dest_dir, existing_file))
+        if os.path.islink(cur_file):
+            os.unlink(cur_file)
+        else:
+            if os.path.isdir(cur_file):
+                shutil.rmtree(cur_file)
+            else:
+                os.remove(cur_file)
+
+    # Now symlink the static assets
+    for dir_entry in os.listdir(src_dir):
+        src_file = os.path.abspath(os.path.join(src_dir, dir_entry))
+        dest_file = os.path.abspath(os.path.join(dest_dir, dir_entry))
+        os.symlink(src_file, dest_file)
+
+
+def _get_package_static_dir():
     bin_path = os.path.abspath(os.path.dirname(__file__))
 
     if bin_path.startswith('/usr'):
         return '/usr/share/kano-draw'
     else:
         return os.path.abspath(os.path.join(bin_path, '../www'))
+
+
+def _get_co_assets():
+    from kano_content.api import ContentManager
+
+    cm = ContentManager.from_local()
+
+    co_index = {}
+
+    for co in cm.list_local_objects(spec='make-art-assets'):
+        co_files = co.get_data('').get_content()
+        if len(co_files) != 2:
+            logger.warning(
+                'Count of files other than 2 in co[{}], skipping'.format(
+                    co.get_data('').get_dir()
+                )
+            )
+            continue
+
+        # Check whether the first file is the index
+        index_no = _get_co_index_apply_order(co_files[0])
+        if index_no is not None:
+            co_index[index_no] = co_files[1]
+        else:
+            # It wasn't the first one, go for the second one
+            index_no = _get_co_index_apply_order(co_files[1])
+            if index_no is not None:
+                co_index[index_no] = co_files[0]
+            else:
+                err_msg = 'None of the files contained in co have apply index'
+                logger.error(err_msg)
+                continue
+
+    return co_index
+
+
+def _apply_co_packages(dest_dir):
+    import tarfile
+
+    co_index = _get_co_assets()
+
+    for order in sorted(co_index.iterkeys()):
+        tar_file = co_index[order]
+        # First try to open the file
+        try:
+            tarball = tarfile.open(tar_file)
+        except (IOError, OSError) as exc:
+            err_msg = "Couldn't open file '{}', [{}]".format(tar_file, exc)
+            logger.error(err_msg)
+            continue
+        except tarfile.ReadError as exc:
+            err_msg = 'Error parsing tarfile "{}", [{}]'.format(tar_file, exc)
+            logger.error(err_msg)
+            continue
+        else:
+            # Now try to extract the files one by one
+            with tarball:
+                for tarred_file in tarball:
+                    try:
+                        tarball.extract(tarred_file, path=dest_dir)
+                    except IOError as exc:
+                        # This is to guard against weird tar behaviour when
+                        # trying to ovewrite symlinks
+                        bad_filename = os.path.join(dest_dir, tarred_file.name)
+                        if os.path.islink(bad_filename):
+                            logger.debug(
+                                'Remove link and ovewrite "{}"'.format(
+                                    bad_filename)
+                            )
+                            os.remove(os.path.join(dest_dir, tarred_file.name))
+                            tarball.extract(tarred_file, path=dest_dir)
+
+
+def _get_co_index_apply_order(fname):
+    index_no = None
+    # Files names have absolute path
+    if os.path.basename(fname) == 'index.json':
+        try:
+            index_fh = open(fname)
+        except (IOError, OSError) as exc:
+            err_msg = 'Error opening file "{}". [{}]'.format(
+                fname,
+                exc
+            )
+            logger.error(err_msg)
+        else:
+            with index_fh:
+                try:
+                    ind_data = json.load(index_fh)
+                    index_no = ind_data['apply_order']
+                except KeyError as exc:
+                    err_msg = ("JSON in '{}' doesn't contain right key: "
+                               "[{}]").format(fname, exc)
+                    logger.error(err_msg)
+                except ValueError as exc:
+                    err_msg = 'File "{}" is not a valid JSON: [{}]'.format(
+                        fname,
+                        exc
+                    )
+                    logger.error(err_msg)
+    return index_no
+
+
+def _get_static_dir():
+    return STATIC_ASSET_DIR
+
 
 def _get_image_from_str(img_str):
     import base64
@@ -40,6 +179,7 @@ def _get_image_from_str(img_str):
     image_data = base64.b64decode(image_b64)
 
     return image_data
+
 
 def _save(data):
     filename = data['filename']
@@ -71,6 +211,8 @@ def _save(data):
     return (filename, filepath)
 
 
+_copy_package_assets()
+_apply_co_packages(STATIC_ASSET_DIR)
 server = Flask(__name__, static_folder=_get_static_dir(), static_url_path='/')
 server_logger = logging.getLogger('werkzeug')
 server_logger.setLevel(logging.ERROR)
@@ -97,11 +239,15 @@ def save_challenge(filename):
 
     return ''
 
+
 @server.route("/challenge/local/<path:path>", methods=['GET'])
 def load_challenge(path):
     directory, filename = os.path.split(path)
 
-    return send_from_directory('/{}'.format(directory), filename, as_attachment=True)
+    return send_from_directory('/{}'.format(directory),
+                               filename,
+                               as_attachment=True)
+
 
 @server.route("/challenge/local/wallpaper/<path:filename>", methods=['POST'])
 def save_wallpaper(filename):
@@ -113,14 +259,17 @@ def save_wallpaper(filename):
         '16-9': _get_image_from_str(data['image_16_9'])
     }
 
-    img_path = os.path.join(WALLPAPER_DIR,
-        '{filename}-{{ratio}}.png'.format(filename=filename))
+    img_path = os.path.join(
+        WALLPAPER_DIR,
+        '{filename}-{{ratio}}.png'.format(filename=filename)
+    )
 
     for ratio, img_data in imgs.iteritems():
         with open(img_path.format(ratio=ratio), 'wb') as f:
             f.write(img_data)
 
     return ''
+
 
 @server.route("/challenge/web/<path:filename>", methods=['POST'])
 def share(filename):
@@ -151,6 +300,7 @@ def share(filename):
 
     return ''
 
+
 @server.route('/challenge/web', methods=['GET'])
 def load_share():
     # TODO: Import kano-share python module and use return code instead
@@ -171,27 +321,54 @@ def load_share():
         return send_from_directory(directory, filename, as_attachment=True)
 
 
-@server.route('/progress/<int:level>', methods=['POST'])
-def _save_level(level):
+@server.route('/progress/<world>/<int:challengeNo>', methods=['POST'])
+def _save_level(world, challengeNo):
+
     old_xp = calculate_xp()
+    needsToSave = False
 
-    value = int(level) - 1
+    groups = load_app_state_variable(APP_NAME, 'groups')
 
-    save_app_state_variable_with_dialog(APP_NAME, 'level', value)
+    # We might need to load the worlds file here so that we're sure that
+    # no one is abusing the API from the OS
+    if groups is None:
+        groups = {}
+
+    if world in groups:
+        if groups[world]['challengeNo'] < challengeNo:
+            groups[world]['challengeNo'] = challengeNo
+            needsToSave = True
+
+    else:
+        groups[world] = {'challengeNo': challengeNo}
+        needsToSave = True
+
+    if needsToSave:
+        save_app_state_variable_with_dialog(APP_NAME, 'groups', groups)
+
     new_xp = calculate_xp()
-
     return str(new_xp - old_xp)
+
 
 @server.route('/progress', methods=['GET'])
 def _load_level():
-    value = load_app_state_variable(APP_NAME, 'level')
-    # If every challenge is unlocked, value is 999
+    value = {
+        'groups': load_app_state_variable(APP_NAME, 'groups'),
+        'challenge': load_app_state_variable(APP_NAME, 'challenge')
+    }
+    # Previously we used to save the progress as "level"
+    level = load_app_state_variable(APP_NAME, 'level')
+    if value['groups'] is None:
+        value['groups'] = {}
 
-    if value is not None:
-        return str(value + 1)
-    else:
-        _save_level(1)
-        return Response('1')
+    # Replace the Challege var here.
+    if level > value['challenge']:
+        value['challenge'] = level
+
+    value = json.dumps(value)
+
+    return Response(value)
+
 
 @server.route('/shutdown', methods=['POST'])
 def _shutdown():
@@ -200,17 +377,20 @@ def _shutdown():
     # Send signal to parent to initiate shutdown
     os.kill(PARENT_PID, signal.SIGINT)
 
+
 @server.route('/browsemore', methods=['POST'])
 def _browsemore():
-    import subprocess
+    from kano import run_bg
 
-    p = subprocess.Popen(["chromium", "http://world.kano.me/shares/kano-draw"])
+    run_bg("chromium http://world.kano.me/shares/kano-draw")
+
 
 @server.errorhandler(404)
 def page_not_found(err):
     err_msg = 'Cannot find file {}'.format(request.path)
 
     return err_msg, 404
+
 
 @server.route('/play_sound/<path:filename>', methods=['POST'])
 def play_sounds(filename):
@@ -219,6 +399,7 @@ def play_sounds(filename):
     play_sound(sound_file)
 
     return ''
+
 
 def start(parent_pid=None):
     """

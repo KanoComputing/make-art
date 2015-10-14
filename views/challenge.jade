@@ -23,8 +23,8 @@
 
         .inner.center(ng-if='completed && !fatherDay')
             h4 {{ successMessage() }}
-            a.button.button-success(ng-if='hasNext', ng-href='/challenge/{{id + 1}}') Next &rsaquo;
-            a.button.button-success(ng-if='!hasNext', ng-click='openFinishedGame()') Done &rsaquo;
+            a.button.button-success(ng-if='next', ng-href='/challenge/{{selectedWorld.id}}/{{next.id}}') Next &rsaquo;
+            a.button.button-success(ng-if='!next', ng-click='openFinishedGame()') Done &rsaquo;
 
         .inner.center(ng-if='completed && fatherDay')
 
