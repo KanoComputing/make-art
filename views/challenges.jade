@@ -2,22 +2,22 @@
 
     h3.page-title
         i.icon-menu
-        | Challenges
+        span Challenges
+        .quests(ng-if='selectedWorld') 
+            a(ng-if="isWorldInIndex(selectedWorld)" href='/challenges')
+                i.icon-arrow-left
+                | Quests
 
     ul.worlds-list(ng-if='!selectedWorld' )
-        li.world-item(ng-repeat='world in worlds'  ng-if='isWorldInIndex(world)')
+        li.world-item(ng-repeat='world in worlds' ng-if='isWorldInIndex(world)')
             a.world-cover(
-
                 href='/challenges/{{world.id}}'
-                ng-class='{locked: isWorldLocked(world)}'
+                ng-class='{locked: !isWorldCurrent(world) && !isWorldCompleted(world), completed: isWorldCompleted(world), current: isWorldCurrent(world) && !isWorldCompleted(world)}'
                 ng-style='{ "background-image": "url(/assets/challenges/images/" + world.cover + ".png)" }'
                 )
-            h4(ng-class='{completed: isWorldCompleted(world)}') {{world.name}}
 
-    h4(ng-if='selectedWorld') 
-        a(ng-if="isWorldInIndex(selectedWorld)" href='/challenges')
-            i.icon-arrow-left
-        {{selectedWorld.name}}
+                h4 {{ world.name }}
+
     ul.challenges-list(ng-if='selectedWorld')
 
         li(ng-repeat='challenge in challenges')
