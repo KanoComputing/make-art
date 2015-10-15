@@ -84,12 +84,12 @@
                 ) {{ solution }}
 
     .modal-overlay(ng-if='gameCompleteOpen')
-        .modal-inner.split-modal.challenge-complete.center
+        .modal-inner.split-modal.challenge-complete.center(ng-if='selectedWorld.id !== "hourofcode"')
 
             //- button.close(ng-click='clocseFinishedGame()'): i.icon-cross
 
-            h3 Challenges complete
-
+            h3 Challenges completed
+            
             h4 Now make something new!
 
             .logo-title
@@ -103,3 +103,22 @@
                 a.button.large(ng-href='/playground')
                     i.icon-game
                     |  Playground
+                    
+        
+        .modal-inner.split-modal.challenge-complete.center(ng-if='selectedWorld.id === "hourofcode"')
+
+            //- button.close(ng-click='clocseFinishedGame()'): i.icon-cross
+
+            h3 Challenges completed
+            
+            h4 You did it, go back for more coding fun!
+
+            .hour-of-code-logo
+
+            .center.bottom-section
+
+                a.button.large(href='http://code.org/learn')
+                    i.icon-game
+                    |  Hour Of Code
+  
+      
