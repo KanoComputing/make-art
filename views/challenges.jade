@@ -6,7 +6,7 @@
         .quests(ng-if='selectedWorld') 
             a(ng-if="isWorldInIndex(selectedWorld)" href='/challenges')
                 i.icon-arrow-left
-                | Quests
+                | Back
 
     ul.worlds-list(ng-if='!selectedWorld' )
         li.world-item(ng-repeat='world in worlds' ng-if='isWorldInIndex(world)')
