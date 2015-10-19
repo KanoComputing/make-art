@@ -11,7 +11,7 @@
     ul.worlds-list(ng-if='!selectedWorld' )
         li.world-item(ng-repeat='world in worlds' ng-if='isWorldInIndex(world)')
             a.world-cover(
-                href='/challenges/{{world.id}}'
+                ng-href='{{!isWorldLocked(world) ? "/challenges/" + world.id : ""}}'
                 ng-class='{locked: isWorldLocked(world), completed: isWorldCompleted(world), current: isWorldCurrent(world)}'
                 ng-style='{ "background-image": "url(/assets/challenges/images/" + world.cover + ".png)" }'
                 )
