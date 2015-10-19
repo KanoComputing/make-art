@@ -39,7 +39,6 @@
             "world_path": "worlds/hourofcode",
             "visibility": "hidden",
             "css_class": "hourofcode",
-            "dependency": ["medium"],
             "type": "campaign"
         },
         {
