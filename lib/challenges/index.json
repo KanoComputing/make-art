@@ -7,7 +7,6 @@
             "cover": "world_covers/basic",
             "world_path": "worlds/basic",
             "css_class": "basic-challenges",
-            "dependency": [],
             "type": "normal"
 
         },
@@ -52,7 +51,6 @@
             "start_date": "2015-10-26T06:00:00",
             "visibility": "hidden",
             "css_class": "medium",
-            "dependency": [],
             "type": "campaign"
         }
     ]
