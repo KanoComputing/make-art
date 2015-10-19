@@ -51,7 +51,7 @@ include partial/banner
         ul.shares-list
 
             li(ng-repeat='share in shares')
-                a(href='/share/{{ share.id }}')
+                a(href='http://world.kano.me/shared/{{ share.slug }}')
 
                     .cover(ng-style='{ "background-image": "url(" + share.cover_url + ")" }')
 
