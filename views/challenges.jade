@@ -51,7 +51,7 @@ include partial/banner
         ul.shares-list
 
             li(ng-repeat='share in shares')
-                a(href='http://world.kano.me/shared/{{ share.slug }}')
+                a(href='{{cfg.WORLD_URL}}/shared/{{ share.slug }}')
 
                     .cover(ng-style='{ "background-image": "url(" + share.cover_url + ")" }')
 
@@ -62,7 +62,7 @@ include partial/banner
 
             li
                 a.highlight.browse(
-                    href='http://world.kano.me/shares/make-art',
+                    href='{{cfg.WORLD_URL}}/shares/make-art',
                     ng-click='browseMore($event)',
                     target='_blank'
                     )
