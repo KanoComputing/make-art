@@ -383,6 +383,16 @@ def _load_level():
 def _shutdown():
     import signal
 
+    try:
+        server_shutdown = request.environ.get('werkzeug.server.shutdown')
+        if server_shutdown is not None:
+            logger.info('Will attempt to shutdown the server')
+            server_shutdown()
+    except Exception as exc:
+        logger.error(
+            'Error while trying to shut down the server: [{}]'.format(exc)
+        )
+
     # Send signal to parent to initiate shutdown
     os.kill(PARENT_PID, signal.SIGINT)
 
