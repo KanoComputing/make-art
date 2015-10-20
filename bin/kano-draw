@@ -52,4 +52,12 @@ if len(sys.argv) > 1:
     DRAW = Draw(load_path=sys.argv[1])
 else:
     DRAW = Draw()
-DRAW.run()
+
+# In order to exit from the import server, we send a SIGINT to this process
+# and the signal handler executes as it should. However, GTK decides to throw
+# a keyboard interrupt anyway
+try:
+    DRAW.run()
+except KeyboardInterrupt:
+    # the SIGINT handler has executed here
+    sys.exit(0)
