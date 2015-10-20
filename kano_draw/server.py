@@ -37,8 +37,9 @@ ensure_dir(STATIC_ASSET_DIR)
 
 
 def _copy_package_assets():
-    src_dir = _get_package_static_dir()
-    dest_dir = STATIC_ASSET_DIR
+    # Use abs paths for both src and dest for subsequent replacements to work
+    src_dir = os.path.abspath(_get_package_static_dir())
+    dest_dir = os.path.abspath(STATIC_ASSET_DIR)
 
     # First Clear this cache
     for existing_file in os.listdir(dest_dir):
@@ -51,11 +52,19 @@ def _copy_package_assets():
             else:
                 os.remove(cur_file)
 
-    # Now symlink the static assets
-    for dir_entry in os.listdir(src_dir):
-        src_file = os.path.abspath(os.path.join(src_dir, dir_entry))
-        dest_file = os.path.abspath(os.path.join(dest_dir, dir_entry))
-        os.symlink(src_file, dest_file)
+    # Now copy the static assets
+    for root_d, dirs, files in os.walk(src_dir):
+        # Firstly create the dirs
+        dest_root = root_d.replace(src_dir, dest_dir)
+        for dir_n in dirs:
+            new_dir = os.path.join(dest_root, dir_n)
+            os.mkdir(new_dir)
+        # Now deal with the files
+        for file_n in files:
+            src_file = os.path.join(root_d, file_n)
+            new_file = os.path.join(dest_root, file_n)
+            shutil.copy(src_file, new_file)
+    logger.info('Successfully copied over static assets')
 
 
 def _get_package_static_dir():
