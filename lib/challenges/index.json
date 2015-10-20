@@ -51,6 +51,16 @@
             "visibility": "hidden",
             "css_class": "medium",
             "type": "campaign"
+        },
+        {
+            "id": "mischiefWeek2015",
+            "name": "Mischief Week",
+            "description": "This is a Halloween dedicated world",
+            "cover": "world_covers/mischiefweek",
+            "world_path": "worlds/mischiefWeek2015",
+            "start_date": "2015-10-26T06:00:00",
+            "css_class": "medium",
+            "type": "campaign"
         }
     ]
 }
