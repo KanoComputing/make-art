@@ -430,5 +430,10 @@ def start(parent_pid=None):
     PARENT_PID = parent_pid
 
     # Run the server
-    server.run(port=8000)
+    try:
+        server.run(port=8000)
+    except EnvironmentError as exc:
+        if exc.errno == 98:
+            logger.error('Another server is running bound at our port')
+            _shutdown()
     time.sleep(2)
