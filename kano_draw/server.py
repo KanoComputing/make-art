@@ -376,7 +376,7 @@ def _load_level():
 
     value = json.dumps(value)
 
-    return Response(value)
+    return Response(value, content_type='application/json')
 
 
 @server.route('/shutdown', methods=['POST'])
