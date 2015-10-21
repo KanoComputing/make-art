@@ -2,7 +2,7 @@
     "worlds": [
         {
             "id": "basic",
-            "name": "Getting Started",
+            "name": "Basic",
             "description": "This is a first set of challenges which will make you started with Make-Art",
             "cover": "world_covers/basic",
             "world_path": "worlds/basic",
@@ -42,24 +42,13 @@
             "type": "campaign"
         },
         {
-            "id": "halloween2015",
-            "name": "Halloween",
-            "description": "This is a Halloween dedicated world",
-            "cover": "world_covers/",
-            "world_path": "worlds/halloween2015",
-            "start_date": "2015-10-26T06:00:00",
-            "visibility": "hidden",
-            "css_class": "medium",
-            "type": "campaign"
-        },
-        {
-            "id": "mischiefWeek2015",
+            "id": "mischiefweek2015",
             "name": "Mischief Week",
             "description": "This is a Halloween dedicated world",
             "cover": "world_covers/mischiefweek",
-            "world_path": "worlds/mischiefWeek2015",
+            "world_path": "worlds/mischiefweek2015",
             "start_date": "2015-10-26T06:00:00",
-            "css_class": "medium",
+            "css_class": "mischiefweek2015",
             "type": "campaign"
         }
     ]
