@@ -1,5 +1,11 @@
 {
     "challenges": [
-    	"./challenge_1"
+        "./pumpkin",
+        "./cat",
+        "./potion",
+        "./ghost",
+        "./spider",
+        "./spiderweb",
+        "./hauntedhouse"
     ]
 }

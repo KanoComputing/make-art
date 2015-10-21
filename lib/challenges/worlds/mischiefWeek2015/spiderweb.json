@@ -1,0 +1,11 @@
+{
+    "id": "spiderweb",
+    "title": "Spider Web",
+    "description": "Play around with a spider web!",
+    "completion_text": "Happy Halloween! Today’s challenge is for you to play around with the code here.",
+    "cover": "mischiefweek2015/mw-006-spiderweb.png",
+    "startAt": 0,
+    "code": "# PLAY WITH THESE\nradius = 200\nframes = 30\nbridges = 10\ndegrees = 360\nrotation = 0\n\n# This defines the spiderweb\nclass SpiderWeb\n    constructor: (@x, @y, @radius, @frames, @bridges, @degrees, @rotation) ->\n        @x = @x ? 250\n        @y = @y ? 250\n        @radius = @radius ? 250\n        @frames = @frames ? 16\n        @bridges = @bridges ? 20\n        @degrees = @degrees ? 360\n        @rotation = @rotation ? 0\n        @frameAngle = @degrees / @frames\n        @draw()\n    drawFrame: () ->\n        moveTo @x , @y\n        for i in [ 0 .. @frames ]\n            if i * @frameAngle != 360\n                radians = (i * @frameAngle + @rotation)*(Math.PI / 180)\n                x = Math.cos(radians)\n                y = -Math.sin(radians)\n                line (x*@radius) , (y*@radius)\n    drawBridge: () ->\n        r = @radius\n        for web in [ 1 .. @bridges ]\n            r /= 1.2\n            for i in [ 0 ... @frames ]\n                # Starting postition\n                r1 = (i * @frameAngle + @rotation)*(Math.PI / 180)\n                x1 = Math.cos(r1)\n                y1 = -Math.sin(r1)\n                \n                # End position\n                r2 = (i * @frameAngle + @frameAngle + @rotation)*(Math.PI / 180)\n                x2 = Math.cos(r2)\n                y2 = -Math.sin(r2)\n                moveTo x1 * r + @x , y1 * r + @y\n                lineTo x2 * r + @x , y2 * r + @y\n    draw: ( ) ->\n        this.drawFrame()\n        this.drawBridge()\n\n# Here is the drawing\nbackground black\nstroke white\nweb = new SpiderWeb(250,250, radius, frames, bridges, degrees, rotation)\n\n### Delete this line\nstroke .5, cyan\nweb2 = new SpiderWeb(500,500, 500, 20, 7, 90, 90)\nstroke 3, hotpink\nweb3 = new SpiderWeb(100,100, 100, 6, 7, 360, 0)\n### # Delete this line",
+    "steps": [
+    ]
+}
