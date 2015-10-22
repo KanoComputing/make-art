@@ -1,0 +1,160 @@
+{
+    "id": "spider",
+    "title": "Creepy Spider",
+    "short_title": "Spider",
+    "description": "Use functions and variables to build a creepy customisable spider.",
+    "completion_text": "That's one creepy spider, now the real fun can begin: Play with the variables at the top to customise the size and shape of your spider, when you have made it as creepy as possible then hit the share button.",
+    "cover": "mischiefweek2015/mw-005-spider.png",
+    "startAt": 0,
+    "steps": [
+			{
+			    "hint": "There are almost 46 thousand species of spider, they all share the same features just with slight variations. So let's set up some variables to make our spider unique starting with the body - **type** `bodySize = 80`",
+			    "solution": "bodySize = 80"
+			},
+			{
+			    "hint": "Next on to the most important part of a spider, how wide the legs are - **type** `legSpread = 90`",
+			    "solution": "legSpread = 90"
+			},
+			{
+			    "hint": "Spider legs don't just have to be wide, they can also by long like the Long Jawed Orb Weaver Spider - **type** `legLength = 100`",
+			    "solution": "legLength = 100"
+			},
+			{
+			    "hint": "Most spiders also have eight eyes to match their legs, let's define how big they should be - **type** `eyeSize = 4`",
+			    "solution": "eyeSize = 4"
+			},
+			{
+			    "hint": "Each breed of spider has a different arrangement of their many eyes, we can control the spacing with this variable - **type** `eyeSpacing = 12`",
+			    "solution": "eyeSpacing = 12"
+			},
+			{
+			    "hint": "Now the variables are out of the way we can set the scene, let's make some purple wallpaper for our spider to rest against - **type** `background setSaturation(darkpurple,-25)`",
+			    "solution": "background setSaturation(darkpurple,-25)"
+			},
+			{
+			    "hint": "We need something for our spider to hang from so let's set a 10 pixel wide white stroke",
+			    "solution": "stroke white, 10"
+			},
+			{
+			    "hint": "Move to the top of the canvas to draw some silk - **type** `moveTo 250, 0`",
+			    "solution": "moveTo 250, 0"
+			},
+			{
+			    "hint": "Draw some silk back to where the spiders body will be - **type** `line 0, 200`",
+			    "solution": "line 0, 200"
+			},
+			{
+			    "hint": "Move our cursor down too so we can start drawing the body - **type** `move 0, 200`",
+			    "solution": "move 0, 200"
+			},
+			{
+			    "hint": "To make our spider extra creepy we're going to draw it black, set the fill colour to black",
+			    "solution": "color black"
+			},
+			{
+			    "hint": "Turn your stroke off so we only have a black body",
+			    "solution": "stroke 0"
+			},
+			{
+			    "hint": "Now it's time to take advantage of those variables, we can use one variable and make shapes relative to it by multiplying them. This will mean we can change the entire body of our spider by changing a single number `ellipse bodySize * 0.8, bodySize`",
+			    "solution": "ellipse bodySize * 0.8, bodySize",
+			    "validate": "ellipse bodySize \\* 0.8, bodySize"
+			},
+			{
+			    "hint": "Now we have a nice big body for the spider we can start on the most important part, the legs. Set a thin black stroke for the creepiest of legs - **type** `stroke black, 5`",
+			    "solution": "stroke black, 5"
+			},
+			{
+			    "hint": "Legs are long and thin so we can turn our fill colour off - **type** `color null`",
+			    "solution": "color null"
+			},
+			{
+			    "hint": "Spiders have a lot of legs so we'll use some code magic to make this easier for us, we're going to create a function which draws 2 legs at once `pairOfLegs = (flipHori,flipVert) ->`",
+			    "solution": "pairOfLegs = (flipHori,flipVert) ->",
+			    "validate": "pairOfLegs = (flipHori,flipVert)\\ *->"
+			},
+			{
+			    "hint": "Everything within this block will be drawn every time we call the function, later we will call this function several times to draw all the legs. `spread = legSpread * flipHori`",
+			    "solution": "    spread = legSpread * flipHori",
+			    "validate": "    spread = legSpread \\* flipHori"
+			},
+			{
+			    "hint": "We're using a special pair of variables flipHori and flipVert to flip the two legs and using the leg length and spread variables we defined at the top `length = legLength * flipVert`",
+			    "solution": "    length = legLength * flipVert",
+			    "validate": "    length = legLength \\* flipVert"
+			},
+			{
+			    "hint": "Now we have set up the size of our legs we can start to draw them, **note** nothing will appear on your canvas until we call the function later `polygon spread, length, spread * 0.7, length * 2`",
+			    "solution": "    polygon spread, length, spread * 0.7, length * 2",
+			    "validate": "    polygon spread, length, spread \\* 0.7, length \\* 2"
+			},
+			{
+			    "hint": "Now the second leg - **type** `polygon spread * 1.3, length * 0.4, spread * 1.7, length * 1.5`",
+			    "solution": "    polygon spread * 1.3, length * 0.4, spread * 1.7, length * 1.5",
+			    "validate": "    polygon spread \\* 1.3, length \\* 0.4, spread \\* 1.7, length \\* 1.5"
+			},
+			{
+			    "hint": "Our leg function is complete, make sure you are out of the function block by pressing **BACKSPACE** now **type** `pairOfLegs(1,1)` to test our function out",
+			    "solution": "pairOfLegs(1,1)"
+			},
+			{
+			    "hint": "Cool we have 2 legs, but we're going to need a lot more, this is where our hard work before pays off, by changing the numbers from `1` to `-1` in our function we can flip the legs - **type** `pairOfLegs(-1,1)`",
+			    "solution": "pairOfLegs(-1,1)"
+			},
+			{
+			    "hint": "The first number flips them horizontally and the second vertically, that's why we named flipHori and flipVert in our function - **type** `pairOfLegs(1,-1)`",
+			    "solution": "pairOfLegs(1,-1)"
+			},
+			{
+			    "hint": "6 down 2 to go, call our leg function one more time - **type** `pairOfLegs(-1,-1)`",
+			    "solution": "pairOfLegs(-1,-1)"
+			},
+			{
+			    "hint": "With the legs out of the way we can move on to the head, turn your stroke off",
+			    "solution": "stroke 0"
+			},
+			{
+			    "hint": "Set our fill to black to match the body",
+			    "solution": "color black"
+			},
+			{
+			    "hint": "The head is relative to the body size so we use the bodySize variable to decide where it should be - **type** `move 0, bodySize`",
+			    "solution": "move 0, bodySize"
+			},
+			{
+			    "hint": "Draw the head relative to the overall body size - **type** `ellipse bodySize * 0.5, bodySize * 0.4`",
+			    "solution": "ellipse bodySize * 0.5, bodySize * 0.4",
+			    "validate": "ellipse bodySize \\* 0.5, bodySize \\* 0.4"
+			},
+			{
+			    "hint": "Finally we have to give it some creepy eyes, set the fill color to orangered",
+			    "solution": "color orangered"
+			},
+			{
+			    "hint": "We're going to use the eyeSpacing variable we set earlier to lay out a grid of eyes, move the cursor to the top left corner of where our eyes will be `move eyeSpacing * -1.5, eyeSpacing / -2`",
+			    "solution": "move eyeSpacing * -1.5, eyeSpacing / -2",
+			    "validate": "move eyeSpacing \\* -1.5, eyeSpacing / -2"
+			},
+			{
+			    "hint": "Our spider also has eight eyes so we're going to use a loop and draw two at a time similar to how we drew the legs - **type** `for [1 .. 4]`",
+			    "solution": "for [1 .. 4]"
+			},
+			{
+			    "hint": "We're now inside the loop, everything indented will run four times, let's draw an eyeball  `circle eyeSize`",
+			    "solution": "    circle eyeSize"
+			},
+			{
+			    "hint": "We can use the move function to position our cursor for the next eyeball below the first `move 0, eyeSpacing`",
+			    "solution": "    move 0, eyeSpacing"
+			},
+			{
+			    "hint": "Create our second eyeball using eyeSize the same way as before",
+			    "solution": "    circle eyeSize"
+			},
+			{
+			    "hint": "We can now move to the next column of eyes, you'll see we multiply our variable by -1 to convert it into a negative version of the number to move the cursor back up. `move eyeSpacing, eyeSpacing * -1`",
+			    "solution": "    move eyeSpacing, eyeSpacing * -1",
+			    "validate": "    move eyeSpacing, eyeSpacing \\* -1"
+			}
+    ]
+}
