@@ -253,6 +253,37 @@ describe("validator", function () {
                 complete: true
             });
     });
+
+    it("should ignore lines from validation if in 'ignoreUntil' ", function () {
+        var rules = ["print a, b", "a = c", "d = c"],
+            v = getValidator([
+                    {validate: rules[0]},
+                    {validate: rules[1]},
+                    {validate: rules[2]},
+                    {validate: rules},
+                    {validate: rules[2]},
+                    {validate: rules[2]},
+                    {validate: rules[2]}
+                ], 2),
+            r = v.validate("bs\nbs\nbs1\nprint a, b\na = c\nd = c\nprint a, b\na = c\nd=c\nd=c\nd=c\nd=c");
+        assert.deepEqual(r,
+            {
+                lastValidStep: 6,
+                firstBrokenLine: null,
+                steps: [
+                    {valid: true, lines: [0]},
+                    {valid: true, lines: [1]},
+                    {valid: true, lines: [2]},
+                    {valid: true, lines: [3, 4, 5]},
+                    {valid: true, lines: [6]},
+                    {valid: true, lines: [7]},
+                    {valid: true, lines: [8]}
+                ],
+                complete: true
+            });
+
+
+    });
     describe(" - Internal functions",  function () {
         var priv = getValidator([]).private;
         describe(" - completeRegex ", function () {
@@ -273,6 +304,8 @@ describe("validator", function () {
         });
 
     });
+
+
 
 });
 
