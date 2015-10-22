@@ -4,7 +4,7 @@ include partial/banner
 
     h3.page-title
         i.icon-menu
-        span Challenges
+        span {{ selectedWorld ? selectedWorld.name : 'Challenges'}}
         .quests(ng-if='selectedWorld') 
             a(ng-if="isWorldInIndex(selectedWorld)" href='/challenges')
                 i.icon-arrow-left
