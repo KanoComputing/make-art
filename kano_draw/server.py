@@ -379,6 +379,18 @@ def _load_level():
     return Response(value, content_type='application/json')
 
 
+@server.route('/lines-of-code', methods=['POST'])
+def _increment_lines_of_code():
+    data = json.loads(request.data)
+    new_lines = data['newLines']
+
+    increment_app_state_variable_with_dialog(
+        APP_NAME, 'lines_of_code', new_lines
+    )
+
+    return ''
+
+
 @server.route('/shutdown', methods=['POST'])
 def _shutdown():
     import signal
