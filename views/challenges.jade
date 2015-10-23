@@ -1,6 +1,8 @@
 include partial/banner 
 
 .page-challenges(ng-class="[ selectedWorldClass ]"): .page-width
+    .web.left
+    .web.right
 
     h3.page-title
         i.icon-menu
@@ -8,7 +10,7 @@ include partial/banner
         .quests(ng-if='selectedWorld') 
             a(ng-if="isWorldInIndex(selectedWorld)" href='/challenges')
                 i.icon-arrow-left
-                | Back
+                | Quests
 
     ul.worlds-list(ng-if='!selectedWorld' )
         li.world-item(ng-repeat='world in worlds' ng-if='isWorldInIndex(world)')
@@ -25,7 +27,7 @@ include partial/banner
         li(ng-repeat='challenge in challenges')
             a(
                 ng-click='selectChallenge(challenge)',
-                ng-class='{ locked: isLocked(challenge), completed: isCompleted(challenge.index), current: isCurrent(challenge.index) }'
+                ng-class='{ locked: isLocked(challenge), completed: isCompleted(challenge), current: isCurrent(challenge) }'
                 )
 
                 .cover(ng-style='{ "background-image": "url(/assets/challenges/images/" + challenge.cover + ")" }')
@@ -33,7 +35,7 @@ include partial/banner
                 .detail
                     h5 {{ challenge.short_title || challenge.title }}
 
-        li
+        li(ng-if='selectedWorld.type !== "campaign"')
 
             a.highlight(href='/playground', ng-class='{ locked: false}')
 
@@ -42,7 +44,7 @@ include partial/banner
                 .detail
                     h5 Playground
 
-    div(ng-if='shares')
+    div(ng-if='shares && selectedWorld.type !== "campaign"')
 
         h3.page-title
             i.icon-share

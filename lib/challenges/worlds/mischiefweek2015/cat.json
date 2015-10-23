@@ -3,6 +3,7 @@
     "title": "Spooky Cat",
     "cover": "mischiefweek2015/mw-002-cat.png",
     "description": "Make a spooky cat with code",
+    "start_date": "2015-10-27T06:00:00",
     "startAt": 2,
     "completion_text": "Nice work - you made a spooky black cat! Try changing its color or even its tail! Don't forget to share your cat afterwards.",
     "steps": [
