@@ -8,7 +8,7 @@ include partial/banner
         .quests(ng-if='selectedWorld') 
             a(ng-if="isWorldInIndex(selectedWorld)" href='/challenges')
                 i.icon-arrow-left
-                | Back
+                | Quests
 
     ul.worlds-list(ng-if='!selectedWorld' )
         li.world-item(ng-repeat='world in worlds' ng-if='isWorldInIndex(world)')
@@ -33,7 +33,7 @@ include partial/banner
                 .detail
                     h5 {{ challenge.short_title || challenge.title }}
 
-        li
+        li(ng-if='selectedWorld.type !== "campaign"')
 
             a.highlight(href='/playground', ng-class='{ locked: false}')
 
@@ -42,7 +42,7 @@ include partial/banner
                 .detail
                     h5 Playground
 
-    div(ng-if='shares')
+    div(ng-if='shares && selectedWorld.type !== "campaign"')
 
         h3.page-title
             i.icon-share
