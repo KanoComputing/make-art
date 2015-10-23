@@ -2,6 +2,7 @@
     "id": "potion",
     "title": "Potion Flask",
     "description": "Brew a potion with code.",
+    "start_date": "2015-10-28T06:00:00",
     "code": "",
     "startAt": 2,
     "completion_text": "Well done! You can change the color of your potion by setting potionColor to whatever you want. The clear glass you made with opacity(white, .4) will give it a cool effect, whatever color you choose.",
