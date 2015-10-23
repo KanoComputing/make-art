@@ -94,7 +94,7 @@
             "solution": "color white"
         },
         {
-            "hint": "`move` the cursor to **exactly** `248, 220`",
+            "hint": "Move the cursor to **exactly** `moveTo 248, 220`",
             "solution": "moveTo 248, 220"
         },
         {

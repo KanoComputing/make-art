@@ -37,7 +37,7 @@
             "solution": "color darkred"
         },
         {
-            "hint": "Now `moveTo` `164, 290`",
+            "hint": "Now `moveTo 164, 290`",
             "solution": "moveTo 164, 290"
         },
         {
