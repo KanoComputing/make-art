@@ -23,7 +23,7 @@
 
         .inner.center(ng-if='completed && !fatherDay')
             h4 {{ successMessage() }}
-            a.button.button-success(ng-if='next', ng-href='/challenge/{{selectedWorld.id}}/{{next.id}}') Next &rsaquo;
+            a.button.button-success(ng-if='next', ng-click='openNextModal()') Next &rsaquo;
             a.button.button-success(ng-if='!next', ng-click='openFinishedGame()') Done &rsaquo;
 
         .inner.center(ng-if='completed && fatherDay')
@@ -121,4 +121,17 @@
                     i.icon-game
                     |  Hour Of Code
   
-      
+.modal-overlay(ng-if='nextModal')
+    .modal-inner.modal-challenge-info.center
+
+        .cover(ng-style='{ "background-image": "url(/assets/challenges/images/" + next.cover +")" }')
+
+        button.close(ng-click='closeNextModal()'): i.icon-cross
+
+        .detail
+
+            h3 {{ next.title }}
+
+            p.description {{ next.description }}
+
+            a.button.button-success(ng-href='/challenge/{{selectedWorld.id}}/{{next.id}}') Start
