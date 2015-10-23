@@ -45,7 +45,7 @@
             "solution": "stroke 0"
         },
         {
-            "hint": "Now to draw a many sided shape - **type** `polygon -60, 50, 0, 100 , 60, 50`",
+            "hint": "Now to draw a many sided shape - **type** `polygon -60, 50, 0, 100, 60, 50`",
             "solution": "polygon -60, 50, 0, 100, 60, 50"
         }
     ],

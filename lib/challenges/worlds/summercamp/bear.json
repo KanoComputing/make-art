@@ -76,7 +76,7 @@
             "solution": "move 0, 20"
         },
         {
-            "hint": "Set the `stroke` (the outline of a shape) to size `3` and `black`",
+            "hint": "Set the `stroke` (the outline of a shape) to color `black` and size `3`",
             "solution": "stroke black, 3"
         },
         {

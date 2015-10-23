@@ -37,7 +37,7 @@
             "solution": "circle 190"
         },
         {
-            "hint": "Set the `stroke` for the third circle to size `20` and `purple` color",
+            "hint": "Set the `stroke` for the third circle to `purple` color and size `20`",
             "solution": "stroke purple, 20"
         },
         {
