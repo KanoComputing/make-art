@@ -13,7 +13,7 @@
     "steps": [
         {
             "hint": "The weather is good today...there is no wind to blow our arrows off course. Set the background color to blue - **type** `background blue`.",
-            "solution": "background lightblue"
+            "solution": "background blue"
         },
         {
             "hint": "We want the background to jitter, so we will start drawing it at a random point. **Type** `moveTo (random -20, 0), (random 240, 260)`.",
@@ -36,7 +36,7 @@
             "solution": "stroke brown, 15"
         },
         {
-            "hint": "Draw the left leg - **type** `line -80, 120`...",
+            "hint": "Draw the left leg - **type** `line -80, 120`",
             "solution": "line -80, 120"
         },
         {

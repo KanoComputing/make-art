@@ -12,7 +12,7 @@
     "rewards": null,
     "steps": [
         {
-            "hint": "It's a sunny day! Set the background color to blue - **type** `background blue`",
+            "hint": "It's a sunny day! Set the background color to lightblue - **type** `background lightblue`",
             "solution": "background lightblue"
         },
         {

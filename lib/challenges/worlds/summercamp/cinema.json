@@ -74,7 +74,7 @@
             "solution": "moveTo 0, 360"
         },
         {
-            "hint": "Set the outline of the seats with a `stroke` of `10` and `orangered` color.",
+            "hint": "Set the outline of the seats with a `stroke` of `orangered` color and size `10`.",
             "solution": "stroke orangered, 10"
         },
         {
@@ -83,7 +83,7 @@
         },
         {
             "hint": "Set the `color` of the seats to `red`",
-            "solution": "    line 250"
+            "solution": "    color red"
         },
         {
             "hint": "Now draw a `rectangle` for the seats, size `500` by `40`",

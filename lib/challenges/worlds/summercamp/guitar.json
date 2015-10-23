@@ -64,7 +64,7 @@
             "solution": "move -170, 15"
         },
         {
-            "hint": "Set the outline of the soundhole with a `stroke` of `10` and `brown` color.",
+            "hint": "Set the outline of the soundhole with a `stroke` of `brown` color and size `10`.",
             "solution": "stroke brown, 10"
         },
         {
@@ -80,7 +80,7 @@
             "solution": "move -50, -15"
         },
         {
-            "hint": "Set the outline of the bridge with a `stroke` of `10` and `red` color.",
+            "hint": "Set the outline of the bridge with a `stroke` of `red` color and size `10`.",
             "solution": "stroke red, 10"
         },
         {
@@ -92,7 +92,7 @@
             "solution": "move 0, 9"
         },
         {
-            "hint": "Set the properties of the strings with a `stroke` of `1` and `white` color.",
+            "hint": "Set the properties of the strings with a `stroke` of `white` color and size `1`.",
             "solution": "stroke white, 1"
         },
         {

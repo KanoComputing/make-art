@@ -20,8 +20,8 @@
             "solution": "color darkblue"
         },
         {
-            "hint": "The mountains also have a nice thick border, give them `stroke 10, white`",
-            "solution": "stroke 10, white"
+            "hint": "The mountains also have a nice thick border, give them `stroke white, 10`",
+            "solution": "stroke white, 10"
         },
         {
             "hint": "Lets draw the ten mountains of Camp Kano with a loop! This will be much faster than drawing them individually. **Type** `for i in [ 0 ... 10 ]` to open the loop.",
@@ -29,19 +29,19 @@
         },
         {
             "hint": "For every time the loop runs, we want a mountain’s peak to be drawn randomly across the screen. Let’s select an x value with `x = random 0, 500`",
-            "solution": "x = random 0, 500"
+            "solution": "    x = random 0, 500"
         },
         {
             "hint": "However, for the y value, we only want each mountain’s peak to be drawn on the top part of the screen. **Type** `y = random 0, 200`",
-            "solution": "y = random 0, 200"
+            "solution": "    y = random 0, 200"
         },
         {
             "hint": "Now with our x and y values set we can move the cursor to them. **Type** `moveTo x, y`",
-            "solution": "moveTo x, y"
+            "solution": "    moveTo x, y"
         },
         {
             "hint": "Draw a mountain for every loop with the polygon function. **Type** `polygon 400, 500, -400, 500`",
-            "solution": "polygon 400, 500, -400, 500"
+            "solution": "    polygon 400, 500, -400, 500"
         },
         {
             "hint": "First, get out of the previous for loop’s indent by pressing `BACKSPACE`. Now let’s draw some clouds with `stroke 0`",
@@ -49,7 +49,7 @@
         },
         {
             "hint": "Clouds are made of small droplets of water vapor, which is see-through! To get a see-through color we use the `opacity` function. **Type** `color (opacity white, .1)`",
-            "solution": "color(opacity white, .1)"
+            "solution": "color (opacity white, .1)"
         },
         {
             "hint": "Now let’s make a new loop to draw the cloud puffs. We’ll need a lot, so let’s make this a loop last 300 iterations. **Type** `for j in [ 0 ... 250 ]`.",
@@ -57,19 +57,19 @@
         },
         {
             "hint": "We want cloud puffs sprinkled randomly across the screen, so lets choose an x value between 0 and 500 with`x = random 0, 500`",
-            "solution": "x = random 0, 500"
+            "solution": "    x = random 0, 500"
         },
         {
             "hint": "However, for the y value, we only want the cloud puffs to be drawn on the bottom part of the screen. **Type** `y = random 300, 500`",
-            "solution": "y = random 300, 500"
+            "solution": "    y = random 300, 500"
         },
         {
             "hint": "Now with our x and y values set we can move the cursor to them. **Type** `moveTo x, y`",
-            "solution": "moveTo x, y"
+            "solution": "    moveTo x, y"
         },
         {
             "hint": "Let’s draw the cloud puff—a big transparent `circle` of size `100`",
-            "solution": "color blue"
+            "solution": "    circle 100"
         },
         {
             "hint": "Press `BACKSPACE` once to get out of the indented line. Then lets move the cursor into place for some text with `moveTo 250, 350`",
@@ -85,7 +85,7 @@
         },
         {
             "hint": "We also want to style our text with italics, do this with `italic true`",
-            "solution": "bold true"
+            "solution": "italic true"
         },
         {
             "hint": "Finally lets select Bariol at point size 40 with `font 'Bariol', 40`",
@@ -97,7 +97,7 @@
         },
         {
             "hint": "Now for a new line with a big bold finish. **Type** `font 90`",
-            "solution": "font 'Bariol', 90"
+            "solution": "font 90"
         },
         {
             "hint": "Lets move the cursor down into place for the final line with `move 0, 90`",

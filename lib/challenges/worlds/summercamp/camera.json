@@ -42,7 +42,7 @@
             "solution": "color lightblue"
         },
         {
-            "hint": "Set the outline of the lens with a `stroke` of `10` and `black` color",
+            "hint": "Set the outline of the lens with a `stroke` of `black` color and size `10`",
             "solution": "stroke black, 10"
         },
         {
