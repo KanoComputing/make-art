@@ -2,6 +2,7 @@
     "id": "ghost",
     "title": "Ghost",
     "description": "Draw your very own ghost. Change the colors to win!",
+    "start_date": "2015-10-29T06:00:00",
     "code": "ghostColor = '#809B79'\nfaceColor = '#634E42'\ntongueColor = '#7A5750'\n",
     "startAt": 0,
     "steps": [
