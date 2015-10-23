@@ -27,7 +27,7 @@
 			    "solution": "ellipse 130, 140"
 			},
 			{
-			    "hint": "It's starting to take shape, add the final slice the same way, make it 50 pixels wide",
+			    "hint": "It's starting to take shape, add the final slice the same way - **type** `ellipse 50, 140`",
 			    "solution": "ellipse 50, 140"
 			},
 			{
@@ -43,11 +43,11 @@
 			    "solution": "move -20, -180"
 			},
 			{
-			    "hint": "Draw the chunky stem of the pumpkin draw a 40 pixel big square",
+			    "hint": "Draw the chunky stem of the pumpkin - **type** `square 40`",
 			    "solution": "square 40"
 			},
 			{
-			    "hint": "Now we have a fresh pumpkin we get to the spooky part, the carving change your fill color to black",
+			    "hint": "Now we have a fresh pumpkin we get to the spooky part, the carving change your fill color to black - **type** `color black`",
 			    "solution": "color black"
 			},
 			{
@@ -63,7 +63,7 @@
 			    "solution": "moveTo 310, 275"
 			},
 			{
-			    "hint": "Cut the second hole the same size as the first",
+			    "hint": "Cut the second hole the same size as the first - **type** `circle 15`",
 			    "solution": "circle 15"
 			},
 			{
