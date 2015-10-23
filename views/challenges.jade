@@ -25,7 +25,7 @@ include partial/banner
         li(ng-repeat='challenge in challenges')
             a(
                 ng-click='selectChallenge(challenge)',
-                ng-class='{ locked: isLocked(challenge), completed: isCompleted(challenge.index), current: isCurrent(challenge.index) }'
+                ng-class='{ locked: isLocked(challenge), completed: isCompleted(challenge), current: isCurrent(challenge) }'
                 )
 
                 .cover(ng-style='{ "background-image": "url(/assets/challenges/images/" + challenge.cover + ")" }')
