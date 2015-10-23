@@ -18,7 +18,7 @@
             "solution": "background lightgray"
         },
         {
-            "hint": "In a new line, set the outline of your compass with a `stroke` of `20` and `gold` color",
+            "hint": "In a new line, set the outline of your compass with a `stroke` of `gold` color and size `20`",
             "solution": "stroke gold, 20"
         },
         {

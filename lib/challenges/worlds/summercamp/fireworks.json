@@ -20,8 +20,8 @@
             "solution": "stroke red"
         },
         {
-            "hint": "We want to draw 60 lines radiating outward, so let’s use a for loop `for i in [ 0 ... 60 ]`",
-            "solution": "for i in [ 0 ... 60 ]"
+            "hint": "We want to draw 60 lines radiating outward, so let’s use a for loop `for i in [0 ... 60]`",
+            "solution": "for i in [0 ... 60]"
         },
         {
             "hint": "All of the lines in our firework should have different lengths! So for each line radiating out, let’s set its length with `length = random 1, 200`.",
