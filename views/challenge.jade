@@ -23,7 +23,7 @@
 
         .inner.center(ng-if='completed && !fatherDay')
             h4 {{ successMessage() }}
-            a.button.button-success(ng-if='next', ng-click='openNextModal()') Next &rsaquo;
+            a.button.button-success(ng-if='next', ng-click='openShareModal()') Next &rsaquo;
             a.button.button-success(ng-if='!next', ng-click='openFinishedGame()') Done &rsaquo;
 
         .inner.center(ng-if='completed && fatherDay')
@@ -134,6 +134,7 @@
 
             p.description {{ next.description }}
 
-            a.button.button-success(ng-href='/challenge/{{selectedWorld.id}}/{{next.id}}') Start
+            a.button.button-success(ng-href='/challenges/{{selectedWorld.id}}' ng-if='next.locked') {{selectedWorld ? 'Back to ' + selectedWorld.name : 'Menu'}}
+            a.button.button-success(ng-href='/challenge/{{selectedWorld.id}}/{{next.id}}' ng-if='!next.locked') Start
 
 include partial/mail-preview
