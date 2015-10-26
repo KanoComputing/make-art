@@ -27,7 +27,7 @@
 			    "solution": "ellipse 130, 140"
 			},
 			{
-			    "hint": "It's starting to take shape, add the final slice the same way, make it 50 pixels wide - **type** `ellipse 50, 140`",
+			    "hint": "It's starting to take shape, add the final slice the same way - **type** `ellipse 50, 140`",
 			    "solution": "ellipse 50, 140"
 			},
 			{
