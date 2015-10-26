@@ -1,7 +1,7 @@
 .modal-overlay(ng-if='open'): .modal-inner.export-menu
 
-    button.close(ng-click='close()' ng-if='!category') &times;
-    h2.center(ng-if='!category') {{ action }} drawing
+    button.close(ng-click='close()') &times;
+    h2.center {{ action }} drawing
 
     .row
 
@@ -25,7 +25,7 @@
                         |  {{ action }}
 
                     button.button-success(type='submit', ng-disabled='exportForm.$invalid', ng-class='{ "disabled" : exportForm.$invalid }' ng-if='category')
-                        span Continue
+                        span Share &amp; Continue
 
                     //- a.button.button-email(ng-click='sendMail()')
                     //-     img(src='/assets/button-icons/email.png' title='Share via Email')
