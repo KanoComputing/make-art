@@ -134,6 +134,8 @@
 
             p.description {{ next.description }}
 
+            p.description.small(ng-if='next.locked') Come back tomorrow to continue this challenge
+
             a.button.button-success(ng-href='/challenges/{{selectedWorld.id}}' ng-if='next.locked') {{selectedWorld ? 'Back to ' + selectedWorld.name : 'Menu'}}
             a.button.button-success(ng-href='/challenge/{{selectedWorld.id}}/{{next.id}}' ng-if='!next.locked') Start
 
