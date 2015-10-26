@@ -56,7 +56,7 @@
                 "solution": "circle 40"
             },
             {
-                "hint": "Move on over for the nose with `move -50, 60",
+                "hint": "Move on over for the nose with `move -50, 60`",
                 "solution": "move -50, 60"
             },
             {
