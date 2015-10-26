@@ -2,7 +2,7 @@
     "id": "ghost",
     "title": "Ghost",
     "description": "Draw your very own ghost. Change the colors to win!",
-    "start_date": "2015-10-29T06:00:00",
+    "start_date": "2015-10-30T06:00:00",
     "code": "ghostColor = '#809B79'\nfaceColor = '#634E42'\ntongueColor = '#7A5750'\n",
     "startAt": 0,
     "steps": [
@@ -132,5 +132,5 @@
         }
     ],
     "completion_text": "Well done! You can change the color of your ghost by setting ghostColor, faceColor, and tongueColor to whatever you want.",
-    "cover": "mischiefweek2015/mw-004-ghost.png"
+    "cover": "mischiefweek2015/mw-005-ghost.png"
 }
