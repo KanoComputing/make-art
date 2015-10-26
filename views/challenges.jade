@@ -4,13 +4,14 @@ include partial/banner
     .web.left
     .web.right
 
-    h3.page-title
-        i.icon-menu
+    h3.page-title(ng-if='selectedWorld')
         span {{ selectedWorld ? selectedWorld.name : 'Challenges'}}
-        .quests(ng-if='selectedWorld') 
+        .quests
             a(ng-if="isWorldInIndex(selectedWorld)" href='/challenges')
                 i.icon-arrow-left
-                | Quests
+                | Challenges
+
+    .header
 
     ul.worlds-list(ng-if='!selectedWorld' )
         li.world-item(ng-repeat='world in worlds' ng-if='isWorldInIndex(world)')
@@ -20,7 +21,7 @@ include partial/banner
                 ng-style='{ "background-image": "url(/assets/challenges/images/" + world.cover + ".png)" }'
                 )
 
-                h4 {{ world.name }}
+                h4 {{ world.name }} 
 
     ul.challenges-list(ng-if='selectedWorld')
 
@@ -34,6 +35,9 @@ include partial/banner
 
                 .detail
                     h5 {{ challenge.short_title || challenge.title }}
+
+                .weekday
+                    span {{ challenge.day }}
 
         li(ng-if='selectedWorld.type !== "campaign"')
 
