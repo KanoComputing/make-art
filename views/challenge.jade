@@ -23,7 +23,7 @@
 
         .inner.center(ng-if='completed && !fatherDay')
             h4 {{ successMessage() }}
-            a.button.button-success(ng-if='next', ng-click='openShareModal()') Next &rsaquo;
+            a.button.button-success(ng-if='next', ng-click='goToNext()') Next &rsaquo;
             a.button.button-success(ng-if='!next', ng-click='openFinishedGame()') Done &rsaquo;
 
         .inner.center(ng-if='completed && fatherDay')
