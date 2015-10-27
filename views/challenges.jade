@@ -48,35 +48,36 @@ include partial/banner
                 .detail
                     h5 Playground
 
-    div(ng-if='shares && selectedWorld.type !== "campaign"')
+    if !offline
+        div(ng-if='shares && selectedWorld.type !== "campaign"')
 
-        h3.page-title
-            i.icon-share
-            | Latest Shares
+            h3.page-title
+                i.icon-share
+                | Latest Shares
 
-        ul.shares-list
+            ul.shares-list
 
-            li(ng-repeat='share in shares')
-                a(href='{{cfg.WORLD_URL}}/shared/{{ share.slug }}')
+                li(ng-repeat='share in shares')
+                    a(href='{{cfg.WORLD_URL}}/shared/{{ share.slug }}')
 
-                    .cover(ng-style='{ "background-image": "url(" + share.cover_url + ")" }')
+                        .cover(ng-style='{ "background-image": "url(" + share.cover_url + ")" }')
 
-                    .detail
-                        h5
-                            | {{ share.title }} 
-                            em by {{ share.user.username }}
+                        .detail
+                            h5
+                                | {{ share.title }} 
+                                em by {{ share.user.username }}
 
-            li
-                a.highlight.browse(
-                    href='{{cfg.WORLD_URL}}/shares/make-art',
-                    ng-click='browseMore($event)',
-                    target='_blank'
-                    )
+                li
+                    a.highlight.browse(
+                        href='{{cfg.WORLD_URL}}/shares/make-art',
+                        ng-click='browseMore($event)',
+                        target='_blank'
+                        )
 
-                    .cover(ng-style='{"background-image": "url(/assets/challenges/images/browse.png)"}')
+                        .cover(ng-style='{"background-image": "url(/assets/challenges/images/browse.png)"}')
 
-                    .detail
-                        h5 Browse more
+                        .detail
+                            h5 Browse more
 
 .modal-overlay(ng-if='selectedChallenge')
     .modal-inner.modal-challenge-info.center
