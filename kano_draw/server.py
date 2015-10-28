@@ -48,7 +48,7 @@ def _copy_package_assets():
             os.unlink(cur_file)
         else:
             if os.path.isdir(cur_file):
-                shutil.rmtree(cur_file)
+                shutil.rmtree(cur_file, ignore_errors=True)
             else:
                 os.remove(cur_file)
 
