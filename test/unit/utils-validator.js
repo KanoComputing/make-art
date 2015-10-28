@@ -253,6 +253,28 @@ describe("validator", function () {
                 complete: true
             });
     });
+
+    it("should validate synonyms ", function () {
+        var rules = ["color blue", "color red", "color rosso"],
+            v = getValidator([
+                    {validate: rules[0]},
+                    {validate: rules[1]},
+                    {validate: rules[2]}
+                ],
+                {'color': ['colour', 'colore']}),
+            r = v.validate("color blue\ncolour red\ncolore rosso");
+        assert.deepEqual(r,
+            {
+                lastValidStep: 2,
+                firstBrokenLine: null,
+                steps: [
+                    {valid: true, lines: [0]},
+                    {valid: true, lines: [1]},
+                    {valid: true, lines: [2]}
+                ],
+                complete: true
+            });
+    });
     describe(" - Internal functions",  function () {
         var priv = getValidator([]).private;
         describe(" - completeRegex ", function () {
