@@ -75,7 +75,8 @@
         },
         {
             "hint": "Set the thickness and color of each line - **type** `stroke 'rgba(255, ' + (i + 50) + ', 0, 0.3)', 10`",
-            "solution": "    stroke 'rgba(255, ' + (i + 50) + ', 0, 0.3)', 10"
+            "solution": "    stroke 'rgba(255, ' + (i + 50) + ', 0, 0.3)', 10",
+            "validate": "__^    stroke 'rgba*\\(255, ' \\+ \\(i *\\+ *50\\) *\\+ *', *0, *0.3\\)', 10"
         },
         {
             "hint": "Now draw the line - **type** `line 150 - i`",
