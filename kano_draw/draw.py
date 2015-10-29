@@ -1,5 +1,6 @@
 from kano.webapp import WebApp
 
+
 class Draw(WebApp):
     def __init__(self, load_path=''):
         super(Draw, self).__init__()
@@ -17,3 +18,9 @@ class Draw(WebApp):
 
         # Enable developer extras to allow error reporting to work
         self._inspector = True
+
+
+# We require this function for starting the UI as a subprocess
+def start_draw(load_path=''):
+    draw_instance = Draw(load_path=load_path)
+    draw_instance.run()
