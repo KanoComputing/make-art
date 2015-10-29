@@ -29,7 +29,8 @@
         },
         {
             "hint": "For each loop, we are drawing a new line radiating out. So for every time we loop, the angle of the line should change. This uses some advanced math, but don’t fear. Just **type** `angle = (360 / 60 * i) * (Math.PI / 180)`.",
-            "solution": "    angle = (360 / 60 * i) * (Math.PI / 180)"
+            "solution": "    angle = (360 / 60 * i) * (Math.PI / 180)",
+            "validate": "__^ *angle *= *\\(360 */ *60 \\* i\\) *\\* *\\(Math[.]PI */ *180\\) *$"
         },
         {
             "hint": "Using this new angle and the random length let’s calculate where the x coordinate for the end of the radiating line should be. **Type** `dx = 250 + Math.sin(angle) * length`.",
