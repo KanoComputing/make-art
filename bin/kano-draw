@@ -16,6 +16,8 @@ import os
 import sys
 import multiprocessing
 import signal
+import time
+import atexit
 
 if __name__ == '__main__' and __package__ is None:
     DIR_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
@@ -26,14 +28,55 @@ if __name__ == '__main__' and __package__ is None:
 from kano_profile.tracker import Tracker
 kanotracker = Tracker()
 
+from kano.utils import run_cmd
+from kano.logging import logger
 from kano_draw.video import play_intro
-from kano_draw.draw import Draw
+from kano_draw.draw import start_draw
 import kano_draw.server
 
+SERVER_PROC = None
+UI_PROC = None
 
+
+def _kill_subprocess(proc_handle):
+    if proc_handle is not None and proc_handle.is_alive():
+        proc_handle.terminate()
+
+
+def _kill_lingering_processes():
+    """ Look for processes still attached to port 8000 whose name starts with
+    'dbus-' and kill them
+    """
+    pid_no, dummy, dummy2 = run_cmd(
+        "lsof -i :8000 | grep 'dbus-' | awk '{ print $2 }'"
+    )
+    if pid_no:
+        pids = pid_no.splitlines()
+        for pid in pids:
+            try:
+                os.kill(int(pid), signal.SIGTERM)
+            except ValueError:
+                pass
+
+
+def _at_exit_hook():
+    """ Ensure that the two subprocesses are killed before this process exits
+    """
+    _kill_subprocess(UI_PROC)
+    # Give the server subprocess 10 secs to die
+    SERVER_PROC.join(5)
+    # Now kill it anyway
+    _kill_subprocess(SERVER_PROC)
+    # Cleanup the lingering processes (usually produced by omxplayer)
+    _kill_lingering_processes()
+
+
+# At this point cleaning up just exits. This is triggered once the server
+# (which is a child process) notifies us to exit
 def cleanup(signum, frame):
     sys.exit(0)
 
+atexit.register(_at_exit_hook)
 signal.signal(signal.SIGINT, cleanup)
 
 play_intro()
@@ -44,20 +87,26 @@ SERVER_PROC = multiprocessing.Process(target=kano_draw.server.start,
                                       kwargs={
                                           'parent_pid': APP_PID
                                       })
-SERVER_PROC.daemon = True
 SERVER_PROC.start()
 
 # Init the web app
+kwargs = {}
 if len(sys.argv) > 1:
-    DRAW = Draw(load_path=sys.argv[1])
-else:
-    DRAW = Draw()
+    kwargs['load_path'] = sys.argv[1]
 
-# In order to exit from the import server, we send a SIGINT to this process
-# and the signal handler executes as it should. However, GTK decides to throw
-# a keyboard interrupt anyway
+UI_PROC = multiprocessing.Process(target=start_draw, kwargs=kwargs)
+
+UI_PROC.daemon = True
+UI_PROC.start()
+
+# This process is really a factory/watchdog process. It launches the UI and
+# server processes as children and makes sure to terminate both once they have
+# one of them has been terminated
 try:
-    DRAW.run()
-except KeyboardInterrupt:
+    while UI_PROC.is_alive() and SERVER_PROC.is_alive():
+        time.sleep(3)
+    sys.exit(0)
+except Exception as exc:
     # the SIGINT handler has executed here
+    logger.error('Error while in the main waiting loop: [{}]'.format(exc))
     sys.exit(0)
