@@ -28,8 +28,7 @@
             "world_path": "worlds/summercamp",
             "css_class": "_summercamp",
             "dependency": ["medium"],
-            "type": "campaign",
-            "share_strategy": "mandatory"
+            "type": "campaign"
 
         },
         {
