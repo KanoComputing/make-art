@@ -5,7 +5,7 @@
     "startAt": 2,
     "steps": [
         {
-            "hint": "Let's move the cursor somewhere random - **type** `moveTo (random1, 500), (random 1, 500)`",
+            "hint": "Let's move the cursor somewhere random - **type** `moveTo (random 1, 500), (random 1, 500)`",
             "solution": "moveTo (random 1, 500), (random 1, 500)"
         },
         {
