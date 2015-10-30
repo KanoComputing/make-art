@@ -1,0 +1,17 @@
+
+.modal-overlay(ng-controller='FeedbackController', ng-if='isFeedbackSplashOpen === true')
+    .modal-inner.split-modal.splash.feedback-splash
+      h3.center Feedback
+      
+      form
+        h4 Name
+        input(name='entry.975819299')
+          
+        h4 Feedback
+        textarea(name="entry.1539829787", rows="5", cols="40", placeholder='Did you like it?') 
+        
+
+        //- Start button
+        .center.bottom-section
+           button.button.button-danger.large(ng-click='handleClick()') Don't Send
+           button.button.large(ng-click='handleClick()') Send
