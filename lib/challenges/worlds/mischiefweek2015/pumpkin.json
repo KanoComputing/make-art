@@ -48,7 +48,7 @@
                 "solution": "square 40"
             },
             {
-                "hint": "Now we have a fresh pumpkin we get to the spooky part, the carving change your fill color to black - **type** `color black`",
+                "hint": "Now we have a fresh pumpkin, we can get to the fun part, carving your design - **type** `color black`",
                 "solution": "color black"
             },
             {
