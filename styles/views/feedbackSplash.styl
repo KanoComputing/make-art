@@ -1,16 +1,32 @@
 .modal-inner.splash.feedback-splash
-  text-align center
+    text-align center
 
-  form
-    padding-top 30px
+    form
+      padding-top 30px
 
-  h4
-    margin-bottom 0
+    h4
+      margin-bottom 0
 
 
-  input, textarea
-    width 260px
-    display inline-block
-    padding 5px
-    font-family 'Bariol'
-    font-size 1em
+    input, textarea
+      width 280px
+      display inline-block
+      padding 5px
+      font-family 'Bariol'
+      font-size 1em
+
+    button:first-child
+      background orangered
+
+      &:hover
+        background lighten(orangered, 10%)
+
+    .form-container
+      margin-bottom 15px
+
+    .form-message
+
+      h2
+        color white
+.hide
+    display none

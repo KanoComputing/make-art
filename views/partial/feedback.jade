@@ -3,9 +3,13 @@
     .modal-inner.split-modal.splash.feedback-splash
       h3.center Tell us your thoughts!
       
-      form
-        textarea(name="entry.1539829787", rows="5", cols="40", placeholder='Did you like it?') 
-        
-        .center.bottom-section
-           button.button.button-danger.large(ng-click='handleSkip()') Don't Send
-           button.button.large(ng-click='handleClick()') Send
+      form(target="fake-target" method="POST" action="http://docs.google.com/forms/d/1sGwcGfjhUK2oz52VRMbnv_1j3a5wMlD0TU0Ms9EpzO8/formResponse")
+          .form-container
+              textarea(name="entry.1539829787", rows="5", cols="40", placeholder='Did you like it?') 
+
+          .form-message.hide
+              h2 Thank you! :)
+            
+          .center.bottom-section
+             button.button.button-danger.large(ng-click='handleSkip()') Don't Send
+             button.button.large(ng-click='handleClick()') Send
