@@ -93,7 +93,7 @@ gulp.task('apify-challenges', ['copy-challenges'], function (next) {
     var index,
         worldsNum,
         //fields that are copied from ./index.json to /world/<world>/index.json
-        copyWorldFields = ['id', 'name', 'description', 'world_path', 'cover', 'css_class', 'visibility', 'dependency', 'type', 'share_strategy'],
+        copyWorldFields = ['id', 'name', 'description', 'world_path', 'cover', 'css_class', 'visibility', 'dependency', 'type', 'share_strategy', 'sales_popup_after'],
         countNext = 0,
         formattedIndex;
     function localNext() {
