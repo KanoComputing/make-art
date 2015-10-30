@@ -30,6 +30,9 @@ html(lang='en',  xmlns:ng="http://angularjs.org")
 
         if !offline
             a.kano-logo(href='http://www.kano.me', target='_blank')
+            .kano-feedback(ng-click='isFeedbackSplashOpen = true') CLICK
+            include partial/feedback
+
 
         //- Vendor
         script(src='/js/vendor/angular.min.js', type='text/javascript')
