@@ -71,7 +71,7 @@
 			{
 			    "hint": "Spiders have a lot of legs so we'll use some code magic to make this easier for us, we're going to create a function which draws 2 legs at once `pairOfLegs = (flipHori,flipVert) ->`",
 			    "solution": "pairOfLegs = (flipHori,flipVert) ->",
-			    "validate": "pairOfLegs = (flipHori,flipVert)\\ ->"
+			    "validate": "pairOfLegs = (flipHori,flipVert)\\ *->"
 			},
 			{
 			    "hint": "Everything within this block will be drawn every time we call the function, later we will call this function several times to draw all the legs. `spread = legSpread * flipHori`",
