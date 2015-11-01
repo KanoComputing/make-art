@@ -6,8 +6,16 @@
     "startAt": 0,
     "steps": [
         {
-            "hint": "We've got you started with some color variables. For our ghost, lets set a spooky scene with `background charcoal`",
-            "solution": "background charcoal"
+            "hint": "We need to set up some variables to color the ghost - **Type** `ghostColor = '#809B79'`",
+            "solution": "ghostColor = '#809B79'"
+        },
+        {
+            "hint": "Another variable for the face - **Type** `faceColor = '#634E42'`",
+            "solution": "faceColor = '#634E42'"
+        },
+        {
+            "hint": "Finally a variable for the tongue - **Type** `tongueColor = '#7A5750'`",
+            "solution": "tongueColor = '#7A5750'"
         },
         {
             "hint": "We’ll use solid shapes, so set the stroke to zero with `stroke 0`",
@@ -80,6 +88,10 @@
         {
             "hint": "Move for the second eye with `move 80, 0`",
             "solution": "move 80, 0"
+        },
+        {
+            "hint": "Draw the second eye with `circle 10`",
+            "solution": "circle 10"
         },
         {
             "hint": "For our hands, were going to do something new: make a function. **Type** `hand = ->`",
