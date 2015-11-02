@@ -4,23 +4,23 @@
             h1.center: b Help Us Get Better
             .form-container
               .mood-selector
-                  input(type='radio', name='entry.1965278482', value='Happy', id='group_1965278482_4', checked="checked")
-                  .mood-container: label(class='mood happy', for='group_1965278482_4')
-                  input(type='radio', name='entry.1965278482', value='Bored', id='group_1965278482_2')
-                  .mood-container: label(class='mood bored', for='group_1965278482_2')
-                  input(type='radio', name='entry.1965278482', value='Angry', id='group_1965278482_1')
-                  .mood-container: label(class='mood angry', for='group_1965278482_1')
-                  input(type='radio', name='entry.1965278482', value='Sweet', id='group_1965278482_5')
-                  .mood-container: label(class='mood sweet', for='group_1965278482_5')
-                  input(type='radio', name='entry.1965278482', value='Taking Off', id='group_1965278482_6')
-                  .mood-container: label(class='mood takingoff', for='group_1965278482_6')
-                  input(type='radio', name='entry.1965278482', value='Growing', id='group_1965278482_3')
-                  .mood-container: label(class='mood growing', for='group_1965278482_3')
+                  input(type='radio', name='entry.1965278482', value='rating-5', id='group_1965278482_5', checked="checked")
+                  .mood-container: label(class='mood rating-5', for='group_1965278482_5')
+                  input(type='radio', name='entry.1965278482', value='rating-4', id='group_1965278482_4')
+                  .mood-container: label(class='mood rating-4', for='group_1965278482_4')
+                  input(type='radio', name='entry.1965278482', value='rating-3', id='group_1965278482_3')
+                  .mood-container: label(class='mood rating-3', for='group_1965278482_3')
+                  input(type='radio', name='entry.1965278482', value='rating-2', id='group_1965278482_2')
+                  .mood-container: label(class='mood rating-2', for='group_1965278482_2')
+                  input(type='radio', name='entry.1965278482', value='rating-1', id='group_1965278482_1')
+                  .mood-container: label(class='mood rating-1', for='group_1965278482_1')
+
               .feedback-box
                 textarea(name="entry.1539829787", rows="5", placeholder='What did you like?')
 
             .form-message.hide
-                h2 Thank you! :)
+                h3 Thank you!
+
             .center.bottom-section: div(style='min-height: 88px'): .feedback-buttons
                 button.button.large(ng-click='handleSkip($event)') Don't Send
                 button.button.large(type='submit', ng-click='handleClick()') Send
