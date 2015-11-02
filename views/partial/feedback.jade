@@ -1,7 +1,7 @@
 .modal-overlay(ng-controller='FeedbackController', ng-if='isFeedbackSplashOpen', ng-cloak)
     .modal-inner.split-modal.splash.feedback-splash
         form(target='fake-target', action='http://docs.google.com/forms/d/1sGwcGfjhUK2oz52VRMbnv_1j3a5wMlD0TU0Ms9EpzO8/formResponse', method='POST')
-            h1.center: b Help Up Get Better
+            h1.center: b Help Us Get Better
             .form-container
               .mood-selector
                   input(type='radio', name='entry.1965278482', value='Happy', id='group_1965278482_4', checked="checked")
@@ -17,9 +17,7 @@
                   input(type='radio', name='entry.1965278482', value='Growing', id='group_1965278482_3')
                   .mood-container: label(class='mood growing', for='group_1965278482_3')
               .feedback-box
-                textarea(name="entry.1539829787", rows="5", placeholder='What did you like?') 
-              .suggestion-box
-                textarea(name="entry.50636907", rows="2", placeholder='Suggest a challenge idea (Optional)') 
+                textarea(name="entry.1539829787", rows="5", placeholder='What did you like?')
 
             .form-message.hide
                 h2 Thank you! :)
