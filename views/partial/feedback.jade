@@ -1,14 +1,30 @@
 .modal-overlay(ng-controller='FeedbackController', ng-if='isFeedbackSplashOpen', ng-cloak)
     .modal-inner.split-modal.splash.feedback-splash
-        h3.center Tell us your thoughts!
         form(target='fake-target', action='http://docs.google.com/forms/d/1sGwcGfjhUK2oz52VRMbnv_1j3a5wMlD0TU0Ms9EpzO8/formResponse', method='POST')
+            h1.center: b Help Up Get Better
             .form-container
-                textarea(name="entry.1539829787", rows="5", cols="40", placeholder='Did you like it?') 
+              .mood-selector
+                  input(type='radio', name='entry.1965278482', value='Happy', id='group_1965278482_4', checked="checked")
+                  .mood-container: label(class='mood happy', for='group_1965278482_4')
+                  input(type='radio', name='entry.1965278482', value='Bored', id='group_1965278482_2')
+                  .mood-container: label(class='mood bored', for='group_1965278482_2')
+                  input(type='radio', name='entry.1965278482', value='Angry', id='group_1965278482_1')
+                  .mood-container: label(class='mood angry', for='group_1965278482_1')
+                  input(type='radio', name='entry.1965278482', value='Sweet', id='group_1965278482_5')
+                  .mood-container: label(class='mood sweet', for='group_1965278482_5')
+                  input(type='radio', name='entry.1965278482', value='Taking Off', id='group_1965278482_6')
+                  .mood-container: label(class='mood takingoff', for='group_1965278482_6')
+                  input(type='radio', name='entry.1965278482', value='Growing', id='group_1965278482_3')
+                  .mood-container: label(class='mood growing', for='group_1965278482_3')
+              .feedback-box
+                textarea(name="entry.1539829787", rows="5", placeholder='What did you like?') 
+              .suggestion-box
+                textarea(name="entry.50636907", rows="2", placeholder='Suggest a challenge idea (Optional)') 
 
             .form-message.hide
                 h2 Thank you! :)
-            .center.bottom-section
-                button.button.button-danger.large(ng-click='handleSkip($event)') Don't Send
+            .center.bottom-section: div(style='min-height: 88px'): .feedback-buttons
+                button.button.large(ng-click='handleSkip($event)') Don't Send
                 button.button.large(type='submit', ng-click='handleClick()') Send
 
         iframe(id="fake-target" name="fake-target" style="width:0px; height:0px; border:0px;")
