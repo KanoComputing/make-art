@@ -29,7 +29,7 @@ html(lang='en',  xmlns:ng="http://angularjs.org")
         include partial/splash
 
         if !offline
-            .kano-feedback-container.fadeInUp(ng-click='isFeedbackSplashOpen = true') 
+            .kano-feedback-container.fadeInUp(ng-click='isFeedbackSplashOpen = true', ng-init='feedbackLoaded()') 
                 span Feedback
                 .kano-feedback
             include partial/feedback
