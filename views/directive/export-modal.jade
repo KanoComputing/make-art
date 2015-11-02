@@ -20,12 +20,9 @@
                     if offline
                         button.export-wallpaper(ng-click='exportWallpaper()', ng-disabled='exportForm.$invalid', ng-class='{ "disabled" : exportForm.$invalid }') Save Wallpaper
 
-                    button.button-success(type='submit', ng-disabled='exportForm.$invalid', ng-class='{ "disabled" : exportForm.$invalid }' ng-if='!category')
+                    button.button-success(type='submit', ng-disabled='exportForm.$invalid', ng-class='{ "disabled" : exportForm.$invalid }')
                         i(ng-class='"icon-" + action')
                         |  {{ action }}
-
-                    button.button-success(type='submit', ng-disabled='exportForm.$invalid', ng-class='{ "disabled" : exportForm.$invalid }' ng-if='category')
-                        span Share &amp; Continue
 
                     //- a.button.button-email(ng-click='sendMail()')
                     //-     img(src='/assets/button-icons/email.png' title='Share via Email')
