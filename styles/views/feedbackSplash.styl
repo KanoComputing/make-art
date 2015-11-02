@@ -1,19 +1,57 @@
-.kano-feedback
-    bg-image('layout/feedback-normal', contain)
-    border-radius 0
+.kano-feedback-container
+    border-radius 3px
     position fixed
     bottom 15px
     right 15px
-    width 40px
-    height 40px
-    opacity 0.5
-    transition background 0.7s ease, opacity 0.7s ease
+    height 45px
     cursor pointer
+    transition min-width 0.2s ease-in-out, opacity 1s ease
+    background #696E77
+    overflow hidden
+    opacity 1
+    min-width 45px
 
     &:hover
+        min-width 115px
         opacity 1
-        bg-image('layout/feedback-hover', contain)
 
+    span
+        position absolute
+        left 45px
+        top 50%
+        transform translateY(-50%)
+
+    .kano-feedback
+        bg-image('layout/feedback-logo', contain)
+        opacity 0.5
+        position absolute
+        top 50%
+        left 12px
+        transform translateY(-50%)
+        height 20px
+        width 20px
+
+@keyframes fadeInUp
+    0%
+      transform translate3d(0, 150%, 0)
+      min-width 115px
+
+    20%
+      min-width 115px
+      transform none
+
+    80%
+      min-width 115px
+      transform none
+
+    100%
+      min-width 45px
+
+.fadeInUp
+    animation-duration 6s
+    animation-fill-mode both
+    animation-name fadeInUp
+    animation-delay 2s
 
 .modal-inner.splash.feedback-splash
     text-align center
@@ -53,18 +91,16 @@
       h2
         color white
 
-    .angry
-        bg-image('feedback-reactions/Angry', 45px, center, no-repeat)
-    .bored
-        bg-image('feedback-reactions/Bored', 45px, center, no-repeat)
-    .takingoff
-        bg-image('feedback-reactions/Growing', 45px, center, no-repeat)
-    .happy
-        bg-image('feedback-reactions/Happy', 45px, center, no-repeat)
-    .sweet
-        bg-image('feedback-reactions/Sweet', 45px, center, no-repeat)
-    .growing
-        bg-image('feedback-reactions/TakingOff', 45px, center, no-repeat)
+    .rating-1
+        bg-image('feedback-reactions/rating1', 45px, center, no-repeat)
+    .rating-2
+        bg-image('feedback-reactions/rating2', 45px, center, no-repeat)
+    .rating-3
+        bg-image('feedback-reactions/rating3', 45px, center, no-repeat)
+    .rating-4
+        bg-image('feedback-reactions/rating4', 45px, center, no-repeat)
+    .rating-5
+        bg-image('feedback-reactions/rating5', 45px, center, no-repeat)
 
     .mood-selector
         margin-bottom 25px
