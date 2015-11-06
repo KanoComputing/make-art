@@ -1,5 +1,6 @@
 .modal-overlay(ng-controller='FeedbackController', ng-if='isFeedbackSplashOpen', ng-cloak)
     .modal-inner.split-modal.splash.feedback-splash
+        button.close(ng-click='handleSkip($event)'): i.icon-cross
         form(target='fake-target', action='http://docs.google.com/forms/d/1sGwcGfjhUK2oz52VRMbnv_1j3a5wMlD0TU0Ms9EpzO8/formResponse', method='POST')
             h1.center: b Help Us Get Better
             .form-container
