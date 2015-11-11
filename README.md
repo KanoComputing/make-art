@@ -14,7 +14,7 @@ You can try the app [here »](http://art.kano.me/)
 
 ## Build
 
-Build the app before running it
+Build the app before running it 
 
     npm run build
 
