@@ -1,6 +1,6 @@
 {
     "id": "ghost",
-    "title": "Oct 30: Ghost",
+    "title": "Ghost",
     "description": "Draw your very own ghost. Change the colors to win!",
     "start_date": "2015-10-30T06:00:00",
     "code": "ghostColor = '#809B79'\nfaceColor = '#634E42'\ntongueColor = '#7A5750'\n",
