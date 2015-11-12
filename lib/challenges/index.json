@@ -33,7 +33,7 @@
         },
         {
             "id": "hourofcode",
-            "name": "Hour of Code",
+            "name": "CS Education Week",
             "description": "This is a group of challenges for the hour of code",
             "cover": "world_covers/basic",
             "world_path": "worlds/hourofcode",
