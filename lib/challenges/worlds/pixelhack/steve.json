@@ -1,5 +1,5 @@
 {
-    "id": "hoc-006-steve",
+    "id": "steve",
     "title": "Steve",
     "description": "Make Steve's face with simple shapes.",
     "startAt": 2,
@@ -114,5 +114,5 @@
         }
     ],
     "completion_text": "Well done! Our character is looking good. What parts can you change to make the character look more like you?",
-    "cover": "hoc-006-steve.png"
+    "cover": "pixel-steve.png"
 }

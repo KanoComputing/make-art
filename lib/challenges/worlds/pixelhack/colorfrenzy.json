@@ -1,5 +1,5 @@
 {
-    "id": "hoc-009-colorfrenzy",
+    "id": "colorfrenzy",
     "title": "Color Frenzy",
     "description": "Use a loop to draw an 8-bit pattern.",
     "startAt": 2,
@@ -34,5 +34,5 @@
         }
     ],
     "completion_text": "Well done! The random function will return a random value between 20 and 25. When combined with the loop it produces an interesting effect.",
-    "cover": "hoc-009-colorfrenzy.png"
+    "cover": "pixel-colorfrenzy.png"
 }
