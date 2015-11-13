@@ -1,5 +1,5 @@
 {
-    "id": "hoc-011-diamondblock",
+    "id": "diamondblock",
     "title": "8-bit Diamond Block",
     "description": "Make a diamond block with loops.",
     "startAt": 2,
@@ -61,5 +61,5 @@
         }
     ],
     "completion_text": "You’ve completed an hour of code! What’s next? More challenges and 8-bit art projects here at Kano if you are interested. Congratulations and well done!",
-    "cover": "hoc-011-diamondblock.png"
+    "cover": "pixel-diamondblock.png"
 }

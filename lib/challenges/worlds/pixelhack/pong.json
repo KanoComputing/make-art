@@ -1,0 +1,31 @@
+{
+    "id": "pong",
+    "title": "Pong",
+    "description": "Code a Pong match",
+    "code": "",
+    "startAt": 2,
+    "steps": [
+		{
+		    "hint": " - **type** `circle 15`",
+		    "solution": "circle 15"
+		},
+		{
+		    "hint": " - **type** `moveTo 30,100`",
+		    "solution": "moveTo 30,100"
+		},
+		{
+		    "hint": " - **type** `rectangle 20, 100`",
+		    "solution": "rectangle 20, 100"
+		},
+		{
+		    "hint": " - **type** `moveTo 450,300`",
+		    "solution": "moveTo 450,300"
+		},
+		{
+		    "hint": " - **type** `rectangle 20, 100`",
+		    "solution": "rectangle 20, 100"
+		}
+    ],
+    "completion_text": "Well done! You’ve made your first design with code. But oh, doesn't this look a bit dull? Try changing the color in order to: red, yellow, green, blue, magenta. That’s better.",
+    "cover": "pixel-pong.png"
+}

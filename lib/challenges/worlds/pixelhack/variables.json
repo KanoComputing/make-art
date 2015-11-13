@@ -1,0 +1,79 @@
+{
+    "id": "variables",
+    "title": "Variables",
+    "description": "Variables",
+    "code": "",
+    "startAt": 2,
+    "steps": [
+		{
+		    "hint": " - **type** `stroke 0`",
+		    "solution": "stroke 0"
+		},
+		{
+		    "hint": " - **type** `color red`",
+		    "solution": "color red"
+		},
+		{
+		    "hint": " - **type** `ghostsize = 100`",
+		    "solution": "ghostsize = 100"
+		},
+		{
+		    "hint": " - **type** `circle ghostsize`",
+		    "solution": "circle ghostsize"
+		},
+		{
+		    "hint": " - **type** `color red`",
+		    "solution": "color red"
+		},
+		{
+		    "hint": " - **type** `move -ghostsize,0`",
+		    "solution": "move -ghostsize,0"
+		},
+		{
+		    "hint": " - **type** `square ghostsize * 2`",
+		    "solution": "square ghostsize * 2"
+		},
+		{
+		    "hint": " - **type** `move ghostsize / 2`",
+		    "solution": "move ghostsize / 2"
+		},
+		{
+		    "hint": " - **type** `color white`",
+		    "solution": "color white"
+		},
+		{
+		    "hint": " - **type** `circle 20`",
+		    "solution": "circle 20"
+		},
+		{
+		    "hint": " - **type** `color blue`",
+		    "solution": "color blue"
+		},
+		{
+		    "hint": " - **type** `circle 10`",
+		    "solution": "circle 10"
+		},
+		{
+		    "hint": " - **type** `move ghostsize`",
+		    "solution": "move ghostsize"
+		},
+		{
+		    "hint": " - **type** `color white`",
+		    "solution": "color white"
+		},
+		{
+		    "hint": " - **type** `circle 20`",
+		    "solution": "circle 20"
+		},
+		{
+		    "hint": " - **type** `color blue`",
+		    "solution": "color blue"
+		},
+		{
+		    "hint": " - **type** `circle 10`",
+		    "solution": "circle 10"
+		}
+    ],
+    "completion_text": "Nice! Now because you have used a variable, you can click on the ghostsize number and use the slider to change the value. Notice how the eyes stay the same size because they are hardcoded numbers.",
+    "cover": "pixel-variables.png"
+}
