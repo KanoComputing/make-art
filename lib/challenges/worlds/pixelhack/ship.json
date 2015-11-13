@@ -6,51 +6,51 @@
     "startAt": 2,
     "steps": [
 		{
-		    "hint": " - **type** `background black`",
+		    "hint": " **type** `background black`",
 		    "solution": "background black"
 		},
 		{
-		    "hint": " - **type** `stroke white,5`",
+		    "hint": " **type** `stroke white,5`",
 		    "solution": "stroke white,5"
 		},
 		{
-		    "hint": " - **type** `move 0, -70`",
+		    "hint": " **type** `move 0, -70`",
 		    "solution": "move 0, -70"
 		},
 		{
-		    "hint": " - **type** `line -50,150`",
+		    "hint": " **type** `line -50,150`",
 		    "solution": "line -50,150"
 		},
 		{
-		    "hint": " - **type** `move -50,150`",
+		    "hint": " **type** `move -50,150`",
 		    "solution": "move -50,150"
 		},
 		{
-		    "hint": " - **type** `line 50,-25`",
+		    "hint": " **type** `line 50,-25`",
 		    "solution": "line 50,-25"
 		},
 		{
-		    "hint": " - **type** `move 50,-25`",
+		    "hint": " **type** `move 50,-25`",
 		    "solution": "move 50,-25"
 		},
 		{
-		    "hint": " - **type** `line 50,25`",
+		    "hint": " **type** `line 50,25`",
 		    "solution": "line 50,25"
 		},
 		{
-		    "hint": " - **type** `move 50,25`",
+		    "hint": " **type** `move 50,25`",
 		    "solution": "move 50,25"
 		},
 		{
-		    "hint": " - **type** `line -50,-150`",
+		    "hint": " **type** `line -50,-150`",
 		    "solution": "line -50,-150"
 		},
 		{
-		    "hint": " - **type** `move -50,-150`",
+		    "hint": " **type** `move -50,-150`",
 		    "solution": "move -50,-150"
 		},
 		{
-		    "hint": " - **type** `line 0,125`",
+		    "hint": " **type** `line 0,125`",
 		    "solution": "line 0,125"
 		}
     ],

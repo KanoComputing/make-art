@@ -3,6 +3,8 @@
         "./pong",
         "./ship",
         "./tetris",
+        "./chest",
+        "./sword",
         "./variables",
         "./steve",
         "./forloop",

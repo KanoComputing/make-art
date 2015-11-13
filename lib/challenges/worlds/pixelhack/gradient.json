@@ -1,5 +1,5 @@
 {
-    "id": "hoc-008-gradient",
+    "id": "gradient",
     "title": "8-bit sunset",
     "description": "Use a loop to draw an 8-bit sunset.",
     "startAt": 2,
@@ -43,5 +43,5 @@
         }
     ],
     "completion_text": "Beautiful! See how the blue gets darker as it goes down the screen. The y variable was being passed to the darken function. As the y value increased, the darken function made the blue color get darker.",
-    "cover": "hoc-008-gradient.png"
+    "cover": "pixel-gradient.png"
 }

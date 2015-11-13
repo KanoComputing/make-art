@@ -1,0 +1,95 @@
+{
+    "id": "chest",
+    "title": "Loot Chest",
+    "description": "",
+    "code": "",
+    "startAt": 2,
+    "steps": [
+		{
+		    "hint": " **type** `background darkslategray`",
+		    "solution": "background darkslategray"
+		},
+		{
+		    "hint": " **type** `stroke 0`",
+		    "solution": "stroke 0"
+		},
+		{
+		    "hint": " **type** `move -150,-100`",
+		    "solution": "move -150,-100"
+		},
+		{
+		    "hint": " **type** `color gold`",
+		    "solution": "color gold"
+		},
+		{
+		    "hint": " **type** `rectangle 300,200`",
+		    "solution": "rectangle 300,200"
+		},
+		{
+		    "hint": " **type** `color lightyellow`",
+		    "solution": "color lightyellow"
+		},
+		{
+		    "hint": " **type** `rectangle 25,100`",
+		    "solution": "rectangle 25,100"
+		},
+		{
+		    "hint": " **type** `move 25,0`",
+		    "solution": "move 25,0"
+		},
+		{
+		    "hint": " **type** `color brown`",
+		    "solution": "color brown"
+		},
+		{
+		    "hint": " **type** `rectangle 250,175`",
+		    "solution": "rectangle 250,175"
+		},
+		{
+		    "hint": " **type** `move 0,60`",
+		    "solution": "move 0,60"
+		},
+		{
+		    "hint": " **type** `color gold`",
+		    "solution": "color gold"
+		},
+		{
+		    "hint": " **type** `rectangle 250,25`",
+		    "solution": "rectangle 250,25"
+		},
+		{
+		    "hint": " **type** `color lightyellow`",
+		    "solution": "color lightyellow"
+		},
+		{
+		    "hint": " **type** `rectangle 25,25`",
+		    "solution": "rectangle 25,25"
+		},
+		{
+		    "hint": " **type** `move 75,-25`",
+		    "solution": "move 75,-25"
+		},
+		{
+		    "hint": " **type** `color gold`",
+		    "solution": "color gold"
+		},
+		{
+		    "hint": " **type** `rectangle 100,75`",
+		    "solution": "rectangle 100,75"
+		},
+		{
+		    "hint": " **type** `move 25,25`",
+		    "solution": "move 25,25"
+		},
+		{
+		    "hint": " **type** `color darkbrown`",
+		    "solution": "color darkbrown"
+		},
+		{
+		    "hint": " **type** `rectangle 50,75`",
+		    "solution": "rectangle 50,75"
+		}
+    ],
+    "completion_text": "What a great ship!",
+    "cover": "pixel-chest.png"
+}
