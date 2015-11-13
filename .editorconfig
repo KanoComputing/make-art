@@ -3,7 +3,7 @@ root = true
 
 # Matches multiple files with brace expansion notation
 # Set default charset
-[*.{js,json}]
+[*.{js,json, styl, jade}]
 charset = utf-8
 indent_style = space
 indent_size = 4

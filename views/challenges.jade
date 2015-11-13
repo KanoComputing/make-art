@@ -1,6 +1,6 @@
 .page-challenges(ng-class="[ selectedWorldClass ]"): .page-width
-    .web.left
-    .web.right
+    .image.pull-left
+    .image.pull-right
 
     h3.page-title(ng-if='selectedWorld')
         span {{ selectedWorld ? selectedWorld.name : 'Challenges'}}
@@ -33,9 +33,6 @@
 
                 .detail
                     h5 {{ challenge.short_title || challenge.title }}
-
-                .weekday
-                    span {{ challenge.start_date | date: 'EEEE' }}
 
         li(ng-if='selectedWorld.type !== "campaign"')
 

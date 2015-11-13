@@ -18,7 +18,7 @@ body
 section
     display block
     padding: 30px 0
-    
+
     &:last-child
         margin-bottom 0
 
@@ -43,29 +43,18 @@ img.invert
     filter: invert(100%);
 
 .kano-logo
-    bg-image('layout/kano-logo', 127px 50px, center center, no-repeat)
-    border-radius(0 0 5px 5px)
-    position fixed
-    bottom 10px
-    right 10px
-    width 127px
-    height 50px
-    padding 5px
-    background-color color-bg
-    
-    &:before
-        border-radius(5px 5px 0 0)
-        no-select()
-        content 'Powered by'
-        position absolute
-        bottom 100%
-        left 0
-        width: 100%
-        text-align center
-        color color-white
-        background color-bg
-        padding-top 3px
-        font-size 12px
-        
+    bg-image('layout/with-kano', contain)
+    border-radius 0
+    position absolute
+    top 58px
+    width 90px
+    height 20px
+    left 31px
+    opacity 0.5
+    transition opacity 0.3s linear
+
+    &:hover
+        opacity 1
+
 .banner
     banner(color-orange, #fff)

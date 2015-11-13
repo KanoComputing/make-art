@@ -2,31 +2,54 @@
 .page-challenges
     .weekday
         display none
-    &.mischiefweek2015 .page-width
+    
+    &.mischiefweek2015, &.pixelhack
         position relative
+        overflow hidden
         
-        .web
+        .image
             position absolute
             top 10px
             width 400px
             height 400px
             z-index -1
             
-            &.left
-                bg-image("mischiefweek/web-left", 400px 400px, false, no-repeat)
+            &.pull-left
                 left -200px
-            &.right
-                bg-image("mischiefweek/web-right", 400px 400px, false, no-repeat)
+            &.pull-right
                 right -200px
                 
         .header
             position relative
             z-index 0
             margin-bottom 20px
-            bg-image("mischiefweek/mischief-header", 100% 160px, false, no-repeat)
             height 160px
             width 100%
+    
+    &.pixelhack
+        .image
+            top -40px
             
+            &.pull-left
+                bg-image("pixelhack/cubes-left", 400px 400px, false, no-repeat)
+                
+            &.pull-right
+                bg-image("pixelhack/cubes-right", 400px 400px, false, no-repeat)
+                
+        .header
+            bg-image("pixelhack/pixelhack-header", 100% 160px, false, no-repeat)
+    
+    &.mischiefweek2015
+        .image            
+            &.pull-left
+                bg-image("mischiefweek/web-left", 400px 400px, false, no-repeat)
+                
+            &.pull-right
+                bg-image("mischiefweek/web-right", 400px 400px, false, no-repeat)
+                
+        .header
+            bg-image("mischiefweek/mischief-header", 100% 160px, false, no-repeat)
+        
         .challenges-list li a
             .weekday
                 display block
@@ -49,6 +72,7 @@
             
             &.current .weekday
                 bg-image("mischiefweek/sash-orange", 80px 80px, false, no-repeat)
+        
     
     .page-title
         position relative
