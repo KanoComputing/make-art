@@ -32,7 +32,7 @@
 
         },
         {
-            "id": "pixelhack",
+            "id": "hourofcode",
             "name": "Pixel Hack",
             "description": "This is a group of challenges for the hour of code",
             "cover": "world_covers/basic",
