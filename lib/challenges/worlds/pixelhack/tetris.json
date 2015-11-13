@@ -6,79 +6,79 @@
     "startAt": 2,
     "steps": [
 		{
-		    "hint": " - **type** `stroke 0`",
+		    "hint": " **type** `stroke 0`",
 		    "solution": "stroke 0"
 		},
 		{
-		    "hint": " - **type** `moveTo 150,200`",
+		    "hint": " **type** `moveTo 150,200`",
 		    "solution": "moveTo 150,200"
 		},
 		{
-		    "hint": " - **type** `color crimson`",
+		    "hint": " **type** `color crimson`",
 		    "solution": "color crimson"
 		},
 		{
-		    "hint": " - **type** `rectangle 50,150`",
+		    "hint": " **type** `rectangle 50,150`",
 		    "solution": "rectangle 50,150"
 		},
 		{
-		    "hint": " - **type** `move 0,100`",
+		    "hint": " **type** `move 0,100`",
 		    "solution": "move 0,100"
 		},
 		{
-		    "hint": " - **type** `rectangle 100,50`",
+		    "hint": " **type** `rectangle 100,50`",
 		    "solution": "rectangle 100,50"
 		},
 		{
-		    "hint": " - **type** `move 50,-100`",
+		    "hint": " **type** `move 50,-100`",
 		    "solution": "move 50,-100"
 		},
 		{
-		    "hint": " - **type** `color seagreen`",
+		    "hint": " **type** `color seagreen`",
 		    "solution": "color seagreen"
 		},
 		{
-		    "hint": " - **type** `rectangle 50,100`",
+		    "hint": " **type** `rectangle 50,100`",
 		    "solution": "rectangle 50,100"
 		},
 		{
-		    "hint": " - **type** `move 50,50`",
+		    "hint": " **type** `move 50,50`",
 		    "solution": "move 50,50"
 		},
 		{
-		    "hint": " - **type** `rectangle 50,100`",
+		    "hint": " **type** `rectangle 50,100`",
 		    "solution": "rectangle 50,100"
 		},
 		{
-		    "hint": " - **type** `move 50,-100`",
+		    "hint": " **type** `move 50,-100`",
 		    "solution": "move 50,-100"
 		},
 		{
-		    "hint": " - **type** `color indigo`",
+		    "hint": " **type** `color indigo`",
 		    "solution": "color indigo"
 		},
 		{
-		    "hint": " - **type** `rectangle 50,200`",
+		    "hint": " **type** `rectangle 50,200`",
 		    "solution": "rectangle 50,200"
 		},
 		{
-		    "hint": " - **type** `move -150,0`",
+		    "hint": " **type** `move -150,0`",
 		    "solution": "move -150,0"
 		},
 		{
-		    "hint": " - **type** `color gold`",
+		    "hint": " **type** `color gold`",
 		    "solution": "color gold"
 		},
 		{
-		    "hint": " - **type** `rectangle 150,50`",
+		    "hint": " **type** `rectangle 150,50`",
 		    "solution": "rectangle 150,50"
 		},
 		{
-		    "hint": " - **type** `move 100,0`",
+		    "hint": " **type** `move 100,0`",
 		    "solution": "move 100,0"
 		},
 		{
-		    "hint": " - **type** `rectangle 50,100`",
+		    "hint": " **type** `rectangle 50,100`",
 		    "solution": "rectangle 50,100"
 		}
     ],

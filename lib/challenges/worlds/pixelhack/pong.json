@@ -6,23 +6,23 @@
     "startAt": 2,
     "steps": [
 		{
-		    "hint": " - **type** `circle 15`",
+		    "hint": " **type** `circle 15`",
 		    "solution": "circle 15"
 		},
 		{
-		    "hint": " - **type** `moveTo 30,100`",
+		    "hint": " **type** `moveTo 30,100`",
 		    "solution": "moveTo 30,100"
 		},
 		{
-		    "hint": " - **type** `rectangle 20, 100`",
+		    "hint": " **type** `rectangle 20, 100`",
 		    "solution": "rectangle 20, 100"
 		},
 		{
-		    "hint": " - **type** `moveTo 450,300`",
+		    "hint": " **type** `moveTo 450,300`",
 		    "solution": "moveTo 450,300"
 		},
 		{
-		    "hint": " - **type** `rectangle 20, 100`",
+		    "hint": " **type** `rectangle 20, 100`",
 		    "solution": "rectangle 20, 100"
 		}
     ],

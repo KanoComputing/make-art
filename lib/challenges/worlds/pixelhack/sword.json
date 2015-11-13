@@ -1,0 +1,87 @@
+{
+    "id": "sword",
+    "title": "Diamond Sword",
+    "description": "",
+    "code": "",
+    "startAt": 2,
+    "steps": [
+		{
+		    "hint": " **type** `diamond = aquamarine`",
+		    "solution": "diamond = aquamarine"
+		},
+		{
+		    "hint": " **type** `darkdiamond = darken(aquamarine,50)`",
+		    "solution": "darkdiamond = darken(aquamarine,50)"
+		},
+		{
+		    "hint": " **type** `background slategray`",
+		    "solution": "background slategray"
+		},
+		{
+		    "hint": " **type** `color diamond`",
+		    "solution": "color diamond"
+		},
+		{
+		    "hint": " **type** `stroke darkdiamond,20`",
+		    "solution": "stroke darkdiamond,20"
+		},
+		{
+		    "hint": " **type** `move -20,-180`",
+		    "solution": "move -20,-180"
+		},
+		{
+		    "hint": " **type** `rectangle 40,230`",
+		    "solution": "rectangle 40,230"
+		},
+		{
+		    "hint": " **type** `move 10,250`",
+		    "solution": "move 10,250"
+		},
+		{
+		    "hint": " **type** `stroke darkbrown`",
+		    "solution": "stroke darkbrown"
+		},
+		{
+		    "hint": " **type** `color brown`",
+		    "solution": "color brown"
+		},
+		{
+		    "hint": " **type** `rectangle 20,100`",
+		    "solution": "rectangle 20,100"
+		},
+		{
+		    "hint": " **type** `move -70,-10`",
+		    "solution": "move -70,-10"
+		},
+		{
+		    "hint": " **type** `stroke darkdiamond`",
+		    "solution": "stroke darkdiamond"
+		},
+		{
+		    "hint": " **type** `color lighten(darkdiamond,10)`",
+		    "solution": "color lighten(darkdiamond,10)"
+		},
+		{
+		    "hint": " **type** `rectangle 160,20`",
+		    "solution": "rectangle 160,20"
+		},
+		{
+		    "hint": " **type** `move 80, -240`",
+		    "solution": "move 80, -240"
+		},
+		{
+		    "hint": " **type** `color white`",
+		    "solution": "color white"
+		},
+		{
+		    "hint": " **type** `stroke 0`",
+		    "solution": "stroke 0"
+		},
+		{
+		    "hint": " **type** `rectangle 10, 230`",
+		    "solution": "rectangle 10, 230"
+		}
+    ],
+    "completion_text": "What a great ship!",
+    "cover": "pixel-sword.png"
+}

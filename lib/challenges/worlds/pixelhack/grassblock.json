@@ -1,5 +1,5 @@
 {
-    "id": "hoc-010-grassblock",
+    "id": "grassblock",
     "title": "8-bit Grass Block",
     "description": "Make a block you can bring into Minecraft.",
     "startAt": 1,
@@ -49,5 +49,5 @@
         }
     ],
     "completion_text": "Nice! Now you can change the blue and green colors to get an interesting effect. Can you make a block that looks like a strawberry?",
-    "cover": "hoc-010-grassblock.png"
+    "cover": "pixel-grassblock.png"
 }
