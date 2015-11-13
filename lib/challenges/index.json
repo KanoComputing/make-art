@@ -32,11 +32,11 @@
 
         },
         {
-            "id": "hourofcode",
+            "id": "pixelhack",
             "name": "Pixel Hack",
             "description": "This is a group of challenges for the hour of code",
             "cover": "world_covers/basic",
-            "world_path": "worlds/hourofcode",
+            "world_path": "worlds/pixelhack",
             "visibility": "hidden",
             "css_class": "pixelhack",
             "type": "campaign"
