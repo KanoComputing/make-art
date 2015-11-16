@@ -1,0 +1,243 @@
+{
+    "id": "mage",
+    "title": "RPG Mage",
+    "description": "Code a Pong match",
+    "code": "",
+    "startAt": 2,
+    "steps": [
+		{
+		    "hint": "**type** `background black`",
+		    "solution": "background black"
+		},
+		{
+		    "hint": "**type** `stroke 0`",
+		    "solution": "stroke 0"
+		},
+		{
+		    "hint": "**type** `color saddlebrown`",
+		    "solution": "color saddlebrown"
+		},
+		{
+		    "hint": "**type** `move -100,-125`",
+		    "solution": "move -100,-125"
+		},
+		{
+		    "hint": "**type** `rectangle 200,250`",
+		    "solution": "rectangle 200,250"
+		},
+		{
+		    "hint": "**type** `move 25,-25`",
+		    "solution": "move 25,-25"
+		},
+		{
+		    "hint": "**type** `rectangle 150,50`",
+		    "solution": "rectangle 150,50"
+		},
+		{
+		    "hint": "**type** `move 0, 75`",
+		    "solution": "move 0, 75"
+		},
+		{
+		    "hint": "**type** `color sandybrown`",
+		    "solution": "color sandybrown"
+		},
+		{
+		    "hint": "**type** `rectangle 150,100`",
+		    "solution": "rectangle 150,100"
+		},
+		{
+		    "hint": "**type** `move 50,-25`",
+		    "solution": "move 50,-25"
+		},
+		{
+		    "hint": "**type** `rectangle 50,25`",
+		    "solution": "rectangle 50,25"
+		},
+		{
+		    "hint": "**type** `color black`",
+		    "solution": "color black"
+		},
+		{
+		    "hint": "**type** `move -25,25`",
+		    "solution": "move -25,25"
+		},
+		{
+		    "hint": "**type** `rectangle 25,50`",
+		    "solution": "rectangle 25,50"
+		},
+		{
+		    "hint": "**type** `move 75`",
+		    "solution": "move 75"
+		},
+		{
+		    "hint": "**type** `rectangle 25,50`",
+		    "solution": "rectangle 25,50"
+		},
+		{
+		    "hint": "**type** `move -150,100`",
+		    "solution": "move -150,100"
+		},
+		{
+		    "hint": "**type** `color paleturquoise`",
+		    "solution": "color paleturquoise"
+		},
+		{
+		    "hint": "**type** `rectangle 250,50`",
+		    "solution": "rectangle 250,50"
+		},
+		{
+		    "hint": "**type** `move 50,50`",
+		    "solution": "move 50,50"
+		},
+		{
+		    "hint": "**type** `rectangle 150,50`",
+		    "solution": "rectangle 150,50"
+		},
+		{
+		    "hint": "**type** `move 0, 50`",
+		    "solution": "move 0, 50"
+		},
+		{
+		    "hint": "**type** `color midnightblue`",
+		    "solution": "color midnightblue"
+		},
+		{
+		    "hint": "**type** `rectangle 150,25`",
+		    "solution": "rectangle 150,25"
+		},
+		{
+		    "hint": "**type** `color teal`",
+		    "solution": "color teal"
+		},
+		{
+		    "hint": "**type** `move 75,25`",
+		    "solution": "move 75,25"
+		},
+		{
+		    "hint": "**type** `rectangle -50,100`",
+		    "solution": "rectangle -50,100"
+		},
+		{
+		    "hint": "**type** `rectangle -75,50`",
+		    "solution": "rectangle -75,50"
+		},
+		{
+		    "hint": "**type** `move 25,0`",
+		    "solution": "move 25,0"
+		},
+		{
+		    "hint": "**type** `rectangle 50,50`",
+		    "solution": "rectangle 50,50"
+		},
+		{
+		    "hint": "**type** `rectangle 25,100`",
+		    "solution": "rectangle 25,100"
+		},
+		{
+		    "hint": "**type** `move -25,-125`",
+		    "solution": "move -25,-125"
+		},
+		{
+		    "hint": "**type** `rectangle 25,100`",
+		    "solution": "rectangle 25,100"
+		},
+		{
+		    "hint": "**type** `color sandybrown`",
+		    "solution": "color sandybrown"
+		},
+		{
+		    "hint": "**type** `move -125,25`",
+		    "solution": "move -125,25"
+		},
+		{
+		    "hint": "**type** `rectangle 25,50`",
+		    "solution": "rectangle 25,50"
+		},
+		{
+		    "hint": "**type** `move -25,25`",
+		    "solution": "move -25,25"
+		},
+		{
+		    "hint": "**type** `rectangle 25,75`",
+		    "solution": "rectangle 25,75"
+		},
+		{
+		    "hint": "**type** `move 250,-25`",
+		    "solution": "move 250,-25"
+		},
+		{
+		    "hint": "**type** `rectangle 25,100`",
+		    "solution": "rectangle 25,100"
+		},
+		{
+		    "hint": "**type** `move -200,-50`",
+		    "solution": "move -200,-50"
+		},
+		{
+		    "hint": "**type** `color darkmagenta`",
+		    "solution": "color darkmagenta"
+		},
+		{
+		    "hint": "**type** `rectangle -25,250`",
+		    "solution": "rectangle -25,250"
+		},
+		{
+		    "hint": "**type** `color aquamarine`",
+		    "solution": "color aquamarine"
+		},
+		{
+		    "hint": "**type** `rectangle -50,-50`",
+		    "solution": "rectangle -50,-50"
+		},
+		{
+		    "hint": "**type** `move 25,-125`",
+		    "solution": "move 25,-125"
+		},
+		{
+		    "hint": "**type** `rectangle 150,25`",
+		    "solution": "rectangle 150,25"
+		},
+		{
+		    "hint": "**type** `move 0, 125`",
+		    "solution": "move 0, 125"
+		},
+		{
+		    "hint": "**type** `color opacity(black,0.5)`",
+		    "solution": "color opacity(black,0.5)"
+		},
+		{
+		    "hint": "**type** `square 25`",
+		    "solution": "square 25"
+		},
+		{
+		    "hint": "**type** `move 25,25`",
+		    "solution": "move 25,25"
+		},
+		{
+		    "hint": "**type** `rectangle 100,25`",
+		    "solution": "rectangle 100,25"
+		},
+		{
+		    "hint": "**type** `move 100,-25`",
+		    "solution": "move 100,-25"
+		},
+		{
+		    "hint": "**type** `square 25`",
+		    "solution": "square 25"
+		},
+		{
+		    "hint": "**type** `color opacity(aquamarine,0.2)`",
+		    "solution": "color opacity(aquamarine,0.2)"
+		},
+		{
+		    "hint": "**type** `move -225,-75`",
+		    "solution": "move -225,-75"
+		},
+		{
+		    "hint": "**type** `square 100`",
+		    "solution": "square 100"
+		}
+    ],
+    "completion_text": "Well done! You’ve made your first design with code. But oh, doesn't this look a bit dull? Try changing the color in order to: red, yellow, green, blue, magenta. That’s better.",
+    "cover": "pixel-mage.png"
+}
