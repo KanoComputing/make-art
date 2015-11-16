@@ -35,7 +35,9 @@
 		},
 		{
 		    "hint": "Time to draw the rest of the ghost's body, because the body is relative to the head size we will use the variable again **type** `square ghostsize * 2`",
-		    "solution": "square ghostsize * 2"
+		    "solution": "square ghostsize * 2",
+            "validate": "square ghostsize \\* 2"
+			
 		},
 		{
 		    "hint": "We're going to give it some eyes so we need to use the variable again to make sure they're positioned correctly on the head **type** `move ghostsize / 2`",
