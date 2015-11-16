@@ -10,7 +10,7 @@
 		    "solution": "background black"
 		},
 		{
-		    "hint": "The graphics in Asteroids were simple line based graphics called vectors, we still use a more complex version of this concept in computer graphics today. First we need to set our line colour and width **type** `stroke white,5`",
+		    "hint": "The graphics in Asteroids were simple line based graphics called vectors, we still use a more complex version of this concept in computer graphics today. First we need to set our line color and width **type** `stroke white,5`",
 		    "solution": "stroke white,5"
 		},
 		{

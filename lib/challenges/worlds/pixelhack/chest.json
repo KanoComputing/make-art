@@ -6,90 +6,90 @@
     "startAt": 2,
     "steps": [
 		{
-		    "hint": " **type** `background darkslategray`",
+		    "hint": "Role Playing Games (RPGs) became one of the most popular genres of games in the late 80s. One of the most common objects in these games is the loot chest, let's start by setting a moody scene with a background **type** `background darkslategray`",
 		    "solution": "background darkslategray"
 		},
 		{
-		    "hint": " **type** `stroke 0`",
+		    "hint": "Next we're going to turn the stroke off **type** `stroke 0`",
 		    "solution": "stroke 0"
 		},
 		{
-		    "hint": " **type** `move -150,-100`",
+		    "hint": "Position the cursor to the to left corner of where the chest will be **type** `move -150,-100`",
 		    "solution": "move -150,-100"
 		},
 		{
-		    "hint": " **type** `color gold`",
+		    "hint": "Set the color to gold to give the impression of riches inside **type** `color gold`",
 		    "solution": "color gold"
 		},
 		{
-		    "hint": " **type** `rectangle 300,200`",
+		    "hint": "We're going to layer this up to keep the number of shapes we have to draw to a minimum, first we draw the golden frame draw a `rectangle` 300 by 200",
 		    "solution": "rectangle 300,200"
 		},
 		{
-		    "hint": " **type** `color lightyellow`",
+		    "hint": "Next we are going to add a highlight to the gold **type** `color lightyellow`",
 		    "solution": "color lightyellow"
 		},
 		{
-		    "hint": " **type** `rectangle 25,100`",
+		    "hint": "With 8-bit art, simple details add a lot to an object add a 25 by 100 `rectangle` to act as sheen in the gold",
 		    "solution": "rectangle 25,100"
 		},
 		{
-		    "hint": " **type** `move 25,0`",
+		    "hint": "Move your cursor to get ready to draw the wooden part of the chest **type** `move 25,0`",
 		    "solution": "move 25,0"
 		},
 		{
-		    "hint": " **type** `color brown`",
+		    "hint": "Change the fill color to `color brown`",
 		    "solution": "color brown"
 		},
 		{
-		    "hint": " **type** `rectangle 250,175`",
+		    "hint": "We use a trick of overlaying brown over the gold so the gold looks like a frame holding the wooden panels together **type** `rectangle 250,175`",
 		    "solution": "rectangle 250,175"
 		},
 		{
-		    "hint": " **type** `move 0,60`",
+		    "hint": "Move the cursor into place to split the wooden part in half with a lid **type** `move 0,60`",
 		    "solution": "move 0,60"
 		},
 		{
-		    "hint": " **type** `color gold`",
+		    "hint": "Switch your `color` back to gold`",
 		    "solution": "color gold"
 		},
 		{
-		    "hint": " **type** `rectangle 250,25`",
+		    "hint": "Draw the seam with a `rectangle` 250 by 25`",
 		    "solution": "rectangle 250,25"
 		},
 		{
-		    "hint": " **type** `color lightyellow`",
+		    "hint": "Next we'll continue our highlight effect **type** `color lightyellow`",
 		    "solution": "color lightyellow"
 		},
 		{
-		    "hint": " **type** `rectangle 25,25`",
-		    "solution": "rectangle 25,25"
+		    "hint": "Continue the highlight effect by drawing a `square` 25 big`",
+		    "solution": "square 25"
 		},
 		{
-		    "hint": " **type** `move 75,-25`",
+		    "hint": "Finally we're going to finish with a clasp, move to the middle of the chest **type** `move 75,-25`",
 		    "solution": "move 75,-25"
 		},
 		{
-		    "hint": " **type** `color gold`",
+		    "hint": "Set the `color` to gold so it matches the frame",
 		    "solution": "color gold"
 		},
 		{
-		    "hint": " **type** `rectangle 100,75`",
+		    "hint": "Draw a `rectangle` 100 by 75`",
 		    "solution": "rectangle 100,75"
 		},
 		{
-		    "hint": " **type** `move 25,25`",
+		    "hint": "Move in to draw the actual clasp **type** `move 25,25`",
 		    "solution": "move 25,25"
 		},
 		{
-		    "hint": " **type** `color darkbrown`",
+		    "hint": "Set the `color` to darkbrown",
 		    "solution": "color darkbrown"
 		},
 		{
-		    "hint": " **type** `rectangle 50,75`",
+		    "hint": "Finally draw a `rectangle` 50 by 75",
 		    "solution": "rectangle 50,75"
 		}
     ],
-    "completion_text": "What a great ship!",
+    "completion_text": "That chest looks great, I wonder what loot is hiding within!",
     "cover": "pixel-chest.png"
 }
