@@ -5,71 +5,83 @@
     "startAt": 2,
     "steps": [
 		{
-		    "hint": " **type** `background tan`",
+		    "hint": "**type** `background tan`",
 		    "solution": "background tan"
 		},
 		{
-		    "hint": " **type** `stroke 0`",
+		    "hint": "**type** `stroke 0`",
 		    "solution": "stroke 0"
 		},
 		{
-		    "hint": " **type** `moveTo 80,250`",
+		    "hint": "**type** `moveTo 80,250`",
 		    "solution": "moveTo 80,250"
 		},
 		{
-		    "hint": " **type** `color olivedrab`",
+		    "hint": "**type** `color olivedrab`",
 		    "solution": "color olivedrab"
 		},
 		{
-		    "hint": " **type** `ellipse 40,30`",
+		    "hint": "**type** `ellipse 40,30`",
 		    "solution": "ellipse 40,30"
 		},
 		{
-		    "hint": " **type** `color black`",
+		    "hint": "**type** `color salmon`",
+		    "solution": "color salmon"
+		},
+		{
+		    "hint": "**type** `move -35,10`",
+		    "solution": "move -35,10"
+		},
+		{
+		    "hint": "**type** `rectangle -20,4`",
+		    "solution": "rectangle -20,4"
+		},
+		{
+		    "hint": "**type** `color black`",
 		    "solution": "color black"
 		},
 		{
-		    "hint": " **type** `move -20,-10`",
-		    "solution": "move -20,-10"
+		    "hint": "**type** `move 20,-20`",
+		    "solution": "move 20,-20"
 		},
 		{
-		    "hint": " **type** `ellipse 10,5`",
+		    "hint": "**type** `ellipse 10,5`",
 		    "solution": "ellipse 10,5"
 		},
 		{
-		    "hint": " **type** `move 80,10`",
+		    "hint": "**type** `move 80,10`",
 		    "solution": "move 80,10"
 		},
 		{
-		    "hint": " **type** `for [1 .. 7]`",
+		    "hint": "**type** `for [1 .. 7]`",
 		    "solution": "for [1 .. 7]"
 		},
 		{
-		    "hint": " **type** `color olivedrab`",
+		    "hint": "**type** `color olivedrab`",
 		    "solution": "color olivedrab"
 		},
 		{
-		    "hint": " **type** `circle 30`",
+		    "hint": "**type** `circle 30`",
 		    "solution": "circle 30"
 		},
 		{
-		    "hint": " **type** `square 30`",
+		    "hint": "**type** `square 30`",
 		    "solution": "square 30"
 		},
 		{
-		    "hint": " **type** `color darkgreen`",
+		    "hint": "**type** `color darkgreen`",
 		    "solution": "color darkgreen"
 		},
 		{
-		    "hint": " **type** `circle 20`",
+		    "hint": "**type** `circle 20`",
 		    "solution": "circle 20"
 		},
 		{
-		    "hint": " **type** `square 20`",
+		    "hint": "**type** `square 20`",
 		    "solution": "square 20"
 		},
 		{
-		    "hint": " **type** `move 50,0`",
+		    "hint": "**type** `move 50,0`",
 		    "solution": "move 50,0"
 		}
     ],

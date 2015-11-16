@@ -6,67 +6,75 @@
     "startAt": 2,
     "steps": [
 		{
-		    "hint": " **type** `stroke 0`",
+		    "hint": "**type** `background navy`",
+		    "solution": "background navy"
+		},
+		{
+		    "hint": "**type** `stroke 0`",
 		    "solution": "stroke 0"
 		},
 		{
-		    "hint": " **type** `color red`",
+		    "hint": "**type** `color red`",
 		    "solution": "color red"
 		},
 		{
-		    "hint": " **type** `ghostsize = 100`",
+		    "hint": "**type** `ghostsize = 100`",
 		    "solution": "ghostsize = 100"
 		},
 		{
-		    "hint": " **type** `circle ghostsize`",
+		    "hint": "**type** `move 0,-50`",
+		    "solution": "move 0,-50"
+		},
+		{
+		    "hint": "**type** `circle ghostsize`",
 		    "solution": "circle ghostsize"
 		},
 		{
-		    "hint": " **type** `move -ghostsize,0`",
+		    "hint": "**type** `move -ghostsize,0`",
 		    "solution": "move -ghostsize,0"
 		},
 		{
-		    "hint": " **type** `square ghostsize * 2`",
+		    "hint": "**type** `square ghostsize * 2`",
 		    "solution": "square ghostsize * 2"
 		},
 		{
-		    "hint": " **type** `move ghostsize / 2`",
+		    "hint": "**type** `move ghostsize / 2`",
 		    "solution": "move ghostsize / 2"
 		},
 		{
-		    "hint": " **type** `color white`",
+		    "hint": "**type** `color white`",
 		    "solution": "color white"
 		},
 		{
-		    "hint": " **type** `circle 20`",
+		    "hint": "**type** `circle 20`",
 		    "solution": "circle 20"
 		},
 		{
-		    "hint": " **type** `color blue`",
+		    "hint": "**type** `color blue`",
 		    "solution": "color blue"
 		},
 		{
-		    "hint": " **type** `circle 10`",
+		    "hint": "**type** `circle 10`",
 		    "solution": "circle 10"
 		},
 		{
-		    "hint": " **type** `move ghostsize`",
+		    "hint": "**type** `move ghostsize`",
 		    "solution": "move ghostsize"
 		},
 		{
-		    "hint": " **type** `color white`",
+		    "hint": "**type** `color white`",
 		    "solution": "color white"
 		},
 		{
-		    "hint": " **type** `circle 20`",
+		    "hint": "**type** `circle 20`",
 		    "solution": "circle 20"
 		},
 		{
-		    "hint": " **type** `color blue`",
+		    "hint": "**type** `color blue`",
 		    "solution": "color blue"
 		},
 		{
-		    "hint": " **type** `circle 10`",
+		    "hint": "**type** `circle 10`",
 		    "solution": "circle 10"
 		}
     ],
