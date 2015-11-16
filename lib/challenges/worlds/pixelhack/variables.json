@@ -6,78 +6,78 @@
     "startAt": 2,
     "steps": [
 		{
-		    "hint": "**type** `background navy`",
+		    "hint": "This classic ghost character first appeared in Pac-Man (1980), because it's a ghost we're going to need a spooky background **type** `background navy`",
 		    "solution": "background navy"
 		},
 		{
-		    "hint": "**type** `stroke 0`",
+		    "hint": "Next turn the stroke off by typing `stroke 0`",
 		    "solution": "stroke 0"
 		},
 		{
-		    "hint": "**type** `color red`",
+		    "hint": "Set the `color` to red",
 		    "solution": "color red"
 		},
 		{
-		    "hint": "**type** `ghostsize = 100`",
+		    "hint": "Here we're introducing something new, we're going to set the size of the ghost using a variable, variables are a way of repeating the same value in your code **type** `ghostsize = 100`",
 		    "solution": "ghostsize = 100"
 		},
 		{
-		    "hint": "**type** `move 0,-50`",
+		    "hint": "Move the cursor up to where the ghosts head will start **type** `move 0,-50`",
 		    "solution": "move 0,-50"
 		},
 		{
-		    "hint": "**type** `circle ghostsize`",
+		    "hint": "We're going to use that variable we set earlier to draw the head, because we set the variable to 100 this command will create a circle 100 pixels big **type** `circle ghostsize`",
 		    "solution": "circle ghostsize"
 		},
 		{
-		    "hint": "**type** `move -ghostsize,0`",
+		    "hint": "We're going to use the variable again, this time with the move command, by placing a minus symbol in front of it this command becomes the same as moving -100,0 **type** `move -ghostsize,0`",
 		    "solution": "move -ghostsize,0"
 		},
 		{
-		    "hint": "**type** `square ghostsize * 2`",
+		    "hint": "Time to draw the rest of the ghost's body, because the body is relative to the head size we will use the variable again **type** `square ghostsize * 2`",
 		    "solution": "square ghostsize * 2"
 		},
 		{
-		    "hint": "**type** `move ghostsize / 2`",
+		    "hint": "We're going to give it some eyes so we need to use the variable again to make sure they're positioned correctly on the head **type** `move ghostsize / 2`",
 		    "solution": "move ghostsize / 2"
 		},
 		{
-		    "hint": "**type** `color white`",
+		    "hint": "Set the `color` to white",
 		    "solution": "color white"
 		},
 		{
-		    "hint": "**type** `circle 20`",
+		    "hint": "Start the eyes off with a `circle` 20 pixels big",
 		    "solution": "circle 20"
 		},
 		{
-		    "hint": "**type** `color blue`",
+		    "hint": "Now set the iris color **type** `color blue`",
 		    "solution": "color blue"
 		},
 		{
-		    "hint": "**type** `circle 10`",
+		    "hint": "Finally draw the iris **type** `circle 10`",
 		    "solution": "circle 10"
 		},
 		{
-		    "hint": "**type** `move ghostsize`",
-		    "solution": "move ghostsize"
+		    "hint": "We're gonna use the variable one last time to position the other eye correctly **type** `move ghostsize,0`",
+		    "solution": "move ghostsize,0"
 		},
 		{
-		    "hint": "**type** `color white`",
+		    "hint": "Repeat the process for the second eye, set the `color` to white",
 		    "solution": "color white"
 		},
 		{
-		    "hint": "**type** `circle 20`",
+		    "hint": "Draw a `circle` 20 pixels big",
 		    "solution": "circle 20"
 		},
 		{
-		    "hint": "**type** `color blue`",
+		    "hint": "Set the `color` to blue",
 		    "solution": "color blue"
 		},
 		{
-		    "hint": "**type** `circle 10`",
+		    "hint": "Finally draw a `circle` 10 pixels big",
 		    "solution": "circle 10"
 		}
     ],
-    "completion_text": "Nice! Now because you have used a variable, you can click on the ghostsize number and use the slider to change the value. Notice how the eyes stay the same size because they are hardcoded numbers.",
+    "completion_text": "Nice! Now because you have used a variable, you can click on the ghostsize number and use the slider to change the value. Notice how the eyes stay the same size because they are hardcoded numbers and everything else scales together.",
     "cover": "pixel-variables.png"
 }

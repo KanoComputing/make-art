@@ -14,7 +14,7 @@
 		    "solution": "moveTo 150,200"
 		},
 		{
-		    "hint": "We're going to need some colours to tell the blocks apart, change the fill color of your shapes with the color function **type** `color crimson`",
+		    "hint": "We're going to need some colors to tell the blocks apart, change the fill color of your shapes with the color function **type** `color crimson`",
 		    "solution": "color crimson"
 		},
 		{
@@ -54,7 +54,7 @@
 		    "solution": "move 50,-100"
 		},
 		{
-		    "hint": "We change the colour again **type** `color indigo`",
+		    "hint": "We change the color again **type** `color indigo`",
 		    "solution": "color indigo"
 		},
 		{
@@ -82,6 +82,6 @@
 		    "solution": "rectangle 50,100"
 		}
     ],
-    "completion_text": "Well done you created a nice stack of tetrominoes, why not try changing the colour of some of the blocks or drawing a few more to fill the screen.",
+    "completion_text": "Well done you created a nice stack of tetrominoes, why not try changing the color of some of the blocks or drawing a few more to fill the screen.",
     "cover": "pixel-tetris.png"
 }

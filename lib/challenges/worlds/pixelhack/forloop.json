@@ -1,6 +1,6 @@
 {
     "id": "forloop",
-    "title": "Snake",
+    "title": "For Loop",
     "description": "Use a for loop to build a snake with ease.",
     "startAt": 2,
     "steps": [

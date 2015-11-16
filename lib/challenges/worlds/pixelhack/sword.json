@@ -6,82 +6,82 @@
     "startAt": 2,
     "steps": [
 		{
-		    "hint": " **type** `diamond = aquamarine`",
-		    "solution": "diamond = aquamarine"
+		    "hint": "We're going to make a sword out of diamond so first we will set up some variables to represent the colors **type** `sword = aquamarine`",
+		    "solution": "sword = aquamarine"
 		},
 		{
-		    "hint": " **type** `darkdiamond = darken(aquamarine,50)`",
-		    "solution": "darkdiamond = darken(aquamarine,50)"
+		    "hint": "We set up enough variable to represent the darker areas of the sword, we can use the darken function to alter the color of our existing sword color. **type** `darksword = darken(sword,50)`",
+		    "solution": "darksword = darken(sword,50)"
 		},
 		{
-		    "hint": " **type** `background slategray`",
+		    "hint": "We start by setting the `background` color to slategray`",
 		    "solution": "background slategray"
 		},
 		{
-		    "hint": " **type** `color diamond`",
-		    "solution": "color diamond"
+		    "hint": "Next we set our fill color to the variable we set up before **type** `color sword`",
+		    "solution": "color sword"
 		},
 		{
-		    "hint": " **type** `stroke darkdiamond,20`",
-		    "solution": "stroke darkdiamond,20"
+		    "hint": "and set our stroke color to the darker version of our sword color **type** `stroke darksword,20`",
+		    "solution": "stroke darksword,20"
 		},
 		{
-		    "hint": " **type** `move -20,-180`",
+		    "hint": "Move the cursor to where the top of the blade will be **type** `move -20,-180`",
 		    "solution": "move -20,-180"
 		},
 		{
-		    "hint": " **type** `rectangle 40,230`",
+		    "hint": "Draw the blade of the sword **type** `rectangle 40,230`",
 		    "solution": "rectangle 40,230"
 		},
 		{
-		    "hint": " **type** `move 10,250`",
+		    "hint": "It's already starting to take shape, let's create the handle **type** `move 10,250`",
 		    "solution": "move 10,250"
 		},
 		{
-		    "hint": " **type** `stroke darkbrown`",
+		    "hint": "The grip isn't going to be made of diamond so set the `stroke` color to darkbrown",
 		    "solution": "stroke darkbrown"
 		},
 		{
-		    "hint": " **type** `color brown`",
+		    "hint": "and the `color` to brown",
 		    "solution": "color brown"
 		},
 		{
-		    "hint": " **type** `rectangle 20,100`",
+		    "hint": "Draw a `rectangle` 20 by 100 for the grip",
 		    "solution": "rectangle 20,100"
 		},
 		{
-		    "hint": " **type** `move -70,-10`",
+		    "hint": "We're going to create the crossguard next **type** `move -70,-10`",
 		    "solution": "move -70,-10"
 		},
 		{
-		    "hint": " **type** `stroke darkdiamond`",
-		    "solution": "stroke darkdiamond"
+		    "hint": "Change the `stroke` color back to our darksword variable",
+		    "solution": "stroke darksword"
 		},
 		{
-		    "hint": " **type** `color lighten(darkdiamond,10)`",
-		    "solution": "color lighten(darkdiamond,10)"
+		    "hint": "We're going to use another color function: lighten to slightly change our diamond color **type** `color lighten(darksword,10)`",
+		    "solution": "color lighten(darksword,10)"
 		},
 		{
-		    "hint": " **type** `rectangle 160,20`",
+		    "hint": "Next draw a `rectangle` 160 by 20",
 		    "solution": "rectangle 160,20"
 		},
 		{
-		    "hint": " **type** `move 80, -240`",
+		    "hint": "Notice how the lighten function altered the diamond color. **type** `move 80, -240`",
 		    "solution": "move 80, -240"
 		},
 		{
-		    "hint": " **type** `color white`",
+		    "hint": "Finally we're going to add a highlight detail to finish the sword **type** `color white`",
 		    "solution": "color white"
 		},
 		{
-		    "hint": " **type** `stroke 0`",
+		    "hint": "Turn the stroke off **type** `stroke 0`",
 		    "solution": "stroke 0"
 		},
 		{
-		    "hint": " **type** `rectangle 10, 230`",
+		    "hint": "Draw a `rectangle` 10 by 230",
 		    "solution": "rectangle 10, 230"
 		}
     ],
-    "completion_text": "What a great ship!",
+    "completion_text": "That sword looks exquisite, perfect for fighting your way out of some caves. Try changing the color on the first line, see how it changes all the other colors on the blade because of the variables.",
     "cover": "pixel-sword.png"
 }
