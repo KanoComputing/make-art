@@ -25,7 +25,7 @@
             "solution": "rectangle 500, 150"
         },
         {
-            "hint": "Set the drawing color to lightbrown - **type** `color lightbrown`",
+            "hint": "Set the drawing color to lightbrown**type** `color lightbrown`",
             "solution": "color lightbrown"
         },
         {
