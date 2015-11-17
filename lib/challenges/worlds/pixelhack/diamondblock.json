@@ -60,6 +60,6 @@
             "validate": "            square 32"
         }
     ],
-    "completion_text": "You’ve completed an hour of code! What’s next? More challenges and 8-bit art projects here at Kano if you are interested. Congratulations and well done!",
+    "completion_text": "You’ve hacked the pixels and won! What’s next? More challenges and 8-bit art projects here at Kano if you are interested. Congratulations and well done!",
     "cover": "pixel-diamondblock.png"
 }
