@@ -10,8 +10,8 @@
 		    "solution": "sword = aquamarine"
 		},
 		{
-		    "hint": "We set up enough variable to represent the darker areas of the sword, we can use the darken function to alter the color of our existing sword color. **type** `darksword = darken(sword,50)`",
-		    "solution": "darksword = darken(sword,50)"
+		    "hint": "We set up enough variable to represent the darker areas of the sword, we can use the darken function to alter the color of our existing sword color. **type** `darksword = darken(sword,40)`",
+		    "solution": "darksword = darken(sword,40)"
 		},
 		{
 		    "hint": "We start by setting the `background` color to slategray`",
