@@ -5,86 +5,82 @@
     "startAt": 2,
     "steps": [
 		{
-		    "hint": "**type** `background tan`",
+		    "hint": "We're going to recreate the classic game Snake using the power of For Loops. First let's set a dirt background**type** `background tan`",
 		    "solution": "background tan"
 		},
 		{
-		    "hint": "**type** `stroke 0`",
+		    "hint": "Turn off the stroke **type** `stroke 0`",
 		    "solution": "stroke 0"
 		},
 		{
-		    "hint": "**type** `moveTo 80,250`",
+		    "hint": "First we position the head of the snake **type** `moveTo 80,250`",
 		    "solution": "moveTo 80,250"
 		},
 		{
-		    "hint": "**type** `color olivedrab`",
+		    "hint": "Set a snake-like color **type** `color olivedrab`",
 		    "solution": "color olivedrab"
 		},
 		{
-		    "hint": "**type** `ellipse 40,30`",
-		    "solution": "ellipse 40,30"
-		},
-		{
-		    "hint": "**type** `color salmon`",
-		    "solution": "color salmon"
-		},
-		{
-		    "hint": "**type** `move -35,10`",
-		    "solution": "move -35,10"
-		},
-		{
-		    "hint": "**type** `rectangle -20,4`",
-		    "solution": "rectangle -20,4"
-		},
-		{
-		    "hint": "**type** `color black`",
-		    "solution": "color black"
-		},
-		{
-		    "hint": "**type** `move 20,-20`",
-		    "solution": "move 20,-20"
-		},
-		{
-		    "hint": "**type** `ellipse 10,5`",
-		    "solution": "ellipse 10,5"
-		},
-		{
-		    "hint": "**type** `move 80,10`",
-		    "solution": "move 80,10"
-		},
-		{
-		    "hint": "**type** `for [1 .. 7]`",
-		    "solution": "for [1 .. 7]"
-		},
-		{
-		    "hint": "**type** `color olivedrab`",
-		    "solution": "color olivedrab"
-		},
-		{
-		    "hint": "**type** `circle 30`",
+		    "hint": "Draw an `circle` 30 pixels big for the head",
 		    "solution": "circle 30"
 		},
 		{
-		    "hint": "**type** `square 30`",
-		    "solution": "square 30"
+		    "hint": "This is where we will set the loop up, using the for function, the first number is where to start counting from and the second number is what to count to. So 1 .. 7 makes the computer count to 7  - **type** `for [1 .. 7]`",
+		    "solution": "for [1 .. 7]"
 		},
 		{
-		    "hint": "**type** `color darkgreen`",
-		    "solution": "color darkgreen"
+		    "hint": "Everything within this indent will be repeated 7 times, we need a move function to position each part of the body - **type** `move 50,0`",
+		    "solution": "    move 50,0"
 		},
 		{
-		    "hint": "**type** `circle 20`",
-		    "solution": "circle 20"
+		    "hint": "We set the body color - **type** `color olivedrab`",
+		    "solution": "    color olivedrab"
 		},
 		{
-		    "hint": "**type** `square 20`",
-		    "solution": "square 20"
+		    "hint": "Once we add a circle it'll be clear what is going on with the code being repeated several times - **type** `circle 30`",
+		    "solution": "    circle 30"
 		},
 		{
-		    "hint": "**type** `move 50,0`",
-		    "solution": "move 50,0"
+		    "hint": "Let's add a square so the body looks more segmented, notice how we're now drawing 7 shapes for every line of code - **type** `square 30`",
+		    "solution": "    square 30"
+		},
+		{
+		    "hint": "We're going to add another detail to the tail so set the `color` to darkgreen",
+		    "solution": "    color darkgreen"
+		},
+		{
+		    "hint": "Draw another circle, the code is still indented this will be repeated 7 times - **type** `circle 20`",
+		    "solution": "    circle 20"
+		},
+		{
+		    "hint": "Finally draw a `square` 20 pixels big",
+		    "solution": "    square 20"
+		},
+		{
+		    "hint": "First make sure you are no longer in the for loop by hitting backspace so we're no longer indented. - **type** `moveTo 70,240`",
+		    "solution": "moveTo 70,240"
+		},
+		{
+		    "hint": "Change the `color` to black",
+		    "solution": "color black"
+		},
+		{
+		    "hint": "Draw an `ellipse` 10 pixels wide and 5 tall.",
+		    "solution": "ellipse 10,5"
+		},
+		{
+		    "hint": "Finally we'll give it a tongue so it can hiss like a snake should - **type** `color salmon`",
+		    "solution": "color salmon"
+		},
+		{
+		    "hint": "Position it on the face - **type** `move -15, 20`",
+		    "solution": "move -15, 20"
+		},
+		{
+		    "hint": "We'll draw a rectangle with a negative width to stretch it out from the mouth - **type** `rectangle -20,4`",
+		    "solution": "rectangle -20,4"
 		}
     ],
-    "completion_text": "Wow! That appeared out of nowhere.",
+    "completion_text": "Now you have seen how we can create more art with less lines of code by using loops in clever ways, why not try changing the 7 in the for loop and see what happenes",
     "cover": "pixel-forloop.png"
 }
