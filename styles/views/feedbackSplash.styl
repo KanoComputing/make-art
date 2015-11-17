@@ -55,6 +55,8 @@
 
 .modal-inner.splash.feedback-splash
     text-align center
+    width 550px
+    margin-left -275px
 
     form
       padding-top 30px
@@ -73,11 +75,11 @@
       display inline-block
       padding 15px
       font-family 'Bariol'
-      font-size 1.3em
+      font-size 1em
       box-sizing border-box
       resize none
 
-    button:first-child
+    button
       background #51555C
 
       &:hover
@@ -91,16 +93,16 @@
       h2
         color white
 
-    .rating-1
-        bg-image('feedback-reactions/rating1', 45px, center, no-repeat)
-    .rating-2
-        bg-image('feedback-reactions/rating2', 45px, center, no-repeat)
-    .rating-3
-        bg-image('feedback-reactions/rating3', 45px, center, no-repeat)
-    .rating-4
-        bg-image('feedback-reactions/rating4', 45px, center, no-repeat)
     .rating-5
-        bg-image('feedback-reactions/rating5', 45px, center, no-repeat)
+        bg-image('feedback-reactions/rating1', 35px, center, no-repeat)
+    .rating-4
+        bg-image('feedback-reactions/rating2', 35px, center, no-repeat)
+    .rating-3
+        bg-image('feedback-reactions/rating3', 35px, center, no-repeat)
+    .rating-2
+        bg-image('feedback-reactions/rating4', 35px, center, no-repeat)
+    .rating-1
+        bg-image('feedback-reactions/rating5', 35px, center, no-repeat)
 
     .mood-selector
         margin-bottom 25px
@@ -130,8 +132,8 @@
             background orange
 
         label
-            width 30px
-            height 30px
+            width 25px
+            height 25px
             padding 15px
             margin-bottom -4px
 
