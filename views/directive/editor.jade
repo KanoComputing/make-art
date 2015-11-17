@@ -7,6 +7,9 @@ ul.editor-tabs(ng-if='tabbed')
     li(ng-class='{ active: tab === "code" }', ng-click='switchTab("code")')
         i.icon-code
 
+    li(ng-class='{ active: tab === "guide" }', ng-click='switchTab("guide")', ng-if='guide')
+        i.icon-guide
+
     li.divide
 
     li(
@@ -66,3 +69,7 @@ div(ng-show='tab === "code"')
             i.icon-full-screen
 
     .editor-wrap(ng-class='{ "has-title": !!title }'): .editor-area(editor, ng-class='{ disabled: !editable }')
+
+.editor-guide(ng-show='tab === "guide"'): .inner
+    h4 Guide
+    .guide(ng-bind-html="guide | markdown")
