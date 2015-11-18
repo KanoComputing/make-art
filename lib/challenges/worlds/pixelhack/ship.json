@@ -6,7 +6,7 @@
     "startAt": 2,
     "steps": [
 		{
-		    "hint": "Asteroids (1979) was one of the first games of the shoot-em-up genre. It was set in space so we're going to need to set the scene **type** `background black`",
+		    "hint": "Asteroids (1979) was one of the first major arcade games. It is set in space, so we're going to need to set the scene. **type** `background black`",
 		    "solution": "background black"
 		},
 		{
