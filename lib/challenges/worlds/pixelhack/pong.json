@@ -6,11 +6,11 @@
     "startAt": 2,
     "steps": [
 		{
-		    "hint": "Pong (1972) was one of the first home game consoles, being an incredibly basic table tennis game the first thing we need is a ball. **type** `circle 15`",
+		    "hint": "Pong (1972) was one of the first home game consoles. It is an incredibly basic table tennis game. And what do we need to play table tennis? First, a ball. **type** `circle 15`",
 		    "solution": "circle 15"
 		},
 		{
-		    "hint": "Next we need to draw some paddles, use the moveTo function to postion them. The first number is the horizontal position and the second number the vertical **type** `moveTo 30,100`",
+		    "hint": "Next we need to draw some paddles. We use the moveTo function to position objects. The first number after MoveTo tells you where the object goes horizontally, or left and right. The second number tells you where the object goes vertically, or up and down.  **type** `moveTo 30,100`",
 		    "solution": "moveTo 30,100"
 		},
 		{
