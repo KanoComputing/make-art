@@ -1,5 +1,17 @@
 .banner
-    a(href="http://art.kano.me/challenges/mischiefweek2015/", target='_blank')
-        img(src="/assets/layout/mischiefweek-logo.png")
-        span Mischief Week
-        |   Hack your way through a fresh batch of coding challenges in Make Art
+    a(href="#", ng-click='banner.openModal()')
+        span Pixel Hack
+        |   - coming soon. Your adventure begins on the 7th of December.
+
+    .modal-overlay(ng-if='banner.showModal')
+        .modal-inner.modal-challenge-info.center
+
+            .cover
+
+            button.close(ng-click='banner.closeModal()'): i.icon-cross
+
+            .detail
+                h3 Welcome to Pixel Hack
+
+                p You’ll start your by drawing retro games including Pong and Tetris, and move on to master drawing 8-bit art with code to create your own Minecraft characters and more. Show us how you can hack our challenges. Earn your Pixel Master Badge.
+                p Happy Hacking!
