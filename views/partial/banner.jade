@@ -1,14 +1,14 @@
-.banner(ng-init='showBanner = false')
-    a(href="#", ng-click='showBanner = true')
+.banner
+    a(href="#", ng-click='banner.openModal()')
         span Pixel Hack
         |   - coming soon. Your adventure begins on the 7th of December.
 
-    .modal-overlay(ng-if='showBanner')
+    .modal-overlay(ng-if='banner.showModal')
         .modal-inner.modal-challenge-info.center
 
             .cover
 
-            button.close(ng-click='showBanner = !showBanner'): i.icon-cross
+            button.close(ng-click='banner.closeModal()'): i.icon-cross
 
             .detail
                 h3 Welcome to Pixel Hack
