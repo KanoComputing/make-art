@@ -1,39 +1,29 @@
-.modal-overlay(ng-if='nextModal')
+.modal-overlay(ng-if='shareModal && creation')
     .modal-inner.modal-next-challenge.center
 
-        .cover(ng-style='{ "background-image": "url(/assets/challenges/images/" + next.cover +")" }')
+        .cover(ng-style='{ "background-image": "url(" + creation.cover_url + ")" }')
 
-        button.close(ng-click='closeNextModal()'): i.icon-cross
+        //- button.close(ng-click='closeShareModal()'): i.icon-cross
 
         .detail
 
-            .title
-                | Next up:
-                span {{ next.title }}
+            .title: span {{ creation.title }}
 
-                a.button.button-success(ng-href='/challenges/{{selectedWorld.id}}' ng-if='next.locked') {{ selectedWorld ? 'Back to ' + selectedWorld.name : 'Menu' }}
+            p.description {{ creation.description }}
 
-                a.button.button-success(ng-href='/challenge/{{selectedWorld.id}}/{{next.id}}' ng-if='!next.locked') Start
+        .buttons(ng-if='!mailTab')
+            a.button.button-mail(ng-click='openMailTab()')
+                i.icon-mail
 
-            p.description {{ next.description }}
+            a.button.button-facebook(ng-click='facebookShare(creation)')
+                img(src='/assets/button-icons/facebook-white.png' title='Share on Facebook')
 
-            p.description.small(ng-if='next.locked') Come back tomorrow to continue this challenge
+            a.button.button-twitter(ng-href='{{ buildURL(creation) }}')
+                img(src='/assets/button-icons/twitter-white.png' title='Share on Twitter')
 
+        .mail-tab(ng-if='mailTab')
+            form(ng-submit='submit()' name='mailForm')
+                .box.box-danger(ng-if='error') {{ error }}
 
-        .social-sharing(ng-if='creation')
-            .image
-                img(ng-src='{{ creation.cover_url }}')
-
-            .detail
-                span.title {{ creation.title }}
-                .description {{ creation.description }}
-
-            .buttons
-                a.button.button-mail(ng-click='sendMail(creation)')
-                    i.icon-mail
-
-                a.button.button-facebook(ng-click='facebookShare(creation)')
-                    img(src='/assets/button-icons/facebook-white.png' title='Share on Facebook')
-
-                a.button.button-twitter(target='_new', ng-href='{{ buildTwitterURL(creation) }}')
-                    img(src='/assets/button-icons/twitter-white.png' title='Share on Twitter')
+                .email
+                    input.filename(ng-model='creation.email', placeholder='Email address', type='email', required)
