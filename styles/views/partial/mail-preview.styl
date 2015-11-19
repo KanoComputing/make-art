@@ -1,0 +1,77 @@
+.modal-mail-preview
+    top 50px
+    width 500px
+    margin-left -250px
+    padding 0
+    
+    .preview
+        height auto
+        width 100%
+        box-sizing border-box
+        background-color color-grey-lighter
+        padding-bottom 20px
+        border-radius(5px)
+        
+        .header
+            padding 20px 0
+            background-color color-header
+            color white
+            text-transform none
+            font-weight bold
+            font-size 24px
+            smooth-font()
+            width 100%
+            
+        h4
+            smooth-font()
+            font-weight bold
+            margin 10px 0
+            text-transform none
+            
+        .content
+            padding 0 20px
+            display(flex)
+            flex-direction(row)
+            flex-wrap(nowrap)
+            justify-content(space-between)
+            
+            .left-content
+                flex 60
+                input, textarea
+                    display block
+                    margin 0 0 10px
+                    padding 12px 10px
+                    width 100%
+                    background color-white
+                    border 1px solid color-ruler
+                    box-sizing border-box
+                    box-shadow 0 1px 0 0 rgba(#000, .1) inset
+                    border-radius(5px)
+                    font-family font-body
+                    font-size 16px
+                    font-weight bold
+                    smooth-font()
+                    
+                    &:focus
+                        border 1px solid color-primary
+                        outline 0
+                
+                textarea
+                    height 150px
+                    resize none
+                    
+            .right-content
+                flex 35
+                margin-left 20px
+                .pic
+                    margin-bottom 65px
+                    img
+                        width 150px
+                        height 150px
+                .button-success
+                    padding 12px 60px
+                    border-radius(5px)
+                    
+                .disabled
+                    background-color color-grey-lighter
+                    color color-grey
