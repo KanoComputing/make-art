@@ -1,0 +1,39 @@
+.modal-overlay(ng-if='nextModal')
+    .modal-inner.modal-next-challenge.center
+
+        .cover(ng-style='{ "background-image": "url(/assets/challenges/images/" + next.cover +")" }')
+
+        button.close(ng-click='closeNextModal()'): i.icon-cross
+
+        .detail
+
+            .title
+                | Next up:
+                span {{ next.title }}
+
+                a.button.button-success(ng-href='/challenges/{{selectedWorld.id}}' ng-if='next.locked') {{ selectedWorld ? 'Back to ' + selectedWorld.name : 'Menu' }}
+
+                a.button.button-success(ng-href='/challenge/{{selectedWorld.id}}/{{next.id}}' ng-if='!next.locked') Start
+
+            p.description {{ next.description }}
+
+            p.description.small(ng-if='next.locked') Come back tomorrow to continue this challenge
+
+
+        .social-sharing(ng-if='creation')
+            .image
+                img(ng-src='{{ creation.cover_url }}')
+
+            .detail
+                span.title {{ creation.title }}
+                .description {{ creation.description }}
+
+            .buttons
+                a.button.button-mail(ng-click='sendMail(creation)')
+                    i.icon-mail
+
+                a.button.button-facebook(ng-click='facebookShare(creation)')
+                    img(src='/assets/button-icons/facebook-white.png' title='Share on Facebook')
+
+                a.button.button-twitter(target='_new', ng-href='{{ buildTwitterURL(creation) }}')
+                    img(src='/assets/button-icons/twitter-white.png' title='Share on Twitter')
