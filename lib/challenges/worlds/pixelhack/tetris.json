@@ -18,7 +18,7 @@
 		    "solution": "color crimson"
 		},
 		{
-		    "hint": "First we're going to draw an L shaped block known as an 'L-Polyomino' **type** `rectangle 50,150`",
+		    "hint": "First we're going to draw an L shaped block **type** `rectangle 50,150`",
 		    "solution": "rectangle 50,150"
 		},
 		{
@@ -38,7 +38,7 @@
 		    "solution": "color seagreen"
 		},
 		{
-		    "hint": "Next we'll be drawing the S shaped block known as a Skew Polyomino **type** `rectangle 50,100`",
+		    "hint": "Next we'll be drawing the S shaped block **type** `rectangle 50,100`",
 		    "solution": "rectangle 50,100"
 		},
 		{
@@ -58,7 +58,7 @@
 		    "solution": "color indigo"
 		},
 		{
-		    "hint": "Next we will draw a Straight Polyomino which is a long and thin block, draw a `rectangle` 50 by 200",
+		    "hint": "Next we will draw a long and thin block, draw a `rectangle` 50 by 200",
 		    "solution": "rectangle 50,200"
 		},
 		{
@@ -78,7 +78,7 @@
 		    "solution": "move 100,0"
 		},
 		{
-		    "hint": "Finally fill in the foor of the L-Polyomino **type** `rectangle 50,100`",
+		    "hint": "Finally fill in the foot **type** `rectangle 50,100`",
 		    "solution": "rectangle 50,100"
 		}
     ],
