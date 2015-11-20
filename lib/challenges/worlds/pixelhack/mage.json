@@ -6,8 +6,8 @@
     "startAt": 2,
     "steps": [
 		{
-		    "hint": "We're going to make a Mage character for an RPG game so first we need to set the scene, we'll use the `darken` function to change the color teal to a more suitable shade of dark blue - **type** `background darken(teal,15)`",
-		    "solution": "background darken(teal,15)"
+		    "hint": "We're going to make a Mage character for an RPG game so first we need to set the scene, we'll use the darken function to change the color teal to a more suitable shade of dark blue - **type** `background darken teal,15 `",
+		    "solution": "background darken teal,15"
 		},
 		{
 		    "hint": "We're making pixel art so we'll turn the stroke off - **type** `stroke 0`",

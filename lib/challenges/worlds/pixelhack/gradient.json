@@ -43,5 +43,6 @@
         }
     ],
     "completion_text": "Beautiful! See how the blue gets darker as it goes down the screen. The y variable was being passed to the darken function. As the y value increased, the darken function made the blue color get darker.",
-    "cover": "pixel-gradient.png"
+    "cover": "pixel-gradient.png",
+	"guide": "With a loop you can tell a computer to do something over and over again, but vary one or more ways the computer does it. We will tell the computer to draw a rectangle with a color as we do always, but this time we need a way of telling the computer that it won’t be the same every time. How do we do this? With variables. Loops have a standard variable that\n\n#### Code\n    stroke 0\n    bold true\n    for y in [ 0 .. 10 ]\n        moveTo 250, y * 50\n        text y\n        moveTo 0, y * 50\n        color darken blue, y * 3\n        rectangle 500, 50\n\n#### What you’ll hack\nNow that you’ve got a few pixel art creations under your belt, why not bring them in here and give them the full background treatment they deserve! \n"
 }
