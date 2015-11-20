@@ -83,5 +83,6 @@
 		}
     ],
     "completion_text": "Well done you created a nice stack of tetrominoes, why not try changing the color of some of the blocks or drawing a few more to fill the screen.",
-    "cover": "pixel-tetris.png"
+    "cover": "pixel-tetris.png",
+	"guide": "Tetris (1984) was the first videogame to be exported from the USSR to the US, going on to sell 170 million copies. We're going to make some Tetris blocks, which are known as tetriminos. Each tetrimino is made up of four squares that connect together, and fit together in interesting ways. In the game, tetriminos fall down endlessly and the goal is to make as many of them fit together without empty spaces.\n\nWe’ll construct a perfect cube out of four tetriminos using commands you are already familiar with: rectangle, move, and color.\n\n#### Code\n    stroke 0\n    moveTo 150, 200\n    color crimson\n    rectangle 50, 150\n    move 0, 100\n    rectangle 100, 50\n    move 50, -100\n    color seagreen\n    rectangle 50, 100\n    move 50, 50\n    rectangle 50, 100\n    move 50, -100\n    color indigo\n    rectangle 50, 200\n    move -150, 0\n    color gold\n    rectangle 150, 50\n    move 100, 0\n    rectangle 50, 100\n\n#### What you’ll hack\nNow you’ve made a cube, give each tetrimino whatever color you want, and add in more.\n"
 }
