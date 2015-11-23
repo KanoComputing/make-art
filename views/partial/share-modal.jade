@@ -1,5 +1,5 @@
 .modal-overlay(ng-if='shareModal && creation')
-    .modal-inner.modal-next-challenge.center
+    .modal-inner.modal-share-creation.center
 
         .cover(ng-style='{ "background-image": "url(" + creation.cover_url + ")" }')
 
@@ -7,7 +7,7 @@
 
         .detail(ng-if='!mailTab')
 
-            div
+            .title
                 span {{ creation.title }}
 
             p.description {{ creation.description }}
@@ -24,6 +24,8 @@
                 img(src='/assets/button-icons/twitter-white.png' title='Share on Twitter')
 
         .mail-tab.center(ng-if='mailTab')
+            span Share by email
+            
             form(ng-submit='sendMail(creation)' name='mailForm')
                 .box.box-danger(ng-if='error') {{ error }}
 
