@@ -1,0 +1,92 @@
+.modal-share-creation
+    top 50px
+    width 480px
+    margin-left -240px
+    padding 0
+    
+    .title
+        text-transform capitalize
+        text-align center
+        font-size 28px
+        
+        span
+            font-weight bold
+            margin-left 8px
+        
+        p
+            text-transform none
+            font-size 18px
+
+    .cover
+        min-height 400px
+        background-size cover
+        background-position center center
+
+    .detail
+        padding 20px
+        
+    .buttons
+        display(inline-flex)
+        justify-content(space-between)
+        align-items(center)
+        margin-bottom 20px
+        font-weight bold
+        font-size 18px
+        
+        a.button
+            color color-white
+            padding 10px
+            border-radius(3px)
+            
+            &:last-child
+                margin-right 0
+            
+            &.button-mail
+                button-color(color-blue)
+                padding 11px 8px
+                margin-left 10px
+                
+                i
+                    position relative
+                    left 0
+                    right 0
+                    opacity 1
+                    font-weight bold
+            
+            &.button-facebook
+                button-color(#31488b)
+                
+            &.button-twitter
+                button-color(#55acee)
+                
+            &.button-facebook, &.button-twitter
+                
+                img
+                    width 16px
+                    height 16px
+    
+    .mail-tab
+        margin 15px 0 20px
+        
+        span
+            font-weight bold
+        
+        form
+            display(flex)
+            align-items(center)
+            justify-content(center)
+            margin-top 10px
+        
+        .email, button
+            display inline-block
+        
+        .email input
+            padding 8px
+            margin-right 10px
+            border 2px solid color-grey-lighter
+            border-radius(3px)
+            width 240px
+            font-size 14px
+        
+        button
+            background-color color-blue
