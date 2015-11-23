@@ -5,13 +5,15 @@
 
         //- button.close(ng-click='closeShareModal()'): i.icon-cross
 
-        .detail
+        .detail(ng-if='!mailTab')
 
-            .title: span {{ creation.title }}
+            div
+                span {{ creation.title }}
 
             p.description {{ creation.description }}
 
         .buttons(ng-if='!mailTab')
+            | Share Now: 
             a.button.button-mail(ng-click='openMailTab()')
                 i.icon-mail
 
@@ -21,9 +23,11 @@
             a.button.button-twitter(ng-href='{{ buildURL(creation) }}')
                 img(src='/assets/button-icons/twitter-white.png' title='Share on Twitter')
 
-        .mail-tab(ng-if='mailTab')
-            form(ng-submit='submit()' name='mailForm')
+        .mail-tab.center(ng-if='mailTab')
+            form(ng-submit='sendMail(creation)' name='mailForm')
                 .box.box-danger(ng-if='error') {{ error }}
 
                 .email
-                    input.filename(ng-model='creation.email', placeholder='Email address', type='email', required)
+                    input(ng-model='creation.email', placeholder='Email address', type='email', required)
+
+                button.button-success(type='submit', ng-disabled='mailForm.$invalid', ng-class='{ "disabled" : mailForm.$invalid }') Send
