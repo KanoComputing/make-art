@@ -21,6 +21,16 @@
             "type": "normal"
         },
         {
+            "id": "pixelhack",
+            "name": "Pixel Hack",
+            "description": "This is a group of challenges for the hour of code",
+            "cover": "world_covers/pixelhack",
+            "world_path": "worlds/pixelhack",
+            "start_date": "2015-12-07T06:00:00",
+            "css_class": "pixelhack",
+            "type": "campaign"
+        },
+        {
             "id": "summercamp",
             "name": "Summercamp",
             "description": "This is a first set of challenges which will make you started with Make-Art",
@@ -30,16 +40,6 @@
             "dependency": ["medium"],
             "type": "campaign"
 
-        },
-        {
-            "id": "pixelhack",
-            "name": "Pixel Hack",
-            "description": "This is a group of challenges for the hour of code",
-            "cover": "world_covers/basic",
-            "world_path": "worlds/pixelhack",
-            "visibility": "hidden",
-            "css_class": "pixelhack",
-            "type": "campaign"
         },
         {
             "id": "mischiefweek2015",
