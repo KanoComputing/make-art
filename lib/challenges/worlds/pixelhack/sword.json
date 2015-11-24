@@ -1,7 +1,7 @@
 {
     "id": "sword",
     "title": "Diamond Sword",
-    "description": "",
+    "description": "Code a sword forged from pure diamonds",
     "code": "",
     "startAt": 2,
     "steps": [
