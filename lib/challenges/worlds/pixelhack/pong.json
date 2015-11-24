@@ -28,7 +28,7 @@
     ],
     "completion_text": "Well done! You've recreated one of the first videogames, pretty boring to look at right? Why not try clicking on the 100 after the first moveTo command and using the slider to reposition the paddle.",
 	"gallery": {
-	        "cover_path": "challenges/images/pixelremixes",
+	        "cover_path": "/assets/challenges/images/pixelremixes/",
 			"remixes": ["pong-white.png", "pong-movecolor.png", "pong-movepaddles.png"]
 	},
     "cover": "pixel-pong.png",
