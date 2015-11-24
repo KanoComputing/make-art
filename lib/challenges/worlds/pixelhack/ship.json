@@ -56,7 +56,7 @@
     ],
     "completion_text": "It might not look like much but simple graphics like this were where videogames we know today began and games like this lay the foundations for the 3D graphics we're used to today.",
 	"gallery": {
-	        "cover_path": "challenges/images/pixelremixes",
+	        "cover_path": "/assets/challenges/images/pixelremixes/",
 			"remixes": ["ship-golden.png", "ship-thrust.png", "ship-sleek.png"]
 	},
     "cover": "pixel-ship.png",
