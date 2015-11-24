@@ -32,4 +32,6 @@
                 .email
                     input(ng-model='creation.email', placeholder='Email address', type='email', required)
 
-                button.button-success(type='submit', ng-disabled='mailForm.$invalid', ng-class='{ "disabled" : mailForm.$invalid }') Send
+                button.button-success(type='submit', ng-disabled='mailForm.$invalid', ng-class='{ "disabled" : mailForm.$invalid }', ng-if='!loading') Send
+
+                .spinner(ng-if='loading')
