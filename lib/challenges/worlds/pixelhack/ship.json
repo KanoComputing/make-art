@@ -1,7 +1,7 @@
 {
     "id": "ship",
     "title": "Asteroids Ship",
-    "description": "",
+    "description": "Code a vector spaceship using lines",
     "code": "",
     "startAt": 2,
     "steps": [

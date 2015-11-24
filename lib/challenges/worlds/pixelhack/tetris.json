@@ -1,7 +1,7 @@
 {
     "id": "tetris",
     "title": "Tetris",
-    "description": "Stack some Tetris blocks",
+    "description": "Stack some Tetris blocks with code",
     "code": "",
     "startAt": 2,
     "steps": [

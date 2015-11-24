@@ -2,7 +2,7 @@
     "id": "chest",
     "title": "Loot Chest",
     "description": "",
-    "code": "",
+    "code": "A mysterious chest found with your code",
     "startAt": 2,
     "steps": [
 		{

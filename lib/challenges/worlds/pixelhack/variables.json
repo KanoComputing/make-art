@@ -1,7 +1,7 @@
 {
     "id": "variables",
     "title": "Variables",
-    "description": "Variables",
+    "description": "Use variables to create a maze dwelling ghost",
     "code": "",
     "startAt": 2,
     "steps": [
