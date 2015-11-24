@@ -81,6 +81,10 @@
 		}
     ],
     "completion_text": "Nice! Now because you have used a variable, you can click on the ghostsize number and use the slider to change the value. Notice how the eyes stay the same size because they are hardcoded numbers and everything else scales together.",
+	"gallery": {
+	        "cover_path": "challenges/images/pixelremixes",
+			"remixes": ["ghost-big.png", "ghost-tired.png", "ghost-scared.png"]
+	},
     "cover": "pixel-variables.png",
 	"guide": "#### What you'll make\n1. This classic ghost character first appeared in Pac-Man (1980), because it's a ghost we're going to need a spooky background **type** `background navy`\n2. Next turn the stroke off by typing `stroke 0`\n3. Set the `color` to red\n4. Here we're introducing something new, we're going to set the size of the ghost using a variable, variables are a way of repeating the same value in your code **type** `ghostsize = 100`\n5. Move the cursor up to where the ghosts head will start **type** `move 0,-50`\n6. We're going to use that variable we set earlier to draw the head, because we set the variable to 100 this command will create a circle 100 pixels big **type** `circle ghostsize`\n7. We're going to use the variable again, this time with the move command, by placing a minus symbol in front of it this command becomes the same as moving -100,0 **type** `move -ghostsize,0`\n8. Time to draw the rest of the ghost's body, because the body is relative to the head size we will use the variable again **type** `square ghostsize * 2`\n9. We're going to give it some eyes so we need to use the variable again to make sure they're positioned correctly on the head **type** `move ghostsize / 2`\n10. Set the `color` to white\n11. Start the eyes off with a `circle` 20 pixels big\n12. Now set the iris color **type** `color blue`\n13. Finally draw the iris **type** `circle 10`\n14. We're gonna use the variable one last time to position the other eye correctly **type** `move ghostsize,0`\n15. Repeat the process for the second eye, set the `color` to white\n16. Draw a `circle` 20 pixels big\n17. Set the `color` to blue\n18. Finally draw a `circle` 10 pixels big"
 }
