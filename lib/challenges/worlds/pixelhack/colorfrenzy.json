@@ -18,9 +18,9 @@
             "validate": "    for y in \\[ 0 .. 20 \\]"
         },
         {
-            "hint": "Set the color with `color rotate red, x * 10`",
-            "solution": "        color rotate red, x * 10",
-            "validate": "        color rotate red, x \\* 10"
+            "hint": "Set the color with `color rotate red, x + y * 10`",
+            "solution": "        color rotate red, x + y * 10",
+            "validate": "        color rotate red, x \\+ y \\* 10"
         },
         {
             "hint": "Move into position with `moveTo x * 25, y * 25`",
