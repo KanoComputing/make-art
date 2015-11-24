@@ -1,8 +1,8 @@
 {
     "id": "mage",
     "title": "RPG Mage",
-    "description": "",
-    "code": "Draw an 8-bit Aqua Mage",
+    "description": "Draw an 8-bit Aqua Mage",
+    "code": "",
     "startAt": 2,
     "steps": [
 		{
