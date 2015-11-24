@@ -22,9 +22,18 @@
             h4.hint(ng-bind-html='hint | markdown', ng-if='hint')
 
         .inner.center(ng-if='completed && !fatherDay')
-            h4 {{ successMessage() }}
-            a.button.button-success(ng-click='goToNext()') {{ next ? 'Next' : 'Done' }} &rsaquo;
-            //- a.button.button-success(ng-if='!next', ng-click='openFinishedGame()') Done &rsaquo;
+            .completion
+                .text
+                    h4 {{ successMessage() }}
+                    a.button.button-success(ng-click='goToNext()') {{ next ? 'Next' : 'Done' }} &rsaquo;
+
+                .gallery(ng-if='content.gallery')
+                    h4 Can you hack this challenge?
+                    .remixes
+                        .image(
+                            ng-repeat='remix in content.gallery.remixes',
+                            ng-style='{"background-image": "url(" + content.gallery.cover_path + remix + ")"}'
+                            )
 
         .inner.center(ng-if='completed && fatherDay')
 
