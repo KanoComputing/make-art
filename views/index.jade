@@ -12,6 +12,7 @@ html(lang='en',  xmlns:ng="http://angularjs.org")
             
         //- Styles
         link(href='/css/main.css', rel='stylesheet', type='text/css')
+          
         script(type="text/javascript").
             (function() {
                 window.XMLHttpRequest = window.XMLHttpRequest || (function() {
@@ -19,6 +20,8 @@ html(lang='en',  xmlns:ng="http://angularjs.org")
                 });
             })();
         title Draw
+        
+        script(src='/js/vendor/xtag.js')
 
     body(id="ng-app", ng-app='draw', class=offline ? 'offline' : 'online')
         script(src='/js/vendor/console-polyfill.js', type='text/javascript')
@@ -33,6 +36,8 @@ html(lang='en',  xmlns:ng="http://angularjs.org")
                 span Feedback
                 .kano-feedback
             include partial/feedback
+            include partial/login-form
+        
 
         //- Vendor
         script(src='/js/vendor/angular.min.js', type='text/javascript')
