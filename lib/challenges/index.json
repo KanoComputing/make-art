@@ -26,9 +26,9 @@
             "description": "This is a group of challenges for the hour of code",
             "cover": "world_covers/pixelhack",
             "world_path": "worlds/pixelhack",
-            "start_date": "2015-12-07T06:00:00",
             "css_class": "pixelhack",
-            "type": "campaign"
+            "type": "campaign",
+			"certificate_after": "2"
         },
         {
             "id": "summercamp",
