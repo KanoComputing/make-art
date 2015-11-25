@@ -23,5 +23,7 @@
                     button.button-success(type='submit', ng-disabled='exportForm.$invalid', ng-class='{ "disabled" : exportForm.$invalid }', ng-if='!loading')
                         i(ng-class='"icon-" + action')
                         |  {{ action }}
+
+                    button.button-success.skip(ng-if='optional && !loading', ng-click='skipSharing()') Skip
                     
                     .spinner(ng-if='loading')
