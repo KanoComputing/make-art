@@ -24,6 +24,7 @@
 
     .detail
         padding 20px
+        border-top 2px solid color-grey-light
         
     .buttons
         display(inline-flex)
@@ -64,6 +65,15 @@
                 img
                     width 16px
                     height 16px
+    
+    .skip-sharing
+        margin-bottom 20px
+        
+        button.button-success
+            background-color color-grey-light
+            
+            &:hover
+                background-color darken(color-grey-light, 5)
     
     .mail-tab
         margin 15px 0 20px

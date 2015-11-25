@@ -30,7 +30,9 @@
             "css_class": "pixelhack",
             "type": "campaign",
             "certificate_after": 3,
-            "teachers_guide": "/guides/pixelhack.pdf"
+            "teachers_guide": "/guides/pixelhack.pdf",
+            "share_strategy": "optional",
+            "type": "campaign"
         },
         {
             "id": "summercamp",
