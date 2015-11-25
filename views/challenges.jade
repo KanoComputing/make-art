@@ -43,6 +43,23 @@
                 .detail
                     h5 Playground
 
+        li(ng-if='selectedWorld.certificate_after')
+
+            a.highlight(href="{{getCertificateUrl()}}" target="{{isCertAchieved(selectedWorld) ? '_blank' : '_self'}}" ng-class='{ locked: !isCertAchieved(selectedWorld)}')
+
+                .cover(ng-style='{"background-image": "url(/assets/challenges/images/cert-icon.png)"}')
+
+                .detail
+                    h5 Certificate
+        li(ng-if='selectedWorld.teachers_guide')
+
+            a.highlight(href='/assets{{selectedWorld.teachers_guide}}')
+
+                .cover(ng-style='{"background-image": "url(/assets/challenges/images/teachers-guide.png)"}')
+
+                .detail
+                    h5 Teacher's Guide
+
     div(ng-if='shares && selectedWorld.type !== "campaign"')
 
         h3.page-title
