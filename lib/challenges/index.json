@@ -28,7 +28,7 @@
             "world_path": "worlds/pixelhack",
             "css_class": "pixelhack",
             "type": "campaign",
-            "certificate_after": 3,
+            "certificate_after": 2,
             "teachers_guide": "/guides/pixelhack.pdf"
         },
         {
