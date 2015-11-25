@@ -28,6 +28,7 @@
             "world_path": "worlds/pixelhack",
             "start_date": "2015-12-07T06:00:00",
             "css_class": "pixelhack",
+            "share_strategy": "optional",
             "type": "campaign"
         },
         {
