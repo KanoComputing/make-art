@@ -1,15 +1,17 @@
 {
     "challenges": [
-        "./hoc-001-target",
-        "./hoc-002-swissflag",
-        "./hoc-003-variables",
-        "./hoc-004-swedishflag",
-        "./hoc-005-spookyeyes",
-        "./hoc-006-steve",
-        "./hoc-007-forloop",
-        "./hoc-008-gradient",
-        "./hoc-009-colorfrenzy",
-        "./hoc-010-grassblock",
-        "./hoc-011-diamondblock"
+        "./pong",
+        "./ship",
+        "./tetris",
+        "./chest",
+        "./variables",
+        "./sword",
+        "./steve",
+        "./mage",
+        "./forloop",
+        "./gradient",
+        "./colorfrenzy",
+        "./grassblock",
+        "./diamondblock"
     ]
 }
