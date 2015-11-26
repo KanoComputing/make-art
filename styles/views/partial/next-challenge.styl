@@ -1,0 +1,149 @@
+.modal-next-challenge
+    top 50px
+    width 480px
+    margin-left -240px
+    padding 0
+
+    h3, p
+        text-transform none
+
+    h3
+        smooth-font()
+        font-weight bold
+        margin-bottom 5px
+
+    p
+        font-size 18px
+    
+    .title
+        text-transform none
+        display flex
+        align-items center
+        font-size 28px
+        
+        span
+            font-weight bold
+            margin-left 8px
+            flex 5
+            order 1
+            text-align left
+        
+        a
+            flex 1
+            order 2
+
+    .cover
+        min-height 400px
+        background-size cover
+        background-position center center
+
+    .detail
+        padding 20px
+        
+    .social-sharing
+        background-color lighten(color-grey-lighter, 2)
+        border-top 2px solid color-grey-light
+        padding 10px
+        display(flex)
+        align-items(center)
+        align-content(center)
+        justify-content(space-between)
+        opacity 0.75
+        text-transform none
+            
+        .image
+            display inline-block
+            width 70px
+            order 1
+            padding 0
+            margin-right 8px
+            
+            img
+                border-radius(3px)
+                display block
+                width 70px
+                height 70px
+        
+        .detail
+            display(inline-flex)
+            flex-direction(column)
+            align-self(flex-start)
+            order(2)
+            flex(65)
+            padding 0
+            ellipsis()
+            text-align left
+            
+            .title, .description
+                display block
+                ellipsis()
+                font-size 18px
+            
+            .title
+                font-weight bold
+                margin 0
+        
+        .buttons
+            display(inline-flex)
+            flex-direction(row)
+            justify-content(space-between)
+            align-self(center)
+            flex(35)
+            order(3)
+            
+            a.button
+                color color-white
+                padding 10px
+                border-radius(3px)
+                
+                &:last-child
+                    margin-right 0
+                
+                &.button-mail
+                    button-color(color-blue)
+                    padding 11px 8px
+                    
+                    i
+                        position relative
+                        left 0
+                        right 0
+                        opacity 1
+                        font-weight bold
+                
+                &.button-facebook
+                    button-color(#31488b)
+                    
+                &.button-twitter
+                    button-color(#55acee)
+                    
+                &.button-facebook, &.button-twitter
+                    
+                    img
+                        width 16px
+                        height 16px
+    
+    .mail-tab
+        background-color lighten(color-grey-lighter, 2)
+        border-top 2px solid color-grey-light
+        margin 0
+        padding 10px 0 20px
+        
+        span
+            font-weight bold
+        
+        form
+            margin-top 10px
+        
+        .email
+            margin-bottom 15px
+            
+            input
+                padding 8px
+                margin-right 10px
+                border 2px solid color-grey-lighter
+                border-radius(3px)
+                width 240px
+                font-size 14px
+        
+        button
+            background-color color-blue
