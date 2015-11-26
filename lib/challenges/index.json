@@ -8,7 +8,6 @@
             "world_path": "worlds/basic",
             "css_class": "basic-challenges",
             "type": "normal"
-
         },
         {
             "id": "medium",
@@ -17,7 +16,9 @@
             "cover": "world_covers/medium",
             "world_path": "worlds/medium",
             "css_class": "medium",
-            "dependency": ["basic"],
+            "dependency": [
+                "basic"
+            ],
             "type": "normal"
         },
         {
@@ -30,7 +31,7 @@
             "type": "campaign",
             "certificate_after": 2,
             "teachers_guide": "/guides/PixelHackEducatorGuide.zip",
-			"share_strategy": "optional"
+            "share_strategy": "optional"
         },
         {
             "id": "summercamp",
@@ -39,9 +40,10 @@
             "cover": "world_covers/summercamp",
             "world_path": "worlds/summercamp",
             "css_class": "_summercamp",
-            "dependency": ["medium"],
+            "dependency": [
+                "medium"
+            ],
             "type": "campaign"
-
         },
         {
             "id": "mischiefweek2015",
