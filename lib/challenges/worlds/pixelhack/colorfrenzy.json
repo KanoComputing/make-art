@@ -1,0 +1,47 @@
+{
+    "id": "colorfrenzy",
+    "title": "Color Frenzy",
+    "description": "Use a loop to draw an 8-bit pattern.",
+    "startAt": 2,
+    "steps": [
+        {
+            "hint": "We’ll just use solid shapes with no stroke. So **type** `stroke 0`.",
+            "solution": "stroke 0"
+        },
+        {
+            "hint": "For this one lets use two loops, one to go horizontally across the screen, and one to go down vertically. **Type** `for x in [ 0 .. 20 ]`",
+            "solution": "for x in [ 0 .. 20 ]"
+        },
+        {
+            "hint": "The second loop should be `for y in [ 0 .. 20 ]`",
+            "solution": "    for y in [ 0 .. 20 ]",
+            "validate": "    for y in \\[ 0 .. 20 \\]"
+        },
+        {
+            "hint": "Set the color with `color rotate red, x + y * 10`",
+            "solution": "        color rotate red, x + y * 10",
+            "validate": "        color rotate red, x \\+ y \\* 10"
+        },
+        {
+            "hint": "Move into position with `moveTo x * 25, y * 25`",
+            "solution": "        moveTo x * 25, y * 25",
+            "validate": "        moveTo x \\* 25, y \\* 25"
+        },
+        {
+            "hint": "Finally, lets add squares. **Type** `square 25`",
+            "solution": "        square 25",
+            "validate": "        square 25"
+        }
+    ],
+    "completion_text": "Well done! The rotate function cycles through colours creating a rainbow effect.",
+    "gallery": {
+        "cover_path": "/assets/challenges/images/pixelremixes/",
+        "remixes": [
+            "color-quint.png",
+            "color-multi.png",
+            "color-random.png"
+        ]
+    },
+    "cover": "pixel-colorfrenzy.png",
+    "guide": "#### What you'll make\n1. We’ll just use solid shapes with no stroke. So **type** `stroke 0`.\n2. For this one lets use two loops, one to go horizontally across the screen, and one to go down vertically. **Type** `for x in [ 0 .. 20 ]`\n3. The second loop should be `for y in [ 0 .. 20 ]`\n4. Set the color with `color rotate red, x * 10`\n5. Move into position with `moveTo x * 25, y * 25`\n6. Finally, lets add some randomness to the mix. **Type** `square random 20, 25`\n\n#### What you’ll hack\nBecause you are travelling across both the x and the y axes, you can have some pretty crazy color combinations. Using math you can make the rainbows repeat in interesting ways, and then change up how you draw on the screen using a random function. There are loads of variations, see what you can find!\n\n#### Briefing\nWe used one loop in the previous exercises to repeat actions, and then change one thing about the loop. In this challenge, we are going to be looping twice. The first loop is going to loop across the x coordinates—then the second loop is going to loop across the y coordinates. Because we have two loops, we are able to control color going in two different directions, and draw squares in two different directions. These “nested” loops will allow us to cover the canvas with color.\n"
+}

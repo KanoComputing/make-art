@@ -1,0 +1,93 @@
+{
+    "id": "variables",
+    "title": "Variables",
+    "description": "Use variables to create a maze dwelling ghost",
+    "code": "",
+    "startAt": 2,
+    "steps": [
+        {
+            "hint": "This classic ghost character first appeared in Pac-Man (1980), because it's a ghost we're going to need a spooky background **type** `background navy`",
+            "solution": "background navy"
+        },
+        {
+            "hint": "Next turn the stroke off by typing `stroke 0`",
+            "solution": "stroke 0"
+        },
+        {
+            "hint": "Set the `color` to red",
+            "solution": "color red"
+        },
+        {
+            "hint": "Here we're introducing something new, we're going to set the size of the ghost using a variable, variables are a way of repeating the same value in your code **type** `ghostsize = 100`",
+            "solution": "ghostsize = 100"
+        },
+        {
+            "hint": "Move the cursor up to where the ghosts head will start **type** `move 0,-50`",
+            "solution": "move 0,-50"
+        },
+        {
+            "hint": "We're going to use that variable we set earlier to draw the head, because we set the variable to 100 this command will create a circle 100 pixels big **type** `circle ghostsize`",
+            "solution": "circle ghostsize"
+        },
+        {
+            "hint": "We're going to use the variable again, this time with the move command, by placing a minus symbol in front of it this command becomes the same as moving -100,0 **type** `move -ghostsize,0`",
+            "solution": "move -ghostsize,0"
+        },
+        {
+            "hint": "Time to draw the rest of the ghost's body, because the body is relative to the head size we will use the variable again **type** `square ghostsize * 2`",
+            "solution": "square ghostsize * 2",
+            "validate": "square ghostsize \\* 2"
+        },
+        {
+            "hint": "We're going to give it some eyes so we need to use the variable again to make sure they're positioned correctly on the head **type** `move ghostsize / 2`",
+            "solution": "move ghostsize / 2"
+        },
+        {
+            "hint": "Set the `color` to white",
+            "solution": "color white"
+        },
+        {
+            "hint": "Start the eyes off with a `circle` 20 pixels big",
+            "solution": "circle 20"
+        },
+        {
+            "hint": "Now set the iris color **type** `color blue`",
+            "solution": "color blue"
+        },
+        {
+            "hint": "Finally draw the iris **type** `circle 10`",
+            "solution": "circle 10"
+        },
+        {
+            "hint": "We're gonna use the variable one last time to position the other eye correctly **type** `move ghostsize,0`",
+            "solution": "move ghostsize,0"
+        },
+        {
+            "hint": "Repeat the process for the second eye, set the `color` to white",
+            "solution": "color white"
+        },
+        {
+            "hint": "Draw a `circle` 20 pixels big",
+            "solution": "circle 20"
+        },
+        {
+            "hint": "Set the `color` to blue",
+            "solution": "color blue"
+        },
+        {
+            "hint": "Finally draw a `circle` 10 pixels big",
+            "solution": "circle 10"
+        }
+    ],
+    "completion_text": "Nice! Now because you have used a variable, you can click on the ghostsize number and use the slider to change the value. Notice how the eyes stay the same size because they are hardcoded numbers and everything else scales together.",
+    "gallery": {
+        "cover_path": "/assets/challenges/images/pixelremixes/",
+        "remixes": [
+            "ghost-big.png",
+            "ghost-tired.png",
+            "ghost-scared.png"
+        ]
+    },
+    "cover": "pixel-variables.png",
+    "guide": "#### New words\n**variable** = value | ghostsize = 100\n\nCreates a word that is assigned a value and can be used elsewhere.\n\n#### What you'll make\n1. This classic ghost character first appeared in Pac-Man (1980), because it's a ghost we're going to need a spooky background **type** `background navy`\n2. Next turn the stroke off by typing `stroke 0`\n3. Set the `color` to red\n4. Here we're introducing something new, we're going to set the size of the ghost using a variable, variables are a way of repeating the same value in your code **type** `ghostsize = 100`\n5. Move the cursor up to where the ghosts head will start **type** `move 0,-50`\n6. We're going to use that variable we set earlier to draw the head, because we set the variable to 100 this command will create a circle 100 pixels big **type** `circle ghostsize`\n7. We're going to use the variable again, this time with the move command, by placing a minus symbol in front of it this command becomes the same as moving -100,0 **type** `move -ghostsize,0`\n8. Time to draw the rest of the ghost's body, because the body is relative to the head size we will use the variable again **type** `square ghostsize * 2`\n9. We're going to give it some eyes so we need to use the variable again to make sure they're positioned correctly on the head **type** `move ghostsize / 2`\n10. Set the `color` to white\n11. Start the eyes off with a `circle` 20 pixels big\n12. Now set the iris color **type** `color blue`\n13. Finally draw the iris **type** `circle 10`\n14. We're gonna use the variable one last time to position the other eye correctly **type** `move ghostsize,0`\n15. Repeat the process for the second eye, set the `color` to white\n16. Draw a `circle` 20 pixels big\n17. Set the `color` to blue\n18. Finally draw a `circle` 10 pixels big\n\n#### What you’ll hack\nBecause you used a variable for all the different versions of the ghost’s body, you can change it once to see how the ghost’s body resizes! If you notice, the eyes position change with the ghostsize variable, but the eyes’ size don’t. Could you set up another variable that controls the size of the eyes?\n\n#### Briefing\nWhen you write a computer program you are telling a computer to do a series of tasks. And when you run the program, the computer reads all of the tasks and does them. So far we have written programs that will run the same way every single time you do the program, but what if we want the program to be different every time we run the program? If we wanted to vary the way in which the program works every time it was run, we need to use variables.\n\nA variable is a word that takes on the meaning of something else. And when you use it somewhere else it will pass on the word it means. In this challenge you will base the size of many of the ghost’s parts off of a variable. Changing the variable with a slider will then affect all of the different individual shapes sizes, giving you the power to make the whole ghost bigger or smaller at once!\n"
+}

@@ -1,0 +1,127 @@
+{
+    "id": "steve",
+    "title": "Steve",
+    "description": "Make Steve's face with simple shapes.",
+    "startAt": 2,
+    "steps": [
+        {
+            "hint": "We are going to just be using solid squares and rectangles, so lets turn our stroke off with `stroke 0`",
+            "solution": "stroke 0"
+        },
+        {
+            "hint": "Set the background to lightbrown",
+            "solution": "background lightbrown"
+        },
+        {
+            "hint": "Set the drawing color for the hair with `color brown`.",
+            "solution": "color brown"
+        },
+        {
+            "hint": "The hair starts in the top-left corner, so **type** `moveTo 0, 0`.",
+            "solution": "moveTo 0, 0"
+        },
+        {
+            "hint": "We’ll draw a rectangle, which takes a width and height parameter. **Type** `rectangle 500, 150`",
+            "solution": "rectangle 500, 150"
+        },
+        {
+            "hint": "Set the drawing color to lightbrown**type** `color lightbrown`",
+            "solution": "color lightbrown"
+        },
+        {
+            "hint": "Move into position for the forehead, **type** `moveTo 100, 100`",
+            "solution": "moveTo 100, 100"
+        },
+        {
+            "hint": "Now to draw the forehead, **type** `rectangle 300, 50`",
+            "solution": "rectangle 300, 50"
+        },
+        {
+            "hint": "For the eyes, set the color to white",
+            "solution": "color white"
+        },
+        {
+            "hint": "Now let’s move with `moveTo 100, 200`",
+            "solution": "moveTo 100, 200"
+        },
+        {
+            "hint": "Draw the eye with `square 50`",
+            "solution": "square 50"
+        },
+        {
+            "hint": "For the other eye, **type** `moveTo 350, 200`",
+            "solution": "moveTo 350, 200"
+        },
+        {
+            "hint": "And another square of size 50",
+            "solution": "square 50"
+        },
+        {
+            "hint": "For the iris we’ll use the color purple.",
+            "solution": "color purple"
+        },
+        {
+            "hint": "Move to `150, 200`.",
+            "solution": "moveTo 150, 200"
+        },
+        {
+            "hint": "Draw a square of size 50.",
+            "solution": "square 50"
+        },
+        {
+            "hint": "Move to `300, 200`.",
+            "solution": "moveTo 300, 200"
+        },
+        {
+            "hint": "And draw the final iris with a square of size 50.",
+            "solution": "square 50"
+        },
+        {
+            "hint": "We’ll draw the nose next. **Type** `color brown`",
+            "solution": "color brown"
+        },
+        {
+            "hint": "Move into position with `moveTo 200, 250`.",
+            "solution": "moveTo 200, 250"
+        },
+        {
+            "hint": "Draw out a rectangle of width `100` and height `50`.",
+            "solution": "rectangle 100, 50"
+        },
+        {
+            "hint": "For the mouth set the drawing color to `saddlebrown`.",
+            "solution": "color saddlebrown"
+        },
+        {
+            "hint": "Move to `150, 300`",
+            "solution": "moveTo 150, 300"
+        },
+        {
+            "hint": "The mouth should be wide rectangle. **Type** `200, 100`.",
+            "solution": "rectangle 200, 100"
+        },
+        {
+            "hint": "To make the mouth just right we need to cut out a bit of the top. Set the drawing color to the same color as the skin. **Type** `color lightbrown`",
+            "solution": "color lightbrown"
+        },
+        {
+            "hint": "Move to `200, 300`.",
+            "solution": "moveTo 200, 300"
+        },
+        {
+            "hint": "Finish up with `rectangle 100, 50` ",
+            "solution": "rectangle 100, 50"
+        }
+    ],
+    "completion_text": "Well done! Our character is looking good. What parts can you change to make the character look more like you?",
+    "gallery": {
+        "cover_path": "/assets/challenges/images/pixelremixes/",
+        "remixes": [
+            "Steve-blue.png",
+            "Steve-beard.png",
+            "Steve-Alex.png"
+        ]
+    },
+    "cover": "pixel-steve.png",
+    "guide": "#### What you'll make\n1. We are going to just be using solid squares and rectangles, so lets turn our stroke off with `stroke 0`\n2. Set the background to lightbrown\n3. Set the drawing color for the hair with `color brown`.\n4. The hair starts in the top-left corner, so **type** `moveTo 0, 0`.\n5. We’ll draw a rectangle, which takes a width and height parameter. **Type** `rectangle 500, 150`\n6. Set the drawing color to lightbrown**type** `color lightbrown`\n7. Move into position for the forehead, **type** `moveTo 100, 100`\n8. Now to draw the forehead, **type** `rectangle 300, 50`\n9. For the eyes, set the color to white\n10. Now let’s move with `moveTo 100, 200`\n11. Draw the eye with `square 50`\n12. For the other eye, **type** `moveTo 350, 200`\n13. And another square of size 50\n14. For the iris we’ll use the color purple.\n15. Move to `150, 200`.\n16. Draw a square of size 50.\n17. Move to `300, 200`.\n18. And draw the final iris with a square of size 50.\n19. We’ll draw the nose next. **Type** `color brown`\n20. Move into position with `moveTo 200, 250`.\n21. Draw out a rectangle of width `100` and height `50`.\n22. For the mouth set the drawing color to `saddlebrown`.\n23. Move to `150, 300`\n24. The mouth should be wide rectangle. **Type** `200, 100`.\n25. To make the mouth just right we need to cut out a bit of the top. Set the drawing color to the same color as the skin. **Type** `color lightbrown`\n26. Move to `200, 300`.\n27. Finish up with `rectangle 100, 50` \n\n#### What you’ll hack\nThe shapes here are simple, but that is what makes it so easy to remix and hack! Change the colors of the skin, eyes, or hair, or add in your own facial features to win!\n\n#### Briefing\nSteve is the hero of Minecraft. Not very much is known about Steve: who he is, where he came from, and whether he is even human. But he is the face of the most sensational game and building system of the decade. This simple composition with just squares and rectangles is brought to life with beautiful colors.\n"
+}
