@@ -29,8 +29,8 @@
             "start_date": "2015-11-26T06:00:00",
             "css_class": "pixelhack",
             "type": "campaign",
-            "certificate_after": 3,
-            "teachers_guide": "/guides/pixelhack.pdf",
+            "certificate_after": 2,
+            "teachers_guide": "/guides/PixelHackEducatorGuide.zip",
             "share_strategy": "optional"
         },
         {
