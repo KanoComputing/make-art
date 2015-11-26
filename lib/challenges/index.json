@@ -28,7 +28,10 @@
             "world_path": "worlds/pixelhack",
             "start_date": "2015-12-07T06:00:00",
             "css_class": "pixelhack",
-            "type": "campaign"
+            "type": "campaign",
+            "certificate_after": 3,
+            "teachers_guide": "/guides/pixelhack.pdf",
+            "share_strategy": "optional"
         },
         {
             "id": "summercamp",
