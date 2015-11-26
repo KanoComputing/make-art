@@ -24,6 +24,6 @@
                         i(ng-class='"icon-" + action')
                         |  {{ action }}
 
-                    button.button-success.skip(ng-if='optional && !loading', ng-click='skipSharing()') Skip
+                    button.button-success.skip(ng-if='optional && !loading && !loggedIn', ng-click='skipSharing()') Skip
                     
                     .spinner(ng-if='loading')
