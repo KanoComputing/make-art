@@ -20,16 +20,10 @@
                     if offline
                         button.export-wallpaper(ng-click='exportWallpaper()', ng-disabled='exportForm.$invalid', ng-class='{ "disabled" : exportForm.$invalid }') Save Wallpaper
 
-                    button.button-success(type='submit', ng-disabled='exportForm.$invalid', ng-class='{ "disabled" : exportForm.$invalid }')
+                    button.button-success(type='submit', ng-disabled='exportForm.$invalid', ng-class='{ "disabled" : exportForm.$invalid }', ng-if='!loading')
                         i(ng-class='"icon-" + action')
                         |  {{ action }}
 
-                    //- a.button.button-email(ng-click='sendMail()')
-                    //-     img(src='/assets/button-icons/email.png' title='Share via Email')
-
-                    //- a.button.button-facebook(ng-click='facebookShare()')
-                    //-     img(src='/assets/button-icons/facebook-white.png' title='Share on Facebook')
-
+                    button.button-success.skip(ng-if='optional && !loading', ng-click='skipSharing()') Skip
                     
-                    //- a.button.button-twitter(target='_new', type="button", href="https://twitter.com/intent/tweet?text=I%E2%80%99ve+signed+up+to+start+hacking+challenges+with+code+for+%23MischiefWeek%21+http://www.kano.me/mischiefweek")
-                    //-     img(src='/assets/button-icons/twitter-white.png' title='Share on Twitter')
+                    .spinner(ng-if='loading')

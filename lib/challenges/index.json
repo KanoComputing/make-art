@@ -29,7 +29,8 @@
             "css_class": "pixelhack",
             "type": "campaign",
             "certificate_after": 2,
-            "teachers_guide": "/guides/PixelHackEducatorGuide.zip"
+            "teachers_guide": "/guides/PixelHackEducatorGuide.zip",
+			"share_strategy": "optional"
         },
         {
             "id": "summercamp",

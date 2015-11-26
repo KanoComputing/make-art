@@ -1,0 +1,40 @@
+.modal-overlay(ng-if='shareModal && creation')
+    .modal-inner.modal-share-creation.center
+
+        .cover(ng-style='{ "background-image": "url(" + creation.cover_url + ")" }')
+
+        //- button.close(ng-click='closeShareModal()'): i.icon-cross
+
+        .detail(ng-if='!mailTab')
+
+            .title
+                span {{ creation.title }}
+
+            p.description {{ creation.description }}
+
+        .buttons(ng-if='!mailTab')
+            | Share Now: 
+            a.button.button-mail(ng-click='openMailTab()')
+                i.icon-mail
+
+            a.button.button-facebook(ng-click='facebookShare(creation)')
+                img(src='/assets/button-icons/facebook-white.png' title='Share on Facebook')
+
+            a.button.button-twitter(ng-href='{{ buildURL(creation) }}')
+                img(src='/assets/button-icons/twitter-white.png' title='Share on Twitter')
+
+        .skip-sharing(v-if='selectedWorld.share_strategy === "optional"')
+            button.button-success(ng-click='skipSocialSharing()') Skip Sharing
+
+        .mail-tab.center(ng-if='mailTab')
+            span Share by email
+            
+            form(ng-submit='sendMail(creation)' name='mailForm')
+                .box.box-danger(ng-if='error') {{ error }}
+
+                .email
+                    input(ng-model='creation.email', placeholder='Email address', type='email', required)
+
+                button.button-success(type='submit', ng-disabled='mailForm.$invalid', ng-class='{ "disabled" : mailForm.$invalid }', ng-if='!loading') Send
+
+                .spinner(ng-if='loading')
