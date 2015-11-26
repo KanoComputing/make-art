@@ -4,7 +4,7 @@
     border 2px solid color-grey
     margin-bottom 20px
     width 100%
-    font-size 1.3rem
+    font-size 1rem
     padding 9px 15px
     box-sizing border-box
     font-weight 200
@@ -16,7 +16,13 @@
     color color-white
     display none
 
+.register-label
+    font-weight normal
+    font-size 1.2rem
+
 kano-username-field
+    label
+        @extend .register-label
     .generate-nickname
         float right
         font-size 0.8em
@@ -25,12 +31,15 @@ kano-username-field
         cursor pointer
         font-weight 500
         border-bottom 1px dotted
+        font-size 1rem
     #input
         @extend .register-input
     .errors
         @extend .register-errors
 
 kano-password-field
+    label
+        @extend .register-label
     #input
         @extend .register-input
     .errors
@@ -43,12 +52,19 @@ kano-password-field
         top 13px
         width 30px
         height 17px
+        background-size 30px 17px
     .password-indicator.show-password
-        background url('/assets/auth/show-icon.png')
+        background-image url('/assets/auth/show-icon.png')
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+            background-image url('/assets/auth/show-icon@2x.png')
     .password-indicator.hide-password
-        background url('/assets/auth/hide-icon.png')
+        background-image url('/assets/auth/hide-icon.png')
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+            background-image url('/assets/auth/hide-icon@2x.png')
 
 kano-email-field
+    label
+        @extend .register-label
     #input
         @extend .register-input
     .errors
