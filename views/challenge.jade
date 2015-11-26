@@ -130,22 +130,6 @@
                     i.icon-game
                     |  Hour Of Code
   
-.modal-overlay(ng-if='nextModal')
-    .modal-inner.modal-challenge-info.center
-
-        .cover(ng-style='{ "background-image": "url(/assets/challenges/images/" + next.cover +")" }')
-
-        button.close(ng-click='closeNextModal()'): i.icon-cross
-
-        .detail
-
-            h3 {{ next.title }}
-
-            p.description {{ next.description }}
-
-            p.description.small(ng-if='next.locked') Come back tomorrow to continue this challenge
-
-            a.button.button-success(ng-href='/challenges/{{selectedWorld.id}}' ng-if='next.locked') {{selectedWorld ? 'Back to ' + selectedWorld.name : 'Menu'}}
-            a.button.button-success(ng-href='/challenge/{{selectedWorld.id}}/{{next.id}}' ng-if='!next.locked') Start
-
+include partial/next-modal
+include partial/share-modal
 include partial/mail-preview
