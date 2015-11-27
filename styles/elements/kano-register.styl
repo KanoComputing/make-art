@@ -1,0 +1,110 @@
+.register-input
+    border-radius 4px
+    background color-grey-lighter
+    border 2px solid color-grey
+    margin-bottom 20px
+    width 100%
+    font-size 1rem
+    padding 9px 15px
+    box-sizing border-box
+    font-weight 200
+
+.register-errors
+    background color-red
+    padding 10px
+    border-radius 10px
+    color color-white
+    display none
+
+.register-label
+    font-weight normal
+    font-size 1.2rem
+
+kano-username-field
+    label
+        @extend .register-label
+    .generate-nickname
+        float right
+        font-size 0.8em
+        color color-orange
+        font-weight 800
+        cursor pointer
+        font-weight 500
+        border-bottom 1px dotted
+        font-size 1rem
+    #input
+        @extend .register-input
+    .errors
+        @extend .register-errors
+
+kano-password-field
+    label
+        @extend .register-label
+    #input
+        @extend .register-input
+    .errors
+        @extend .register-errors
+    .password-field
+        position relative
+    .password-indicator
+        position absolute
+        right 10px
+        top 13px
+        width 30px
+        height 17px
+        background-size 30px 17px
+    .password-indicator.show-password
+        background-image url('/assets/auth/show-icon.png')
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+            background-image url('/assets/auth/show-icon@2x.png')
+    .password-indicator.hide-password
+        background-image url('/assets/auth/hide-icon.png')
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+            background-image url('/assets/auth/hide-icon@2x.png')
+
+kano-email-field
+    label
+        @extend .register-label
+    #input
+        @extend .register-input
+    .errors
+        @extend .register-errors
+
+kano-signup-form
+    text-align left
+    #kano-signup-form-errors
+        @extend .register-errors
+    .buttons
+        margin 10px
+        text-align center
+        .register-button
+            width 100%
+            margin-bottom 30px
+
+
+kano-login-form
+    text-align left
+    #kano-login-form-errors
+        @extend .register-errors
+    #spinner
+        display none
+    #errors
+        @extend .register-errors
+    .actions
+        text-align center
+    .success
+        width 100%
+    kano-password-field
+        .password-indicator
+            display none
+
+
+.register-heading
+    color color-orange
+    font-weight 600
+    text-align center
+    margin-bottom 40px
+
+.auth-form
+    h3
+        @extend .register-heading

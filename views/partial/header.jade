@@ -16,9 +16,10 @@ header: .page-width
 
     ul.nav.nav-right(ng-cloak)
 
-        li(ng-if='!offline && !loggedIn'): a(href='#', ng-click='login()')
+        li(ng-if='!offline && !loggedIn'): a(href='#', ng-click='auth.openModal()')
             i.icon-login
             |  Login
+        
 
         li(ng-if='!offline && loggedIn')
             a.user-display(ng-href='http://world.kano.me/users/{{ user.username }}', target='_blank')
