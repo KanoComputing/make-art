@@ -1,16 +1,16 @@
 .banner
-    a(href="#", ng-click='banner.openModal()')
-        span Pixel Hack
-        |   - coming soon. Your adventure begins on the 7th of December.
+    a(href="/challenges/pixelhack")
+        span Pixel Hack:
+        |    code your way through the history of video game art.
 
     .modal-overlay(ng-if='banner.showModal')
-        .modal-inner.modal-challenge-info.center
+        .modal-inner.modal-challenge-info.center(ng-style="{'display': banner.showModal ? 'block' : 'none'}")
 
             .cover
 
             button.close(ng-click='banner.closeModal()'): i.icon-cross
 
-            .detail(ng-style="{'display': banner.showModal ? 'block' : 'none'}")
+            .detail
                 h3 Welcome to Pixel Hack
 
                 p Start your coding adventure by drawing Pong and other retro games. Move on to master  8-bit art for your own Minecraft characters and more. Show us how you can hack our challenges. Earn your Pixel Master Badge.

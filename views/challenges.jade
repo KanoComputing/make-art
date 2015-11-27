@@ -53,7 +53,7 @@
                     h5 Certificate
         li(ng-if='selectedWorld.teachers_guide')
 
-            a.highlight(href='/assets{{selectedWorld.teachers_guide}}')
+            a.highlight(href='/assets{{selectedWorld.teachers_guide}}',target='_blank')
 
                 .cover(ng-style='{"background-image": "url(/assets/challenges/images/teachers-guide.png)"}')
 
@@ -90,19 +90,6 @@
                     .detail
                         h5 Browse more
 
-.modal-overlay(ng-if='selectedChallenge')
-    .modal-inner.modal-challenge-info.center
-
-        .cover(ng-style='{ "background-image": "url(/assets/challenges/images/" + selectedChallenge.cover +")" }')
-
-        button.close(ng-click='deselectedChallenge()'): i.icon-cross
-
-        .detail
-
-            h3 {{ selectedChallenge.title }}
-
-            p.description {{ selectedChallenge.description }}
-
-            a.button.button-success(ng-href='/challenge/{{selectedWorld.id}}/{{selectedChallenge.id}}') Start
+include ./partial/selected-challenge
 
 include ./partial/promo-popup

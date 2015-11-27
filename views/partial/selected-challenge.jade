@@ -1,0 +1,14 @@
+.modal-overlay(ng-if='selectedChallenge')
+    .modal-inner.modal-challenge-info.center
+
+        .cover(ng-style='{ "background-image": "url(/assets/challenges/images/" + selectedChallenge.cover +")" }')
+
+        button.close(ng-click='deselectedChallenge()'): i.icon-cross
+
+        .detail
+
+            h3 {{ selectedChallenge.title }}
+
+            p.description {{ selectedChallenge.description }}
+
+            a.button.button-success(ng-href='/challenge/{{selectedWorld.id}}/{{selectedChallenge.id}}') Start
