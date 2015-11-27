@@ -1,0 +1,5 @@
+.close-button(ng-click='close()') &times;
+.auth-form(ng-cloak)
+    h3 {{mode === 'login' ? 'Login to Your Account' : 'Create your account'}}
+    kano-login-form#kano-login-form(ng-show="mode === 'login'")
+    kano-signup-form#kano-login-form(ng-show="mode === 'signup'")
