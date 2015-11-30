@@ -46,7 +46,7 @@
         li(ng-if='selectedWorld.certificate_after')
 
             a.highlight(
-                        ng-href="{{ isPi ? '' : getCertificateUrl() }}",
+                        ng-href="{{getCertificateUrl()}}",
                         target="{{isCertAchieved(selectedWorld) ? '_blank' : '_self'}}",
                         ng-class='{ locked: !isCertAchieved(selectedWorld)}',
                         ng-click='checkCertOnPi($event)'
