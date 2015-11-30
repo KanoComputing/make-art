@@ -45,7 +45,12 @@
 
         li(ng-if='selectedWorld.certificate_after')
 
-            a.highlight(href="{{getCertificateUrl()}}" target="{{isCertAchieved(selectedWorld) ? '_blank' : '_self'}}" ng-class='{ locked: !isCertAchieved(selectedWorld)}')
+            a.highlight(
+                        ng-href="{{ isPi ? '' : getCertificateUrl() }}",
+                        target="{{isCertAchieved(selectedWorld) ? '_blank' : '_self'}}",
+                        ng-class='{ locked: !isCertAchieved(selectedWorld)}',
+                        ng-click='checkCertOnPi($event)'
+                        )
 
                 .cover(ng-style='{"background-image": "url(/assets/challenges/images/cert-icon.png)"}')
 
@@ -91,5 +96,5 @@
                         h5 Browse more
 
 include ./partial/selected-challenge
-
+include ./partial/certificate-modal
 include ./partial/promo-popup
