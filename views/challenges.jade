@@ -45,13 +45,18 @@
 
         li(ng-if='selectedWorld.certificate_after')
 
-            a.highlight(href="{{getCertificateUrl()}}" target="{{isCertAchieved(selectedWorld) ? '_blank' : '_self'}}" ng-class='{ locked: !isCertAchieved(selectedWorld)}')
+            a.highlight(
+                        ng-href="{{getCertificateUrl()}}",
+                        target="{{isCertAchieved(selectedWorld) ? '_blank' : '_self'}}",
+                        ng-class='{ locked: !isCertAchieved(selectedWorld)}',
+                        ng-click='checkCertOnPi($event)'
+                        )
 
                 .cover(ng-style='{"background-image": "url(/assets/challenges/images/cert-icon.png)"}')
 
                 .detail
                     h5 Certificate
-        li(ng-if='selectedWorld.teachers_guide')
+        li(ng-if='selectedWorld.teachers_guide && !cfg.OFFLINE')
 
             a.highlight(href='/assets{{selectedWorld.teachers_guide}}',target='_blank')
 
@@ -91,5 +96,5 @@
                         h5 Browse more
 
 include ./partial/selected-challenge
-
+include ./partial/certificate-modal
 include ./partial/promo-popup
