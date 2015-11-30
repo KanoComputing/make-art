@@ -28,7 +28,7 @@ var gulp = require('gulp'),
 
 var paths = {
     views      : { watch: [ 'views/**/*.jade', 'content/**/*' ], src: 'views/**/*.jade', out: 'www' },
-    browserify : { watch: [ 'lib/**/*', 'content/**/*', 'lib/**/**/*', 'node_modules/kano-world-sdk/**/*' ] , src: 'lib/index.js', out: 'www/js' },
+    browserify : { watch: [ 'lib/**/*', 'content/**/*', 'lib/**/**/*' ] , src: 'lib/index.js', out: 'www/js' },
     styles     : { watch: 'styles/**/*.styl', src: 'styles/main.styl', out: 'www/css' },
     content    : {watch: 'lib/challenges/**/*'}
 };
