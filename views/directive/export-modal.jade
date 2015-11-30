@@ -1,7 +1,7 @@
 .modal-overlay(ng-if='open'): .modal-inner.export-menu
 
     button.close(ng-click='close()') &times;
-    h2.center {{ action }} drawing
+    h2.center {{ action === 'share' ? 'save to gallery' : 'save' }}
 
     .row
 
@@ -22,7 +22,7 @@
 
                     button.button-success(type='submit', ng-disabled='exportForm.$invalid', ng-class='{ "disabled" : exportForm.$invalid }', ng-if='!loading')
                         i(ng-class='"icon-" + action')
-                        |  {{ action }}
+                        |  Save
 
                     button.button-success.skip(ng-if='optional && !loading && !loggedIn', ng-click='skipSharing()') Skip
                     
