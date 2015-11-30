@@ -51,7 +51,7 @@
 
                 .detail
                     h5 Certificate
-        li(ng-if='selectedWorld.teachers_guide')
+        li(ng-if='selectedWorld.teachers_guide && !isPi')
 
             a.highlight(href='/assets{{selectedWorld.teachers_guide}}',target='_blank')
 
