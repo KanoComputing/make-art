@@ -18,7 +18,7 @@
             "solution": "move 0, -70"
         },
         {
-            "hint": "'Function' is the word we use to define what we are drawing. Let’s draw a line that starts where we just moved the cursor and ends at the bottom left. We type where we want the line to end after the function, so type **type** `line -50,150` Try changing the Y value from 150 to -150 watch what happens. The line goes up, above where we started at -50. Let’s move it back down to 150!",
+            "hint": "'Function' is the word we use to define what we are drawing. Let’s draw a line that starts where we just moved the cursor and ends at the bottom left. We type where we want the line to end after the function, so **type** `line -50,150` Try changing the Y value from 150 to -150 watch what happens. The line goes up, above where we started at -50. Let’s move it back down to 150!",
             "solution": "line -50,150"
         },
         {

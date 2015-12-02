@@ -46,7 +46,7 @@
             "solution": "move 50,50"
         },
         {
-            "hint": "To make an S shape we create the another `rectangle` of 50 by 100",
+            "hint": "To make an S shape we create another `rectangle` of 50 by 100",
             "solution": "rectangle 50,100"
         },
         {

@@ -5,7 +5,7 @@
     "startAt": 2,
     "steps": [
         {
-            "hint": "We're going to recreate the classic game Snake using the power of For Loops. First let's set a dirt background**type** `background tan`",
+            "hint": "We're going to recreate the classic game Snake using the power of For Loops. First let's set a dirt background - **type** `background tan`",
             "solution": "background tan"
         },
         {
@@ -21,7 +21,7 @@
             "solution": "color olivedrab"
         },
         {
-            "hint": "Draw an `circle` 30 pixels big for the head",
+            "hint": "Draw a `circle` 30 pixels big for the head",
             "solution": "circle 30"
         },
         {
