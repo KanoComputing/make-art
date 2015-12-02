@@ -23,7 +23,7 @@
             a.button.button-twitter(ng-href='{{ buildURL(creation) }}')
                 img(src='/assets/button-icons/twitter-white.png' title='Share on Twitter')
 
-        .skip-sharing(v-if='selectedWorld.share_strategy === "optional"')
+        .skip-sharing(ng-if='selectedWorld.share_strategy === "optional"')
             button.button-success(ng-click='skipSocialSharing()') Skip Sharing
 
         .mail-tab.center(ng-if='mailTab')
