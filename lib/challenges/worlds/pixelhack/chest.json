@@ -14,7 +14,7 @@
             "solution": "stroke 0"
         },
         {
-            "hint": "Position the cursor to the top left corner of where the chest will be **type** `move -150,-100`",
+            "hint": "Position the cursor to the top left corner of where the chest will be - **type** `move -150,-100`",
             "solution": "move -150,-100"
         },
         {

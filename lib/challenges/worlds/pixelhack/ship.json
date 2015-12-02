@@ -26,7 +26,7 @@
             "solution": "move -50,150"
         },
         {
-            "hint": "We draw a line inwards and upwards to form the thruster of the ship **type** `line 50,-25`",
+            "hint": "We draw a line inwards and upwards to form the thruster of the ship - **type** `line 50,-25`",
             "solution": "line 50,-25"
         },
         {
