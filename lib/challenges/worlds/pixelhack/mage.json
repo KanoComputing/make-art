@@ -150,7 +150,7 @@
             "solution": "rectangle 240,20"
         },
         {
-            "hint": "Shift down a row on our grid- **type** `move -20,20`",
+            "hint": "Shift down a row on our grid - **type** `move -20,20`",
             "solution": "move -20,20"
         },
         {

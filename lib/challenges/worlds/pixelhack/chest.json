@@ -14,7 +14,7 @@
             "solution": "stroke 0"
         },
         {
-            "hint": "Position the cursor to the to left corner of where the chest will be **type** `move -150,-100`",
+            "hint": "Position the cursor to the top left corner of where the chest will be **type** `move -150,-100`",
             "solution": "move -150,-100"
         },
         {
@@ -30,7 +30,7 @@
             "solution": "color lightyellow"
         },
         {
-            "hint": "With 8-bit art, simple details add a lot to an object add a 25 by 100 `rectangle` to act as sheen in the gold",
+            "hint": "With 8-bit art, simple details add a lot to an object, add a 25 by 100 `rectangle` to give the gold a nice sheen",
             "solution": "rectangle 25,100"
         },
         {
@@ -50,11 +50,11 @@
             "solution": "move 0,60"
         },
         {
-            "hint": "Switch your `color` back to gold`",
+            "hint": "Switch your `color` back to gold",
             "solution": "color gold"
         },
         {
-            "hint": "Draw the seam with a `rectangle` 250 by 25`",
+            "hint": "Draw the seam with a `rectangle` 250 by 25",
             "solution": "rectangle 250,25"
         },
         {
@@ -62,7 +62,7 @@
             "solution": "color lightyellow"
         },
         {
-            "hint": "Continue the highlight effect by drawing a `square` 25 big`",
+            "hint": "Continue the highlight effect by drawing a `square` 25 big",
             "solution": "square 25"
         },
         {
@@ -74,7 +74,7 @@
             "solution": "color gold"
         },
         {
-            "hint": "Draw a `rectangle` 100 by 75`",
+            "hint": "Draw a `rectangle` 100 by 75",
             "solution": "rectangle 100,75"
         },
         {

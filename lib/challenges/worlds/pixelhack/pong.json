@@ -10,7 +10,7 @@
             "solution": "circle 15"
         },
         {
-            "hint": "Next we need to draw some paddles. We use the moveTo function to position objects. The first number after MoveTo tells you where the object goes horizontally, or left and right. The second number tells you where the object goes vertically, or up and down.  **type** `moveTo 30,100`",
+            "hint": "Next we need to draw some paddles. We use the moveTo function to position objects. The first number after MoveTo tells you where the object goes the object goes horizontally (left and right). The second number tells you where the object goes vertically (up and down).  **type** `moveTo 30,100`",
             "solution": "moveTo 30,100"
         },
         {
@@ -22,7 +22,7 @@
             "solution": "moveTo 450,300"
         },
         {
-            "hint": "Finally type draw the opponents paddle, the first number is the width and the second the height. **type** `rectangle 20, 100`",
+            "hint": "Finally, let’s draw the opponent's paddle, the first number is the width and the second the height. **type** `rectangle 20, 100`",
             "solution": "rectangle 20, 100"
         }
     ],
