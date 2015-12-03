@@ -30,7 +30,8 @@
             "type": "campaign",
             "certificate_after": 2,
             "teachers_guide": "/guides/PixelHackEducatorGuide.zip",
-            "share_strategy": "optional"
+            "share_strategy": "optional",
+            "updateForm": true
         },
         {
             "id": "summercamp",
