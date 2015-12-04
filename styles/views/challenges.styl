@@ -38,6 +38,65 @@
                 
         .header
             bg-image("pixelhack/pixelhack-header", 100% 160px, false, no-repeat)
+            display(flex)
+            justify-content(flex-end)
+            
+            .updates-form
+                background-color rgba(color-black, .6)
+                display(flex)
+                align-items(flex-start)
+                flex-direction(column)
+                width 300px
+                padding 20px
+                
+                h4
+                    text-transform uppercase
+                    font-weight bold
+                    margin-top 15px
+                    margin-bottom 5px
+                    font-size 18px
+                    smooth-font()
+                
+                form
+                    display(inline-flex)
+                    margin 0
+                    width 100%
+                
+                    input, button
+                        background none
+                        color white
+                        border 1px solid darken(color-white, 20)
+                        margin 0
+                        padding 12px 10px
+                        font-weight bold
+                        smooth-font()
+                    
+                    input
+                        border-radius(3px 0 0 3px)
+                        outline none
+                        flex(70)
+                        font-family 'Bariol', sans-serif
+                        font-size 16px
+                    
+                    button
+                        border-left none
+                        border-radius(0 3px 3px 0)
+                        flex(30)
+                        color color-white
+                        font-size 12px
+                
+                .error, .success
+                    align-self(center)
+                    border-radius(3px)
+                    padding 7px 15px
+                    margin-top 5px
+                    font-size 14px
+                
+                .error
+                    background-color color-red    
+                    
+                .success
+                    background-color color-green
     
     &.mischiefweek2015
         .image            
