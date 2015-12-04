@@ -1,6 +1,42 @@
-editor .controls
-    position absolute
-    z-index 1
-    right 10px
-    bottom 10px
-    z-index 8
+editor
+    .controls
+        background-color #393B3E
+        display(flex)
+        justify-content(center)
+        padding 5px 0
+        
+        a
+            background-color #393B3E
+            display inline-block
+            padding 5px 10px
+            margin-right 10px
+            color color-grey-dark
+            font-weight bold
+            border-radius(3px)
+            smooth-font()
+            
+            .round
+                display inline-block
+                width 6px
+                height 6px
+                margin-right 7px
+                border-radius 50%
+                border 2px solid color-grey-dark
+            
+            &:hover, &.active
+                background-color #6E757E
+                color color-white
+                
+                .round
+                    color color-white
+                    border-color color-white
+            
+            &.active
+                .round
+                    background-color color-white
+        
+        &.full
+            background none
+            position fixed
+            bottom 10px
+            right 10px
