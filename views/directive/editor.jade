@@ -71,10 +71,10 @@ div(ng-show='tab === "code"')
     .editor-wrap(ng-class='{ "has-title": !!title }'): .editor-area(editor, ng-class='{ disabled: !editable }')
 
 .editor-guide(ng-show='tab === "guide"'): .inner
-    .teachers-guide(ng-if='teachers_guide && !$root.cfg.OFFLINE')
+    .teachers-guide(ng-if='teachers_guide')
         a.guide(ng-href='{{ "/assets" + teachers_guide }}', target='_blank')
             i.icon-zip
             span Download teacher's guide
 
-    h4 Guide
-    .guide(ng-bind-html="guide | markdown")
+    h4(ng-if='guide') Guide
+    .guide(ng-bind-html="guide | markdown", ng-if='guide')
