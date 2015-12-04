@@ -107,8 +107,7 @@ gulp.task('apify-challenges', ['copy-challenges'], function (next) {
             'sales_popup_after',
             'certificate_after',
             'teachers_guide',
-            'updateForm',
-            'updateFormURL'
+            'updateForm'
         ],
         countNext = 0,
         formattedIndex;

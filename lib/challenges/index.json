@@ -31,8 +31,10 @@
             "certificate_after": 2,
             "teachers_guide": "/guides/PixelHackEducatorGuide.zip",
             "share_strategy": "optional",
-            "updateForm": true,
-            "updateFormURL": "https://docs.google.com/forms/d/1nTJ-waAVLQCO3myxKMDQLafL5Fnf9uTPtiejuH-74sY/formResponse"
+            "updateForm": {
+                "url": "https://docs.google.com/forms/d/1nTJ-waAVLQCO3myxKMDQLafL5Fnf9uTPtiejuH-74sY/formResponse",
+                "field": "entry.1965349241"
+            }
         },
         {
             "id": "summercamp",
