@@ -50,25 +50,31 @@ ul.editor-tabs(ng-if='tabbed')
 
 div(ng-show='tab === "code"')
 
-    .controls(ng-if='controls')
+    .editor-wrap(ng-class='{ "has-title": !!title }')
 
-        a.button.button-editor.button-icon(
-            href='#',
-            ng-click='toggleAutocomplete()',
-            title='Toggle autocomplete',
-            ng-class='{ active: autocomplete }'
-            )
-            i.icon-autocomplete
+        .editor-area(editor, ng-class='{ disabled: !editable }')
 
-        a.button.button-editor.button-icon(
-            href='#',
-            ng-click='toggleFullScreen()',
-            title='Toggle fullscreen',
-            ng-class='{ active: fullScreen }'
-            )
-            i.icon-full-screen
+        .controls(ng-if='controls' ng-class='{ full: fullScreen }')
 
-    .editor-wrap(ng-class='{ "has-title": !!title }'): .editor-area(editor, ng-class='{ disabled: !editable }')
+            a(
+                href='#',
+                ng-click='toggleAutocomplete()',
+                title='Toggle autocomplete',
+                ng-class='{ active: autocomplete }'
+                )
+                .autocomplete
+                    .round
+                    span Autocomplete
+
+            a(
+                href='#',
+                ng-click='toggleFullScreen()',
+                title='Toggle fullscreen',
+                ng-class='{ active: fullScreen }'
+                )
+                .full-screen-control
+                    .round
+                    span Fullscreen
 
 .editor-guide(ng-show='tab === "guide"'): .inner
     .teachers-guide(ng-if='teachers_guide')
