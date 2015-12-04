@@ -10,7 +10,7 @@
                 | Challenges
 
     .header
-        .updates-form(ng-if='selectedWorld.updateForm')
+        .updates-form(ng-if='selectedWorld.updateForm && !loggedIn')
             h4 Get Kano Updates
             form(name='updateForm', ng-submit='submit()')
                 input(placeholder='Enter your email address', ng-model='formData.email', type='email', required)
