@@ -6,23 +6,23 @@
     "startAt": 2,
     "steps": [
         {
-            "hint": "Pong (1972) was one of the first home game consoles. It is an incredibly basic table tennis game. And what do we need to play table tennis? First, a ball. **type** `circle 15`",
+            "hint": "Pong (1972) was one of the first home game consoles. It is an incredibly basic table tennis game. And what do we need to play table tennis? First, a ball. **Type** `circle 15`",
             "solution": "circle 15"
         },
         {
-            "hint": "Next we need to draw some paddles. We use the moveTo function to position objects. The first number after MoveTo tells you where the object goes the object goes horizontally (left and right). The second number tells you where the object goes vertically (up and down).  **type** `moveTo 30,100`",
+            "hint": "Next we need to draw some paddles. We use the moveTo function to position objects. The first number after MoveTo tells you where the object goes the object goes horizontally (left and right). The second number tells you where the object goes vertically (up and down).  **Type** `moveTo 30,100`",
             "solution": "moveTo 30,100"
         },
         {
-            "hint": "We'll draw the paddles using the rectangle function, for the first paddle **type** `rectangle 20, 100`",
+            "hint": "We'll draw the paddles using the rectangle function, for the first paddle - **type** `rectangle 20, 100`",
             "solution": "rectangle 20, 100"
         },
         {
-            "hint": "It's no fun to play Pong alone so we need an opponent **type** `moveTo 450,300`",
+            "hint": "It's no fun to play Pong alone so we need an opponent - **type** `moveTo 450,300`",
             "solution": "moveTo 450,300"
         },
         {
-            "hint": "Finally, let’s draw the opponent's paddle, the first number is the width and the second the height. **type** `rectangle 20, 100`",
+            "hint": "Finally, let’s draw the opponent's paddle, the first number is the width and the second the height. **Type** `rectangle 20, 100`",
             "solution": "rectangle 20, 100"
         }
     ],

@@ -9,15 +9,15 @@
             "solution": "background tan"
         },
         {
-            "hint": "Turn off the stroke **type** `stroke 0`",
+            "hint": "Turn off the stroke - **type** `stroke 0`",
             "solution": "stroke 0"
         },
         {
-            "hint": "First we position the head of the snake **type** `moveTo 80,250`",
+            "hint": "First we position the head of the snake - **type** `moveTo 80,250`",
             "solution": "moveTo 80,250"
         },
         {
-            "hint": "Set a snake-like color **type** `color olivedrab`",
+            "hint": "Set a snake-like color - **type** `color olivedrab`",
             "solution": "color olivedrab"
         },
         {
