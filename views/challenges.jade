@@ -10,6 +10,14 @@
                 | Challenges
 
     .header
+        .updates-form(ng-if='selectedWorld.updateForm && !loggedIn')
+            h4 Get Kano Updates
+            form(name='updateForm', ng-submit='submit()')
+                input(placeholder='Enter your email address', ng-model='formData.email', type='email', required)
+                button(type='submit', ng-disabled='updateForm.$invalid', ng-class='{ "disabled" : updateForm.$invalid }') Sign Up
+
+            .error(ng-if='error') {{ error }}
+            .success(ng-if='success') {{ success }}
 
     ul.worlds-list(ng-if='!selectedWorld' )
         li.world-item(ng-repeat='world in worlds' ng-if='isWorldInIndex(world)')
