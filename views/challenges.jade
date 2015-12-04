@@ -12,8 +12,8 @@
     .header
         .updates-form(ng-if='selectedWorld.updateForm')
             h4 Get Kano Updates
-            form(name='updateForm', ng-submit='submit(email)')
-                input(name='entry.1965349241', placeholder='Enter your email address', ng-model='formData.email', type='email', required)
+            form(name='updateForm', ng-submit='submit()')
+                input(placeholder='Enter your email address', ng-model='formData.email', type='email', required)
                 button(type='submit', ng-disabled='updateForm.$invalid', ng-class='{ "disabled" : updateForm.$invalid }') Sign Up
 
             .error(ng-if='error') {{ error }}
