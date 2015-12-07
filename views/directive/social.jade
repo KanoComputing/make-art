@@ -1,0 +1,30 @@
+.social-sharing
+    .buttons
+        a.button.button-facebook(ng-click='facebookShare()')
+            img(src='/assets/button-icons/facebook-white.png' title='Share on Facebook')
+
+        a.button.button-twitter(ng-href='twitterShare()')
+            img(src='/assets/button-icons/twitter-white.png' title='Share on Twitter')
+
+        a.button.button-mail(ng-click='toggleMailModal()')
+            i.icon-mail
+
+    .modal-overlay(ng-if='mailModal')
+
+        .modal-inner.modal-mail-sender.center
+            button.close(ng-click='toggleMailModal()'): i.icon-cross
+
+            h4 Share by email
+            
+            form(ng-submit='sendMail()' name='mailForm')
+                .box.box-danger(ng-if='error') {{ error }}
+
+                .email
+                    input(ng-model='mail.address', placeholder='Email address', type='email', required)
+
+                .message
+                    textarea(ng-model='mail.message')
+
+                button.button-success(type='submit', ng-disabled='mailForm.$invalid', ng-class='{ "disabled" : mailForm.$invalid }', ng-if='!loading') Send
+
+                .spinner(ng-if='loading')
