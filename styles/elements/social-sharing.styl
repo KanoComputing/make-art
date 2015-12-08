@@ -1,4 +1,4 @@
-.social-sharing
+.pixelhack .social-sharing
     position fixed
     right 0
     top 0
@@ -9,8 +9,10 @@
     .buttons
         display(flex)
         flex-direction(column)
-        justify-content(center)
+        align-self(center)
         padding 10px
+        background-color color-white
+        border-radius(3px 0 0 3px)
     
     a.button
         margin 0 0 10px 0
@@ -46,3 +48,37 @@
             img
                 width 16px
                 height 16px
+
+.modal-mail-sender
+    width 400px
+    margin-left -200px
+    padding 20px
+    
+    h4
+        font-weight bold
+        smooth-font()
+    
+    input, textarea
+        display block
+        margin 0 0 10px
+        padding 12px 10px
+        width 100%
+        background color-white
+        border 1px solid color-ruler
+        box-sizing border-box
+        box-shadow 0 1px 0 0 rgba(#000, .1) inset
+        border-radius(3px)
+        font-family font-body
+        font-size 16px
+        font-weight bold
+        color lighten(color-black, 10)
+        smooth-font()
+        
+        &:focus
+            border 1px solid color-primary
+            outline 0
+    
+    textarea
+        height 180px
+        resize none
+        
