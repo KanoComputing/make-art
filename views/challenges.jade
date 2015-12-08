@@ -2,6 +2,8 @@
     .image.pull-left
     .image.pull-right
 
+    social-sharing(type='"main"' ng-style='{display: selectedWorld.id === "pixelhack" ? "block": "none"}')
+
     h3.page-title(ng-if='selectedWorld')
         span {{ selectedWorld ? selectedWorld.name : 'Challenges'}}
         .quests
