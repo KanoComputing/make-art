@@ -2,6 +2,8 @@
     .image.pull-left
     .image.pull-right
 
+    social-sharing(type='"world"' ng-if='selectedWorld.socialText')
+
     h3.page-title(ng-if='selectedWorld')
         span {{ selectedWorld ? selectedWorld.name : 'Challenges'}}
         .quests
