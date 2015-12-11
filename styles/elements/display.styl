@@ -48,9 +48,35 @@ display
         background #f5f5f5
 
     .actions
+        position relative
         padding-bottom 20px
         padding-top 10px
         text-align center
+        
+        .position-indicator
+            display inline-block
+            margin 7px 15px
+            position absolute
+            left 0
+            font-weight bold
+            font-size 13px
+            text-transform uppercase
+            color darken(color-grey-dark, 10)
+            pointer-events none
+
+            i   
+                &.icon-mouse-pointer
+                    font-size 12px
+                    padding-right 6px
+                &.icon-plus
+                    font-size 9px
+                    padding-right 5px
+
+            .pos-value
+                position relative
+                display inline-block
+                width 30px
+                margin-left 3px
 
         .action
             smooth-font()
@@ -108,30 +134,3 @@ display
         p
             font-size 14px
             font-style italic
-
-    .toolbar
-        position absolute
-        bottom 0
-        left 0
-        right 0
-        padding 10px
-        font-weight bold
-
-        .position-indicator
-            font-size 13px
-            position absolute
-            right 10px
-            bottom 10px
-            text-transform uppercase
-            color rgba(color-grey-darker, .5)
-            pointer-events none
-
-            & i:before
-                font-size 10px
-                padding-right 6px
-
-            .pos-value
-                position relative
-                display inline-block
-                width 30px
-                margin-left 3px
