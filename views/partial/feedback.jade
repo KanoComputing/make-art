@@ -4,20 +4,22 @@
         form(target='fake-target', action='http://docs.google.com/forms/d/1sGwcGfjhUK2oz52VRMbnv_1j3a5wMlD0TU0Ms9EpzO8/formResponse', method='POST')
             h1.center: b Feedback
             .form-container
-              .mood-selector
-                  input(type='radio', name='entry.1965278482', value='rating-1', id='group_1965278482_1', checked="checked")
-                  .mood-container: label(class='mood rating-1', for='group_1965278482_1')
-                  input(type='radio', name='entry.1965278482', value='rating-2', id='group_1965278482_2')
-                  .mood-container: label(class='mood rating-2', for='group_1965278482_2')
-                  input(type='radio', name='entry.1965278482', value='rating-3', id='group_1965278482_3')
-                  .mood-container: label(class='mood rating-3', for='group_1965278482_3')
-                  input(type='radio', name='entry.1965278482', value='rating-4', id='group_1965278482_4')
-                  .mood-container: label(class='mood rating-4', for='group_1965278482_4')
-                  input(type='radio', name='entry.1965278482', value='rating-5', id='group_1965278482_5')
-                  .mood-container: label(class='mood rating-5', for='group_1965278482_5')
+                .mood-selector
+                    input(type='radio', name='entry.1965278482', value='rating-1', id='group_1965278482_1', checked="checked")
+                    .mood-container: label(class='mood rating-1', for='group_1965278482_1')
+                    input(type='radio', name='entry.1965278482', value='rating-2', id='group_1965278482_2')
+                    .mood-container: label(class='mood rating-2', for='group_1965278482_2')
+                    input(type='radio', name='entry.1965278482', value='rating-3', id='group_1965278482_3')
+                    .mood-container: label(class='mood rating-3', for='group_1965278482_3')
+                    input(type='radio', name='entry.1965278482', value='rating-4', id='group_1965278482_4')
+                    .mood-container: label(class='mood rating-4', for='group_1965278482_4')
+                    input(type='radio', name='entry.1965278482', value='rating-5', id='group_1965278482_5')
+                    .mood-container: label(class='mood rating-5', for='group_1965278482_5')
 
-              .feedback-box
-                textarea(name="entry.1539829787", rows="3", placeholder='What\'s up?')
+                .feedback-box
+                    textarea(name="entry.1539829787", rows="3", placeholder='What\'s up?')
+                    input(name='entry.1201987643', type='hidden', ng-if='selectedWorld', value='{{ selectedWorld.name }}')
+                    input(name='entry.99482713', type='hidden', ng-if='selectedChallenge', value='{{ selectedChallenge.title }}')
 
             .form-message.hide
                 h3 Thank you!
