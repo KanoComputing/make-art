@@ -3,6 +3,9 @@
         button.close(ng-click='handleSkip($event)'): i.icon-cross
         form(name='form' ng-submit='sendFeedback()')
             h1.center: b Feedback
+
+            .box.box-danger(ng-if='error') {{ error }}
+            
             .form-container
                 .mood-selector
                     input(type='radio', ng-model='feedback.rating', value='rating-1', id='rating_1')
