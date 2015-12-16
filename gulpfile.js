@@ -18,7 +18,7 @@ var gulp = require('gulp'),
     production = env === 'production',
     segmentioId = process.env.SEGMENTIO_ID || null,
     facebookAppId = process.env.FACEBOOK_APP_ID || null,
-    feedback_account = process.env.FEEDBACK_ACCOUNT || null,
+    unknown_user = process.env.UNKNOWN_USER || null,
     mailServer = process.env.MAILSERVER || null,
     api_url = process.env.API_URL || null,
     world_url = process.env.WORLD_URL || null,
@@ -78,7 +78,7 @@ gulp.task('views', function () {
             world_url       : world_url,
             testmode        : testmode,
             challenges_url  : "/assets/challenges/descriptors",
-            feedback_account: feedback_account
+            unknown_user    : unknown_user
         }, jadeHelpers)
     }))
     .on('error', handleError)
