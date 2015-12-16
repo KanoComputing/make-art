@@ -1,28 +1,30 @@
 .modal-overlay(ng-controller='FeedbackController', ng-if='isFeedbackSplashOpen', ng-cloak)
     .modal-inner.split-modal.splash.feedback-splash
         button.close(ng-click='handleSkip($event)'): i.icon-cross
-        form(target='fake-target', action='http://docs.google.com/forms/d/1sGwcGfjhUK2oz52VRMbnv_1j3a5wMlD0TU0Ms9EpzO8/formResponse', method='POST')
+        form(name='form' ng-submit='sendFeedback()')
             h1.center: b Feedback
-            .form-container
-              .mood-selector
-                  input(type='radio', name='entry.1965278482', value='rating-1', id='group_1965278482_1', checked="checked")
-                  .mood-container: label(class='mood rating-1', for='group_1965278482_1')
-                  input(type='radio', name='entry.1965278482', value='rating-2', id='group_1965278482_2')
-                  .mood-container: label(class='mood rating-2', for='group_1965278482_2')
-                  input(type='radio', name='entry.1965278482', value='rating-3', id='group_1965278482_3')
-                  .mood-container: label(class='mood rating-3', for='group_1965278482_3')
-                  input(type='radio', name='entry.1965278482', value='rating-4', id='group_1965278482_4')
-                  .mood-container: label(class='mood rating-4', for='group_1965278482_4')
-                  input(type='radio', name='entry.1965278482', value='rating-5', id='group_1965278482_5')
-                  .mood-container: label(class='mood rating-5', for='group_1965278482_5')
 
-              .feedback-box
-                textarea(name="entry.1539829787", rows="3", placeholder='What\'s up?')
+            .box.box-danger(ng-if='error') {{ error }}
+            
+            .form-container
+                .mood-selector
+                    input(type='radio', ng-model='feedback.rating', value='rating-1', id='rating_1')
+                    .mood-container: label(class='mood rating-1', for='rating_1')
+                    input(type='radio', ng-model='feedback.rating', value='rating-2', id='rating_2')
+                    .mood-container: label(class='mood rating-2', for='rating_2')
+                    input(type='radio', ng-model='feedback.rating', value='rating-3', id='rating_3')
+                    .mood-container: label(class='mood rating-3', for='rating_3')
+                    input(type='radio', ng-model='feedback.rating', value='rating-4', id='rating_4')
+                    .mood-container: label(class='mood rating-4', for='rating_4')
+                    input(type='radio', ng-model='feedback.rating', value='rating-5', id='rating_5')
+                    .mood-container: label(class='mood rating-5', for='rating_5')
+
+                .feedback-box
+                    textarea(ng-model='feedback.thought', rows="3", placeholder='What\'s up?', required)
 
             .form-message.hide
                 h3 Thank you!
 
             .center.bottom-section: div(style='min-height: 88px'): .feedback-buttons
-                button.button.large(type='submit', ng-click='handleClick()') Send
-
-        iframe(id="fake-target" name="fake-target" style="width:0px; height:0px; border:0px;")
+                button.button.large(type='submit', ng-disabled='form.$invalid', ng-class='{ "disabled" : form.$invalid }', ng-if='!loading') Send
+                .spinner(ng-if='loading')
