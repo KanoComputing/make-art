@@ -17,12 +17,11 @@
 
             p {{ error.text || 0 }}
 
-        .toolbar
-            .position-indicator
-                i(ng-class="{'icon-mouse-pointer': mouse, 'icon-plus': !mouse}")
-                |  x: {{ coordsPosition.x }} y: {{ coordsPosition.y }}
-
     .actions
+        
+        .position-indicator
+            i(ng-class="{'icon-mouse-pointer': mouse, 'icon-plus': !mouse}")
+            |  x: {{ coordsPosition.x }} y: {{ coordsPosition.y }}
 
         a.action.action-share(ng-if='mode === "playground" || sharing', ng-click='setOpenModal("share")')
             i.icon-share
