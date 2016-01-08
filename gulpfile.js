@@ -19,20 +19,19 @@ var gulp = require('gulp'),
     segmentioId = process.env.SEGMENTIO_ID || null,
     facebookAppId = process.env.FACEBOOK_APP_ID || null,
     unknown_user = process.env.UNKNOWN_USER || null,
-    mailServer = process.env.MAILSERVER || null,
     api_url = process.env.API_URL || null,
     world_url = process.env.WORLD_URL || null,
     offline = process.env.OFFLINE === 'true',
     testmode = process.env.TEST_MODE === 'true',
     chDescriptorsPath = 'www/assets/challenges/descriptors/',
-    libPath = 'lib/challenges/';
+    libPath = 'lib/challenges/',
 
-var paths = {
-    views      : { watch: [ 'views/**/*.jade', 'content/**/*' ], src: 'views/**/*.jade', out: 'www' },
-    browserify : { watch: [ 'lib/**/*', 'content/**/*', 'lib/**/**/*' ] , src: 'lib/index.js', out: 'www/js' },
-    styles     : { watch: 'styles/**/*.styl', src: 'styles/main.styl', out: 'www/css' },
-    content    : {watch: 'lib/challenges/**/*'}
-};
+    paths = {
+        views      : { watch: ['views/**/*.jade', 'content/**/*'], src: 'views/**/*.jade', out: 'www' },
+        browserify : { watch: ['lib/**/*', 'content/**/*', 'lib/**/**/*'], src: 'lib/index.js', out: 'www/js' },
+        styles     : { watch: 'styles/**/*.styl', src: 'styles/main.styl', out: 'www/css' },
+        content    : {watch: 'lib/challenges/**/*'}
+    };
 
 function handleError(error) {
     console.log(color.bold('[ error caught ]:\n') + color.red(error));
@@ -44,7 +43,7 @@ gulp.task('browserify', function () {
         transform : [
             partialify.alsoAllow('md'),
             partialify.alsoAllow('coffee')
-        ],
+        ]
     }))
     .on('error', handleError)
     .pipe(rename('index.js'))
@@ -56,7 +55,7 @@ gulp.task('styles', function () {
     gulp.src(paths.styles.src)
     .pipe(stylus({
         pretty : !production,
-        use    : [ griddy(), nib() ]
+        use    : [griddy(), nib()]
     }))
     .on('error', handleError)
     .pipe(gulp.dest(paths.styles.out))
@@ -73,7 +72,6 @@ gulp.task('views', function () {
             offline         : offline,
             segmentioId     : segmentioId,
             facebookAppId   : facebookAppId,
-            mailServer      : mailServer,
             api_url         : api_url,
             world_url       : world_url,
             testmode        : testmode,
@@ -232,4 +230,4 @@ gulp.task('watch', ['build', 'listen'], function () {
     gulp.watch(paths.views.watch, ['views']);
 });
 
-gulp.task('default', [ 'build' ]);
+gulp.task('default', ['build']);
