@@ -7,6 +7,7 @@
             "cover": "world_covers/basic",
             "world_path": "worlds/basic",
             "css_class": "basic-challenges",
+            "share_strategy": "optional",
             "type": "normal"
 
         },
@@ -18,6 +19,7 @@
             "world_path": "worlds/medium",
             "css_class": "medium",
             "dependency": ["basic"],
+            "share_strategy": "optional",
             "type": "normal"
         },
         {
@@ -49,6 +51,7 @@
             "world_path": "worlds/summercamp",
             "css_class": "_summercamp",
             "dependency": ["medium"],
+            "share_strategy": "optional",
             "type": "campaign"
 
         },
