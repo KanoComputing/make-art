@@ -9,3 +9,5 @@ icon/application-x-kano-draw.png usr/share/icons/Kano/88x88/mimetypes
 icon/kano-draw-hover.png usr/share/icons/Kano/88x88/apps
 icon/kano-draw.app usr/share/applications
 media /usr/share/kano-draw/
+
+kano-content-blacklist/kano-draw.json /usr/share/kano-content/blacklists
