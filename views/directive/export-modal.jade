@@ -22,6 +22,7 @@
 
                     button.button-success.skip(ng-if='optional && !loading', ng-click='skipSharing()') Skip
                     
+                    .spinner(ng-if='loading')
+
                 if offline
                   .center: button.export-wallpaper(style='margin-top: 10px', ng-click='exportWallpaper()', ng-disabled='exportForm.$invalid', ng-class='{ "disabled" : exportForm.$invalid }') Save Wallpaper
-                    .spinner(ng-if='loading')
