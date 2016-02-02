@@ -15,15 +15,13 @@
                 input.filename(ng-model='meta.title', placeholder='Title', type='text', required)
                 textarea.description(ng-model='meta.description', placeholder='Description')
 
-                .buttons
-
-                    if offline
-                        button.export-wallpaper(ng-click='exportWallpaper()', ng-disabled='exportForm.$invalid', ng-class='{ "disabled" : exportForm.$invalid }') Save Wallpaper
-
+                .buttons.center
                     button.button-success(type='submit', ng-disabled='exportForm.$invalid', ng-class='{ "disabled" : exportForm.$invalid }', ng-if='!loading')
                         i(ng-class='"icon-" + action')
                         |  Save
 
                     button.button-success.skip(ng-if='optional && !loading', ng-click='skipSharing()') Skip
                     
+                if offline
+                  .center: button.export-wallpaper(style='margin-top: 10px', ng-click='exportWallpaper()', ng-disabled='exportForm.$invalid', ng-class='{ "disabled" : exportForm.$invalid }') Save Wallpaper
                     .spinner(ng-if='loading')
