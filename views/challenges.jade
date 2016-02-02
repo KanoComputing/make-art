@@ -1,8 +1,8 @@
 .page-challenges(ng-class="[ selectedWorldClass ]"): .page-width
     .image.pull-left
     .image.pull-right
-
-    social-sharing(type='"world"' ng-if='selectedWorld.socialText && loggedIn')
+      
+    social-sharing(type='"world"' ng-if='selectedWorld.socialText && loggedIn && !offline')
 
     h3.page-title(ng-if='selectedWorld')
         span {{ selectedWorld ? selectedWorld.name : 'Challenges'}}
