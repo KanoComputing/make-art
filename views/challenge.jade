@@ -99,7 +99,11 @@
 
             h3 Challenges completed
             
-            h4 Now make something new!
+            h4(ng-if='!unlockedWorld') Now make something new!
+
+            h4(ng-if='unlockedWorld')
+                | New world unlocked! Play Now - 
+                a.button.unlocked(href='/challenges/{{ unlockedWorld.id }}') {{ unlockedWorld.name }}
 
             .logo-title
 
