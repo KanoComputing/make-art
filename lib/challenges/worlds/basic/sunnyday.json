@@ -1,0 +1,23 @@
+{
+    "id": "sunnyday",
+    "title": "Sunny Day",
+    "description": "Learn the basics by coding a clear sunny day.",
+    "code": "",
+    "startAt": 2,
+    "steps": [
+        {
+            "hint": "First we will fill the canvas with a nice sky blue - **type** `background blue`",
+            "solution": "background blue"
+        },
+        {
+            "hint": "Now we need to change the drawing color to a bright yellow - in a new line **type** `color yellow`",
+            "solution": "color yellow"
+        },
+        {
+            "hint": "Finally we draw the sun, we use the circle command followed by the size we want the circle to be - in a new line **type** `circle 150`",
+            "solution": "circle 150"
+        }
+    ],
+    "completion_text": "Well done! It's a bright and sunny day, now change the number next to circle and see what happens",
+    "cover": "sunny-day.png"
+}
