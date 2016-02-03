@@ -12,9 +12,9 @@ import logging
 from flask import Flask, Response, request, send_from_directory
 
 from kano_profile.apps import load_app_state_variable
-from kano_profile.badges import increment_app_state_variable_with_dialog
-from kano_world.functions import login_using_token
-from kano_world.share import upload_share
+from kano_profile.badges import increment_app_state_variable_with_dialog, \
+    save_app_state_variable_with_dialog, calculate_xp
+from kano_world.share_helpers import login_and_share
 from kano.network import is_internet
 from kano.utils.audio import play_sound
 from kano.utils.file_operations import empty_directory, ensure_dir, \
@@ -273,16 +273,9 @@ def share(filename):
     if not is_internet():
         return 'You have no internet'
 
-    success, _ = login_using_token()
-    if not success:
-        os.system('kano-login 3')
-        success, _ = login_using_token()
-        if not success:
-            return 'Cannot login'
-
     data = json.loads(request.data)
     filename, filepath = _save(data)
-    success, msg = upload_share(filepath, filename, APP_NAME)
+    success, msg = login_and_share(filepath, filename, APP_NAME)
 
     if not success:
         return msg
