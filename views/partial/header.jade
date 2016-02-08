@@ -15,7 +15,7 @@ header: .page-width
             |  Playground
 
     ul.nav.nav-right(ng-cloak)
-        li.discover: a(id='discover-kano', href='http://www.kano.me', target='_blank')
+        li.discover: a(ng-if="!offline" id='discover-kano', href='http://www.kano.me', target='_blank')
             i.icon-cpu
             | Discover Kano
 
