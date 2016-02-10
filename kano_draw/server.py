@@ -4,22 +4,21 @@
 # License: http://www.gnu.org/licenses/gpl-2.0.txt GNU GPL v2
 #
 
-from flask import Flask, Response, request, send_from_directory
 import json
 import os
 import time
 import logging
-import shutil
 
-from kano.utils import ensure_dir
-from kano_profile.badges import save_app_state_variable_with_dialog, \
-    calculate_xp
+from flask import Flask, Response, request, send_from_directory
+
 from kano_profile.apps import load_app_state_variable
-from kano_profile.badges import increment_app_state_variable_with_dialog
-from kano_world.functions import login_using_token
-from kano_world.share import upload_share
+from kano_profile.badges import increment_app_state_variable_with_dialog, \
+    save_app_state_variable_with_dialog, calculate_xp
+from kano_world.share_helpers import login_and_share
 from kano.network import is_internet
-from kano.utils import play_sound
+from kano.utils.audio import play_sound
+from kano.utils.file_operations import empty_directory, ensure_dir, \
+    recursively_copy
 from kano.logging import logger
 
 
@@ -42,28 +41,11 @@ def _copy_package_assets():
     dest_dir = os.path.abspath(STATIC_ASSET_DIR)
 
     # First Clear this cache
-    for existing_file in os.listdir(dest_dir):
-        cur_file = os.path.abspath(os.path.join(dest_dir, existing_file))
-        if os.path.islink(cur_file):
-            os.unlink(cur_file)
-        else:
-            if os.path.isdir(cur_file):
-                shutil.rmtree(cur_file, ignore_errors=True)
-            else:
-                os.remove(cur_file)
+    empty_directory(dest_dir)
 
     # Now copy the static assets
-    for root_d, dirs, files in os.walk(src_dir):
-        # Firstly create the dirs
-        dest_root = root_d.replace(src_dir, dest_dir)
-        for dir_n in dirs:
-            new_dir = os.path.join(dest_root, dir_n)
-            os.mkdir(new_dir)
-        # Now deal with the files
-        for file_n in files:
-            src_file = os.path.join(root_d, file_n)
-            new_file = os.path.join(dest_root, file_n)
-            shutil.copy(src_file, new_file)
+    recursively_copy(src_dir, dest_dir)
+
     logger.info('Successfully copied over static assets')
 
 
@@ -291,16 +273,9 @@ def share(filename):
     if not is_internet():
         return 'You have no internet'
 
-    success, _ = login_using_token()
-    if not success:
-        os.system('kano-login 3')
-        success, _ = login_using_token()
-        if not success:
-            return 'Cannot login'
-
     data = json.loads(request.data)
     filename, filepath = _save(data)
-    success, msg = upload_share(filepath, filename, APP_NAME)
+    success, msg = login_and_share(filepath, filename, APP_NAME)
 
     if not success:
         return msg

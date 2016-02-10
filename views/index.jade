@@ -24,6 +24,17 @@ html(lang='en',  xmlns:ng="http://angularjs.org")
         script(src='/js/vendor/xtag.js')
 
     body(id="ng-app", ng-app='draw', class=offline ? 'offline' : 'online')
+        // Google Tag Manager
+        noscript
+          iframe(src='//www.googletagmanager.com/ns.html?id=discover-kano', height='0', width='0', style='display:none;visibility:hidden')
+        script.
+          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','discover-kano');
+        // End Google Tag Manager
+
         script(src='/js/vendor/console-polyfill.js', type='text/javascript')
         .loading-overlay(ng-cloak): .spinner
 
@@ -56,7 +67,6 @@ html(lang='en',  xmlns:ng="http://angularjs.org")
                 OFFLINE         : #{offline},
                 SEGMENTIO_ID    : '#{segmentioId}',
                 FACEBOOK_APP_ID : '#{facebookAppId}',
-                MAILSERVER      : '#{mailServer}',
                 API_URL         : '#{api_url}',
                 WORLD_URL       : '#{world_url}',
                 CHALLENGES_URL  : '#{challenges_url}',

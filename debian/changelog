@@ -1,6 +1,7 @@
 kano-draw (2.3.0-1) unstable; urgency=low
 
   * Introduce Pixel Hack challenge group
+  * Use latest version of kano-toolset
 
  -- Team Kano <dev@kano.me>  Fri, 29 Jan 2016 11:00:00 +0100
 
