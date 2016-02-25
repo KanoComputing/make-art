@@ -6,6 +6,7 @@
             ng-mousemove='displayMousePos($event)',
             ng-mouseleave='displayCoordsPos()'
             )
+        .htmlDisplay#htmlDisplay
 
         .cursor(ng-style='{ left: cursorPosition.x + "px", top: cursorPosition.y + "px" }')
 
