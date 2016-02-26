@@ -1,7 +1,6 @@
 .draw-display
 
     .display: .padded: .inner
-
         canvas(
             ng-mousemove='displayMousePos($event)',
             ng-mouseleave='displayCoordsPos()'
@@ -20,13 +19,25 @@
 
     .actions(ng-class="{hidden: mode === 'run-app-iframe'}")
         
-        .position-indicator
+        .position-indicator(ng-show="mode !== 'run-app'")
             i(ng-class="{'icon-mouse-pointer': mouse, 'icon-plus': !mouse}")
             |  x: {{ coordsPosition.x }} y: {{ coordsPosition.y }}
 
         a.action.action-share(ng-if='mode === "playground" || sharing', ng-click='setOpenModal("share")')
             i.icon-share
             |  Share
+
+        //a.action.action-share(ng-if='mode === "run-app"', ng-click='setOpenModal("share")')
+        //    i.icon-share
+        //    |  Twitter
+
+        //a.action.action-share(ng-if='mode === "run-app"', ng-click='setOpenModal("share")')
+        //    i.icon-share
+        //    |  Facebook
+
+        a.action.action-share(ng-if='mode === "run-app"', ng-click='remix()')
+            i.icon-share
+            |  Remix
 
         a.action.action-save(ng-if='mode === "playground"', ng-click='save()')
             i.icon-save

@@ -1,4 +1,4 @@
-.modal-overlay(ng-if="!appMode", ng-controller='SplashController', ng-show='isSplashOpen')
+.modal-overlay(ng-controller='SplashController', ng-show='isSplashOpen && !appMode')
     .modal-inner.split-modal.splash
 
         //- Logo
