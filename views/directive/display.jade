@@ -18,7 +18,7 @@
 
             p {{ error.text || 0 }}
 
-    .actions(ng-class="{hidden: mode === 'run-app'}")
+    .actions(ng-class="{hidden: mode === 'run-app-iframe'}")
         
         .position-indicator
             i(ng-class="{'icon-mouse-pointer': mouse, 'icon-plus': !mouse}")
@@ -36,7 +36,7 @@
             i.icon-reset
             |  Reset
 
-        .action.action-load(ng-show='mode === "playground" || mode === "run-app" ')
+        .action.action-load(ng-show='mode === "playground" || mode === "run-app-iframe" ')
             i.icon-arrow-up
             |  Load
             input.file-load(type='file', accept='.draw')
