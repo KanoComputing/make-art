@@ -23,7 +23,7 @@ html(lang='en',  xmlns:ng="http://angularjs.org")
         
         script(src='/js/vendor/xtag.js')
 
-    body(id="ng-app", ng-app='draw', class=offline ? 'offline' : 'online')
+    body(id="ng-app", ng-app='draw', class=offline ? 'offline' : 'online', ng-class="{bgwhite: iframe}")
         // Google Tag Manager
         noscript
           iframe(src='//www.googletagmanager.com/ns.html?id=discover-kano', height='0', width='0', style='display:none;visibility:hidden')
