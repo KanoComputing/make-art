@@ -368,6 +368,11 @@ def _increment_lines_of_code():
 
 @server.route('/shutdown', methods=['POST'])
 def _shutdown():
+    '''
+    Obtain the entry point to stop the http server.
+    We do not kill the parent launcher proces (kano-draw)
+    because he is keeping an eye on both the http and ui processes.
+    '''
     import signal
 
     try:
@@ -379,9 +384,6 @@ def _shutdown():
         logger.error(
             'Error while trying to shut down the server: [{}]'.format(exc)
         )
-
-    # Send signal to parent to initiate shutdown
-    os.kill(PARENT_PID, signal.SIGINT)
 
 
 @server.route('/browsemore', methods=['POST'])
