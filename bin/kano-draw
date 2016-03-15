@@ -41,6 +41,7 @@ UI_PROC = None
 def _kill_subprocess(proc_handle):
     if proc_handle is not None and proc_handle.is_alive():
         proc_handle.terminate()
+        os.kill(proc_handle.pid, signal.SIGKILL)
 
 
 def _kill_lingering_processes():
