@@ -385,6 +385,8 @@ def _shutdown():
             'Error while trying to shut down the server: [{}]'.format(exc)
         )
 
+    return ''
+
 
 @server.route('/browsemore', methods=['POST'])
 def _browsemore():
