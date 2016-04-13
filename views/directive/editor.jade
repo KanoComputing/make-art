@@ -70,7 +70,8 @@ div(ng-show='tab === "code"')
                 href='#',
                 ng-click='toggleFullScreen()',
                 title='Toggle fullscreen',
-                ng-class='{ active: fullScreen }'
+                ng-class='{ active: fullScreen }',
+                ng-hide='challengeId'
                 )
                 .full-screen-control
                     .round
