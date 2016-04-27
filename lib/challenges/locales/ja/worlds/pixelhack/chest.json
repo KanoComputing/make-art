@@ -1,0 +1,104 @@
+{
+    "id": "chest",
+    "title": "Loot Chest",
+    "description": "A mysterious chest found with your code",
+    "code": "",
+    "startAt": 2,
+    "steps": [
+        {
+            "hint": "Role Playing Games (RPGs) became one of the most popular genres of games in the late 80s. One of the most common objects in these games is the loot chest, let's start by setting a moody scene with a background **type** `background darkslategray`",
+            "solution": "background darkslategray"
+        },
+        {
+            "hint": "Next we're going to turn the stroke off **type** `stroke 0`",
+            "solution": "stroke 0"
+        },
+        {
+            "hint": "Position the cursor to the top left corner of where the chest will be - **type** `move -150,-100`",
+            "solution": "move -150,-100"
+        },
+        {
+            "hint": "Set the color to gold to give the impression of riches inside **type** `color gold`",
+            "solution": "color gold"
+        },
+        {
+            "hint": "We're going to layer this up to keep the number of shapes we have to draw to a minimum, first we draw the golden frame draw a `rectangle` 300 by 200",
+            "solution": "rectangle 300,200"
+        },
+        {
+            "hint": "Next we are going to add a highlight to the gold **type** `color lightyellow`",
+            "solution": "color lightyellow"
+        },
+        {
+            "hint": "With 8-bit art, simple details add a lot to an object, add a 25 by 100 `rectangle` to give the gold a nice sheen",
+            "solution": "rectangle 25,100"
+        },
+        {
+            "hint": "Move your cursor to get ready to draw the wooden part of the chest **type** `move 25,0`",
+            "solution": "move 25,0"
+        },
+        {
+            "hint": "Change the fill color to `color brown`",
+            "solution": "color brown"
+        },
+        {
+            "hint": "We use a trick of overlaying brown over the gold so the gold looks like a frame holding the wooden panels together **type** `rectangle 250,175`",
+            "solution": "rectangle 250,175"
+        },
+        {
+            "hint": "Move the cursor into place to split the wooden part in half with a lid **type** `move 0,60`",
+            "solution": "move 0,60"
+        },
+        {
+            "hint": "Switch your `color` back to gold",
+            "solution": "color gold"
+        },
+        {
+            "hint": "Draw the seam with a `rectangle` 250 by 25",
+            "solution": "rectangle 250,25"
+        },
+        {
+            "hint": "Next we'll continue our highlight effect **type** `color lightyellow`",
+            "solution": "color lightyellow"
+        },
+        {
+            "hint": "Continue the highlight effect by drawing a `square` 25 big",
+            "solution": "square 25"
+        },
+        {
+            "hint": "Finally we're going to finish with a clasp, move to the middle of the chest **type** `move 75,-25`",
+            "solution": "move 75,-25"
+        },
+        {
+            "hint": "Set the `color` to gold so it matches the frame",
+            "solution": "color gold"
+        },
+        {
+            "hint": "Draw a `rectangle` 100 by 75",
+            "solution": "rectangle 100,75"
+        },
+        {
+            "hint": "Move in to draw the actual clasp **type** `move 25,25`",
+            "solution": "move 25,25"
+        },
+        {
+            "hint": "Set the `color` to darkbrown",
+            "solution": "color darkbrown"
+        },
+        {
+            "hint": "Finally draw a `rectangle` 50 by 75",
+            "solution": "rectangle 50,75"
+        }
+    ],
+    "completion_text": "That chest looks great, I wonder what loot is hiding within!",
+    "gallery": {
+        "cover_path": "/assets/challenges/images/pixelremixes/",
+        "remixes": [
+            "chest-nether.png",
+            "chest-sunken.png",
+            "chest-open.png"
+        ]
+    },
+    "cover": "pixel-chest.png",
+    "guide": "#### New Words\n**square** size | square 25\n\nThis is just a shorthand version of the rectangle \n\n#### What you'll make\n1. Role Playing Games (RPGs) became one of the most popular genres of games in the late 80s. One of the most common objects in these games is the loot chest, let's start by setting a moody scene with a background **type** `background darkslategray`\n2. Next we're going to turn the stroke off **type** `stroke 0`\n3. Position the cursor to the top left corner of where the chest will be **type** `move -150,-100`\n4. Set the color to gold to give the impression of riches inside **type** `color gold`\n5. We're going to layer this up to keep the number of shapes we have to draw to a minimum, first we draw the golden frame draw a `rectangle` 300 by 200\n6. Next we are going to add a highlight to the gold **type** `color lightyellow`\n7. With 8-bit art, simple details add a lot to an object, add a 25 by 100 `rectangle` to give the gold a nice sheen\n8. Move your cursor to get ready to draw the wooden part of the chest **type** `move 25,0`\n9. Change the fill color to `color brown`\n10. We use a trick of overlaying brown over the gold so the gold looks like a frame holding the wooden panels together **type** `rectangle 250,175`\n11. Move the cursor into place to split the wooden part in half with a lid **type** `move 0,60`\n12. Switch your `color` back to gold\n13. Draw the seam with a `rectangle` 250 by 25\n14. Next we'll continue our highlight effect **type** `color lightyellow`\n15. Continue the highlight effect by drawing a `square` 25 big\n16. Finally we're going to finish with a clasp, move to the middle of the chest **type** `move 75,-25`\n17. Set the `color` to gold so it matches the frame\n18. Draw a `rectangle` 100 by 75\n19. Move in to draw the actual clasp **type** `move 25,25`\n20. Set the `color` to darkbrown\n21. Finally draw a `rectangle` 50 by 75\n\n#### What you'll hack\nBy changing the colours and adding a few shapes you can build an environment around your chest. For a more complex challenge change your code to open the chest and code some loot within.\n\n#### Briefing \nThe loot chest has made appearances in too many video games to list. Possibly most prominently in games from the Legend of Zelda, where they would hold everything from small gifts of money to powerful new tools and weapons. What is in this loot chest? That’s up to you. When you’re done with the chest, open it up and put in your own creation as the loot.\n"
+}

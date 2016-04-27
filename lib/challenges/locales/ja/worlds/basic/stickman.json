@@ -1,0 +1,54 @@
+{
+    "id": "stickman",
+    "title": "Stickman",
+    "description": "Draw a stickman using circles and lines",
+    "startAt": 2,
+    "steps": [
+        {
+            "hint": "Set the `stroke` to `black` with a size of `10`",
+            "solution": "stroke black, 10"
+        },
+        {
+            "hint": "Move up on the canvas, **type** `move 0, -50`",
+            "solution": "move 0, -50"
+        },
+        {
+            "hint": "Draw the stickman body - `line 0, 150`",
+            "solution": "line 0, 150"
+        },
+        {
+            "hint": "Draw the stickman left arm - `line -80, 120`",
+            "solution": "line -80, 120"
+        },
+        {
+            "hint": "Good, now with the right arm - `line 80, 120`",
+            "solution": "line 80, 120"
+        },
+        {
+            "hint": "Move down, **type** `move 0, 150`",
+            "solution": "move 0, 150"
+        },
+        {
+            "hint": "Draw the stickman left leg: `line -80, 120`",
+            "solution": "line -80, 120"
+        },
+        {
+            "hint": "Good, now with the right leg - `line 80, 120`",
+            "solution": "line 80, 120"
+        },
+        {
+            "hint": "Move to the top of the drawing, **type** `moveTo 250, 100`",
+            "solution": "moveTo 250, 100"
+        },
+        {
+            "hint": "Set the stroke back to 0",
+            "solution": "stroke 0"
+        },
+        {
+            "hint": "Now to draw a many sided shape - **type** `polygon -60, 50, 0, 100, 60, 50`",
+            "solution": "polygon -60, 50, 0, 100, 60, 50"
+        }
+    ],
+    "completion_text": "Nice one! The canvas is 500 wide and 500 high, moving about on it is a skill!",
+    "cover": "stickman.png"
+}

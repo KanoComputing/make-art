@@ -1,0 +1,9 @@
+{
+    "challenge_title": "{{ id }}チャレンジ：",
+    "start": "スタート",
+    "hint": "ヒント",
+    "next": "次へ",
+    "done": "終わり"
+}
+
+
