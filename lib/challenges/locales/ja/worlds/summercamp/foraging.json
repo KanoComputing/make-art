@@ -1,0 +1,57 @@
+{
+    "id": "foraging",
+    "title": "Foraging",
+    "short_title": "Foraging",
+    "icon_class": "challenge_foraging",
+    "description": "The wild is full of plants and fauna to eat. From stinging nettles, to mushrooms, and a multitude of berries, any meal can be improved with naturally growing foods. Berries are common in many parts of the world, and at Camp Kano they run wild even though they are hard to find. You might need to use your coding skills to find them.",
+    "cover": "summercamp/day_19.png",
+    "completion_text": "But wait! Where are the berries you are meant to be foraging for? Use `color red`, `moveTo`, and `square 25` to add some extra berries to the scene!",
+    "difficulty": 1,
+    "startAt": 0,
+    "summerCamp": true,
+    "rewards": {
+        "wallpaper": 1
+    },
+    "steps": [
+        {
+            "hint": "Set `stroke` to `0`",
+            "solution": "stroke 0"
+        },
+        {
+            "hint": "It’s a bright sunny day! Set `background` to `blue`.",
+            "solution": "background blue"
+        },
+        {
+            "hint": "Our foraging scene needs a grass field to start with. Set our drawing color to `green`.",
+            "solution": "color green"
+        },
+        {
+            "hint": "We want our grass on the bottom half of the screen, so let’s move into position with `moveTo 0, 300`",
+            "solution": "moveTo 0, 300"
+        },
+        {
+            "hint": "The grass is a nice big `rectangle` of size `500, 200`",
+            "solution": "rectangle 500, 200"
+        },
+        {
+            "hint": "Now let’s add in a nice boxy tree to our foraging scene. Begin by moving into position at exactly `50, 100`.",
+            "solution": "moveTo 50, 100"
+        },
+        {
+            "hint": "Our leaves are drawn with `square 150`.",
+            "solution": "square 150"
+        },
+        {
+            "hint": "Next we need to draw the trunk. Move the cursor with `moveTo 100, 250`.",
+            "solution": "moveTo 100, 250"
+        },
+        {
+            "hint": "Our wood has a nice `darkbrown` color. Set that as the drawing color.",
+            "solution": "color darkbrown"
+        },
+        {
+            "hint": "The trunk is a `rectangle` with a width of `40` and a height of `150`",
+            "solution": "rectangle 40, 150"
+        }
+    ]
+}

@@ -1,0 +1,8 @@
+{
+    "challenge_title": "Challenge {{ id }}:",
+    "start": "Start",
+    "hint": "Hint",
+    "next": "Next",
+    "done": "Done"
+}
+

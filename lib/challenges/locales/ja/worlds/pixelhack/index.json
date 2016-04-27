@@ -1,0 +1,17 @@
+{
+    "challenges": [
+        "./pong",
+        "./ship",
+        "./tetris",
+        "./chest",
+        "./variables",
+        "./sword",
+        "./steve",
+        "./mage",
+        "./forloop",
+        "./gradient",
+        "./colorfrenzy",
+        "./grassblock",
+        "./diamondblock"
+    ]
+}

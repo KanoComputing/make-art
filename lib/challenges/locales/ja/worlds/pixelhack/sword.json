@@ -1,0 +1,96 @@
+{
+    "id": "sword",
+    "title": "Diamond Sword",
+    "description": "Code a sword forged from pure diamonds",
+    "code": "",
+    "startAt": 2,
+    "steps": [
+        {
+            "hint": "We're going to make a sword out of diamond so first we will set up some variables to represent the colors **type** `sword = aquamarine`",
+            "solution": "sword = aquamarine"
+        },
+        {
+            "hint": "We set up enough variable to represent the darker areas of the sword, we can use the darken function to alter the color of our existing sword color. **type** `darksword = darken sword,40`",
+            "solution": "darksword = darken sword,40"
+        },
+        {
+            "hint": "We start by setting the `background` color to slategray",
+            "solution": "background slategray"
+        },
+        {
+            "hint": "Next we set our fill color to the variable we set up before **type** `color sword`",
+            "solution": "color sword"
+        },
+        {
+            "hint": "and set our stroke color to the darker version of our sword color **type** `stroke darksword,20`",
+            "solution": "stroke darksword,20"
+        },
+        {
+            "hint": "Move the cursor to where the top of the blade will be **type** `move -20,-180`",
+            "solution": "move -20,-180"
+        },
+        {
+            "hint": "Draw the blade of the sword **type** `rectangle 40,230`",
+            "solution": "rectangle 40,230"
+        },
+        {
+            "hint": "It's already starting to take shape, let's create the handle **type** `move 10,250`",
+            "solution": "move 10,250"
+        },
+        {
+            "hint": "The grip isn't going to be made of diamond so set the `stroke` color to darkbrown",
+            "solution": "stroke darkbrown"
+        },
+        {
+            "hint": "and the `color` to brown",
+            "solution": "color brown"
+        },
+        {
+            "hint": "Draw a `rectangle` 20 by 100 for the grip",
+            "solution": "rectangle 20,100"
+        },
+        {
+            "hint": "We're going to create the crossguard next **type** `move -70,-10`",
+            "solution": "move -70,-10"
+        },
+        {
+            "hint": "Change the `stroke` color back to our darksword variable",
+            "solution": "stroke darksword"
+        },
+        {
+            "hint": "We're going to use another color function: lighten to slightly change our diamond color **type** `color lighten darksword,10`",
+            "solution": "color lighten darksword,10"
+        },
+        {
+            "hint": "Next draw a `rectangle` 160 by 20",
+            "solution": "rectangle 160,20"
+        },
+        {
+            "hint": "Notice how the lighten function altered the diamond color. **type** `move 80, -240`",
+            "solution": "move 80, -240"
+        },
+        {
+            "hint": "Finally we're going to add a highlight detail to finish the sword **type** `color white`",
+            "solution": "color white"
+        },
+        {
+            "hint": "Turn the stroke off **type** `stroke 0`",
+            "solution": "stroke 0"
+        },
+        {
+            "hint": "Draw a `rectangle` 10 by 230",
+            "solution": "rectangle 10, 230"
+        }
+    ],
+    "completion_text": "That sword looks exquisite, perfect for fighting your way out of some caves. Try changing the color on the first line, see how it changes all the other colors on the blade because of the variables.",
+    "gallery": {
+        "cover_path": "/assets/challenges/images/pixelremixes/",
+        "remixes": [
+            "sword-golden.png",
+            "sword-shovel.png",
+            "sword-pickaxe.png"
+        ]
+    },
+    "cover": "pixel-sword.png",
+    "guide": "#### New words\n**darken**(color, amount) | darken(blue, 40)\n\nReturns a lightened color by the amount you give it. The amount can be between 0 and 100.\n\n**lighten**(color, amount) | lighten(blue, 40)\n\nReturns a lightened color by the amount you give it. The amount can be between 0 and 100.\n\n\n#### What you'll make\n1. We're going to make a sword out of diamond so first we will set up some variables to represent the colors **type** `sword = aquamarine`\n2. We set up enough variable to represent the darker areas of the sword, we can use the darken function to alter the color of our existing sword color. **type** `darksword = darken sword,40`\n3. We start by setting the `background` color to slategray\n4. Next we set our fill color to the variable we set up before **type** `color sword`\n5. and set our stroke color to the darker version of our sword color **type** `stroke darksword,20`\n6. Move the cursor to where the top of the blade will be **type** `move -20,-180`\n7. Draw the blade of the sword **type** `rectangle 40,230`\n8. It's already starting to take shape, let's create the handle **type** `move 10,250`\n9. The grip isn't going to be made of diamond so set the `stroke` color to darkbrown\n10. and the `color` to brown\n11. Draw a `rectangle` 20 by 100 for the grip\n12. We're going to create the crossguard next **type** `move -70,-10`\n13. Change the `stroke` color back to our darksword variable\n14. We're going to use another color function: lighten to slightly change our diamond color **type** `color lighten darksword,10`\n15. Next draw a `rectangle` 160 by 20\n16. Notice how the lighten function altered the diamond color. **type** `move 80, -240`\n17. Finally we're going to add a highlight detail to finish the sword **type** `color white`\n18. Turn the stroke off **type** `stroke 0`\n19. Draw a `rectangle` 10 by 230\n\n#### What you’ll hack\nBecause all of the colors we used are just shades of our sword color, by changing one variable all the darker and lighter shades will change as well! We can make a diamond sword into a gold one by just changing the sword color.\n\nUsing the same code and style, what other Minecraft-inspired creations can you make?\n\n#### Briefing\nThe diamond sword is the most powerful weapon in the Minecraft players toolbelt. It is also the most difficult to make given the rarity of diamond. All of the different types of swords in Minecraft (diamond, gold, steel, stone…) follow a simple pattern in their design. The only thing that separates them visually is their color. For the diamond sword we’ll make a word called \"sword\" which is set to the color \"aquamarine\".  To select different shades for the hilt and outlines, we’ll use the color with special color functions."
+}

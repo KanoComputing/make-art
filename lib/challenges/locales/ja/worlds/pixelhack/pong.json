@@ -1,0 +1,40 @@
+{
+    "id": "pong",
+    "title": "Pong",
+    "description": "Code a Pong match",
+    "code": "",
+    "startAt": 2,
+    "steps": [
+        {
+            "hint": "Pong (1972) was one of the first home game consoles. It is an incredibly basic table tennis game. And what do we need to play table tennis? First, a ball. **type** `circle 15`",
+            "solution": "circle 15"
+        },
+        {
+            "hint": "Next we need to draw some paddles. We use the moveTo function to position objects. The first number after MoveTo tells you where the object goes the object goes horizontally (left and right). The second number tells you where the object goes vertically (up and down).  **type** `moveTo 30,100`",
+            "solution": "moveTo 30,100"
+        },
+        {
+            "hint": "We'll draw the paddles using the rectangle function, for the first paddle **type** `rectangle 20, 100`",
+            "solution": "rectangle 20, 100"
+        },
+        {
+            "hint": "It's no fun to play Pong alone so we need an opponent **type** `moveTo 450,300`",
+            "solution": "moveTo 450,300"
+        },
+        {
+            "hint": "Finally, let’s draw the opponent's paddle, the first number is the width and the second the height. **type** `rectangle 20, 100`",
+            "solution": "rectangle 20, 100"
+        }
+    ],
+    "completion_text": "Well done! You've recreated one of the first videogames, pretty boring to look at right? Why not try clicking on the 100 after the first moveTo command and using the slider to reposition the paddle.",
+    "gallery": {
+        "cover_path": "/assets/challenges/images/pixelremixes/",
+        "remixes": [
+            "pong-white.png",
+            "pong-movecolor.png",
+            "pong-movepaddles.png"
+        ]
+    },
+    "cover": "pixel-pong.png",
+    "guide": "#### New words\n**circle** radius | circle 15\n\nDraws a circle at the current position. The bigger the radius number, the bigger the circle: radius is the distance from the center of a circle to its edge.\n\n**moveTo** x, y | moveTo 30, 100\n\nMoves the drawing position to the new (x, y) place. The first value is the x value, which controls how far across horizontally the x part of the coordinate should go. The second value is the y coordinate, which controls how far down vertically the y coordinate should go.\n\n**rectangle** width, height | rectangle 20, 100\n\nDraws a rectangle at the current position. The width and height independently control how wide and tall the rectangle is.\n\n**color** name | color red\n\nChanges the drawing color. All following shapes and text will be drawn with the fill color set to this color until you change it again. To set the drawing color to transparent, type `color null`\n\n**background** colorName | background white\n\nChanges the background color.\n\n#### What you'll make\n1. Pong (1972) was one of the first home game consoles, being an incredibly basic table tennis game the first thing we need is a ball. **Type** `circle 15`\n2. Next we need to draw some paddles, use the moveTo function to position them. The first number is the horizontal position and the second number the vertical. **Type** `moveTo 30, 100`\n3. We'll draw the paddles using the rectangle function, for the first paddle. **Type** `rectangle 20, 100`\n4. It's no fun to play Pong alone so we need an opponent. **Type** `moveTo 450, 300`\n5. Finally, let’s draw the opponent's paddle, the first number is the width and the second the height. **Type** `rectangle 20, 100`\n\n#### What you’ll hack\nThere is one other essential tool every coding artist is going to need to know: color. The default starting color is black, and every time a shape is drawn in Make Art the drawing tool checks to see what color should be drawn. So because you haven’t specified a color yet, it will draw everything black.\n\nYou can change the color to red, for instance, by typing color red after the first `moveTo` command and before `rectangle 20, 100`to change the color of both paddles. Note: this will only change any shapes drawn after this command, so typing it at the bottom of your code won’t do anything. \n\nThe background color can be changed with background charcoal. You can put this anywhere in your code, and for most creations you’ll only call it once. It is best practice to put it at the top of the your code.\n\nFinally, you can move your paddles up and down by changing the second number next to each moveTo function. You can play with them by clicking on the number and using the slider to change the number.\n\n#### Briefing\nIn 1972, Al Alcorn got handed a \"warm-up exercise\" for his new job at game company Atari, and came up with Pong: two paddles, one ball, and soon after, lines of people around the block to play it. Pong went on to become an international sensation, with millions of games sold. It was so famous, in fact that dozens of knock-offs were made by competitors who tried to ride the coattails of Atari’s success. What made the game so simple and universal was what made it so easy to copy. \n\nYour first task as a hacker is to make your very own Pong game. One of the secrets to being a good hacker is remixing: taking ideas and code from other places and putting them together into something new. You can take the original idea of Pong and then hack it together into your own game! You’ll set up a basic screen with paddles and balls. Then it is up to you to hack it into something new! \n"
+}
