@@ -1,0 +1,109 @@
+{
+    "id": "camera",
+    "title": "Take a pic!",
+    "short_title": "Camera",
+    "icon_class": "challenge_camera",
+    "description": "Back in the 1820s, early cameras would take several hours to actually capture a film! With annoyingly long exposure hours, photographing people with a nice smile was not really possible. Why? Try and hold a convincing smile while staying perfectly still for hours and you will get your answer. Today, the number of photographs clicked every two minutes is same as the number of photographs clicked by mankind in 1800s.",
+    "cover": "summercamp/day_10.png",
+    "completion_text": "Try drawing yourself taking the picture behind that beautiful camera. Perhaps a light for the flash as well?",
+    "difficulty": 1,
+    "startAt": 0,
+    "summerCamp": true,
+    "rewards": {
+        "outfit": 1
+    },
+    "steps": [
+        {
+            "hint": "Set the `background` color to `blue`",
+            "solution": "background blue"
+        },
+        {
+            "hint": "Set the `stroke` to `0` for now, to avoid drawing the outline of the shapes",
+            "solution": "stroke 0"
+        },
+        {
+            "hint": "Move the cursor to place the camera in the center - **type** `moveTo 100, 150`",
+            "solution": "moveTo 100, 150"
+        },
+        {
+            "hint": "Set the `color` of the camera to `dimgray`",
+            "solution": "color dimgray"
+        },
+        {
+            "hint": "Now draw the body of the camera with a rectangle - **type** `rectangle 300, 200`",
+            "solution": "rectangle 300, 200"
+        },
+        {
+            "hint": "Move the cursor to draw the lense - **type** `move 150, 100`",
+            "solution": "move 150, 100"
+        },
+        {
+            "hint": "Set the `color` of the lens to `lightblue`",
+            "solution": "color lightblue"
+        },
+        {
+            "hint": "Set the outline of the lens with a `stroke` of `black` color and size `10`",
+            "solution": "stroke black, 10"
+        },
+        {
+            "hint": "The lens is a `circle` with size `50`",
+            "solution": "circle 50"
+        },
+        {
+            "hint": "Set the `color` to `lightgray` for the second half of the lens",
+            "solution": "color lightgray"
+        },
+        {
+            "hint": "Draw an arc that matches the top half of the lens - **type** `arc 50, 2, 1`",
+            "solution": "arc 50, 2, 1"
+        },
+        {
+            "hint": "This camera needs a flash! Move the cursor to place it - **type** `move -30, -125`",
+            "solution": "move -30, -125"
+        },
+        {
+            "hint": "Draw the flash of the camera with a `rectangle` of size `60` by `20`",
+            "solution": "rectangle 60, 20"
+        },
+        {
+            "hint": "Set the `stroke` back to `0`.",
+            "solution": "stroke 0"
+        },
+        {
+            "hint": "Set the `color` of the flash to `lightblue`",
+            "solution": "color lightblue"
+        },
+        {
+            "hint": "Draw a polygon for the reflection on the flash - **type** `polygon 40, 0, 0, 20`",
+            "solution": "polygon 40, 0, 0, 20"
+        },
+        {
+            "hint": "Only the button to shoot the picture is left - **type** `move 100, 10`",
+            "solution": "move 100, 10"
+        },
+        {
+            "hint": "Set the `color` of the button to `red`.",
+            "solution": "color red"
+        },
+        {
+            "hint": "Draw the button of the camera with a `rectangle` of size `50` by `15`",
+            "solution": "rectangle 50, 15"
+        },
+        {
+            "hint": "One more detail! Move the cursor one last time - **type** `move 25, -20`",
+            "solution": "move 25, -20"
+        },
+        {
+            "hint": "Set the `color` to `yellow`",
+            "solution": "color yellow"
+        },
+        {
+            "hint": "Set the `font` to `'ComicSansMS'` and size `30`",
+            "solution": "font 'ComicSansMS', 30"
+        },
+        {
+            "hint": "Write some text - **type** `text 'Click!'`",
+            "solution": "text 'Click!'"
+        }
+    ]
+}

@@ -1,0 +1,50 @@
+{
+    "id": "pizza",
+    "title": "Pizza",
+    "description": "Code yourself a tasty pizza!",
+    "startAt": 2,
+    "steps": [
+        {
+            "hint": "Set the stroke to the color beige",
+            "solution": "stroke beige"
+        },
+        {
+            "hint": "Set the stroke to 50",
+            "solution": "stroke 50"
+        },
+        {
+            "hint": "Set the color to red",
+            "solution": "color red"
+        },
+        {
+            "hint": "Draw a circle with a size of 200",
+            "solution": "circle 200"
+        },
+        {
+            "hint": "Looking tasty! Set the stroke back to 0",
+            "solution": "stroke 0"
+        },
+        {
+            "hint": "Top it with a cheesy yellow circle of size 195",
+            "solution": "color yellow\ncircle 195",
+            "validate": [
+                "color yellow",
+                "circle 195"
+            ]
+        },
+        {
+            "hint": "It's not pizza without toppings - set the color to darkred",
+            "solution": "color darkred"
+        },
+        {
+            "hint": "Now `moveTo 164, 290`",
+            "solution": "moveTo 164, 290"
+        },
+        {
+            "hint": "Cool, now draw a circle with a size of 20",
+            "solution": "circle 20"
+        }
+    ],
+    "completion_text": "Tasty! Finish it off with more toppings, let your imagination run wild and see what you can make, then share it with the world!",
+    "cover": "pizza.png"
+}

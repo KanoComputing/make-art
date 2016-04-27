@@ -13,6 +13,8 @@ var gulp = require('gulp'),
     griddy = require('griddy'),
     nib = require('nib'),
     fs = require('fs'),
+    i18n = require('gulp-html-i18n'),
+    del = require('del'),
     server = lr(),
     env = process.env.NODE_ENV || 'development',
     production = env === 'production',
@@ -25,12 +27,14 @@ var gulp = require('gulp'),
     testmode = process.env.TEST_MODE === 'true',
     chDescriptorsPath = 'www/assets/challenges/descriptors/',
     libPath = 'lib/challenges/',
+    locales = ["", "ja"],
 
     paths = {
         views      : { watch: ['views/**/*.jade', 'content/**/*'], src: 'views/**/*.jade', out: 'www' },
+        viewsi18n  : { watch: 'www/**/*.html', src: 'www/**/*.html', out: 'www/locales' },
         browserify : { watch: ['lib/**/*', 'content/**/*', 'lib/**/**/*'], src: 'lib/index.js', out: 'www/js' },
         styles     : { watch: 'styles/**/*.styl', src: 'styles/main.styl', out: 'www/css' },
-        content    : {watch: 'lib/challenges/**/*'}
+        content    : { watch: 'lib/challenges/**/*' }
     };
 
 function handleError(error) {
@@ -84,12 +88,31 @@ gulp.task('views', function () {
     .pipe(livereload(server));
 });
 
+gulp.task('clean-i18n', function (next) {
+    del([paths.viewsi18n.out], next);
+});
+
+gulp.task('views-i18n', ['clean-i18n', 'views'], function () {
+    gulp.src(paths.viewsi18n.src)
+    .pipe(i18n({ langDir: './locales',
+                 createLangDirs: true }))
+    .on('error', handleError)
+    .pipe(gulp.dest(paths.viewsi18n.out))
+    .pipe(livereload(server));
+});
+
 /**
- * This task modifies the challenge index to contain basic
- * information about the single challenges, so that we
- * can show a calendar without loading all the single challenges.
+ * This function returns a function that modifies the challenge
+ * index to contain basic information about the single challenges,
+ * so that we can show a calendar without loading all the single
+ * challenges.
+ * The returned function will be called for each locale.
  */
-gulp.task('apify-challenges', ['copy-challenges'], function (next) {
+function apifyChallengeFn(next) {
+    return function (locale) {
+
+    //console.log("apify-challenge for locale: '" + locale + "'...");
+
     var index,
         worldsNum,
         //fields that are copied from ./index.json to /world/<world>/index.json
@@ -111,19 +134,20 @@ gulp.task('apify-challenges', ['copy-challenges'], function (next) {
             'socialText'
         ],
         countNext = 0,
-        formattedIndex;
+        formattedIndex,
+        localePath = locale ? 'locales/' + locale + '/' : '';
     function localNext() {
         if (++countNext === worldsNum + 1) {
             next();
         }
     }
     //work with them
-    index = require('./' + chDescriptorsPath + 'index.json');
+    index = require('./' + chDescriptorsPath + localePath + 'index.json');
     worldsNum = index.worlds.length;
 
     index.worlds.forEach(function (world) {
-        var worldPath = './' + chDescriptorsPath + world.world_path,
-            libWorldPath = './' + libPath + world.world_path,
+        var worldPath = './' + chDescriptorsPath + localePath + world.world_path,
+            libWorldPath = './' + libPath + localePath + world.world_path,
             worldObj = {},
             challenges = [],
             formattedJSON;
@@ -179,7 +203,7 @@ gulp.task('apify-challenges', ['copy-challenges'], function (next) {
     });
     //copy back the index
     formattedIndex = JSON.stringify(index, null, 4);
-    fs.writeFile(chDescriptorsPath + 'index.json', formattedIndex, function (err) {
+    fs.writeFile(chDescriptorsPath + localePath + 'index.json', formattedIndex, function (err) {
         if (err) {
             throw err;
         } else {
@@ -187,25 +211,40 @@ gulp.task('apify-challenges', ['copy-challenges'], function (next) {
         }
     });
 
+}};
 
+gulp.task('apify-challenges', ['copy-challenges'], function (next) {
+    var countNext = 0;
+
+    function localNext() {
+        if (++countNext === locales.length) {
+            next();
+        }
+    }
+
+    locales.forEach(apifyChallengeFn(localNext));
 });
 
 gulp.task('copy-challenges', function (next) {
     var counter = 0,
         stream1,
-        stream2;
+        stream2,
+        stream3;
     function localNext() {
-        if (++counter === 2) {
+        if (++counter === 3) {
             next();
         }
     }
+    //copy the files
     stream1 = gulp.src('lib/challenges/worlds/**/*.json')
         .pipe(gulp.dest(chDescriptorsPath + "/worlds"));
-    //copy the files
     stream2 = gulp.src('lib/challenges/index.json')
         .pipe(gulp.dest(chDescriptorsPath));
+    stream3 = gulp.src('lib/challenges/locales/**/*.json')
+        .pipe(gulp.dest(chDescriptorsPath + "/locales"));
     stream1.on('end', localNext);
     stream2.on('end', localNext);
+    stream3.on('end', localNext);
 
 });
 
@@ -221,7 +260,7 @@ gulp.task('listen', function (next) {
 });
 gulp.task('prepare-challenges', ['copy-challenges', 'apify-challenges']);
 
-gulp.task('build', ['browserify', 'styles', 'views', 'prepare-challenges']);
+gulp.task('build', ['browserify', 'styles', 'views-i18n', 'prepare-challenges']);
 
 gulp.task('watch', ['build', 'listen'], function () {
     gulp.watch(paths.browserify.watch, ['browserify']);

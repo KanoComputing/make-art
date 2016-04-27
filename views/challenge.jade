@@ -4,9 +4,9 @@
 
         .inner.center(ng-if='!started')
 
-            h3 Challenge {{ id }}: {{ challenges[ id - 1 ].title }}
+            h3 ${{ challenge.challenge_title }}$ {{ challenges[ id - 1 ].title }}
             h4 {{ challenges[ id - 1 ].description }}
-            button.button-success(ng-click='start()') Start
+            button.button-success(ng-click='start()') ${{ challenge.start }}$
 
         .inner(ng-if='started && !completed')
 
@@ -15,7 +15,7 @@
                 ng-class='{ active: showSolution, "animate-pulse-highlight": highlightHelp }'
                 )
                 i.icon-hint
-                | Hint
+                | ${{ challenge.hint }}$
 
             progress-circle(value='step', max='content.steps.length')
             h3 {{ challenges[ id - 1 ].title }}
@@ -25,7 +25,7 @@
             .completion
                 .text
                     h4 {{ successMessage() }}
-                    a.button.button-success(ng-click='goToNext()') {{ next ? 'Next' : 'Done' }} &rsaquo;
+                    a.button.button-success(ng-click='goToNext()') {{ next ? '${{ challenge.next }}$' : '${{ challenge.done }}$' }} &rsaquo;
 
                 .gallery(ng-if='content.gallery')
                     h4 Can you hack this challenge?
