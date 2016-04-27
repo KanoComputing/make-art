@@ -1,0 +1,139 @@
+{
+    "id": "cat",
+    "title": "Spooky Cat",
+    "cover": "mischiefweek2015/mw-002-cat.png",
+    "description": "Make a spooky cat with code",
+    "start_date": "2015-10-27T06:00:00",
+    "startAt": 2,
+    "completion_text": "Nice work - you made a spooky black cat! Try changing its color or even its tail! Don't forget to share your cat afterwards.",
+    "steps": [
+        {
+            "hint": "We can make the background a spooky black by **typing** `background black`.",
+            "solution": "background black"
+        },
+        {
+            "hint": "Set the stroke to zero so we have no outlines. **Type** `stroke 0`",
+            "solution": "stroke 0"
+        },
+        {
+            "hint": "Now let's set the color of the full moon. **Type** `color lightgray`",
+            "solution": "color lightgray"
+        },
+        {
+            "hint": "Create a nice big circle for the moon. **Type** `circle 230`.",
+            "solution": "circle 230"
+        },
+        {
+            "hint": "Now move downwards so we can draw the grass on the ground. **Type** `moveTo 250, 500`.",
+            "solution": "moveTo 250, 500"
+        },
+        {
+            "hint": "It's night time, so we'll make the grass a dark green. **Type** `color darkgreen`.",
+            "solution": "color darkgreen"
+        },
+        {
+            "hint": "Draw the grassy hill with an ellipse so it's round. **Type** `ellipse 300, 100`",
+            "solution": "ellipse 300, 100"
+        },
+        {
+            "hint": "Now set the color of the cat! To make it black, **type** `color black`.",
+            "solution": "color black"
+        },
+        {
+            "hint": "Move the cursor to draw the cat in the middle! **Type** `moveTo 250, 250`.",
+            "solution": "moveTo 250, 250"
+        },
+        {
+            "hint": "Let's draw the head with an ellipse. **Type** `ellipse 60, 40`.",
+            "solution": "ellipse 60, 40"
+        },
+        {
+            "hint": "Let's move to right and up to draw the first ear. **Type** `moveTo 280, 220`.",
+            "solution": "moveTo 280, 220"
+        },
+        {
+            "hint": "We'll use the polygon function to make a nice pointy ear! **Type** `polygon 0, -40, 28, 20, close`.",
+            "solution": "polygon 0, -40, 28, 20, close"
+        },
+        {
+            "hint": "Move to the left by 60 so we can draw the other ear! **Type** `move -60`.",
+            "solution": "move -60"
+        },
+        {
+            "hint": "This ear is a reflection of the other one! **Type** `polygon 0, -40, -28, 20, close`.",
+            "solution": "polygon 0, -40, -28, 20, close"
+        },
+        {
+            "hint": "Let's make the neck underneath. **Type** `moveTo 250, 310`.",
+            "solution": "moveTo 250, 310"
+        },
+        {
+            "hint": "Draw it using an ellipse! **Type** `ellipse 30, 50`.",
+            "solution": "ellipse 30, 50"
+        },
+        {
+            "hint": "Now lets make the body below. **Type** `moveTo 250, 360`.",
+            "solution": "moveTo 250, 360"
+        },
+        {
+            "hint": "We'll use a bigger ellipse this time round! **type** `ellipse 50, 60`.",
+            "solution": "ellipse 50, 60"
+        },
+        {
+            "hint": "Now we need to move down and right to make the tail! **Type** `moveTo 320, 380`.",
+            "solution": "moveTo 320, 380"
+        },
+        {
+            "hint": "Let's use a sneaky text trick to make a curvy tail. **Type** `font 150`.",
+            "solution": "font 150"
+        },
+        {
+            "hint": "We'll make the text bold to make a large. **Type** `bold true`.",
+            "solution": "bold true"
+        },
+        {
+            "hint": "Great! Now draw the tail by **typing** `text 'S'`.",
+            "solution": "text 'S'"
+        },
+        {
+            "hint": "Finally, we'll make the eyes. **Type** `moveTo 225, 250`.",
+            "solution": "moveTo 225, 250"
+        },
+        {
+            "hint": "Set the color to yellow. **Type** `color yellow`.",
+            "solution": "color yellow"
+        },
+        {
+            "hint": "We'll draw it using an ellipse. **Type** `ellipse 14, 6`.",
+            "solution": "ellipse 14, 6"
+        },
+        {
+            "hint": "Now for the pupil! Set the color to black. **Type** `color black`.",
+            "solution": "color black"
+        },
+        {
+            "hint": "Make a circle of radius 6. **Type** `circle 6`.",
+            "solution": "circle 6"
+        },
+        {
+            "hint": "Great! Now lets move right to do the other eye. **Type** `moveTo 275, 250`.",
+            "solution": "moveTo 275, 250"
+        },
+        {
+            "hint": "Set the color back to yellow. **Type** `color yellow`.",
+            "solution": "color yellow"
+        },
+        {
+            "hint": "Make the same ellipse as before. **Type** `ellipse 14,6`.",
+            "solution": "ellipse 14, 6"
+        },
+        {
+            "hint": "Set the color back to black. **type** `color black`.",
+            "solution": "color black"
+        },
+        {
+            "hint": "Lastly create the second pupil. **Type** `circle 6`.",
+            "solution": "circle 6"
+        }
+    ]
+}

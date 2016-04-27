@@ -1,0 +1,90 @@
+{
+    "id": "campfire",
+    "title": "Campfire",
+    "short_title": "Campfire",
+    "description": "Time to get a fire going. In the wilderness, this very well might be your only source of light, and heat. Burning at over a thousand degrees fahrenheit, this will be sure to keep you warm, and could keep you fed too! Meats, vegetables, and marshmallows can all be cooked over the open flame with the help of sharpened sticks.  \nMost fires are built with wood logs, but yours is going to be built with code and a “loop.” As your fire grows upwards its colour changes into a deep shade of orange as the oxygen it is burning starts to cools down. Your code will produce hundreds of colours with just a few lines of code.",
+    "icon_class": "challenge_fire",
+    "completion_text": "Try adding a starry sky, more flames, a ring of rocks to make it safer or even marshmallows!",
+    "difficulty": 2,
+    "cover": "summercamp/day_6.png",
+    "startAt": 5,
+    "summerCamp": true,
+    "rewards": {
+        "wallpaper": 1
+    },
+    "steps": [
+        {
+            "hint": "It's a dark night. Set the `background` color to `darkblue`",
+            "solution": "background darkblue"
+        },
+        {
+            "hint": "Set the stroke to 0, to avoid drawing lines - **type** `stroke 0`",
+            "solution": "stroke 0"
+        },
+        {
+            "hint": "Move the cursor to place the floor - **type** `moveTo 0, 300`",
+            "solution": "moveTo 0, 300"
+        },
+        {
+            "hint": "Set the `color` to `darkgreen`",
+            "solution": "color darkgreen"
+        },
+        {
+            "hint": "Draw the grass using a rectangle - **type** `rectangle 500, 200`",
+            "solution": "rectangle 500, 200"
+        },
+        {
+            "hint": "Move the cursor to place the light casted by the fire - **type** `moveTo 250, 400`",
+            "solution": "moveTo 250, 400"
+        },
+        {
+            "hint": "Set the `color` to `green`",
+            "solution": "color green"
+        },
+        {
+            "hint": "Draw the light using an ellipse - **type** `ellipse 200, 30`",
+            "solution": "ellipse 200, 30"
+        },
+        {
+            "hint": "We need some wood to feed the fire - **type** `moveTo 110, 390`",
+            "solution": "moveTo 110, 390"
+        },
+        {
+            "hint": "Set the stroke for the logs - **type** `stroke brown, 25`",
+            "solution": "stroke brown, 25"
+        },
+        {
+            "hint": "Good, now draw the first log - **type** `line 270, 30`",
+            "solution": "line 270, 30"
+        },
+        {
+            "hint": "Move the cursor to place the second log - **type** `moveTo 420, 390`",
+            "solution": "moveTo 420, 390"
+        },
+        {
+            "hint": "Draw the second log - **type** `line -290, 30`",
+            "solution": "line -290, 30"
+        },
+        {
+            "hint": "Excellent! We are now ready to light the fire - **type** `moveTo 180, 400`",
+            "solution": "moveTo 180, 400"
+        },
+        {
+            "hint": "Our fire will be formed by 150 lines! - **type** `for i in [ 1 .. 150 ]`",
+            "solution": "for i in [ 1 .. 150 ]"
+        },
+        {
+            "hint": "Set the thickness and color of each line - **type** `stroke 'rgba(255, ' + (i + 50) + ', 0, 0.3)', 10`",
+            "solution": "    stroke 'rgba(255, ' + (i + 50) + ', 0, 0.3)', 10",
+            "validate": "__^    stroke 'rgba*\\(255, ' \\+ \\(i *\\+ *50\\) *\\+ *', *0, *0.3\\)', 10"
+        },
+        {
+            "hint": "Now draw the line - **type** `line 150 - i`",
+            "solution": "    line 150 - i"
+        },
+        {
+            "hint": "Move the cursor for next line - **type** `move 0.5, -2`",
+            "solution": "    move 0.5, -2"
+        }
+    ]
+}

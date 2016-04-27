@@ -1,0 +1,121 @@
+{
+    "id": "table_tennis",
+    "title": "Table Tennis",
+    "short_title": "Table Tennis",
+    "icon_class": "challenge_tennis",
+    "description": "Table Tennis is a game played with one or two people on each side of a table with the outline of a miniaturized tennis court drawn on it. Games are played to 11 or 21, and upon completion the victor’s paddle is thrown to the ground as they let out their battle cry.",
+    "cover": "summercamp/day_16.png",
+    "completion_text": "Well done! You made a beautiful 3D ping pong table. But there isn’t anyone playing or watching the game! Use your creativity and code to draw some fellow campers enjoying the game.",
+    "difficulty": 2,
+    "startAt": 0,
+    "summerCamp": true,
+    "rewards": {
+        "wallpaper": 1
+    },
+    "steps": [
+        {
+            "hint": "Begin by setting your stroke to zero with `stroke 0`",
+            "solution": "stroke 0"
+        },
+        {
+            "hint": "It's a sunny day! Set the background color to blue - **type** `background blue`",
+            "solution": "background blue"
+        },
+        {
+            "hint": "Set your color to green for the grass. **Type** `color green`.",
+            "solution": "color green"
+        },
+        {
+            "hint": "Move your cursor into place with `moveTo 0, 350`",
+            "solution": "moveTo 0, 350"
+        },
+        {
+            "hint": "Cover the bottom part of the canvas with grass. Draw a `rectangle` of width `500` and height `150`.",
+            "solution": "rectangle 500, 150"
+        },
+        {
+            "hint": "Give your table a solid foundation with some wood legs. Set `color` to `brown`",
+            "solution": "color brown"
+        },
+        {
+            "hint": "Move the cursor into position for the first leg. **Type** `moveTo 20, 310`",
+            "solution": "moveTo 20, 310"
+        },
+        {
+            "hint": "Now draw the first leg. Type `rectangle 15, 150`.",
+            "solution": "rectangle 15, 150"
+        },
+        {
+            "hint": "Now the second leg. **Type** `moveTo 465, 310`.",
+            "solution": "moveTo 465, 310"
+        },
+        {
+            "hint": "Now **draw** the second leg. Type `rectangle 15, 150`.",
+            "solution": "rectangle 15, 150"
+        },
+        {
+            "hint": "And the third leg. **Type** `moveTo 40, 250`.",
+            "solution": "moveTo 40, 250"
+        },
+        {
+            "hint": "Now draw the third leg the same size as the others",
+            "solution": "rectangle 15, 150"
+        },
+        {
+            "hint": "Finally, the fourth leg. **Type** `moveTo 445, 250`.",
+            "solution": "moveTo 445, 250"
+        },
+        {
+            "hint": "Now draw the fourth leg",
+            "solution": "rectangle 15, 150"
+        },
+        {
+            "hint": "Now to put the table on! Set the drawing `color` to `darkgreen`.",
+            "solution": "color darkgreen"
+        },
+        {
+            "hint": "Move your table top into place. Type `moveTo 10, 300`.",
+            "solution": "moveTo 10, 300"
+        },
+        {
+            "hint": "Your table has perspective, to draw it use `polygon 30, -60, 450, -60, 480, 0`",
+            "solution": "polygon 30, -60, 450, -60, 480, 0"
+        },
+        {
+            "hint": "For a cool 3D effect, lighten the drawing color with `color lighten darkgreen, 10`",
+            "solution": "color lighten darkgreen, 10"
+        },
+        {
+            "hint": "**Draw** the side of the table with `rectangle 480, 10`",
+            "solution": "rectangle 480, 10"
+        },
+        {
+            "hint": "For the net, set the drawing `color` to `white`",
+            "solution": "color white"
+        },
+        {
+            "hint": "Move the cursor to **exactly** `moveTo 248, 220`",
+            "solution": "moveTo 248, 220"
+        },
+        {
+            "hint": "Draw the net: a `rectangle` with a width of `4`, and height of `80`",
+            "solution": "rectangle 4, 80"
+        },
+        {
+            "hint": "Give your scene a bouncing ball! Use random to decide what side of the table the ball should be on. **Type** `x = random 40, 460`.",
+            "solution": "x = random 40, 460"
+        },
+        {
+            "hint": "Now we’ll use random to decide how high the ball should be! **Type** `y = random 150, 250`.",
+            "solution": "y = random 150, 250"
+        },
+        {
+            "hint": "Move the cursor to the x and y variables you just made. **Type** `moveTo x, y`.",
+            "solution": "moveTo x, y"
+        },
+        {
+            "hint": "Finally, draw your ball with a circle with radius 7. Type `circle 7`.",
+            "solution": "circle 7"
+        }
+    ]
+}
