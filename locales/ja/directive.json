@@ -5,5 +5,16 @@
     "description": "説明",
     "save": "保存",
     "skip": "スキップ",
-    "save_wallpaper": "壁紙を保存"
+    "save_wallpaper": "壁紙を保存",
+    "login_to_your_account": "アカウントへログイン",
+    "create_your_account": "アカウントを作成",
+    "share": "共有",
+    "save": "保存",
+    "reset": "リセット",
+    "load": "読み込む",
+    "toggle_autocomplete": "オートコンプリート切り替え",
+    "autocomplete": "オートコンプリート",
+    "toggle_fullscreen": "全画面切り替え",
+    "fullscreen": "全画面",
+    "download_teachers_guide": "講師用ガイドをダウンロード"
 }
