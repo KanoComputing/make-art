@@ -12,5 +12,21 @@
     "feedback": "Feedback",
     "whats_up": "What\\'s up?",
     "thank_you": "Thank You!",
-    "send": "Send"
+    "send": "Send",
+    "load": "Load",
+    "load_from_where": "Load from where",
+    "your_kano": "Your Kano",
+    "internet": "Internet",
+    "share_by_email": "Share by email",
+    "enter_an_email_address": "Enter an email address",
+    "i_just_made_this_with_code": "I just made this with code! Want to try your own? It's easy, fun and for everyone",
+    "your_name": "Your name...",
+    "next_up": "Next up:",
+    "back_to_world": "'Back to ' + selectedWorld.name",
+    "come_back_tomorrow_to_continue": "Come back tomorrow to continue this challenge",
+    "share_on_facebook": "Share on Facebook",
+    "share_on_twitter": "Share on Twitter",
+    "email_address": "Email address",
+    "share_with_friends": "Share with friends:",
+    "skip_sharing": "Skip sharing"
 }
