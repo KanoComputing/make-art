@@ -1,50 +1,50 @@
 {
     "id": "smiley",
-    "title": "Your first face",
-    "description": "Draw a face",
+    "title": "初めての笑顔",
+    "description": "顔を描こう",
     "startAt": 2,
     "steps": [
         {
-            "hint": "Set the drawing color to yellow - **type** `color yellow`",
+            "hint": "鉛筆の色を黄色に変えよう。`color yellow`を**タイプ**",
             "solution": "color yellow"
         },
         {
-            "hint": "Choose a thick black stroke - **type** `stroke black, 20`",
+            "hint": "太くて黒い筆を選ぼう。`stroke black, 20`を**タイプ**",
             "solution": "stroke black, 20"
         },
         {
-            "hint": "Draw a circle with a size of 200",
+            "hint": "200の大きさの丸を描こう",
             "solution": "circle 200"
         },
         {
-            "hint": "Move left and up by 80 - **type** `move -80, -80`",
+            "hint": "左上を80歩ずつ動こう。`move -80, -80`を**タイプ**",
             "solution": "move -80, -80"
         },
         {
-            "hint": "Set the drawing color to black",
+            "hint": "鉛筆の色を黒にしよう。",
             "solution": "color black"
         },
         {
-            "hint": "Draw a circle with a radius of 20",
+            "hint": "半径20の丸を描こう。",
             "solution": "circle 20"
         },
         {
-            "hint": "Move right by 160 - **type** `move 160`",
+            "hint": "160歩右へ動こう。`move 160`を**タイプ**",
             "solution": "move 160"
         },
         {
-            "hint": "Draw another circle with a size of 20",
+            "hint": "半径20の丸をもう一つ描こう。",
             "solution": "circle 20"
         },
         {
-            "hint": "Move to the center and down - In a new line, **type** `moveTo 250, 270`",
+            "hint": "中央と下まで動こう。次の行で`moveTo 250, 270`を**タイプ**",
             "solution": "moveTo 250, 270"
         },
         {
-            "hint": "An arc is part of a circle, we can draw one as the mouth - **type** `arc 100, 1, 2`",
+            "hint": "アーク（円弧）は丸の一部で、口に一つ描けば良さそう。`arc 100, 1, 2`を**タイプ**",
             "solution": "arc 100, 1, 2"
         }
     ],
-    "completion_text": "Nice! Keep up the good work you face drawing genius!",
+    "completion_text": "よくやった！その調子で、笑顔描きジーニャスさん！",
     "cover": "smiley.png"
 }
