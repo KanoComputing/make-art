@@ -5,5 +5,16 @@
     "description": "Description",
     "save": "Save",
     "skip": "Skip",
-    "save_wallpaper": "Save Wallpaper"
+    "save_wallpaper": "Save Wallpaper",
+    "login_to_your_account": "Login to Your Account",
+    "create_your_account": "Create your account",
+    "share": "Share",
+    "save": "Save",
+    "reset": "Reset",
+    "load": "Load",
+    "toggle_autocomplete": "Toggle autocomplete",
+    "autocomplete": "Autocomplete",
+    "toggle_fullscreen": "Toggle fullscreen",
+    "fullscreen": "Fullscreen",
+    "download_teachers_guide": "Download teacher's guide"
 }

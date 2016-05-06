@@ -59,23 +59,23 @@ div(ng-show='tab === "code"')
             a(
                 href='#',
                 ng-click='toggleAutocomplete()',
-                title='Toggle autocomplete',
+                title='${{ directive.toggle_autocomplete }}$',
                 ng-class='{ active: autocomplete }'
                 )
                 .autocomplete
                     .round
-                    span Autocomplete
+                    span ${{ directive.autocomplete }}$
 
             a(
                 href='#',
                 ng-click='toggleFullScreen()',
-                title='Toggle fullscreen',
+                title='${{ directive.toggle_fullscreen }}$',
                 ng-class='{ active: fullScreen }',
                 ng-hide='challengeId'
                 )
                 .full-screen-control
                     .round
-                    span Fullscreen
+                    span ${{ directive.fullscreen }}$
 
 .editor-guide(ng-show='tab === "guide"'): .inner
     .teachers-guide(ng-if='teachers_guide')
