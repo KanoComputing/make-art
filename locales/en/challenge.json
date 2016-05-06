@@ -3,6 +3,18 @@
     "start": "Start",
     "hint": "Hint",
     "next": "Next",
-    "done": "Done"
+    "done": "Done",
+    "can_you_hack_this_challenge": "Can you hack this challenge?",
+    "make_it_into_a_fathers_day_card": "Make it into a Father's day card!",
+    "now_sign_up_to_kano_world_to_share_your_creation": "Now sign-up to Kano World to share your creation and send a card to your dad!",
+    "share_your_fathers_day_card": "Share your Father's day card!",
+    "now_you_can_share_the_card_on_kano_world": "Now you can share the card on Kano World and share it to your dad!",
+    "challenges_completed": "Challenges completed",
+    "now_make_something_new": "Now make something new!",
+    "new_world_unlocked_play_now": "New world unlocked! Play Now - ",
+    "menu": "Menu",
+    "playground": "Playground",
+    "you_did_it_go_back_for_more_coding_fun": "You did it, go back for more coding fun!",
+    "hour_of_code": "Hour Of Code"
 }
 
