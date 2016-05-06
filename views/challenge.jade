@@ -1,3 +1,5 @@
+include ./partial/header
+
 .page-challenge: .page-width
 
     .workspace-header(ng-class='(animationClass || "") + (completed ? " success" : "") + (fatherDay ? " father-day" : "")')
@@ -28,7 +30,7 @@
                     a.button.button-success(ng-click='goToNext()') {{ next ? '${{ challenge.next }}$' : '${{ challenge.done }}$' }} &rsaquo;
 
                 .gallery(ng-if='content.gallery')
-                    h4 Can you hack this challenge?
+                    h4 ${{ challenge.can_you_hack_this_challenge }}$
                     .remixes
                         .image(
                             ng-repeat='remix in content.gallery.remixes',
@@ -41,11 +43,10 @@
 
                 img(src='/assets/layout/father-day-closed.png')
 
-                h4 Make it into a Father's day card!
+                h4 ${{ challenge.make_it_into_a_fathers_day_card }}$
 
                 p.
-                    Now sign-up to Kano World to share your creation and send 
-                    a card to your dad!
+                    ${{ challenge.now_sign_up_to_kano_world_to_share_your_creation }}$
 
                 a.button.large.button-success(ng-click='login()', href='#') Log In / Sign Up
 
@@ -53,10 +54,10 @@
 
                 img(src='/assets/layout/father-day-open.png')
 
-                h4 Share your Father's day card!
+                h4 ${{ challenge.share_your_fathers_day_card }}$
 
                 p.
-                    Now you can share the card on Kano World and share it to your dad!
+                    ${{ challenge.now_you_can_share_the_card_on_kano_world }}$
 
                 a.button.large.button-success(ng-click='shareFatherDay()', href='#') Share it!
 
@@ -97,12 +98,12 @@
 
             //- button.close(ng-click='clocseFinishedGame()'): i.icon-cross
 
-            h3 Challenges completed
+            h3 ${{ challenge.challenges_completed }}$
             
-            h4(ng-if='!unlockedWorld') Now make something new!
+            h4(ng-if='!unlockedWorld') ${{ challenge.now_make_something_new }}$
 
             h4(ng-if='unlockedWorld')
-                | New world unlocked! Play Now - 
+                | ${{ challenge.new_world_unlocked_play_now }}$
                 a.button.unlocked(href='/challenges/{{ unlockedWorld.id }}') {{ unlockedWorld.name }}
 
             .logo-title
@@ -111,20 +112,20 @@
 
                 a.button.secondary.large(ng-href='/challenges')
                     i.icon-menu
-                    |  Menu
+                    |  ${{ challenge.menu }}$
 
                 a.button.large(ng-href='/playground')
                     i.icon-game
-                    |  Playground
+                    |  ${{ challenge.playground }}$
                     
         
         .modal-inner.split-modal.challenge-complete.center(ng-if='selectedWorld.id === "hourofcode"')
 
             //- button.close(ng-click='clocseFinishedGame()'): i.icon-cross
 
-            h3 Challenges completed
+            h3 ${{ challenge.challenges_completed }}$
             
-            h4 You did it, go back for more coding fun!
+            h4 ${{ challenge.you_did_it_go_back_for_more_coding_fun }}$
 
             .hour-of-code-logo
 
@@ -132,7 +133,7 @@
 
                 a.button.large(href='http://code.org/learn')
                     i.icon-game
-                    |  Hour Of Code
+                    |  ${{ challenge.hour_of_code }}$
   
 include partial/next-modal
 include partial/share-modal
