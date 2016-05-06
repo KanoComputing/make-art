@@ -12,5 +12,21 @@
     "feedback": "ご意見",
     "whats_up": "思ったこと",
     "thank_you": "ありがとう！",
-    "send": "送信"
+    "send": "送信",
+    "load": "読み込む",
+    "load_from_where": "どこから読み込む",
+    "your_kano": "あなたのKanoから",
+    "internet": "インターネットから",
+    "share_by_email": "eメールで共有",
+    "enter_an_email_address": "メールアドレスを入力",
+    "i_just_made_this_with_code": "さっき、これをコードで作ったよ！あなたもやってみませんか？簡単で皆で遊べるよ。",
+    "your_name": "お名前…",
+    "next_up": "次は：",
+    "back_to_world": "selectedWorld.name + 'へ戻る'",
+    "come_back_tomorrow_to_continue": "明日戻ってきて、このチャレンジを続けよう。",
+    "share_on_facebook": "Facebookで共有する",
+    "share_on_twitter": "Twitterで共有する",
+    "email_address": "メールアドレス",
+    "share_with_friends": "友達と共有する：",
+    "skip_sharing": "共有しない"
 }
