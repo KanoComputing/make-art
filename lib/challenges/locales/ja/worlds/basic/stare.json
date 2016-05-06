@@ -18,7 +18,7 @@
             "solution": "color white"
         },
         {
-            "hint": "円形を描こう。伸ばした丸のように。`ellipse 60, 40`を**タイプ**",
+            "hint": "楕円を描こう。伸ばした円形のように。`ellipse 60, 40`を**タイプ**",
             "solution": "ellipse 60, 40"
         },
         {
@@ -38,7 +38,7 @@
             "solution": "color white"
         },
         {
-            "hint": "もう一つの幅60で高さ40の円形を描こう。`ellipse 60, 40`を**タイプ**",
+            "hint": "もう一つの幅60で高さ40の楕円を描こう。`ellipse 60, 40`を**タイプ**",
             "solution": "ellipse 60, 40"
         },
         {
