@@ -1,10 +1,10 @@
 .social-sharing
     .buttons
         a.button.button-facebook(ng-click='facebookShare()')
-            img(src='/assets/button-icons/facebook-white.png' title='Share on Facebook')
+            img(src='/assets/button-icons/facebook-white.png' title='${{ partial.share_on_facebook }}$')
 
         a.button.button-twitter(ng-href='{{ buildURL() }}')
-            img(src='/assets/button-icons/twitter-white.png' title='Share on Twitter')
+            img(src='/assets/button-icons/twitter-white.png' title='${{ partial.share_on_twitter }}$')
 
         a.button.button-mail(ng-click='open()')
             i.icon-mail
@@ -20,11 +20,11 @@
             .box.box-danger(ng-if='error') {{ error }}
 
             .email
-                input(ng-model='mailForm.email', placeholder='Recipient\'s email address', type='email', required)
+                input(ng-model='mailForm.email', placeholder='${{ directive.recipients_email_address }}$', type='email', required)
 
             .message
-                textarea(ng-model='mailForm.description', placeholder='Your message', required)
+                textarea(ng-model='mailForm.description', placeholder='${{ directive.your_message }}$', required)
 
-            button.button-success(type='submit', ng-disabled='form.$invalid', ng-class='{ "disabled" : form.$invalid }', ng-if='!loading') Send
+            button.button-success(type='submit', ng-disabled='form.$invalid', ng-class='{ "disabled" : form.$invalid }', ng-if='!loading') ${{ partial.send }}$
 
             .spinner(ng-if='loading')
