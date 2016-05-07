@@ -1,54 +1,54 @@
 {
     "id": "stickman",
-    "title": "Stickman",
-    "description": "Draw a stickman using circles and lines",
+    "title": "棒人間",
+    "description": "円形と線で棒人間を描こう",
     "startAt": 2,
     "steps": [
         {
-            "hint": "Set the `stroke` to `black` with a size of `10`",
+            "hint": "筆（`stroke`）の色を黒（`black`）に、幅を`10`に設定しよう",
             "solution": "stroke black, 10"
         },
         {
-            "hint": "Move up on the canvas, **type** `move 0, -50`",
+            "hint": "カーソルを動かそう。`move 0, -50`を**タイプ**",
             "solution": "move 0, -50"
         },
         {
-            "hint": "Draw the stickman body - `line 0, 150`",
+            "hint": "棒人間の体を描こう。`line 0, 150`",
             "solution": "line 0, 150"
         },
         {
-            "hint": "Draw the stickman left arm - `line -80, 120`",
+            "hint": "棒人間の左腕を描こう。`line -80, 120`",
             "solution": "line -80, 120"
         },
         {
-            "hint": "Good, now with the right arm - `line 80, 120`",
+            "hint": "よっし、次は右腕を。`line 80, 120`",
             "solution": "line 80, 120"
         },
         {
-            "hint": "Move down, **type** `move 0, 150`",
+            "hint": "下へ行こう。`move 0, 150`を**タイプ**",
             "solution": "move 0, 150"
         },
         {
-            "hint": "Draw the stickman left leg: `line -80, 120`",
+            "hint": "棒人間の左足を描こう：`line -80, 120`",
             "solution": "line -80, 120"
         },
         {
-            "hint": "Good, now with the right leg - `line 80, 120`",
+            "hint": "よっし、次は右足を：`line 80, 120`",
             "solution": "line 80, 120"
         },
         {
-            "hint": "Move to the top of the drawing, **type** `moveTo 250, 100`",
+            "hint": "絵の上に動こう。`moveTo 250, 100`を**タイプ**",
             "solution": "moveTo 250, 100"
         },
         {
-            "hint": "Set the stroke back to 0",
+            "hint": "筆の太さを０に戻そう。",
             "solution": "stroke 0"
         },
         {
-            "hint": "Now to draw a many sided shape - **type** `polygon -60, 50, 0, 100, 60, 50`",
+            "hint": "最後に、多変形で頭を描こう。`polygon -60, 50, 0, 100, 60, 50`を**タイプ**",
             "solution": "polygon -60, 50, 0, 100, 60, 50"
         }
     ],
-    "completion_text": "Nice one! The canvas is 500 wide and 500 high, moving about on it is a skill!",
+    "completion_text": "良くできました！絵の高さと幅は500ピクセルずつで、正しく動くことは難しい。",
     "cover": "stickman.png"
 }
