@@ -34,7 +34,7 @@
             "solution": "stroke black, 5"
         },
         {
-            "hint": "風船の意図を描こう。`line 0, 200`を**タイプ**",
+            "hint": "風船の糸を描こう。`line 0, 200`を**タイプ**",
             "solution": "line 0, 200"
         }
     ],

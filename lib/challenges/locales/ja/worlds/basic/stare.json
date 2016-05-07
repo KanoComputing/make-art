@@ -9,7 +9,7 @@
             "solution": "background black"
         },
         {
-            "hint": "80歩で左に動こう。`move -80`を**タイプ**",
+            "hint": "左に80歩動こう。`move -80`を**タイプ**",
             "solution": "move -80",
             "validate": "move -80"
         },
@@ -50,6 +50,6 @@
             "solution": "circle 10"
         }
     ],
-    "completion_text": "本当の魔法使いだ！またジロジロ見つめる目を描きたかったら絶対読んでおくよ！",
+    "completion_text": "本当の魔法使いだ！またジロジロ見つめる目を描きたかったら君に頼むよ！",
     "cover": "stare.png"
 }
