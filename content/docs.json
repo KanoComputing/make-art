@@ -1,4 +1,4 @@
-[
+{ "en": [
     {
         "label"    : "Shapes",
         "icon"     : "shapes",
@@ -265,4 +265,272 @@
 
         ]
     }
+], "ja" : [
+    {
+        "label"    : "形",
+        "icon"     : "shapes",
+        "commands" : [
+            {
+                "call"        : "circle",
+                "unlockedAt"  : 1,
+                "description" : "円形を描く",
+                "args"        : [
+                    [ "radius", "number", "円形の大きさ（半径）", true ]
+                ],
+                "defaults": [ 100 ]
+            },
+            {
+                "call"        : "ellipse",
+                "unlockedAt"  : 999,
+                "description" : "楕円を描く",
+                "args"        : [
+                    [ "radius-x", "number", "楕円の横幅", true ],
+                    [ "radius-y", "number", "楕円の高さ", true ]
+                ],
+                "defaults": [ 50, 100 ]
+            },
+            {
+                "call"        : "square",
+                "unlockedAt"  : 2,
+                "description" : "四角を描く",
+                "args"        : [
+                    [ "size", "number", "四角の大きさ", true ]
+                ],
+                "defaults": [ 200 ]
+            },
+            {
+                "call"        : "rectangle",
+                "unlockedAt"  : 999,
+                "description" : "長方形を描く",
+                "args"        : [
+                    [ "width", "number", "長方形の幅", true ],
+                    [ "height", "number", "長方形の高さ", true ]
+                ],
+                "defaults": [ 100, 200 ]
+            },
+            {
+                "call"        : "arc",
+                "unlockedAt"  : 999,
+                "description" : "円形の一部を描く",
+                "args"        : [
+                    [ "radius", "number", "大きさ（半径）", true ],
+                    [ "start", "number", "開始点（０〜２）", true ],
+                    [ "end", "number", "最後の点（０〜２）", true ],
+                    [ "close", "bool", "形を閉じるかどうか", false ]
+                ],
+                "defaults": [ 100, 1, 2, true ]
+            },
+            {
+                "call"        : "polygon",
+                "unlockedAt"  : 999,
+                "description" : "多辺形を描く",
+                "args"        : [
+                    [ "x1", "number", "ー点目のX値", true ],
+                    [ "y1", "number", "ー点目のY値", true ],
+                    [ "...", "", "他の点の位置", true ],
+                    [ "close", "bool", "パスを真ん中に閉じるかどうか", false ]
+                ],
+                "defaults": [ 0, 0, 100, 0, 100, 100 ]
+            }
+        ]
+    },
+    {
+        "label"    : "線",
+        "icon"     : "lines",
+        "commands" : [
+            {
+                "call"        : "line",
+                "unlockedAt"  : 3,
+                "description" : "ある大きさの線を描く",
+                "args"        : [
+                    [ "x", "number", "水平距離", true ],
+                    [ "y", "number", "垂直距離", false ]
+                ],
+                "defaults": [ 100, 50 ]
+            },
+            {
+                "call"        : "lineTo",
+                "unlockedAt"  : 999,
+                "description" : "ある点までに線を描く",
+                "args"        : [
+                    [ "x", "number", "水平の目的点", true ],
+                    [ "y", "number", "垂直の目的点", true ]
+                ],
+                "defaults": [ 0, 0 ]
+            }
+        ]
+    },
+    {
+        "label"    : "位置",
+        "icon"     : "position",
+        "commands" : [
+            {
+                "call"        : "move",
+                "unlockedAt"  : 6,
+                "description" : "カーソルをある距離に動かす",
+                "args"        : [
+                    [ "x", "number", "水平距離", true ],
+                    [ "y", "number", "垂直距離", false ]
+                ],
+                "defaults": [ 100, 50 ]
+            },
+            {
+                "call"        : "moveTo",
+                "unlockedAt"  : 999,
+                "description" : "カーソルをある位置までに動かす",
+                "args"        : [
+                    [ "x", "number", "水平目的点", true ],
+                    [ "y", "number", "垂直目的点", true ]
+                ],
+                "defaults": [ "center", "center" ]
+            }
+        ]
+    },
+    {
+        "label"    : "テキスト",
+        "icon"     : "text",
+        "commands" : [
+            {
+                "call"        : "text",
+                "unlockedAt"  : 999,
+                "description" : "文字を書く",
+                "args"        : [
+                    [ "message", "string", "メッセージ", true ]
+                ],
+                "defaults": [ "何か言って！" ]
+            },
+            {
+                "call"        : "font",
+                "unlockedAt"  : 999,
+                "description" : "フォントや大きさを設定",
+                "args"        : [
+                    [ "font", "string", "フォントファミリー名", false ],
+                    [ "size", "number", "ピクセルでのフォントの大きさ", false ]
+                ],
+                "defaults": [ "Bariol", 30 ]
+            },
+            {
+                "call"        : "bold",
+                "unlockedAt"  : 999,
+                "description" : "太字を有効(true)または無効(false)",
+                "args"        : [
+                    [ "state", "bool", "太字の状態(デフォルトはtrue)", false ]
+                ],
+                "defaults": [ true ]
+            },
+            {
+                "call"        : "italic",
+                "unlockedAt"  : 999,
+                "description" : "車体を有効(true)または無効(false)",
+                "args"        : [
+                    [ "state", "bool", "車体の状態(デフォルトはtrue)", false ]
+                ],
+                "defaults": [ true ]
+            }
+        ]
+    },
+    {
+        "label"    : "一般",
+        "icon"     : "general",
+        "commands" : [
+            {
+                "call"        : "for",
+                "unlockedAt"  : 9,
+                "description" : "コードを繰り返す",
+                "args"        : [
+                    [ "i in [x..y]", "number", "i変数の最初と最後の値", true ]
+                ],
+                "example"     : "for i in [1..5]\n    circle i",
+                "defaults": null
+            },
+            {
+                "call"        : "random",
+                "unlockedAt"  : 9,
+                "description" : "ある範囲内でランダムな数字を生成する",
+                "args"        : [
+                    [ "min", "number", "最低値", true ],
+                    [ "max", "number", "最高地", true ],
+                    [ "float", "bool", "trueにすると少数が得られる", false ]
+                ],
+                "example"     : "random 5, 10",
+                "defaults": [ 5, 10 ]
+            }
+        ]
+    },
+    {
+        "label"    : "色",
+        "icon"     : "colors",
+        "commands" : [
+            {
+                "call"        : "background",
+                "unlockedAt"  : 999,
+                "description" : "背景の色を設定する",
+                "args"        : [
+                    [ "color", "string", "設定したい背景の色", true ]
+                ],
+                "defaults": [ "blue" ]
+            },
+            {
+                "call"        : "color",
+                "unlockedAt"  : 4,
+                "description" : "鉛筆の色を変える",
+                "args"        : [
+                    [ "color", "string", "設定したい鉛筆の色", true ]
+                ],
+                "defaults": [ "red" ]
+            },
+            {
+                "call"        : "stroke",
+                "unlockedAt"  : 5,
+                "description" : "筆の太さと色を変える",
+                "args"        : [
+                    [ "color", "string", "設定したい色。例えば'red', 'blue'..", false ],
+                    [ "size", "number", "鉛筆の太さ", false ]
+                ],
+                "defaults": [ 10, "purple" ]
+            },
+            {
+                "call"        : "setBrightness",
+                "unlockedAt"  : 999,
+                "description" : "色の明るさを設定する",
+                "args"        : [
+                    [ "color", "string", "色", true ],
+                    [ "amount", "number", "設定したい明るさ(-100〜100)", false ]
+                ],
+                "defaults": [ "yellow", 30 ]
+            },
+            {
+                "call"        : "setSaturation",
+                "unlockedAt"  : 999,
+                "description" : "色の飽和を設定する",
+                "args"        : [
+                    [ "color", "string", "色", true ],
+                    [ "amount", "number", "設定したい飽和(-100〜100)", false ]
+                ],
+                "defaults": [ "grey", 30 ]
+            },
+            {
+                "call"        : "rotate",
+                "unlockedAt"  : 999,
+                "description" : "色相を回転させる（変更する）",
+                "args"        : [
+                    [ "color", "string", "変えたい色", true ],
+                    [ "amount", "number", "回転の角度(-360〜360)", true ]
+                ],
+                "defaults": [ "red", 100 ]
+            },
+            {
+                "call"        : "setTransparency",
+                "unlockedAt"  : 999,
+                "description" : "色の透明度を設定する",
+                "args"        : [
+                    [ "color", "string", "色", true ],
+                    [ "amount", "number", "引き算する不透明度(-100〜100)", true ]
+                ],
+                "defaults": [ "black", 50 ]
+            }
+
+        ]
+    }
 ]
+}

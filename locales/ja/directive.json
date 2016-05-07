@@ -16,5 +16,11 @@
     "autocomplete": "オートコンプリート",
     "toggle_fullscreen": "全画面切り替え",
     "fullscreen": "全画面",
-    "download_teachers_guide": "講師用ガイドをダウンロード"
+    "download_teachers_guide": "講師用ガイドをダウンロード",
+    "click_plus_to_add_a_shape_1": "形をコードに挿入するには、", 
+    "click_plus_to_add_a_shape_2": "を押してみて",
+    "download_teachers_guide": "教師用のガイドをダウンロード",
+    "guide": "ガイド",
+    "recipients_email_address": "宛先のメールアドレス",
+    "your_message": "メッセージ"
 }

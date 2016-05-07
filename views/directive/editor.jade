@@ -24,9 +24,9 @@ ul.editor-tabs(ng-if='tabbed')
     h4 {{ category.label }}
 
     p.hint
-        | Click 
+        | ${{ directive.click_plus_to_add_a_shape_1 }}$
         span.add-button 
-        |  to add a shape to your code
+        | ${{ directive.click_plus_to_add_a_shape_2 }}$
 
         .command(ng-repeat='command in category.commands')
 
@@ -81,7 +81,7 @@ div(ng-show='tab === "code"')
     .teachers-guide(ng-if='teachers_guide')
         a.guide(ng-href='{{ "/assets" + teachers_guide }}', target='_blank')
             i.icon-zip
-            span Download teacher's guide
+            span ${{ directive.download_teachers_guide }}$
 
-    h4(ng-if='guide') Guide
+    h4(ng-if='guide') ${{ directive.guide }}$
     .guide(ng-bind-html="guide | markdown", ng-if='guide')
