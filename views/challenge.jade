@@ -90,7 +90,7 @@ include ./partial/header
             editor.solution(
                 ng-if='showSolution && solution',
                 ng-model='solution',
-                title='"Solution"'
+                title='"${{ challenge.solution }}$"'
                 ) {{ solution }}
 
     .modal-overlay(ng-if='gameCompleteOpen')
