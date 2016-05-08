@@ -1,28 +1,28 @@
 {
     "id": "shrinking",
-    "title": "Shrinking Circles",
-    "description": "Ever shrinking circles with a for loop!",
+    "title": "縮む円形",
+    "description": "forループで無限に縮む円形！",
     "code": "",
     "startAt": 1,
     "steps": [
         {
-            "hint": "Set the stroke - **type** `stroke gray, 3`",
+            "hint": "鉛筆を設定しよう。`stroke gray, 3`を**タイプ**",
             "solution": "stroke gray, 3"
         },
         {
-            "hint": "Set the color to see through - **type** `color null`",
+            "hint": "透明な色を設定しよう。`color null`を**タイプ**",
             "solution": "color null"
         },
         {
-            "hint": "Let's draw 32 circles all at once - **type** `for i in [ 0 .. 32 ]`",
+            "hint": "32個の円形を一気に描こう。`for i in [ 0 .. 32 ]`を**タイプ**",
             "solution": "for i in [ 0..32 ]"
         },
         {
-            "hint": "Awesome, now for the circles - inside the for loop **type** `circle 10 * i`",
+            "hint": "完璧、そしてforループの中で円形を描こう。`circle 10 * i`を**タイプ**",
             "solution": "    circle 10 * i",
             "validate": "    circle 10 *\\* *i"
         }
     ],
-    "completion_text": "Great! For loops let us repeat bits of code (it saves on all the typing)!",
+    "completion_text": "素晴らしい！forループでコードを繰り返すことができるんだ（一つ一つタイプしなくて良い）！",
     "cover": "shrinking.png"
 }
