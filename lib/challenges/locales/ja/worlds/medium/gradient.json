@@ -1,33 +1,33 @@
 {
     "id": "gradient",
-    "title": "Rainbow gradient",
-    "description": "Combine for loops and colors to make something magical!",
+    "title": "虹のパレット",
+    "description": "ループと色を組み合わせ、魔法の絵を！",
     "code": "",
     "startAt": 1,
     "steps": [
         {
-            "hint": "Start by opening a for loop - **type** `for x in [ 0 .. 25 ]`",
+            "hint": "まず、forループで０から２５まである操作を繰り返そう。`for x in [ 0 .. 25 ]`を**タイプ**",
             "solution": "for x in [ 0..25 ]"
         },
         {
-            "hint": "Now lets open a second for loop inside - **type** `for y in [ 0 .. 25 ]`",
+            "hint": "次は２つ目のforループを始めよう。`for y in [ 0 .. 25 ]`を**タイプ**",
             "solution": "    for y in [ 0..25 ]"
         },
         {
-            "hint": "Let's rotate through the color spectrum - **type** `color rotate red, 10 * x + 10 * y`",
+            "hint": "色のトーンを回転させよう。`color rotate red, 10 * x + 10 * y`を**タイプ**",
             "solution": "        color rotate red, 10 * x + 10 * y",
             "validate": "        color rotate +red,10 *\\* *x *\\+ *10 *\\* *y"
         },
         {
-            "hint": "Now we need to move every time we draw - **type** `moveTo 20 * x, 20 * y`",
+            "hint": "そして描くときに毎回動かなきゃ。`moveTo 20 * x, 20 * y`を**タイプ**",
             "solution": "        moveTo 20 * x, 20 * y",
             "validate": "        moveTo 20 *\\* *x,20 *\\* *y"
         },
         {
-            "hint": "Now for the shapes draw a square of size 20",
+            "hint": "形は大きさ20の四角にしよう。",
             "solution": "        square 20"
         }
     ],
-    "completion_text": "Try changing the numbers in the rotate function and see what happens.",
+    "completion_text": "回転(rotate)で数字を変えると、どうなるんだろう？",
     "cover": "gradient.png"
 }

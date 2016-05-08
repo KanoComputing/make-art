@@ -1,46 +1,46 @@
 {
     "id": "random",
-    "title": "Random!",
-    "description": "Not sure where to put something - theres a function for that!",
+    "title": "でたらめ",
+    "description": "物をどこに置けば良いか迷っていたら、そのための関数はあるよ！",
     "startAt": 2,
     "steps": [
         {
-            "hint": "Let's move the cursor somewhere random - **type** `moveTo (random 1, 500), (random 1, 500)`",
+            "hint": "カーソルを適当（不特定）な位置に動かそう。`moveTo (random 1, 500), (random 1, 500)`を**タイプ**",
             "solution": "moveTo (random 1, 500), (random 1, 500)"
         },
         {
-            "hint": "Set the color to red - **type** `color red`",
+            "hint": "色を赤（red）にしよう。`color red`を**タイプ**",
             "solution": "color red"
         },
         {
-            "hint": "Now let's draw a circle in a random place - **type** `circle 200`",
+            "hint": "次は円形をこの適当な位置で描こう。`circle 200`を**タイプ**",
             "solution": "circle 200"
         },
         {
-            "hint": "Set the drawing color to green",
+            "hint": "色を緑（green）にしよう。",
             "solution": "color green"
         },
         {
-            "hint": "Now draw a circle with size 150",
+            "hint": "そして半径150の円形を描こう。",
             "solution": "circle 150"
         },
         {
-            "hint": "Set the color to yellow",
+            "hint": "色を黄色（yellow）にしよう。",
             "solution": "color yellow"
         },
         {
-            "hint": "Now draw a circle with size 100",
+            "hint": "半径100の円形を描こう。",
             "solution": "circle 100"
         },
         {
-            "hint": "Set the color to blue",
+            "hint": "色を青（blue）にしよう。",
             "solution": "color blue"
         },
         {
-            "hint": "Finish it of with a circle with a size of 50",
+            "hint": "最後に半径50の円形を描こう。",
             "solution": "circle 50"
         }
     ],
-    "completion_text": "Random functions give us a random number so we can put things in a surprise spot.",
+    "completion_text": "random関数でランダム（不特定）な数字を求めて、驚きの位置に物を置くことができるんだ。",
     "cover": "random.png"
 }
