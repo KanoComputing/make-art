@@ -43,8 +43,8 @@
     "partialify": "^3.1.1",
     "throttle-debounce": "^0.1.1",
     "tiny-lr": "0.0.9",
-    "gulp-html-i18n": "*",
-    "del": "*"
+    "gulp-html-i18n": "0.3.4",
+    "del": "1.1.1"
   },
   "devDependencies": {
     "mocha": "2.3.x",

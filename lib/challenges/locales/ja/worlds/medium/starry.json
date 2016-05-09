@@ -1,35 +1,35 @@
 {
     "id": "starry",
-    "title": "Starry sky",
-    "description": "Code your own starry night sky using the random function!",
+    "title": "星空",
+    "description": "random関数で自分だけの星空をコードで描こう！",
     "startAt": 2,
     "steps": [
         {
-            "hint": "Set the background to darkblue",
+            "hint": "背景を紺色（darkblue）にしよう。",
             "solution": "background darkblue",
             "validate": "^background darkblue$"
         },
         {
-            "hint": "Now set the stroke to 0",
+            "hint": "次は鉛筆の幅を0にしよう。",
             "solution": "stroke 0"
         },
         {
-            "hint": "And set the drawing color to yellow",
+            "hint": "そして鉛筆の色を黄色（yellow）に。",
             "solution": "color yellow"
         },
         {
-            "hint": "Now let's open a loop - **type** `for i in [ 0 .. 32 ]`",
+            "hint": "ループを始めよう。`for i in [ 0 .. 32 ]`を**タイプ**",
             "solution": "for i in [ 0..32 ]"
         },
         {
-            "hint": "Now to set where each star will go -  **type** `moveTo (random 1, 500), (random 1, 500)`",
+            "hint": "それぞれの星の位置をランダムに設定しよう。`moveTo (random 1, 500), (random 1, 500)`を**タイプ**",
             "solution": "    moveTo (random 1, 500), (random 1, 500)"
         },
         {
-            "hint": "Finally draw each star as a circle with a size of 5",
+            "hint": "最後に星をそれぞれ5ピクセルの円形で描こう。",
             "solution": "    circle 5"
         }
     ],
-    "completion_text": "Awesome! Press space and see what happens to the stars...",
+    "completion_text": "素晴らしい！スペースキーを押して、星を見てみよう…",
     "cover": "starry-sky.png"
 }
