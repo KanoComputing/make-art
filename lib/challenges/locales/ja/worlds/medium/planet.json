@@ -1,60 +1,60 @@
 {
     "id": "planet",
-    "title": "Planet painter",
-    "description": "Code your own planet!",
+    "title": "惑星画家",
+    "description": "自分だけの惑星をコードで描こう！",
     "startAt": 2,
     "steps": [
         {
-            "hint": "Set the background using a hex code - **type** `background '#444444'`",
+            "hint": "背景をヘキサのコードで設定しよう。`background '#444444'`を**タイプ**",
             "solution": "background '#444444'",
             "validate": "background '\\#444444'"
         },
         {
-            "hint": "Set the stroke to 0, to avoid drawing lines",
+            "hint": "線を書かないように、筆の幅を0にしよう。",
             "solution": "stroke 0"
         },
         {
-            "hint": "Set the color to yellow",
+            "hint": "色は黄色（`yellow`）にしよう。",
             "solution": "color yellow"
         },
         {
-            "hint": "Now let's open a loop - **type** `for i in [ 0 .. 32 ]`",
+            "hint": "次はループを始めよう。`for i in [ 0 .. 32 ]`を**タイプ**",
             "solution": "for i in [ 0..32 ]"
         },
         {
-            "hint": "Now to set where each star will go -  **type** `moveTo (random 1, 500), (random 1, 500)`",
+            "hint": "そして、それぞれの星の位置を設定しよう。`moveTo (random 1, 500), (random 1, 500)`を**タイプ**",
             "solution": "    moveTo (random 1, 500), (random 1, 500)",
             "validate": "    moveTo ( *random +1,500 *),( *random +1,500 *)"
         },
         {
-            "hint": "Draw each star as a circle with a size of 5",
+            "hint": "星は、半径5の丸で描こう。",
             "solution": "    circle 5"
         },
         {
-            "hint": "Now, make sure you're out of the for loop (not indented) and **type** `color purple`",
+            "hint": "次は、ループの外（インデントなし）で、色を紫にしよう。`color purple`を**タイプ**",
             "solution": "color purple"
         },
         {
-            "hint": "Now `moveTo 250, 250`",
+            "hint": "次は`moveTo 250, 250`",
             "solution": "moveTo 250, 250"
         },
         {
-            "hint": "Now draw a circle with a size of 170",
+            "hint": "半径170の円形を描こう。",
             "solution": "circle 170"
         },
         {
-            "hint": "Set the color to white",
+            "hint": "色を白（`white`）に。",
             "solution": "color white"
         },
         {
-            "hint": "Choose a thick, white stroke - in a new line, **type** `stroke white, 5`",
+            "hint": "筆を太めで白に。`stroke white, 5`を**タイプ**",
             "solution": "stroke white, 5"
         },
         {
-            "hint": "Now draw an ellipse - **type** `ellipse 220, 4`",
+            "hint": "最後に楕円形を描こう。`ellipse 220, 4`を**タイプ**",
             "solution": "ellipse 220, 4"
         }
     ],
-    "completion_text": "Astronomical! Change the colors and see what you can add to make your planet even cooler before hitting share!",
+    "completion_text": "いやー、まるで宇宙だ！共有する前に、色を変えて、惑星をもっと面白くしてみよう！",
     "cover": "planet.png"
 }
