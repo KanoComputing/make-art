@@ -10,11 +10,11 @@
             "solution": "circle 15"
         },
         {
-            "hint": "次はパドルが必要だ。moveTo関数を使って、物の位置を決められる。moveToの後の最初の数字は水平（左右）の位置を、２つ目の数字は垂直（上下）の位置を示している。`moveTo 30,100`を**タイプ**",
+            "hint": "次はラケットが必要だ。moveTo関数を使って、物の位置を決められる。moveToの後の最初の数字は水平（左右）の位置を、２つ目の数字は垂直（上下）の位置を示している。`moveTo 30,100`を**タイプ**",
             "solution": "moveTo 30,100"
         },
         {
-            "hint": "パドルを長方形（`rectangle`）関数で描こう。`rectangle 20, 100`を**タイプ**",
+            "hint": "ラケットを長方形（`rectangle`）関数で描こう。`rectangle 20, 100`を**タイプ**",
             "solution": "rectangle 20, 100"
         },
         {
@@ -22,11 +22,11 @@
             "solution": "moveTo 450,300"
         },
         {
-            "hint": "最後は相手のパドルを描こう。最初の数字は幅で、２つ目の数は高さを示している。`rectangle 20, 100`を**タイプ**",
+            "hint": "最後は相手のラケットを描こう。最初の数字は幅で、２つ目の数は高さを示している。`rectangle 20, 100`を**タイプ**",
             "solution": "rectangle 20, 100"
         }
     ],
-    "completion_text": "できた！昔のビデオゲームを再現できた。でもそのままだとちょっとつまらないね。moveToの後の100にクリックし、値を変えてパドルを動かしてみよう。",
+    "completion_text": "できた！昔のビデオゲームを再現できた。でもそのままだとちょっとつまらないね。moveToの後の100にクリックし、値を変えてラケットを動かしてみよう。",
     "gallery": {
         "cover_path": "/assets/challenges/images/pixelremixes/",
         "remixes": [
@@ -36,5 +36,5 @@
         ]
     },
     "cover": "pixel-pong.png",
-    "guide": "#### 新しい単語\n**circle** radius | circle 15\n\n現在位置で円形を描く。数字が大きければ大きいほど、円形も大きくなる。半径（radius）は円形の中心から、端までの距離だ。\n\n**moveTo** x, y | moveTo 30, 100\n\n現在位置を新しい(x, y)場所へ動かす。最初の値はxで、水平の位置を示している。２つ目の値はyで、垂直（上下）の位置を示している。\n\n**rectangle** width, height | rectangle 20, 100\n\n長方形を現在位置で描く。幅（width）と高さ（height）をそれぞれ設定することで長方形の大きさを指定できる。\n\n**color** name | color red\n\n鉛筆の色（color）を変更する。色を設定すると、全ての形や線や文字がこの色になる。色を透明にもできる：`color null`をタイプするだけ。\n\n**background** colorName | background white\n\n背景の色を変える。\n\n#### これから作るのは\n1. Pong (1972) was one of the first home game consoles, being an incredibly basic table tennis game the first thing we need is a ball. **Type** `circle 15`\n2. Next we need to draw some paddles, use the moveTo function to position them. The first number is the horizontal position and the second number the vertical. **Type** `moveTo 30, 100`\n3. We'll draw the paddles using the rectangle function, for the first paddle. **Type** `rectangle 20, 100`\n4. It's no fun to play Pong alone so we need an opponent. **Type** `moveTo 450, 300`\n5. Finally, let’s draw the opponent's paddle, the first number is the width and the second the height. **Type** `rectangle 20, 100`\n\n#### What you’ll hack\nThere is one other essential tool every coding artist is going to need to know: color. The default starting color is black, and every time a shape is drawn in Make Art the drawing tool checks to see what color should be drawn. So because you haven’t specified a color yet, it will draw everything black.\n\nYou can change the color to red, for instance, by typing color red after the first `moveTo` command and before `rectangle 20, 100`to change the color of both paddles. Note: this will only change any shapes drawn after this command, so typing it at the bottom of your code won’t do anything. \n\nThe background color can be changed with background charcoal. You can put this anywhere in your code, and for most creations you’ll only call it once. It is best practice to put it at the top of the your code.\n\nFinally, you can move your paddles up and down by changing the second number next to each moveTo function. You can play with them by clicking on the number and using the slider to change the number.\n\n#### Briefing\nIn 1972, Al Alcorn got handed a \"warm-up exercise\" for his new job at game company Atari, and came up with Pong: two paddles, one ball, and soon after, lines of people around the block to play it. Pong went on to become an international sensation, with millions of games sold. It was so famous, in fact that dozens of knock-offs were made by competitors who tried to ride the coattails of Atari’s success. What made the game so simple and universal was what made it so easy to copy. \n\nYour first task as a hacker is to make your very own Pong game. One of the secrets to being a good hacker is remixing: taking ideas and code from other places and putting them together into something new. You can take the original idea of Pong and then hack it together into your own game! You’ll set up a basic screen with paddles and balls. Then it is up to you to hack it into something new! \n"
+    "guide": "#### 新しい単語\n**circle** radius | circle 15\n\n現在位置で円形を描く。数字が大きければ大きいほど、円形も大きくなる。半径（radius）は円形の中心から、端までの距離だ。\n\n**moveTo** x, y | moveTo 30, 100\n\n現在位置を新しい(x, y)場所へ動かす。最初の値はxで、水平の位置を示している。２つ目の値はyで、垂直（上下）の位置を示している。\n\n**rectangle** width, height | rectangle 20, 100\n\n長方形を現在位置で描く。幅（width）と高さ（height）をそれぞれ設定することで長方形の大きさを指定できる。\n\n**color** name | color red\n\n鉛筆の色（color）を変更する。色を設定すると、全ての形や線や文字がこの色になる。色を透明にもできる：`color null`をタイプするだけ。\n\n**background** colorName | background white\n\n背景の色を変える。\n\n#### これから作るのは\n1. ポングは(1972年)最初の家庭用ゲームコンソールの一つだった。とても基本的な卓球ゲームなんだ。卓球をやるには何が必要だろう？そうだ、ボールだね。`circle 15`を**タイプ**\n2. 次はラケットが必要だ。moveTo関数を使って、物の位置を決められる。moveToの後の最初の数字は水平（左右）の位置を、２つ目の数字は垂直（上下）の位置を示している。`moveTo 30,100`を**タイプ**\n3. ラケットを長方形（`rectangle`）関数で描こう。`rectangle 20, 100`を**タイプ**\n4. 一人でポングはつまらないから、相手が必要。`moveTo 450,300`を**タイプ**\n5. 最後は相手のラケットを描こう。最初の数字は幅で、２つ目の数は高さを示している。`rectangle 20, 100`を**タイプ**\n\n#### 追加チャレンジ\n美術家の重要なツールの一つは「色」である。最初の色は黒（black）で、形などを描く度に黒で描かれる。\n\n色を例えば赤（red）に変えることができる：最初の`moveTo`の後に`color red`を`rectangle 20, 100`の前にタイプすれば、ラケットを違う色で描ける。ただし、色が変わるのはcolorの後だけなので、最後の行にcolorをタイプしても何も変わらない。\n\n背景の色をbackgroundで変えることができる。backgroundをどこに入れても大丈夫で、普通は一回だけ入れることになるが、一番上に入れることがお勧め。\n\n最後に、moveToの後の２つ目の数字を変えると、ラケットを上下に動かすことができる。数字を簡単に変えるには、数字にクリックし、スライダーを動かせばいい。\n\n#### 概要\n1972年にアル・アルコーンさんはアタリ社入社後の新入社員課題として、ポングというゲームを作った。ボール一個とラケット２つで、非常にシンプルだったが、短期間で有名になった。そして何千万個も売れて、世界中で流行った。そこまで有名になったので、多くの競合他社は類似物も作り、アタリ社の成功を分けてもらおうとしていた。このゲームの成功のワケはシンプルでコピーしやすいことが一番だったと思われる。\n\nハッカーとして最初の仕事はポングゲームを作ることだ。ハッカーの秘密の一つは、リミックスだ：他人のコードとアイディアをパクり、組み合わせることだ。ポングのオリジナルアイディアを元に、自分だけのゲームが作れるんだ！まずスクリーンにボールとラケットを描く。そしてこれを元に新しい物を作ろう！\n"
 }
