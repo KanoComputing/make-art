@@ -1,0 +1,75 @@
+{
+    "id": "skull",
+    "title": "Skull",
+    "cover": "mischiefweek2015/mw-001-skull.png",
+    "start_date": "2015-10-26T06:00:00",
+    "description": "",
+    "completion_text": "Amazing skull! You can dress it up with some background patterns or other facial accessories. When you are done, share your creation for a chance to win it on a t-shirt!",
+    "startAt": 0,
+    "steps": [
+            {
+                "hint": "First we need to set the spooky scene, make it night time - **type** `background charcoal`",
+                "solution": "background charcoal"
+            },
+            {
+                "hint": "We want to draw solid shapes with no stroke, so **type** `stroke 0`",
+                "solution": "stroke 0"
+            },
+            {
+                "hint": "We can move into position for the skull with `moveTo 250, 200`",
+                "solution": "moveTo 250, 200"
+            },
+            {
+                "hint": "Our skull should be white, so set the drawing color with `color white`",
+                "solution": "color white"
+            },
+            {
+                "hint": "The skull is made with an ellipse—a kind of squashed circle. Make this with `ellipse 140, 120`",
+                "solution": "ellipse 140, 120"
+            },
+            {
+                "hint": "It's starting to take shape, add the final slice the same way - **type** `move -60, 90`",
+                "solution": "move -60, 90"
+            },
+            {
+                "hint": "The mouth of the skull is a square we will draw with `square 120`",
+                "solution": "square 120"
+            },
+            {
+                "hint": "Lets move up and over for the eyes - **type** `move 10, -50`",
+                "solution": "move 10, -50"
+            },
+            {
+                "hint": "Our skull’s empty eyes peer into your soul. Set their color to charcoal with `color charcoal`",
+                "solution": "color charcoal"
+            },
+            {
+                "hint": "The eye is a circle. Draw it with `circle 40`",
+                "solution": "circle 40"
+            },
+            {
+                "hint": "Move on over for the other eye. **Type** `move 100`",
+                "solution": "move 100"
+            },
+            {
+                "hint": "Now draw the other eye with `circle 40`",
+                "solution": "circle 40"
+            },
+            {
+                "hint": "Move on over for the nose with `move -50, 60`",
+                "solution": "move -50, 60"
+            },
+            {
+                "hint": "Then draw the nose with `circle 10`",
+                "solution": "circle 10"
+            },
+            {
+                "hint": "Finally, for the mouth move down by **typing** `move -40, 60`",
+                "solution": "move -40, 60"
+            },
+            {
+                "hint": "Finally, you draw the mouth with `rectangle 80, 20`",
+                "solution": "rectangle 80, 20"
+            }
+    ]
+}
