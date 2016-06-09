@@ -5,7 +5,7 @@
     "slug": "kano-draw",
 
     "icon": "kano-draw",
-    "colour": "#7BAA64",
+    "colour": "#51555C",
 
     "categories": ["code"],
     "mime_type": "application/x-kano-draw",
