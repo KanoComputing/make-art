@@ -25,25 +25,25 @@
 
         a.action.action-share(ng-if='mode === "playground" || sharing', ng-click='setOpenModal("share")')
             i.icon-share
-            |  Share
+            | ${{ directive.share }}$
 
         a.action.action-save(ng-if='mode === "playground"', ng-click='save()')
             i.icon-save
-            |  Save
+            | ${{ directive.save }}$
 
         a.action.action-reset(ng-if='mode === "challenge"', ng-click='resetCode()')
             i.icon-reset
-            |  Reset
+            | ${{ directive.reset }}$
 
         .action.action-load(ng-show='mode === "playground"')
             i.icon-arrow-up
-            |  Load
+            | ${{ directive.load }}$
             input.file-load(type='file', accept='.draw')
 
         export-modal(display='this', action='"save"')
         export-modal(display='this', action='"share"')
 
         //- span(ng-controller='LoadDialogController' ng-if='offline')
-            a.button(ng-click='openDialog()') Load
+            a.button(ng-click='openDialog()') ${{ directive.load }}$
 
             include partial/load

@@ -1,0 +1,96 @@
+{
+    "id": "tetris",
+    "title": "Tetris",
+    "description": "Stack some Tetris blocks with code",
+    "code": "",
+    "startAt": 2,
+    "steps": [
+        {
+            "hint": "Tetris (1984) was the first videogame to be exported from the USSR to the US, going on to sell 170 million copies. We're going to make some Tetris blocks, first turn the stroke off **type** `stroke 0`",
+            "solution": "stroke 0"
+        },
+        {
+            "hint": "Next move your cursor to the start of the first block **type** `moveTo 150,200`",
+            "solution": "moveTo 150,200"
+        },
+        {
+            "hint": "We're going to need some colors to tell the blocks apart, change the fill color of your shapes with the color function **type** `color crimson`",
+            "solution": "color crimson"
+        },
+        {
+            "hint": "First we're going to draw an L shaped block **type** `rectangle 50,150`",
+            "solution": "rectangle 50,150"
+        },
+        {
+            "hint": "Our blocks are all going to be to a 50x50 grid, so you'll notice all our draw and move commands are multiples of 50  **type** `move 0,100`",
+            "solution": "move 0,100"
+        },
+        {
+            "hint": "Finish off the block with a 100,50 `rectangle`",
+            "solution": "rectangle 100,50"
+        },
+        {
+            "hint": "Let's move to start the next block **type** `move 50,-100`",
+            "solution": "move 50,-100"
+        },
+        {
+            "hint": "We'll change the color to tell them apart, color functions affect all shapes drawn below them in the code **type** `color seagreen`",
+            "solution": "color seagreen"
+        },
+        {
+            "hint": "Next we'll be drawing the S shaped block **type** `rectangle 50,100`",
+            "solution": "rectangle 50,100"
+        },
+        {
+            "hint": "Move one gridspace across and one down **type** `move 50,50`",
+            "solution": "move 50,50"
+        },
+        {
+            "hint": "To make an S shape we create another `rectangle` of 50 by 100",
+            "solution": "rectangle 50,100"
+        },
+        {
+            "hint": "On to the next block **type** `move 50,-100`",
+            "solution": "move 50,-100"
+        },
+        {
+            "hint": "We change the color again **type** `color indigo`",
+            "solution": "color indigo"
+        },
+        {
+            "hint": "Next we will draw a long and thin block, draw a `rectangle` 50 by 200",
+            "solution": "rectangle 50,200"
+        },
+        {
+            "hint": "One final block to complete the square **type** `move -150,0`",
+            "solution": "move -150,0"
+        },
+        {
+            "hint": "Let's make the `color` gold to stand out",
+            "solution": "color gold"
+        },
+        {
+            "hint": "Another L block will fit nicely so draw the stem with **type** `rectangle 150,50`",
+            "solution": "rectangle 150,50"
+        },
+        {
+            "hint": "Move into place to draw the foot **type** `move 100,0`",
+            "solution": "move 100,0"
+        },
+        {
+            "hint": "Finally fill in the foot **type** `rectangle 50,100`",
+            "solution": "rectangle 50,100"
+        }
+    ],
+    "completion_text": "Well done you created a nice stack of tetrominoes, why not try changing the color of some of the blocks or drawing a few more to fill the screen.",
+    "gallery": {
+        "cover_path": "/assets/challenges/images/pixelremixes/",
+        "remixes": [
+            "tetris-gameboy.png",
+            "tetris-3D.png",
+            "tetris-row.png"
+        ]
+    },
+    "cover": "pixel-tetris.png",
+    "guide": "#### New words\n**color** name | color red\n\nChanges the drawing color. All following shapes and text will be drawn with the fill color set to this color until you change it again. To set the drawing color to transparent, type `color null`\n\n#### What you'll make\n1. Tetris (1984) was the first videogame to be exported from the USSR to the US, going on to sell 170 million copies. We're going to make some Tetris blocks, first turn the stroke off **type** `stroke 0`\n2. Next move your cursor to the start of the first block **type** `moveTo 150,200`\n3. We're going to need some colors to tell the blocks apart, change the fill color of your shapes with the color function **type** `color crimson`\n4. First we're going to draw an L shaped block **type** `rectangle 50,150`\n5. Our blocks are all going to be to a 50x50 grid, so you'll notice all our draw and move commands are multiples of 50  **type** `move 0,100`\n6. Finish off the block with a 100,50 `rectangle`\n7. Let's move to start the next block **type** `move 50,-100`\n8. We'll change the color to tell them apart, color functions affect all shapes drawn below them in the code **type** `color seagreen`\n9. Next we'll be drawing the S shaped block **type** `rectangle 50,100`\n10. Move one gridspace across and one down **type** `move 50,50`\n11. To make an S shape we create another `rectangle` of 50 by 100\n12. On to the next block **type** `move 50,-100`\n13. We change the color again **type** `color indigo`\n14. Next we will draw a long and thin block, draw a `rectangle` 50 by 200\n15. One final block to complete the square **type** `move -150,0`\n16. Let's make the `color` gold to stand out\n17. Another L block will fit nicely so draw the stem with **type** `rectangle 150,50`\n18. Move into place to draw the foot **type** `move 100,0`\n19. Finally fill in the foot **type** `rectangle 50,100`\n\n#### What you’ll hack\nNow you’ve made a cube, give each tetrimino whatever color you want, and add in more.\n\n#### Briefing \nTetris (1984) was the first videogame to be exported from the USSR to the US, going on to sell 170 million copies. We're going to make some Tetris blocks, which are known as tetriminos. Each tetrimino is made up of four squares that connect together, and fit together in interesting ways. In the game, tetriminos fall down endlessly and the goal is to make as many of them fit together without empty spaces.\n"
+}

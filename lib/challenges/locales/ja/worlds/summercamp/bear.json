@@ -1,0 +1,91 @@
+{
+    "id": "bear",
+    "title": "Cheeky Bear",
+    "short_title": "Bear",
+    "description": "Bears are very smart and have been known to roll rocks into bear traps to set off the trap and then eat the bait in safety. These animals can run up to 40 miles per hour, fast enough to catch a running horse. Take into account that the fastest known human alive today is Usain Bolt, who can run at 27mph! And because bears can walk short distances on their hind legs, some Native Americans called them “the beast that walks like a man.”",
+    "icon_class": "challenge_bear",
+    "cover": "summercamp/day_11.png",
+    "completion_text": "That cute bear needs a body, and a habitat. Use your code skills to impress other campers with your abilities! Remember that the icons on your left can help you achieve what you have in mind.",
+    "difficulty": 1,
+    "startAt": 0,
+    "summerCamp": true,
+    "rewards": null,
+    "steps": [
+        {
+            "hint": "The bear lives in the forest. Set the background color to green - **type** `background green`",
+            "solution": "background green"
+        },
+        {
+            "hint": "The bear has brown fur, let's start to draw his face by getting our paint ready - **type** `color brown`",
+            "solution": "color brown"
+        },
+        {
+            "hint": "Set the stroke to 0, to avoid drawing lines - **type** `stroke 0`",
+            "solution": "stroke 0"
+        },
+        {
+            "hint": "Draw the face with a circle - **type** `circle 100`",
+            "solution": "circle 100"
+        },
+        {
+            "hint": "Now let's move the cursor to draw his left ear - **type** `move -80, -80`",
+            "solution": "move -80, -80"
+        },
+        {
+            "hint": "Draw the ear with a `circle` of size `30`",
+            "solution": "circle 30"
+        },
+        {
+            "hint": "Move the cursor to the right to draw his other ear - **type** `move 160`",
+            "solution": "move 160"
+        },
+        {
+            "hint": "Draw another ear (just like the last one)",
+            "solution": "circle 30"
+        },
+        {
+            "hint": "Now head over to where the left eye will go - **type** `move -110, 50`",
+            "solution": "move -110, 50"
+        },
+        {
+            "hint": "The rest of the bear's facial features will be `black`, so lets set the `color`",
+            "solution": "color black"
+        },
+        {
+            "hint": "Draw the first eye - **type** `circle 5`",
+            "solution": "circle 5"
+        },
+        {
+            "hint": "Next move over to where the other eye goes - **type** `move 60`",
+            "solution": "move 60"
+        },
+        {
+            "hint": "Fill in the other eye just like the last one",
+            "solution": "circle 5"
+        },
+        {
+            "hint": "Move to the center of the face for the bear's most distinctive feature - **type** `move -30, 50`",
+            "solution": "move -30, 50"
+        },
+        {
+            "hint": "Draw his nose with a triangle using polygon - **type** `polygon 12, -16, -12, -16`",
+            "solution": "polygon 12, -16, -12, -16"
+        },
+        {
+            "hint": "Let's get ready to draw the mouth by moving down a bit further - **type** `move 0, 20`",
+            "solution": "move 0, 20"
+        },
+        {
+            "hint": "Set the `stroke` (the outline of a shape) to color `black` and size `3`",
+            "solution": "stroke black, 3"
+        },
+        {
+            "hint": "We don't want the mouth to be filled so set its color to null - **type** `color null`",
+            "solution": "color null"
+        },
+        {
+            "hint": "An arc is part of a cirlce, just like a smiling mouth - **type** `arc 15, 0.5, 2`",
+            "solution": "arc 15, 0.5, 2"
+        }
+    ]
+}

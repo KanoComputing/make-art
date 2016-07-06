@@ -1,11 +1,11 @@
 .modal-overlay(ng-show='isOpen'): .modal-inner.split-modal.load-menu
     button.close(ng-click='isOpen = false') &times;
-    h2.center Load
-    h4.center Load from where
+    h2.center ${{ partial.load }}$
+    h4.center ${{ partial.load_from_where }}$
 
     .bottom-section.center
         span
-            button.button.large() Your Kano
+            button.button.large() ${{ partial.your_kano }}$
                 input.transparent(type='file' accept='.draw'
                     onChange='angular.element(this).scope().load(this)')
-        button.button.large(ng-click='load.web()') Internet
+        button.button.large(ng-click='load.web()') ${{ partial.internet }}$

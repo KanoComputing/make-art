@@ -24,40 +24,28 @@ html(lang='en',  xmlns:ng="http://angularjs.org")
         script(src='/js/vendor/xtag.js')
 
     body(id="ng-app", ng-app='draw', class=offline ? 'offline' : 'online')
-        // Google Tag Manager
+        //- Google Tag Manager
         noscript
-          iframe(src='//www.googletagmanager.com/ns.html?id=discover-kano', height='0', width='0', style='display:none;visibility:hidden')
-        script.
+          iframe(src='//www.googletagmanager.com/ns.html?id=GTM-WMGKFR', height='0', width='0', style='display: none; visibility: hidden;')
+        script(type='text/javascript').
           (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
           new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
           j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-          })(window,document,'script','dataLayer','discover-kano');
-        // End Google Tag Manager
+          })(window,document,'script','dataLayer','GTM-WMGKFR');
+        //- End Google Tag Manager
 
         script(src='/js/vendor/console-polyfill.js', type='text/javascript')
         .loading-overlay(ng-cloak): .spinner
 
-        include partial/header
         ng-view
         include partial/splash
-
-        if !offline
-            .kano-feedback-container(ng-click='isFeedbackSplashOpen = true', ng-init='feedbackLoaded()') 
-                span Feedback
-                .kano-feedback
-            include partial/feedback
-            include partial/auth-modal
-        
 
         //- Vendor
         script(src='/js/vendor/angular.min.js', type='text/javascript')
         script(src='/js/vendor/angular-route.min.js', type='text/javascript')
         script(src='/js/vendor/ace/ace.js', type='text/javascript')
         script(src='/js/vendor/ace/ext-language_tools.js', type='text/javascript')
-        //- Analytics
-        if segmentioId
-            script(src='/js/vendor/segmentio.min.js', type='text/javascript')
 
         script(type='text/javascript').
             window.ENV = '#{env}';

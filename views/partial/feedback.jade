@@ -1,8 +1,8 @@
-.modal-overlay(ng-controller='FeedbackController', ng-if='isFeedbackSplashOpen', ng-cloak)
+.modal-overlay(ng-controller='FeedbackController', ng-if='feedback.showModal', ng-cloak)
     .modal-inner.split-modal.splash.feedback-splash
-        button.close(ng-click='handleSkip($event)'): i.icon-cross
+        button.close(ng-click='closeModal()'): i.icon-cross
         form(name='form' ng-submit='sendFeedback()')
-            h1.center: b Feedback
+            h1.center: b ${{ partial.feedback }}$
 
             .box.box-danger(ng-if='error') {{ error }}
             
@@ -20,11 +20,11 @@
                     .mood-container: label(class='mood rating-5', for='rating_5')
 
                 .feedback-box
-                    textarea(ng-model='feedback.thought', rows="3", placeholder='What\'s up?', required)
+                    textarea(ng-model='feedback.thought', rows="3", placeholder='${{ partial.whats_up }}$', required)
 
             .form-message.hide
-                h3 Thank you!
+                h3 ${{ partial.thank_you }}$
 
             .center.bottom-section: div(style='min-height: 88px'): .feedback-buttons
-                button.button.large(type='submit', ng-disabled='form.$invalid', ng-class='{ "disabled" : form.$invalid }', ng-if='!loading') Send
+                button.button.large(type='submit', ng-disabled='form.$invalid', ng-class='{ "disabled" : form.$invalid }', ng-if='!loading') ${{ partial.send }}$
                 .spinner(ng-if='loading')
