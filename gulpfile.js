@@ -42,50 +42,50 @@ function handleError(error) {
 }
 
 gulp.task('browserify', function () {
-    gulp.src(paths.browserify.src,  { read: false })
-    .pipe(browserify({
-        transform : [
-            partialify.alsoAllow('md'),
-            partialify.alsoAllow('coffee')
-        ]
-    }))
-    .on('error', handleError)
-    .pipe(rename('index.js'))
-    .pipe(gulp.dest(paths.browserify.out))
-    .pipe(livereload(server));
+    return gulp.src(paths.browserify.src,  { read: false })
+        .pipe(browserify({
+            transform : [
+                partialify.alsoAllow('md'),
+                partialify.alsoAllow('coffee')
+            ]
+        }))
+        .on('error', handleError)
+        .pipe(rename('index.js'))
+        .pipe(gulp.dest(paths.browserify.out))
+        .pipe(livereload(server));
 });
 
 gulp.task('styles', function () {
-    gulp.src(paths.styles.src)
-    .pipe(stylus({
-        pretty : !production,
-        use    : [griddy(), nib()]
-    }))
-    .on('error', handleError)
-    .pipe(gulp.dest(paths.styles.out))
-    .pipe(livereload(server));
+    return gulp.src(paths.styles.src)
+        .pipe(stylus({
+            pretty : !production,
+            use    : [griddy(), nib()]
+        }))
+        .on('error', handleError)
+        .pipe(gulp.dest(paths.styles.out))
+        .pipe(livereload(server));
 });
 
 gulp.task('views', function () {
-    gulp.src(paths.views.src)
-    .pipe(jade({
-        pretty : !production,
-        locals : _.extend({
-            env             : env,
-            production      : production,
-            offline         : offline,
-            segmentioId     : segmentioId,
-            facebookAppId   : facebookAppId,
-            api_url         : api_url,
-            world_url       : world_url,
-            testmode        : testmode,
-            challenges_url  : "/assets/challenges/descriptors",
-            unknown_user    : unknown_user
-        }, jadeHelpers)
-    }))
-    .on('error', handleError)
-    .pipe(gulp.dest(paths.views.out))
-    .pipe(livereload(server));
+    return gulp.src(paths.views.src)
+        .pipe(jade({
+            pretty : !production,
+            locals : _.extend({
+                env             : env,
+                production      : production,
+                offline         : offline,
+                segmentioId     : segmentioId,
+                facebookAppId   : facebookAppId,
+                api_url         : api_url,
+                world_url       : world_url,
+                testmode        : testmode,
+                challenges_url  : "/assets/challenges/descriptors",
+                unknown_user    : unknown_user
+            }, jadeHelpers)
+        }))
+        .on('error', handleError)
+        .pipe(gulp.dest(paths.views.out))
+        .pipe(livereload(server));
 });
 
 gulp.task('clean-i18n', function (next) {
@@ -93,12 +93,12 @@ gulp.task('clean-i18n', function (next) {
 });
 
 gulp.task('views-i18n', ['clean-i18n', 'views'], function () {
-    gulp.src(paths.viewsi18n.src)
-    .pipe(i18n({ langDir: './locales',
-                 createLangDirs: true }))
-    .on('error', handleError)
-    .pipe(gulp.dest(paths.viewsi18n.out))
-    .pipe(livereload(server));
+    return gulp.src(paths.viewsi18n.src)
+        .pipe(i18n({ langDir: './locales',
+                     createLangDirs: true }))
+        .on('error', handleError)
+        .pipe(gulp.dest(paths.viewsi18n.out))
+        .pipe(livereload(server));
 });
 
 /**
