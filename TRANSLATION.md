@@ -21,17 +21,15 @@ At runtime, the proper translation will be picked based on the browser language.
 
 You need to add the new language in 4 places:
 
-1. Create `lib/challenges/locales/<lang>` and copy the whole `worlds` directory and `index.json` 
+1. Create `lib/challenges/locales/<locale>` and copy the whole `worlds` directory and `index.json` 
    These are the translations of the challenges, the main content of Make-Art.
 
-2. Create `locales/<lang>` and copy the content of `locales/en`
+2. Create `locales/<locale>` and copy the content of `locales/en`
    These are the translations of the views
 
 3. Directly edit `content/docs.json` and add your language to the map (at the top level)
 
-4. Add your language to `SUPPORTED_LANGUAGES` array in `lib/i18n.js`
-
-Note that languages are identified by their 2 letter abbreviation (ignoring the country), so for example fr-FR and fr-CA will share the same translation `fr`.
+4. Add your language to `SUPPORTED_LOCALES` array in `lib/i18n.js`
 
 ## How to make sure your code is i18n-aware
 
