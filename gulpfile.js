@@ -111,107 +111,105 @@ gulp.task('views-i18n', ['clean-i18n', 'views'], function () {
 function apifyChallengeFn(next) {
     return function (locale) {
 
-    //console.log("apify-challenge for locale: '" + locale + "'...");
-
-    var index,
-        worldsNum,
-        //fields that are copied from ./index.json to /world/<world>/index.json
-        copyWorldFields = [
-            'id',
-            'name',
-            'description',
-            'world_path',
-            'cover',
-            'css_class',
-            'visibility',
-            'dependency',
-            'type',
-            'share_strategy',
-            'sales_popup_after',
-            'certificate_after',
-            'teachers_guide',
-            'updateForm',
-            'socialText'
-        ],
-        countNext = 0,
-        formattedIndex,
-        localePath = locale ? 'locales/' + locale + '/' : '';
-    function localNext() {
-        if (++countNext === worldsNum + 1) {
-            next();
-        }
-    }
-    //work with them
-    index = require('./' + chDescriptorsPath + localePath + 'index.json');
-    worldsNum = index.worlds.length;
-
-    index.worlds.forEach(function (world) {
-        var worldPath = './' + chDescriptorsPath + localePath + world.world_path,
-            libWorldPath = './' + libPath + localePath + world.world_path,
-            worldObj = {},
-            challenges = [],
-            formattedJSON;
-
-        worldObj = JSON.parse(JSON.stringify(require(libWorldPath + '/index.json')));
-
-        copyWorldFields.forEach(function (field) {
-            if (world[field]) {
-                worldObj[field] = world[field];
+        var index,
+            worldsNum,
+            //fields that are copied from ./index.json to /world/<world>/index.json
+            copyWorldFields = [
+                'id',
+                'name',
+                'description',
+                'world_path',
+                'cover',
+                'css_class',
+                'visibility',
+                'dependency',
+                'type',
+                'share_strategy',
+                'sales_popup_after',
+                'certificate_after',
+                'teachers_guide',
+                'updateForm',
+                'socialText'
+            ],
+            countNext = 0,
+            formattedIndex,
+            localePath = locale ? 'locales/' + locale + '/' : '';
+        function localNext() {
+            if (++countNext === worldsNum + 1) {
+                next();
             }
-        });
+        }
+        //work with them
+        index = require('./' + chDescriptorsPath + localePath + 'index.json');
+        worldsNum = index.worlds.length;
 
-        //load all the challenges in an array
-        worldObj.challenges.forEach(function (ch, idx, arr) {
-            var chFileName = worldPath + ch.substr(1, ch.length - 1),
-                challenge = require(chFileName),
-                index = idx + 1,
-                hasNext = index !== (arr.length),
-                ch_obj = {
-                    id: challenge.id,
-                    title: challenge.title,
-                    short_title: challenge.short_title,
-                    cover: challenge.cover,
-                    index: index,
-                    hasNext: hasNext,
-                    start_date: challenge.start_date
-                };
-            challenge.index = index ;
-            challenge.hasNext = hasNext;
+        index.worlds.forEach(function (world) {
+            var worldPath = './' + chDescriptorsPath + localePath + world.world_path,
+                libWorldPath = './' + libPath + localePath + world.world_path,
+                worldObj = {},
+                challenges = [],
+                formattedJSON;
 
-            fs.writeFile(chFileName + ".json", JSON.stringify(challenge, null, 4), function (err) {
-                if (err) {
-                    throw err;
+            worldObj = JSON.parse(JSON.stringify(require(libWorldPath + '/index.json')));
+
+            copyWorldFields.forEach(function (field) {
+                if (world[field]) {
+                    worldObj[field] = world[field];
                 }
             });
-            challenges.push(ch_obj);
+
+            //load all the challenges in an array
+            worldObj.challenges.forEach(function (ch, idx, arr) {
+                var chFileName = worldPath + ch.substr(1, ch.length - 1),
+                    challenge = require(chFileName),
+                    index = idx + 1,
+                    hasNext = index !== (arr.length),
+                    ch_obj = {
+                        id: challenge.id,
+                        title: challenge.title,
+                        short_title: challenge.short_title,
+                        cover: challenge.cover,
+                        index: index,
+                        hasNext: hasNext,
+                        start_date: challenge.start_date
+                    };
+                challenge.index = index ;
+                challenge.hasNext = hasNext;
+
+                fs.writeFile(chFileName + ".json", JSON.stringify(challenge, null, 4), function (err) {
+                    if (err) {
+                        throw err;
+                    }
+                });
+                challenges.push(ch_obj);
+            });
+
+
+            worldObj.challenges = challenges;
+
+            world.challenges_num = challenges.length;
+
+            formattedJSON = JSON.stringify(worldObj, null, 4);
+            //write the challenges with headers
+            fs.writeFile(worldPath + '/index.json', formattedJSON, function (err) {
+                if (err) {
+                    throw err;
+                } else {
+                    localNext();
+                }
+            });
         });
-
-
-        worldObj.challenges = challenges;
-
-        world.challenges_num = challenges.length;
-
-        formattedJSON = JSON.stringify(worldObj, null, 4);
-        //write the challenges with headers
-        fs.writeFile(worldPath + '/index.json', formattedJSON, function (err) {
+        //copy back the index
+        formattedIndex = JSON.stringify(index, null, 4);
+        fs.writeFile(chDescriptorsPath + localePath + 'index.json', formattedIndex, function (err) {
             if (err) {
                 throw err;
             } else {
                 localNext();
             }
         });
-    });
-    //copy back the index
-    formattedIndex = JSON.stringify(index, null, 4);
-    fs.writeFile(chDescriptorsPath + localePath + 'index.json', formattedIndex, function (err) {
-        if (err) {
-            throw err;
-        } else {
-            localNext();
-        }
-    });
-
-}};
+    }
+}
 
 gulp.task('apify-challenges', ['copy-challenges'], function (next) {
     var countNext = 0;
