@@ -7,10 +7,12 @@ describe("i18n", function() {
         // patch window.navigator
         global.window = {};
         global.window.navigator = {};
+        global.window.location = { href: '' };
     });
 
     afterEach(function() {
         global.window.navigator = {};
+        global.window.location = {};
     });
 
     it("should return users language", function() {
@@ -42,6 +44,14 @@ describe("i18n", function() {
 
         var challengePath = i18n.getHtmlLocalePath();
         assert.equal(challengePath, '/locales/es');
+    });
+
+    it("should allow language override from url param", function() {
+        global.window.navigator.language = 'en-GB';
+        global.window.location.href = 'http://example.com?lang=ja';
+
+        var lang = i18n.getLanguage();
+        assert.equal(lang, 'ja');
     });
 });
 
