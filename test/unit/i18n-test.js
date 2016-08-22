@@ -53,5 +53,12 @@ describe("i18n", function() {
         var lang = i18n.getLanguage();
         assert.equal(lang, 'ja');
     });
+
+    it("should default to en if language is not supported", function() {
+        global.window.navigator.language = 'fr-FR';
+
+        var lang = i18n.getLanguage();
+        assert.equal(lang, 'en');
+    });
 });
 
