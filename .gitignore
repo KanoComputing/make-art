@@ -1,5 +1,5 @@
 www/*.html
-www/*/*.html
+www/**/*.html
 www/css/*.css
 www/js/index.js
 www/assets/challenges/descriptors
