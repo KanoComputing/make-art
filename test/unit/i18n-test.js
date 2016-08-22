@@ -31,7 +31,7 @@ describe("i18n", function() {
         global.window.navigator.language = 'es-AR';
 
         var challengePath = i18n.getChallengeLocalePath();
-        assert.equal(challengePath, '/locales/es');
+        assert.equal(challengePath, '/locales/es-AR');
     });
 
     it("should return correct html locale path", function() {
@@ -43,7 +43,7 @@ describe("i18n", function() {
         global.window.navigator.language = 'es-AR';
 
         var challengePath = i18n.getHtmlLocalePath();
-        assert.equal(challengePath, '/locales/es');
+        assert.equal(challengePath, '/locales/es-AR');
     });
 
     it("should allow language override from url param", function() {
