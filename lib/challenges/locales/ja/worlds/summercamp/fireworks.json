@@ -1,0 +1,50 @@
+{
+    "id": "fireworks",
+    "title": "Fireworks",
+    "short_title": "Fireworks",
+    "icon_class": "challenge_fireworks",
+    "description": "Camp is almost all wrapped up, and to celebrate we have fireworks! Fireworks have been around for centuries and are believed to have been invented by the Chinese. We are almost ready to put on the show, but need a little bit of help designing the fireworks. Can you give it a shot?",
+    "cover": "summercamp/day_21.png",
+    "completion_text": "Well done! You made a function that can draw fireworks! Can you improve upon it? Draw them all over the screen, add in other creations and share it!",
+    "difficulty": 3,
+    "startAt": 0,
+    "summerCamp": true,
+    "rewards": null,
+    "steps": [
+        {
+            "hint": "The sun is down and the moon is new, let’s make the sky dark with `background black`",
+            "solution": "background black"
+        },
+        {
+            "hint": "Lets set the `stroke` to `red` for our firework",
+            "solution": "stroke red"
+        },
+        {
+            "hint": "We want to draw 60 lines radiating outward, so let’s use a for loop `for i in [0 ... 60]`",
+            "solution": "for i in [0 ... 60]"
+        },
+        {
+            "hint": "All of the lines in our firework should have different lengths! So for each line radiating out, let’s set its length with `length = random 1, 200`.",
+            "solution": "    length = random 1, 200"
+        },
+        {
+            "hint": "For each loop, we are drawing a new line radiating out. So for every time we loop, the angle of the line should change. This uses some advanced math, but don’t fear. Just **type** `angle = (360 / 60 * i) * (Math.PI / 180)`.",
+            "solution": "    angle = (360 / 60 * i) * (Math.PI / 180)",
+            "validate": "__^    angle *= *\\(360 */ *60 \\* i\\) *\\* *\\(Math[.]PI */ *180\\) *$"
+        },
+        {
+            "hint": "Using this new angle and the random length let’s calculate where the x coordinate for the end of the radiating line should be. **Type** `dx = 250 + Math.sin(angle) * length`.",
+            "solution": "    dx = 250 + Math.sin(angle) * length",
+            "validate": "__^    dx *= *250 *\\+ *Math.sin\\(angle\\) *\\* *length"
+        },
+        {
+            "hint": "Now let’s calculate the y coordinate for the end of the radiating line. **Type** `dy = 250 + Math.cos(angle) * length`.",
+            "solution": "    dy = 250 + Math.cos(angle) * length",
+            "validate": "__^    dy *= *250 *\\+ *Math.cos\\(angle\\) *\\* *length"
+        },
+        {
+            "hint": "Finally, with all the coordinates set we are ready to draw the line. **Type** `lineTo dx, dy` ",
+            "solution": "    lineTo dx, dy"
+        }
+    ]
+}

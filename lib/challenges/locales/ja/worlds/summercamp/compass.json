@@ -1,0 +1,93 @@
+{
+    "id": "compass",
+    "title": "A compass is an essential tool",
+    "short_title": "Compass",
+    "icon_class": "challenge_compass",
+    "description": "Essentially a compass is a magnet, generally a magnetized needle. Since opposites attract the southern pole of the needle is attracted to the Earth's natural magnetic north pole. Did you know that you can create your own simply with a paperclip, cork and a magnet?",
+    "cover": "summercamp/day_9.png",
+    "completion_text": "Now try adding the rest of the 'compass rose' components: the other cardinal directions (E, S, W and even NE, NW, SE and SW). Why not a hand holding it?",
+    "difficulty": 1,
+    "startAt": 0,
+    "summerCamp": true,
+    "rewards": {
+        "wallpaper": 1
+    },
+    "steps": [
+        {
+            "hint": "Select `lightgray` for the `background`",
+            "solution": "background lightgray"
+        },
+        {
+            "hint": "In a new line, set the outline of your compass with a `stroke` of `gold` color and size `20`",
+            "solution": "stroke gold, 20"
+        },
+        {
+            "hint": "Set the `color` of the compass to `gray`",
+            "solution": "color gray"
+        },
+        {
+            "hint": "Your compass is a `circle` with size `110`",
+            "solution": "circle 110"
+        },
+        {
+            "hint": "Set the `color` to `darkgray` for the second half of the compass",
+            "solution": "color darkgray"
+        },
+        {
+            "hint": "Set the `stroke` back to `0`",
+            "solution": "stroke 0"
+        },
+        {
+            "hint": "Draw an arc that matches the top half of the compass - **type** `arc 105, 2, 1`",
+            "solution": "arc 105, 2, 1"
+        },
+        {
+            "hint": "We need to mark the north somehow - in a new line **type** `moveTo 250, 175`",
+            "solution": "moveTo 250, 175"
+        },
+        {
+            "hint": "Set the `color` to `gold`",
+            "solution": "color gold"
+        },
+        {
+            "hint": "Set the `font` to `'cursive'` and size `25`",
+            "solution": "font 'cursive', 25"
+        },
+        {
+            "hint": "Write an N to represent north - **type** `text 'N'`",
+            "solution": "text 'N'"
+        },
+        {
+            "hint": "Now we need a needle with 2 sides. Set the `color` to `red` for the first side",
+            "solution": "color red"
+        },
+        {
+            "hint": "Move the cursor to position the needle **type** `moveTo 230, 250`",
+            "solution": "moveTo 230, 250"
+        },
+        {
+            "hint": "Draw a triangle with a polygon - **type** `polygon 20, -90, 40, 0`",
+            "solution": "polygon 20, -90, 40, 0"
+        },
+        {
+            "hint": "Excellent! Set the `color` to `white` for the second side of the needle",
+            "solution": "color white"
+        },
+        {
+            "hint": "Draw the second part - **type** `polygon 20, 90, 40, 0`",
+            "solution": "polygon 20, 90, 40, 0"
+        },
+        {
+            "hint": "Finish it with one last detail. Set the `color` to `gold`",
+            "solution": "color gold"
+        },
+        {
+            "hint": "Move the cursor to the center of the compass **type** `move 20`",
+            "solution": "move 20"
+        },
+        {
+            "hint": "Draw a `circle` of size `20`",
+            "solution": "circle 20"
+        }
+    ]
+}

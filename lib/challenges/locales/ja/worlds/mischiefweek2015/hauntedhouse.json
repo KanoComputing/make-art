@@ -1,0 +1,11 @@
+{
+    "id": "hauntedhouse",
+    "title": "Haunted House",
+    "description": "Dress the house up for Halloween and express your creativity.",
+    "start_date": "2015-11-01T06:00:00",
+    "completion_text": "It's Halloween Night! Change the colours at the top of the code to make this into a night scene then express your creativity by combining previous challenges with it or causing mischief, some ideas to get you started are in the comments.",
+    "startAt": 0,
+    "code": "#Colors, that need to be made spookier\nsky = aqua\nground = green\nsun = yellow\nbricks = brown\nroof = red\nframes = gray\nwindows = blue\ndoor = setBrightness(brown,-40)\n\n#Sky\nbackground sky\nstroke 0\nmoveTo 100, 100\ncolor sun\ncircle 60\n#Why not add some spooky clouds or bats\n\n#Ground\nmoveTo 250,530\ncolor ground\nellipse 500,150\n\n#House\nmoveTo 100,180\ncolor bricks\nrectangle 300,270\n\n#Windows\n#Cause some mischief, can you figure out how to throw eggs on all the windows in just 3 lines of code\ndrawWindow = (x,y) ->\n    color setBrightness(frames,30)\n    moveTo x,y\n    rectangle 60,80\n    color windows\n    moveTo x+5,y+5\n    rectangle 50,70\n    color setBrightness(frames,30)\n    moveTo x, y+37.5\n    rectangle 60,5\n    moveTo x+27.5, y\n    rectangle 5,80\ndrawWindow(120,200)\ndrawWindow(220,200)\ndrawWindow(120,310)\ndrawWindow(320,200)\ndrawWindow(320,310)\n\n#Roof\ncolor roof\nmoveTo 100, 180\npolygon 150, -100, 300, 0\n#You could use the arc function to cover the roof in toilet paper \n\n\n#Door\ncolor setBrightness(frames,-10)\nmoveTo 215, 330\nrectangle 70,110\nmove 5,5\ncolor door\nrectangle 60,105\ncolor setBrightness(frames,-40) \nmove -15,105\nrectangle 90,20\nmove 65,-50\ncolor setBrightness(door,80)\ncircle 3\n#How about putting a pumpkin beside the door",
+    "steps": [],
+    "cover": "mischiefweek2015/mw-007-hauntedhouse.png"
+}

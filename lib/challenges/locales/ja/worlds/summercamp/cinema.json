@@ -1,0 +1,117 @@
+{
+    "id": "cinema",
+    "title": "Relax watching a movie",
+    "short_title": "Cinema",
+    "icon_class": "challenge_cinema",
+    "description": "After playing a short movie presentation by the Skladanowsky brothers in 1895 which consisted of numerous very short 6-second films accompanied by a specially composed piece of music, the Berlin Wintergarten theatre in Mitte, Berlin, became known as the first ever movie theatre. Unfortunately the theatre was destroyed by bombs in 1944, during the Second World War.",
+    "cover": "summercamp/day_14.png",
+    "completion_text": "What good is a cinema without a movie playing? Go ahead and try drawing a scene from your favourite movie up on the big screen, and maybe a few friends to watch the film with you! Don't forget the popcorn!",
+    "difficulty": 2,
+    "startAt": 0,
+    "summerCamp": true,
+    "rewards": {
+        "wallpaper": 1
+    },
+    "steps": [
+        {
+            "hint": "It's dark in the cinema. Set the `background` color to `black`",
+            "solution": "background black"
+        },
+        {
+            "hint": "Set the `stroke` to `0` in a new line",
+            "solution": "stroke 0"
+        },
+        {
+            "hint": "First, move the cursor to place the floor - **type** `moveTo 0, 300`",
+            "solution": "moveTo 0, 300"
+        },
+        {
+            "hint": "Set the floor `color` to `gray`",
+            "solution": "color gray"
+        },
+        {
+            "hint": "Draw the floor with a rectangle - **type** `rectangle 500, 200`",
+            "solution": "rectangle 500, 200"
+        },
+        {
+            "hint": "Now, move the cursor to place the screen - **type** `moveTo 50, 20`",
+            "solution": "moveTo 50, 20"
+        },
+        {
+            "hint": "Set the screen `color` to `white`",
+            "solution": "color white"
+        },
+        {
+            "hint": "The screen is a perfect `rectangle` of size `400` by `250`",
+            "solution": "rectangle 400, 250"
+        },
+        {
+            "hint": "Amazing! This theatre needs a curtain - **type** `moveTo 0`",
+            "solution": "moveTo 0"
+        },
+        {
+            "hint": "Set the curtain `color` to `red`",
+            "solution": "color red"
+        },
+        {
+            "hint": "Draw a vertical curtain as a `rectangle` of size `30` by `330`",
+            "solution": "rectangle 30, 330"
+        },
+        {
+            "hint": "Now draw an horizontal curtain size `500` by `10` in the same way",
+            "solution": "rectangle 500, 10"
+        },
+        {
+            "hint": "Looking great! Place the curtain on the right - **type** `move 470`",
+            "solution": "move 470"
+        },
+        {
+            "hint": "Draw a vertical curtain, same as the one the left",
+            "solution": "rectangle 30, 330"
+        },
+        {
+            "hint": "This theatre needs some seats for our audience - **type** `moveTo 0, 360`",
+            "solution": "moveTo 0, 360"
+        },
+        {
+            "hint": "Set the outline of the seats with a `stroke` of `orangered` color and size `10`.",
+            "solution": "stroke orangered, 10"
+        },
+        {
+            "hint": "Let's draw 3 rows and 6 columns of seats with a loop - **type** `for x in [ 1 .. 3 ]`",
+            "solution": "for x in [ 1 .. 3 ]"
+        },
+        {
+            "hint": "Set the `color` of the seats to `red`",
+            "solution": "    color red"
+        },
+        {
+            "hint": "Now draw a `rectangle` for the seats, size `500` by `40`",
+            "solution": "    rectangle 500, 40"
+        },
+        {
+            "hint": "Move the cursor down to place the back of the seats - **type** `move 0, 50`",
+            "solution": "    move 0, 50"
+        },
+        {
+            "hint": "Inside the loop, open a second loop for the back of the seats - **type** `for y in [ 1 .. 6 ]`",
+            "solution": "    for y in [ 1 .. 6 ]"
+        },
+        {
+            "hint": "Set the `color` of the backseat to `darkred`",
+            "solution": "        color darkred"
+        },
+        {
+            "hint": "Brilliant! Almost there. Now draw the back of the seat with an arc - **type** `arc 60, 0, 1`",
+            "solution": "        arc 60, 0, 1"
+        },
+        {
+            "hint": "Now separate the seats `130` pixels to the right",
+            "solution": "        move 130"
+        },
+        {
+            "hint": "Last, make sure new rows are positioned correctly - Press **Enter**, then **Backspace** and **type** `move -800` inside the **first** loop",
+            "solution": "    move -800"
+        }
+    ]
+}

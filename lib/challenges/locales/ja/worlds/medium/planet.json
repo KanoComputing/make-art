@@ -1,0 +1,60 @@
+{
+    "id": "planet",
+    "title": "惑星画家",
+    "description": "自分だけの惑星をコードで描こう！",
+    "startAt": 2,
+    "steps": [
+        {
+            "hint": "背景をヘキサのコードで設定しよう。`background '#444444'`を**タイプ**",
+            "solution": "background '#444444'",
+            "validate": "background '\\#444444'"
+        },
+        {
+            "hint": "線を書かないように、筆の幅を0にしよう。",
+            "solution": "stroke 0"
+        },
+        {
+            "hint": "色は黄色（`yellow`）にしよう。",
+            "solution": "color yellow"
+        },
+        {
+            "hint": "次はループを始めよう。`for i in [ 0 .. 32 ]`を**タイプ**",
+            "solution": "for i in [ 0..32 ]"
+        },
+        {
+            "hint": "そして、それぞれの星の位置を設定しよう。`moveTo (random 1, 500), (random 1, 500)`を**タイプ**",
+            "solution": "    moveTo (random 1, 500), (random 1, 500)",
+            "validate": "    moveTo ( *random +1,500 *),( *random +1,500 *)"
+        },
+        {
+            "hint": "星は、半径5の丸で描こう。",
+            "solution": "    circle 5"
+        },
+        {
+            "hint": "次は、ループの外（インデントなし）で、色を紫にしよう。`color purple`を**タイプ**",
+            "solution": "color purple"
+        },
+        {
+            "hint": "次は`moveTo 250, 250`",
+            "solution": "moveTo 250, 250"
+        },
+        {
+            "hint": "半径170の円形を描こう。",
+            "solution": "circle 170"
+        },
+        {
+            "hint": "色を白（`white`）に。",
+            "solution": "color white"
+        },
+        {
+            "hint": "筆を太めで白に。`stroke white, 5`を**タイプ**",
+            "solution": "stroke white, 5"
+        },
+        {
+            "hint": "最後に楕円形を描こう。`ellipse 220, 4`を**タイプ**",
+            "solution": "ellipse 220, 4"
+        }
+    ],
+    "completion_text": "いやー、まるで宇宙だ！共有する前に、色を変えて、惑星をもっと面白くしてみよう！",
+    "cover": "planet.png"
+}

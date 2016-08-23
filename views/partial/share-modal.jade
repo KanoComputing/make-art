@@ -13,28 +13,28 @@
             p.description {{ creation.description }}
 
         .buttons(ng-if='!mailTab')
-            | Share with friends: 
+            | ${{ partial.share_with_friends }}$
             a.button.button-mail(ng-click='openMailTab()')
                 i.icon-mail
 
             a.button.button-facebook(ng-click='facebookShare(creation)')
-                img(src='/assets/button-icons/facebook-white.png' title='Share on Facebook')
+                img(src='/assets/button-icons/facebook-white.png' title='${{ partial.share_on_facebook }}$')
 
             a.button.button-twitter(ng-href='{{ buildURL(creation) }}')
-                img(src='/assets/button-icons/twitter-white.png' title='Share on Twitter')
+                img(src='/assets/button-icons/twitter-white.png' title='${{ partial.share_on_twitter }}$')
 
         .skip-sharing(ng-if='selectedWorld.share_strategy === "optional"')
-            button.button-success(ng-click='skipSocialSharing()') Skip Sharing
+            button.button-success(ng-click='skipSocialSharing()') ${{ partial.skip_sharing }}$
 
         .mail-tab.center(ng-if='mailTab')
-            span Share by email
+            span ${{ partial.share_by_email }}$
             
             form(ng-submit='sendMail(creation)' name='mailForm')
                 .box.box-danger(ng-if='error') {{ error }}
 
                 .email
-                    input(ng-model='creation.email', placeholder='Email address', type='email', required)
+                    input(ng-model='creation.email', placeholder='${{ partial.email_address }}$', type='email', required)
 
-                button.button-success(type='submit', ng-disabled='mailForm.$invalid', ng-class='{ "disabled" : mailForm.$invalid }', ng-if='!loading') Send
+                button.button-success(type='submit', ng-disabled='mailForm.$invalid', ng-class='{ "disabled" : mailForm.$invalid }', ng-if='!loading') ${{ partial.send }}$
 
                 .spinner(ng-if='loading')

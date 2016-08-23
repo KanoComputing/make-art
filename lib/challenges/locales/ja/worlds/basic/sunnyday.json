@@ -1,0 +1,23 @@
+{
+    "id": "sunnyday",
+    "title": "晴れの日",
+    "description": "晴れの日をコードで表して、基礎を覚えよう。",
+    "code": "",
+    "startAt": 2,
+    "steps": [
+        {
+            "hint": "まず、背景をきれいな空色で塗りましょう。- `background blue`を**タイプ**",
+            "solution": "background blue"
+        },
+        {
+            "hint": "次は、鉛筆の色を明るい黄色に変えよう。- 次の行に`color yellow`を**タイプ**",
+            "solution": "color yellow"
+        },
+        {
+            "hint": "最後に、「circle」（円型）コマンドで、太陽を描こう。円の大きさを数字で表そう。- 次の行に`circle 150`を**タイプ**",
+            "solution": "circle 150"
+        }
+    ],
+    "completion_text": "おめでとう！さっぱりした晴れの日ができた。次に、円の大きさを変えて、どうなるか確認して見よう。",
+    "cover": "sunny-day.png"
+}
