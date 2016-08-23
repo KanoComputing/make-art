@@ -1,0 +1,8 @@
+
+if !offline
+    .kano-feedback-container(ng-click='feedback.openModal()', ng-init='feedbackLoaded()') 
+        span ${{ partial.feedback }}$
+        .kano-feedback
+    include ./feedback
+    include ./auth-modal
+

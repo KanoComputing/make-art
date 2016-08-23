@@ -1,0 +1,13 @@
+{
+    "challenges": [
+        "./shrinking",
+        "./random",
+        "./starry",
+        "./house",
+        "./dots",
+        "./gradient",
+        "./planet",
+        "./pizza"
+    ]
+}
+
