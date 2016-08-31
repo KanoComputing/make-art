@@ -1,0 +1,20 @@
+{
+    "challenge_title": "Provocarea {{ id }}:",
+    "start": "Start",
+    "hint": "Sugestie",
+    "next": "Înainte",
+    "done": "Gata",
+    "can_you_hack_this_challenge": "Poți depăși această procare?",
+    "make_it_into_a_fathers_day_card": "Transformă provocarea într-o felicitare de ziua tatălui!",
+    "now_sign_up_to_kano_world_to_share_your_creation": "Autentifică-te în Kano World pentru a împărtăși creația ta și pentru a trimite felicitarea tatălui tău!",
+    "share_your_fathers_day_card": "Împărătășește felicitarea de ziua tatălui",
+    "now_you_can_share_the_card_on_kano_world": "Acum poți împărtăși felicitara în Kano World și o poți trimite tatălui tău!",
+    "challenges_completed": "Provocări finalizate",
+    "now_make_something_new": "Încearcă ceva nou!",
+    "new_world_unlocked_play_now": "O nouă lume a fost deblocată. Joacă-te acum - ",
+    "menu": "Meniu",
+    "playground": "Loc de joacă",
+    "you_did_it_go_back_for_more_coding_fun": "Ai reușit! Du-te înapoi pentru și mai multă distracție în timp ce programezi.",
+    "hour_of_code": "Ora de programare",
+    "solution": "Soluția"
+}
