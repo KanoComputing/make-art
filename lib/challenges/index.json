@@ -66,6 +66,17 @@
             "type": "campaign",
             "share_strategy": "optional",
             "sales_popup_after": 2
+        },
+        {
+            "id": "ozwaldboateng",
+            "name": "Ozwald Boateng × Kano",
+            "description": "Today, Kano and Ozwald Boateng are teaming up to teach creativity and a coding language thousands of years old.",
+            "cover": "world_covers/ozwaldboateng",
+            "world_path": "worlds/ozwaldboateng",
+            "css_class": "ozwaldboateng",
+            "type": "campaign",
+            "share_strategy": "optional",
+            "sales_popup_after": 2
         }
     ]
 }
