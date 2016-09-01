@@ -137,6 +137,7 @@
     "steelblue"            : "#4682B4",
     "tan"                  : "#D2B48C",
     "teal"                 : "#008080",
+    "transparent"          : "rgba(0,0,0,0)",
     "thistle"              : "#D8BFD8",
     "tomato"               : "#FF6347",
     "turquoise"            : "#40E0D0",
