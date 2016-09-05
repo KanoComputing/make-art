@@ -8,20 +8,20 @@ header: .page-width
 
         li: a(href='/challenges', ng-class='{ active: basePath === "challenge" || basePath === "challenges" }')
             i.icon-menu
-            |  Challenges
+            | ${{ challenges.challenges }}$
 
         li: a(href='/playground', ng-class='{ active: basePath === "playground" }')
             i.icon-game
-            |  Playground
+            | ${{ challenges.playground }}$
 
     ul.nav.nav-right(ng-cloak)
         li.discover: a(ng-if="!offline" id='discover-kano', href='http://www.kano.me', target='_blank')
             i.icon-cpu
-            | Discover Kano
+            | ${{ partial.discover_kano }}$
 
         li(ng-if='!offline && !loggedIn'): a(href='#', ng-click='auth.openModal()')
             i.icon-login
-            |  Login
+            | ${{ partial.login }}$
         
 
         li(ng-if='!offline && loggedIn')
@@ -31,7 +31,7 @@ header: .page-width
 
         li(ng-if='!offline && loggedIn'): a(href='#', ng-click='logout()')
             i.icon-logout
-            |  Logout
+            | ${{ partial.logout }}$
 
         li: button.close(ng-click='shutdown()', ng-if='offline'): i.icon-cross
 

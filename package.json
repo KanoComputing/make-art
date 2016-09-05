@@ -42,11 +42,13 @@
     "nib": "~1.0.x",
     "partialify": "^3.1.1",
     "throttle-debounce": "^0.1.1",
-    "tiny-lr": "0.0.9"
+    "tiny-lr": "0.0.9",
+    "gulp-html-i18n": "0.3.4",
+    "del": "1.1.1"
   },
   "devDependencies": {
-    "mocha": "2.3.x",
-    "chai": "3.2.x"
+    "chai": "3.2.x",
+    "mocha": "2.3.x"
   },
   "engines": {
     "node": "0.12.x"

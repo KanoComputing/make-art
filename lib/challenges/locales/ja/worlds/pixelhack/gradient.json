@@ -1,0 +1,56 @@
+{
+    "id": "gradient",
+    "title": "8-bit sunset",
+    "description": "Use a loop to draw an 8-bit sunset.",
+    "startAt": 2,
+    "steps": [
+        {
+            "hint": "We’ll just use solid shapes with no stroke. So **type** `stroke 0`.",
+            "solution": "stroke 0"
+        },
+        {
+            "hint": "To better see the effect of our test, text to bold with `bold true`",
+            "solution": "bold true"
+        },
+        {
+            "hint": "We’ll use a loop to draw the sunset. This time going from 0 to 10. **Type** `for y in [ 0 .. 10 ]`",
+            "solution": "for y in [ 0 .. 10 ]"
+        },
+        {
+            "hint": "To understand how this loop works, we’ll draw the loop value out. Move into position with `moveTo 250, y * 50`",
+            "solution": "    moveTo 250, y * 50",
+            "validate": "    moveTo 250, y \\* 50"
+        },
+        {
+            "hint": "Let’s inspect what our loop is doing. You can use the text function with plain text, but you can also pass it a variable. **Type** `text y` to see what the y values are across the screen.",
+            "solution": "    text y",
+            "validate": "    text y"
+        },
+        {
+            "hint": "The y variable is increasing every time we go through the loop. It goes from 0 (which is off the screen) to 10. To draw our sunset we need to just move to the left edge. **Type** `moveTo 0, y * 50`",
+            "solution": "    moveTo 0, y * 50",
+            "validate": "    moveTo 0, y \\* 50"
+        },
+        {
+            "hint": "We’ll use a special function to darken the color every loop. **Type** `color darken blue, y * 3`.",
+            "solution": "    color darken blue, y * 3",
+            "validate": "    color darken blue, y \\* 3"
+        },
+        {
+            "hint": "Now for the sky, this will draw over your numbers. **Type** `rectangle 500, 50`.",
+            "solution": "    rectangle 500, 50",
+            "validate": "    rectangle 500, 50"
+        }
+    ],
+    "completion_text": "Beautiful! See how the blue gets darker as it goes down the screen. The y variable was being passed to the darken function. As the y value increased, the darken function made the blue color get darker.",
+    "gallery": {
+        "cover_path": "/assets/challenges/images/pixelremixes/",
+        "remixes": [
+            "grad-yello.png",
+            "grad-sword.png",
+            "grad-mage.png"
+        ]
+    },
+    "cover": "pixel-gradient.png",
+    "guide": "#### New words\n**bold** state | bold true\n\nCan set whether text is drawn as bold or regular. True is bold, false is regular.\n\n**text** string | text “hello world”\n\nDraws text centered on the drawing cursor. The properties of the text are controlled by the color, font, bold, and italic functions.\n\n\n#### What you'll make\n1. We’ll just use solid shapes with no stroke. So **type** `stroke 0`.\n2. To better see the effect of our test, text to bold with `bold true`\n3. We’ll use a loop to draw the sunset. This time going from 0 to 10. **Type** `for y in [ 0 .. 10 ]`\n4. To understand how this loop works, we’ll draw the loop value out. Move into position with `moveTo 250, y * 50`\n5. Let’s inspect what our loop is doing. You can use the text function with plain text, but you can also pass it a variable. **Type** `text y` to see what the y values are across the screen.\n6. The y variable is increasing every time we go through the loop. It goes from 0 (which is off the screen) to 10. To draw our sunset we need to just move to the left edge. **Type** `moveTo 0, y * 50`\n7. We’ll use a special function to darken the color every loop. **Type** `color darken blue, y * 3`.\n8. Now for the sky, this will draw over your numbers. **Type** `rectangle 500, 50`.\n\n\n#### What you’ll hack\nNow that you’ve got a few pixel art creations under your belt, why not bring them in here and give them the full background treatment they deserve!\n\n#### Briefing\nWith a loop you can tell a computer to do something over and over again. With the `for` loop, you can ask how many times the loop has happened, and depending on what loop it is vary what it is the loop is doing.\n\nIn this sunset, we want to draw rectangular blocks of the same size, and we want to move down a certain distance every time, but this time we need a way of telling the computer that they will have a different color every time. How do we do this? With variables. The way you can ask how many times the loop has happened in a `for` loop is with the word you start the loop with. When we say `for y in [ 0 .. 10]`, we are making the word `y` equal to how many times the loop has executed. It is incremented for us, so any time we use the variable `y`, it will tell the program how many times it has looped.\n\nBecause it increments by one every time, we can use it to travel across color shades by making a color  darker in step as our y variable gets bigger. So at the beginning of the loop we have a small y and a regular color, and at the end we have a big y and a dark color.\n\n"
+}

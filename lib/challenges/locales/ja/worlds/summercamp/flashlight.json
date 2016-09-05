@@ -1,0 +1,93 @@
+{
+    "id": "flashlight",
+    "title": "Lights on!",
+    "short_title": "Flashlight",
+    "icon_class": "challenge_flashlight",
+    "description": "Torches started life as ignited sticks; their flames would light the way for explorers and settlers. With the advent of electricity, and the invention of the dry cell battery in 1887, the road was paved to use incandescent bulbs as a replacement. While the technology inside flashlights has evolved, they are still as useful as ever. Meanwhile, the original torch has found a second coming in circus acts where they are thrown skywards in miraculous fashion.",
+    "cover": "summercamp/day_12.png",
+    "completion_text": "You are an adventurer in the dark with your torch. What might you have uncovered as its light passes over the room? Try drawing that fox that you’ve unearthed or that owl hooting in the trees.",
+    "difficulty": 1,
+    "startAt": 0,
+    "summerCamp": true,
+    "rewards": {
+        "outfit": 1
+    },
+    "steps": [
+        {
+            "hint": "It's getting dark outside! Set the `background` color to `darkblue`",
+            "solution": "background darkblue"
+        },
+        {
+            "hint": "Set the `stroke` to `0`, we won't need it for this challenge",
+            "solution": "stroke 0"
+        },
+        {
+            "hint": "Move the cursor to place our flashlight - **type** `moveTo 200, 200`",
+            "solution": "moveTo 200, 200"
+        },
+        {
+            "hint": "Set the `color` of the flashlight to `dimgray`",
+            "solution": "color dimgray"
+        },
+        {
+            "hint": "Draw the head of the flashlight with a rectangle - **type** `rectangle 100, 50`",
+            "solution": "rectangle 100, 50"
+        },
+        {
+            "hint": "Now move the cursor down to draw the neck - **type** `move 0, 50`",
+            "solution": "move 0, 50"
+        },
+        {
+            "hint": "Set the `color` of this piece to `gray`",
+            "solution": "color gray"
+        },
+        {
+            "hint": "Draw a polygon - **type** `polygon 20, 40, 80, 40, 100, 0`",
+            "solution": "polygon 20, 40, 80, 40, 100, 0"
+        },
+        {
+            "hint": "Exciting! Now move the cursor down to draw the body - **type** `move 20, 40`",
+            "solution": "move 20, 40"
+        },
+        {
+            "hint": "Set the `color` of the body to `darkgray`",
+            "solution": "color darkgray"
+        },
+        {
+            "hint": "Draw the body of the flashlight with a `rectangle` `60` by `200`",
+            "solution": "rectangle 60, 200"
+        },
+        {
+            "hint": "The only thing missing now is a ON/OFF button. Set the `color` to `dimgray`",
+            "solution": "color dimgray"
+        },
+        {
+            "hint": "Now move the cursor down to place the button - **type** `move 30, 50`",
+            "solution": "move 30, 50"
+        },
+        {
+            "hint": "Draw an ellipse where the button will be located - **type** `ellipse 10, 30`",
+            "solution": "ellipse 10, 30"
+        },
+        {
+            "hint": "Set the `color` of the button to `red`",
+            "solution": "color red"
+        },
+        {
+            "hint": "Draw the button with an ellipse - **type** `ellipse 10, 20`",
+            "solution": "ellipse 10, 20"
+        },
+        {
+            "hint": "You have turned on the light! Set the color of the beam  - **type** `color \"rgba(255, 255, 0, 0.8)\"`",
+            "solution": "color \"rgba(255, 255, 0, 0.8)\""
+        },
+        {
+            "hint": "Place the beam in front of the flashlight - **type** `move -50, -140`",
+            "solution": "move -50, -140"
+        },
+        {
+            "hint": "Draw the beam of light with a polygon - **type** `polygon 100, 0, 180, -300, -80, -300`",
+            "solution": "polygon 100, 0, 180, -300, -80, -300"
+        }
+    ]
+}

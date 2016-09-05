@@ -1,0 +1,87 @@
+{
+    "id": "house",
+    "title": "家",
+    "description": "居心地のよい家を描こう！",
+    "code": "",
+    "startAt": 1,
+    "steps": [
+        {
+            "hint": "まず空を描こう！背景を青（`blue`）に設定しよう。",
+            "solution": "background blue"
+        },
+        {
+            "hint": "筆の幅を0にしよう。",
+            "solution": "stroke 0"
+        },
+        {
+            "hint": "左上へ動こう。`move -150, -50`を**タイプ**",
+            "solution": "move -150, -50"
+        },
+        {
+            "hint": "色をベージュ（`beige`）にしよう。",
+            "solution": "color beige"
+        },
+        {
+            "hint": "次は長方形を描こう。`rectangle 300, 200`を**タイプ**",
+            "solution": "rectangle 300, 200"
+        },
+        {
+            "hint": "右上へ動こう。`move 150, -100`を**タイプ**",
+            "solution": "move 150, -100"
+        },
+        {
+            "hint": "屋根には色を暗赤色（`darkred`）にしよう。",
+            "solution": "color darkred"
+        },
+        {
+            "hint": "次は屋根を描こう。`polygon 170, 100, -170, 100`を**タイプ**",
+            "solution": "polygon 170, 100, -170, 100"
+        },
+        {
+            "hint": "左下へ動こう。`move -250, 300`を**タイプ**",
+            "solution": "move -250, 300"
+        },
+        {
+            "hint": "芝生を描くには色を緑（`green`）に設定しよう。",
+            "solution": "color green"
+        },
+        {
+            "hint": "次は芝生を500, 100の長方形(`rectangle`)で描こう。",
+            "solution": "rectangle 500, 100"
+        },
+        {
+            "hint": "右上へ動こう。`move 220, -80`を**タイプ**",
+            "solution": "move 220, -80"
+        },
+        {
+            "hint": "木のドアの色を茶色（`brown`）に設定しよう。",
+            "solution": "color brown"
+        },
+        {
+            "hint": "ドアを60, 80の長方形で描こう。",
+            "solution": "rectangle 60, 80"
+        },
+        {
+            "hint": "窓の色を水色（`aqua`）に設定しよう。",
+            "solution": "color aqua"
+        },
+        {
+            "hint": "左上へ動こう。`move -80, -80`を**タイプ**",
+            "solution": "move -80, -80"
+        },
+        {
+            "hint": "50の四角を描こう。",
+            "solution": "square 50"
+        },
+        {
+            "hint": "右へ行こう。`move 170`を**タイプ**",
+            "solution": "move 170"
+        },
+        {
+            "hint": "50の四角を描こう。",
+            "solution": "square 50"
+        }
+    ],
+    "completion_text": "すごい家をコードで描いた！",
+    "cover": "house.png"
+}
