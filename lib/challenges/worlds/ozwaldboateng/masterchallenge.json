@@ -1,0 +1,9 @@
+{
+    "id": "masterchallenge",
+    "title": "Master Challenge",
+   	"description" : "To create something new you must look into the future",
+	"code": "cross = ->\n    stroke 0\n    color yellow\n    for x in [0 ... 100] by 20\n        move 0, x\n        square 20\n        move 0, 80 - 2 * x\n        square 20\n        move 20, -(80 - x)\n\nmypattern = ->\n    move 50, 50\n    ### ▼ Your Code here ▼ ###\n    \n    ### ▲ Your Code here ▲ ###\n\nbackground black\nfor x in [0 ... 500] by 100\n    for y in [0 ... 500] by 100\n        moveTo x, y\n        if (x / 100 + y / 100) % 2 is 1\n            cross()\n        else\n            mypattern()\nstroke 2, white\nfor x in [100 ... 500] by 100\n    moveTo x, 0\n    line 0, 500\nfor y in [100 ... 500] by 100\n    moveTo 0, y\n    line 500, 0",
+    "steps": [],
+    "completion_text": "“If you can’t visualise it, you’ll never see it.” — Ozwald Boateng. You may look backwards to search for inspiration, but to create something new you must look into the future. This is a traditional Kente pattern from Ghana, where Ozwald Boateng’s parents moved to London from. Finish the design by typing your own code on to line 14. If you want, go back to the previous zig-zag challenge to copy that code and paste it here. It works perfectly. Good luck!",
+    "cover": "ozwaldboateng/masterchallenge.png"
+}

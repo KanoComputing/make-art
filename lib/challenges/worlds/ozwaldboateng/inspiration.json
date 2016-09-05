@@ -1,0 +1,39 @@
+{
+    "id": "inspiration",
+    "title": "Inspiration",
+    "description": "",
+    "code": "",
+    "startAt": 2,
+    "steps": [
+        {
+            "hint": "The artist Bridget Riley, spent years copying famous paintings to learn about their use of shape and color before creating her minimalist masterpieces. This composition has a nice ivory background. Type `background ivory`.",
+            "solution": "background ivory"
+        },
+        {
+            "hint": "We’ll want to see only the outlines of the circles. We can do this by typing `color transparent`",
+            "solution": "color transparent"
+        },
+        {
+            "hint": "Next we’ll use two loops to draw our circles. The first one goes across the canvas in increments of fifty. Type `for x in [0 .. 500] by 50`",
+            "solution": "for x in [0 .. 500] by 50"
+        },
+        {
+            "hint": "The second loop goes down the canvas. Type `for y in [0 .. 500] by 50`",
+            "solution": "    for y in [0 .. 500] by 50"
+        },
+        {
+            "hint": "We only want to draw circles sometimes. Which we will do by using an “if statement”. Type `if random(0, 10) > 2`. Read this as “if the computer guesses a random number between 0 and 10, and it is bigger than two, draw a circle.”",
+            "solution": "        if random(0, 10) > 2"
+        },
+        {
+            "hint": "Next let’s move into position with `moveTo x, y`",
+            "solution": "            moveTo x, y"
+        },
+        {
+            "hint": "Finally we can draw the circle with `circle 50`",
+            "solution": "            circle 50"
+        }
+    ],
+    "completion_text": "You have to know the rules first if you want to break them. Ozwald Boateng grew up wearing suits he sewed himself. As he grew older his designs became more distinctive, he started breaking traditions and creating new ones, just like how Bridget Riley did with her paintings of circles. Today, Boateng’s suits are sold in a store on Savile Row, the centuries-old home of British tailoring where the suit was invented.",
+    "cover": "ozwaldboateng/inspiration.png"
+}
