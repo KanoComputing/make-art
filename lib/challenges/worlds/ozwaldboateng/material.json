@@ -1,0 +1,27 @@
+{
+    "id": "material",
+    "title": "Material",
+    "description": "learn composition and how simple layering can be used to create beautiful shapes",
+    "code": "",
+    "startAt": 2,
+    "steps": [
+        {
+            "hint": "Like fashion designers who choose fabrics based on how they stretch and feel, computer artists have to carefully choose and combine shapes. Type `rectangle 100, 50`.",
+            "solution": "rectangle 100, 50"
+        },
+        {
+            "hint": "When arranged by a talented maker, simple shapes can magically transform into complex creations. Type `rectangle -50, 100`.",
+            "solution": "rectangle -50, 100"
+        },
+        {
+            "hint": "This challenge repeats the same rectangular shape four times to create the houndstooth, a centuries-old weaving pattern. Type `rectangle 50, -100`.",
+            "solution": "rectangle 50, -100"
+        },
+        {
+            "hint": "For the final piece, type `rectangle -100, -50`.",
+            "solution": "rectangle -100, -50"
+        }
+    ],
+    "completion_text": "Great job! Ozwald Boateng is famous for his use of mohair in his suits. Like wool it is warm in the winter and cool in the summer, but it is uniquely soft and silky, perfect for the modern man. The properties of the fabric become a part of the suit, but the arrangement and cut of the fabric create the final look.",
+    "cover": "ozwaldboateng/material.png"
+}

@@ -1,0 +1,35 @@
+{
+	"id": "pattern",
+	"title": "Pattern",
+	"description": "Learn about color interactions and how shapes can affect our perception of color",
+	"code": "",
+	"startAt": 2,
+	"steps": [
+		{
+			"hint": "Patterns can create entirely new spaces of color. We’ll create a pattern based off of Ozwald Boateng’s limited edition ties from this season. Let’s get started by typing `background black`",
+			"solution": "background black"
+        },
+		{
+			"hint": "We’ll set the stroke color with `stroke 30, red`",
+			"solution": "stroke 30, red"
+        },
+		{
+			"hint": "And to give us just the strokes with no fill, we will type `color transparent`",
+			"solution": "color transparent"
+        },
+		{
+			"hint": "Our pattern is created by circles inside of circles, which we’ll draw using a loop that radiates outwards. Type `for r in [0 .. 350] by 50`.",
+			"solution": "for r in [0 .. 350] by 50"
+        },
+		{
+			"hint": "Our second loop will go all around the circle, letting us draw in our pattern. Type `for i in [0 ... 2] by .1`",
+			"solution": "    for i in [0 ... 2] by .1"
+        },
+		{
+			"hint": "Finally, complete the pattern by drawing the arcs with `arc r, i, i - .05`",
+			"solution": "        arc r, i, i - .05"
+        }
+    ],
+	"completion_text": "Great job! This hypnotic circular pattern uses solid black and red, but the simultaneous contrast of both change our perception of both, making our brain think it sees colors where our eyes actually see sharp edges! Ozwald Boateng has ties in many different colors, try remixing the code for your own unique color combination.",
+	"cover": "ozwaldboateng/pattern.png"
+}
