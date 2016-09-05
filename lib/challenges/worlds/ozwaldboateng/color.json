@@ -1,0 +1,27 @@
+{
+    "id": "color",
+    "title": "Color",
+    "description": "Learn how Ozwald Boateng chooses combinations to evoke feelings",
+    "code": "",
+    "startAt": 2,
+    "steps": [
+        {
+            "hint": "Welcome to the world of London fashion designer Ozwald Boateng. His iconic suits have been worn by the likes of Will Smith and Richard Branson, and are well known for their vibrant, nontraditional colors. We’ll explore how Boateng uses color with a bit of an experiment. Set the drawing color to blue by typing `color rgb(102, 211, 231)`.",
+            "solution": "color rgb(102, 211, 231)"
+        },
+        {
+            "hint": "Great, now we’ll draw a shape using this bright blue. First we need to do some housekeeping by turning off stroke by typing `stroke 0`.",
+            "solution": "stroke 0"
+        },
+        {
+            "hint": "Now draw the circle by typing `circle 150`",
+            "solution": "circle 150"
+        },
+        {
+            "hint": "This blue evokes a certain feeling when set against a white background. But watch, as you set it against another color, the same blue circle will change its appearance. Type `background rgb(109, 147, 248)`",
+            "solution": "background rgb(109, 147, 248)"
+        }
+    ],
+    "completion_text": "Amazing! See how adding a different background color completely changes the feeling of the blue in the circle? It isn’t as overpowering as it first appeared. Ozwald Boateng uses tricks like this to create harmony and dissonance with his use of color. See if you can change the colors of the background and circle to bring out different emotions.",
+    "cover": "ozwaldboateng/color.png"
+}

@@ -1,0 +1,55 @@
+{
+    "id": "ancientcodes",
+    "title": "Ancient Codes",
+    "description": "Learn how to take simple shapes and compose them into a repeatable pattern",
+    "code": "houndstooth = ->\n    stroke 0\n    rectangle 20, 10\n    rectangle -10, 20\n    rectangle 10, -20\n    rectangle -20, -10\n\n",
+    "startAt": 8,
+    "steps": [
+        {
+            "hint": "",
+            "solution": "houndstooth = ->"
+        },
+        {
+            "hint": "",
+            "solution": "    stroke 0"
+        },
+        {
+            "hint": "",
+            "solution": "    rectangle 20, 10"
+        },
+        {
+            "hint": "",
+            "solution": "    rectangle -10, 20"
+        },
+        {
+            "hint": "",
+            "solution": "    rectangle 10, -20"
+        },
+        {
+            "hint": "",
+            "solution": "    rectangle -20, -10"
+        },
+        {
+            "hint": "In this challenge we’re going to take our houndstooth shape and turn it into a more complex pattern. We’ve put your houndstooth code into a reusable function, which will save us the trouble of writing all those commands hundreds of times. We’ll put them in a pattern with a purple background. Type `background rgb(110, 60, 158)`",
+            "solution": "background rgb(110, 60, 158)"
+        },
+        {
+            "hint": "We will use a loop to travel across the canvas with `for x in [0 .. 500] by 40`",
+            "solution": "for x in [0 .. 500] by 40"
+        },
+        {
+            "hint": "Next let’s use another loop to travel down the canvas. Type `for y in [20 .. 500] by 40`.",
+            "solution": "    for y in [20 .. 500] by 40"
+        },
+        {
+            "hint": "Let’s move into position with `moveTo x, y`",
+            "solution": "        moveTo x, y"
+        },
+        {
+            "hint": "And now we use the special word we created above with your code by typing `houndstooth()`",
+            "solution": "        houndstooth()"
+        }
+    ],
+    "completion_text": "Well done! The houndstooth is a popular pattern that gets its distinctive looks from the loom it is woven on. Looms have been used for over eight thousand years, and the intricate designs produced by them were created with some of the earliest coding languages. In fact the digital information encoded in punch cards were first used by 19th century looms before computers borrowed them.",
+    "cover": "ozwaldboateng/ancientcodes.png"
+}
