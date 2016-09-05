@@ -1,7 +1,7 @@
 .modal-overlay(ng-if='open'): .modal-inner.export-menu
 
     button.close(ng-click='close()') &times;
-    h2.center {{ action === 'share' ? 'save to gallery' : 'save drawing' }}
+    h2.center {{ action === 'share' ? '${{ directive.save_to_gallery }}$' : '${{ directive.save_drawing }}$' }}
 
     .row
 
@@ -12,17 +12,17 @@
                 img.created-image(ng-src='{{ imageURL }}')
 
             .col-6
-                input.filename(ng-model='meta.title', placeholder='Title', type='text', required)
-                textarea.description(ng-model='meta.description', placeholder='Description')
+                input.filename(ng-model='meta.title', placeholder='${{ directive.title }}$', type='text', required)
+                textarea.description(ng-model='meta.description', placeholder='${{ directive.description }}$')
 
                 .buttons.center
                     button.button-success(type='submit', ng-disabled='exportForm.$invalid', ng-class='{ "disabled" : exportForm.$invalid }', ng-if='!loading')
                         i(ng-class='"icon-" + action')
-                        |  Save
+                        | ${{ directive.save }}$
 
-                    button.button-success.skip(ng-if='optional && !loading', ng-click='skipSharing()') Skip
+                    button.button-success.skip(ng-if='optional && !loading', ng-click='skipSharing()') ${{ directive.skip }}$
                     
                     .spinner(ng-if='loading')
 
                 if offline
-                  .center: button.export-wallpaper(style='margin-top: 10px', ng-click='exportWallpaper()', ng-disabled='exportForm.$invalid', ng-class='{ "disabled" : exportForm.$invalid }') Save Wallpaper
+                  .center: button.export-wallpaper(style='margin-top: 10px', ng-click='exportWallpaper()', ng-disabled='exportForm.$invalid', ng-class='{ "disabled" : exportForm.$invalid }') ${{ directive.save_wallpaper }}$

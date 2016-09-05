@@ -30,17 +30,8 @@ html(lang='en',  xmlns:ng="http://angularjs.org")
         script(src='/js/vendor/console-polyfill.js', type='text/javascript')
         .loading-overlay(ng-cloak): .spinner
 
-        include partial/header
         ng-view
         include partial/splash
-
-        if !offline
-            .kano-feedback-container(ng-click='isFeedbackSplashOpen = true', ng-init='feedbackLoaded()') 
-                span Feedback
-                .kano-feedback
-            include partial/feedback
-            include partial/auth-modal
-        
 
         //- Vendor
         script(src='/js/vendor/angular.min.js', type='text/javascript')

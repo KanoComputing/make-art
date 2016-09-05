@@ -1,0 +1,143 @@
+{
+    "id": "backpack",
+    "title": "Pack your things",
+    "short_title": "Backpack",
+    "icon_class": "challenge_backpack",
+    "description": "Dick Kelty is the inventor of the aluminium frame backpack. Kelty got the idea for his backpack in 1951 when he and a friend were hiking in the Sierra Nevada. Working in his garage, and with $500 borrowed against his house, Kelty and his wife went into production; he cut and welded the aluminium frames, while she stitched the nylon. They sold the finished backpacks for $24 apiece.",
+    "cover": "summercamp/day_8.png",
+    "completion_text": "I have a big challenge for you: try drawing your character behind that backpack! Head, arms, legs… ",
+    "difficulty": 1,
+    "startAt": 0,
+    "summerCamp": true,
+    "rewards": null,
+    "steps": [
+        {
+            "hint": "It's a beautiful day to go for a walk in the forest - **type** `background blue`",
+            "solution": "background blue"
+        },
+        {
+            "hint": "Firstly, set the `stroke` to `0`, to avoid drawing the outlines of the shapes",
+            "solution": "stroke 0"
+        },
+        {
+            "hint": "Move the cursor to place the floor - in a new line **type** `moveTo 0, 250`",
+            "solution": "moveTo 0, 250"
+        },
+        {
+            "hint": "Set the `color` of the grass to `green`",
+            "solution": "color green"
+        },
+        {
+            "hint": "Draw the floor with a rectangle - **type** `rectangle 500, 250`",
+            "solution": "rectangle 500, 250"
+        },
+        {
+            "hint": "This looks like a nice place for a tree - **type** `moveTo 220`",
+            "solution": "moveTo 220"
+        },
+        {
+            "hint": "Set the `color` of the trunk to `lightbrown`",
+            "solution": "color lightbrown"
+        },
+        {
+            "hint": "Draw the trunk with a `rectangle` of size `50` by `400`",
+            "solution": "rectangle 50, 400"
+        },
+        {
+            "hint": "Beautiful! Now it just needs some leaves - **type** `move 30, -120` to place them",
+            "solution": "move 30, -120"
+        },
+        {
+            "hint": "Set the `color` of the leaves to `darkgreen`",
+            "solution": "color darkgreen"
+        },
+        {
+            "hint": "Draw a `circle` to represent the leaves with size `200`",
+            "solution": "circle 200"
+        },
+        {
+            "hint": "Looking great! Let's move the cursor to place our backpack - **type** `moveTo 150, 200`",
+            "solution": "moveTo 150, 200"
+        },
+        {
+            "hint": "Let's choose `color` `brown` for our backpack",
+            "solution": "color brown"
+        },
+        {
+            "hint": "Draw the main part of the rucksack with a square - **type** `square 200`",
+            "solution": "square 200"
+        },
+        {
+            "hint": "Now move the cursor to bottom part of our backpack - **type** `moveTo 250, 400`",
+            "solution": "moveTo 250, 400"
+        },
+        {
+            "hint": "Draw the bottom using an ellipse - **type** `ellipse 100, 30`",
+            "solution": "ellipse 100, 30"
+        },
+        {
+            "hint": "We need to store the sleeping bag at the top - **type** `moveTo 250, 200`",
+            "solution": "moveTo 250, 200"
+        },
+        {
+            "hint": "Set the `color` of the sleeping bag to `darkred`",
+            "solution": "color darkred"
+        },
+        {
+            "hint": "Ready to draw the sleeping bag? Use an ellipse - **type** `ellipse 115, 40`",
+            "solution": "ellipse 115, 40"
+        },
+        {
+            "hint": "We need something to secure your sleeping bag to your backpack - **type** `moveTo 200, 160`",
+            "solution": "moveTo 200, 160"
+        },
+        {
+            "hint": "The `orangered` seems like a nice `color` for the holders",
+            "solution": "color orangered"
+        },
+        {
+            "hint": "Draw the left one first - **type** `rectangle 15, 90`",
+            "solution": "rectangle 15, 90"
+        },
+        {
+            "hint": "Position the cursor to the right to draw the next holder - **type** `moveTo 290, 160`",
+            "solution": "moveTo 290, 160"
+        },
+        {
+            "hint": "Use a `rectangle` again for the right holder, same as the previous one",
+            "solution": "rectangle 15, 90"
+        },
+        {
+            "hint": "Excellent! We need more storage space. Move the cursor to the middle - **type** `moveTo 205, 320`",
+            "solution": "moveTo 205, 320"
+        },
+        {
+            "hint": "Use a `rectangle` for the outside pocket, `90` by `60` will suffice",
+            "solution": "rectangle 90, 60"
+        },
+        {
+            "hint": "That pocket needs to be closed so bugs can't get in - **type** `moveTo 250, 320`",
+            "solution": "moveTo 250, 320"
+        },
+        {
+            "hint": "Set the `color` to `lightbrown`",
+            "solution": "color lightbrown"
+        },
+        {
+            "hint": "An `ellipse` of size `48` by `7` will help here",
+            "solution": "ellipse 48, 7"
+        },
+        {
+            "hint": "Looking great! Let’s place a button on that pocket - **type** `moveTo 250, 330`",
+            "solution": "moveTo 250, 330"
+        },
+        {
+            "hint": "Set the `color` to `brown`",
+            "solution": "color brown"
+        },
+        {
+            "hint": "Draw a `circle` button of size `10`",
+            "solution": "circle 10"
+        }
+    ]
+}
