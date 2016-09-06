@@ -13,7 +13,7 @@
             "solution": "move -50, -50"
         },
         {
-            "hint": "To loop down the canvas, type `for i in [0 ... 9]`",
+            "hint": "To loop down the canvas, type `for i in [0 ... 10]`",
             "solution": "for i in [0 ... 10]"
         },
         {
