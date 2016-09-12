@@ -1,0 +1,55 @@
+{
+    "id": "stare",
+    "title": "Mirada en la oscuridad",
+    "description": "Dibuja ojos fantasmales en la oscuridad",
+    "startAt": 2,
+    "steps": [
+        {
+            "hint": "Configura el color del fondo a negro",
+            "solution": "background black"
+        },
+        {
+            "hint": "Muévete a la izquierda 80 **escribe** `move -80`",
+            "solution": "move -80",
+            "validate": "move -80"
+        },
+        {
+            "hint": "Configura el color de dibujo a blanco",
+            "solution": "color white"
+        },
+        {
+            "hint": "Dibuja un elipse, es como un círculo estirado - **escribe** `ellipse 60, 40`",
+            "solution": "ellipse 60, 40"
+        },
+        {
+            "hint": "Configura el color de dibujo a negro - **escribe** `color black`",
+            "solution": "color black"
+        },
+        {
+            "hint": "Dibuja un círculo de 10 de tamaño - **escribe** `circle 10`",
+            "solution": "circle 10"
+        },
+        {
+            "hint": "Muévete 160 a la derecha - **escribe** `move 160`",
+            "solution": "move 160"
+        },
+        {
+            "hint": "Configura el color de dibujo a blanco otra vez",
+            "solution": "color white"
+        },
+        {
+            "hint": "Ahora dibuja otro elipse de 60 de ancho y 40 de alto -  **escribe** `ellipse 60, 40`",
+            "solution": "ellipse 60, 40"
+        },
+        {
+            "hint": "Configura el color de dibujo a negro",
+            "solution": "color black"
+        },
+        {
+            "hint": "Termínalo dibujando un círculo de un tamaño de 10",
+            "solution": "circle 10"
+        }
+    ],
+    "completion_text": "¡Eres un mago! ¡La próxima vez que necesite ojos fantasmales ya sé a quién llamar!",
+    "cover": "stare.png"
+}
