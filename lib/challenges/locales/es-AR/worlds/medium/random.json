@@ -1,0 +1,46 @@
+{
+    "id": "random",
+    "title": "¡Aleatorio!",
+    "description": "¿No estás seguro de dónde ubicar algo? - ¡hay una función para eso!",
+    "startAt": 2,
+    "steps": [
+        {
+            "hint": "Movamos el cursor a cualquier sitio - **escribe** `moveTo (random 1, 500), (random 1, 500)`",
+            "solution": "moveTo (random 1, 500), (random 1, 500)"
+        },
+        {
+            "hint": "Configura el color de dibujo a rojo - **escribe** `color red`",
+            "solution": "color red"
+        },
+        {
+            "hint": "Ahora dibujemos un círculo en algún sitio aleatorio - **type** `circle 200`",
+            "solution": "circle 200"
+        },
+        {
+            "hint": "Configura el color de dibujo a verde",
+            "solution": "color green"
+        },
+        {
+            "hint": "Ahora dibuja un círculo de 150 de tamaño",
+            "solution": "circle 150"
+        },
+        {
+            "hint": "Configura el color de dibujo a amarillo",
+            "solution": "color yellow"
+        },
+        {
+            "hint": "Ahora dibuja un círculo de 100 de tamaño",
+            "solution": "circle 100"
+        },
+        {
+            "hint": "Configura el color de dibujo a azul",
+            "solution": "color blue"
+        },
+        {
+            "hint": "Termínalo dibujando un círculo de 50 de tamaño",
+            "solution": "circle 50"
+        }
+    ],
+    "completion_text": "La función aleatoria nos asigna un número para ubicar objetos en cualquier punto de la hoja.",
+    "cover": "random.png"
+}
