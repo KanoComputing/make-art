@@ -100,20 +100,21 @@ def main(args):
     # Get all strings
     with open(DOCS_FILENAME) as json_data_file:
         json_data = json.load(json_data_file)
-        doc_strings = extract_strings(json_data)
 
-        for string, location in doc_strings:
-            entry = polib.POEntry(
-                msgid=string,
-                msgstr=u'',
-                occurrences=[(location, 0)]
-            )
-            try:
-                new_po_file.append(entry)
-            except ValueError:
-                # string already exists
-                existing_entry = new_po_file.find(string)
-                existing_entry.occurrences.append((location, 0))
+    doc_strings = extract_strings(json_data)
+
+    for string, location in doc_strings:
+        entry = polib.POEntry(
+            msgid=string,
+            msgstr=u'',
+            occurrences=[(location, 0)]
+        )
+        try:
+            new_po_file.append(entry)
+        except ValueError:
+            # string already exists
+            existing_entry = new_po_file.find(string)
+            existing_entry.occurrences.append((location, 0))
 
     # write the po file
     new_po_file.save(POT_FILENAME)

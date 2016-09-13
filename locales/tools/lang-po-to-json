@@ -37,6 +37,7 @@ Examples:
 """
 
 
+import io
 import os
 import sys
 import json
@@ -96,9 +97,9 @@ def main(args):
             translated_data = translate_data(po_file, json_data)
 
             # save translated file
-            with open(os.path.join(NEW_LOCALE_DIR, f), 'w') as locale_file:
-                json.dump(translated_data, locale_file, indent=4)
-
+            with io.open(os.path.join(NEW_LOCALE_DIR, f), 'w', encoding='utf8') as locale_file:
+                data = json.dumps(translated_data, ensure_ascii=False, indent=4)
+                locale_file.write(unicode(data))
 
 
 if __name__ == '__main__':
