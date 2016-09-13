@@ -1,0 +1,111 @@
+#!/usr/bin/env python
+#
+# lang-extract-strings
+#
+# Extract all translatable strings to a pot file
+#
+# Copyright (C) 2016 Kano Computing Ltd.
+# License: http://www.gnu.org/licenses/gpl-2.0.txt GNU GPLv2
+#
+# Tool to convert res/locales/en/lang.lua file to its corresponding lang.po file
+# in a given locale and language. The lang.po file will be empty and ready to be
+# given to translators.
+#
+# Dependencies:
+#
+#   1. python module: polib
+#   pip install polib
+#
+#   2. python module: docopt
+#   pip install docopt
+
+
+"""
+Usage:
+  lang-extract-strings
+
+Options:
+  -h, --help       show this message
+"""
+
+
+import os
+import sys
+import json
+import datetime
+
+import polib
+import docopt
+
+CURRENT_DIR = os.path.dirname(os.path.realpath(__file__))
+
+# constants
+HEADER = '''Messages for make-art.
+Copyright (C) {} Kano Computing Ltd.
+This file is distributed under the same license as the make-art package.
+ <dev@kano.me>, {}
+'''
+LOCALES_DIR = os.path.join(CURRENT_DIR, '../')
+POT_FILENAME = os.path.join(LOCALES_DIR, 'messages.pot')
+
+
+def create_entries(data):
+    entries = []
+    for key in data:
+        entry = polib.POEntry(
+            msgid=data[key],
+            msgstr=u'',
+            occurrences=[(key, 0)]
+        )
+        entries.append(entry)
+
+    return entries
+
+
+def main(args):
+    date = datetime.date.today()
+
+    EN_LOCALE_DIR = os.path.join(LOCALES_DIR, 'en')
+
+    # convert the json to a pot file
+    new_po_file = polib.POFile()
+    new_po_file.metadata = {
+        'Project-Id-Version': '1.0',
+        'Report-Msgid-Bugs-To': 'dev@kano.me',
+        'POT-Creation-Date': '{} 14:00+0100'.format(date),
+        'PO-Revision-Date': '{} 14:00+0100'.format(date),
+        'Last-Translator': '<dev@kano.me>',
+        'Language-Team': '<dev@kano.me>',
+        'Language': '',
+        'MIME-Version': '1.0',
+        'Content-Type': 'text/plain; charset=utf-8',
+        'Content-Transfer-Encoding': '8bit',
+    }
+    new_po_file.header = HEADER.format(date.year, date.year)
+
+    # Get all strings
+    all_strings = {}
+    for f in os.listdir(EN_LOCALE_DIR):
+        if os.path.isfile(os.path.join(EN_LOCALE_DIR, f)) and f.endswith('.json'):
+            with open(os.path.join(EN_LOCALE_DIR, f)) as json_data_file:
+                json_data = json.load(json_data_file)
+                all_strings.update(json_data)
+
+    for entry in create_entries(all_strings):
+        new_po_file.append(entry)
+
+    # load the po file
+    if os.path.exists(POT_FILENAME):
+        old_po_file = polib.pofile(POT_FILENAME)
+
+        # merge differences
+        old_po_file.merge(new_po_file)
+        new_po_file = old_po_file
+
+    # write the po file
+    new_po_file.save(POT_FILENAME)
+
+
+if __name__ == '__main__':
+    args = docopt.docopt(__doc__)
+    sys.exit(main(args))
