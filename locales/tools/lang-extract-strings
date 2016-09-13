@@ -49,13 +49,19 @@ LOCALES_DIR = os.path.join(CURRENT_DIR, '../')
 POT_FILENAME = os.path.join(LOCALES_DIR, 'messages.pot')
 
 
-def create_entries(data):
+def create_entries(filename, data):
     entries = []
     for key in data:
         entry = polib.POEntry(
             msgid=data[key],
             msgstr=u'',
-            occurrences=[(key, 0)]
+            occurrences=[(
+                '{}.{}'.format(
+                    os.path.splitext(filename)[0],
+                    key,
+                ),
+                0
+            )]
         )
         entries.append(entry)
 
@@ -68,7 +74,7 @@ def main(args):
     EN_LOCALE_DIR = os.path.join(LOCALES_DIR, 'en')
 
     # convert the json to a pot file
-    new_po_file = polib.POFile()
+    new_po_file = polib.POFile(check_for_duplicates=True)
     new_po_file.metadata = {
         'Project-Id-Version': '1.0',
         'Report-Msgid-Bugs-To': 'dev@kano.me',
@@ -89,18 +95,13 @@ def main(args):
         if os.path.isfile(os.path.join(EN_LOCALE_DIR, f)) and f.endswith('.json'):
             with open(os.path.join(EN_LOCALE_DIR, f)) as json_data_file:
                 json_data = json.load(json_data_file)
-                all_strings.update(json_data)
 
-    for entry in create_entries(all_strings):
-        new_po_file.append(entry)
-
-    # load the po file
-    if os.path.exists(POT_FILENAME):
-        old_po_file = polib.pofile(POT_FILENAME)
-
-        # merge differences
-        old_po_file.merge(new_po_file)
-        new_po_file = old_po_file
+                for entry in create_entries(f, json_data):
+                    try:
+                        new_po_file.append(entry)
+                    except ValueError:
+                        existing_entry = new_po_file.find(entry.msgid)
+                        existing_entry.occurrences.append(entry.occurrences[0])
 
     # write the po file
     new_po_file.save(POT_FILENAME)
