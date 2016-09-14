@@ -1,5 +1,5 @@
 {
-    "es-ar": [
+    "es-AR": [
         {
             "commands": [
                 {
@@ -555,12 +555,12 @@
                         [
                             "radius", 
                             "number", 
-                            "Tamaño del círculo", 
+                            "The circle size", 
                             true
                         ]
                     ], 
                     "call": "circle", 
-                    "description": "Dibuja un círculo", 
+                    "description": "Draw a circle", 
                     "defaults": [
                         100
                     ]
@@ -571,18 +571,18 @@
                         [
                             "radius-x", 
                             "number", 
-                            "Ancho del elipse", 
+                            "The ellipse width", 
                             true
                         ], 
                         [
                             "radius-y", 
                             "number", 
-                            "Altura del elipse", 
+                            "The ellipse height", 
                             true
                         ]
                     ], 
                     "call": "ellipse", 
-                    "description": "Dibuja un elipse", 
+                    "description": "Draw an ellipse", 
                     "defaults": [
                         50, 
                         100
@@ -594,12 +594,12 @@
                         [
                             "size", 
                             "number", 
-                            "Tamaño del cuadrado", 
+                            "The square size", 
                             true
                         ]
                     ], 
                     "call": "square", 
-                    "description": "Dibuja un cuadrado", 
+                    "description": "Draw a square", 
                     "defaults": [
                         200
                     ]
@@ -610,18 +610,18 @@
                         [
                             "width", 
                             "number", 
-                            "Ancho del rectángulo", 
+                            "The rectangle width", 
                             true
                         ], 
                         [
                             "height", 
                             "number", 
-                            "Altura del rectángulo", 
+                            "The rectangle height", 
                             true
                         ]
                     ], 
                     "call": "rectangle", 
-                    "description": "Dibuja un rectángulo", 
+                    "description": "Draw a rectangle", 
                     "defaults": [
                         100, 
                         200
@@ -633,30 +633,30 @@
                         [
                             "radius", 
                             "number", 
-                            "Tamaño", 
+                            "The size", 
                             true
                         ], 
                         [
                             "start", 
                             "number", 
-                            "El punto de inicio (entre 0 y 2)", 
+                            "The start point (between 0 to 2)", 
                             true
                         ], 
                         [
                             "end", 
                             "number", 
-                            "El punto de fin (entre 0 y 2)", 
+                            "The end point (between 0 to 2)", 
                             true
                         ], 
                         [
                             "close", 
                             "bool", 
-                            "Cierra la figura", 
+                            "Close the shape", 
                             false
                         ]
                     ], 
                     "call": "arc", 
-                    "description": "Dibuja parte de un círculo", 
+                    "description": "Draw part of a circle", 
                     "defaults": [
                         100, 
                         1, 
@@ -670,30 +670,30 @@
                         [
                             "x1", 
                             "number", 
-                            "Indica la posición X", 
+                            "Point X position", 
                             true
                         ], 
                         [
                             "y1", 
                             "number", 
-                            "Indica la posición Y", 
+                            "Point Y position", 
                             true
                         ], 
                         [
                             "...", 
                             "", 
-                            "Más puntos de posición del polígono", 
+                            "More polygon points positions", 
                             true
                         ], 
                         [
                             "close", 
                             "bool", 
-                            "Cierra la figura en el medio", 
+                            "Close the path in the middle", 
                             false
                         ]
                     ], 
                     "call": "polygon", 
-                    "description": "Dibuja una figura de muchos lados", 
+                    "description": "Draw a many sided shape", 
                     "defaults": [
                         0, 
                         0, 
@@ -704,8 +704,8 @@
                     ]
                 }
             ], 
-            "icon": "shapes", 
-            "label": "Figuras"
+            "label": "Shapes", 
+            "icon": "shapes"
         }, 
         {
             "commands": [
@@ -715,18 +715,18 @@
                         [
                             "x", 
                             "number", 
-                            "Distancia horizontal", 
+                            "Horizontal distance", 
                             true
                         ], 
                         [
                             "y", 
                             "number", 
-                            "Distancia vertical", 
+                            "Vertical distance", 
                             false
                         ]
                     ], 
                     "call": "line", 
-                    "description": "Dibuja una línea de un determinado tamaño", 
+                    "description": "Draw a line of a certain size", 
                     "defaults": [
                         100, 
                         50
@@ -738,26 +738,26 @@
                         [
                             "x", 
                             "number", 
-                            "El punto de destino horizontal", 
+                            "The horizontal destination", 
                             true
                         ], 
                         [
                             "y", 
                             "number", 
-                            "El punto de destino vertical", 
+                            "The vertical destination", 
                             true
                         ]
                     ], 
                     "call": "lineTo", 
-                    "description": "Dibuja una línea hasta un determinado punto", 
+                    "description": "Draw a line to a certain point", 
                     "defaults": [
                         0, 
                         0
                     ]
                 }
             ], 
-            "icon": "lines", 
-            "label": "Líneas"
+            "label": "Lines", 
+            "icon": "lines"
         }, 
         {
             "commands": [
@@ -767,18 +767,18 @@
                         [
                             "x", 
                             "number", 
-                            "Distancia horizontal", 
+                            "Horizontal distance", 
                             true
                         ], 
                         [
                             "y", 
                             "number", 
-                            "Distancia vertical", 
+                            "Vertical distance", 
                             false
                         ]
                     ], 
                     "call": "move", 
-                    "description": "Mueve el cursor una determinada distancia", 
+                    "description": "Move the cursor a certain distance away", 
                     "defaults": [
                         100, 
                         50
@@ -790,26 +790,26 @@
                         [
                             "x", 
                             "number", 
-                            "El punto de destino horizontal", 
+                            "The horizontal destination", 
                             true
                         ], 
                         [
                             "y", 
                             "number", 
-                            "El punto de destino vertical", 
+                            "The vertical destination", 
                             true
                         ]
                     ], 
                     "call": "moveTo", 
-                    "description": "Mueve el cursor a una determinada posición", 
+                    "description": "Move the cursor to a particular position", 
                     "defaults": [
                         "center", 
                         "center"
                     ]
                 }
             ], 
-            "icon": "position", 
-            "label": "Posición"
+            "label": "Position", 
+            "icon": "position"
         }, 
         {
             "commands": [
@@ -819,12 +819,12 @@
                         [
                             "message", 
                             "string", 
-                            "El mensaje a escribir", 
+                            "The message to write", 
                             true
                         ]
                     ], 
                     "call": "text", 
-                    "description": "Escribe texto", 
+                    "description": "Write text", 
                     "defaults": [
                         "Say something!"
                     ]
@@ -835,18 +835,18 @@
                         [
                             "font", 
                             "string", 
-                            "El nombre de la fuente", 
+                            "The font family name", 
                             false
                         ], 
                         [
                             "size", 
                             "number", 
-                            "El tamaño del texto en píxeles", 
+                            "The text size in pixels", 
                             false
                         ]
                     ], 
                     "call": "font", 
-                    "description": "Configura el tamaño y/o la fuente", 
+                    "description": "Set size and/or font", 
                     "defaults": [
                         "Bariol", 
                         30
@@ -858,12 +858,12 @@
                         [
                             "state", 
                             "bool", 
-                            "Estado de la negrita (Verdadero es el predeterminado)", 
+                            "Bold state (True by default)", 
                             false
                         ]
                     ], 
                     "call": "bold", 
-                    "description": "Activa la negrita (verdadero) o desactívala (falso)", 
+                    "description": "Sets bold text on (true) or off (false)", 
                     "defaults": [
                         true
                     ]
@@ -874,29 +874,29 @@
                         [
                             "state", 
                             "bool", 
-                            "Estado de la cursiva (Verdadero es el predeterminado)", 
+                            "Italic state (True by default)", 
                             false
                         ]
                     ], 
                     "call": "italic", 
-                    "description": "Activa la cursiva (verdadero) o desactívala (falso)", 
+                    "description": "Sets italic text on (true) or off (false)", 
                     "defaults": [
                         true
                     ]
                 }
             ], 
-            "icon": "text", 
-            "label": "Texto"
+            "label": "Text", 
+            "icon": "text"
         }, 
         {
             "commands": [
                 {
-                    "description": "Repetir código", 
+                    "description": "Repeat code", 
                     "args": [
                         [
                             "i in [x..y]", 
                             "number", 
-                            "Punto de inicio y fin de la variable i", 
+                            "The start and end point for the variable i", 
                             true
                         ]
                     ], 
@@ -906,24 +906,24 @@
                     "example": "for i in [1..5]\n    circle i"
                 }, 
                 {
-                    "description": "Obten un número aleatorio dentro de un rango.", 
+                    "description": "Get a random number in a range.", 
                     "args": [
                         [
                             "min", 
                             "number", 
-                            "El valor mínimo", 
+                            "The minimum value", 
                             true
                         ], 
                         [
                             "max", 
                             "number", 
-                            "El valor máximo", 
+                            "The maximum value", 
                             true
                         ], 
                         [
                             "float", 
                             "bool", 
-                            "Configura a verdadero para recibir valores decimales", 
+                            "Set to true to return decimal values", 
                             false
                         ]
                     ], 
@@ -936,8 +936,8 @@
                     "example": "random 5, 10"
                 }
             ], 
-            "icon": "general", 
-            "label": "General"
+            "label": "General", 
+            "icon": "general"
         }, 
         {
             "commands": [
@@ -947,12 +947,12 @@
                         [
                             "color", 
                             "string", 
-                            "El color del fondo a configurar", 
+                            "The background color to set", 
                             true
                         ]
                     ], 
                     "call": "background", 
-                    "description": "Configura el color del fondo", 
+                    "description": "Set the background color", 
                     "defaults": [
                         "blue"
                     ]
@@ -963,12 +963,12 @@
                         [
                             "color", 
                             "string", 
-                            "El color del objeto a configurar", 
+                            "The object color to set", 
                             true
                         ]
                     ], 
                     "call": "color", 
-                    "description": "Cambia el color en uso", 
+                    "description": "Change the color in use", 
                     "defaults": [
                         "red"
                     ]
@@ -979,18 +979,18 @@
                         [
                             "color", 
                             "string", 
-                            "El color a usar - Ej. 'red', 'blue'..", 
+                            "A string with the color to use - E.g. 'red', 'blue'..", 
                             false
                         ], 
                         [
                             "size", 
                             "number", 
-                            "(número) El ancho a usar", 
+                            "(number) The width to use", 
                             false
                         ]
                     ], 
                     "call": "stroke", 
-                    "description": "Cambia el color y el ancho del trazo (borde)", 
+                    "description": "Change the width and color of the stroke (border)", 
                     "defaults": [
                         10, 
                         "purple"
@@ -1008,12 +1008,12 @@
                         [
                             "amount", 
                             "number", 
-                            "monto del brillo a configurar (-100 a 100)", 
+                            "amount of brightness to set (-100 to 100)", 
                             false
                         ]
                     ], 
                     "call": "setBrightness", 
-                    "description": "Configura el brillo del color", 
+                    "description": "Set a colour's brightness", 
                     "defaults": [
                         "yellow", 
                         30
@@ -1031,12 +1031,12 @@
                         [
                             "amount", 
                             "number", 
-                            "monto de saturación a configurar (-100 a 100)", 
+                            "amount of saturation to set (-100 to 100)", 
                             false
                         ]
                     ], 
                     "call": "setSaturation", 
-                    "description": "Configura la saturación del color", 
+                    "description": "Set a colour's saturation", 
                     "defaults": [
                         "grey", 
                         30
@@ -1048,18 +1048,18 @@
                         [
                             "color", 
                             "string", 
-                            "Color a cambiar", 
+                            "Color to rotate", 
                             true
                         ], 
                         [
                             "amount", 
                             "number", 
-                            "tono a configurar (-360 - 360)", 
+                            "angle to rotate (-360 - 360)", 
                             true
                         ]
                     ], 
                     "call": "rotate", 
-                    "description": "Cambia el tono de un color en base a un determinado valor", 
+                    "description": "Rotate a color's hue angle by given amount", 
                     "defaults": [
                         "red", 
                         100
@@ -1071,26 +1071,26 @@
                         [
                             "color", 
                             "string", 
-                            "Color a saturar", 
+                            "Color to saturate", 
                             true
                         ], 
                         [
                             "amount", 
                             "number", 
-                            "monto de opacidad (-100 a 100)", 
+                            "amount of opacity to subtract (-100 to 100)", 
                             true
                         ]
                     ], 
                     "call": "setTransparency", 
-                    "description": "Configura cómo se ve a través de un color", 
+                    "description": "Set how see through a color is", 
                     "defaults": [
                         "black", 
                         50
                     ]
                 }
             ], 
-            "icon": "colors", 
-            "label": "Colores"
+            "label": "Colors", 
+            "icon": "colors"
         }
     ], 
     "ja": [
@@ -1251,8 +1251,8 @@
                     ]
                 }
             ], 
-            "icon": "shapes", 
-            "label": "形"
+            "label": "形", 
+            "icon": "shapes"
         }, 
         {
             "commands": [
@@ -1303,8 +1303,8 @@
                     ]
                 }
             ], 
-            "icon": "lines", 
-            "label": "線"
+            "label": "線", 
+            "icon": "lines"
         }, 
         {
             "commands": [
@@ -1355,8 +1355,8 @@
                     ]
                 }
             ], 
-            "icon": "position", 
-            "label": "位置"
+            "label": "位置", 
+            "icon": "position"
         }, 
         {
             "commands": [
@@ -1432,8 +1432,8 @@
                     ]
                 }
             ], 
-            "icon": "text", 
-            "label": "テキスト"
+            "label": "テキスト", 
+            "icon": "text"
         }, 
         {
             "commands": [
@@ -1483,8 +1483,8 @@
                     "example": "random 5, 10"
                 }
             ], 
-            "icon": "general", 
-            "label": "一般"
+            "label": "一般", 
+            "icon": "general"
         }, 
         {
             "commands": [
@@ -1636,8 +1636,8 @@
                     ]
                 }
             ], 
-            "icon": "colors", 
-            "label": "色"
+            "label": "色", 
+            "icon": "colors"
         }
     ]
 }
