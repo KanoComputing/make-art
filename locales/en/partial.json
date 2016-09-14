@@ -28,5 +28,7 @@
     "share_on_twitter": "Share on Twitter",
     "email_address": "Email address",
     "share_with_friends": "Share with friends:",
-    "skip_sharing": "Skip sharing"
+    "skip_sharing": "Skip sharing",
+    "start": "Start",
+    "draw_with_code": "Draw with code"
 }
