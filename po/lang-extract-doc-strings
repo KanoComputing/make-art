@@ -45,8 +45,8 @@ Copyright (C) {} Kano Computing Ltd.
 This file is distributed under the same license as the make-art package.
  <dev@kano.me>, {}
 '''
-LOCALES_DIR = os.path.join(CURRENT_DIR, '../')
-DOCS_FILENAME = os.path.join(CURRENT_DIR, '../../content/docs.json')
+LOCALES_DIR = os.path.join(CURRENT_DIR, '../locales')
+DOCS_FILENAME = os.path.join(CURRENT_DIR, '../content/docs.json')
 POT_FILENAME = os.path.join(LOCALES_DIR, 'messages-docs.pot')
 DEFAULT_LOCALE = 'en'
 

@@ -49,7 +49,7 @@ import docopt
 CURRENT_DIR = os.path.dirname(os.path.realpath(__file__))
 
 # constants
-LOCALES_DIR = os.path.join(CURRENT_DIR, '../')
+LOCALES_DIR = os.path.join(CURRENT_DIR, '../locales')
 DEFAULT_LOCALE = os.path.join(LOCALES_DIR, 'en')
 
 
@@ -58,7 +58,7 @@ def translate_data(po_file, data):
     # Find entry in po file
     for key in sorted(data):
         try:
-            entry = next(e for e in po_file if e.occurrences[0][0] == key)
+            entry = next(e for e in po_file if e.occurrences[0][0].split('.')[1] == key)
             if not entry.msgstr:
                 print('Warning: String "{}" has not been translated'.format(entry.msgid))
                 translated_data[key] = data[key]

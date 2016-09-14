@@ -49,8 +49,8 @@ import docopt
 CURRENT_DIR = os.path.dirname(os.path.realpath(__file__))
 
 # constants
-LOCALES_DIR = os.path.join(CURRENT_DIR, '../')
-DOCS_FILENAME = os.path.join(CURRENT_DIR, '../../content/docs.json')
+LOCALES_DIR = os.path.join(CURRENT_DIR, '../locales')
+DOCS_FILENAME = os.path.join(CURRENT_DIR, '../content/docs.json')
 POT_FILENAME = os.path.join(LOCALES_DIR, 'messages-docs.pot')
 DEFAULT_LOCALE = 'en'
 
@@ -62,6 +62,7 @@ def convert_locale_to_browser(locale):
 def get_translation(po_file, msgid):
     entry = po_file.find(msgid)
     if not entry:
+        print('Could not find translation for "{}"'.format(msgid))
         return msgid
     return entry.msgstr
 
@@ -91,7 +92,7 @@ def main(args):
     locale = args['<locale>']
     date = datetime.date.today()
 
-    LOCALE_PO_FILENAME = os.path.join(LOCALES_DIR, '{}.po'.format(locale))
+    LOCALE_PO_FILENAME = os.path.join(LOCALES_DIR, '{}-docs.po'.format(locale))
     # get po file
     if not os.path.exists(LOCALE_PO_FILENAME):
         print('Error: Cannot find po file for locale {}'.format(locale))
