@@ -42,6 +42,7 @@ import os
 import sys
 import json
 import datetime
+import copy
 
 import polib
 import docopt
@@ -56,13 +57,13 @@ DEFAULT_LOCALE = 'en'
 
 
 def convert_locale_to_browser(locale):
-    return locale.replace('_', '-').lower()
+    return locale.replace('_', '-')
 
 
 def get_translation(po_file, msgid):
     entry = po_file.find(msgid)
     if not entry:
-        print('Could not find translation for "{}"'.format(msgid))
+        print(u'Could not find translation for "{}"'.format(msgid))
         return msgid
     return entry.msgstr
 
@@ -107,7 +108,7 @@ def main(args):
     for entry in json_data[DEFAULT_LOCALE]:
         # translate each entry
         translated_entries.append(
-            translate_entry(po_file, entry)
+            translate_entry(po_file, copy.deepcopy(entry))
         )
 
     json_data[convert_locale_to_browser(locale)] = translated_entries
