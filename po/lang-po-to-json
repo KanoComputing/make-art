@@ -53,6 +53,10 @@ LOCALES_DIR = os.path.join(CURRENT_DIR, '../locales')
 DEFAULT_LOCALE = os.path.join(LOCALES_DIR, 'en')
 
 
+def convert_locale_to_browser(locale):
+    return locale.replace('_', '-')
+
+
 def translate_data(po_file, data):
     translated_data = {}
     # Find entry in po file
@@ -84,7 +88,7 @@ def main(args):
 
     po_file = polib.pofile(LOCALE_PO_FILENAME)
 
-    NEW_LOCALE_DIR = os.path.join(LOCALES_DIR, locale)
+    NEW_LOCALE_DIR = os.path.join(LOCALES_DIR, convert_locale_to_browser(locale))
 
     # create locale folder
     os.system('mkdir -p {}'.format(NEW_LOCALE_DIR))
