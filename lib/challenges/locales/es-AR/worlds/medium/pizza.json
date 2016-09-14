@@ -1,7 +1,7 @@
 {
     "id": "pizza",
     "title": "Pizza",
-    "description": ¡Programa una rica pizza!",
+    "description": "¡Programa una rica pizza!",
     "startAt": 2,
     "steps": [
         {
