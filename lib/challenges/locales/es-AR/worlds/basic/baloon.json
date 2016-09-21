@@ -1,0 +1,42 @@
+{
+    "id": "baloon",
+    "title": "Globo Azul",
+    "cover": "blue-baloon.png",
+    "description": "¡Dibuja un globo flotando en el aire usando polígonos!",
+    "startAt": 2,
+    "steps": [
+        {
+            "hint": "Configura el color de dibujo a azul - **escribe** `color blue`",
+            "solution": "color blue"
+        },
+        {
+            "hint": "Configura el trazo a 0, para evitar dibujar líneas",
+            "solution": "stroke 0"
+        },
+        {
+            "hint": "Dibuja un círculo de 100 de tamaño",
+            "solution": "circle 100"
+        },
+        {
+            "hint": "Muévete 100 hacia abajo - **escribe** `move 0, 100`",
+            "solution": "move 0, 100"
+        },
+        {
+            "hint": "Dibuja el nudo del globo - **escribe** `polygon 15, 15, -15, 15`",
+            "solution": "polygon 15, 15, -15, 15"
+        },
+        {
+            "hint": "Muévete un poco más hacia abajo - **escribe** `move 0, 15`",
+            "solution": "move 0, 15"
+        },
+        {
+            "hint": "Elige un trazo negro y fino - **escribe** `stroke black, 5`",
+            "solution": "stroke black, 5"
+        },
+        {
+            "hint": "Dibuja la línea del lazo del globo - **escribe** `line 0, 200`",
+            "solution": "line 0, 200"
+        }
+    ],
+    "completion_text": "¡Increíble globo! ¿Por qué no intentas cambiarle el color antes de continuar?"
+}

@@ -1,0 +1,26 @@
+{
+    "worlds": [
+        {
+            "id": "basic",
+            "name": "Basic",
+            "description": "This is a first set of challenges which will make you started with Make-Art",
+            "cover": "world_covers/basic",
+            "world_path": "worlds/basic",
+            "css_class": "basic-challenges",
+            "share_strategy": "optional",
+            "type": "normal"
+
+        },
+        {
+            "id": "medium",
+            "name": "Medium",
+            "description": "Medium challenges",
+            "cover": "world_covers/medium",
+            "world_path": "worlds/medium",
+            "css_class": "medium",
+            "dependency": ["basic"],
+            "share_strategy": "optional",
+            "type": "normal"
+        }
+    ]
+}
