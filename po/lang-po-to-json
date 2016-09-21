@@ -1,0 +1,111 @@
+#!/usr/bin/env python
+#
+# lang-po-to-json
+#
+# Convert po to json files
+#
+# Copyright (C) 2016 Kano Computing Ltd.
+# License: http://www.gnu.org/licenses/gpl-2.0.txt GNU GPLv2
+#
+# Tool to convert res/locales/en/lang.lua file to its corresponding lang.po file
+# in a given locale and language. The lang.po file will be empty and ready to be
+# given to translators.
+#
+# Dependencies:
+#
+#   1. python module: polib
+#   pip install polib
+#
+#   2. python module: docopt
+#   pip install docopt
+
+
+"""
+Usage:
+  lang-po-to-json <locale>
+
+
+Options:
+  -h, --help       show this message
+
+Values:
+  locale           the folder name under res/locales/
+
+Examples:
+  ./lang-po-to-json es_AR
+
+"""
+
+
+import io
+import os
+import sys
+import json
+import datetime
+
+import polib
+import docopt
+
+CURRENT_DIR = os.path.dirname(os.path.realpath(__file__))
+
+# constants
+LOCALES_DIR = os.path.join(CURRENT_DIR, '../locales')
+DEFAULT_LOCALE = os.path.join(LOCALES_DIR, 'en')
+
+
+def convert_locale_to_browser(locale):
+    return locale.replace('_', '-')
+
+
+def translate_data(po_file, data):
+    translated_data = {}
+    # Find entry in po file
+    for key in sorted(data):
+        try:
+            entry = next(e for e in po_file if e.occurrences[0][0].split('.')[1] == key)
+            if not entry.msgstr:
+                print('Warning: String "{}" has not been translated'.format(entry.msgid))
+                translated_data[key] = data[key]
+            else:
+                translated_data[key] = entry.msgstr
+        except StopIteration:
+            # Entry has not been translated
+            print('Warning: Key `{}` cannot be found in po file'.format(key))
+            translated_data[key] = data[key]
+
+    return translated_data
+
+
+def main(args):
+    locale = args['<locale>']
+    date = datetime.date.today()
+
+    LOCALE_PO_FILENAME = os.path.join(LOCALES_DIR, '{}.po'.format(locale))
+    # get po file
+    if not os.path.exists(LOCALE_PO_FILENAME):
+        print('Error: Cannot find po file for locale {}'.format(locale))
+        sys.exit(1)
+
+    po_file = polib.pofile(LOCALE_PO_FILENAME)
+
+    NEW_LOCALE_DIR = os.path.join(LOCALES_DIR, convert_locale_to_browser(locale))
+
+    # create locale folder
+    os.system('mkdir -p {}'.format(NEW_LOCALE_DIR))
+
+    for f in os.listdir(DEFAULT_LOCALE):
+        if os.path.isfile(os.path.join(DEFAULT_LOCALE, f)) and f.endswith('.json'):
+            with open(os.path.join(DEFAULT_LOCALE, f)) as json_data_file:
+                json_data = json.load(json_data_file)
+
+            translated_data = translate_data(po_file, json_data)
+
+            # save translated file
+            with io.open(os.path.join(NEW_LOCALE_DIR, f), 'w', encoding='utf8') as locale_file:
+                data = json.dumps(translated_data, ensure_ascii=False, indent=4)
+                locale_file.write(unicode(data))
+
+
+if __name__ == '__main__':
+    args = docopt.docopt(__doc__)
+    sys.exit(main(args))
