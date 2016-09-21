@@ -1,11 +1,11 @@
 {
     "id": "stickman",
-    "title": "Himbre de palo",
+    "title": "Hombre de palo",
     "description": "Dibuja un hombre de palo usando círculos y líneas",
     "startAt": 2,
     "steps": [
         {
-            "hint": "Configura el `trazo` `negro` y de un tamaño de `10`",
+            "hint": "Configura el `trazo` a `negro` y de un tamaño de `10`",
             "solution": "stroke black, 10"
         },
         {

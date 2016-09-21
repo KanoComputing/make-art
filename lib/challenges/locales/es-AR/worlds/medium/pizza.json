@@ -37,7 +37,7 @@
             "solution": "color darkred"
         },
         {
-            "hint": "Ahora múevete `moveTo 164, 290`",
+            "hint": "Ahora muévete `moveTo 164, 290`",
             "solution": "moveTo 164, 290"
         },
         {
@@ -45,6 +45,6 @@
             "solution": "circle 20"
         }
     ],
-    "completion_text": "¡Qué rico! Termínala agregando condimentos, ¡deja fluir tu imaginación antes de compartirla al mundo!",
+    "completion_text": "¡Qué rico! Termínala agregando condimentos ¡deja fluir tu imaginación antes de compartirla con el mundo!",
     "cover": "pizza.png"
 }

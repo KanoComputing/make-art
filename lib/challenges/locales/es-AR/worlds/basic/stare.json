@@ -18,7 +18,7 @@
             "solution": "color white"
         },
         {
-            "hint": "Dibuja un elipse, es como un círculo estirado - **escribe** `ellipse 60, 40`",
+            "hint": "Dibuja una elipse, es como un círculo estirado - **escribe** `ellipse 60, 40`",
             "solution": "ellipse 60, 40"
         },
         {
@@ -38,7 +38,7 @@
             "solution": "color white"
         },
         {
-            "hint": "Ahora dibuja otro elipse de 60 de ancho y 40 de alto -  **escribe** `ellipse 60, 40`",
+            "hint": "Ahora dibuja otra elipse de 60 de ancho y 40 de alto -  **escribe** `ellipse 60, 40`",
             "solution": "ellipse 60, 40"
         },
         {

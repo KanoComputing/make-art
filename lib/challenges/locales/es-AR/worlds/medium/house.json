@@ -14,7 +14,7 @@
             "solution": "stroke 0"
         },
         {
-            "hint": "Múevete hacia la izquierda y arriba, **escribe** `move -150, -50`",
+            "hint": "Muévete hacia la izquierda y arriba, **escribe** `move -150, -50`",
             "solution": "move -150, -50"
         },
         {
@@ -26,7 +26,7 @@
             "solution": "rectangle 300, 200"
         },
         {
-            "hint": "Múevete hacia la derecha y arriba, **escribe** `move 150, -100`",
+            "hint": "Muévete hacia la derecha y arriba, **escribe** `move 150, -100`",
             "solution": "move 150, -100"
         },
         {
@@ -38,7 +38,7 @@
             "solution": "polygon 170, 100, -170, 100"
         },
         {
-            "hint": "Múevete hacia la izquierda y abajo, **escribe** `move -250, 300`",
+            "hint": "Muévete hacia la izquierda y abajo, **escribe** `move -250, 300`",
             "solution": "move -250, 300"
         },
         {
@@ -50,7 +50,7 @@
             "solution": "rectangle 500, 100"
         },
         {
-            "hint": "Múevete hacia la derecha y arriba, **escribe** `move 220, -80`",
+            "hint": "Muévete hacia la derecha y arriba, **escribe** `move 220, -80`",
             "solution": "move 220, -80"
         },
         {
@@ -66,7 +66,7 @@
             "solution": "color aqua"
         },
         {
-            "hint": "Múevete hacia la izquieda y arriba, **escribe** `move -80, -80`",
+            "hint": "Muévete hacia la izquieda y arriba, **escribe** `move -80, -80`",
             "solution": "move -80, -80"
         },
         {
@@ -74,7 +74,7 @@
             "solution": "square 50"
         },
         {
-            "hint": "Múevete hacia la derecha, **escribe** `move 170`",
+            "hint": "Muévete hacia la derecha, **escribe** `move 170`",
             "solution": "move 170"
         },
         {

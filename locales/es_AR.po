@@ -24,7 +24,7 @@ msgstr "Desafíos completos"
 #: challenge.now_sign_up_to_kano_world_to_share_your_creation
 msgid ""
 "Now sign-up to Kano World to share your creation and send a card to your dad!"
-msgstr "¡Ahora entra a Mundo Kano para compartir tus creaciones y enviar una tarjeta a tu padre!"
+msgstr "¡Ahora entra al Mundo Kano para compartir tus creaciones y enviar una tarjeta a tu padre!"
 
 #: challenge.new_world_unlocked_play_now
 msgid "New world unlocked! Play Now - "
@@ -92,7 +92,7 @@ msgstr "¡Crea una tarjeta para el Día del Padre!"
 
 #: challenges.browse_more
 msgid "Browse more"
-msgstr "Buscar nás"
+msgstr "Buscar más"
 
 #: challenges.certificate
 msgid "Certificate"

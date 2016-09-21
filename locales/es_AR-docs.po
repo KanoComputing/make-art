@@ -31,15 +31,15 @@ msgstr "Tamaño del círculo"
 
 #: en[0].commands[1]
 msgid "Draw an ellipse"
-msgstr "Dibuja un elipse"
+msgstr "Dibuja una elipse"
 
 #: en[0].commands[1].args[0]
 msgid "The ellipse width"
-msgstr "Ancho del elipse"
+msgstr "Ancho de la elipse"
 
 #: en[0].commands[1].args[1]
 msgid "The ellipse height"
-msgstr "Altura del elipse"
+msgstr "Altura de la elipse"
 
 #: en[0].commands[2]
 msgid "Draw a square"
@@ -195,7 +195,7 @@ msgstr "Punto de inicio y fin de la variable i"
 
 #: en[4].commands[1]
 msgid "Get a random number in a range."
-msgstr "Obten un número aleatorio dentro de un rango."
+msgstr "Obtén un número aleatorio dentro de un rango."
 
 #: en[4].commands[1].args[0]
 msgid "The minimum value"

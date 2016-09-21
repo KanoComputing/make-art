@@ -151,11 +151,11 @@
             "solution": "color '#aa4444'"
         },
         {
-            "hint": "Dibuja un elipse de un tamaño de 30 y 10",
+            "hint": "Dibuja una elipse de un tamaño de 30 y 10",
             "solution": "ellipse 30, 10"
         },
         {
-            "hint": "Dibuja un elipse de un tamaño de 10 y 30",
+            "hint": "Dibuja una elipse de un tamaño de 10 y 30",
             "solution": "ellipse 10, 30"
         },
         {
@@ -184,14 +184,14 @@
             "solution": "color '#aa4444'"
         },
         {
-            "hint": "Dibuja un elipse de un tamaño de 30 y 10",
+            "hint": "Dibuja una elipse de un tamaño de 30 y 10",
             "solution": "ellipse 30, 10"
         },
         {
-            "hint": "Dibuja un elipse de un tamaño de 10 y 30",
+            "hint": "Dibuja una elipse de un tamaño de 10 y 30",
             "solution": "ellipse 10, 30"
         }
     ],
-    "completion_text": "¡Bien hecho!"
+    "completion_text": "¡Bien hecho!",
     "cover": "breakfast.png"
 }
