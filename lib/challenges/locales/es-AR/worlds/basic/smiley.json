@@ -17,7 +17,7 @@
             "solution": "circle 200"
         },
         {
-            "hint": "Múevete 80 a la izquierda y 80 hacia arriba - **escribe** `move -80, -80`",
+            "hint": "Muévete 80 a la izquierda y 80 hacia arriba - **escribe** `move -80, -80`",
             "solution": "move -80, -80"
         },
         {

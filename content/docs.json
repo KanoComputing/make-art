@@ -24,18 +24,18 @@
                         [
                             "radius-x", 
                             "number", 
-                            "Ancho del elipse", 
+                            "Ancho de la elipse", 
                             true
                         ], 
                         [
                             "radius-y", 
                             "number", 
-                            "Altura del elipse", 
+                            "Altura de la elipse", 
                             true
                         ]
                     ], 
                     "call": "ellipse", 
-                    "description": "Dibuja un elipse", 
+                    "description": "Dibuja una elipse", 
                     "defaults": [
                         50, 
                         100
@@ -359,7 +359,7 @@
                     "example": "for i in [1..5]\n    circle i"
                 }, 
                 {
-                    "description": "Obten un número aleatorio dentro de un rango.", 
+                    "description": "Obtén un número aleatorio dentro de un rango.", 
                     "args": [
                         [
                             "min", 
