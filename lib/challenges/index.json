@@ -50,7 +50,6 @@
             "cover": "world_covers/summercamp",
             "world_path": "worlds/summercamp",
             "css_class": "_summercamp",
-            "dependency": ["medium"],
             "share_strategy": "optional",
             "type": "campaign"
 
