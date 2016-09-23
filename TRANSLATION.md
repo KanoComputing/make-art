@@ -24,10 +24,12 @@ You need to add the new language in 4 places:
 1. Create `lib/challenges/locales/<locale>` and copy the whole `worlds` directory and `index.json` 
    These are the translations of the challenges, the main content of Make-Art.
 
-2. Create `locales/<locale>` and copy the content of `locales/en`
-   These are the translations of the views
+2. Create new .po files for each locale - one from the `messages.pot` and one
+   from the `messages-doc.pot`. These are the translations of the views and
+   documentation.
 
-3. Directly edit `content/docs.json` and add your language to the map (at the top level)
+3. After translation run the `po/lang-po-to-json` and `po/lang-docs-po-to-json`
+   to create the necessary json files from the po files.
 
 4. Add your language to `SUPPORTED_LOCALES` array in `lib/i18n.js`
 
