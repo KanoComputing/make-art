@@ -26,8 +26,8 @@
             "solution": "    size = Math.pow(x - 250, 2) / -4000 + 10"
         },
         {
-            "hint": "We’ll make another loop, this time to run top to bottom with `for y in [50 .. 450] by 19`.",
-            "solution": "    for y in [50 .. 450] by 19"
+            "hint": "We’ll make another loop, this time to run top to bottom with `for y in [50 .. 450] by 20`.",
+            "solution": "    for y in [50 .. 450] by 20"
         },
         {
             "hint": "Now for each iteration of the loops we want to move the drawing cursor into position by typing `moveTo x, y`",
