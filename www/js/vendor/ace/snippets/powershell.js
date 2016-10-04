@@ -1,7 +1,1 @@
-define("ace/snippets/powershell",["require","exports","module"], function(require, exports, module) {
-"use strict";
-
-exports.snippetText =undefined;
-exports.scope = "powershell";
-
-});
+define("ace/snippets/powershell",["require","exports","module"],function(e,s,p){"use strict";s.snippetText=void 0,s.scope="powershell"});

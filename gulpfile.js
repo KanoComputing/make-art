@@ -9,6 +9,8 @@ var gulp = require('gulp'),
     jadeHelpers = require('./utils/jadeHelpers'),
     _ = require('lodash'),
     color = require('cli-color'),
+    uglify = require('gulp-uglify'),
+    ngAnnotate = require('gulp-ng-annotate'),
     partialify = require('partialify/custom'),
     griddy = require('griddy'),
     nib = require('nib'),
@@ -244,6 +246,13 @@ gulp.task('copy-challenges', function (next) {
     stream2.on('end', localNext);
     stream3.on('end', localNext);
 
+});
+
+gulp.task('compress', () => {
+    return gulp.src('www/js/index.js', { base: 'www' })
+        .pipe(ngAnnotate())
+        .pipe(uglify())
+        .pipe(gulp.dest('www'));
 });
 
 gulp.task('livereload', function (next) {

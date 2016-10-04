@@ -25,6 +25,10 @@ node {
         sh "gulp default"
     }
 
+    stage('compress') {
+        sh "gulp compress"
+    }
+
     stage('deploy') {
         if (env.BRANCH_NAME == "jenkins") {
             echo 'deploy skipped'

@@ -1,7 +1,1 @@
-define("ace/snippets/ftl",["require","exports","module"], function(require, exports, module) {
-"use strict";
-
-exports.snippetText =undefined;
-exports.scope = "ftl";
-
-});
+define("ace/snippets/ftl",["require","exports","module"],function(e,t,i){"use strict";t.snippetText=void 0,t.scope="ftl"});

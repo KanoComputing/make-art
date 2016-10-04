@@ -1,7 +1,1 @@
-define("ace/snippets/logiql",["require","exports","module"], function(require, exports, module) {
-"use strict";
-
-exports.snippetText =undefined;
-exports.scope = "logiql";
-
-});
+define("ace/snippets/logiql",["require","exports","module"],function(e,i,o){"use strict";i.snippetText=void 0,i.scope="logiql"});

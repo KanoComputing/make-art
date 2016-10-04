@@ -1,7 +1,1 @@
-define("ace/snippets/assembly_x86",["require","exports","module"], function(require, exports, module) {
-"use strict";
-
-exports.snippetText =undefined;
-exports.scope = "assembly_x86";
-
-});
+define("ace/snippets/assembly_x86",["require","exports","module"],function(e,s,i){"use strict";s.snippetText=void 0,s.scope="assembly_x86"});

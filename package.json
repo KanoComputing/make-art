@@ -27,7 +27,7 @@
     "deep-equal": "^1.0.0",
     "express": "^4.10.5",
     "griddy": "0.0.x",
-    "gulp": "~3.5.x",
+    "gulp": "^3.9.x",
     "gulp-browserify": "~0.4.x",
     "gulp-callback": "0.0.3",
     "gulp-jade": "~0.4.x",
@@ -48,6 +48,8 @@
   },
   "devDependencies": {
     "chai": "3.2.x",
+    "gulp-ng-annotate": "^2.0.0",
+    "gulp-uglify": "^2.0.0",
     "mocha": "2.3.x"
   },
   "engines": {
