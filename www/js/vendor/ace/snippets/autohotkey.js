@@ -1,7 +1,1 @@
-define("ace/snippets/autohotkey",["require","exports","module"], function(require, exports, module) {
-"use strict";
-
-exports.snippetText =undefined;
-exports.scope = "autohotkey";
-
-});
+define("ace/snippets/autohotkey",["require","exports","module"],function(e,t,o){"use strict";t.snippetText=void 0,t.scope="autohotkey"});

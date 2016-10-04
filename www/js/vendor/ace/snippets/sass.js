@@ -1,7 +1,1 @@
-define("ace/snippets/sass",["require","exports","module"], function(require, exports, module) {
-"use strict";
-
-exports.snippetText =undefined;
-exports.scope = "sass";
-
-});
+define("ace/snippets/sass",["require","exports","module"],function(s,e,i){"use strict";e.snippetText=void 0,e.scope="sass"});

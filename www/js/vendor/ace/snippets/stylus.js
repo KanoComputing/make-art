@@ -1,7 +1,1 @@
-define("ace/snippets/stylus",["require","exports","module"], function(require, exports, module) {
-"use strict";
-
-exports.snippetText =undefined;
-exports.scope = "stylus";
-
-});
+define("ace/snippets/stylus",["require","exports","module"],function(e,s,t){"use strict";s.snippetText=void 0,s.scope="stylus"});

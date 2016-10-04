@@ -1,7 +1,1 @@
-define("ace/snippets/nix",["require","exports","module"], function(require, exports, module) {
-"use strict";
-
-exports.snippetText =undefined;
-exports.scope = "nix";
-
-});
+define("ace/snippets/nix",["require","exports","module"],function(e,i,n){"use strict";i.snippetText=void 0,i.scope="nix"});

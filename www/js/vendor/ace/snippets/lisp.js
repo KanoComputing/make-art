@@ -1,7 +1,1 @@
-define("ace/snippets/lisp",["require","exports","module"], function(require, exports, module) {
-"use strict";
-
-exports.snippetText =undefined;
-exports.scope = "lisp";
-
-});
+define("ace/snippets/lisp",["require","exports","module"],function(e,i,s){"use strict";i.snippetText=void 0,i.scope="lisp"});

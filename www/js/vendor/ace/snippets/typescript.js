@@ -1,7 +1,1 @@
-define("ace/snippets/typescript",["require","exports","module"], function(require, exports, module) {
-"use strict";
-
-exports.snippetText =undefined;
-exports.scope = "typescript";
-
-});
+define("ace/snippets/typescript",["require","exports","module"],function(e,t,p){"use strict";t.snippetText=void 0,t.scope="typescript"});
