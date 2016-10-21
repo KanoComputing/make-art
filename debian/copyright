@@ -4,4 +4,4 @@ Source: https://github.com/KanoComputing/kano-draw
 
 Files: *
 Copyright: 2014,2015 Kano Computing Ltd.
-License: GPL-2+
+License: GPL-2+ On Debian systems the complete text of the GPL is in /usr/share/common-licenses/GPL-2

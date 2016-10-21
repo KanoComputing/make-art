@@ -9,5 +9,6 @@ override_dh_auto_build:
 	apt-get install --yes nodejs
 	npm install
 	NODE_ENV=production OFFLINE=true npm run build
+	dh_lintian
 
 override_dh_auto_install override_dh_auto_test:
