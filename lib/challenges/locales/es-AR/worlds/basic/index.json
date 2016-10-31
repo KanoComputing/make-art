@@ -1,11 +1,10 @@
 {
-    "desafios": [
-        "./diasoleado",
-        "./banderasuiza",
-        "./mirada",
-        "./carafeliz",
-        "./globo",
-        "./hombredepalo"
-
+    "challenges": [
+        "./sunnyday",
+        "./swissflag",
+        "./stare",
+        "./smiley",
+        "./baloon",
+        "./stickman"
     ]
 }

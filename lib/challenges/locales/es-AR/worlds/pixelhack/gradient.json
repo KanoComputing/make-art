@@ -1,7 +1,7 @@
 {
     "id": "gradient",
     "title": "atardecer en 8-bits",
-    "description": "Usa un ciclo para dibujar un atardecer en 8-bits.,
+    "description": "Usa un ciclo para dibujar un atardecer en 8-bits.",
     "startAt": 2,
     "steps": [
         {
