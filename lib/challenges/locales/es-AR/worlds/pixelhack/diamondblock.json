@@ -1,0 +1,74 @@
+{
+    "id": "diamondblock",
+    "title": "Bloque de diamantes en 8-bits",
+    "description": "Crea un bloque de diamantes con ciclos.",
+    "startAt": 2,
+    "steps": [
+        {
+            "hint": "Configura el trazo a 0 usando stroke.",
+            "solution": "stroke 0"
+        },
+        {
+            "hint": "Utilizaremos dos ciclos para la piedra. **Escribe** `for x in [0 ... 16]`",
+            "solution": "for x in [0 ... 16]"
+        },
+        {
+            "hint": "Para y utiliza `for y in [0 ... 16]`",
+            "solution": "    for y in [0 ... 16]"
+        },
+        {
+            "hint": "Utilizaremos distintos tonos de gris elegidos aleatoriamente para la piedra. **Escribe** `color darken gray, random -6, 9`",
+            "solution": "        color darken gray, random -6, 9",
+            "validate": "        color darken gray, random -6, 9"
+        },
+        {
+            "hint": "Múevete en la posición para cada cuadrado utilizando `moveTo x * 31.25, y * 31.25`",
+            "solution": "        moveTo x * 31.25, y * 31.25",
+            "validate": "        moveTo x \\* 31.25, y \\* 31.25"
+        },
+        {
+            "hint": "Finalmente dibuja los cuadrados utilizando `square 32`",
+            "solution": "        square 32",
+            "validate": "        square 32"
+        },
+        {
+            "hint": "Sal de este ciclo posicionando el cursor al comienzo del renglón usando la tecla para borrar. Abriremos un nuevo par de ciclos para dibujar el diamante. **Escribe** `for x in [2 ... 14]`",
+            "solution": "for x in [2 ... 14]"
+        },
+        {
+            "hint": "Esta vez empezaremos en 2 y terminaremos en 14 porque queremos que el diamante aparezca en la mitad del bloque.**Escribe** `for y in [2 ... 14]`",
+            "solution": "    for y in [2 ... 14]"
+        },
+        {
+            "hint": "El diamante debería aparecer aleatoriamente, la función if nos permitirá hacerlo. **Escribe** `if 1 == random 0, 4`",
+            "solution": "        if 1 == random 0, 4",
+            "validate": "        if 1 == random 0, 4"
+        },
+        {
+            "hint": "Configura el color del diamante utilizando `color lighten lightblue, random 0, 40`",
+            "solution": "            color lighten lightblue, random 0, 40",
+            "validate": "            color lighten lightblue, random 0, 40"
+        },
+        {
+            "hint": "Múevete en la posición para cada cuadrado utilizando `moveTo x * 31.25, y * 31.25`",
+            "solution": "            moveTo x * 31.25, y * 31.25",
+            "validate": "            moveTo x \\* 31.25, y \\* 31.25"
+        },
+        {
+            "hint": "Finalmente dibuja los cuadrados de diamante utilizando `square 32`",
+            "solution": "            square 32",
+            "validate": "            square 32"
+        }
+    ],
+    "completion_text": "¡Has hackeado los píxeles! ¿Qué seguirá? Si estás interesado, más desafíos y proyectos en 8-bits están disponibles en Kano. ¡Felicitaciones y bien hecho!",
+    "gallery": {
+        "cover_path": "/assets/challenges/images/pixelremixes/",
+        "remixes": [
+            "diamond-obsidian.png",
+            "diamond-rainbow.png",
+            "diamond-lotsof.png"
+        ]
+    },
+    "cover": "pixel-diamondblock.png",
+    "guide": "#### Lo que crearás\n1. Configura el trazo a 0 usando stroke.\n2. Utilizaremos dos ciclos para la piedra. **Escribe** `for x in [0 ... 16]`\n3. Para y utiliza `for y in [0 ... 16]`\n4. Utilizaremos distintos tonos de gris elegidos aleatoriamente para la piedra. **Escribe** `color darken gray, random -6, 9`\n5. Múevete en la posición para cada cuadrado utilizando `moveTo x * 31.25, y * 31.25`\n6. Finalmente dibuja los cuadrados utilizando `square 32`\n7. Sal de este ciclo posicionando el cursor al comienzo del renglón usando la tecla para borrar. Abriremos un nuevo par de ciclos para dibujar el diamante. **Escribe** `for x in [2 ... 14]`\n8. Esta vez empezaremos en 2 y terminaremos en 14 porque queremos que el diamante aparezca en la mitad del bloque.**Escribe** `for y in [2 ... 14]`\n9. El diamante debería aparecer aleatoriamente, la función if nos permitirá hacerlo. **Escribe** `if 1 == random 0, 4`\n10. Configura el color del diamante utilizando `color lighten lightblue, random 0, 40`\n11. Múevete en la posición para cada cuadrado utilizando `moveTo x * 31.25, y * 31.25`\n12. Finalmente dibuja los cuadrados de diamante utilizando `square 32`\n\n#### Lo que hackearás\Para personalizar este bloque de diamantes de Mineraft todo lo que debes hacer es cambiar dos variables: el color de arriba y el color de abajo. Crea una frutilla, un bloque de agua, o de cualquier otra cosa únicamente cambiando esas dos líneas de comandos. Para añadir complejidad, crea un bloque de micelio usando un ciclo y la función aleatoria. Si de verdad buscas un desafío, intenta incorporar lo que aprendimos antes y utiliza los valores de x e y para rotar los tonos de los colores.\n\n#### Resumiendo\nLa gran final: diamantes. Este es el bloque más preciado y buscado en Minecraft. Utilizarás un ciclo para dibujar la piedra, otro para dibujar los diamantes. Pero como los diamantes deberían estar salpicados a lo largo de la pieda, utilizaremos la función if y un número aleatorio para determinar dónde aparecerán los cuadrados. Además, queremos dibujar el diamante únicamente en el sector del medio del bloque, por eso el ciclo irá de 2 a 14 y no de 0 a 16.\n"
+}

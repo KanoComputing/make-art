@@ -1,6 +1,6 @@
 {
     "id": "baloon",
-    "title": "Globo Azul",
+    "title": "GLobo Azul",
     "cover": "blue-baloon.png",
     "description": "¡Dibuja un globo flotando en el aire usando polígonos!",
     "startAt": 2,
@@ -10,7 +10,7 @@
             "solution": "color blue"
         },
         {
-            "hint": "Configura el trazo a 0, para evitar dibujar líneas",
+            "hint": "Configura el trazo a 0, para evitar dibujar líneas. Recuerda, trazo en inglés es stroke",
             "solution": "stroke 0"
         },
         {
@@ -22,7 +22,7 @@
             "solution": "move 0, 100"
         },
         {
-            "hint": "Dibuja el nudo del globo - **escribe** `polygon 15, 15, -15, 15`",
+            "hint": "Dibuja el nudo del globo usando un polígono o polygon en inglés - **escribe** `polygon 15, 15, -15, 15`",
             "solution": "polygon 15, 15, -15, 15"
         },
         {

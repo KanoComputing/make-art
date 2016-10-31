@@ -1,0 +1,87 @@
+{
+    "id": "pumpkin",
+    "title": "Calabaza",
+    "cover": "mischiefweek2015/mw-003-pumpkin.png",
+    "description": "No sería Halloween sin calabazas escalofriantes, aprende a crear una calabaza y hazte creativo cambiandole la cara.",
+    "start_date": "2015-10-28T06:00:00",
+    "completion_text": "¡Es una excelente linterna de calabaza! Pero necesita estar iluminada para ser verdaderamente escalofriante, ¿puedes ingeniártela para encender la calabaza cambiando algunos colores? También puedes mejorarla para que se vea más escalofriante. Demuéstranos tu creatividad y luego comparte tu creación.",
+    "startAt": 0,
+    "steps": [
+            {
+                "hint": "Vamos a configurar un escenario escalofriante, hazlo de noche - **escribe** `background charcoal`",
+                "solution": "background charcoal"
+            },
+            {
+                "hint": "Lo más distintivo de las calabazas es su fuerte color naranja, para configurar el color de dibujo  - **escribe** `color orange`",
+                "solution": "color orange"
+            },
+            {
+                "hint": "Vamos a usar el trazo para aparentar la forma ondulada de la calabaza, usa la función darken (orcurecer) para crear contrastes en la cáscara de la calabaza - **escribe** `stroke darken(orange, 20), 30`",
+                "solution": "stroke darken(orange, 20), 30"
+            },
+            {
+                "hint": "Crea tu calabaza parte por parte usando elipses - **escribe** `ellipse 180, 140`",
+                "solution": "ellipse 180, 140"
+            },
+            {
+                "hint": "Dibuja otra parte - **escribe** `ellipse 130, 140`",
+                "solution": "ellipse 130, 140"
+            },
+            {
+                "hint": "Ya comienza a tomar forma, dibuja otra parte - **escribe** `ellipse 50, 140`",
+                "solution": "ellipse 50, 140"
+            },
+            {
+                "hint": "Las calabazas son frutos, tienen un tallo que las sostiene - **escribe** `color green`",
+                "solution": "color green"
+            },
+            {
+                "hint": "Configura el trazo a 0, por ahora no lo usaremos - **escribe** `stroke 0`",
+                "solution": "stroke 0"
+            },
+            {
+                "hint": "Mueve el cursor a la parte de arriba de la calabaza - **escribe** `move -20, -180`",
+                "solution": "move -20, -180"
+            },
+            {
+                "hint": "Dibuja el tallo pequeño de la calabaza - **escribe** `square 40`",
+                "solution": "square 40"
+            },
+            {
+                "hint": "Ahora que ya tenemos una calabaza fresca podemos avanzar a la parte divertida dándole diseño - **escribe** `color black`",
+                "solution": "color black"
+            },
+            {
+                "hint": "Vamos a dibujarle la cara, mueve el cursor al lugar de los ojos - **escribe** `moveTo 190, 275`",
+                "solution": "moveTo 190, 275"
+            },
+            {
+                "hint": "Dibuja un agujero para el primer ojo - **escribe** `circle 15`",
+                "solution": "circle 15"
+            },
+            {
+                "hint": "Mueve el cursor a donde estará el segundo ojo - **escribe** `moveTo 310, 275`",
+                "solution": "moveTo 310, 275"
+            },
+            {
+                "hint": "Dibuja un segundo agujero del mismo tamaño que el primero - **escribe** `circle 15`",
+                "solution": "circle 15"
+            },
+            {
+                "hint": "Ahora necesitamos darle una boca - **escribe** `moveTo 250, 320`",
+                "solution": "moveTo 250, 320"
+            },
+            {
+                "hint": "Necesitamos eliminar el color de dibujo configurándolo a transparente - **escribe** `color null`",
+                "solution": "color null"
+            },
+            {
+                "hint": "Usaremos un trazo fino y negro para la boca - **escribe** `stroke 15, black`",
+                "solution": "stroke 15, black"
+            },
+            {
+                "hint": "Finalmente, vamos a usar el comando arc (dibujará un arco) para darle una sonrisa. - **escribe** `arc 40, 1, 2, true`",
+                "solution": "arc 40, 1, 2, true"
+            }
+    ]
+}

@@ -1,0 +1,93 @@
+{
+    "id": "compass",
+    "title": "Una brújula es una herramienta escencial",
+    "short_title": "Brújula",
+    "icon_class": "challenge_compass",
+    "description": "Una brújula es esencialmente un imán, generalmente una aguja magnetizada. Dado que los opuestos se atraen, el polo sur de la aguja se encuentra atraído al polo norte mágnetico y natural de la Tierra. ¿Sabías que puedes contruir la tuya propia con un clip, un corcho y un imán?",
+    "cover": "summercamp/day_9.png",
+    "completion_text": "Ahora intenta agregar los otros componentes de la brújula: los puntos cardinales (E, S, O y también podría ser NE, NO, SE y SO) ¿Por qué no una mano que la sostenga?",
+    "difficulty": 1,
+    "startAt": 0,
+    "summerCamp": true,
+    "rewards": {
+        "wallpaper": 1
+    },
+    "steps": [
+        {
+            "hint": "Elige gris claro o `lightgray` para la función `background`",
+            "solution": "background lightgray"
+        },
+        {
+            "hint": "En una nueva línea, configura el trazo de color dorado usando `stroke`, dorado en inglés es `gold` y hazlo de un tamaño de `20`",
+            "solution": "stroke gold, 20"
+        },
+        {
+            "hint": "Configura el `color` de la brújula a gris o `gray`",
+            "solution": "color gray"
+        },
+        {
+            "hint": "Tu brújula será un círculo o `circle` de un tamaño de `110`",
+            "solution": "circle 110"
+        },
+        {
+            "hint": "Configura el `color` a gris oscuro o `darkgray` para la segunda mitad de la brújula",
+            "solution": "color darkgray"
+        },
+        {
+            "hint": "Configura el trazo o `stroke` otra vez a `0`",
+            "solution": "stroke 0"
+        },
+        {
+            "hint": "Dibuja un arco que encaje con la mitad de arriba de la brújula - **escribe** `arc 105, 2, 1`",
+            "solution": "arc 105, 2, 1"
+        },
+        {
+            "hint": "Tenemos que marcar el norte - en una nueva línea **escribe** `moveTo 250, 175`",
+            "solution": "moveTo 250, 175"
+        },
+        {
+            "hint": "Configura el `color` a dorado o `gold`",
+            "solution": "color gold"
+        },
+        {
+            "hint": "Configura la fuente del texto o `font` a `'cursive'` de un tamaño de `25`",
+            "solution": "font 'cursive', 25"
+        },
+        {
+            "hint": "Escribe una N que represente el norte - **escribe** `text 'N'`",
+            "solution": "text 'N'"
+        },
+        {
+            "hint": "Ahora necesitamos una aguja con dos puntas. Configura el `color` a `red` para la primera punta",
+            "solution": "color red"
+        },
+        {
+            "hint": "Mueve el cursor a la posición de la aguja **escribe** `moveTo 230, 250`",
+            "solution": "moveTo 230, 250"
+        },
+        {
+            "hint": "Dibuja un triángulo usando un polígono - **escribe** `polygon 20, -90, 40, 0`",
+            "solution": "polygon 20, -90, 40, 0"
+        },
+        {
+            "hint": "¡Excelente! Configura el `color` a blanco o `white` para la segunda punta de la aguja",
+            "solution": "color white"
+        },
+        {
+            "hint": "Dibuja la segunda punta - **escribe** `polygon 20, 90, 40, 0`",
+            "solution": "polygon 20, 90, 40, 0"
+        },
+        {
+            "hint": "Termínala con un último detalle. Configura el `color` a dorado o `gold`",
+            "solution": "color gold"
+        },
+        {
+            "hint": "Mueve el cursor al centro de la brújula **escribe** `move 20`",
+            "solution": "move 20"
+        },
+        {
+            "hint": "Dibuja un círculo usando `circle` de un tamaño de `20`",
+            "solution": "circle 20"
+        }
+    ]
+}

@@ -24,18 +24,18 @@
                         [
                             "radius-x", 
                             "number", 
-                            "Ancho de la elipse", 
+                            "Ancho del elipse", 
                             true
                         ], 
                         [
                             "radius-y", 
                             "number", 
-                            "Altura de la elipse", 
+                            "Altura del elipse", 
                             true
                         ]
                     ], 
                     "call": "ellipse", 
-                    "description": "Dibuja una elipse", 
+                    "description": "Dibuja un elipse", 
                     "defaults": [
                         50, 
                         100
@@ -157,8 +157,8 @@
                     ]
                 }
             ], 
-            "icon": "shapes", 
-            "label": "Figuras"
+            "label": "Figuras", 
+            "icon": "shapes"
         }, 
         {
             "commands": [
@@ -209,8 +209,8 @@
                     ]
                 }
             ], 
-            "icon": "lines", 
-            "label": "Líneas"
+            "label": "Líneas", 
+            "icon": "lines"
         }, 
         {
             "commands": [
@@ -261,8 +261,8 @@
                     ]
                 }
             ], 
-            "icon": "position", 
-            "label": "Posición"
+            "label": "Posición", 
+            "icon": "position"
         }, 
         {
             "commands": [
@@ -338,8 +338,8 @@
                     ]
                 }
             ], 
-            "icon": "text", 
-            "label": "Texto"
+            "label": "Texto", 
+            "icon": "text"
         }, 
         {
             "commands": [
@@ -359,7 +359,7 @@
                     "example": "for i in [1..5]\n    circle i"
                 }, 
                 {
-                    "description": "Obtén un número aleatorio dentro de un rango.", 
+                    "description": "Obten un número aleatorio dentro de un rango.", 
                     "args": [
                         [
                             "min", 
@@ -389,8 +389,8 @@
                     "example": "random 5, 10"
                 }
             ], 
-            "icon": "general", 
-            "label": "General"
+            "label": "General", 
+            "icon": "general"
         }, 
         {
             "commands": [
@@ -542,8 +542,8 @@
                     ]
                 }
             ], 
-            "icon": "colors", 
-            "label": "Colores"
+            "label": "Colores", 
+            "icon": "colors"
         }
     ], 
     "en": [
@@ -704,8 +704,8 @@
                     ]
                 }
             ], 
-            "label": "Shapes", 
-            "icon": "shapes"
+            "icon": "shapes", 
+            "label": "Shapes"
         }, 
         {
             "commands": [
@@ -756,8 +756,8 @@
                     ]
                 }
             ], 
-            "label": "Lines", 
-            "icon": "lines"
+            "icon": "lines", 
+            "label": "Lines"
         }, 
         {
             "commands": [
@@ -808,8 +808,8 @@
                     ]
                 }
             ], 
-            "label": "Position", 
-            "icon": "position"
+            "icon": "position", 
+            "label": "Position"
         }, 
         {
             "commands": [
@@ -885,8 +885,8 @@
                     ]
                 }
             ], 
-            "label": "Text", 
-            "icon": "text"
+            "icon": "text", 
+            "label": "Text"
         }, 
         {
             "commands": [
@@ -936,8 +936,8 @@
                     "example": "random 5, 10"
                 }
             ], 
-            "label": "General", 
-            "icon": "general"
+            "icon": "general", 
+            "label": "General"
         }, 
         {
             "commands": [
@@ -1089,8 +1089,8 @@
                     ]
                 }
             ], 
-            "label": "Colors", 
-            "icon": "colors"
+            "icon": "colors", 
+            "label": "Colors"
         }
     ], 
     "ja": [
@@ -1251,8 +1251,8 @@
                     ]
                 }
             ], 
-            "label": "形", 
-            "icon": "shapes"
+            "icon": "shapes", 
+            "label": "形"
         }, 
         {
             "commands": [
@@ -1303,8 +1303,8 @@
                     ]
                 }
             ], 
-            "label": "線", 
-            "icon": "lines"
+            "icon": "lines", 
+            "label": "線"
         }, 
         {
             "commands": [
@@ -1355,8 +1355,8 @@
                     ]
                 }
             ], 
-            "label": "位置", 
-            "icon": "position"
+            "icon": "position", 
+            "label": "位置"
         }, 
         {
             "commands": [
@@ -1432,8 +1432,8 @@
                     ]
                 }
             ], 
-            "label": "テキスト", 
-            "icon": "text"
+            "icon": "text", 
+            "label": "テキスト"
         }, 
         {
             "commands": [
@@ -1483,8 +1483,8 @@
                     "example": "random 5, 10"
                 }
             ], 
-            "label": "一般", 
-            "icon": "general"
+            "icon": "general", 
+            "label": "一般"
         }, 
         {
             "commands": [
@@ -1636,8 +1636,8 @@
                     ]
                 }
             ], 
-            "label": "色", 
-            "icon": "colors"
+            "icon": "colors", 
+            "label": "色"
         }
     ]
 }

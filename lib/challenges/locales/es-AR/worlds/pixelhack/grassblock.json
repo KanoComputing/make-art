@@ -1,0 +1,62 @@
+{
+    "id": "grassblock",
+    "title": "Bloque de hierba en 8-bits",
+    "description": "Crea un bloque que podrías trasladar a Minecraft.",
+    "startAt": 1,
+    "steps": [
+        {
+            "hint": ""Únicamente utilizaremos figuras sólidas sin trazo. Entonces **escribe** `stroke 0`.",
+            "solution": "stroke 0"
+        },
+        {
+            "hint": "Precisamos dos ciclos para este dibujo. **Escribe** `for x in [0 ... 16]`",
+            "solution": "for x in [0 ... 16]"
+        },
+        {
+            "hint": "Para y utiliza `for y in [0 ... 16]`",
+            "solution": "    for y in [0 ... 16]",
+            "validate": "    for y in \\[0 ... 16\\]"
+        },
+        {
+            "hint": "Utilizaremos un tono de marrón elegido aleatoriamente para representar la tierra. **Escribe** `color darken brown, random 0, 25`",
+            "solution": "        color darken brown, random 0, 25",
+            "validate": "        color darken brown, random 0, 25"
+        },
+        {
+            "hint": "Necesitaremos movernos para cada cuadrado utilizando `moveTo x * 31.25, y * 31.25`",
+            "solution": "        moveTo x * 31.25, y * 31.25",
+            "validate": "        moveTo x \\* 31.25, y \\* 31.25"
+        },
+        {
+            "hint": "Finalmente dibujemos los cuadrados de tierra utilizando `square 32`",
+            "solution": "        square 32",
+            "validate": "        square 32"
+        },
+        {
+            "hint": "El césped debería aparecer en la parte de arriba del bloque por eso determinemos una condición que posiciones a los bits verdes utilizando `if 4 >  y + random 0, 3`",
+            "solution": "        if 4 > y + random 0, 3",
+            "validate": "        if 4 > y \\+ random 0, 3"
+        },
+        {
+            "hint": "Configura el color verde con la función para oscurecer.**Escribe** `color darken green, random 0, 25`",
+            "solution": "            color darken green, random 0, 25",
+            "validate": "            color darken green, random 0, 25"
+        },
+        {
+            "hint": "Finalmente dibuja los cuadrados utilizando `square 32`",
+            "solution": "            square 32",
+            "validate": "            square 32"
+        }
+    ],
+    "completion_text": "¡Muy bonito! Ahora puedes cambiar el color marrón y el verde para obtener efectos interesantes. ¿Puedes hacer un bloque que se parezca a una frutilla?",
+    "gallery": {
+        "cover_path": "/assets/challenges/images/pixelremixes/",
+        "remixes": [
+            "grass-overgrown.png",
+            "grass-strawb.png",
+            "grass-myce.png"
+        ]
+    },
+    "cover": "pixel-grassblock.png",
+    "guide": "#### Lo que crearás\n1. "Únicamente utilizaremos figuras sólidas sin trazo. Entonces **escribe** `stroke 0`.\n2. Precisamos dos ciclos para este dibujo. **Escribe** `for x in [0 ... 16]`\n3. Para y utiliza `for y in [0 ... 16]`\n4. Utilizaremos un tono de marrón elegido aleatoriamente para representar la tierra. **Escribe** `color darken brown, random 0, 25`\n5. Necesitaremos movernos para cada cuadrado utilizando `moveTo x * 31.25, y * 31.25`\n6. Finalmente dibujemos los cuadrados de tierra utilizando `square 32`\n7. El césped debería aparecer en la parte de arriba del bloque por eso determinemos una condición que posicione los bits verdes utilizando  `if 4 >  y + random 0, 3`\n8. Configura el color verde con la función para oscurecer. **Escribe** `color darken green, random 0, 25`\n9. Finalmente dibuja los cuadrados utilizando `square 32`\n\n#### Lo que hackearás\nPara personalizar este bloque de hierba de Mineraft todo lo que debes hacer es cambiar dos variables: el color de arriba y el color de abajo. Crea una frutilla, un bloque de agua, o de cualquier otra cosa únicamente cambiando esas dos líneas de comandos. Para añadir complejidad, crea un bloque de micelio usando un ciclo y la función aleatoria. Si de verdad buscas un desafío, intenta incorporar lo que aprendimos en el dibujo anterior y utiliza los valores de x e y para rotar los tonos de los colores.\n\n#### Resumiendo \nUno de los bloques más comunes y básicos en minecraft es el de hierba. Únicamente 16 cuadrados hacia arriba y hacia abajo, es una imagen muy simple, pero utilizaremos la función aleatoria para darle textura. Dibujaremos dos capas distintas, la del césped y la de la tierra.\n\nEn cada capa utilizaremos un ciclo para dibujar horizontal y verticalmente a través de la pantalla y únicamente cambiaremos una cosa de cada una: el color.\n"
+}
