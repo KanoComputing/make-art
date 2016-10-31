@@ -1,0 +1,68 @@
+{
+    "id": "ship",
+    "title": "Asteroids Ship",
+    "description": "Code a vector spaceship using lines",
+    "code": "",
+    "startAt": 2,
+    "steps": [
+        {
+            "hint": "Asteroids (1979) was one of the first major arcade games. It is set in space, so we're going to need to set the scene. **type** `background black`",
+            "solution": "background black"
+        },
+        {
+            "hint": "The graphics in Asteroids were simple line based graphics called vectors, we still use a more complex version of this concept in computer graphics today. First we need to set our line color and width **type** `stroke white,5`",
+            "solution": "stroke white,5"
+        },
+        {
+            "hint": "Next we use the move function to set the starting point for our first line. **type** `move 0, -70`",
+            "solution": "move 0, -70"
+        },
+        {
+            "hint": "'Function' is the word we use to define what we are drawing. Let’s draw a line that starts where we just moved the cursor and ends at the bottom left. We type where we want the line to end after the function, so **type** `line -50,150` Try changing the Y value from 150 to -150 watch what happens. The line goes up, above where we started at -50. Let’s move it back down to 150!",
+            "solution": "line -50,150"
+        },
+        {
+            "hint": "To move our cursor to the start of the next line we feed the previous coordinates into the move function. **type** `move -50,150`",
+            "solution": "move -50,150"
+        },
+        {
+            "hint": "We draw a line inwards and upwards to form the thruster of the ship - **type** `line 50,-25`",
+            "solution": "line 50,-25"
+        },
+        {
+            "hint": "Again moving to the same coordinates for a continuous line **type** `move 50,-25`",
+            "solution": "move 50,-25"
+        },
+        {
+            "hint": "We replicate the shape for the right side of the ship by reversing the second coordinate to draw downwards instead of up **type** `line 50,25`",
+            "solution": "line 50,25"
+        },
+        {
+            "hint": "Follow through with the line again **type** `move 50,25`",
+            "solution": "move 50,25"
+        },
+        {
+            "hint": "Our ship starts to take shape. To make a line that goes from the end of the one we just drew to connect back up at the top **type** `line -50,-150`",
+            "solution": "line -50,-150"
+        },
+        {
+            "hint": "Finally we move back to our starting point to add a final touch **type** `move -50,-150`",
+            "solution": "move -50,-150"
+        },
+        {
+            "hint": "We draw a line down the centre to help the simple shape look more like a ship, early videogames had only a fraction of computing power we are used to today, so graphics had to be basic. **type** `line 0,125`",
+            "solution": "line 0,125"
+        }
+    ],
+    "completion_text": "It might not look like much but simple graphics like this were where videogames we know today began and games like this lay the foundations for the 3D graphics we're used to today.",
+    "gallery": {
+        "cover_path": "/assets/challenges/images/pixelremixes/",
+        "remixes": [
+            "ship-golden.png",
+            "ship-thrust.png",
+            "ship-sleek.png"
+        ]
+    },
+    "cover": "pixel-ship.png",
+    "guide": "#### New words\n**move** x, y | move 50, 25\n\nMoves the drawing cursor from the current position. The difference from moveTo is that this is relative, not absolute. `move 50, 25` will move the cursor 50 to the right, and 25 down from the current position, as opposed to from the top-left corner. The first value is the x value, which controls how far across horizontally the x part of the coordinate should go. The second value is the y coordinate, which controls how far down vertically the y coordinate should go. Negative values will send it in the opposite direction.\n\n**line** x, y | line 50, 25\n\nDraws a line from the current position to a relative position. The x, y coordinates control the point relative to the cursor where the line will be drawn to.\n\n**stroke** color, width | stroke white, 5\n\nSets the drawing stroke. All following shapes and text will be drawn with the stroke color and width set to this until you change it again. This function is smart and can accept arguments in any order, or only one at a time.\n\n#### What you'll make\n1. Asteroids (1979) was one of the first major arcade games. It was set in space so we're going to need to set the scene **type** `background black`\n2. The graphics in Asteroids were simple line based graphics called vectors, we still use a more complex version of this concept in computer graphics today. First we need to set our line color and width **type** `stroke white,5`\n3. Next we use the move function to set the starting point for our first line. **type** `move 0, -70`\n4. We use the line function to draw a line relative to our starting position, we use a negative number first to move to the left and a positive number second to move downward **type** `line -50,150`\n5. To move our cursor to the start of the next line we feed the previous coordinates into the move function. **type** `move -50,150`\n6. We draw a line inwards and upwards to form the thruster of the ship **type** `line 50,-25`\n7. Again moving to the same coordinates for a continuous line **type** `move 50,-25`\n8. We replicate the shape for the right side of the ship by reversing the second coordinate to draw downwards instead of up **type** `line 50,25`\n9. Follow through with the line again **type** `move 50,25`\n10. Our ship starts to take shape **type** `line -50,-150`\n11. Finally we move back to our starting point to add a final touch **type** `move -50,-150`\n12. We draw a line down the centre to help the simple shape look more like a ship, early videogames had only a fraction of computing power we are used to today, so graphics had to be basic. **type** `line 0,125`\n\n#### What you’ll hack\nIt might not look like much but graphics like this are where the videogames we know today began. Games like this lay the foundations for the 3D graphics we're used to today. You can turn your spaceship into a variety of different things by customising the stroke color and width. \n\nFor something more advanced, try drawing more lines.\n\n#### Briefing\nAsteroids (1979) was one of the first major arcade games. Limited by primitive drawing hardware, the game designers could only draw using simple line based graphics called vectors, we still use a more complex version of this concept in computer graphics today.\n"
+}

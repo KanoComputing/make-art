@@ -1,28 +1,28 @@
 {
     "id": "shrinking",
-    "title": "Círculos que se encogen",
-    "description": "¡Círculos que se van encogiendo!",
+    "title": "Shrinking Circles",
+    "description": "Ever shrinking circles with a for loop!",
     "code": "",
     "startAt": 1,
     "steps": [
         {
-            "hint": "Configura el trazo - **escribe** `stroke gray, 3`",
+            "hint": "Set the stroke - **type** `stroke gray, 3`",
             "solution": "stroke gray, 3"
         },
         {
-            "hint": "Configura el color para poder ver a través - **escribe** `color null`",
+            "hint": "Set the color to see through - **type** `color null`",
             "solution": "color null"
         },
         {
-            "hint": "Vamos a dibujar 32 círculos todos de una vez, necesitamos abrir un ciclo - **escribe** `for i in [ 0 .. 32 ]`",
+            "hint": "Let's draw 32 circles all at once - **type** `for i in [ 0 .. 32 ]`",
             "solution": "for i in [ 0..32 ]"
         },
         {
-            "hint": "Genial, ahora para hacer los círculos - dentro del ciclo, **escribe** `circle 10 * i`",
+            "hint": "Awesome, now for the circles - inside the for loop **type** `circle 10 * i`",
             "solution": "    circle 10 * i",
             "validate": "    circle 10 *\\* *i"
         }
     ],
-    "completion_text": "¡Genial! Dentro de los ciclos repetimos los códigos de bits (¡nos ahorramos escribir!)",
+    "completion_text": "Great! For loops let us repeat bits of code (it saves on all the typing)!",
     "cover": "shrinking.png"
 }

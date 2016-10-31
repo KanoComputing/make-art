@@ -1,0 +1,136 @@
+{
+    "id": "ghost",
+    "title": "Ghost",
+    "description": "Draw your very own ghost. Change the colors to win!",
+    "start_date": "2015-10-30T06:00:00",
+    "code": "ghostColor = '#809B79'\nfaceColor = '#634E42'\ntongueColor = '#7A5750'\n",
+    "startAt": 0,
+    "steps": [
+        {
+            "hint": "We need to set up some variables to color the ghost - **Type** `ghostColor = '#809B79'`",
+            "solution": "ghostColor = '#809B79'"
+        },
+        {
+            "hint": "Another variable for the face - **Type** `faceColor = '#634E42'`",
+            "solution": "faceColor = '#634E42'"
+        },
+        {
+            "hint": "Finally a variable for the tongue - **Type** `tongueColor = '#7A5750'`",
+            "solution": "tongueColor = '#7A5750'"
+        },
+        {
+            "hint": "We’ll use solid shapes, so set the stroke to zero with `stroke 0`",
+            "solution": "stroke 0"
+        },
+        {
+            "hint": "Our ghost leaves a trail behind that we need to draw first, so we'll set the draw color to something slightly darker with `color darken(ghostColor, 10)`",
+            "solution": "color darken(ghostColor, 10)"
+        },
+        {
+            "hint": "Move into position for the trail with `move 0, 60`",
+            "solution": "move 0, 60"
+        },
+        {
+            "hint": "And then draw the trail with `circle 70`",
+            "solution": "circle 70"
+        },
+        {
+            "hint": "Now we’ll draw the ghost’s body. Set the ghost’s color to our variable with `color ghostColor`",
+            "solution": "color ghostColor"
+        },
+        {
+            "hint": "Now move back to draw the body, move back up to the center with `move 0, -60`",
+            "solution": "move 0, -60"
+        },
+        {
+            "hint": "Draw the body with `circle 100`",
+            "solution": "circle 100"
+        },
+        {
+            "hint": "Now we’ll draw the mouth with the faceColor variable we defined. **Type** `color faceColor`.",
+            "solution": "color faceColor"
+        },
+        {
+            "hint": "Now move into position for the mouth with `move -40, 10`",
+            "solution": "move -40, 10"
+        },
+        {
+            "hint": "Draw the mouth with `rectangle 80, 35`",
+            "solution": "rectangle 80, 35"
+        },
+        {
+            "hint": "The teeth are a polygon. **Hint:** you can copy and paste this: `polygon 10, -10, 20, 0, 30, -10, 40, 0, 50, -10, 60, 0, 70, -10, 80, 0`",
+            "solution": "polygon 10, -10, 20, 0, 30, -10, 40, 0, 50, -10, 60, 0, 70, -10, 80, 0"
+        },
+        {
+            "hint": "Now for the tongue, move to the bottom of the mouth with `move 40, 35`",
+            "solution": "move 40, 35"
+        },
+        {
+            "hint": "Set the drawing color to our variable with `color tongueColor`",
+            "solution": "color tongueColor"
+        },
+        {
+            "hint": "The tongue is a half-circle of radius 25, which we can draw with `arc 25, 0, 1`",
+            "solution": "arc 25, 0, 1"
+        },
+        {
+            "hint": "For the eyes, set the drawing color with `color faceColor`",
+            "solution": "color faceColor"
+        },
+        {
+            "hint": "Move into position for the eyes with `move -40, -80`",
+            "solution": "move -40, -80"
+        },
+        {
+            "hint": "The eye is then drawn with `circle 10`",
+            "solution": "circle 10"
+        },
+        {
+            "hint": "Move for the second eye with `move 80, 0`",
+            "solution": "move 80, 0"
+        },
+        {
+            "hint": "Draw the second eye with `circle 10`",
+            "solution": "circle 10"
+        },
+        {
+            "hint": "For our hands, were going to do something new: make a function. **Type** `hand = ->`",
+            "solution": "hand = ->"
+        },
+        {
+            "hint": "This indented block is where your function goes. Any time you call this function this entire block of code will run. Lets set the stroke for our hand with `stroke 10, darken(ghostColor, 10)`",
+            "solution": "    stroke 10, darken(ghostColor, 10)"
+        },
+        {
+            "hint": "Then draw the first of the three fingers with `line 20, 30`",
+            "solution": "    line 20, 30"
+        },
+        {
+            "hint": "Then the second with `line 0, 35`",
+            "solution": "    line 0, 35"
+        },
+        {
+            "hint": "The final finger with `line -20, 30`",
+            "solution": "    line -20, 30"
+        },
+        {
+            "hint": "Now to draw the hands: make sure you are out of the function block by pressing **BACKSPACE**. Then **type** `move 60, 100` for the first hand.",
+            "solution": "move 60, 100"
+        },
+        {
+            "hint": "Draw the hand at the current location with `hand()`",
+            "solution": "hand()"
+        },
+        {
+            "hint": "Move over to the left to draw the other hand with `move -200, 0`",
+            "solution": "move -200, 0"
+        },
+        {
+            "hint": "Draw the final hand with `hand()`",
+            "solution": "hand()"
+        }
+    ],
+    "completion_text": "Well done! You can change the color of your ghost by setting ghostColor, faceColor, and tongueColor to whatever you want.",
+    "cover": "mischiefweek2015/mw-005-ghost.png"
+}

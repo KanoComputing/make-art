@@ -1,40 +1,40 @@
 {
     "id": "dots",
-    "title": "Patrón de puntos",
-    "description": "¡Crea un patrón de puntos usando ciclos y círculos!",
+    "title": "Dots Pattern",
+    "description": "Create a fancy dots pattern using loops and circles!",
     "code": "",
     "startAt": 1,
     "steps": [
         {
-            "hint": "Configura el fondo a rojo",
+            "hint": "Set the background to red",
             "solution": "background red"
         },
         {
-            "hint": "Configura el trazo a 0",
+            "hint": "Set the stroke to 0",
             "solution": "stroke 0"
         },
         {
-            "hint": "Configura el color de dibujo a amarillo",
+            "hint": "Set the color to yellow",
             "solution": "color yellow"
         },
         {
-            "hint": "Ahora abre un ciclo - **escribe** `for x in [ 0 .. 25 ]`",
+            "hint": "Now open a loop - **type** `for x in [ 0 .. 25 ]`",
             "solution": "for x in [ 0..25 ]"
         },
         {
-            "hint": "Dentro del ciclo, abre un segundo ciclo - **escribe** `for y in [ 0 .. 25 ]`",
+            "hint": "Inside this loop, open a second loop - **type** `for y in [ 0 .. 25 ]`",
             "solution": "    for y in [ 0..25 ]"
         },
         {
-            "hint": "Múevete, **escribe** `moveTo x * 20, y * 20`",
+            "hint": "Move around, **type** `moveTo x * 20, y * 20`",
             "solution": "        moveTo x * 20, y * 20",
             "validate": "        moveTo x *\\* *20,y *\\* *20"
         },
         {
-            "hint": "Ahora para hacer los puntos - **escribe** `circle 6`",
+            "hint": "Now for the dots - **type** `circle 6`",
             "solution": "        circle 6"
         }
     ],
-    "completion_text": "¡Es matemático! Cambia el último número y fíjate lo que sucede.",
+    "completion_text": "Mathematical! Change the numbers and see what happens.",
     "cover": "dots.png"
 }

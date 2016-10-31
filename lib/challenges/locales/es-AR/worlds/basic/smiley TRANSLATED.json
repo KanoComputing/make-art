@@ -1,0 +1,50 @@
+{
+    "id": "smiley",
+    "title": "Tu primera cara",
+    "description": "Dibuja una cara",
+    "startAt": 2,
+    "steps": [
+        {
+            "hint": "Configura el color de dibujo a amarillo - **escribe** `color yellow`",
+            "solution": "color yellow"
+        },
+        {
+            "hint": "Elige un trazo fino y negro - **escribe** `stroke black, 20`",
+            "solution": "stroke black, 20"
+        },
+        {
+            "hint": "Dibuja un círculo de un tamaño de 200. Recuerda, círculo en inglés es circle",
+            "solution": "circle 200"
+        },
+        {
+            "hint": "Múevete 80 a la izquierda y 80 hacia arriba - **escribe** `move -80, -80`",
+            "solution": "move -80, -80"
+        },
+        {
+            "hint": "Configura el color de dibujo a negro",
+            "solution": "color black"
+        },
+        {
+            "hint": "Dibuja un círculo de un radio de 20",
+            "solution": "circle 20"
+        },
+        {
+            "hint": "Muévete 160 a la derecha - **escribe** `move 160`",
+            "solution": "move 160"
+        },
+        {
+            "hint": "Dibuja otro círculo de un tamaño de 20",
+            "solution": "circle 20"
+        },
+        {
+            "hint": "Muévete al centro y hacia abajo - en una nueva línea, **escribe** `moveTo 250, 270`",
+            "solution": "moveTo 250, 270"
+        },
+        {
+            "hint": "Un arco es la mitad de un círculo, y en inglés se dice arc. Podemos dibujarlo como si fuera la boca - **escribe** `arc 100, 1, 2`",
+            "solution": "arc 100, 1, 2"
+        }
+    ],
+    "completion_text": "¡Bien! ¡Sigue trabajando de esta manera, genio dibujante de caras!",
+    "cover": "smiley.png"
+}

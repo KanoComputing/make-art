@@ -1,54 +1,54 @@
 {
     "id": "stickman",
-    "title": "Hombre de palo",
-    "description": "Dibuja un hombre de palo usando círculos y líneas",
+    "title": "Stickman",
+    "description": "Draw a stickman using circles and lines",
     "startAt": 2,
     "steps": [
         {
-            "hint": "Configura el `trazo` a `negro` y de un tamaño de `10`",
+            "hint": "Set the `stroke` to `black` with a size of `10`",
             "solution": "stroke black, 10"
         },
         {
-            "hint": "Muévete hacia arriba, **escribe** `move 0, -50`",
+            "hint": "Move up on the canvas, **type** `move 0, -50`",
             "solution": "move 0, -50"
         },
         {
-            "hint": "Dibuja el cuerpo del hombre de palo - `line 0, 150`",
+            "hint": "Draw the stickman body - `line 0, 150`",
             "solution": "line 0, 150"
         },
         {
-            "hint": "Dibuja el brazo izquierdo del hombre de palo - `line -80, 120`",
+            "hint": "Draw the stickman left arm - `line -80, 120`",
             "solution": "line -80, 120"
         },
         {
-            "hint": "Bien, ahora el brazo derecho - `line 80, 120`",
+            "hint": "Good, now with the right arm - `line 80, 120`",
             "solution": "line 80, 120"
         },
         {
-            "hint": "Muévete hacia abajo, **escribe** `move 0, 150`",
+            "hint": "Move down, **type** `move 0, 150`",
             "solution": "move 0, 150"
         },
         {
-            "hint": "Dibuja la pierna izquierda del hombre de palo: `line -80, 120`",
+            "hint": "Draw the stickman left leg: `line -80, 120`",
             "solution": "line -80, 120"
         },
         {
-            "hint": "Bien, ahora la pierna derecha - `line 80, 120`",
+            "hint": "Good, now with the right leg - `line 80, 120`",
             "solution": "line 80, 120"
         },
         {
-            "hint": "Muévete a la parte de arriba del dibujo, **escribe** `moveTo 250, 100`",
+            "hint": "Move to the top of the drawing, **type** `moveTo 250, 100`",
             "solution": "moveTo 250, 100"
         },
         {
-            "hint": "Configura el trazo nuevamente a 0",
+            "hint": "Set the stroke back to 0",
             "solution": "stroke 0"
         },
         {
-            "hint": "Ahora para dibujar una figura con muchos lados - **escribe** `polygon -60, 50, 0, 100, 60, 50`",
+            "hint": "Now to draw a many sided shape - **type** `polygon -60, 50, 0, 100, 60, 50`",
             "solution": "polygon -60, 50, 0, 100, 60, 50"
         }
     ],
-    "completion_text": "¡Felicitaciones! El fondo tiene 500 de ancho y 500 de alto, hay que ser muy hábil para moverse dentro de él",
+    "completion_text": "Nice one! The canvas is 500 wide and 500 high, moving about on it is a skill!",
     "cover": "stickman.png"
 }

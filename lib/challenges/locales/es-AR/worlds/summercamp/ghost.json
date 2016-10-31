@@ -1,0 +1,91 @@
+{
+    "id": "ghost",
+    "title": "Ghost gathering",
+    "short_title": "Ghost",
+    "description": "Boo! As night falls, the spirits come out to play. A recent poll reported 87% of Chinese office workers believed in ghosts, and according to another report, 25% of Britons say they have seen a ghost. It’s getting dark, so it is hard to see, but we think we found a ghost! Maybe you can find out if it is friendly or not with your creative coding powers.",
+    "icon_class": "challenge_ghost",
+    "completion_text": "Spooky! Can you make the ghost scarier? Maybe if it could say \"Boo!\"...",
+    "difficulty": 2,
+    "cover": "summercamp/day_7.png",
+    "startAt": 6,
+    "summerCamp": true,
+    "rewards": null,
+    "steps": [
+        {
+            "hint": "Select a spooky color for the background - **type** `background darkpurple`",
+            "solution": "background darkpurple"
+        },
+        {
+            "hint": "Set the `stroke` to `0`, to avoid drawing lines",
+            "solution": "stroke 0"
+        },
+        {
+            "hint": "Set the `color` to `white` for the ghost",
+            "solution": "color white"
+        },
+        {
+            "hint": "Now draw an ellipse for the ghost's body - **type** `ellipse 120, 140`",
+            "solution": "ellipse 120, 140"
+        },
+        {
+            "hint": "Set the `color` to `black` for the eyes",
+            "solution": "color black"
+        },
+        {
+            "hint": "Move the cursor to draw the first eye - **type** `move -40, -50`",
+            "solution": "move -40, -50"
+        },
+        {
+            "hint": "Draw the eye with an ellipse - **type** `ellipse 20, 30`",
+            "solution": "ellipse 20, 30"
+        },
+        {
+            "hint": "Set the `color` to `lightgray`",
+            "solution": "color lightgray"
+        },
+        {
+            "hint": "Now draw a `circle` with a size of `5`",
+            "solution": "circle 5"
+        },
+        {
+            "hint": "Looking good! Now move the cursor to the right for the second eye - **type** `move 30`",
+            "solution": "move 30"
+        },
+        {
+            "hint": "Set the `color` back to `black` for the second eye",
+            "solution": "color black"
+        },
+        {
+            "hint": "Draw the second eye with an ellipse - **type** `ellipse 20, 30`",
+            "solution": "ellipse 20, 30"
+        },
+        {
+            "hint": "Set the `color` to `lightgray`",
+            "solution": "color lightgray"
+        },
+        {
+            "hint": "Draw a `circle` with size `5`",
+            "solution": "circle 5"
+        },
+        {
+            "hint": "Almost there! Set the `color` to `white`",
+            "solution": "color white"
+        },
+        {
+            "hint": "Now move the cursor to the bottom - **type** `move -80, 150`",
+            "solution": "move -80, 150"
+        },
+        {
+            "hint": "Let's open a loop - **type** `for i in [ 1 .. 5 ]`",
+            "solution": "for i in [ 1 .. 5 ]"
+        },
+        {
+            "hint": "Draw a `circle` with a size of `45`",
+            "solution": "    circle 45"
+        },
+        {
+            "hint": "And move the cursor slightly to the right - **type** `move 45`",
+            "solution": "    move 45"
+        }
+    ]
+}

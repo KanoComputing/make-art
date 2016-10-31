@@ -1,87 +1,87 @@
 {
     "id": "house",
-    "title": "Casa",
-    "description": "¡Dibuja una casa acogedora!",
+    "title": "House",
+    "description": "Draw a cosy house!",
     "code": "",
     "startAt": 1,
     "steps": [
         {
-            "hint": "¡Empecemos por el cielo! Configura el fondo a azul",
+            "hint": "Let's start with the sky! Set the `background` to `blue`",
             "solution": "background blue"
         },
         {
-            "hint": "Ahora configura el trazo a 0",
+            "hint": "Now set the stroke to 0",
             "solution": "stroke 0"
         },
         {
-            "hint": "Muévete hacia la izquierda y arriba, **escribe** `move -150, -50`",
+            "hint": "Move to the left and up, **type** `move -150, -50`",
             "solution": "move -150, -50"
         },
         {
-            "hint": "Ahora configura el color de dibujo a beige",
+            "hint": "Now set the color to beige",
             "solution": "color beige"
         },
         {
-            "hint": "Ahora dibuja un rectángulo, **escribe** `rectangle 300, 200`",
+            "hint": "Now draw rectangle, **type** `rectangle 300, 200`",
             "solution": "rectangle 300, 200"
         },
         {
-            "hint": "Muévete hacia la derecha y arriba, **escribe** `move 150, -100`",
+            "hint": "Move to the right and up, **type** `move 150, -100`",
             "solution": "move 150, -100"
         },
         {
-            "hint": "Configura el color de dibujo a rojo oscuro para el techo",
+            "hint": "Set the color to darkred for the roof",
             "solution": "color darkred"
         },
         {
-            "hint": "Ahora dibujemos el techo, **escribe** `polygon 170, 100, -170, 100`",
+            "hint": "Now let's draw the roof, **type** `polygon 170, 100, -170, 100`",
             "solution": "polygon 170, 100, -170, 100"
         },
         {
-            "hint": "Muévete hacia la izquierda y abajo, **escribe** `move -250, 300`",
+            "hint": "Move to the left and down, **type** `move -250, 300`",
             "solution": "move -250, 300"
         },
         {
-            "hint": "Ahora configura el color de dibujo a verde para hacer el césped",
+            "hint": "Now set the color to green for the grass",
             "solution": "color green"
         },
         {
-            "hint": "Dibuja un rectángulo para el césped con las siguientes medidas 500, 100",
+            "hint": "Draw rectangle for the grass, width a size of 500, 100",
             "solution": "rectangle 500, 100"
         },
         {
-            "hint": "Muévete hacia la derecha y arriba, **escribe** `move 220, -80`",
+            "hint": "Move to the right and up, **type** `move 220, -80`",
             "solution": "move 220, -80"
         },
         {
-            "hint": "Ahora configura el color de dibujo a marrón para hacer la puerta de madera",
+            "hint": "Now set the color to brown for the wooden door",
             "solution": "color brown"
         },
         {
-            "hint": "Dibuja un rectángulo para la puerta con las siguientes medidas 60, 80",
+            "hint": "Draw rectangle for the door, with a size of 60, 80",
             "solution": "rectangle 60, 80"
         },
         {
-            "hint": "Configura el color de dibujo a 'aqua' para las ventanas",
+            "hint": "Set the color to aqua for the windows",
             "solution": "color aqua"
         },
         {
-            "hint": "Muévete hacia la izquieda y arriba, **escribe** `move -80, -80`",
+            "hint": "Move to the left and up, **type** `move -80, -80`",
             "solution": "move -80, -80"
         },
         {
-            "hint": "Dibuja un cuadrado de 50 de tamaño,**escribe** `square 50`",
+            "hint": "Draw square with a size of 50",
             "solution": "square 50"
         },
         {
-            "hint": "Muévete hacia la derecha, **escribe** `move 170`",
+            "hint": "Move to the right, **type** `move 170`",
             "solution": "move 170"
         },
         {
-            "hint": "Dibuja otro cuadrado de 50 de tamaño",
+            "hint": "Draw square with a size of 50",
             "solution": "square 50"
         }
     ],
-    "completion_text": "¡Construiste una increíble casa usando códigos de programación!",
+    "completion_text": "You built an awesome house with code!",
     "cover": "house.png"
 }

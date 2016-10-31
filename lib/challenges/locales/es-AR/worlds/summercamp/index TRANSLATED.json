@@ -1,0 +1,26 @@
+{
+
+    "challenges": [
+        "./letrero_campamento",
+        "./camping",
+        "./carpa",
+        "./bandera",
+        "./insignia_campamento",
+        "./fogata",
+        "./fantasma",
+        "./mochila",
+        "./brujula",
+        "./camara",
+        "./oso",
+        "./linterna",
+        "./guitarra",
+        "./cine",
+        "./arco_y_flecha",
+        "./tenis_mesa",
+        "./pesca",
+        "./excursion",
+        "./recolectar",
+        "./arbol",
+        "./fuegos_artificiales"
+    ]
+}
