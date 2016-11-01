@@ -5,24 +5,24 @@
     "startAt": 2,
     "steps": [
         {
-            "hint": "⁄nicamente utilizaremos figuras sÛlidas sin trazo, entonces **escribe ** `stroke 0`.",
+            "hint": "√önicamente utilizaremos figuras s√≥lidas sin trazo, entonces **escribe ** `stroke 0`.",
             "solution": "stroke 0"
         },
         {
-            "hint": "Para ver mejores resultados en esta prueba activa la negrita del texto utilizando el comando `bold true` bold significa negrita y true verdadero, eso quiere decir que est· activado",
+            "hint": "Para ver mejores resultados en esta prueba activa la negrita del texto utilizando el comando `bold true` bold significa negrita y true verdadero, eso quiere decir que est√° activado",
             "solution": "bold true"
         },
         {
-            "hint": "Utilizaremos un ciclo para dibujar el atardecer. Esta vez ir· de 0 a 10. **Escribe ** `for y in [ 0 .. 10 ]`",
+            "hint": "Utilizaremos un ciclo para dibujar el atardecer. Esta vez ir√° de 0 a 10. **Escribe ** `for y in [ 0 .. 10 ]`",
             "solution": "for y in [ 0 .. 10 ]"
         },
         {
-            "hint": "Para entender mejor cÛmo funciona un ciclo, vamos a dibujar cada uno de los valores del ciclo. M˙evete a la posiciÛn usando `moveTo 250, y * 50`",
+            "hint": "Para entender mejor c√≥mo funciona un ciclo, vamos a dibujar cada uno de los valores del ciclo. M√∫evete a la posici√≥n usando `moveTo 250, y * 50`",
             "solution": "    moveTo 250, y * 50",
             "validate": "    moveTo 250, y \\* 50"
         },
         {
-            "hint": "Vamos a inspeccionar quÈ hace nuestro ciclo. La funciÛn de texto (text en inglÈs) nos permitir· verlo. **Escribe ** `text y` para ver los valores de y a travÈs de la pantalla.",
+            "hint": "Vamos a inspeccionar qu√© hace nuestro ciclo. La funci√≥n de texto (text en ingl√©s) nos permitir√° verlo. **Escribe ** `text y` para ver los valores de y a trav√©s de la pantalla.",
             "solution": "    text y",
             "validate": "    text y"
         },
@@ -32,17 +32,17 @@
             "validate": "    moveTo 0, y \\* 50"
         },
         {
-            "hint": "Utilizaremos una funciÛn especial para ir oscureciendo el color en cada valor del ciclo. **Escribe ** `color darken blue, y * 3`.",
+            "hint": "Utilizaremos una funci√≥n especial para ir oscureciendo el color en cada valor del ciclo. **Escribe ** `color darken blue, y * 3`.",
             "solution": "    color darken blue, y * 3",
             "validate": "    color darken blue, y \\* 3"
         },
         {
-            "hint": "Ahora para el cielo haremos rect·ngulos que ocupan toda la pantalla, cubrir·n los n˙meros. **Escribe ** `rectangle 500, 50`.",
+            "hint": "Ahora para el cielo haremos rect√°ngulos que ocupan toda la pantalla, cubrir√°n los n√∫meros. **Escribe ** `rectangle 500, 50`.",
             "solution": "    rectangle 500, 50",
             "validate": "    rectangle 500, 50"
         }
     ],
-    "completion_text": "°QuÈ bonito! Observa cÛmo se va oscureciendo el azul en tu pantalla. Los valores que aparecieron para la variable y fueron tapados por la funciÛn de orcurecer. A medida que aumentaba el valor de y, el color azul se fue oscureciendo.",
+    "completion_text": "¬°Qu√© bonito! Observa c√≥mo se va oscureciendo el azul en tu pantalla. Los valores que aparecieron para la variable y fueron tapados por la funci√≥n de orcurecer. A medida que aumentaba el valor de y, el color azul se fue oscureciendo.",
     "gallery": {
         "cover_path": "/assets/challenges/images/pixelremixes/",
         "remixes": [
@@ -52,5 +52,5 @@
         ]
     },
     "cover": "pixel-gradient.png",
-    "guide": "#### Nuevas palabras\n**bold** state | bold true\n\nPuede configurar si el texto ser· escrito en formato negrita o no. True significa verdadero y activa la negrita. False significa falso, lo cual desactiva la negrita en el texto.\n\n**text** string | text ‚Äúhola mundo‚Äù\n\nDibuja texto centrado en donde se ubique el cursor de dibujo. Las propiedades del texto se controlan con funciones de color, fuernte, negrita y cursiva.\n\n\n#### Lo que crear·s\n1. ⁄nicamente utilizaremos figuras sÛlidas sin trazo, entonces **escribe ** `stroke 0`.\n2. Para ver mejores resultados en esta prueba activa la negrita del texto utilizando el comando `bold true` bold significa negrita y true verdadero, eso quiere decir que est· activado\n3. Utilizaremos un ciclo para dibujar el atardecer. Esta vez ir· de 0 a 10. **escribe ** `for y in [ 0 .. 10 ]`\n4. Para entender mejor cÛmo funciona un ciclo, vamos a dibujar cada uno de los valores del ciclo. M˙evete a la posiciÛn usando `moveTo 250, y * 50`\n5. Vamos a inspeccionar quÈ hace nuestro ciclo. La funciÛn de texto (text en inglÈs) nos permitir· verlo. **Escribe ** `text y` para ver los valores de y a travÈs de la pantalla.\n6. La variable y crece a medida que avanza el ciclo. Va de 0 (que se encuentra fuera de la pantalla) a 10. Para dibujar el atardecer necesitamos movernos al borde izquierdo. **Escribe ** `moveTo 0, y * 50`\n7. Utilizaremos una funciÛn especial para ir oscureciendo el color en cada valor del ciclo. **Escribe ** `color darken blue, y * 3`.\n8. Ahora para el cielo haremos rect·ngulos que ocupan toda la pantalla, cubrir·n los n˙meros. **Escribe ** `rectangle 500, 50`.\n\n\n#### Lo que hackear·s\nAhora que ya tienes amplia experiencia en arte en pÌxeles øpor quÈ no traes aquÌ tus creaciones y les damos el tratamiento de fondo que se merecen?\n\n#### Resumiendo\nCon un ciclo puedes pedirle a la computadora que repita algo una y otra vez. Con el ciclo `for`, puedes perdirle que lo haga una determinada cantidad de veces.\n\nPara el atardecer, queremos dibujar bloques rectangulares del mismo tamaÒo y queremos movernos hacia abajo una determinada distancia cada vez que se dibuje uno. Pero esta vez, necesitamos comunicarle a la computadora que queremos que tengan un color diferente, øcÛmo lo hacemos? con variables. El modo en el que puedes preguntar cu·ntas veces el ciclo se ejecutÛ es con una palabra con la que comiences el ciclo. Cuando escribimos `for y in [ 0 .. 10]`, estamos convirtiendo a la palabra `y` igual a la cantidad de veces que se ha ejecutado el contenido del ciclo. En cualquier momento que se utilice la variable `y`, le dir· al programa cu·ntas veces se ha repetido.\n\nComo aumenta de a un n˙mero por vez, podemos utilizarla para viajar a travÈs de la sombra de los colores oscureciendo de a un tono el color a medida que crece la variable y. Entonces al comienzo del ciclo tendremos un valor pequeÒo para y y un color regular, hacia el final tendremos un valor m·s grande para y y un color m·s oscuro.\n\n"
+    "guide": "#### Nuevas palabras\n**bold** state | bold true\n\nPuede configurar si el texto ser√° escrito en formato negrita o no. True significa verdadero y activa la negrita. False significa falso, lo cual desactiva la negrita en el texto.\n\n**text** string | text √¢‚Ç¨≈ìhola mundo√¢‚Ç¨¬ù\n\nDibuja texto centrado en donde se ubique el cursor de dibujo. Las propiedades del texto se controlan con funciones de color, fuernte, negrita y cursiva.\n\n\n#### Lo que crear√°s\n1. √önicamente utilizaremos figuras s√≥lidas sin trazo, entonces **escribe ** `stroke 0`.\n2. Para ver mejores resultados en esta prueba activa la negrita del texto utilizando el comando `bold true` bold significa negrita y true verdadero, eso quiere decir que est√° activado\n3. Utilizaremos un ciclo para dibujar el atardecer. Esta vez ir√° de 0 a 10. **escribe ** `for y in [ 0 .. 10 ]`\n4. Para entender mejor c√≥mo funciona un ciclo, vamos a dibujar cada uno de los valores del ciclo. M√∫evete a la posici√≥n usando `moveTo 250, y * 50`\n5. Vamos a inspeccionar qu√© hace nuestro ciclo. La funci√≥n de texto (text en ingl√©s) nos permitir√° verlo. **Escribe ** `text y` para ver los valores de y a trav√©s de la pantalla.\n6. La variable y crece a medida que avanza el ciclo. Va de 0 (que se encuentra fuera de la pantalla) a 10. Para dibujar el atardecer necesitamos movernos al borde izquierdo. **Escribe ** `moveTo 0, y * 50`\n7. Utilizaremos una funci√≥n especial para ir oscureciendo el color en cada valor del ciclo. **Escribe ** `color darken blue, y * 3`.\n8. Ahora para el cielo haremos rect√°ngulos que ocupan toda la pantalla, cubrir√°n los n√∫meros. **Escribe ** `rectangle 500, 50`.\n\n\n#### Lo que hackear√°s\nAhora que ya tienes amplia experiencia en arte en p√≠xeles ¬øpor qu√© no traes aqu√≠ tus creaciones y les damos el tratamiento de fondo que se merecen?\n\n#### Resumiendo\nCon un ciclo puedes pedirle a la computadora que repita algo una y otra vez. Con el ciclo `for`, puedes perdirle que lo haga una determinada cantidad de veces.\n\nPara el atardecer, queremos dibujar bloques rectangulares del mismo tama√±o y queremos movernos hacia abajo una determinada distancia cada vez que se dibuje uno. Pero esta vez, necesitamos comunicarle a la computadora que queremos que tengan un color diferente, ¬øc√≥mo lo hacemos? con variables. El modo en el que puedes preguntar cu√°ntas veces el ciclo se ejecut√≥ es con una palabra con la que comiences el ciclo. Cuando escribimos `for y in [ 0 .. 10]`, estamos convirtiendo a la palabra `y` igual a la cantidad de veces que se ha ejecutado el contenido del ciclo. En cualquier momento que se utilice la variable `y`, le dir√° al programa cu√°ntas veces se ha repetido.\n\nComo aumenta de a un n√∫mero por vez, podemos utilizarla para viajar a trav√©s de la sombra de los colores oscureciendo de a un tono el color a medida que crece la variable y. Entonces al comienzo del ciclo tendremos un valor peque√±o para y y un color regular, hacia el final tendremos un valor m√°s grande para y y un color m√°s oscuro.\n\n"
 }

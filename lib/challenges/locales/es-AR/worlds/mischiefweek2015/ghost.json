@@ -1,33 +1,33 @@
 {
     "id": "ghost",
     "title": "Fantasma",
-    "description": "Dibuja tu propio fantasma ¡Cámbiale los colores!",
+    "description": "Dibuja tu propio fantasma Â¡CÃ¡mbiale los colores!",
     "start_date": "2015-10-30T06:00:00",
     "code": "ghostColor = '#809B79'\nfaceColor = '#634E42'\ntongueColor = '#7A5750'\n",
     "startAt": 0,
     "steps": [
         {
-            "hint": "Necesitamos configurar algunas variables para el color del fantasma, ghost en inglés - **Escribe** `ghostColor = '#809B79'`",
+            "hint": "Necesitamos configurar algunas variables para el color del fantasma, ghost en inglÃ©s - **Escribe** `ghostColor = '#809B79'`",
             "solution": "ghostColor = '#809B79'"
         },
         {
-            "hint": "Otra variable para la cara, face en inglés - **Escribe** `faceColor = '#634E42'`",
+            "hint": "Otra variable para la cara, face en inglÃ©s - **Escribe** `faceColor = '#634E42'`",
             "solution": "faceColor = '#634E42'"
         },
         {
-            "hint": "Finalmente una variable para la lengua, tongue en inglés - **Escribe** `tongueColor = '#7A5750'`",
+            "hint": "Finalmente una variable para la lengua, tongue en inglÃ©s - **Escribe** `tongueColor = '#7A5750'`",
             "solution": "tongueColor = '#7A5750'"
         },
         {
-            "hint": "Usaremos figuras sólidas, sin trazo `stroke 0`",
+            "hint": "Usaremos figuras sÃ³lidas, sin trazo `stroke 0`",
             "solution": "stroke 0"
         },
         {
-            "hint": "Nuestro fantasma dejará una estala por detrás que necesitamos dibujar primero. Configuraremos el color un tono más oscuro con `color darken(ghostColor, 10)`",
+            "hint": "Nuestro fantasma dejarÃ¡ una estala por detrÃ¡s que necesitamos dibujar primero. Configuraremos el color un tono mÃ¡s oscuro con `color darken(ghostColor, 10)`",
             "solution": "color darken(ghostColor, 10)"
         },
         {
-            "hint": "Muévete a la posición donde estará la estela con `move 0, 60`",
+            "hint": "MuÃ©vete a la posiciÃ³n donde estarÃ¡ la estela con `move 0, 60`",
             "solution": "move 0, 60"
         },
         {
@@ -39,7 +39,7 @@
             "solution": "color ghostColor"
         },
         {
-            "hint": "Ahora múevete otra vez hacia arriba y al centro para hacer el cuerpo con `move 0, -60`",
+            "hint": "Ahora mÃºevete otra vez hacia arriba y al centro para hacer el cuerpo con `move 0, -60`",
             "solution": "move 0, -60"
         },
         {
@@ -51,19 +51,19 @@
             "solution": "color faceColor"
         },
         {
-            "hint": "Ahora múevete hacia la posición de la boca con `move -40, 10`",
+            "hint": "Ahora mÃºevete hacia la posiciÃ³n de la boca con `move -40, 10`",
             "solution": "move -40, 10"
         },
         {
-            "hint": "Dibuja un rectángulo para la boca con `rectangle 80, 35`",
+            "hint": "Dibuja un rectÃ¡ngulo para la boca con `rectangle 80, 35`",
             "solution": "rectangle 80, 35"
         },
         {
-            "hint": "Los dientes son polígonos. **Pista:** puedes copiar y pegar esto: `polygon 10, -10, 20, 0, 30, -10, 40, 0, 50, -10, 60, 0, 70, -10, 80, 0`",
+            "hint": "Los dientes son polÃ­gonos. **Pista:** puedes copiar y pegar esto: `polygon 10, -10, 20, 0, 30, -10, 40, 0, 50, -10, 60, 0, 70, -10, 80, 0`",
             "solution": "polygon 10, -10, 20, 0, 30, -10, 40, 0, 50, -10, 60, 0, 70, -10, 80, 0"
         },
         {
-            "hint": "Ahora para la lengua, múevete a la parte de arriba de la boca con `move 40, 35`",
+            "hint": "Ahora para la lengua, mÃºevete a la parte de arriba de la boca con `move 40, 35`",
             "solution": "move 40, 35"
         },
         {
@@ -71,7 +71,7 @@
             "solution": "color tongueColor"
         },
         {
-            "hint": "La lengua es la mitad de un círculo de un radio de 25, el cual podemos dibujar con `arc 25, 0, 1`",
+            "hint": "La lengua es la mitad de un cÃ­rculo de un radio de 25, el cual podemos dibujar con `arc 25, 0, 1`",
             "solution": "arc 25, 0, 1"
         },
         {
@@ -79,7 +79,7 @@
             "solution": "color faceColor"
         },
         {
-            "hint": "Múevete a la posición de los ojos `move -40, -80`",
+            "hint": "MÃºevete a la posiciÃ³n de los ojos `move -40, -80`",
             "solution": "move -40, -80"
         },
         {
@@ -87,7 +87,7 @@
             "solution": "circle 10"
         },
         {
-            "hint": "Múevete para el segundo ojo con `move 80, 0`",
+            "hint": "MÃºevete para el segundo ojo con `move 80, 0`",
             "solution": "move 80, 0"
         },
         {
@@ -95,11 +95,11 @@
             "solution": "circle 10"
         },
         {
-            "hint": "Para las manos, hands en inglés, vamos a hacer algo nuevo: crear una función. **Escribe** `hand = ->`",
+            "hint": "Para las manos, hands en inglÃ©s, vamos a hacer algo nuevo: crear una funciÃ³n. **Escribe** `hand = ->`",
             "solution": "hand = ->"
         },
         {
-            "hint": "Cada vez que ingreses esta función, ejecutará todos los comandos que escribiremos a continuación. Congiguremos el trazo para dibujar la mano con `stroke 10, darken(ghostColor, 10)`",
+            "hint": "Cada vez que ingreses esta funciÃ³n, ejecutarÃ¡ todos los comandos que escribiremos a continuaciÃ³n. Congiguremos el trazo para dibujar la mano con `stroke 10, darken(ghostColor, 10)`",
             "solution": "    stroke 10, darken(ghostColor, 10)"
         },
         {
@@ -115,22 +115,22 @@
             "solution": "    line -20, 30"
         },
         {
-            "hint": "Ahora para dibujar las manos asegúrate de estar fuera de la función presionando la tecla **BORRAR**. Luego **Escribe** `move 60, 100` para la primera mano.",
+            "hint": "Ahora para dibujar las manos asegÃºrate de estar fuera de la funciÃ³n presionando la tecla **BORRAR**. Luego **Escribe** `move 60, 100` para la primera mano.",
             "solution": "move 60, 100"
         },
         {
-            "hint": "Dibuja la mano en la pisición actual con `hand()`",
+            "hint": "Dibuja la mano en la pisiciÃ³n actual con `hand()`",
             "solution": "hand()"
         },
         {
-            "hint": "Múevete hacia la izquierda para dibujar la otra mano con `move -200, 0`",
+            "hint": "MÃºevete hacia la izquierda para dibujar la otra mano con `move -200, 0`",
             "solution": "move -200, 0"
         },
         {
-            "hint": "Dibuja la última mano con `hand()`",
+            "hint": "Dibuja la Ãºltima mano con `hand()`",
             "solution": "hand()"
         }
     ],
-    "completion_text": "¡Bien hecho! Puedes cambiar el color de tu fantasma configurando otros colores que quieras para las variables ghostColor, faceColor, y tongueColor.",
+    "completion_text": "Â¡Bien hecho! Puedes cambiar el color de tu fantasma configurando otros colores que quieras para las variables ghostColor, faceColor, y tongueColor.",
     "cover": "mischiefweek2015/mw-005-ghost.png"
 }

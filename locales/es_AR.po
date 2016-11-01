@@ -92,7 +92,7 @@ msgstr "¡Crea una tarjeta para el Día del Padre!"
 
 #: challenges.browse_more
 msgid "Browse more"
-msgstr "Buscar nás"
+msgstr "Buscar más"
 
 #: challenges.certificate
 msgid "Certificate"

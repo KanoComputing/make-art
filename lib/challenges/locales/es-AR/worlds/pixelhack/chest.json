@@ -6,7 +6,7 @@
     "startAt": 2,
     "steps": [
         {
-            "hint": "Los Juegos de Rol se convirtieron en uno de los gÈneros de videojuegos m·s populares de los aÒos 80. Uno de los objetos m·s comunes de estos juegos es el cofre, empecemos por ambientar el escenario configurando el color del fondo **escribe** `background darkslategray`",
+            "hint": "Los Juegos de Rol se convirtieron en uno de los g√©neros de videojuegos m√°s populares de los a√±os 80. Uno de los objetos m√°s comunes de estos juegos es el cofre, empecemos por ambientar el escenario configurando el color del fondo **escribe** `background darkslategray`",
             "solution": "background darkslategray"
         },
         {
@@ -14,15 +14,15 @@
             "solution": "stroke 0"
         },
         {
-            "hint": "Posiciona el cursor en la esquina izquierda de arriba donde estar· ubicado el cofre - **escribe** `move -150,-100`",
+            "hint": "Posiciona el cursor en la esquina izquierda de arriba donde estar√° ubicado el cofre - **escribe** `move -150,-100`",
             "solution": "move -150,-100"
         },
         {
-            "hint": "Configura el color a dorado para dar la impresiÛn de riquezas dentro del cofre **escribe** `color gold`",
+            "hint": "Configura el color a dorado para dar la impresi√≥n de riquezas dentro del cofre **escribe** `color gold`",
             "solution": "color gold"
         },
         {
-            "hint": "Vamos a determinar el tamaÒo de cofre para reducir las figuras que dibujaremos a ese espacio, primero dibuja el borde dorado con un rect·ngulo de 300 por 200 de tamaÒo",
+            "hint": "Vamos a determinar el tama√±o de cofre para reducir las figuras que dibujaremos a ese espacio, primero dibuja el borde dorado con un rect√°ngulo de 300 por 200 de tama√±o",
             "solution": "rectangle 300,200"
         },
         {
@@ -30,19 +30,19 @@
             "solution": "color lightyellow"
         },
         {
-            "hint": "En el arte en 8-bits, los detalles simples significan mucho para el objeto, agrega un rect·ngulo de 25 por 100 para darle brillo al dorado",
+            "hint": "En el arte en 8-bits, los detalles simples significan mucho para el objeto, agrega un rect√°ngulo de 25 por 100 para darle brillo al dorado",
             "solution": "rectangle 25,100"
         },
         {
-            "hint": "Mueve el cursor y prep·rate para dibujar la parte de madera del cofre **escribe** `move 25,0`",
+            "hint": "Mueve el cursor y prep√°rate para dibujar la parte de madera del cofre **escribe** `move 25,0`",
             "solution": "move 25,0"
         },
         {
-            "hint": "Cambia el color de dibujo a marrÛn **escribe** `color brown`",
+            "hint": "Cambia el color de dibujo a marr√≥n **escribe** `color brown`",
             "solution": "color brown"
         },
         {
-            "hint": "Usaremos marrÛn sobre el dorado asÌ parece que un borde dorado mantiene unidas las tablas de madera del cofre **escribe** `rectangle 250,175`",
+            "hint": "Usaremos marr√≥n sobre el dorado as√≠ parece que un borde dorado mantiene unidas las tablas de madera del cofre **escribe** `rectangle 250,175`",
             "solution": "rectangle 250,175"
         },
         {
@@ -54,7 +54,7 @@
             "solution": "color gold"
         },
         {
-            "hint": "Dibuja la tapa con un rect·ngulo de 250 por 25",
+            "hint": "Dibuja la tapa con un rect√°ngulo de 250 por 25",
             "solution": "rectangle 250,25"
         },
         {
@@ -62,7 +62,7 @@
             "solution": "color lightyellow"
         },
         {
-            "hint": "Continua con los efectos dibujando un cuadrado de 25 de tamaÒo",
+            "hint": "Continua con los efectos dibujando un cuadrado de 25 de tama√±o",
             "solution": "square 25"
         },
         {
@@ -74,23 +74,23 @@
             "solution": "color gold"
         },
         {
-            "hint": "Dibuja un rect·ngulo de 100 por 75",
+            "hint": "Dibuja un rect√°ngulo de 100 por 75",
             "solution": "rectangle 100,75"
         },
         {
-            "hint": "MuÈvete para terminar la cerradura **escribe** `move 25,25`",
+            "hint": "Mu√©vete para terminar la cerradura **escribe** `move 25,25`",
             "solution": "move 25,25"
         },
         {
-            "hint": "Configura el color a marrÛn oscuro",
+            "hint": "Configura el color a marr√≥n oscuro",
             "solution": "color darkbrown"
         },
         {
-            "hint": "Por ˙ltimo, dibuja un rect·ngulo de 50 por 75",
+            "hint": "Por √∫ltimo, dibuja un rect√°ngulo de 50 por 75",
             "solution": "rectangle 50,75"
         }
     ],
-    "completion_text": "Ese cofre se ve genial, °me pregunto quÈ esconder· dentro!",
+    "completion_text": "Ese cofre se ve genial, ¬°me pregunto qu√© esconder√° dentro!",
     "gallery": {
         "cover_path": "/assets/challenges/images/pixelremixes/",
         "remixes": [
@@ -100,5 +100,5 @@
         ]
     },
     "cover": "pixel-chest.png",
-    "guide": "#### Nuevas palabras\n**square** size | square 25\n\nEsta es una versiÛn m·s corta del rect·ngulo \n\n#### Lo que crear·s\n1. Los Juegos de Rol se convirtieron en uno de los gÈneros de videojuegos m·s populares de los aÒos 80. Uno de los objetos m·s comunes de estos juegos es el cofre, empecemos por ambientar el escenario configurando el color del fondo **escribe** `background darkslategray`\n2. Luego configuremos el trazo a 0 **escribe** `stroke 0`\n3. Posiciona el cursor en la esquina izquierda de arriba donde estar· ubicado el cofre - **escribe** `move -150,-100`\n4. Configura el color a dorado para dar la impresiÛn de riquezas dentro del cofre **escribe** `color gold`\n5. Vamos a determinar el tamaÒo de cofre para reducir las figuras que dibujaremos a ese espacio, primero dibuja el borde dorado con un rect·ngulo de 300 por 200 de tamaÒo\n6. Ahora vamos a realzar el color dorado **escribe** `color lightyellow`\n7. En el arte en 8-bits, los detalles simples significan mucho para el objeto, agrega un rect·ngulo de 25 por 100 para darle brillo al dorado\n8. Mueve el cursor y prep·rate para dibujar la parte de madera del cofre **escribe** `move 25,0`\n9. Cambia el color de dibujo a marrÛn **escribe** `color brown`\n10. Usaremos marrÛn sobre el dorado asÌ parece que un borde dorado mantiene unidas las tablas de madera del cofre **escribe** `rectangle 250,175`\n11. Mueve el cursor para dividir el cofre dibujando la tapa **escribe** `move 0,60`\n12. Cambia el `color` a dorado\n13. Dibuja la tapa con un rect·ngulo de 250 por 25\n14. Ahora continuaremos con los efectos para realzar los colores **escribe** `color lightyellow`\n15. Continua con los efectos dibujando un cuadrado de 25 de tamaÒo\n16. Finalmente, lo terminaremos dibujando una cerradura, mueve el cursor al medio del cofre **escribe** `move 75,-25`\n17. Configura el `color` a dorado para que combine con el borde\n18. Dibuja un rect·ngulo de 100 por 75\n19. MuÈvete para terminar la cerradura **escribe** `move 25,25`\n20. Configura el color a marrÛn oscuro\n21. Por ˙ltimo, dibuja un rect·ngulo de 50 por 75\n\n#### Lo que hackear·s\nAl cambiar los colores y agregar formas puedes generar un clima particular alrededor de tu cofre. Para algo m·s complejo, cambia los comandos para que tu cofre este abierto y se vea alg˙n premio dentro.\n\n#### Resumiendo \nEl cofre ha aparecido en muchos videojuegos. Predominantemente en los juegos de Legend of Zelda, donde escondÌan desde pequeÒos premios de dinero hasta poderosas armas y herramientas. Lo que contenga este cofre, depende de tÌ. Cuando termines de crearlo, ·brelo y colÛcale dentro el premio que se te ocurra.\n"
+    "guide": "#### Nuevas palabras\n**square** size | square 25\n\nEsta es una versi√≥n m√°s corta del rect√°ngulo \n\n#### Lo que crear√°s\n1. Los Juegos de Rol se convirtieron en uno de los g√©neros de videojuegos m√°s populares de los a√±os 80. Uno de los objetos m√°s comunes de estos juegos es el cofre, empecemos por ambientar el escenario configurando el color del fondo **escribe** `background darkslategray`\n2. Luego configuremos el trazo a 0 **escribe** `stroke 0`\n3. Posiciona el cursor en la esquina izquierda de arriba donde estar√° ubicado el cofre - **escribe** `move -150,-100`\n4. Configura el color a dorado para dar la impresi√≥n de riquezas dentro del cofre **escribe** `color gold`\n5. Vamos a determinar el tama√±o de cofre para reducir las figuras que dibujaremos a ese espacio, primero dibuja el borde dorado con un rect√°ngulo de 300 por 200 de tama√±o\n6. Ahora vamos a realzar el color dorado **escribe** `color lightyellow`\n7. En el arte en 8-bits, los detalles simples significan mucho para el objeto, agrega un rect√°ngulo de 25 por 100 para darle brillo al dorado\n8. Mueve el cursor y prep√°rate para dibujar la parte de madera del cofre **escribe** `move 25,0`\n9. Cambia el color de dibujo a marr√≥n **escribe** `color brown`\n10. Usaremos marr√≥n sobre el dorado as√≠ parece que un borde dorado mantiene unidas las tablas de madera del cofre **escribe** `rectangle 250,175`\n11. Mueve el cursor para dividir el cofre dibujando la tapa **escribe** `move 0,60`\n12. Cambia el `color` a dorado\n13. Dibuja la tapa con un rect√°ngulo de 250 por 25\n14. Ahora continuaremos con los efectos para realzar los colores **escribe** `color lightyellow`\n15. Continua con los efectos dibujando un cuadrado de 25 de tama√±o\n16. Finalmente, lo terminaremos dibujando una cerradura, mueve el cursor al medio del cofre **escribe** `move 75,-25`\n17. Configura el `color` a dorado para que combine con el borde\n18. Dibuja un rect√°ngulo de 100 por 75\n19. Mu√©vete para terminar la cerradura **escribe** `move 25,25`\n20. Configura el color a marr√≥n oscuro\n21. Por √∫ltimo, dibuja un rect√°ngulo de 50 por 75\n\n#### Lo que hackear√°s\nAl cambiar los colores y agregar formas puedes generar un clima particular alrededor de tu cofre. Para algo m√°s complejo, cambia los comandos para que tu cofre este abierto y se vea alg√∫n premio dentro.\n\n#### Resumiendo \nEl cofre ha aparecido en muchos videojuegos. Predominantemente en los juegos de Legend of Zelda, donde escond√≠an desde peque√±os premios de dinero hasta poderosas armas y herramientas. Lo que contenga este cofre, depende de t√≠. Cuando termines de crearlo, √°brelo y col√≥cale dentro el premio que se te ocurra.\n"
 }

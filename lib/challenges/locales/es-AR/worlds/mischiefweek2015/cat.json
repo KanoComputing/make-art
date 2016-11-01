@@ -5,14 +5,14 @@
     "description": "Crea un gato misterioso programando",
     "start_date": "2015-10-27T06:00:00",
     "startAt": 2,
-    "completion_text": "Buen trabajo ¡hiciste un gato negro súper misterioso!Intenta cambiarle el color, también el de su cola. No olvides compartir tu gato cuando termines.",
+    "completion_text": "Buen trabajo Â¡hiciste un gato negro sÃºper misterioso!Intenta cambiarle el color, tambiÃ©n el de su cola. No olvides compartir tu gato cuando termines.",
     "steps": [
         {
             "hint": "Podemos hacer del fondo algo negro y escalofriante **escribiendo** `background black`.",
             "solution": "background black"
         },
         {
-            "hint": "Configura el trazo a 0 así evitamos dibujar líneas. **Escribe** `stroke 0`",
+            "hint": "Configura el trazo a 0 asÃ­ evitamos dibujar lÃ­neas. **Escribe** `stroke 0`",
             "solution": "stroke 0"
         },
         {
@@ -20,19 +20,19 @@
             "solution": "color lightgray"
         },
         {
-            "hint": "Dibuja un círculo grande para la luna. **Escribe** `circle 230`.",
+            "hint": "Dibuja un cÃ­rculo grande para la luna. **Escribe** `circle 230`.",
             "solution": "circle 230"
         },
         {
-            "hint": "Ahora múevete hacia abajo para poder dibujar el césped. **Escribe** `moveTo 250, 500`.",
+            "hint": "Ahora mÃºevete hacia abajo para poder dibujar el cÃ©sped. **Escribe** `moveTo 250, 500`.",
             "solution": "moveTo 250, 500"
         },
         {
-            "hint": "Es de noche, por eso usaremos un verde oscuro para el césped. **Escribe** `color darkgreen`.",
+            "hint": "Es de noche, por eso usaremos un verde oscuro para el cÃ©sped. **Escribe** `color darkgreen`.",
             "solution": "color darkgreen"
         },
         {
-            "hint": "Dibujemos una loma cubierta de césped usando un elipse. **Escribe** `ellipse 300, 100`",
+            "hint": "Dibujemos una loma cubierta de cÃ©sped usando un elipse. **Escribe** `ellipse 300, 100`",
             "solution": "ellipse 300, 100"
         },
         {
@@ -52,15 +52,15 @@
             "solution": "moveTo 280, 220"
         },
         {
-            "hint": "¡Vamos a usar la función polygon para dibujarle una linda y punteaguda oreja! **Escribe** `polygon 0, -40, 28, 20, close`.",
+            "hint": "Â¡Vamos a usar la funciÃ³n polygon para dibujarle una linda y punteaguda oreja! **Escribe** `polygon 0, -40, 28, 20, close`.",
             "solution": "polygon 0, -40, 28, 20, close"
         },
         {
-            "hint": "Múevete hacia la izquierda para poder dibujar la otra oreja. **Escribe** `move -60`.",
+            "hint": "MÃºevete hacia la izquierda para poder dibujar la otra oreja. **Escribe** `move -60`.",
             "solution": "move -60"
         },
         {
-            "hint": "¡Esta oreja es un reflejo de la anterior! **Escribe** `polygon 0, -40, -28, 20, close`.",
+            "hint": "Â¡Esta oreja es un reflejo de la anterior! **Escribe** `polygon 0, -40, -28, 20, close`.",
             "solution": "polygon 0, -40, -28, 20, close"
         },
         {
@@ -68,7 +68,7 @@
             "solution": "moveTo 250, 310"
         },
         {
-            "hint": "¡Dibújalo usando un elipse! **Escribe** `ellipse 30, 50`.",
+            "hint": "Â¡DibÃºjalo usando un elipse! **Escribe** `ellipse 30, 50`.",
             "solution": "ellipse 30, 50"
         },
         {
@@ -76,15 +76,15 @@
             "solution": "moveTo 250, 360"
         },
         {
-            "hint": "¡Usaremos un elipse más grande esta vez! **Escribe** `ellipse 50, 60`.",
+            "hint": "Â¡Usaremos un elipse mÃ¡s grande esta vez! **Escribe** `ellipse 50, 60`.",
             "solution": "ellipse 50, 60"
         },
         {
-            "hint": "¡Ahora necesitamos movernos hacia abajo y a la derecha para hacerle la cola! **escribe** `moveTo 320, 380`.",
+            "hint": "Â¡Ahora necesitamos movernos hacia abajo y a la derecha para hacerle la cola! **escribe** `moveTo 320, 380`.",
             "solution": "moveTo 320, 380"
         },
         {
-            "hint": "Vamos a usar un truco con la función text para hacerle una cola curva. **Escribe** `font 150`.",
+            "hint": "Vamos a usar un truco con la funciÃ³n text para hacerle una cola curva. **Escribe** `font 150`.",
             "solution": "font 150"
         },
         {
@@ -92,7 +92,7 @@
             "solution": "bold true"
         },
         {
-            "hint": "¡Bien! Ahora dibuja la cola **escribiendo** `text 'S'`.",
+            "hint": "Â¡Bien! Ahora dibuja la cola **escribiendo** `text 'S'`.",
             "solution": "text 'S'"
         },
         {
@@ -100,7 +100,7 @@
             "solution": "moveTo 225, 250"
         },
         {
-            "hint": "Configura el color a amarillo, yellow en inglés. **Escribe** `color yellow`.",
+            "hint": "Configura el color a amarillo, yellow en inglÃ©s. **Escribe** `color yellow`.",
             "solution": "color yellow"
         },
         {
@@ -112,11 +112,11 @@
             "solution": "color black"
         },
         {
-            "hint": "Dibuja un círculo de un radio de 6. **Escribe** `circle 6`.",
+            "hint": "Dibuja un cÃ­rculo de un radio de 6. **Escribe** `circle 6`.",
             "solution": "circle 6"
         },
         {
-            "hint": "¡Genial! Ahora múevete hacia la derecha para dibujar el otro ojo. **Escribe** `moveTo 275, 250`.",
+            "hint": "Â¡Genial! Ahora mÃºevete hacia la derecha para dibujar el otro ojo. **Escribe** `moveTo 275, 250`.",
             "solution": "moveTo 275, 250"
         },
         {
@@ -132,7 +132,7 @@
             "solution": "color black"
         },
         {
-            "hint": "Por último, dibuja la segunda pupila. **Escribe** `circle 6`.",
+            "hint": "Por Ãºltimo, dibuja la segunda pupila. **Escribe** `circle 6`.",
             "solution": "circle 6"
         }
     ]

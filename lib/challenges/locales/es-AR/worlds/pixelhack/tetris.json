@@ -14,27 +14,27 @@
             "solution": "moveTo 150,200"
         },
         {
-            "hint": "Necesitamos usar colores para diferenciar las piezas, cambia el color de relleno de las piezas usando la funciÛn 'color' **escribe** `color crimson`",
+            "hint": "Necesitamos usar colores para diferenciar las piezas, cambia el color de relleno de las piezas usando la funci√≥n 'color' **escribe** `color crimson`",
             "solution": "color crimson"
         },
         {
-            "hint": "Primero dibujaremos una pieza con forma de L usando dos rect·ngulos, en inglÈs es rectangle **escribe** `rectangle 50,150`",
+            "hint": "Primero dibujaremos una pieza con forma de L usando dos rect√°ngulos, en ingl√©s es rectangle **escribe** `rectangle 50,150`",
             "solution": "rectangle 50,150"
         },
         {
-            "hint": "Nuestras piezas se encuentran en una grilla conformada por celdas de 50x50, por eso notar·s que todos nuestros comandos move o de movimiento ser·n m˙ltiplos de 50  **escribe** `move 0,100`",
+            "hint": "Nuestras piezas se encuentran en una grilla conformada por celdas de 50x50, por eso notar√°s que todos nuestros comandos move o de movimiento ser√°n m√∫ltiplos de 50  **escribe** `move 0,100`",
             "solution": "move 0,100"
         },
         {
-            "hint": "Termina la pieza con un rect·ngulo de 100,50",
+            "hint": "Termina la pieza con un rect√°ngulo de 100,50",
             "solution": "rectangle 100,50"
         },
         {
-            "hint": "Mov·monos para empezar la siguiente pieza **escribe** `move 50,-100`",
+            "hint": "Mov√°monos para empezar la siguiente pieza **escribe** `move 50,-100`",
             "solution": "move 50,-100"
         },
         {
-            "hint": "Vamos a cambiar el color para diferenciarla de la anterior. La funciÛn 'color' afecta a todas las figuras que dibujemos despuÈs de escribirla **escribe** `color seagreen`",
+            "hint": "Vamos a cambiar el color para diferenciarla de la anterior. La funci√≥n 'color' afecta a todas las figuras que dibujemos despu√©s de escribirla **escribe** `color seagreen`",
             "solution": "color seagreen"
         },
         {
@@ -42,11 +42,11 @@
             "solution": "rectangle 50,100"
         },
         {
-            "hint": "MuÈvete un espacio en diagonal hacia abajo en la grilla **escribe** `move 50,50`",
+            "hint": "Mu√©vete un espacio en diagonal hacia abajo en la grilla **escribe** `move 50,50`",
             "solution": "move 50,50"
         },
         {
-            "hint": "Para terminar la forma de S crearemos otro rect·ngulo de 50 por 100, utiliza rectangle para el comando",
+            "hint": "Para terminar la forma de S crearemos otro rect√°ngulo de 50 por 100, utiliza rectangle para el comando",
             "solution": "rectangle 50,100"
         },
         {
@@ -54,11 +54,11 @@
             "solution": "move 50,-100"
         },
         {
-            "hint": "Cambiemos el color de dibujo a indigo °se dice igual en inglÈs! **escribe** `color indigo`",
+            "hint": "Cambiemos el color de dibujo a indigo ¬°se dice igual en ingl√©s! **escribe** `color indigo`",
             "solution": "color indigo"
         },
         {
-            "hint": "Luego dibujaremos aquella pieza larga y delgada, dibuja un rect·ngulo de 50 por 200",
+            "hint": "Luego dibujaremos aquella pieza larga y delgada, dibuja un rect√°ngulo de 50 por 200",
             "solution": "rectangle 50,200"
         },
         {
@@ -70,11 +70,11 @@
             "solution": "color gold"
         },
         {
-            "hint": "Otra pieza con forma de L encajarÌa perfecto **escribe** `rectangle 150,50`",
+            "hint": "Otra pieza con forma de L encajar√≠a perfecto **escribe** `rectangle 150,50`",
             "solution": "rectangle 150,50"
         },
         {
-            "hint": "M˙evete al pie de la L **escribe** `move 100,0`",
+            "hint": "M√∫evete al pie de la L **escribe** `move 100,0`",
             "solution": "move 100,0"
         },
         {
@@ -82,7 +82,7 @@
             "solution": "rectangle 50,100"
         }
     ],
-    "completion_text": "Bien hecho, creaste un amontonamiento de piezas de Tetris, øpor quÈ no intentar cambiarles el color o dibujar algunas m·s para cubrir la pantalla?",
+    "completion_text": "Bien hecho, creaste un amontonamiento de piezas de Tetris, ¬øpor qu√© no intentar cambiarles el color o dibujar algunas m√°s para cubrir la pantalla?",
     "gallery": {
         "cover_path": "/assets/challenges/images/pixelremixes/",
         "remixes": [
@@ -92,5 +92,5 @@
         ]
     },
     "cover": "pixel-tetris.png",
-    "guide": "#### Nuevas palabras\n**color** nombre | color red\n\nCambia el color de dibujo. Todas las prÛximas figuras ser·n dibujadas con el color que configures hasta que lo cambies nuevamente. Para configurar el color de dibujo a transparente, escribe, `color null`\n\n#### Lo que crear·s\n1. Tetris (1984) fue el primer videojuego en ser exportado de la URSS a EEUU, vendiendo 170 milliones de copias. Haremos algunas piezas de Tetris, primero configuremos el trazo a 0 **escribe** `stroke 0`\n2. Luego mueve el cursor al punto de partida de la primera pieza que dibujaremos **escribe** `moveTo 150,200`\n3. Necesitamos usar colores para diferenciar las piezas, cambia el color de relleno de las piezas usando la funciÛn 'color' **escribe** `color crimson`\n4. Primero dibujaremos una pieza con forma de L usando dos rect·ngulos, en inglÈs es rectangle **escribe** `rectangle 50,150`\n5. Nuestras piezas se encuentran en una grilla conformada por celdas de 50x50, por eso notar·s que todos nuestros comandos de movimiento ser·n m˙ltiplos de 50  **escribe** `move 0,100`\n6. Termina la pieza con un rect·ngulo de 100,50\n7. Mov·monos para empezar la siguiente pieza **escribe** `move 50,-100`\n8. Vamos a cambiar el color para diferenciarla de la anterior. La funciÛn 'color' afecta a todas las figuras que dibujemos despuÈs de escribirla **escribe** `color seagreen`\n9. Luego dibujaremos la pieza con forma de S **escribe** `rectangle 50,100`\n10. MuÈvete un espacio en diagonal hacia abajo en la grilla **escribe** `move 50,50`\n11. Para terminar la forma de S crearemos otro rect·ngulo de 50 por 100, utiliza rectangle para el comando\n12. Avancemos a la siguiente pieza **escribe** `move 50,-100`\n13. Cambiemos el color de dibujo a indigo °se dice igual en inglÈs! **escribe** `color indigo`\n14. Luego dibujaremos aquella pieza larga y delgada, dibuja un rect·ngulo de 50 por 200\n15. Nos queda una pieza para completar el cuadrado **escribe** `move -150,0`\n16. Cambiemos el color a dorado para destacarla\n17. Otra pieza con forma de L encajarÌa perfecto **escribe** `rectangle 150,50`\n18. M˙evete al pie de la L **escribe** `move 100,0`\n19. Completa el pie **escribe** `rectangle 50,100`\n\n#### Lo que hackear·s\nAhora crear·s un cubo, elige el color que t˙ quieras y agrega m·s piezas.\n\n#### Resumiento \nTetris (1984) fue el primer videojuego en ser exportado de la URSS a EEUU, vendiendo 170 milliones de copias. Haremos algunas piezas de Tetris, las cuales se llaman tetrimonios. Cada tetrimonio est· formado por cuatro cuadrados que se conectan para crear diferentes formas. En el juego, los tetrimonios caen sin parar y el objetivo es hacerlos encajar evitando dejar espacios vacÌos entre ellos.\n"
+    "guide": "#### Nuevas palabras\n**color** nombre | color red\n\nCambia el color de dibujo. Todas las pr√≥ximas figuras ser√°n dibujadas con el color que configures hasta que lo cambies nuevamente. Para configurar el color de dibujo a transparente, escribe, `color null`\n\n#### Lo que crear√°s\n1. Tetris (1984) fue el primer videojuego en ser exportado de la URSS a EEUU, vendiendo 170 milliones de copias. Haremos algunas piezas de Tetris, primero configuremos el trazo a 0 **escribe** `stroke 0`\n2. Luego mueve el cursor al punto de partida de la primera pieza que dibujaremos **escribe** `moveTo 150,200`\n3. Necesitamos usar colores para diferenciar las piezas, cambia el color de relleno de las piezas usando la funci√≥n 'color' **escribe** `color crimson`\n4. Primero dibujaremos una pieza con forma de L usando dos rect√°ngulos, en ingl√©s es rectangle **escribe** `rectangle 50,150`\n5. Nuestras piezas se encuentran en una grilla conformada por celdas de 50x50, por eso notar√°s que todos nuestros comandos de movimiento ser√°n m√∫ltiplos de 50  **escribe** `move 0,100`\n6. Termina la pieza con un rect√°ngulo de 100,50\n7. Mov√°monos para empezar la siguiente pieza **escribe** `move 50,-100`\n8. Vamos a cambiar el color para diferenciarla de la anterior. La funci√≥n 'color' afecta a todas las figuras que dibujemos despu√©s de escribirla **escribe** `color seagreen`\n9. Luego dibujaremos la pieza con forma de S **escribe** `rectangle 50,100`\n10. Mu√©vete un espacio en diagonal hacia abajo en la grilla **escribe** `move 50,50`\n11. Para terminar la forma de S crearemos otro rect√°ngulo de 50 por 100, utiliza rectangle para el comando\n12. Avancemos a la siguiente pieza **escribe** `move 50,-100`\n13. Cambiemos el color de dibujo a indigo ¬°se dice igual en ingl√©s! **escribe** `color indigo`\n14. Luego dibujaremos aquella pieza larga y delgada, dibuja un rect√°ngulo de 50 por 200\n15. Nos queda una pieza para completar el cuadrado **escribe** `move -150,0`\n16. Cambiemos el color a dorado para destacarla\n17. Otra pieza con forma de L encajar√≠a perfecto **escribe** `rectangle 150,50`\n18. M√∫evete al pie de la L **escribe** `move 100,0`\n19. Completa el pie **escribe** `rectangle 50,100`\n\n#### Lo que hackear√°s\nAhora crear√°s un cubo, elige el color que t√∫ quieras y agrega m√°s piezas.\n\n#### Resumiento \nTetris (1984) fue el primer videojuego en ser exportado de la URSS a EEUU, vendiendo 170 milliones de copias. Haremos algunas piezas de Tetris, las cuales se llaman tetrimonios. Cada tetrimonio est√° formado por cuatro cuadrados que se conectan para crear diferentes formas. En el juego, los tetrimonios caen sin parar y el objetivo es hacerlos encajar evitando dejar espacios vac√≠os entre ellos.\n"
 }

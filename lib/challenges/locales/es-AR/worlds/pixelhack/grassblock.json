@@ -1,11 +1,11 @@
 {
     "id": "grassblock",
     "title": "Bloque de hierba en 8-bits",
-    "description": "Crea un bloque que podrÌas trasladar a Minecraft.",
+    "description": "Crea un bloque que podr√≠as trasladar a Minecraft.",
     "startAt": 1,
     "steps": [
         {
-            "hint": "⁄nicamente utilizaremos figuras sÛlidas sin trazo. Entonces **escribe** `stroke 0`.",
+            "hint": "√önicamente utilizaremos figuras s√≥lidas sin trazo. Entonces **escribe** `stroke 0`.",
             "solution": "stroke 0"
         },
         {
@@ -18,7 +18,7 @@
             "validate": "    for y in \\[0 ... 16\\]"
         },
         {
-            "hint": "Utilizaremos un tono de marrÛn elegido aleatoriamente para representar la tierra. **Escribe** `color darken brown, random 0, 25`",
+            "hint": "Utilizaremos un tono de marr√≥n elegido aleatoriamente para representar la tierra. **Escribe** `color darken brown, random 0, 25`",
             "solution": "        color darken brown, random 0, 25",
             "validate": "        color darken brown, random 0, 25"
         },
@@ -33,12 +33,12 @@
             "validate": "        square 32"
         },
         {
-            "hint": "El cÈsped deberÌa aparecer en la parte de arriba del bloque por eso determinemos una condiciÛn que posiciones a los bits verdes utilizando `if 4 >  y + random 0, 3`",
+            "hint": "El c√©sped deber√≠a aparecer en la parte de arriba del bloque por eso determinemos una condici√≥n que posiciones a los bits verdes utilizando `if 4 >  y + random 0, 3`",
             "solution": "        if 4 > y + random 0, 3",
             "validate": "        if 4 > y \\+ random 0, 3"
         },
         {
-            "hint": "Configura el color verde con la funciÛn para oscurecer.**Escribe** `color darken green, random 0, 25`",
+            "hint": "Configura el color verde con la funci√≥n para oscurecer.**Escribe** `color darken green, random 0, 25`",
             "solution": "            color darken green, random 0, 25",
             "validate": "            color darken green, random 0, 25"
         },
@@ -48,7 +48,7 @@
             "validate": "            square 32"
         }
     ],
-    "completion_text": "°Muy bonito! Ahora puedes cambiar el color marrÛn y el verde para obtener efectos interesantes. øPuedes hacer un bloque que se parezca a una frutilla?",
+    "completion_text": "¬°Muy bonito! Ahora puedes cambiar el color marr√≥n y el verde para obtener efectos interesantes. ¬øPuedes hacer un bloque que se parezca a una frutilla?",
     "gallery": {
         "cover_path": "/assets/challenges/images/pixelremixes/",
         "remixes": [
@@ -58,5 +58,5 @@
         ]
     },
     "cover": "pixel-grassblock.png",
-    "guide": "#### Lo que crear·s\n1. ⁄nicamente utilizaremos figuras sÛlidas sin trazo. Entonces **escribe** `stroke 0`.\n2. Precisamos dos ciclos para este dibujo. **Escribe** `for x in [0 ... 16]`\n3. Para y utiliza `for y in [0 ... 16]`\n4. Utilizaremos un tono de marrÛn elegido aleatoriamente para representar la tierra. **Escribe** `color darken brown, random 0, 25`\n5. Necesitaremos movernos para cada cuadrado utilizando `moveTo x * 31.25, y * 31.25`\n6. Finalmente dibujemos los cuadrados de tierra utilizando `square 32`\n7. El cÈsped deberÌa aparecer en la parte de arriba del bloque por eso determinemos una condiciÛn que posicione los bits verdes utilizando  `if 4 >  y + random 0, 3`\n8. Configura el color verde con la funciÛn para oscurecer. **Escribe** `color darken green, random 0, 25`\n9. Finalmente dibuja los cuadrados utilizando `square 32`\n\n#### Lo que hackear·s\nPara personalizar este bloque de hierba de Mineraft todo lo que debes hacer es cambiar dos variables: el color de arriba y el color de abajo. Crea una frutilla, un bloque de agua, o de cualquier otra cosa ˙nicamente cambiando esas dos lÌneas de comandos. Para aÒadir complejidad, crea un bloque de micelio usando un ciclo y la funciÛn aleatoria. Si de verdad buscas un desafÌo, intenta incorporar lo que aprendimos en el dibujo anterior y utiliza los valores de x e y para rotar los tonos de los colores.\n\n#### Resumiendo \nUno de los bloques m·s comunes y b·sicos en minecraft es el de hierba. ⁄nicamente 16 cuadrados hacia arriba y hacia abajo, es una imagen muy simple, pero utilizaremos la funciÛn aleatoria para darle textura. Dibujaremos dos capas distintas, la del cÈsped y la de la tierra.\n\nEn cada capa utilizaremos un ciclo para dibujar horizontal y verticalmente a travÈs de la pantalla y ˙nicamente cambiaremos una cosa de cada una: el color.\n"
+    "guide": "#### Lo que crear√°s\n1. √önicamente utilizaremos figuras s√≥lidas sin trazo. Entonces **escribe** `stroke 0`.\n2. Precisamos dos ciclos para este dibujo. **Escribe** `for x in [0 ... 16]`\n3. Para y utiliza `for y in [0 ... 16]`\n4. Utilizaremos un tono de marr√≥n elegido aleatoriamente para representar la tierra. **Escribe** `color darken brown, random 0, 25`\n5. Necesitaremos movernos para cada cuadrado utilizando `moveTo x * 31.25, y * 31.25`\n6. Finalmente dibujemos los cuadrados de tierra utilizando `square 32`\n7. El c√©sped deber√≠a aparecer en la parte de arriba del bloque por eso determinemos una condici√≥n que posicione los bits verdes utilizando  `if 4 >  y + random 0, 3`\n8. Configura el color verde con la funci√≥n para oscurecer. **Escribe** `color darken green, random 0, 25`\n9. Finalmente dibuja los cuadrados utilizando `square 32`\n\n#### Lo que hackear√°s\nPara personalizar este bloque de hierba de Mineraft todo lo que debes hacer es cambiar dos variables: el color de arriba y el color de abajo. Crea una frutilla, un bloque de agua, o de cualquier otra cosa √∫nicamente cambiando esas dos l√≠neas de comandos. Para a√±adir complejidad, crea un bloque de micelio usando un ciclo y la funci√≥n aleatoria. Si de verdad buscas un desaf√≠o, intenta incorporar lo que aprendimos en el dibujo anterior y utiliza los valores de x e y para rotar los tonos de los colores.\n\n#### Resumiendo \nUno de los bloques m√°s comunes y b√°sicos en minecraft es el de hierba. √önicamente 16 cuadrados hacia arriba y hacia abajo, es una imagen muy simple, pero utilizaremos la funci√≥n aleatoria para darle textura. Dibujaremos dos capas distintas, la del c√©sped y la de la tierra.\n\nEn cada capa utilizaremos un ciclo para dibujar horizontal y verticalmente a trav√©s de la pantalla y √∫nicamente cambiaremos una cosa de cada una: el color.\n"
 }

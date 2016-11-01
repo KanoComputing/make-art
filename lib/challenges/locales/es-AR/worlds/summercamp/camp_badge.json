@@ -3,8 +3,8 @@
     "title": "Insignia de Campamento",
     "short_title": "Insignia de Campamento",
     "icon_class": "challenge_badge",
-    "description": "La insignia o medalla de primeros auxilios es la más popular en los campamentos de verano. De hecho, 6.9 millones de Scouts la han obtenido desde 1911. Las otras más populares son las de Ciencias, Búsqueda y Rescate y nuestra favorita, ¡la de Programación y Diseño de Juegos! También existen otras más extrañas. Por ejemplo, la de Transporte en Camiones: imagina que tienes que cargar en un camión 300 kilos de mercadería de un pueblo a otro. Tu pedido debe llegar en el transcurso de tres días. También la de Ciencias Nucleares: prepara dos platos de comida, uno con alimentos irradiados y otro no, luego compara el gusto y las texturas.",
-    "completion_text": "Esta insignia distingirá tu campamento de otros. Sorprende al mundo con una creación asombrosa.",
+    "description": "La insignia o medalla de primeros auxilios es la mÃ¡s popular en los campamentos de verano. De hecho, 6.9 millones de Scouts la han obtenido desde 1911. Las otras mÃ¡s populares son las de Ciencias, BÃºsqueda y Rescate y nuestra favorita, Â¡la de ProgramaciÃ³n y DiseÃ±o de Juegos! TambiÃ©n existen otras mÃ¡s extraÃ±as. Por ejemplo, la de Transporte en Camiones: imagina que tienes que cargar en un camiÃ³n 300 kilos de mercaderÃ­a de un pueblo a otro. Tu pedido debe llegar en el transcurso de tres dÃ­as. TambiÃ©n la de Ciencias Nucleares: prepara dos platos de comida, uno con alimentos irradiados y otro no, luego compara el gusto y las texturas.",
+    "completion_text": "Esta insignia distingirÃ¡ tu campamento de otros. Sorprende al mundo con una creaciÃ³n asombrosa.",
     "cover": "summercamp/day_5.png",
     "difficulty": 1,
     "startAt": 4,
@@ -17,39 +17,39 @@
             "solution": "background black"
         },
         {
-            "hint": "Configura el `color` de la insignia a celeste o `lightblue` en inglés",
+            "hint": "Configura el `color` de la insignia a celeste o `lightblue` en inglÃ©s",
             "solution": "color lightblue"
         },
         {
-            "hint": "Configura el trazo para el primer círculo - **escribe** `stroke red, 20`",
+            "hint": "Configura el trazo para el primer cÃ­rculo - **escribe** `stroke red, 20`",
             "solution": "stroke red, 20"
         },
         {
-            "hint": "Dibuja un círculo o `circle` en inglés, de un tamaño de `200`",
+            "hint": "Dibuja un cÃ­rculo o `circle` en inglÃ©s, de un tamaÃ±o de `200`",
             "solution": "circle 200"
         },
         {
-            "hint": "Configura el trazo para el segundo círculo  - **escribe** `stroke yellow, 20`",
+            "hint": "Configura el trazo para el segundo cÃ­rculo  - **escribe** `stroke yellow, 20`",
             "solution": "stroke yellow, 20"
         },
         {
-            "hint": "Dibújalo usando `circle` de un tamaño de `190`",
+            "hint": "DibÃºjalo usando `circle` de un tamaÃ±o de `190`",
             "solution": "circle 190"
         },
         {
-            "hint": "Configura el trazo, `stroke`, para el tercer círculo a violeta o `purple` en inglés y de un tamaño de `20`",
+            "hint": "Configura el trazo, `stroke`, para el tercer cÃ­rculo a violeta o `purple` en inglÃ©s y de un tamaÃ±o de `20`",
             "solution": "stroke purple, 20"
         },
         {
-            "hint": "Dibújalo usando `circle` de un tamaño de `180`",
+            "hint": "DibÃºjalo usando `circle` de un tamaÃ±o de `180`",
             "solution": "circle 180"
         },
         {
-            "hint": "Agrega decoración. Configura el `color` a verde o `green`",
+            "hint": "Agrega decoraciÃ³n. Configura el `color` a verde o `green`",
             "solution": "color green"
         },
         {
-            "hint": "Un arco es mitad de un círculo, dibuja uno que encaje en el círculo - **escribe** `arc 180, 1, 2`",
+            "hint": "Un arco es mitad de un cÃ­rculo, dibuja uno que encaje en el cÃ­rculo - **escribe** `arc 180, 1, 2`",
             "solution": "arc 180, 1, 2"
         }
     ]

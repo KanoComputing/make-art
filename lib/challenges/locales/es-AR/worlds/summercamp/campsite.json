@@ -2,9 +2,9 @@
     "id": "campsite",
     "title": "Dibuja tu Camping",
     "short_title": "Camping",
-    "description": "Es hora de buscar un lugar agradable para tu campamento. Lo m·s importante a la hora de buscar sitio para acampar es que sea un terreno llano. Si es posible, que haya alguna fuente de agua cerca, esto facilitar· el momento de la cocina y la limpieza. Finalmente, aseg˙rate de que este rodeado de algunos ·rboles, ya que son una buena fuente de protecciÛn del sol cuando quema fuerte.  \nTus amigos querr·n ver cÛmo se ve tu camping, cuando tengas uno en mente °dib˙jalo! Puedes programar el lugar donde te estar·s quedando las prÛximas semanas.",
+    "description": "Es hora de buscar un lugar agradable para tu campamento. Lo m√°s importante a la hora de buscar sitio para acampar es que sea un terreno llano. Si es posible, que haya alguna fuente de agua cerca, esto facilitar√° el momento de la cocina y la limpieza. Finalmente, aseg√∫rate de que este rodeado de algunos √°rboles, ya que son una buena fuente de protecci√≥n del sol cuando quema fuerte.  \nTus amigos querr√°n ver c√≥mo se ve tu camping, cuando tengas uno en mente ¬°dib√∫jalo! Puedes programar el lugar donde te estar√°s quedando las pr√≥ximas semanas.",
     "icon_class": "challenge_location",
-    "completion_text": "°El camping se ve genial! Intenta agregar m·s ·rboles, flores, piedras... øtal vez una cerca?",
+    "completion_text": "¬°El camping se ve genial! Intenta agregar m√°s √°rboles, flores, piedras... ¬øtal vez una cerca?",
     "cover": "summercamp/day_2.png",
     "difficulty": 1,
     "startAt": 1,
@@ -14,23 +14,23 @@
     },
     "steps": [
         {
-            "hint": "Hoy es un hermoso dÌa - **escribe** `background blue`",
+            "hint": "Hoy es un hermoso d√≠a - **escribe** `background blue`",
             "solution": "background blue"
         },
         {
-            "hint": "Configura el trazo a 0 para evitar dibujar lÌneas - **escribe** `stroke 0`",
+            "hint": "Configura el trazo a 0 para evitar dibujar l√≠neas - **escribe** `stroke 0`",
             "solution": "stroke 0"
         },
         {
-            "hint": "Mueve el cursor a donde se ubicar· el sol - **escribe** `moveTo 400, 50`",
+            "hint": "Mueve el cursor a donde se ubicar√° el sol - **escribe** `moveTo 400, 50`",
             "solution": "moveTo 400, 50"
         },
         {
-            "hint": "Configura el `color` del sol a amarillo, `yellow` en inglÈs",
+            "hint": "Configura el `color` del sol a amarillo, `yellow` en ingl√©s",
             "solution": "color yellow"
         },
         {
-            "hint": "Dibuja el sol con un cÌrculo - **escribe** `circle 40`",
+            "hint": "Dibuja el sol con un c√≠rculo - **escribe** `circle 40`",
             "solution": "circle 40"
         },
         {
@@ -50,39 +50,39 @@
             "solution": "color aquamarine"
         },
         {
-            "hint": "Mueve el cursor a donde se ubicar· el lago  - **escribe** `moveTo 0, 190`",
+            "hint": "Mueve el cursor a donde se ubicar√° el lago  - **escribe** `moveTo 0, 190`",
             "solution": "moveTo 0, 190"
         },
         {
-            "hint": "Dibuja el lago usando un simple rect·ngulo - **escribe** `rectangle 500, 310`",
+            "hint": "Dibuja el lago usando un simple rect√°ngulo - **escribe** `rectangle 500, 310`",
             "solution": "rectangle 500, 310"
         },
         {
-            "hint": "Configura el `color` a verde o `green` en inglÈs, para el cÈsped",
+            "hint": "Configura el `color` a verde o `green` en ingl√©s, para el c√©sped",
             "solution": "color green"
         },
         {
-            "hint": "Mueve el cursor antes de dibujar el cÈsped - **escribe** `moveTo 250, 700`",
+            "hint": "Mueve el cursor antes de dibujar el c√©sped - **escribe** `moveTo 250, 700`",
             "solution": "moveTo 250, 700"
         },
         {
-            "hint": "Dibuja el cÈsped con un cÌrculo - **escribe** `circle 500`",
+            "hint": "Dibuja el c√©sped con un c√≠rculo - **escribe** `circle 500`",
             "solution": "circle 500"
         },
         {
-            "hint": "Se ve un poco vacÌo, vamos a dibujar un ·rbol - **escribe** `moveTo 120, 300`",
+            "hint": "Se ve un poco vac√≠o, vamos a dibujar un √°rbol - **escribe** `moveTo 120, 300`",
             "solution": "moveTo 120, 300"
         },
         {
-            "hint": "Configura el `color` del tronco a marrÛn o `brown`",
+            "hint": "Configura el `color` del tronco a marr√≥n o `brown`",
             "solution": "color brown"
         },
         {
-            "hint": "Dibuja el tronco del ·rbol usando un rect·ngulo - **escribe** `rectangle 15, 100`",
+            "hint": "Dibuja el tronco del √°rbol usando un rect√°ngulo - **escribe** `rectangle 15, 100`",
             "solution": "rectangle 15, 100"
         },
         {
-            "hint": "Ahora posiciÛnate para dibujar la copa del ·rbol - **escribe** `move 8, -120`",
+            "hint": "Ahora posici√≥nate para dibujar la copa del √°rbol - **escribe** `move 8, -120`",
             "solution": "move 8, -120"
         },
         {
@@ -90,7 +90,7 @@
             "solution": "color darkgreen"
         },
         {
-            "hint": "Dibuja la copa del ·rbol con un trÌangulo usando el comando `polygon` - **escribe** `polygon -40, 160, 40, 160`",
+            "hint": "Dibuja la copa del √°rbol con un tr√≠angulo usando el comando `polygon` - **escribe** `polygon -40, 160, 40, 160`",
             "solution": "polygon -40, 160, 40, 160"
         }
     ]

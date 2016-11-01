@@ -3,16 +3,16 @@
     "title": "Pesca",
     "short_title": "Pesca",
     "icon_class": "challenge_fishing",
-    "description": "¡Es hora de ir a pescar! Dentro del lago del campamento hay trucha, bagre y perca nadando por un bocado. Toma tu caña de pescar, alguna carnada y encamínate hacia al lago para la aventura de hoy.",
+    "description": "Â¡Es hora de ir a pescar! Dentro del lago del campamento hay trucha, bagre y perca nadando por un bocado. Toma tu caÃ±a de pescar, alguna carnada y encamÃ­nate hacia al lago para la aventura de hoy.",
     "cover": "summercamp/day_17.png",
-    "completion_text": "¡Buen trabajo! Cada vez que presionas una tecla, la imagen se re-dibuja. Intenta mantener apretada la barra espaciadora y fíjate cómo se mueven las olas. Además intenta agregar algún pez o hacer que desaparezca el corcho. ",
+    "completion_text": "Â¡Buen trabajo! Cada vez que presionas una tecla, la imagen se re-dibuja. Intenta mantener apretada la barra espaciadora y fÃ­jate cÃ³mo se mueven las olas. AdemÃ¡s intenta agregar algÃºn pez o hacer que desaparezca el corcho. ",
     "difficulty": 2,
     "startAt": 0,
     "summerCamp": true,
     "rewards": null,
     "steps": [
         {
-            "hint": "¡Es un día soleado! Configura el fondo a celeste - **escribe** `background lightblue`",
+            "hint": "Â¡Es un dÃ­a soleado! Configura el fondo a celeste - **escribe** `background lightblue`",
             "solution": "background lightblue"
         },
         {
@@ -20,11 +20,11 @@
             "solution": "color null"
         },
         {
-            "hint": "Nuestras olas serán de un azul oscuro - **escribe** `stroke darkblue, 8`",
+            "hint": "Nuestras olas serÃ¡n de un azul oscuro - **escribe** `stroke darkblue, 8`",
             "solution": "stroke darkblue, 8"
         },
         {
-            "hint": "Mueve el cursor al punto izquierdo en el cual empezarán - **escribe** `moveTo 10, 250`",
+            "hint": "Mueve el cursor al punto izquierdo en el cual empezarÃ¡n - **escribe** `moveTo 10, 250`",
             "solution": "moveTo 10, 250"
         },
         {
@@ -32,7 +32,7 @@
             "solution": "for i in [1 .. 25]"
         },
         {
-            "hint": "Crea las olas como partes de un arco de un radio de 20 píxeles - **escribe** `arc 20, 0.8, 0.2`",
+            "hint": "Crea las olas como partes de un arco de un radio de 20 pÃ­xeles - **escribe** `arc 20, 0.8, 0.2`",
             "solution": "    arc 20, 0.8, 0.2"
         },
         {
@@ -40,7 +40,7 @@
             "solution": "    move (random 24, 32)"
         },
         {
-            "hint": "Presiona ENTER y la tecla borrar para salir del ciclo.\n\nLuego múevete al sitio donde dibujaremos el resto del agua - **escribe** `moveTo 0, 270`.",
+            "hint": "Presiona ENTER y la tecla borrar para salir del ciclo.\n\nLuego mÃºevete al sitio donde dibujaremos el resto del agua - **escribe** `moveTo 0, 270`.",
             "solution": "moveTo 0, 270"
         },
         {
@@ -48,11 +48,11 @@
             "solution": "color darkblue"
         },
         {
-            "hint": "Dibuja un rectángulo con `rectangle` hazlo de un tamaño de `500` píxeles de alto y `250` píxeles de ancho",
+            "hint": "Dibuja un rectÃ¡ngulo con `rectangle` hazlo de un tamaÃ±o de `500` pÃ­xeles de alto y `250` pÃ­xeles de ancho",
             "solution": "rectangle 500, 250"
         },
         {
-            "hint": "Vamos a prepararnos y agregar algunas olas pequeñas - **escribe** `stroke blue, 2`",
+            "hint": "Vamos a prepararnos y agregar algunas olas pequeÃ±as - **escribe** `stroke blue, 2`",
             "solution": "stroke blue, 2"
         },
         {
@@ -60,23 +60,23 @@
             "solution": "for i in [1 .. 100]"
         },
         {
-            "hint": "Mueve cada ola a una posición aleatoria en la superficie del agua - **escribe** `moveTo (random 0, 500), (random 260, 500)`",
+            "hint": "Mueve cada ola a una posiciÃ³n aleatoria en la superficie del agua - **escribe** `moveTo (random 0, 500), (random 260, 500)`",
             "solution": "    moveTo (random 0, 500), (random 260, 500)"
         },
         {
-            "hint": "Ahora dibuja cada ola pequeña como si fuera un arco - **escribe** `arc 10, 0.8, 0.2`",
+            "hint": "Ahora dibuja cada ola pequeÃ±a como si fuera un arco - **escribe** `arc 10, 0.8, 0.2`",
             "solution": "    arc 10, 0.8, 0.2"
         },
         {
-            "hint": "¡Brillante! ¡Cada vez que presiones la barra espaciadora, nuevas olas aparecerán en lugares aleatorios, le da un efecto de movimiento al agua!\n\nPara poder pescar algo necesitamos una caña de pescar - Sal del ciclo y **escribe** `stroke brown, 10`.",
+            "hint": "Â¡Brillante! Â¡Cada vez que presiones la barra espaciadora, nuevas olas aparecerÃ¡n en lugares aleatorios, le da un efecto de movimiento al agua!\n\nPara poder pescar algo necesitamos una caÃ±a de pescar - Sal del ciclo y **escribe** `stroke brown, 10`.",
             "solution": "stroke brown, 10"
         },
         {
-            "hint": "Ahora múevete al punto donde dibujaremos el final de la caña - **escribe** `moveTo 300, 100`",
+            "hint": "Ahora mÃºevete al punto donde dibujaremos el final de la caÃ±a - **escribe** `moveTo 300, 100`",
             "solution": "moveTo 300, 100"
         },
         {
-            "hint": "Dibuja una línea usando `line` de `150` por`400`",
+            "hint": "Dibuja una lÃ­nea usando `line` de `150` por`400`",
             "solution": "line 150, 400"
         },
         {
@@ -84,15 +84,15 @@
             "solution": "stroke lightgray, 1"
         },
         {
-            "hint": "Dibújalo para que vaya hacia abajo y a la izquierda - **escribe** `line -100, 200`",
+            "hint": "DibÃºjalo para que vaya hacia abajo y a la izquierda - **escribe** `line -100, 200`",
             "solution": "line -100, 200"
         },
         {
-            "hint": "Para enterarnos cuando un pez muerde la carnada tenemos que hacer un corcho flotando. Muévete hacia el final del hilo - **escribe** `move -100, (random 197, 202)`",
+            "hint": "Para enterarnos cuando un pez muerde la carnada tenemos que hacer un corcho flotando. MuÃ©vete hacia el final del hilo - **escribe** `move -100, (random 197, 202)`",
             "solution": "move -100, (random 197, 202)"
         },
         {
-            "hint": "El corcho no tendrá líneas de borde - **escribe** `stroke 0`",
+            "hint": "El corcho no tendrÃ¡ lÃ­neas de borde - **escribe** `stroke 0`",
             "solution": "stroke 0"
         },
         {

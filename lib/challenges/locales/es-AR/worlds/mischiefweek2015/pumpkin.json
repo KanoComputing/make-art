@@ -2,9 +2,9 @@
     "id": "pumpkin",
     "title": "Calabaza",
     "cover": "mischiefweek2015/mw-003-pumpkin.png",
-    "description": "No serÌa Halloween sin calabazas escalofriantes, aprende a crear una calabaza y hazte creativo cambiandole la cara.",
+    "description": "No ser√≠a Halloween sin calabazas escalofriantes, aprende a crear una calabaza y hazte creativo cambiandole la cara.",
     "start_date": "2015-10-28T06:00:00",
-    "completion_text": "°Es una excelente linterna de calabaza! Pero necesita estar iluminada para ser verdaderamente escalofriante, øpuedes ingeni·rtela para encender la calabaza cambiando algunos colores? TambiÈn puedes mejorarla para que se vea m·s escalofriante. DemuÈstranos tu creatividad y luego comparte tu creaciÛn.",
+    "completion_text": "¬°Es una excelente linterna de calabaza! Pero necesita estar iluminada para ser verdaderamente escalofriante, ¬øpuedes ingeni√°rtela para encender la calabaza cambiando algunos colores? Tambi√©n puedes mejorarla para que se vea m√°s escalofriante. Demu√©stranos tu creatividad y luego comparte tu creaci√≥n.",
     "startAt": 0,
     "steps": [
             {
@@ -12,11 +12,11 @@
                 "solution": "background charcoal"
             },
             {
-                "hint": "Lo m·s distintivo de las calabazas es su fuerte color naranja, para configurar el color de dibujo  - **escribe** `color orange`",
+                "hint": "Lo m√°s distintivo de las calabazas es su fuerte color naranja, para configurar el color de dibujo  - **escribe** `color orange`",
                 "solution": "color orange"
             },
             {
-                "hint": "Vamos a usar el trazo para aparentar la forma ondulada de la calabaza, usa la funciÛn darken (orcurecer) para crear contrastes en la c·scara de la calabaza - **escribe** `stroke darken(orange, 20), 30`",
+                "hint": "Vamos a usar el trazo para aparentar la forma ondulada de la calabaza, usa la funci√≥n darken (orcurecer) para crear contrastes en la c√°scara de la calabaza - **escribe** `stroke darken(orange, 20), 30`",
                 "solution": "stroke darken(orange, 20), 30"
             },
             {
@@ -44,11 +44,11 @@
                 "solution": "move -20, -180"
             },
             {
-                "hint": "Dibuja el tallo pequeÒo de la calabaza - **escribe** `square 40`",
+                "hint": "Dibuja el tallo peque√±o de la calabaza - **escribe** `square 40`",
                 "solution": "square 40"
             },
             {
-                "hint": "Ahora que ya tenemos una calabaza fresca podemos avanzar a la parte divertida d·ndole diseÒo - **escribe** `color black`",
+                "hint": "Ahora que ya tenemos una calabaza fresca podemos avanzar a la parte divertida d√°ndole dise√±o - **escribe** `color black`",
                 "solution": "color black"
             },
             {
@@ -60,11 +60,11 @@
                 "solution": "circle 15"
             },
             {
-                "hint": "Mueve el cursor a donde estar· el segundo ojo - **escribe** `moveTo 310, 275`",
+                "hint": "Mueve el cursor a donde estar√° el segundo ojo - **escribe** `moveTo 310, 275`",
                 "solution": "moveTo 310, 275"
             },
             {
-                "hint": "Dibuja un segundo agujero del mismo tamaÒo que el primero - **escribe** `circle 15`",
+                "hint": "Dibuja un segundo agujero del mismo tama√±o que el primero - **escribe** `circle 15`",
                 "solution": "circle 15"
             },
             {
@@ -72,7 +72,7 @@
                 "solution": "moveTo 250, 320"
             },
             {
-                "hint": "Necesitamos eliminar el color de dibujo configur·ndolo a transparente - **escribe** `color null`",
+                "hint": "Necesitamos eliminar el color de dibujo configur√°ndolo a transparente - **escribe** `color null`",
                 "solution": "color null"
             },
             {
@@ -80,7 +80,7 @@
                 "solution": "stroke 15, black"
             },
             {
-                "hint": "Finalmente, vamos a usar el comando arc (dibujar· un arco) para darle una sonrisa. - **escribe** `arc 40, 1, 2, true`",
+                "hint": "Finalmente, vamos a usar el comando arc (dibujar√° un arco) para darle una sonrisa. - **escribe** `arc 40, 1, 2, true`",
                 "solution": "arc 40, 1, 2, true"
             }
     ]

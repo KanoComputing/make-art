@@ -6,7 +6,7 @@
     "startAt": 2,
     "steps": [
         {
-            "hint": "Este cl·sico personaje del fantasma apareciÛ por primera vez en Pac-Man (1980). Ya que es un fantasma, necesitaremos un fondo escalofriante **escribe** `background navy`",
+            "hint": "Este cl√°sico personaje del fantasma apareci√≥ por primera vez en Pac-Man (1980). Ya que es un fantasma, necesitaremos un fondo escalofriante **escribe** `background navy`",
             "solution": "background navy"
         },
         {
@@ -18,28 +18,28 @@
             "solution": "color red"
         },
         {
-            "hint": "Ahora haremos algo nuevo, vamos a configurar el tamaÒo del fantasma usando una variable. Le daremos un nombre en inglÈs que se refiere al tamaÒo del fantasma, ghostsize. Luego la utilizaremos para repetir ese mismo valor que le asignemos **escribe** `ghostsize = 100`",
+            "hint": "Ahora haremos algo nuevo, vamos a configurar el tama√±o del fantasma usando una variable. Le daremos un nombre en ingl√©s que se refiere al tama√±o del fantasma, ghostsize. Luego la utilizaremos para repetir ese mismo valor que le asignemos **escribe** `ghostsize = 100`",
             "solution": "ghostsize = 100"
         },
         {
-            "hint": "Mueve el cursor hacia arriba, donde emmpezar· la cabeza del fantasma **escribe** `move 0,-50`",
+            "hint": "Mueve el cursor hacia arriba, donde emmpezar√° la cabeza del fantasma **escribe** `move 0,-50`",
             "solution": "move 0,-50"
         },
         {
-            "hint": "Vamos a utilizar la variable que configuramos para dibujar la cabeza. Como la configuramos a 100, este comando dibujar· un cÌrculo de 100 pixeles **escribe** `circle ghostsize`",
+            "hint": "Vamos a utilizar la variable que configuramos para dibujar la cabeza. Como la configuramos a 100, este comando dibujar√° un c√≠rculo de 100 pixeles **escribe** `circle ghostsize`",
             "solution": "circle ghostsize"
         },
         {
-            "hint": "Vamos a utilizar la variable una vez m·s, esta vez con el comando move. Usando el sÌmbolo menos por delante, este comando serÌa lo mismo que moverse -100,0 **escribe** `move -ghostsize,0`",
+            "hint": "Vamos a utilizar la variable una vez m√°s, esta vez con el comando move. Usando el s√≠mbolo menos por delante, este comando ser√≠a lo mismo que moverse -100,0 **escribe** `move -ghostsize,0`",
             "solution": "move -ghostsize,0"
         },
         {
-            "hint": "Es hora de dibujar el resto del cuerpo del fantasma, ya que el cuerpo se encuentra en relaciÛn con el tamaÒo de la cabeza, vamos a utilizar la variable otra vez **escribe** `square ghostsize * 2`",
+            "hint": "Es hora de dibujar el resto del cuerpo del fantasma, ya que el cuerpo se encuentra en relaci√≥n con el tama√±o de la cabeza, vamos a utilizar la variable otra vez **escribe** `square ghostsize * 2`",
             "solution": "square ghostsize * 2",
             "validate": "square ghostsize \\* 2"
         },
         {
-            "hint": "Vamos a dibujarle ojos. Para asegurarnos de que est·n ubicados correctamente dentro de la cabeza, vamos a utilizar la variable otra vez. **type** `move ghostsize / 2`",
+            "hint": "Vamos a dibujarle ojos. Para asegurarnos de que est√°n ubicados correctamente dentro de la cabeza, vamos a utilizar la variable otra vez. **type** `move ghostsize / 2`",
             "solution": "move ghostsize / 2"
         },
         {
@@ -47,7 +47,7 @@
             "solution": "color white"
         },
         {
-            "hint": "Dibuja un ojo haciendo un cÌrculo de 20 pixeles de tamaÒo",
+            "hint": "Dibuja un ojo haciendo un c√≠rculo de 20 pixeles de tama√±o",
             "solution": "circle 20"
         },
         {
@@ -59,7 +59,7 @@
             "solution": "circle 10"
         },
         {
-            "hint": "Vamos a utilizar la variable por ˙ltima vez para ubicar correctamente el segundo ojo **escribe** `move ghostsize,0`",
+            "hint": "Vamos a utilizar la variable por √∫ltima vez para ubicar correctamente el segundo ojo **escribe** `move ghostsize,0`",
             "solution": "move ghostsize,0"
         },
         {
@@ -67,7 +67,7 @@
             "solution": "color white"
         },
         {
-            "hint": "Dibuja un cÌrculo de 20 pixeles de tamaÒo",
+            "hint": "Dibuja un c√≠rculo de 20 pixeles de tama√±o",
             "solution": "circle 20"
         },
         {
@@ -75,11 +75,11 @@
             "solution": "color blue"
         },
         {
-            "hint": "Finalmente dibuja el cÌrculo de 10 pixeles de tamaÒo",
+            "hint": "Finalmente dibuja el c√≠rculo de 10 pixeles de tama√±o",
             "solution": "circle 10"
         }
     ],
-    "completion_text": "°QuÈ bonito! Ahora, porque has utilizado una variable, puedes pulsar en el n˙mero que le otorgaste a la variable ghostsize y utilizar el deslizador para cambiar el tamaÒo del fantasma. Ver·s cÛmo los ojos se mantienen del mismo tamaÒo y todo lo dem·s cambia.",
+    "completion_text": "¬°Qu√© bonito! Ahora, porque has utilizado una variable, puedes pulsar en el n√∫mero que le otorgaste a la variable ghostsize y utilizar el deslizador para cambiar el tama√±o del fantasma. Ver√°s c√≥mo los ojos se mantienen del mismo tama√±o y todo lo dem√°s cambia.",
     "gallery": {
         "cover_path": "/assets/challenges/images/pixelremixes/",
         "remixes": [
@@ -89,5 +89,5 @@
         ]
     },
     "cover": "pixel-variables.png",
-    "guide": "#### Nueva palabra\n**variable** = valor | ghostsize = 100\nCrea una palabra a la cual se le asignar· un valor y puede ser usado en otras ocaciones.\n\n#### Lo que crear·s\n1. Este cl·sico personaje del fantasma apareciÛ por primera vez en Pac-Man (1980). Ya que es un fantasma, necesitaremos un fondo escalofriante **escribe** `background navy`\n2. Configura el trazo a 0 **escribe** `stroke 0`\n3. Configura el `color` a rojo\n4. Ahora haremos algo nuevo, vamos a configurar el tamaÒo del fantasma usando una variable. Le daremos un nombre en inglÈs que se refiere al tamaÒo del fantasma, ghostsize. Luego la utilizaremos para repetir ese mismo valor que le asignemos **escribe** `ghostsize = 100`\n5. Mueve el cursor hacia arriba, donde emmpezar· la cabeza del fantasma **escribe** `move 0,-50`\n6. Vamos a utilizar la variable que configuramos para dibujar la cabeza. Como la configuramos a 100, este comando dibujar· un cÌrculo de 100 pixeles **escribe** `circle ghostsize`\n7. Vamos a utilizar la variable una vez m·s, esta vez con el comando move. Usando el sÌmbolo menos por delante, este comando serÌa lo mismo que moverse -100,0 **escribe** `move -ghostsize,0`\n8. Es hora de dibujar el resto del cuerpo del fantasma, ya que el cuerpo se encuentra en relaciÛn con el tamaÒo de la cabeza, vamos a utilizar la variable otra vez **escribe** `square ghostsize * 2`\n9. Vamos a dibujarle ojos. Para asegurarnos de que est·n ubicados correctamente dentro de la cabeza, vamos a utilizar la variable otra vez. **type** `move ghostsize / 2`\n10. Configura el`color` de dibujo a blanco\n11. Dibuja un ojo haciendo un cÌrculo de 20 pixeles de tamaÒo\n12. Ahora configura el color del iris **escribe** `color blue`\n13. Finalmente dibujemos el iris **escribe** `circle 10`\n14. Vamos a utilizar la variable por ˙ltima vez para ubicar correctamente el segundo ojo **escribe** `move ghostsize,0`\n15. Repite el proceso para el segundo ojo, configura el `color` de dibujo a blanco\n16. Dibuja un cÌrculo de 20 pixeles de tamaÒo\n17. Configura el `color` a azul\n18. Finalmente dibuja el cÌrculo de 10 pixeles de tamaÒo\n\n#### Lo que hackear·s\nYa que utilizaste una variable para las diferentes partes del cuerpo del fantasma, puedes cambiar el valor para ver cÛmo cambia el tamaÒo del cuerpo. Sin embargo, los ojos no cambian. øPodrÌas configurar otra variable que controle el tamaÒo de los ojos?\n\n#### Resumiendo\nCuando programas le otorgas una serie de tareas a tu computadora. Y cuando ejecutas los comandos, la computadora lee todas esas tareas y las realiza. Hasta ahora, programamos de manera tal que se ejecuten los comandos siempre igual, pero si quisieramos que los comandos se ejecuten de manera distinta debemos utilizar variables.\n\nUna variables es una palabra que adquiere el significado de otra cosa. En este desafÌo determinar·s el tamaÒo de las partes del cuerpo del fantasma con una variable. Cambiando el valor de la variable podr·s ver cÛmo esto afecta el tamaÒo de las diferentes formas, otorg·ndote el poder de agrandar o achicar el fantasma.\n"
+    "guide": "#### Nueva palabra\n**variable** = valor | ghostsize = 100\nCrea una palabra a la cual se le asignar√° un valor y puede ser usado en otras ocaciones.\n\n#### Lo que crear√°s\n1. Este cl√°sico personaje del fantasma apareci√≥ por primera vez en Pac-Man (1980). Ya que es un fantasma, necesitaremos un fondo escalofriante **escribe** `background navy`\n2. Configura el trazo a 0 **escribe** `stroke 0`\n3. Configura el `color` a rojo\n4. Ahora haremos algo nuevo, vamos a configurar el tama√±o del fantasma usando una variable. Le daremos un nombre en ingl√©s que se refiere al tama√±o del fantasma, ghostsize. Luego la utilizaremos para repetir ese mismo valor que le asignemos **escribe** `ghostsize = 100`\n5. Mueve el cursor hacia arriba, donde emmpezar√° la cabeza del fantasma **escribe** `move 0,-50`\n6. Vamos a utilizar la variable que configuramos para dibujar la cabeza. Como la configuramos a 100, este comando dibujar√° un c√≠rculo de 100 pixeles **escribe** `circle ghostsize`\n7. Vamos a utilizar la variable una vez m√°s, esta vez con el comando move. Usando el s√≠mbolo menos por delante, este comando ser√≠a lo mismo que moverse -100,0 **escribe** `move -ghostsize,0`\n8. Es hora de dibujar el resto del cuerpo del fantasma, ya que el cuerpo se encuentra en relaci√≥n con el tama√±o de la cabeza, vamos a utilizar la variable otra vez **escribe** `square ghostsize * 2`\n9. Vamos a dibujarle ojos. Para asegurarnos de que est√°n ubicados correctamente dentro de la cabeza, vamos a utilizar la variable otra vez. **type** `move ghostsize / 2`\n10. Configura el`color` de dibujo a blanco\n11. Dibuja un ojo haciendo un c√≠rculo de 20 pixeles de tama√±o\n12. Ahora configura el color del iris **escribe** `color blue`\n13. Finalmente dibujemos el iris **escribe** `circle 10`\n14. Vamos a utilizar la variable por √∫ltima vez para ubicar correctamente el segundo ojo **escribe** `move ghostsize,0`\n15. Repite el proceso para el segundo ojo, configura el `color` de dibujo a blanco\n16. Dibuja un c√≠rculo de 20 pixeles de tama√±o\n17. Configura el `color` a azul\n18. Finalmente dibuja el c√≠rculo de 10 pixeles de tama√±o\n\n#### Lo que hackear√°s\nYa que utilizaste una variable para las diferentes partes del cuerpo del fantasma, puedes cambiar el valor para ver c√≥mo cambia el tama√±o del cuerpo. Sin embargo, los ojos no cambian. ¬øPodr√≠as configurar otra variable que controle el tama√±o de los ojos?\n\n#### Resumiendo\nCuando programas le otorgas una serie de tareas a tu computadora. Y cuando ejecutas los comandos, la computadora lee todas esas tareas y las realiza. Hasta ahora, programamos de manera tal que se ejecuten los comandos siempre igual, pero si quisieramos que los comandos se ejecuten de manera distinta debemos utilizar variables.\n\nUna variables es una palabra que adquiere el significado de otra cosa. En este desaf√≠o determinar√°s el tama√±o de las partes del cuerpo del fantasma con una variable. Cambiando el valor de la variable podr√°s ver c√≥mo esto afecta el tama√±o de las diferentes formas, otorg√°ndote el poder de agrandar o achicar el fantasma.\n"
 }

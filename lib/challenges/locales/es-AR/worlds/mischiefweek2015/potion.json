@@ -1,15 +1,15 @@
 {
     "id": "potion",
-    "title": "Frasco de Posión",
-    "description": "Elabora tu propia posión programando.",
+    "title": "Frasco de PosiÃ³n",
+    "description": "Elabora tu propia posiÃ³n programando.",
     "start_date": "2015-10-29T06:00:00",
     "code": "",
     "startAt": 2,
-    "completion_text": "¡Bien hecho! Puedes cambiar el color de tu posión al que tú quieras configurando potionColor. El vidrio lo haces opacando el blanco. Usando la función en inglés opacity(white, .4) le dará un buen efecto con cualquier color que elijas.",
+    "completion_text": "Â¡Bien hecho! Puedes cambiar el color de tu posiÃ³n al que tÃº quieras configurando potionColor. El vidrio lo haces opacando el blanco. Usando la funciÃ³n en inglÃ©s opacity(white, .4) le darÃ¡ un buen efecto con cualquier color que elijas.",
     "cover": "mischiefweek2015/mw-004-potion.png",
     "steps": [
         {
-            "hint": "Queremos utilizar figuras sólidas para este desafío, entonces **escribe** `stroke 0`",
+            "hint": "Queremos utilizar figuras sÃ³lidas para este desafÃ­o, entonces **escribe** `stroke 0`",
             "solution": "stroke 0"
         },
         {
@@ -17,11 +17,11 @@
             "solution": "background charcoal"
         },
         {
-            "hint": "Vamos a configurar una variable para el color de nuestra posión. Para hacerlo **escribe** `potionColor = purple`",
+            "hint": "Vamos a configurar una variable para el color de nuestra posiÃ³n. Para hacerlo **escribe** `potionColor = purple`",
             "solution": "potionColor = purple"
         },
         {
-            "hint": "Múevete a la posición con `move 0, 50`",
+            "hint": "MÃºevete a la posiciÃ³n con `move 0, 50`",
             "solution": "move 0, 50"
         },
         {
@@ -29,15 +29,15 @@
             "solution": "color potionColor"
         },
         {
-            "hint": "Finalmente podemos dibujar la posión con `circle 90`",
+            "hint": "Finalmente podemos dibujar la posiÃ³n con `circle 90`",
             "solution": "circle 90"
         },
         {
-            "hint": "Nuestra posión saldrá por fuera del frasco, vamos a usar una línea para el cuello del frasco. Configura el estilo de la línea con `stroke potionColor, 40`",
+            "hint": "Nuestra posiÃ³n saldrÃ¡ por fuera del frasco, vamos a usar una lÃ­nea para el cuello del frasco. Configura el estilo de la lÃ­nea con `stroke potionColor, 40`",
             "solution": "stroke potionColor, 40"
         },
         {
-            "hint": "Dibuja la línea desde el medio con `line 0, -120`.",
+            "hint": "Dibuja la lÃ­nea desde el medio con `line 0, -120`.",
             "solution": "line 0, -120"
         },
         {
@@ -45,19 +45,19 @@
             "solution": "stroke 0"
         },
         {
-            "hint": "Agreguemos otro círculo al interior del frasco para darle un toque natural a nuestra posión. Muevete hacia arriba y a la derecha con `move 30, -30`.",
+            "hint": "Agreguemos otro cÃ­rculo al interior del frasco para darle un toque natural a nuestra posiÃ³n. Muevete hacia arriba y a la derecha con `move 30, -30`.",
             "solution": "move 30, -30"
         },
         {
-            "hint": "Configura el color de dibujo a un tono más oscuro del elegido para la posión con `color darken(potionColor, 10)`",
+            "hint": "Configura el color de dibujo a un tono mÃ¡s oscuro del elegido para la posiÃ³n con `color darken(potionColor, 10)`",
             "solution": "color darken(potionColor, 10)"
         },
         {
-            "hint": "Finalmente dibuja el círculo con `circle 20`",
+            "hint": "Finalmente dibuja el cÃ­rculo con `circle 20`",
             "solution": "circle 20"
         },
         {
-            "hint": "Muévete otra vez al centro con `move -30, 30`",
+            "hint": "MuÃ©vete otra vez al centro con `move -30, 30`",
             "solution": "move -30, 30"
         },
         {
@@ -69,7 +69,7 @@
             "solution": "arc 100, 1.4, 1.6"
         },
         {
-            "hint": "Observa como el arco casi llega a completar un círculo entero pero deja un espacio para encontrarse con el cuello de la botella. Tenemos que dibujar un corcho. **Escribe** `move 0, -130`",
+            "hint": "Observa como el arco casi llega a completar un cÃ­rculo entero pero deja un espacio para encontrarse con el cuello de la botella. Tenemos que dibujar un corcho. **Escribe** `move 0, -130`",
             "solution": "move 0, -130"
         },
         {
@@ -85,7 +85,7 @@
             "solution": "stroke 60, opacity(white, .4)"
         },
         {
-            "hint": "Muévete un poco hacia arriba para el cuello con `move 0, -25`",
+            "hint": "MuÃ©vete un poco hacia arriba para el cuello con `move 0, -25`",
             "solution": "move 0, -25"
         },
         {

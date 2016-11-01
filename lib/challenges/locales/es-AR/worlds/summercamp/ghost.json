@@ -2,9 +2,9 @@
     "id": "ghost",
     "title": "Encuentro con Fantasma",
     "short_title": "Fantasma",
-    "description": "Boo! A medida que cae la noche, los espíritus salen a jugar. Estudios recientes reportaron que un 87% de trabajadores de oficina chinos creen en los fantasmas, 25% de británicos dicen haber visto alguno. Está oscureciendo, se hace difícil ver con claridad pero creo que... ¡encontramos un fantasma! Usando tus poderes creativos de programación puedes decidir si es amigable o no.",
+    "description": "Boo! A medida que cae la noche, los espÃ­ritus salen a jugar. Estudios recientes reportaron que un 87% de trabajadores de oficina chinos creen en los fantasmas, 25% de britÃ¡nicos dicen haber visto alguno. EstÃ¡ oscureciendo, se hace difÃ­cil ver con claridad pero creo que... Â¡encontramos un fantasma! Usando tus poderes creativos de programaciÃ³n puedes decidir si es amigable o no.",
     "icon_class": "challenge_ghost",
-    "completion_text": "¡Escalofriante! ¿Puedes convertirlo en un fantasma más aterrador? Tal vez pueda decir \"Boo!\"...",
+    "completion_text": "Â¡Escalofriante! Â¿Puedes convertirlo en un fantasma mÃ¡s aterrador? Tal vez pueda decir \"Boo!\"...",
     "difficulty": 2,
     "cover": "summercamp/day_7.png",
     "startAt": 6,
@@ -16,7 +16,7 @@
             "solution": "background darkpurple"
         },
         {
-            "hint": "Configura el trazo a 0 para evitar dibujar líeas usando stroke",
+            "hint": "Configura el trazo a 0 para evitar dibujar lÃ­eas usando stroke",
             "solution": "stroke 0"
         },
         {
@@ -44,11 +44,11 @@
             "solution": "color lightgray"
         },
         {
-            "hint": "Ahora dibuja un círculo usando la función `circle` de un tamañoo de `5`",
+            "hint": "Ahora dibuja un cÃ­rculo usando la funciÃ³n `circle` de un tamaÃ±oo de `5`",
             "solution": "circle 5"
         },
         {
-            "hint": "¡Se ve bien! Ahora mueve el cursor para dibujar el segundo ojo - **escribe** `move 30`",
+            "hint": "Â¡Se ve bien! Ahora mueve el cursor para dibujar el segundo ojo - **escribe** `move 30`",
             "solution": "move 30"
         },
         {
@@ -64,11 +64,11 @@
             "solution": "color lightgray"
         },
         {
-            "hint": "Dibuja un círculo con la función `circle` de un tamaño de `5`",
+            "hint": "Dibuja un cÃ­rculo con la funciÃ³n `circle` de un tamaÃ±o de `5`",
             "solution": "circle 5"
         },
         {
-            "hint": "¡Ya casi lo terminas! Configura el `color` a blanco o `white`",
+            "hint": "Â¡Ya casi lo terminas! Configura el `color` a blanco o `white`",
             "solution": "color white"
         },
         {
@@ -80,7 +80,7 @@
             "solution": "for i in [ 1 .. 5 ]"
         },
         {
-            "hint": "Dibuja un círculo usando `circle` de un tamaño de `45`",
+            "hint": "Dibuja un cÃ­rculo usando `circle` de un tamaÃ±o de `45`",
             "solution": "    circle 45"
         },
         {

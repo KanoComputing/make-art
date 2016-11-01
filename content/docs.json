@@ -157,8 +157,8 @@
                     ]
                 }
             ], 
-            "label": "Figuras", 
-            "icon": "shapes"
+            "icon": "shapes", 
+            "label": "Figuras"
         }, 
         {
             "commands": [
@@ -209,8 +209,8 @@
                     ]
                 }
             ], 
-            "label": "Líneas", 
-            "icon": "lines"
+            "icon": "lines", 
+            "label": "Líneas"
         }, 
         {
             "commands": [
@@ -261,8 +261,8 @@
                     ]
                 }
             ], 
-            "label": "Posición", 
-            "icon": "position"
+            "icon": "position", 
+            "label": "Posición"
         }, 
         {
             "commands": [
@@ -338,8 +338,8 @@
                     ]
                 }
             ], 
-            "label": "Texto", 
-            "icon": "text"
+            "icon": "text", 
+            "label": "Texto"
         }, 
         {
             "commands": [
@@ -389,8 +389,8 @@
                     "example": "random 5, 10"
                 }
             ], 
-            "label": "General", 
-            "icon": "general"
+            "icon": "general", 
+            "label": "General"
         }, 
         {
             "commands": [
@@ -542,8 +542,8 @@
                     ]
                 }
             ], 
-            "label": "Colores", 
-            "icon": "colors"
+            "icon": "colors", 
+            "label": "Colores"
         }
     ], 
     "en": [
@@ -704,8 +704,8 @@
                     ]
                 }
             ], 
-            "icon": "shapes", 
-            "label": "Shapes"
+            "label": "Shapes", 
+            "icon": "shapes"
         }, 
         {
             "commands": [
@@ -756,8 +756,8 @@
                     ]
                 }
             ], 
-            "icon": "lines", 
-            "label": "Lines"
+            "label": "Lines", 
+            "icon": "lines"
         }, 
         {
             "commands": [
@@ -808,8 +808,8 @@
                     ]
                 }
             ], 
-            "icon": "position", 
-            "label": "Position"
+            "label": "Position", 
+            "icon": "position"
         }, 
         {
             "commands": [
@@ -885,8 +885,8 @@
                     ]
                 }
             ], 
-            "icon": "text", 
-            "label": "Text"
+            "label": "Text", 
+            "icon": "text"
         }, 
         {
             "commands": [
@@ -936,8 +936,8 @@
                     "example": "random 5, 10"
                 }
             ], 
-            "icon": "general", 
-            "label": "General"
+            "label": "General", 
+            "icon": "general"
         }, 
         {
             "commands": [
@@ -1089,8 +1089,8 @@
                     ]
                 }
             ], 
-            "icon": "colors", 
-            "label": "Colors"
+            "label": "Colors", 
+            "icon": "colors"
         }
     ], 
     "ja": [
@@ -1251,8 +1251,8 @@
                     ]
                 }
             ], 
-            "icon": "shapes", 
-            "label": "形"
+            "label": "形", 
+            "icon": "shapes"
         }, 
         {
             "commands": [
@@ -1303,8 +1303,8 @@
                     ]
                 }
             ], 
-            "icon": "lines", 
-            "label": "線"
+            "label": "線", 
+            "icon": "lines"
         }, 
         {
             "commands": [
@@ -1355,8 +1355,8 @@
                     ]
                 }
             ], 
-            "icon": "position", 
-            "label": "位置"
+            "label": "位置", 
+            "icon": "position"
         }, 
         {
             "commands": [
@@ -1432,8 +1432,8 @@
                     ]
                 }
             ], 
-            "icon": "text", 
-            "label": "テキスト"
+            "label": "テキスト", 
+            "icon": "text"
         }, 
         {
             "commands": [
@@ -1483,8 +1483,8 @@
                     "example": "random 5, 10"
                 }
             ], 
-            "icon": "general", 
-            "label": "一般"
+            "label": "一般", 
+            "icon": "general"
         }, 
         {
             "commands": [
@@ -1636,8 +1636,8 @@
                     ]
                 }
             ], 
-            "icon": "colors", 
-            "label": "色"
+            "label": "色", 
+            "icon": "colors"
         }
     ]
 }

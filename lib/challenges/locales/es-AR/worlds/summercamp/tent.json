@@ -2,9 +2,9 @@
     "id": "tent",
     "title": "Arma tu carpa",
     "short_title": "Carpa",
-    "description": "No hay campamento sin carpa. Te limitamos a diseñar una carpa básica, que se hace con lona, cuerdas y estacas ¡Pero con tus poderes creativos puedes transformarla en la carpa que tú quieras!  \nLa gente ha vivido durante mucho tiempo en carpas, existieron las tipis, las yurtas por cientos de años. ¿Qué podrías agregarle a tu carpa para que te mantenga seguro y cálido? Te invitamos a inspirarte mirando otras creaciones en Mundo Kano o buscando diseños en internet.",
+    "description": "No hay campamento sin carpa. Te limitamos a diseÃ±ar una carpa bÃ¡sica, que se hace con lona, cuerdas y estacas Â¡Pero con tus poderes creativos puedes transformarla en la carpa que tÃº quieras!  \nLa gente ha vivido durante mucho tiempo en carpas, existieron las tipis, las yurtas por cientos de aÃ±os. Â¿QuÃ© podrÃ­as agregarle a tu carpa para que te mantenga seguro y cÃ¡lido? Te invitamos a inspirarte mirando otras creaciones en Mundo Kano o buscando diseÃ±os en internet.",
     "icon_class": "challenge_setcamp",
-    "completion_text": "¡Buen trabajo! Ya aprendiste en el último desafío a hacer un árbol, ¿por qué no lo agregás a tu dibujo? ¿es un pájaro aquello que vuela en el cielo?",
+    "completion_text": "Â¡Buen trabajo! Ya aprendiste en el Ãºltimo desafÃ­o a hacer un Ã¡rbol, Â¿por quÃ© no lo agregÃ¡s a tu dibujo? Â¿es un pÃ¡jaro aquello que vuela en el cielo?",
     "cover": "summercamp/day_3.png",
     "difficulty": 1,
     "startAt": 2,
@@ -14,11 +14,11 @@
     },
     "steps": [
         {
-            "hint": "Dibuja un día soleado - **escribe** `background lightblue`",
+            "hint": "Dibuja un dÃ­a soleado - **escribe** `background lightblue`",
             "solution": "background lightblue"
         },
         {
-            "hint": "Configura el trazo a 0 para evitar dibujar líneas - **escribe** `stroke 0`",
+            "hint": "Configura el trazo a 0 para evitar dibujar lÃ­neas - **escribe** `stroke 0`",
             "solution": "stroke 0"
         },
         {
@@ -26,39 +26,39 @@
             "solution": "moveTo 400, 50"
         },
         {
-            "hint": "Configura el `color` del sol a amarillo, `yellow` en inglés",
+            "hint": "Configura el `color` del sol a amarillo, `yellow` en inglÃ©s",
             "solution": "color yellow"
         },
         {
-            "hint": "Dibuja el sol usando un círculo - **escribe** `circle 40`",
+            "hint": "Dibuja el sol usando un cÃ­rculo - **escribe** `circle 40`",
             "solution": "circle 40"
         },
         {
-            "hint": "Mueve el cursor para dibujar el césped - **escribe** `moveTo 0, 350`",
+            "hint": "Mueve el cursor para dibujar el cÃ©sped - **escribe** `moveTo 0, 350`",
             "solution": "moveTo 0, 350"
         },
         {
-            "hint": "Configura el `color` del césped a verde, `green` en inglés",
+            "hint": "Configura el `color` del cÃ©sped a verde, `green` en inglÃ©s",
             "solution": "color green"
         },
         {
-            "hint": "Dibuja el césped usando la función rectangle - **escribe** `rectangle 500, 150`",
+            "hint": "Dibuja el cÃ©sped usando la funciÃ³n rectangle - **escribe** `rectangle 500, 150`",
             "solution": "rectangle 500, 150"
         },
         {
-            "hint": "¡Excelente! Ahora estamos listos para dibujar la carpa - **escribe** `color red`",
+            "hint": "Â¡Excelente! Ahora estamos listos para dibujar la carpa - **escribe** `color red`",
             "solution": "color red"
         },
         {
-            "hint": "Posiciona el cursor sobre el césped - **escribe** `moveTo 100, 350`",
+            "hint": "Posiciona el cursor sobre el cÃ©sped - **escribe** `moveTo 100, 350`",
             "solution": "moveTo 100, 350"
         },
         {
-            "hint": "Dibuja un triángulo usando `polygon` - **escribe** `polygon 150, -200, 300, 0`",
+            "hint": "Dibuja un triÃ¡ngulo usando `polygon` - **escribe** `polygon 150, -200, 300, 0`",
             "solution": "polygon 150, -200, 300, 0"
         },
         {
-            "hint": "Necesitamos dibujarle la entrada ahora. Configura el `color` a rojo oscuro o `darkred` en inglés",
+            "hint": "Necesitamos dibujarle la entrada ahora. Configura el `color` a rojo oscuro o `darkred` en inglÃ©s",
             "solution": "color darkred"
         },
         {

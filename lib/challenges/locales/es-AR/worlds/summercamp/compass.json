@@ -1,11 +1,11 @@
 {
     "id": "compass",
-    "title": "Una brújula es una herramienta escencial",
-    "short_title": "Brújula",
+    "title": "Una brÃºjula es una herramienta escencial",
+    "short_title": "BrÃºjula",
     "icon_class": "challenge_compass",
-    "description": "Una brújula es esencialmente un imán, generalmente una aguja magnetizada. Dado que los opuestos se atraen, el polo sur de la aguja se encuentra atraído al polo norte mágnetico y natural de la Tierra. ¿Sabías que puedes contruir la tuya propia con un clip, un corcho y un imán?",
+    "description": "Una brÃºjula es esencialmente un imÃ¡n, generalmente una aguja magnetizada. Dado que los opuestos se atraen, el polo sur de la aguja se encuentra atraÃ­do al polo norte mÃ¡gnetico y natural de la Tierra. Â¿SabÃ­as que puedes contruir la tuya propia con un clip, un corcho y un imÃ¡n?",
     "cover": "summercamp/day_9.png",
-    "completion_text": "Ahora intenta agregar los otros componentes de la brújula: los puntos cardinales (E, S, O y también podría ser NE, NO, SE y SO) ¿Por qué no una mano que la sostenga?",
+    "completion_text": "Ahora intenta agregar los otros componentes de la brÃºjula: los puntos cardinales (E, S, O y tambiÃ©n podrÃ­a ser NE, NO, SE y SO) Â¿Por quÃ© no una mano que la sostenga?",
     "difficulty": 1,
     "startAt": 0,
     "summerCamp": true,
@@ -14,23 +14,23 @@
     },
     "steps": [
         {
-            "hint": "Elige gris claro o `lightgray` para la función `background`",
+            "hint": "Elige gris claro o `lightgray` para la funciÃ³n `background`",
             "solution": "background lightgray"
         },
         {
-            "hint": "En una nueva línea, configura el trazo de color dorado usando `stroke`, dorado en inglés es `gold` y hazlo de un tamaño de `20`",
+            "hint": "En una nueva lÃ­nea, configura el trazo de color dorado usando `stroke`, dorado en inglÃ©s es `gold` y hazlo de un tamaÃ±o de `20`",
             "solution": "stroke gold, 20"
         },
         {
-            "hint": "Configura el `color` de la brújula a gris o `gray`",
+            "hint": "Configura el `color` de la brÃºjula a gris o `gray`",
             "solution": "color gray"
         },
         {
-            "hint": "Tu brújula será un círculo o `circle` de un tamaño de `110`",
+            "hint": "Tu brÃºjula serÃ¡ un cÃ­rculo o `circle` de un tamaÃ±o de `110`",
             "solution": "circle 110"
         },
         {
-            "hint": "Configura el `color` a gris oscuro o `darkgray` para la segunda mitad de la brújula",
+            "hint": "Configura el `color` a gris oscuro o `darkgray` para la segunda mitad de la brÃºjula",
             "solution": "color darkgray"
         },
         {
@@ -38,11 +38,11 @@
             "solution": "stroke 0"
         },
         {
-            "hint": "Dibuja un arco que encaje con la mitad de arriba de la brújula - **escribe** `arc 105, 2, 1`",
+            "hint": "Dibuja un arco que encaje con la mitad de arriba de la brÃºjula - **escribe** `arc 105, 2, 1`",
             "solution": "arc 105, 2, 1"
         },
         {
-            "hint": "Tenemos que marcar el norte - en una nueva línea **escribe** `moveTo 250, 175`",
+            "hint": "Tenemos que marcar el norte - en una nueva lÃ­nea **escribe** `moveTo 250, 175`",
             "solution": "moveTo 250, 175"
         },
         {
@@ -50,7 +50,7 @@
             "solution": "color gold"
         },
         {
-            "hint": "Configura la fuente del texto o `font` a `'cursive'` de un tamaño de `25`",
+            "hint": "Configura la fuente del texto o `font` a `'cursive'` de un tamaÃ±o de `25`",
             "solution": "font 'cursive', 25"
         },
         {
@@ -62,15 +62,15 @@
             "solution": "color red"
         },
         {
-            "hint": "Mueve el cursor a la posición de la aguja **escribe** `moveTo 230, 250`",
+            "hint": "Mueve el cursor a la posiciÃ³n de la aguja **escribe** `moveTo 230, 250`",
             "solution": "moveTo 230, 250"
         },
         {
-            "hint": "Dibuja un triángulo usando un polígono - **escribe** `polygon 20, -90, 40, 0`",
+            "hint": "Dibuja un triÃ¡ngulo usando un polÃ­gono - **escribe** `polygon 20, -90, 40, 0`",
             "solution": "polygon 20, -90, 40, 0"
         },
         {
-            "hint": "¡Excelente! Configura el `color` a blanco o `white` para la segunda punta de la aguja",
+            "hint": "Â¡Excelente! Configura el `color` a blanco o `white` para la segunda punta de la aguja",
             "solution": "color white"
         },
         {
@@ -78,15 +78,15 @@
             "solution": "polygon 20, 90, 40, 0"
         },
         {
-            "hint": "Termínala con un último detalle. Configura el `color` a dorado o `gold`",
+            "hint": "TermÃ­nala con un Ãºltimo detalle. Configura el `color` a dorado o `gold`",
             "solution": "color gold"
         },
         {
-            "hint": "Mueve el cursor al centro de la brújula **escribe** `move 20`",
+            "hint": "Mueve el cursor al centro de la brÃºjula **escribe** `move 20`",
             "solution": "move 20"
         },
         {
-            "hint": "Dibuja un círculo usando `circle` de un tamaño de `20`",
+            "hint": "Dibuja un cÃ­rculo usando `circle` de un tamaÃ±o de `20`",
             "solution": "circle 20"
         }
     ]

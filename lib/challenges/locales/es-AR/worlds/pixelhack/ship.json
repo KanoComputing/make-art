@@ -1,28 +1,28 @@
 {
     "id": "ship",
     "title": "Asteroide",
-    "description": "Programa una nave espacial de vectores usando lÌneas",
+    "description": "Programa una nave espacial de vectores usando l√≠neas",
     "code": "",
     "startAt": 2,
     "steps": [
         {
-            "hint": "Asteroide (1979) fue uno de los primeros videojuegos de arcade. Est· situado en el espacio, por eso montemos el escenario. **escribe** `background black`",
+            "hint": "Asteroide (1979) fue uno de los primeros videojuegos de arcade. Est√° situado en el espacio, por eso montemos el escenario. **escribe** `background black`",
             "solution": "background black"
         },
         {
-            "hint": "Los gr·ficos en Asteroides eran lÌneas simples denominadas vectores. Hoy en dÌa, a˙n se utiliza una versiÛn m·s compleja de este concepto en los gr·ficos de las computadoras. Primero necesitamos configurar el tamaÒo del trazo y su color **escribe** `stroke white,5`",
+            "hint": "Los gr√°ficos en Asteroides eran l√≠neas simples denominadas vectores. Hoy en d√≠a, a√∫n se utiliza una versi√≥n m√°s compleja de este concepto en los gr√°ficos de las computadoras. Primero necesitamos configurar el tama√±o del trazo y su color **escribe** `stroke white,5`",
             "solution": "stroke white,5"
         },
         {
-            "hint": "Luego usamos la funciÛn move para configurar el punto de partida de nuestra primera lÌnea de la nave. **escribe** `move 0, -70`",
+            "hint": "Luego usamos la funci√≥n move para configurar el punto de partida de nuestra primera l√≠nea de la nave. **escribe** `move 0, -70`",
             "solution": "move 0, -70"
         },
         {
-            "hint": "'FunciÛn' es la palabra que utlizamos para definir lo que estamos dibujando. Dibujemos una lÌnea que empiece justo donde movimos el cursor y termine abajo a la izquierda. Primero esribimos la funciÛn (line) y luego dÛnde queremos que empiece y termine la lÌnea **escribe** `line -50,150` Intenta cambiar el valor de Y, de 150 a -150 y fÌjate lo que sucede. °La lÌnea va hacia arriba!°Mejor, mov·mosla nuevamente a 150!",
+            "hint": "'Funci√≥n' es la palabra que utlizamos para definir lo que estamos dibujando. Dibujemos una l√≠nea que empiece justo donde movimos el cursor y termine abajo a la izquierda. Primero esribimos la funci√≥n (line) y luego d√≥nde queremos que empiece y termine la l√≠nea **escribe** `line -50,150` Intenta cambiar el valor de Y, de 150 a -150 y f√≠jate lo que sucede. ¬°La l√≠nea va hacia arriba!¬°Mejor, mov√°mosla nuevamente a 150!",
             "solution": "line -50,150"
         },
         {
-            "hint": "Para mover el cursor al punto donde queremos que nazca la prÛxima lÌnea **escribe** `move -50,150`",
+            "hint": "Para mover el cursor al punto donde queremos que nazca la pr√≥xima l√≠nea **escribe** `move -50,150`",
             "solution": "move -50,150"
         },
         {
@@ -30,19 +30,19 @@
             "solution": "line 50,-25"
         },
         {
-            "hint": "MuÈvete a las siguientes coordenadas para continuar la lÌnea en otra direcciÛn **escribe** `move 50,-25`",
+            "hint": "Mu√©vete a las siguientes coordenadas para continuar la l√≠nea en otra direcci√≥n **escribe** `move 50,-25`",
             "solution": "move 50,-25"
         },
         {
-            "hint": "Replicamos el lado derecho de la nave dando vuelta la segunda coordenada de la lÌnea anterior para dibujar hacia abajo en vez de hacia arriba **escribe** `line 50,25`",
+            "hint": "Replicamos el lado derecho de la nave dando vuelta la segunda coordenada de la l√≠nea anterior para dibujar hacia abajo en vez de hacia arriba **escribe** `line 50,25`",
             "solution": "line 50,25"
         },
         {
-            "hint": "MuÈvete al extremo de esa lÌnea **escribe** `move 50,25`",
+            "hint": "Mu√©vete al extremo de esa l√≠nea **escribe** `move 50,25`",
             "solution": "move 50,25"
         },
         {
-            "hint": "Nuestra nave comienza a tener forma. Para hacer una lÌnea que conecte el extremo de abajo con el de arriba **escribe** `line -50,-150`",
+            "hint": "Nuestra nave comienza a tener forma. Para hacer una l√≠nea que conecte el extremo de abajo con el de arriba **escribe** `line -50,-150`",
             "solution": "line -50,-150"
         },
         {
@@ -50,11 +50,11 @@
             "solution": "move -50,-150"
         },
         {
-            "hint": "Dibujamos una lÌnea que atraviese el centro para que esta simple figura se parezca m·s a una nave, los primeros videojuegos contaban sÛlo con una parte del gran poder inform·tico con el que contamos hoy, por eso los gr·ficos tenÌan que ser muy b·sicos. **escribe** `line 0,125`",
+            "hint": "Dibujamos una l√≠nea que atraviese el centro para que esta simple figura se parezca m√°s a una nave, los primeros videojuegos contaban s√≥lo con una parte del gran poder inform√°tico con el que contamos hoy, por eso los gr√°ficos ten√≠an que ser muy b√°sicos. **escribe** `line 0,125`",
             "solution": "line 0,125"
         }
     ],
-    "completion_text": "Tal vez no es gran cosa pero los gr·ficos simples de los primeros videojuegos, sentaron las bases para los gr·ficos 3D que se usan hoy en dÌa.",
+    "completion_text": "Tal vez no es gran cosa pero los gr√°ficos simples de los primeros videojuegos, sentaron las bases para los gr√°ficos 3D que se usan hoy en d√≠a.",
     "gallery": {
         "cover_path": "/assets/challenges/images/pixelremixes/",
         "remixes": [
@@ -64,5 +64,5 @@
         ]
     },
     "cover": "pixel-ship.png",
-    "guide": "#### Nuevas palabras\n**move** x, y | move 50, 25\n\nMueve el cursor de dibujo desde la posiciÛn actial hacia la cual indiques en los n˙meros x e y. La diferencia con moveTo es que la ˙ltima es relativa, no absoluta. `move 50, 25` mover· el cursor 50 hacia la derecha y 25 hacia abajo desde la posiciÛn actual. El primer valor es el valor de la coordenada x, la cual controla la ubicaciÛn en el eje horizontal. El segundo valor es la coordenada y, la cual contrla la ubicaciÛn en el eje vertical. Los valores negativos lo ubicar·n en las direcciones opuestas (izquierda y arriba).\n\n**line** x, y | line 50, 25\n\nDibuja una lÌnea desde la posiciÛn actual hasta la que se indique. Las coordenadas x, y controlan el punto relativo hasta el cual se dibujar· la lÌnea.\n\n**stroke** color, width | stroke white, 5\n\nConfigura el trazo del dibujo. Las siguientes figuras y el texto ser·n dibujados con el color y el ancho del trazo que configures hasta cambiarlo nuevamente. Esta funciÛn es inteligente y puede aceptar el color o el tamaÒo en cualquier orden, o uno por vez.\n\n#### Lo que crear·s\n1.Asteroide (1979) fue uno de los primeros videojuegos de arcade. Est· situado en el espacio, por eso montemos el escenario. **escribe** `background black`\n2. Los gr·ficos en Asteroides eran lÌneas simples denominadas vectores. Hoy en dÌa, a˙n se utiliza una versiÛn m·s compleja de este concepto en los gr·ficos de las computadoras. Primero necesitamos configurar el tamaÒo del trazo y su color **escribe** `stroke white,5`\n3. Luego usamos la funciÛn move para configurar el punto de partida de nuestra primera lÌnea de la nave. **escribe** `move 0, -70`\n4. Utilizamos la funciÛn line para dibujar una lÌnea relativa al punto de partida, utilizamos un n˙mero negativo para que vaya hacia la izquierda y luego un n˙mero positivo para que vaya hacia abajo **escribe** `line -50,150`\n5. Para mover el cursor al punto donde queremos que nazca la prÛxima lÌnea **escribe** `move -50,150`\n6. Dibujamos una linea hacia adentro y hacia afuera para crear el empujador de nuestra nave - **escribe** `line 50,-25`\n7. MuÈvete a las siguientes coordenadas para continuar la lÌnea en otra direcciÛn **escribe** `move 50,-25`\n8. Replicamos el lado derecho de la nave dando vuelta la segunda coordenada de la lÌnea anterior para dibujar hacia abajo en vez de hacia arriba **escribe** `line 50,25`\n9. MuÈvete al extremo de esa lÌnea **escribe** `move 50,25`\n10. Nuestra nave comienza a tener forma. Para hacer una lÌnea que conecte el extremo de abajo con el de arriba **escribe** `line -50,-150`\n11. Finalmente nos movemos al punto de partida para darle un toque final **escribe** `move -50,-150`\n12. Dibujamos una lÌnea que atraviese el centro para que esta simple figura se parezca m·s a una nave, los primeros videojuegos contaban sÛlo con una parte del gran poder inform·tico con el que contamos hoy, por eso los gr·ficos tenÌan que ser muy b·sicos. **escribe** `line 0,125`\n\n#### Lo que hackear·s\nTal vez no sean gran cosa pero los gr·ficos simples de los primeros videojuegos, sentaron las bases para los gr·ficos 3D que se utilizan hoy en dÌa. Puedes transformar tu nave configurando el color y el ancho del trazo. \n\nPara algo m·s avanzado, intenta dibujar m·s lÌneas.\n\n#### Resumiendo\nAsteroide (1979) fue uno de los primeros videojuegos de arcade. Limitados por no poseer tecnologÌa de dibujo, los diseÒadores del juego ˙nicamente podÌan utilizar lÌneas simples basadas en gr·ficos llamadas vectores, hoy en dÌa se utiliza una versiÛn m·s compleja de este concepto en los gr·ficos de computadora.\n"
+    "guide": "#### Nuevas palabras\n**move** x, y | move 50, 25\n\nMueve el cursor de dibujo desde la posici√≥n actial hacia la cual indiques en los n√∫meros x e y. La diferencia con moveTo es que la √∫ltima es relativa, no absoluta. `move 50, 25` mover√° el cursor 50 hacia la derecha y 25 hacia abajo desde la posici√≥n actual. El primer valor es el valor de la coordenada x, la cual controla la ubicaci√≥n en el eje horizontal. El segundo valor es la coordenada y, la cual contrla la ubicaci√≥n en el eje vertical. Los valores negativos lo ubicar√°n en las direcciones opuestas (izquierda y arriba).\n\n**line** x, y | line 50, 25\n\nDibuja una l√≠nea desde la posici√≥n actual hasta la que se indique. Las coordenadas x, y controlan el punto relativo hasta el cual se dibujar√° la l√≠nea.\n\n**stroke** color, width | stroke white, 5\n\nConfigura el trazo del dibujo. Las siguientes figuras y el texto ser√°n dibujados con el color y el ancho del trazo que configures hasta cambiarlo nuevamente. Esta funci√≥n es inteligente y puede aceptar el color o el tama√±o en cualquier orden, o uno por vez.\n\n#### Lo que crear√°s\n1.Asteroide (1979) fue uno de los primeros videojuegos de arcade. Est√° situado en el espacio, por eso montemos el escenario. **escribe** `background black`\n2. Los gr√°ficos en Asteroides eran l√≠neas simples denominadas vectores. Hoy en d√≠a, a√∫n se utiliza una versi√≥n m√°s compleja de este concepto en los gr√°ficos de las computadoras. Primero necesitamos configurar el tama√±o del trazo y su color **escribe** `stroke white,5`\n3. Luego usamos la funci√≥n move para configurar el punto de partida de nuestra primera l√≠nea de la nave. **escribe** `move 0, -70`\n4. Utilizamos la funci√≥n line para dibujar una l√≠nea relativa al punto de partida, utilizamos un n√∫mero negativo para que vaya hacia la izquierda y luego un n√∫mero positivo para que vaya hacia abajo **escribe** `line -50,150`\n5. Para mover el cursor al punto donde queremos que nazca la pr√≥xima l√≠nea **escribe** `move -50,150`\n6. Dibujamos una linea hacia adentro y hacia afuera para crear el empujador de nuestra nave - **escribe** `line 50,-25`\n7. Mu√©vete a las siguientes coordenadas para continuar la l√≠nea en otra direcci√≥n **escribe** `move 50,-25`\n8. Replicamos el lado derecho de la nave dando vuelta la segunda coordenada de la l√≠nea anterior para dibujar hacia abajo en vez de hacia arriba **escribe** `line 50,25`\n9. Mu√©vete al extremo de esa l√≠nea **escribe** `move 50,25`\n10. Nuestra nave comienza a tener forma. Para hacer una l√≠nea que conecte el extremo de abajo con el de arriba **escribe** `line -50,-150`\n11. Finalmente nos movemos al punto de partida para darle un toque final **escribe** `move -50,-150`\n12. Dibujamos una l√≠nea que atraviese el centro para que esta simple figura se parezca m√°s a una nave, los primeros videojuegos contaban s√≥lo con una parte del gran poder inform√°tico con el que contamos hoy, por eso los gr√°ficos ten√≠an que ser muy b√°sicos. **escribe** `line 0,125`\n\n#### Lo que hackear√°s\nTal vez no sean gran cosa pero los gr√°ficos simples de los primeros videojuegos, sentaron las bases para los gr√°ficos 3D que se utilizan hoy en d√≠a. Puedes transformar tu nave configurando el color y el ancho del trazo. \n\nPara algo m√°s avanzado, intenta dibujar m√°s l√≠neas.\n\n#### Resumiendo\nAsteroide (1979) fue uno de los primeros videojuegos de arcade. Limitados por no poseer tecnolog√≠a de dibujo, los dise√±adores del juego √∫nicamente pod√≠an utilizar l√≠neas simples basadas en gr√°ficos llamadas vectores, hoy en d√≠a se utiliza una versi√≥n m√°s compleja de este concepto en los gr√°ficos de computadora.\n"
 }
