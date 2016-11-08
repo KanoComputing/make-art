@@ -8,9 +8,9 @@ node {
         }
 
         if (env.NODE_ENV == "staging") {
-            sh ". /var/lib/jenkins/userContent/make-art-config/staging.env"
+            load "/var/lib/jenkins/userContent/make-art-config/staging.env"
         } else if (env.NODE_ENV == "production") {
-            sh ". /var/lib/jenkins/userContent/make-art-config/prod.env"
+            load "/var/lib/jenkins/userContent/make-art-config/prod.env"
         }
     }
 
