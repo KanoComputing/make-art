@@ -2,11 +2,16 @@
 node {
     stage('check environment') {
         if (env.BRANCH_NAME=="master" || env.BRANCH_NAME=="jenkins") {
-            env.DEV_ENV = "staging"
+            env.NODE_ENV = "staging"
         } else if (env.BRANCH_NAME=="prod") {
-            env.DEV_ENV = "production"
+            env.NODE_ENV = "production"
         }
-        env.NODE_ENV = "${env.DEV_ENV}"
+
+        if (env.NODE_ENV == "staging") {
+            sh "source /var/lib/jenkins/userContent/make-art-config/staging.env"
+        } else if (env.NODE_ENV == "production") {
+            sh "source /var/lib/jenkins/userContent/make-art-config/prod.env"
+        }
     }
 
     stage('checkout') {
