@@ -248,7 +248,7 @@ gulp.task('copy-challenges', function (next) {
 
 });
 
-gulp.task('compress', () => {
+gulp.task('compress', function () {
     return gulp.src('www/js/index.js', { base: 'www' })
         .pipe(ngAnnotate())
         .pipe(uglify())
