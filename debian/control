@@ -11,3 +11,5 @@ Depends: ${shlibs:Depends}, ${misc:Depends}, kano-toolset (>= 2.3.0-5),
     kano-profile (>= 1.3-2), python-flask
 Suggests: kano-video-files (>= 1.2-1)
 Description: Draw with code
+    An app for learning programming using a basic CoffeeScript drawing API
+
