@@ -1,11 +1,1 @@
-define("ace/snippets/makefile",["require","exports","module"], function(require, exports, module) {
-"use strict";
-
-exports.snippetText = "snippet ifeq\n\
-	ifeq (${1:cond0},${2:cond1})\n\
-		${3:code}\n\
-	endif\n\
-";
-exports.scope = "makefile";
-
-});
+define("ace/snippets/makefile",["require","exports","module"],function(e,n,i){"use strict";n.snippetText="snippet ifeq\n\tifeq (${1:cond0},${2:cond1})\n\t\t${3:code}\n\tendif\n",n.scope="makefile"});

@@ -13,6 +13,6 @@ kano-draw (2.2.0-1) unstable; urgency=low
 
 kano-draw (1.0-1) UNRELEASED; urgency=low
 
-  * Initial release. (Closes: #XXXXXX)
+  * Initial release.
 
- -- Alex <alex@Kano>  Wed, 16 Apr 2014 17:40:58 +0100
+ -- Alex <alex@kano.me>  Wed, 16 Apr 2014 17:40:58 +0100
