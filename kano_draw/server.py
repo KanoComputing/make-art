@@ -210,8 +210,10 @@ server_logger.setLevel(logging.ERROR)
 
 
 @server.route('/')
-# Redirect a localLoad back to index for routing in Angular
+# Return the homepage for pages routed through Angular
 @server.route('/localLoad/<path:path>')
+@server.route('/challenges')
+@server.route('/playground')
 def root(path=None):
     return server.send_static_file('index.html')
 
