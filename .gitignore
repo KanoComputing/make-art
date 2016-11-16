@@ -3,6 +3,7 @@ www/**/*.html
 www/css/*.css
 www/js/index.js
 www/assets/challenges/descriptors
+www/assets/components/**/**
 .tmp
 node_modules
 npm-debug.log
@@ -11,3 +12,4 @@ npm-debug.log
 *.pyc
 *.swp
 dist
+bower_components

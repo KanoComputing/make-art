@@ -1,9 +1,12 @@
 header
     clearfix()
     background color-header
-    padding-bottom 20px
     text-align center
     position relative
+
+    .main-navigation
+      min-height 40px
+      padding-bottom 20px
 
     a.logo
         illustration-fit-height 'layout/draw-logo', header-height
@@ -32,7 +35,7 @@ header
         li
             margin 0 15px
             float left
-            
+
             &.discover
                 a
                     border-radius(3px)
@@ -41,12 +44,12 @@ header
                     padding 4px 20px
                     opacity 0.8
                     text-transform none
-                    
+
                     i
                         opacity 1
                         font-size 16px
                         margin-right 10px
-                    
+
                     &:hover
                         opacity 1
                         background-color color-primary
