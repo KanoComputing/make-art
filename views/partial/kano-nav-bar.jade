@@ -1,0 +1,33 @@
+link(rel='import' href='/components/kano-nav-bar/kano-nav-bar.html')
+link(rel='import' href='/components/kano-primary-links/kano-primary-links.html')
+link(rel='import' href='/components/kano-secondary-links/kano-secondary-links.html')
+
+.kano-navigation(ng-show='selectedWorld && selectedWorld.display_menu')
+    kano-nav-bar(assets-path='/assets/kano-nav-bar/')
+        kano-primary-links(slot='primary')
+        ul.nav.nav-secondary(slot='secondary')
+
+            li: a(href='/challenges', ng-class='{ active: basePath === "challenge" || basePath === "challenges" }')
+                i.icon-menu
+                | ${{ challenges.challenges }}$
+
+            li: a(href='/playground', ng-class='{ active: basePath === "playground" }')
+                i.icon-game
+                | ${{ challenges.playground }}$
+
+        ul.nav.nav-right(ng-cloak slot='right')
+            li(ng-if='!offline && !loggedIn'): a(href='#', ng-click='auth.openModal()')
+                i.icon-login
+                | ${{ partial.login }}$
+
+            li(ng-if='!offline && loggedIn')
+                a.user-display(ng-href='http://world.kano.me/users/{{ user.username }}', target='_blank')
+                    .avatar: img(ng-src='http://avatar.kano.me/username/{{ user.username }}.png')
+                    .username
+                        | {{ user.username }}
+
+            li(ng-if='!offline && loggedIn'): a(href='#', ng-click='logout()')
+                i.icon-logout
+                | ${{ partial.logout }}$
+
+            li: button.close(ng-click='shutdown()', ng-if='offline'): i.icon-cross

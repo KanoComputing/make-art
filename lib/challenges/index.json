@@ -25,6 +25,7 @@
         {
             "id": "pixelhack",
             "name": "Pixel Hack",
+            "display_menu": true,
             "description": "This is a group of challenges for the hour of code",
             "cover": "world_covers/pixelhack",
             "world_path": "worlds/pixelhack",
