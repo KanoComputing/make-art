@@ -60,6 +60,14 @@ kano-nav-bar
                 margin-left 15px
 
         li
+
+            i
+                color color-ash
+                font-size 18px
+                margin-right 5px
+                position relative
+                top 2px
+
             a
                 smooth-font()
                 color color-ash
@@ -68,12 +76,11 @@ kano-nav-bar
                 position relative
                 top -2px
 
-            i
-                opacity .5
-                font-size 18px
-                margin-right 5px
-                position relative
-                top 2px
+                &.active
+                    color color-charcoal
+
+                    i
+                        color color-orange
 
             button.close
                 background color-red

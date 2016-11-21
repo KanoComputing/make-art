@@ -130,7 +130,7 @@ function apifyChallengeFn(next) {
                 'sales_popup_after',
                 'certificate_after',
                 'display_menu',
-                'teachers_guide',
+                'hero_header',
                 'updateForm',
                 'socialText'
             ],
