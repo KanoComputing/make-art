@@ -16,7 +16,7 @@
     "tests"
   ],
   "dependencies": {
-    "kano-nav-bar": "git://github.com/abridger/kano-nav-bar#unified-navigation",
+    "kano-nav-bar": "abridger/kano-nav-bar#unified-navigation",
     "kano-primary-links": "abridger/kano-primary-links",
     "iron-image": "PolymerElements/iron-image#^1.2.5"
   }
