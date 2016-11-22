@@ -1,14 +1,13 @@
-kano-nav-bar
+kano-nav
     z-index 8 !important
 
-    .kano-nav-bar.page-width
+    .kano-nav.page-width
         width 100%
 
     ul.nav
         debullet()
         display flex
         display -webkit-flex
-        margin 2px
         font-size 16px
 
         &.nav-secondary
@@ -46,6 +45,7 @@ kano-nav-bar
         &.nav-right
             align-items center
             -webkit-align-items center
+            height 100%
 
             @media all and (min-width: 768px)
                 flex-direction row
@@ -60,7 +60,6 @@ kano-nav-bar
                 margin-left 15px
 
         li
-
             i
                 color color-ash
                 font-size 18px

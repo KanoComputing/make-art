@@ -1,9 +1,9 @@
-link(rel='import' href='/components/kano-nav-bar/kano-nav-bar.html')
+link(rel='import' href='/components/kano-nav/kano-nav.html')
 link(rel='import' href='/components/kano-primary-links/kano-primary-links.html')
 link(rel='import' href='/components/kano-secondary-links/kano-secondary-links.html')
 
 .kano-navigation(ng-show='selectedWorld && selectedWorld.display_menu')
-    kano-nav-bar(assets-path='/assets/kano-nav-bar/')
+    kano-nav(assets-path='/assets/kano-nav/')
         kano-primary-links(slot='primary')
         ul.nav.nav-secondary(slot='secondary')
 
