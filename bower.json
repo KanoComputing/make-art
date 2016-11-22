@@ -16,8 +16,8 @@
     "tests"
   ],
   "dependencies": {
-    "kano-nav-bar": "abridger/kano-nav-bar#unified-navigation",
-    "kano-primary-links": "abridger/kano-primary-links",
+    "kano-nav": "KanoComputing/kano-nav",
+    "kano-primary-links": "KanoComputing/kano-primary-links",
     "iron-image": "PolymerElements/iron-image#^1.2.5"
   }
 }
