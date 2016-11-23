@@ -2,113 +2,51 @@
 .page-challenges
     .weekday
         display none
-    
-    &.mischiefweek2015, &.pixelhack
+
+    &.mischiefweek2015
         position relative
         overflow hidden
-        
+
         .image
             position absolute
             top 10px
             width 400px
             height 400px
             z-index -1
-            
+
             &.pull-left
                 left -200px
             &.pull-right
                 right -200px
-                
+
         .header
             position relative
             z-index 0
             margin-bottom 20px
             height 180px
             width 100%
-    
+
     &.pixelhack
         .image
             top -40px
-            
+
             &.pull-left
                 bg-image("pixelhack/cubes-left", 400px 400px, false, no-repeat)
-                
+
             &.pull-right
                 bg-image("pixelhack/cubes-right", 400px 400px, false, no-repeat)
-                
-        .header
-            bg-image("pixelhack/pixelhack-header", 100% 180px, false, no-repeat)
-            display(flex)
-            justify-content(flex-end)
-            
-            .updates-form
-                background-color rgba(color-black, .6)
-                display(flex)
-                align-items(flex-start)
-                flex-direction(column)
-                width 300px
-                padding 20px
-                
-                h4
-                    text-transform uppercase
-                    font-weight bold
-                    margin-top 15px
-                    margin-bottom 5px
-                    font-size 18px
-                    smooth-font()
-                
-                form
-                    display(inline-flex)
-                    margin 0
-                    width 100%
-                
-                    input, button
-                        background none
-                        color white
-                        border 1px solid darken(color-white, 20)
-                        margin 0
-                        padding 12px 10px
-                        font-weight bold
-                        smooth-font()
-                    
-                    input
-                        border-radius(3px 0 0 3px)
-                        outline none
-                        flex(70)
-                        font-family 'Bariol', sans-serif
-                        font-size 16px
-                    
-                    button
-                        border-left none
-                        border-radius(0 3px 3px 0)
-                        flex(30)
-                        color color-white
-                        font-size 12px
-                
-                .error, .success
-                    align-self(center)
-                    border-radius(3px)
-                    padding 7px 15px
-                    margin-top 5px
-                    font-size 14px
-                
-                .error
-                    background-color color-red    
-                    
-                .success
-                    background-color color-green
-    
+
     &.mischiefweek2015
-        .image            
+        .image
             &.pull-left
                 bg-image("mischiefweek/web-left", 400px 400px, false, no-repeat)
-                
+
             &.pull-right
                 bg-image("mischiefweek/web-right", 400px 400px, false, no-repeat)
-                
+
         .header
             bg-image("mischiefweek/mischief-header", 100% 160px, false, no-repeat)
-        
+
         .challenges-list li a
             .weekday
                 display block
@@ -117,7 +55,7 @@
                 bg-image("mischiefweek/sash-purple", 80px 80px, false, no-repeat)
                 height 80px
                 width 80px
-                
+
                 span
                     display block
                     transform rotate(-45deg)
@@ -128,23 +66,23 @@
                     font-size 14px
                     text-align center
                     color color-white
-            
+
             &.current .weekday
                 bg-image("mischiefweek/sash-orange", 80px 80px, false, no-repeat)
-        
-    
+
+
     .page-title
         position relative
         font-weight 400
-        
+
         .quests
             position absolute
             left 0
             display inline-block
-            
+
             a
                 color #888
-    
+
     ul.worlds-list
         debullet()
         clearfix()
@@ -157,7 +95,7 @@
             box-sizing: border-box
             margin 0 20px 20px 0
             width 48%
-            
+
             a.world-cover
                 width 100%
                 display block
@@ -165,7 +103,7 @@
                 background-color #626770
                 position relative
                 border-radius(3px 3px 3px 3px)
-                        
+
                 h4
                     position absolute
                     bottom 0
@@ -178,7 +116,7 @@
                     font-size 16px
                     smooth-font()
                     border-radius(0 0 3px 3px)
-                    
+
                     &:after
                         icon()
                         circle(20px, transparent)
@@ -189,15 +127,15 @@
                         color color-white
                         line-height 22px
                         margin 0
-                
+
                 &.current
                     box-shadow color-blue 0 0 0 4px
                     border-radius(3px)
-                    
+
                     h4:after
                         content '\e615'
                         background-color color-blue
-                    
+
                 &.completed
                     h4
                         background-color color-green
@@ -205,7 +143,7 @@
                         &:after
                             content '\e61d'
                             background-color darken(color-green, 5)
-                            
+
                 &.locked
                     filter(grayscale(100%))
                     cursor default
@@ -216,7 +154,7 @@
                             content '\e621'
                             margin-top 0
                             background darken(color-grey-lighter, 10)
-                        
+
     ul.challenges-list, ul.shares-list
         debullet()
         clearfix()
@@ -321,11 +259,11 @@
 
                     .cover
                         background-color #46ddeb
-                        
+
 .certificate
     .modal-inner
         top 150px
-        
+
         .cover
             background-image url('/assets/pixelhack/cert-modal.png')
             background-size 100%

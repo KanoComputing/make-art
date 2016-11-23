@@ -1,4 +1,6 @@
-header: .page-width
+include kano-nav
+
+header: .main-navigation.page-width(ng-hide='selectedWorld && selectedWorld.display_menu')
 
     a.logo(href='/')
     //- if !offline
@@ -22,7 +24,7 @@ header: .page-width
         li(ng-if='!offline && !loggedIn'): a(href='#', ng-click='auth.openModal()')
             i.icon-login
             | ${{ partial.login }}$
-        
+
 
         li(ng-if='!offline && loggedIn')
             a.user-display(ng-href='http://world.kano.me/users/{{ user.username }}', target='_blank')
@@ -36,4 +38,4 @@ header: .page-width
         li: button.close(ng-click='shutdown()', ng-if='offline'): i.icon-cross
 
 // Uncomment to enable banner
-//include banner
+// include banner
