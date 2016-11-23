@@ -129,7 +129,8 @@ function apifyChallengeFn(next) {
                 'share_strategy',
                 'sales_popup_after',
                 'certificate_after',
-                'teachers_guide',
+                'display_menu',
+                'hero_header',
                 'updateForm',
                 'socialText'
             ],
@@ -248,6 +249,11 @@ gulp.task('copy-challenges', function (next) {
 
 });
 
+gulp.task('copy-vendor', function () {
+    return gulp.src('bower_components/**')
+        .pipe(gulp.dest('www/components'));
+});
+
 gulp.task('compress', function () {
     return gulp.src('www/js/index.js', { base: 'www' })
         .pipe(ngAnnotate())
@@ -267,7 +273,7 @@ gulp.task('listen', function (next) {
 });
 gulp.task('prepare-challenges', ['copy-challenges', 'apify-challenges']);
 
-gulp.task('build', ['browserify', 'styles', 'views-i18n', 'prepare-challenges']);
+gulp.task('build', ['browserify', 'copy-vendor', 'styles', 'views-i18n', 'prepare-challenges']);
 
 gulp.task('watch', ['build', 'listen'], function () {
     gulp.watch(paths.browserify.watch, ['browserify']);
