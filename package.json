@@ -8,7 +8,7 @@
     "watch": "gulp watch",
     "build": "gulp",
     "bundle": "./bundle",
-    "postinstall": "node node_modules/.bin/gulp default",
+    "postinstall": "node node_modules/.bin/bower i && node_modules/.bin/gulp default",
     "jshint": "jshint lib",
     "jscs": "jscs lib",
     "test": "./node_modules/.bin/mocha test/**/*"
@@ -21,15 +21,18 @@
   "license": "MIT2",
   "dependencies": {
     "api-service": "1.0.0",
+    "bower": "^1.8.0",
     "cli-color": "~0.2.x",
     "coffee-script": "~1.7.x",
     "color": "^0.7.3",
     "deep-equal": "^1.0.0",
+    "del": "1.1.1",
     "express": "^4.10.5",
     "griddy": "0.0.x",
     "gulp": "^3.9.x",
     "gulp-browserify": "~0.4.x",
     "gulp-callback": "0.0.3",
+    "gulp-html-i18n": "0.3.4",
     "gulp-jade": "~0.4.x",
     "gulp-livereload": "1.2.0",
     "gulp-rename": "~0.2.x",
@@ -42,9 +45,7 @@
     "nib": "~1.0.x",
     "partialify": "^3.1.1",
     "throttle-debounce": "^0.1.1",
-    "tiny-lr": "0.0.9",
-    "gulp-html-i18n": "0.3.4",
-    "del": "1.1.1"
+    "tiny-lr": "0.0.9"
   },
   "devDependencies": {
     "chai": "3.2.x",
