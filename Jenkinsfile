@@ -24,6 +24,7 @@ node {
 
     stage('install dependencies') {
         sh "npm install --ignore-scripts"
+        sh "bower i"
     }
 
     stage('build') {
