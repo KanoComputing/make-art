@@ -19,8 +19,7 @@
         },
         {
             "hint": "Awesome, now for the circles - inside the for loop **type** `circle 10 * i`",
-            "solution": "    circle 10 * i",
-            "validate": "    circle 10 *\\* *i"
+            "solution": "    circle 10 * i"        
         }
     ],
     "completion_text": "Great! For loops let us repeat bits of code (it saves on all the typing)!",

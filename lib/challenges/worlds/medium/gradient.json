@@ -15,13 +15,11 @@
         },
         {
             "hint": "Let's rotate through the color spectrum - **type** `color rotate red, 10 * x + 10 * y`",
-            "solution": "        color rotate red, 10 * x + 10 * y",
-            "validate": "        color rotate +red,10 *\\* *x *\\+ *10 *\\* *y"
+            "solution": "        color rotate red, 10 * x + 10 * y"
         },
         {
             "hint": "Now we need to move every time we draw - **type** `moveTo 20 * x, 20 * y`",
-            "solution": "        moveTo 20 * x, 20 * y",
-            "validate": "        moveTo 20 *\\* *x,20 *\\* *y"
+            "solution": "        moveTo 20 * x, 20 * y"
         },
         {
             "hint": "Now for the shapes draw a square of size 20",
