@@ -27,8 +27,7 @@
         },
         {
             "hint": "Move around, **type** `moveTo x * 20, y * 20`",
-            "solution": "        moveTo x * 20, y * 20",
-            "validate": "        moveTo x *\\* *20,y *\\* *20"
+            "solution": "        moveTo x * 20, y * 20"
         },
         {
             "hint": "Now for the dots - **type** `circle 6`",

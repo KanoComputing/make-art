@@ -1,7 +1,3 @@
-link(rel='import' href='/components/kano-nav/kano-nav.html')
-link(rel='import' href='/components/kano-primary-links/kano-primary-links.html')
-link(rel='import' href='/components/kano-secondary-links/kano-secondary-links.html')
-
 .kano-navigation(ng-show='selectedWorld && selectedWorld.display_menu')
     kano-nav(assets-path='/assets/kano-nav/' site-root='{{cfg.WORLD_URL}}')
         kano-primary-links(current-site='{{window.location.origin}}' slot='primary')
