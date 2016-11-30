@@ -9,10 +9,15 @@ html(lang='en',  xmlns:ng="http://angularjs.org")
         meta(name='apple-mobile-web-app-capable', content='yes')
         meta(name='apple-mobile-web-app-status-bar-style', content='orange')
         meta(name='viewport', content='initial-scale=1, maximum-scale=1, user-scalable=no')
-            
+
+        //- Components
+        link(rel='import' href='/components/kano-nav/kano-nav.html')
+        link(rel='import' href='/components/kano-primary-links/kano-primary-links.html')
+        link(rel='import' href='/components/kano-secondary-links/kano-secondary-links.html')
+
         //- Styles
         link(href='/css/main.css', rel='stylesheet', type='text/css')
-          
+
         script(type="text/javascript").
             var dataLayer = [];
             (function() {
@@ -21,11 +26,11 @@ html(lang='en',  xmlns:ng="http://angularjs.org")
                 });
             })();
         title Draw
-        
+
         script(src='/js/vendor/xtag.js')
 
     body(id="ng-app", ng-app='draw', class=offline ? 'offline' : 'online')
-        
+
 
         script(src='/js/vendor/console-polyfill.js', type='text/javascript')
         .loading-overlay(ng-cloak): .spinner
