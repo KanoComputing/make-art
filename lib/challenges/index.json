@@ -25,18 +25,25 @@
         {
             "id": "pixelhack",
             "name": "Pixel Hack",
+            "display_menu": true,
+            "hero_header": {
+                "links": [{
+                        "image": "pixelhack/teacher-pack.svg",
+                        "location": "/assets/guides/PixelHackEducatorGuide.zip",
+                        "text": "Download the teacher resource guide"
+                    }, {
+                        "image": "pixelhack/about-kano.svg",
+                        "location": "https://world.kano.me/welcome",
+                        "text": "Learn more about Kano"
+                }]
+            },
             "description": "This is a group of challenges for the hour of code",
             "cover": "world_covers/pixelhack",
             "world_path": "worlds/pixelhack",
             "css_class": "pixelhack",
             "type": "campaign",
             "certificate_after": 2,
-            "teachers_guide": "/guides/PixelHackEducatorGuide.zip",
             "share_strategy": "optional",
-            "updateForm": {
-                "url": "https://docs.google.com/forms/d/1nTJ-waAVLQCO3myxKMDQLafL5Fnf9uTPtiejuH-74sY/formResponse",
-                "field": "entry.1965349241"
-            },
             "socialText": {
                 "email": "Hack your way through video game history with Pixel Hack from Kano!",
                 "facebook": "Hack your way through video game history with #PixelHack from Kano",

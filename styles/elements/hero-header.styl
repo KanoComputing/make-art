@@ -1,0 +1,63 @@
+.hero-header
+    -webkit-font-smoothing antialiased
+    -moz-osx-font-smoothing grayscale
+
+    .hero-image
+        height 35vw
+        max-height 340px
+        min-height 160px
+
+    .hero-links
+        align-items center
+        background-color #ffffff
+        display flex
+        justify-content center
+        padding 15px
+
+        @media all and (max-width: 680px)
+            flex-direction column
+
+        @media all and (min-width: 681px)
+            flex-direction row
+
+    .hero-link
+        align-items center
+        display flex
+        flex 1 1 auto
+        flex-direction row
+        justify-content flex-start
+        max-width 350px
+        width 100%
+
+        @media all and (max-width: 680px)
+            &:nth-child(2n)
+                margin-top 20px
+
+        @media all and (min-width: 681px)
+            margin 0 40px
+
+        .hero-link-thumbnail
+            flex 1 0 70px
+
+            .hero-link-image
+                height auto
+                width 100%
+
+        &:first-child
+            .hero-link-thumbnail
+                max-width 70px
+
+        &:nth-child(2n)
+            .hero-link-thumbnail
+                max-width 60px
+
+        .hero-link-text
+            color color-ash
+            font-size 20px
+            font-weight bold
+            padding-left 20px
+
+.pixelhack
+    .hero-header
+        .hero-image
+            bg-image("pixelhack/pixelhack-hero", cover, center, no-repeat, "jpg")

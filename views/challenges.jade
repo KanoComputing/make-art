@@ -1,111 +1,106 @@
 include ./partial/header
 
-.page-challenges(ng-class="[ selectedWorldClass ]"): .page-width
-    .image.pull-left
-    .image.pull-right
-      
-    social-sharing(type='"world"' ng-if='selectedWorld.socialText && loggedIn && !offline')
+.page-challenges(ng-class="[ selectedWorldClass ]")
+    include ./partial/hero-header
 
-    h3.page-title(ng-if='selectedWorld')
-        span {{ selectedWorld ? selectedWorld.name : '${{ challenges.challenges }}$'}}
-        .quests
-            a(ng-if="isWorldInIndex(selectedWorld)" href='/challenges')
-                i.icon-arrow-left
-                | ${{ challenges.challenges }}$
+    .page-width
+        .image.pull-left
+        .image.pull-right
 
-    .header
-        .updates-form(ng-if='selectedWorld.updateForm && !loggedIn')
-            h4 ${{ challenges.get_kano_updates }}$
-            form(name='updateForm', ng-submit='submit()')
-                input(placeholder='Enter your email address', ng-model='formData.email', type='email', required)
-                button(type='submit', ng-disabled='updateForm.$invalid', ng-class='{ "disabled" : updateForm.$invalid }') ${{ challenges.sign_up }}$
+        social-sharing(type='"world"' ng-if='selectedWorld.socialText && loggedIn && !offline')
 
-            .error(ng-if='error') {{ error }}
-            .success(ng-if='success') {{ success }}
+        h3.page-title(ng-if='selectedWorld')
+            span {{ selectedWorld ? selectedWorld.name : '${{ challenges.challenges }}$'}}
+            .quests
+                a(ng-if="isWorldInIndex(selectedWorld)" href='/challenges')
+                    i.icon-arrow-left
+                    | ${{ challenges.challenges }}$
 
-    ul.worlds-list(ng-if='!selectedWorld' )
-        li.world-item(ng-repeat='world in worlds' ng-if='isWorldInIndex(world)')
-            a.world-cover(
-                ng-href='{{!isWorldLocked(world) ? "/challenges/" + world.id : ""}}'
-                ng-class='{locked: isWorldLocked(world), completed: isWorldCompleted(world), current: isWorldCurrent(world)}'
-                ng-style='{ "background-image": "url(/assets/challenges/images/" + world.cover + ".png)" }'
-                )
+        .header
+            .updates-form(ng-if='selectedWorld.updateForm && !loggedIn')
+                h4 ${{ challenges.get_kano_updates }}$
+                form(name='updateForm', ng-submit='submit()')
+                    input(placeholder='Enter your email address', ng-model='formData.email', type='email', required)
+                    button(type='submit', ng-disabled='updateForm.$invalid', ng-class='{ "disabled" : updateForm.$invalid }') ${{ challenges.sign_up }}$
 
-                h4 {{ world.name }} 
+                .error(ng-if='error') {{ error }}
+                .success(ng-if='success') {{ success }}
 
-    ul.challenges-list(ng-if='selectedWorld')
-
-        li(ng-repeat='challenge in challenges')
-            a(
-                ng-click='selectChallenge(challenge)',
-                ng-class='{ locked: isLocked(challenge), completed: isCompleted(challenge), current: isCurrent(challenge) }'
-                )
-
-                .cover(ng-style='{ "background-image": "url(/assets/challenges/images/" + challenge.cover + ")" }')
-
-                .detail
-                    h5 {{ challenge.short_title || challenge.title }}
-
-        li(ng-if='selectedWorld.type !== "campaign"')
-
-            a.highlight(href='/playground', ng-class='{ locked: false}')
-
-                .cover(ng-style='{"background-image": "url(/assets/challenges/images/playground.png)"}')
-
-                .detail
-                    h5 ${{ challenges.playground }}$
-
-        li(ng-if='selectedWorld.certificate_after')
-
-            a.highlight(
-                        ng-href="{{getCertificateUrl()}}",
-                        target="{{isCertAchieved(selectedWorld) ? '_blank' : '_self'}}",
-                        ng-class='{ locked: !isCertAchieved(selectedWorld)}',
-                        ng-click='checkCertOnPi($event)'
-                        )
-
-                .cover(ng-style='{"background-image": "url(/assets/challenges/images/cert-icon.png)"}')
-
-                .detail
-                    h5 ${{ challenges.certificate }}$
-        li(ng-if='selectedWorld.teachers_guide && !cfg.OFFLINE')
-
-            a.highlight(href='/assets{{selectedWorld.teachers_guide}}',target='_blank')
-
-                .cover(ng-style='{"background-image": "url(/assets/challenges/images/teachers-guide.png)"}')
-
-                .detail
-                    h5 ${{ challenges.teachers_guide }}$
-
-    div(ng-if='shares && selectedWorld.type !== "campaign"')
-
-        h3.page-title
-            i.icon-share
-            | ${{ challenges.latest_shares }}$
-
-        ul.shares-list
-
-            li(ng-repeat='share in shares')
-                a(href='{{cfg.WORLD_URL}}/shared/{{ share.slug }}')
-
-                    .cover(ng-style='{ "background-image": "url(" + share.cover_url + ")" }')
-
-                    .detail
-                        h5
-                            | {{ share.title }} 
-                            em by {{ share.user.username }}
-
-            li
-                a.highlight.browse(
-                    href='{{cfg.WORLD_URL}}/shares/make-art',
-                    ng-click='browseMore($event)',
-                    target='_blank'
+        ul.worlds-list(ng-if='!selectedWorld' )
+            li.world-item(ng-repeat='world in worlds' ng-if='isWorldInIndex(world)')
+                a.world-cover(
+                    ng-href='{{!isWorldLocked(world) ? "/challenges/" + world.id : ""}}'
+                    ng-class='{locked: isWorldLocked(world), completed: isWorldCompleted(world), current: isWorldCurrent(world)}'
+                    ng-style='{ "background-image": "url(/assets/challenges/images/" + world.cover + ".png)" }'
                     )
 
-                    .cover(ng-style='{"background-image": "url(/assets/challenges/images/browse.png)"}')
+                    h4 {{ world.name }}
+
+        ul.challenges-list(ng-if='selectedWorld')
+
+            li(ng-repeat='challenge in challenges')
+                a(
+                    ng-click='selectChallenge(challenge)',
+                    ng-class='{ locked: isLocked(challenge), completed: isCompleted(challenge), current: isCurrent(challenge) }'
+                    )
+
+                    .cover(ng-style='{ "background-image": "url(/assets/challenges/images/" + challenge.cover + ")" }')
 
                     .detail
-                        h5 ${{ challenges.browse_more }}$
+                        h5 {{ challenge.short_title || challenge.title }}
+
+            li(ng-if='selectedWorld.type !== "campaign"')
+
+                a.highlight(href='/playground', ng-class='{ locked: false}')
+
+                    .cover(ng-style='{"background-image": "url(/assets/challenges/images/playground.png)"}')
+
+                    .detail
+                        h5 ${{ challenges.playground }}$
+
+            li(ng-if='selectedWorld.certificate_after')
+
+                a.highlight(
+                            ng-href="{{getCertificateUrl()}}",
+                            target="{{isCertAchieved(selectedWorld) ? '_blank' : '_self'}}",
+                            ng-class='{ locked: !isCertAchieved(selectedWorld)}',
+                            ng-click='checkCertOnPi($event)'
+                            )
+
+                    .cover(ng-style='{"background-image": "url(/assets/challenges/images/cert-icon.png)"}')
+
+                    .detail
+                        h5 ${{ challenges.certificate }}$
+
+        div(ng-if='shares && selectedWorld.type !== "campaign"')
+
+            h3.page-title
+                i.icon-share
+                | ${{ challenges.latest_shares }}$
+
+            ul.shares-list
+
+                li(ng-repeat='share in shares')
+                    a(href='{{cfg.WORLD_URL}}/shared/{{ share.slug }}')
+
+                        .cover(ng-style='{ "background-image": "url(" + share.cover_url + ")" }')
+
+                        .detail
+                            h5
+                                | {{ share.title }}
+                                em by {{ share.user.username }}
+
+                li
+                    a.highlight.browse(
+                        href='{{cfg.WORLD_URL}}/shares/make-art',
+                        ng-click='browseMore($event)',
+                        target='_blank'
+                        )
+
+                        .cover(ng-style='{"background-image": "url(/assets/challenges/images/browse.png)"}')
+
+                        .detail
+                            h5 ${{ challenges.browse_more }}$
 
 include ./partial/selected-challenge
 include ./partial/certificate-modal

@@ -11,6 +11,7 @@ You can try the app [here »](http://art.kano.me/)
     git clone git@github.com:KanoComputing/make-art.git
     cd make-art
     npm install
+    bower install
 
 ## Build
 
