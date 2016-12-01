@@ -24,7 +24,7 @@
         {
             "hint": "Now to set where each star will go -  **type** `moveTo (random 1, 500), (random 1, 500)`",
             "solution": "    moveTo (random 1, 500), (random 1, 500)",
-            "validate": "    moveTo ( *random +1,500 *),( *random +1,500 *)"
+            "validate": "__    moveTo ?\\( *random +1, +500 *\\), +\\( *random +1, +500 *\\)"
         },
         {
             "hint": "Draw each star as a circle with a size of 5",
