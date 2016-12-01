@@ -14,24 +14,19 @@
         },
         {
             "hint": "The second loop should be `for y in [ 0 .. 20 ]`",
-            "solution": "    for y in [ 0 .. 20 ]",
-            "validate": "    for y in \\[ 0 .. 20 \\]"
+            "solution": "    for y in [ 0 .. 20 ]"
         },
         {
             "hint": "Set the color with `color rotate red, x + y * 10`",
-            "solution": "        color rotate red, x + y * 10",
-            "validate": "        color rotate red, x \\+ y \\* 10"
+            "solution": "        color rotate red, x + y * 10"
         },
         {
             "hint": "Move into position with `moveTo x * 25, y * 25`",
-            "solution": "        moveTo x * 25, y * 25",
-            "validate": "        moveTo x \\* 25, y \\* 25"
+            "solution": "        moveTo x * 25, y * 25"
         },
         {
             "hint": "Finally, lets add squares. **Type** `square 25`",
-            "solution": "        square 25",
-            "validate": "        square 25"
-        }
+            "solution": "        square 25"        }
     ],
     "completion_text": "Well done! The rotate function cycles through colours creating a rainbow effect.",
     "gallery": {
