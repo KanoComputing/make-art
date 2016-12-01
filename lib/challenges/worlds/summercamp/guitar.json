@@ -117,7 +117,8 @@
         },
         {
             "hint": "Select a random location - **type** `moveTo (random 200, 400), (random 100, 400)`",
-            "solution": "    moveTo (random 200, 400), (random 100, 400)"
+            "solution": "    moveTo (random 200, 400), (random 100, 400)",
+            "validate": "__    moveTo ?\\( *random +200, +400 *\\), +\\( *random +100, +400 *\\)"
         },
         {
             "hint": "Come on, play some notes! - **copy and paste** `text '♪'`",
