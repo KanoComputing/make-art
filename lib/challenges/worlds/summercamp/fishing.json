@@ -37,7 +37,8 @@
         },
         {
             "hint": "Move each wave a random amount to the left - **type** `move (random 24, 32)`",
-            "solution": "    move (random 24, 32)"
+            "solution": "    move (random 24, 32)",
+            "validate": "__    move \\(random 24, +32\\)"
         },
         {
             "hint": "Press ENTER and then backspace to get rid of the indent. This exits the loop.\n\nNext move to the place where we will draw the rest of the water - **type** `moveTo 0, 270`.",
@@ -61,7 +62,8 @@
         },
         {
             "hint": "Move each wave to a random place on the surface of the water - **type** `moveTo (random 0, 500), (random 260, 500)`",
-            "solution": "    moveTo (random 0, 500), (random 260, 500)"
+            "solution": "    moveTo (random 0, 500), (random 260, 500)",
+            "validate": "__    moveTo ?\\( *random +0, +500 *\\), +\\( *random +260, +500 *\\)"
         },
         {
             "hint": "Now draw each ripple as a little arc - **type** `arc 10, 0.8, 0.2`",
@@ -89,7 +91,8 @@
         },
         {
             "hint": "To see if a fish is biting we are going to draw a cork. Move to the end of the fishing line - **type** `move -100, (random 197, 202)`",
-            "solution": "move -100, (random 197, 202)"
+            "solution": "move -100, (random 197, 202)",
+            "valudate": "__move -100, \\(random 197, 202\\)"
         },
         {
             "hint": "The cork doesn't have an outline - **type** `stroke 0`",
