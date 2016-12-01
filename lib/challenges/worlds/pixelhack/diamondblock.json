@@ -23,8 +23,7 @@
         },
         {
             "hint": "Move into position for each square with `moveTo x * 31.25, y * 31.25`",
-            "solution": "        moveTo x * 31.25, y * 31.25",
-            "validate": "        moveTo x \\* 31.25, y \\* 31.25"
+            "solution": "        moveTo x * 31.25, y * 31.25"
         },
         {
             "hint": "Finally, draw the stone square with `square 32`",
@@ -51,8 +50,7 @@
         },
         {
             "hint": "Move into position for each square with `moveTo x * 31.25, y * 31.25`",
-            "solution": "            moveTo x * 31.25, y * 31.25",
-            "validate": "            moveTo x \\* 31.25, y \\* 31.25"
+            "solution": "            moveTo x * 31.25, y * 31.25"
         },
         {
             "hint": "Finally, draw the diamond square with `square 32`",
