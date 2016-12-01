@@ -49,7 +49,8 @@
         },
         {
             "hint": "Clouds are made of small droplets of water vapor, which is see-through! To get a see-through color we use the `opacity` function. **Type** `color (opacity white, .1)`",
-            "solution": "color (opacity white, .1)"
+            "solution": "color (opacity white, .1)",
+            "validate": "__color \\(opacity white, .1\\)"
         },
         {
             "hint": "Now let’s make a new loop to draw the cloud puffs. We’ll need a lot, so let’s make this a loop last 300 iterations. **Type** `for j in [ 0 ... 250 ]`.",
