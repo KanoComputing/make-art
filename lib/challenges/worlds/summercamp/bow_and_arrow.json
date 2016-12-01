@@ -17,7 +17,8 @@
         },
         {
             "hint": "We want the background to jitter, so we will start drawing it at a random point. **Type** `moveTo (random -20, 0), (random 240, 260)`.",
-            "solution": "moveTo (random -20, 0), (random 240, 260)"
+            "solution": "moveTo (random -20, 0), (random 240, 260)",
+            "validate": "__moveTo ?\\( *random +-20, +0 *\\), +\\( *random +240, +260 *\\)"
         },
         {
             "hint": "Our target is in a grassy field, so lets get our `color green` ready",
