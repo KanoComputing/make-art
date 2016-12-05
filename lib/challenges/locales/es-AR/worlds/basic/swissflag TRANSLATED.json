@@ -1,0 +1,39 @@
+{
+    "id": "swissflag",
+    "title": "Bandera suiza",
+    "description": "Haz la bandera de Suiza programando",
+    "code": "",
+    "startAt": 2,
+    "steps": [
+        {
+            "hint": "Ahora vamos por algo un poco más desafiante. Podemos hacer del fondo un color sólido. Fondo en inglés se dice background. **Escribe** `background red`.",
+            "solution": "background red"
+        },
+        {
+            "hint": "Vamos a dibujar líneas, necesitamos ajustar un lindo trazo grueso. Cada vez que lo hagamos vamos a usar la plabra en inglés stroke. **Escribe** `stroke 66`",
+            "solution": "stroke 66"
+        },
+        {
+            "hint": "Ahora ajustemos el color del trazo a blanco. Recuerda, el color en inglés. Blanco es white - en la tercera línea **escribe** `stroke white`",
+            "solution": "stroke white"
+        },
+        {
+            "hint": "Dibujemos nuestra primera línea. Ya decidimos que será blanca y que tendrá 66 píxeles de ancho. Vamos a dibujar una línea de 100 de largo **escribiendo** `line 100`.",
+            "solution": "line 100"
+        },
+        {
+            "hint": "Qué línea corta y rechoncha. Necesita una amiga. También vamos a hacerla de 100 píxeles de largo pero ahora en la dirección opuesta. Utilizaremos la palabra en inglés: line **Escribe** `line -100`.",
+            "solution": "line -100"
+        },
+        {
+            "hint": "Mucho mejor, ahora necesitamos líneas que vayan hacia arriba y hacia abajo. Pero ¿cómo lo vamos a hacer? La función de la línea puede contener dos números. El primero controla la posición horizontal, el segundo la posición vertical. **Escribe** `line 0, 100`",
+            "solution": "line 0, 100"
+        },
+        {
+            "hint": "¡La línea va hacia abajo! Para que vaya hacia arriba **escribe** `line 0, -100`.",
+            "solution": "line 0, -100"
+        }
+    ],
+    "completion_text": "¡Qué linda bandera! Los suizos se caracterizan por sus excelentes diseños minimalistas.",
+    "cover": "swissflag.png"
+}

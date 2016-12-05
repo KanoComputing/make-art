@@ -1,0 +1,13 @@
+{
+    "desafios": [
+        "./encongimiento",
+        "./aleatorio",
+        "./estrellado",
+        "./casa",
+        "./puntos",
+        "./degrade",
+        "./planeta",
+        "./pizza"
+    ]
+}
+

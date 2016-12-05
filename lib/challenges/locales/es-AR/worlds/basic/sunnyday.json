@@ -1,23 +1,23 @@
 {
     "id": "sunnyday",
-    "title": "Día soleado",
-    "description": "Aprende lo básico de programación haciendo un despejado y soleado día.",
+    "title": "Sunny Day",
+    "description": "Learn the basics by coding a clear sunny day.",
     "code": "",
     "startAt": 2,
     "steps": [
         {
-            "hint": "Primero vamos a llenar el fondo con un lindo cielo azul - **escribe** `background blue`",
+            "hint": "First we will fill the canvas with a nice sky blue - **type** `background blue`",
             "solution": "background blue"
         },
         {
-            "hint": "Ahora necesitamos cambiar el color de dibujo a un amarillo brillante - en una nueva línea **escribe** `color yellow`",
+            "hint": "Now we need to change the drawing color to a bright yellow - in a new line **type** `color yellow`",
             "solution": "color yellow"
         },
         {
-            "hint": "Finalmente vamos a dibujar el sol, usamos el comando de círculo seguido del tamaño que queremos que tenga - en una nueva línea **escribe** `circle 150`",
+            "hint": "Finally we draw the sun, we use the circle command followed by the size we want the circle to be - in a new line **type** `circle 150`",
             "solution": "circle 150"
         }
     ],
-    "completion_text": "¡Muy bien! Es un día soleado y brillante, ahora cambia el número que está al lado del círculo y mira lo que pasa",
+    "completion_text": "Well done! It's a bright and sunny day, now change the number next to circle and see what happens",
     "cover": "sunny-day.png"
 }

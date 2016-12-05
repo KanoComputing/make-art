@@ -1,31 +1,31 @@
 {
     "id": "pizza",
     "title": "Pizza",
-    "description": "¡Programa una rica pizza!",
+    "description": "Code yourself a tasty pizza!",
     "startAt": 2,
     "steps": [
         {
-            "hint": "Configura el color del trazo a beige",
+            "hint": "Set the stroke to the color beige",
             "solution": "stroke beige"
         },
         {
-            "hint": "Configura el trazo a 50",
+            "hint": "Set the stroke to 50",
             "solution": "stroke 50"
         },
         {
-            "hint": "Configura el color de dibujo a rojo",
+            "hint": "Set the color to red",
             "solution": "color red"
         },
         {
-            "hint": "Dibuja un círculo de 200 de tamaño",
+            "hint": "Draw a circle with a size of 200",
             "solution": "circle 200"
         },
         {
-            "hint": "¡Se ve sabrosa! Configura el trazo otra vez a 0",
+            "hint": "Looking tasty! Set the stroke back to 0",
             "solution": "stroke 0"
         },
         {
-            "hint": "Cúbrela con un rico queso amarillo en forma de círculo, de un tamaño de 195",
+            "hint": "Top it with a cheesy yellow circle of size 195",
             "solution": "color yellow\ncircle 195",
             "validate": [
                 "color yellow",
@@ -33,18 +33,18 @@
             ]
         },
         {
-            "hint": "No es una pizza si no lleva condimentos - configura el color de dibujo a rojo oscuro",
+            "hint": "It's not pizza without toppings - set the color to darkred",
             "solution": "color darkred"
         },
         {
-            "hint": "Ahora muévete `moveTo 164, 290`",
+            "hint": "Now `moveTo 164, 290`",
             "solution": "moveTo 164, 290"
         },
         {
-            "hint": "Bien, ahora dibuja un círculo de 20 de tamaño",
+            "hint": "Cool, now draw a circle with a size of 20",
             "solution": "circle 20"
         }
     ],
-    "completion_text": "¡Qué rico! Termínala agregando condimentos ¡deja fluir tu imaginación antes de compartirla con el mundo!",
+    "completion_text": "Tasty! Finish it off with more toppings, let your imagination run wild and see what you can make, then share it with the world!",
     "cover": "pizza.png"
 }

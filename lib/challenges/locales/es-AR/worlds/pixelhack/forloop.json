@@ -1,0 +1,95 @@
+{
+    "id": "forloop",
+    "title": "For Loop",
+    "description": "Use a for loop to build a snake with ease.",
+    "startAt": 2,
+    "steps": [
+        {
+            "hint": "We're going to recreate the classic game Snake using the power of For Loops. First let's set a dirt background - **type** `background tan`",
+            "solution": "background tan"
+        },
+        {
+            "hint": "Turn off the stroke **type** `stroke 0`",
+            "solution": "stroke 0"
+        },
+        {
+            "hint": "First we position the head of the snake **type** `moveTo 80,250`",
+            "solution": "moveTo 80,250"
+        },
+        {
+            "hint": "Set a snake-like color **type** `color olivedrab`",
+            "solution": "color olivedrab"
+        },
+        {
+            "hint": "Draw a `circle` 30 pixels big for the head",
+            "solution": "circle 30"
+        },
+        {
+            "hint": "This is where we will set the loop up, using the for function, the first number is where to start counting from and the second number is what to count to. So 1 .. 7 makes the computer count to 7  - **type** `for [1 .. 7]`",
+            "solution": "for [1 .. 7]"
+        },
+        {
+            "hint": "Everything within this indent will be repeated 7 times, we need a move function to position each part of the body - **type** `move 50,0`",
+            "solution": "    move 50,0"
+        },
+        {
+            "hint": "We set the body color - **type** `color olivedrab`",
+            "solution": "    color olivedrab"
+        },
+        {
+            "hint": "Once we add a circle it'll be clear what is going on with the code being repeated several times - **type** `circle 30`",
+            "solution": "    circle 30"
+        },
+        {
+            "hint": "Let's add a square so the body looks more segmented, notice how we're now drawing 7 shapes for every line of code - **type** `square 30`",
+            "solution": "    square 30"
+        },
+        {
+            "hint": "We're going to add another detail to the tail so set the `color` to darkgreen",
+            "solution": "    color darkgreen"
+        },
+        {
+            "hint": "Draw another circle, the code is still indented this will be repeated 7 times - **type** `circle 20`",
+            "solution": "    circle 20"
+        },
+        {
+            "hint": "Finally draw a `square` 20 pixels big",
+            "solution": "    square 20"
+        },
+        {
+            "hint": "First make sure you are no longer in the for loop by hitting backspace so we're no longer indented. - **type** `moveTo 70,240`",
+            "solution": "moveTo 70,240"
+        },
+        {
+            "hint": "Change the `color` to black",
+            "solution": "color black"
+        },
+        {
+            "hint": "Draw an `ellipse` 10 pixels wide and 5 tall.",
+            "solution": "ellipse 10,5"
+        },
+        {
+            "hint": "Finally we'll give it a tongue so it can hiss like a snake should - **type** `color salmon`",
+            "solution": "color salmon"
+        },
+        {
+            "hint": "Position it on the face - **type** `move -15, 20`",
+            "solution": "move -15, 20"
+        },
+        {
+            "hint": "We'll draw a rectangle with a negative width to stretch it out from the mouth - **type** `rectangle -20,4`",
+            "solution": "rectangle -20,4"
+        }
+    ],
+    "completion_text": "Now you have seen how we can create more art with less lines of code by using loops in clever ways, why not try changing the 7 in the for loop and see what happenes",
+    "gallery": {
+        "cover_path": "/assets/challenges/images/pixelremixes/",
+        "remixes": [
+            "snake-tiny.png",
+            "snake-apple.png",
+            "snake-corner.png"
+        ]
+    },
+    "cover": "pixel-forloop.png",
+    "guide": "#### New words\n**for i in [rangeMinimum ... rangeMax]**| for in [0 .. 10]\n\nThe for loop executes once for every number in the range provided. 10 times for the range [0 … 10] and 20 times for the range [0 … 20]. The loop  executes any code that is indented four spaces appearing after it.\n\n#### What you'll make\n1. We're going to recreate the classic game Snake using the power of For Loops. First let's set a dirt background - **type** `background tan`\n2. Turn off the stroke **type** `stroke 0`\n3. First we position the head of the snake **type** `moveTo 80,250`\n4. Set a snake-like color **type** `color olivedrab`\n5. Draw a `circle` 30 pixels big for the head\n6. This is where we will set the loop up, using the for function, the first number is where to start counting from and the second number is what to count to. So 1 .. 7 makes the computer count to 7  - **type** `for [1 .. 7]`\n7. Everything within this indent will be repeated 7 times, we need a move function to position each part of the body - **type** `move 50,0`\n8. We set the body color - **type** `color olivedrab`\n9. Once we add a circle it'll be clear what is going on with the code being repeated several times - **type** `circle 30`\n10. Let's add a square so the body looks more segmented, notice how we're now drawing 7 shapes for every line of code - **type** `square 30`\n11. We're going to add another detail to the tail so set the `color` to darkgreen\n12. Draw another circle, the code is still indented this will be repeated 7 times - **type** `circle 20`\n13. Finally draw a `square` 20 pixels big\n14. First make sure you are no longer in the for loop by hitting backspace so we're no longer indented. - **type** `moveTo 70,240`\n15. Change the `color` to black\n16. Draw an `ellipse` 10 pixels wide and 5 tall.\n17. Finally we'll give it a tongue so it can hiss like a snake should - **type** `color salmon`\n18. Position it on the face - **type** `move -15, 20`\n19. We'll draw a rectangle with a negative width to stretch it out from the mouth - **type** `rectangle -20,4`\n\n#### What you’ll hack\nThe beauty of the loop is you can change your code once, and every single shape you draw will update. This is another reason to use loops, you can make big changes without rewriting big amounts of code.\n\n#### Briefing\nHow many times have you written the same commands over and over again in the last few challenges? For this snake challenge, each part of the snake is made up of the same circle shape. Instead of writing the same circle code over and over, you can have the computer do it for you!\n"
+}

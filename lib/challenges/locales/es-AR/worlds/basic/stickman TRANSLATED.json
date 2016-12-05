@@ -1,0 +1,54 @@
+{
+    "id": "stickman",
+    "title": "Himbre de palo",
+    "description": "Dibuja un hombre de palo usando círculos y líneas",
+    "startAt": 2,
+    "steps": [
+        {
+            "hint": "Configura el `trazo` `negro` y de un tamaño de `10` ¡usando las palabras en inglés!",
+            "solution": "stroke black, 10"
+        },
+        {
+            "hint": "Muévete hacia arriba, **escribe** `move 0, -50`",
+            "solution": "move 0, -50"
+        },
+        {
+            "hint": "Dibuja el cuerpo del hombre de palo usando `line` - `line 0, 150`",
+            "solution": "line 0, 150"
+        },
+        {
+            "hint": "Dibuja el brazo izquierdo del hombre de palo - `line -80, 120`",
+            "solution": "line -80, 120"
+        },
+        {
+            "hint": "Bien, ahora el brazo derecho - `line 80, 120`",
+            "solution": "line 80, 120"
+        },
+        {
+            "hint": "Muévete hacia abajo, **escribe** `move 0, 150`",
+            "solution": "move 0, 150"
+        },
+        {
+            "hint": "Dibuja la pierna izquierda del hombre de palo: `line -80, 120`",
+            "solution": "line -80, 120"
+        },
+        {
+            "hint": "Bien, ahora la pierna derecha - `line 80, 120`",
+            "solution": "line 80, 120"
+        },
+        {
+            "hint": "Muévete a la parte de arriba del dibujo, **escribe** `moveTo 250, 100`",
+            "solution": "moveTo 250, 100"
+        },
+        {
+            "hint": "Configura el trazo nuevamente a 0 usando `stroke`",
+            "solution": "stroke 0"
+        },
+        {
+            "hint": "Ahora para dibujar una figura con muchos lados - **escribe** `polygon -60, 50, 0, 100, 60, 50`",
+            "solution": "polygon -60, 50, 0, 100, 60, 50"
+        }
+    ],
+    "completion_text": "¡Felicitaciones! El fondo tiene 500 de ancho y 500 de alto, hay que ser muy hábil para moverse dentro de él",
+    "cover": "stickman.png"
+}

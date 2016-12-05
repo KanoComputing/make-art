@@ -1,55 +1,55 @@
 {
     "id": "stare",
-    "title": "Mirada en la oscuridad",
-    "description": "Dibuja ojos fantasmales en la oscuridad",
+    "title": "Stare in the dark",
+    "description": "Draw a pair of staring eyes in the dark",
     "startAt": 2,
     "steps": [
         {
-            "hint": "Configura el color del fondo a negro",
+            "hint": "Set the background to black",
             "solution": "background black"
         },
         {
-            "hint": "Muévete a la izquierda 80 **escribe** `move -80`",
+            "hint": "Move to the left by 80 - **type** `move -80`",
             "solution": "move -80",
             "validate": "move -80"
         },
         {
-            "hint": "Configura el color de dibujo a blanco",
+            "hint": "Set the drawing color to white",
             "solution": "color white"
         },
         {
-            "hint": "Dibuja una elipse, es como un círculo estirado - **escribe** `ellipse 60, 40`",
+            "hint": "Draw an ellipse, it's like a stretched circle - **type** `ellipse 60, 40`",
             "solution": "ellipse 60, 40"
         },
         {
-            "hint": "Configura el color de dibujo a negro - **escribe** `color black`",
+            "hint": "Set the drawing color to black - **type** `color black`",
             "solution": "color black"
         },
         {
-            "hint": "Dibuja un círculo de 10 de tamaño - **escribe** `circle 10`",
+            "hint": "Draw a circle with a size of 10 - **type** `circle 10`",
             "solution": "circle 10"
         },
         {
-            "hint": "Muévete 160 a la derecha - **escribe** `move 160`",
+            "hint": "Move to the right by 160 - **type** `move 160`",
             "solution": "move 160"
         },
         {
-            "hint": "Configura el color de dibujo a blanco otra vez",
+            "hint": "Set the drawing color to white again",
             "solution": "color white"
         },
         {
-            "hint": "Ahora dibuja otra elipse de 60 de ancho y 40 de alto -  **escribe** `ellipse 60, 40`",
+            "hint": "Now draw another ellipse with width 60 and height 40 -  **type** `ellipse 60, 40`",
             "solution": "ellipse 60, 40"
         },
         {
-            "hint": "Configura el color de dibujo a negro",
+            "hint": "Set the drawing color to black",
             "solution": "color black"
         },
         {
-            "hint": "Termínalo dibujando un círculo de un tamaño de 10",
+            "hint": "Finish it up by drawing a circle with a size of 10",
             "solution": "circle 10"
         }
     ],
-    "completion_text": "¡Eres un mago! ¡La próxima vez que necesite ojos fantasmales ya sé a quién llamar!",
+    "completion_text": "You Wizard! The next time I need spooky eyes I know who to call!",
     "cover": "stare.png"
 }

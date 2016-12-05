@@ -1,33 +1,33 @@
 {
     "id": "gradient",
-    "title": "Arcoiris en degradé",
-    "description": "¡Combina ciclos y colores para hacer algo mágico!",
+    "title": "Rainbow gradient",
+    "description": "Combine for loops and colors to make something magical!",
     "code": "",
     "startAt": 1,
     "steps": [
         {
-            "hint": "Empecemos por abrir un ciclo - **escribe** `for x in [ 0 .. 25 ]`",
+            "hint": "Start by opening a for loop - **type** `for x in [ 0 .. 25 ]`",
             "solution": "for x in [ 0..25 ]"
         },
         {
-            "hint": "Ahora abramos un segundo ciclo dentro del anterior - **escribe** `for y in [ 0 .. 25 ]`",
+            "hint": "Now lets open a second for loop inside - **type** `for y in [ 0 .. 25 ]`",
             "solution": "    for y in [ 0..25 ]"
         },
         {
-            "hint": "Vamos a desplegar el espectro de colores - **escribe** `color rotate red, 10 * x + 10 * y`",
+            "hint": "Let's rotate through the color spectrum - **type** `color rotate red, 10 * x + 10 * y`",
             "solution": "        color rotate red, 10 * x + 10 * y",
             "validate": "        color rotate +red,10 *\\* *x *\\+ *10 *\\* *y"
         },
         {
-            "hint": "Ahora necesitamos repetir la distancia que nos vamos a mover cada vez que dibujemos - **escribe** `moveTo 20 * x, 20 * y`",
+            "hint": "Now we need to move every time we draw - **type** `moveTo 20 * x, 20 * y`",
             "solution": "        moveTo 20 * x, 20 * y",
             "validate": "        moveTo 20 *\\* *x,20 *\\* *y"
         },
         {
-            "hint": "Ahora dibujemos los cuadrados de un tamaño de 20",
+            "hint": "Now for the shapes draw a square of size 20",
             "solution": "        square 20"
         }
     ],
-    "completion_text": "Intenta cambiar los números en el espectro de colores y fíjate lo que sucede.",
+    "completion_text": "Try changing the numbers in the rotate function and see what happens.",
     "cover": "gradient.png"
 }

@@ -1,39 +1,39 @@
 {
     "id": "swissflag",
-    "title": "Bandera de Suiza",
-    "description": "Haz la bandera de Suiza programando",
+    "title": "Swiss Flag",
+    "description": "Make the Swiss Flag with code",
     "code": "",
     "startAt": 2,
     "steps": [
         {
-            "hint": "Ahora vamos por algo un poco más desafiante. Podemos hacer del fondo un color sólido **escribiendo** `background red`.",
+            "hint": "Now for something a little more challenging. We can make the background a solid color by **typing** `background red`.",
             "solution": "background red"
         },
         {
-            "hint": "Vamos a dibujar líneas, necesitamos ajustar un lindo trazo grueso. **Escribe** `stroke 66`",
+            "hint": "We’re going to draw lines, so we need to set a nice big stroke for them. **Type** `stroke 66`",
             "solution": "stroke 66"
         },
         {
-            "hint": "Ahora ajustemos el color del trazo a blanco - en la tercera línea **escribe** `stroke white`",
+            "hint": "Now let’s set the stroke color to white - on the third line **type** `stroke white`",
             "solution": "stroke white"
         },
         {
-            "hint": "Dibujemos nuestra primera línea. Ya decidimos que será blanca y que tendrá 66 píxeles de ancho. Vamos a dibujar una línea de 100 de largo **escribiendo** `line 100`.",
+            "hint": "Let’s draw our first line. We have already set that it will be white and 66 pixels wide. We will draw a line of length 100 by **typing** `line 100`.",
             "solution": "line 100"
         },
         {
-            "hint": "Qué línea corta y rechoncha. Necesita una amiga. También vamos a hacerla de 100 píxeles de largo pero ahora en la dirección opuesta. **Escribe** `line -100`.",
+            "hint": "What a short, stubby line. It needs a friend. We’ll make its friend 100 pixels long too, but this time in the opposite direction. **Type** `line -100`.",
             "solution": "line -100"
         },
         {
-            "hint": "Mucho mejor, ahora necesitamos líneas que vayan hacia arriba y hacia abajo. Pero ¿cómo lo vamos a hacer? La función de la línea puede contener dos números. El primero controla la posición horizontal, el segundo la posición vertical. **Escribe** `line 0, 100`",
+            "hint": "Much better, now we need lines going up and down. But how are we going to do that? The line function can actually take two numbers. The first number controls where the horizontal position is, the second controls where the vertical position is. **Type** `line 0, 100`",
             "solution": "line 0, 100"
         },
         {
-            "hint": "¡La línea va hacia abajo! Para que vaya hacia arriba necesitamos escribir **escribe** `line 0, -100`.",
+            "hint": "The line goes down! To go the other way we need to type **type** `line 0, -100`.",
             "solution": "line 0, -100"
         }
     ],
-    "completion_text": "¡Qué linda bandera! Los suizos se caracterizan por sus excelentes diseños minimalistas.",
+    "completion_text": "What a great flag! The Swiss are known for their great minimalist designs.",
     "cover": "swissflag.png"
 }

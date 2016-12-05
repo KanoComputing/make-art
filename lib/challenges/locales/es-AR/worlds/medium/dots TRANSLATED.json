@@ -1,0 +1,40 @@
+{
+    "id": "dots",
+    "title": "Patrón de puntos",
+    "description": "¡Crea un patrón de puntos usando ciclos y círculos!",
+    "code": "",
+    "startAt": 1,
+    "steps": [
+        {
+            "hint": "Configura el fondo a rojo",
+            "solution": "background red"
+        },
+        {
+            "hint": "Configura el trazo a 0",
+            "solution": "stroke 0"
+        },
+        {
+            "hint": "Configura el color de dibujo a amarillo",
+            "solution": "color yellow"
+        },
+        {
+            "hint": "Ahora abre un ciclo - **escribe** `for x in [ 0 .. 25 ]`",
+            "solution": "for x in [ 0..25 ]"
+        },
+        {
+            "hint": "Dentro del ciclo, abre un segundo ciclo - **escribe** `for y in [ 0 .. 25 ]`",
+            "solution": "    for y in [ 0..25 ]"
+        },
+        {
+            "hint": "Múevete, **escribe** `moveTo x * 20, y * 20`",
+            "solution": "        moveTo x * 20, y * 20",
+            "validate": "        moveTo x *\\* *20,y *\\* *20"
+        },
+        {
+            "hint": "Ahora para hacer los puntos - **escribe** `circle 6`",
+            "solution": "        circle 6"
+        }
+    ],
+    "completion_text": "¡Es matemático! Cambia el último número y fíjate lo que sucede.",
+    "cover": "dots.png"
+}
