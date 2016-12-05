@@ -93,7 +93,14 @@ SERVER_PROC.start()
 # Init the web app
 kwargs = {}
 if len(sys.argv) > 1:
-    kwargs['load_path'] = sys.argv[1]
+    arg = sys.argv[1]
+
+    if arg == 'make':
+        kwargs['make'] = True
+    elif arg == 'play':
+        kwargs['play'] = True
+    else:
+        kwargs['load_path'] = arg
 
 UI_PROC = multiprocessing.Process(target=start_draw, kwargs=kwargs)
 
