@@ -1,0 +1,109 @@
+{
+    "id": "camera",
+    "title": "¡Toma una fotografía!",
+    "short_title": "Cámara",
+    "icon_class": "challenge_camera",
+    "description": "Hacia 1820, las primeras cámaras tradaban algunas horas en capturar un momento. Con largas y molestas horas de espera y de sostener una postura, fotografiar gente con una sonrisa en la cara resultaba imposible. ¿Por qué? Bueno, intenta sostener una linda sonrisa durante horas y obtendrás la respuesta. Hoy en día, la cantidad de fotografías tomadas cada dos minutos es la misms cantidad de fotografías tomadas por la humanidad entera en el 1800",
+    "cover": "summercamp/day_10.png",
+    "completion_text": "Intenta dibujarte a tí mismo tomando una fotografía detrás de esa bonita cámara. ¿Tal vez también puedas agregar la luz del flash?",
+    "difficulty": 1,
+    "startAt": 0,
+    "summerCamp": true,
+    "rewards": {
+        "outfit": 1
+    },
+    "steps": [
+        {
+            "hint": "Configura el fondo a azul usando `background blue`",
+            "solution": "background blue"
+        },
+        {
+            "hint": "Configura el trazo a 0 para evitar resaltar el borde de las figuras usando `stroke`",
+            "solution": "stroke 0"
+        },
+        {
+            "hint": "Mueve el cursor para posicionar la cámara en el centro - **escribe** `moveTo 100, 150`",
+            "solution": "moveTo 100, 150"
+        },
+        {
+            "hint": "Configura el `color` de la cámara a un tono de gris, `dimgray` en inglés",
+            "solution": "color dimgray"
+        },
+        {
+            "hint": "Ahora dibuja la cámara usando un rectángulo - **escribe** `rectangle 300, 200`",
+            "solution": "rectangle 300, 200"
+        },
+        {
+            "hint": "Mueve el cursor para dibujar la lente - **escribe** `move 150, 100`",
+            "solution": "move 150, 100"
+        },
+        {
+            "hint": "Configura el `color` de la lente a celeste o `lightblue`",
+            "solution": "color lightblue"
+        },
+        {
+            "hint": "Configura el borde de la lente usando `stroke` a negro o `black` en inglés y de un tamaño de `10`",
+            "solution": "stroke black, 10"
+        },
+        {
+            "hint": "La lente es un círculo, dibújala con `circle` y un tamaño de `50`",
+            "solution": "circle 50"
+        },
+        {
+            "hint": "Configura el `color` de la segunda mitad de la lente a gris claro o `lightgray` en inglés",
+            "solution": "color lightgray"
+        },
+        {
+            "hint": "Dibuja un arco - **escribe** `arc 50, 2, 1`",
+            "solution": "arc 50, 2, 1"
+        },
+        {
+            "hint": "¡Esta cámara necesita un flash! Mueve el cursor - **escribe** `move -30, -125`",
+            "solution": "move -30, -125"
+        },
+        {
+            "hint": "Dibuja el flash con un rectángulo, recuerda que en inglés se dice `rectangle` hazlo de un tamaño de `60` por `20`",
+            "solution": "rectangle 60, 20"
+        },
+        {
+            "hint": "Configura el trazo a `0` usando `stroke`.",
+            "solution": "stroke 0"
+        },
+        {
+            "hint": "Configura el `color` del flash a celeste o `lightblue`",
+            "solution": "color lightblue"
+        },
+        {
+            "hint": "Dibuja un polígono para el reflejo del flash - **escribe** `polygon 40, 0, 0, 20`",
+            "solution": "polygon 40, 0, 0, 20"
+        },
+        {
+            "hint": "Solo nos queda hacer el botón para tomar la fotografía - **escribe** `move 100, 10`",
+            "solution": "move 100, 10"
+        },
+        {
+            "hint": "Configura el `color` del botón a rojo o `red` en inglés.",
+            "solution": "color red"
+        },
+        {
+            "hint": "Dibuja el botón con un rectángulo, usa `rectangle` hazlo de un tamaño de `50` por `15`",
+            "solution": "rectangle 50, 15"
+        },
+        {
+            "hint": "¡Un último detalle! Mueve el cursor - **escribe** `move 25, -20`",
+            "solution": "move 25, -20"
+        },
+        {
+            "hint": "Configura el `color` a amarillo o `yellow`",
+            "solution": "color yellow"
+        },
+        {
+            "hint": "Configura la fuente del texto usando `font 'ComicSansMS', `30`",
+            "solution": "font 'ComicSansMS', 30"
+        },
+        {
+            "hint": "Escribe texto - **escribe** `text 'Click!'`",
+            "solution": "text 'Click!'"
+        }
+    ]
+}

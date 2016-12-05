@@ -1,0 +1,11 @@
+{
+    "id": "hauntedhouse",
+    "title": "Casa Embrujada",
+    "description": "Acondiciona esta casa para Halloween y expresa tu creatividad.",
+    "start_date": "2015-11-01T06:00:00",
+    "completion_text": "¡Es noche de Halloween! Cambia los colores para hacer de esto un escenario nocturno y luego expresa tu creatividad combinando los desafíos anteriores o haciendo algunas travesuras, en los comentarios encontrarás algunas ideas para empezar.",
+    "startAt": 0,
+    "code": "#Colores que necesitan ser más escalofriantes\nsky = aqua\nground = green\nsun = yellow\nbricks = brown\nroof = red\nframes = gray\nwindows = blue\ndoor = setBrightness(brown,-40)\n\n#Cielo\nbackground sky\nstroke 0\nmoveTo 100, 100\ncolor sun\ncircle 60\n#Por qué no agregar nubes o murciélagos\n\n#Suelo\nmoveTo 250,530\ncolor ground\nellipse 500,150\n\n#Casa\nmoveTo 100,180\ncolor bricks\nrectangle 300,270\n\n#Ventanas\n#Haz alguna travesura, puedes ingeniártela para tirar huevos en solo tres líneas de comandos\ndrawWindow = (x,y) ->\n    color setBrightness(frames,30)\n    moveTo x,y\n    rectangle 60,80\n    color windows\n    moveTo x+5,y+5\n    rectangle 50,70\n    color setBrightness(frames,30)\n    moveTo x, y+37.5\n    rectangle 60,5\n    moveTo x+27.5, y\n    rectangle 5,80\ndrawWindow(120,200)\ndrawWindow(220,200)\ndrawWindow(120,310)\ndrawWindow(320,200)\ndrawWindow(320,310)\n\n#Techo\ncolor roof\nmoveTo 100, 180\npolygon 150, -100, 300, 0\n#Puedes usar la función arc para cubrir el techo de papel higiénico \n\n\n#Puerta\ncolor setBrightness(frames,-10)\nmoveTo 215, 330\nrectangle 70,110\nmove 5,5\ncolor door\nrectangle 60,105\ncolor setBrightness(frames,-40) \nmove -15,105\nrectangle 90,20\nmove 65,-50\ncolor setBrightness(door,80)\ncircle 3\n#¿Qué tal si dibujas una calabaza al lado de la puerta?",
+    "steps": [],
+    "cover": "mischiefweek2015/mw-007-hauntedhouse.png"
+}

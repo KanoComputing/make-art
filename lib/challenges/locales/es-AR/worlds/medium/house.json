@@ -6,19 +6,19 @@
     "startAt": 1,
     "steps": [
         {
-            "hint": "¡Empecemos por el cielo! Configura el fondo a azul",
+            "hint": "¡Empecemos por el cielo! Configura el fondo a azul, usando background",
             "solution": "background blue"
         },
         {
-            "hint": "Ahora configura el trazo a 0",
+            "hint": "Ahora configura el trazo a 0 usando stroke",
             "solution": "stroke 0"
         },
         {
-            "hint": "Muévete hacia la izquierda y arriba, **escribe** `move -150, -50`",
+            "hint": "Múevete hacia la izquierda y arriba, **escribe** `move -150, -50`",
             "solution": "move -150, -50"
         },
         {
-            "hint": "Ahora configura el color de dibujo a beige",
+            "hint": "Ahora configura el color de dibujo a beige ¡se dice igual en inglés!",
             "solution": "color beige"
         },
         {
@@ -26,11 +26,11 @@
             "solution": "rectangle 300, 200"
         },
         {
-            "hint": "Muévete hacia la derecha y arriba, **escribe** `move 150, -100`",
+            "hint": "Múevete hacia la derecha y arriba, **escribe** `move 150, -100`",
             "solution": "move 150, -100"
         },
         {
-            "hint": "Configura el color de dibujo a rojo oscuro para el techo",
+            "hint": "Configura el color de dibujo a rojo oscuro, o darkred en inglés, para el techo",
             "solution": "color darkred"
         },
         {
@@ -38,7 +38,7 @@
             "solution": "polygon 170, 100, -170, 100"
         },
         {
-            "hint": "Muévete hacia la izquierda y abajo, **escribe** `move -250, 300`",
+            "hint": "Múevete hacia la izquierda y abajo, **escribe** `move -250, 300`",
             "solution": "move -250, 300"
         },
         {
@@ -46,11 +46,11 @@
             "solution": "color green"
         },
         {
-            "hint": "Dibuja un rectángulo para el césped con las siguientes medidas 500, 100",
+            "hint": "Dibuja un rectángulo para el césped con las siguientes medidas 500, 100 usando `rectangle`",
             "solution": "rectangle 500, 100"
         },
         {
-            "hint": "Muévete hacia la derecha y arriba, **escribe** `move 220, -80`",
+            "hint": "Múevete hacia la derecha y arriba, **escribe** `move 220, -80`",
             "solution": "move 220, -80"
         },
         {
@@ -66,7 +66,7 @@
             "solution": "color aqua"
         },
         {
-            "hint": "Muévete hacia la izquieda y arriba, **escribe** `move -80, -80`",
+            "hint": "Múevete hacia la izquieda y arriba, **escribe** `move -80, -80`",
             "solution": "move -80, -80"
         },
         {
@@ -74,11 +74,11 @@
             "solution": "square 50"
         },
         {
-            "hint": "Muévete hacia la derecha, **escribe** `move 170`",
+            "hint": "Múevete hacia la derecha, **escribe** `move 170`",
             "solution": "move 170"
         },
         {
-            "hint": "Dibuja otro cuadrado de 50 de tamaño",
+            "hint": "Dibuja otro cuadrado de 50 de tamaño. Recuerda que cuadrado en inglés se dice square",
             "solution": "square 50"
         }
     ],

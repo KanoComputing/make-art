@@ -1,0 +1,26 @@
+{
+
+    "challenges": [
+        "./camp_sign",
+        "./campsite",
+        "./tent",
+        "./flag",
+        "./camp_badge",
+        "./campfire",
+        "./ghost",
+        "./backpack",
+        "./compass",
+        "./camera",
+        "./bear",
+        "./flashlight",
+        "./guitar",
+        "./cinema",
+        "./bow_and_arrow",
+        "./table_tennis",
+        "./fishing",
+        "./hiking",
+        "./foraging",
+        "./tree",
+        "./fireworks"
+    ]
+}

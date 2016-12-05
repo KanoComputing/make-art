@@ -9,11 +9,11 @@
             "solution": "moveTo (random 1, 500), (random 1, 500)"
         },
         {
-            "hint": "Configura el color de dibujo a rojo - **escribe** `color red`",
+            "hint": "Configura el color de dibujo a rojo, en inglés es red - **escribe** `color red`",
             "solution": "color red"
         },
         {
-            "hint": "Ahora dibujemos un círculo en algún sitio aleatorio - **type** `circle 200`",
+            "hint": "Ahora dibujemos un círculo en algún sitio aleatorio - **escribe** `circle 200`",
             "solution": "circle 200"
         },
         {
@@ -21,7 +21,7 @@
             "solution": "color green"
         },
         {
-            "hint": "Ahora dibuja un círculo de 150 de tamaño",
+            "hint": "Ahora dibuja un círculo de 150 de tamaño usando circle",
             "solution": "circle 150"
         },
         {

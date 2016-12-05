@@ -1,0 +1,127 @@
+{
+    "id": "steve",
+    "title": "Steve",
+    "description": "Crea la cara de Steve utilizando figuras simples.",
+    "startAt": 2,
+    "steps": [
+        {
+            "hint": "Únicamente utilizaremos cuadrados y rectángulos, por eso configuremos el trazo a 0 usando `stroke 0`",
+            "solution": "stroke 0"
+        },
+        {
+            "hint": "Configura el color de fondo a marrón claro",
+            "solution": "background lightbrown"
+        },
+        {
+            "hint": "Configura el color de dibujo a marrón utilizando `color brown`.",
+            "solution": "color brown"
+        },
+        {
+            "hint": "Su cabello comenzará en la esquina de arriba a la izquierda, entonces **escribe** `moveTo 0, 0`.",
+            "solution": "moveTo 0, 0"
+        },
+        {
+            "hint": "Dibujaremos un rectángulo con parámetros de anchura y altura. **Escribe** `rectangle 500, 150`",
+            "solution": "rectangle 500, 150"
+        },
+        {
+            "hint": "Configura el color de dibujo a marrón claro  **escribe** `color lightbrown`",
+            "solution": "color lightbrown"
+        },
+        {
+            "hint": "Muévete para dibujar la frente, **escribe** `moveTo 100, 100`",
+            "solution": "moveTo 100, 100"
+        },
+        {
+            "hint": "Ahora para dibujar la frente, **escribe** `rectangle 300, 50`",
+            "solution": "rectangle 300, 50"
+        },
+        {
+            "hint": "Para los ojos, configura el color de dibujo a blanco",
+            "solution": "color white"
+        },
+        {
+            "hint": "Ahora múevete usando `moveTo 100, 200`",
+            "solution": "moveTo 100, 200"
+        },
+        {
+            "hint": "Dibuja un ojo usando `square 50`",
+            "solution": "square 50"
+        },
+        {
+            "hint": "Para el otro ojo, **escribe** `moveTo 350, 200`",
+            "solution": "moveTo 350, 200"
+        },
+        {
+            "hint": "Y dibuja otro cuadrado de un tamaño de 50",
+            "solution": "square 50"
+        },
+        {
+            "hint": "Para el iris utilizaremos color violeta.",
+            "solution": "color purple"
+        },
+        {
+            "hint": "Múevete a las coordenadas `150, 200` utilizando moveTo.",
+            "solution": "moveTo 150, 200"
+        },
+        {
+            "hint": "Dibuja un cuadrado de un tamaño de 50.",
+            "solution": "square 50"
+        },
+        {
+            "hint": "Múevete a las coordenadas `300, 200`.",
+            "solution": "moveTo 300, 200"
+        },
+        {
+            "hint": "Y dibuja el iris final con un cuadrado de un tamaño de 50.",
+            "solution": "square 50"
+        },
+        {
+            "hint": "Dibujaremos la nariz. **Escribe** `color brown`",
+            "solution": "color brown"
+        },
+        {
+            "hint": "Múevete utilizando `moveTo 200, 250`.",
+            "solution": "moveTo 200, 250"
+        },
+        {
+            "hint": "Dibuja un rectángulo de `100` de anchura y `50` de altura.",
+            "solution": "rectangle 100, 50"
+        },
+        {
+            "hint": "Para hacer la boca configura el color a otro tono de marrón utilizando `color saddlebrown`.",
+            "solution": "color saddlebrown"
+        },
+        {
+            "hint": "Múevete a las coordenadas `150, 300`",
+            "solution": "moveTo 150, 300"
+        },
+        {
+            "hint": "La boca debería ser un gran rectángulo. **Escribe** `rectangle 200, 100`.",
+            "solution": "rectangle 200, 100"
+        },
+        {
+            "hint": "Para mejorar la boca deberíamos cortarla un poco. Configura el color de dibujo al mismo color de la piel. **Escribe** `color lightbrown`",
+            "solution": "color lightbrown"
+        },
+        {
+            "hint": "Múevete a las coordenadas `200, 300`.",
+            "solution": "moveTo 200, 300"
+        },
+        {
+            "hint": "Termínalo con un rectángulo utilizando `rectangle 100, 50` ",
+            "solution": "rectangle 100, 50"
+        }
+    ],
+    "completion_text": "¡Bien hehco! Nuestro personaje se ve muy bien. ¿Qué partes podrías cambiar para que se parezca más a tí?",
+    "gallery": {
+        "cover_path": "/assets/challenges/images/pixelremixes/",
+        "remixes": [
+            "Steve-blue.png",
+            "Steve-beard.png",
+            "Steve-Alex.png"
+        ]
+    },
+    "cover": "pixel-steve.png",
+    "guide": "#### Lo que crearás\n1. Únicamente utilizaremos cuadrados y rectángulos, por eso configuremos el trazo a 0 usando `stroke 0`\n2. Configura el color de fondo a marrón claro\n3. Configura el color de dibujo a marrón utilizando `color brown`.\n4. Su cabello comenzará en la esquina de arriba a la izquierda, entonces **escribe** `moveTo 0, 0`.\n5. Dibujaremos un rectángulo con parámetros de anchura y altura. **Escribe** `rectangle 500, 150`\n6. Configura el color de dibujo a marrón claro  **escribe** `color lightbrown`\n7. Muévete para dibujar la frente, **escribe** `moveTo 100, 100`\n8. Ahora para dibujar la frente, **escribe** `rectangle 300, 50`\n9. Para los ojos, configura el color de dibujo a blanco\n10. Ahora múevete usando `moveTo 100, 200`\n11. Dibuja un ojo usando `square 50`\n12. Para el otro ojo, **escribe** `moveTo 350, 200`\n13. Y dibuja otro cuadrado de un tamaño de 50\n14. Para el iris utilizaremos color violeta.\n15.Múevete a las coordenadas `150, 200` utilizando moveTo.\n16. Dibuja un cuadrado de un tamaño de 50.\n17. Múevete a las coordenadas `300, 200`.\n18. Y dibuja el iris final con un cuadrado de un tamaño de 50.\n19. Dibujaremos la nariz. **Escribe** `color brown`\n20. Múevete utilizando `moveTo 200, 250`.\n21. Dibuja un rectángulo de `100` de anchura y `50` de altura.\n22. Para hacer la boca configura el color a otro tono de marrón utilizando `color saddlebrown`.\n23. Múevete a las coordenadas `150, 300`\n24. La boca debería ser un gran rectángulo. **Escribe** `200, 100`.\n25. Para mejorar la boca deberíamos cortarla un poco. Configura el color de dibujo al mismo color de la piel. **Escribe** `color lightbrown`\n26. Múevete a las coordenadas `200, 300`.\n27. Termínalo con un rectángulo utilizando `rectangle 100, 50` \n\n#### Lo que hackearás\nLas figuras aquí son muy simples, ¡eso mismo lo hace muy fácil de cambiar y hackear! Cambia el color de la piel, del cabello, los ojos o agrega tus propios rasgos\n\n#### Resumiendo\nSteve es el héroe de Minecraft. No se conoce demasiado acerca de Steve: quién es, de dónde es o si es humano. Sin embargo, es la cara visible del juego más sensacional de la década. Esta simple creación con cuadrados y rectángulos nace simplemente de hermosos colores.\n"
+}

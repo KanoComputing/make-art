@@ -5,7 +5,7 @@
     "startAt": 2,
     "steps": [
         {
-            "hint": "Configura el color del fondo a negro",
+            "hint": "Configura el color del fondo a negro. Recuerda escribir el color en inglés, fondo en inglés es background.",
             "solution": "background black"
         },
         {
@@ -18,7 +18,7 @@
             "solution": "color white"
         },
         {
-            "hint": "Dibuja una elipse, es como un círculo estirado - **escribe** `ellipse 60, 40`",
+            "hint": "Dibuja un elipse, es como un círculo estirado. Elipse en inglés se dice ellipse - **escribe** `ellipse 60, 40`",
             "solution": "ellipse 60, 40"
         },
         {
@@ -38,7 +38,7 @@
             "solution": "color white"
         },
         {
-            "hint": "Ahora dibuja otra elipse de 60 de ancho y 40 de alto -  **escribe** `ellipse 60, 40`",
+            "hint": "Ahora dibuja otro elipse de 60 de ancho y 40 de alto -  **escribe** `ellipse 60, 40`",
             "solution": "ellipse 60, 40"
         },
         {
@@ -46,7 +46,7 @@
             "solution": "color black"
         },
         {
-            "hint": "Termínalo dibujando un círculo de un tamaño de 10",
+            "hint": "Termínalo dibujando un círculo de un tamaño de 10. ¡Recuerda usar el comando en inglés!",
             "solution": "circle 10"
         }
     ],

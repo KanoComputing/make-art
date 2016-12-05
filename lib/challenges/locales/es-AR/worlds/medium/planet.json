@@ -35,7 +35,7 @@
             "solution": "color purple"
         },
         {
-            "hint": "Ahora muévete `moveTo 250, 250`",
+            "hint": "Ahora múevete `moveTo 250, 250`",
             "solution": "moveTo 250, 250"
         },
         {
@@ -51,7 +51,7 @@
             "solution": "stroke white, 5"
         },
         {
-            "hint": "Ahora dibuja una elipse - **escribe** `ellipse 220, 4`",
+            "hint": "Ahora dibuja un elipse - **escribe** `ellipse 220, 4`",
             "solution": "ellipse 220, 4"
         }
     ],

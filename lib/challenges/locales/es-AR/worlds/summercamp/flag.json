@@ -1,0 +1,77 @@
+{
+    "id": "flag",
+    "title": "Crea tu Bandera",
+    "short_title": "Bandera",
+    "description": "Es tiempo de mostrar tus verdaderos colores. El camping va tomando forma, y como todo líder de campamento necesitas hacer tu propia bandera. Te llevamos a lo básico con una simple bandera y su mástil, pero depende de tí personalizarla.  \nPuedes buscar inspiración en otras banderas. Países como Francia, Nigeria, Suecia o Suiza tienen banderas con colores y diseños simples, mientras que España, Brasil, Kenia y Arabia Saudita tienen diseños más complejos ¡Cuando hayas terminado comparte tu bandera para poder marcar tu territorio!",
+    "icon_class": "challenge_flag",
+    "completion_text": "Tienes un lienzo blanco esperando ser pintado, úsalo sabiamente. ¡Crea la bandera más increíble de todos los tiempos!",
+    "cover": "summercamp/day_4.png",
+    "difficulty": 1,
+    "startAt": 3,
+    "summerCamp": true,
+    "rewards": {
+        "outfit": 1
+    },
+    "steps": [
+        {
+            "hint": "Dibuja el cielo en el que flameará tu bandera - **escribe** `background blue`",
+            "solution": "background blue"
+        },
+        {
+            "hint": "Configura el trazo a 0 para evitar dibujar líneas - **escribe** `stroke 0`",
+            "solution": "stroke 0"
+        },
+        {
+            "hint": "Vamos a mover el cursor hacia donde estará el mástil de nuestra bandera - **escribe** `moveTo 100, 100`",
+            "solution": "moveTo 100, 100"
+        },
+        {
+            "hint": "Configura el `color` del mástil a gris oscuro o `darkgray` en inglés",
+            "solution": "color darkgray"
+        },
+        {
+            "hint": "Dibuja un fino y largo mástil con un rectángulo - **escribe** `rectangle 10, 400`",
+            "solution": "rectangle 10, 400"
+        },
+        {
+            "hint": "Mueve el cursor a lo alto del mástil para dibujarle un adorno - **escribe** `move 5`",
+            "solution": "move 5"
+        },
+        {
+            "hint": "Configura el `color` del adorno a dorado o `gold`",
+            "solution": "color gold"
+        },
+        {
+            "hint": "Dibuja un círculo de un tamaño de 8 - en una nueva línea **escribe** `circle 8`",
+            "solution": "circle 8"
+        },
+        {
+            "hint": "Ahora mueve el cursor para empezar a dibujar la bandera - **escribe** `moveTo 115, 123`",
+            "solution": "moveTo 115, 123"
+        },
+        {
+            "hint": "Configura el `color` de la bandera a blanco o `white`",
+            "solution": "color white"
+        },
+        {
+            "hint": "Dibuja la bandera usando la función `rectangle` de un tamaño de `261` por `171`",
+            "solution": "rectangle 261, 171"
+        },
+        {
+            "hint": "La bandera necesita una soga que la sostenga al mástil - **escribe** `moveTo 100, 140`",
+            "solution": "moveTo 100, 140"
+        },
+        {
+            "hint": "Configura el `color` de la soga a marrón o `brown`",
+            "solution": "color brown"
+        },
+        {
+            "hint": "Dibuja la soga usando `rectangle` de un tamaño de `20` por `5` ",
+            "solution": "rectangle 20, 5"
+        },
+        {
+            "hint": "¡Ahora es tu turno! Diseña tu propia bandera - **escribe** `moveTo 120, 125`",
+            "solution": "moveTo 120, 125"
+        }
+    ]
+}
