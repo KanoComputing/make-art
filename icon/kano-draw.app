@@ -14,5 +14,6 @@
     "dependencies": ["kano-draw"],
     "launch_command": "kano-draw",
     "overrides": [],
-    "desktop": false
+    "desktop": false,
+    "priority": 950
 }
