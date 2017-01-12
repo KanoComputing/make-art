@@ -20,7 +20,7 @@
             a.button.button-facebook(ng-click='facebookShare(creation)')
                 img(src='/assets/button-icons/facebook-white.png' title='${{ partial.share_on_facebook }}$')
 
-            a.button.button-twitter(ng-href='{{ buildURL(creation) }}')
+            a.button.button-twitter(ng-click='twitterShare(creation)')
                 img(src='/assets/button-icons/twitter-white.png' title='${{ partial.share_on_twitter }}$')
 
         .skip-sharing(ng-if='selectedWorld.share_strategy === "optional"')
