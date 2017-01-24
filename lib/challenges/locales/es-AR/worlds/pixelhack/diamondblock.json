@@ -1,0 +1,72 @@
+{
+    "id": "diamondblock",
+    "title": "8-bit Diamond Block",
+    "description": "Make a diamond block with loops.",
+    "startAt": 2,
+    "steps": [
+        {
+            "hint": "Set stroke to 0.",
+            "solution": "stroke 0"
+        },
+        {
+            "hint": "We’ll use two loops for the stone. **Type** `for x in [0 ... 16]`",
+            "solution": "for x in [0 ... 16]"
+        },
+        {
+            "hint": "For y use `for y in [0 ... 16]`",
+            "solution": "    for y in [0 ... 16]"
+        },
+        {
+            "hint": "We’ll use a randomly chosen shade of gray to make the stone. **Type** `color darken gray, random -6, 9`",
+            "solution": "        color darken gray, random -6, 9",
+            "validate": "        color darken gray, random -6, 9"
+        },
+        {
+            "hint": "Move into position for each square with `moveTo x * 31.25, y * 31.25`",
+            "solution": "        moveTo x * 31.25, y * 31.25"
+        },
+        {
+            "hint": "Finally, draw the stone square with `square 32`",
+            "solution": "        square 32",
+            "validate": "        square 32"
+        },
+        {
+            "hint": "Get out of the loop by bringing your cursor to the beginning of the line with **BACKSPACE**. We’ll start a new pair of loops to draw the diamond. **Type** `for x in [2 ... 14]`",
+            "solution": "for x in [2 ... 14]"
+        },
+        {
+            "hint": "This time we are starting at 2 and ending at 14 because we only want the diamond to appear in the middle of the block. **Type** `for y in [2 ... 14]`",
+            "solution": "    for y in [2 ... 14]"
+        },
+        {
+            "hint": "The diamond should appear randomly, this if statement will only randomly draw the diamond. **Type** `if 1 == random 0, 4`",
+            "solution": "        if 1 == random 0, 4",
+            "validate": "        if 1 == random 0, 4"
+        },
+        {
+            "hint": "Set the diamond color with `color lighten lightblue, random 0, 40`",
+            "solution": "            color lighten lightblue, random 0, 40",
+            "validate": "            color lighten lightblue, random 0, 40"
+        },
+        {
+            "hint": "Move into position for each square with `moveTo x * 31.25, y * 31.25`",
+            "solution": "            moveTo x * 31.25, y * 31.25"
+        },
+        {
+            "hint": "Finally, draw the diamond square with `square 32`",
+            "solution": "            square 32",
+            "validate": "            square 32"
+        }
+    ],
+    "completion_text": "You’ve hacked the pixels and won! What’s next? More challenges and 8-bit art projects here at Kano if you are interested. Congratulations and well done!",
+    "gallery": {
+        "cover_path": "/assets/challenges/images/pixelremixes/",
+        "remixes": [
+            "diamond-obsidian.png",
+            "diamond-rainbow.png",
+            "diamond-lotsof.png"
+        ]
+    },
+    "cover": "pixel-diamondblock.png",
+    "guide": "#### What you'll make\n1. Set stroke to 0.\n2. We’ll use two loops for the stone. **Type** `for x in [0 ... 16]`\n3. For y use `for y in [0 ... 16]`\n4. We’ll use a randomly chosen shade of gray to make the stone. **Type** `color darken gray, random -6, 9`\n5. Move into position for each square with `moveTo x * 31.25, y * 31.25`\n6. Finally, draw the stone square with `square 32`\n7. Get out of the loop by bringing your cursor to the beginning of the line with **BACKSPACE**. We’ll start a new pair of loops to draw the diamond. **Type** `for x in [2 ... 14]`\n8. This time we are starting at 2 and ending at 14 because we only want the diamond to appear in the middle of the block. **Type** `for y in [2 ... 14]`\n9. The diamond should appear randomly, this if statement will only randomly draw the diamond. **Type** `if 1 == random 0, 4`\n10. Set the diamond color with `color lighten lightblue, random 0, 40`\n11. Move into position for each square with `moveTo x * 31.25, y * 31.25`\n12. Finally, draw the diamond square with `square 32`\n\n#### What you'll hack\nTo make this Minecraft Block your own all you need to change are two variables: the colour of the top and bottom parts. Make a strawberry, a water block, or anything else by just changing these two lines. For added complexity, make a Mycelium block with some randomness and another for loop. If you really want to have a challenge, try incorporating what you learned in the previous lesson and use the x and y values to add some extra color rotation to the dirt.\n\n#### Briefing\nThe grand finale: diamonds. This is the most precious and sought after Minecraft block. You’ll use nested for loops again to draw the stone, and then another pair of nested for loops to draw the stone, and then another nested for loop to draw the diamond. But as the diamond should be sprinkled throughout the stone we’ll use an if statement and use a random number to determine whether or not we should draw the square. Additionally, we only want to draw the diamond on the inside of the block, so our diamond-drawing loop will run from 2 to 14, rather than 0 to 16.\n"
+}

@@ -1,0 +1,108 @@
+{
+    "id": "bow_and_arrow",
+    "title": "Bow and Arrow",
+    "short_title": "Bow and Arrow",
+    "icon_class": "challenge_bow",
+    "description": "Shooting a bow and arrow at a target is an art that requires lots of focus. This challenge is to draw a bow and try to hold it steady while your hand jitters...just like the other humans who have used the bow and arrow for hunting since the dawn of civilization over ten thousand years ago. The oldest known bow, found in Denmark, dates from 9000 BCE!",
+    "cover": "summercamp/day_15.png",
+    "completion_text": "Click Refresh and watch the target move while you try to hold your bow steady! Try getting rid of the moving background to make it easier to hit the target, converting your bow to a crossbow, or drawing an arrow in the bullseye.",
+    "difficulty": 1,
+    "startAt": 0,
+    "summerCamp": true,
+    "rewards": null,
+    "steps": [
+        {
+            "hint": "The weather is good today...there is no wind to blow our arrows off course. Set the background color to blue - **type** `background blue`.",
+            "solution": "background blue"
+        },
+        {
+            "hint": "We want the background to jitter, so we will start drawing it at a random point. **Type** `moveTo (random -20, 0), (random 240, 260)`.",
+            "solution": "moveTo (random -20, 0), (random 240, 260)",
+            "validate": "__moveTo ?\\( *random +-20, +0 *\\), +\\( *random +240, +260 *\\)"
+        },
+        {
+            "hint": "Our target is in a grassy field, so lets get our `color green` ready",
+            "solution": "color green"
+        },
+        {
+            "hint": "Draw a big `rectangle` that is `550` pixels high and `300` pixels wide for the grass",
+            "solution": "rectangle 550, 300"
+        },
+        {
+            "hint": "Now let's move the cursor to draw our target - **type** `move 275, 10`",
+            "solution": "move 275, 10"
+        },
+        {
+            "hint": "First we will draw the wooden legs supporting it - **type** `stroke brown, 15`",
+            "solution": "stroke brown, 15"
+        },
+        {
+            "hint": "Draw the left leg - **type** `line -80, 120`",
+            "solution": "line -80, 120"
+        },
+        {
+            "hint": "...and now draw the right leg - **type** `line 80, 120`",
+            "solution": "line 80, 120"
+        },
+        {
+            "hint": "We will draw a target with white and red rings - **type** `stroke white, 50`",
+            "solution": "stroke white, 50"
+        },
+        {
+            "hint": "Now make the inside of the circle red - **type** `color red`",
+            "solution": "color red"
+        },
+        {
+            "hint": "First, draw a circle with a radius of 80 pixels- **type** `circle 80`",
+            "solution": "circle 80"
+        },
+        {
+            "hint": "Second, draw a `circle` with a radius of `30` pixels",
+            "solution": "circle 30"
+        },
+        {
+            "hint": "Move the cursor to draw an arrowhead - **type** `moveTo 250, 220`",
+            "solution": "moveTo 250, 220"
+        },
+        {
+            "hint": "Our arrowhead will have a thin gray outline - **type** `stroke gray, 1`",
+            "solution": "stroke gray, 1"
+        },
+        {
+            "hint": "The flint arrowhead is going to have the `color dimgray`",
+            "solution": "color dimgray"
+        },
+        {
+            "hint": "Draw the arrowhead as a diamond - **type** `polygon -10, 40, 0, 80, 10, 40`",
+            "solution": "polygon -10, 40, 0, 80, 10, 40"
+        },
+        {
+            "hint": "Next we will move to draw the shaft of the arrow - **type** `move 0, 40`",
+            "solution": "move 0, 40"
+        },
+        {
+            "hint": "The arrow will be made of a light brown wood - **type** `stroke lightbrown, 20`",
+            "solution": "stroke lightbrown, 20"
+        },
+        {
+            "hint": "Draw a line for the shaft - **type** `line 200, 360`",
+            "solution": "line 200, 360"
+        },
+        {
+            "hint": "The last thing we will draw is our bow. Move the cursor off the screen - **type** `moveTo 800, 375`",
+            "solution": "moveTo 800, 375"
+        },
+        {
+            "hint": "We are going to draw an arc for the bow so let's draw it with a thick piece of dark brown wood - **type** `stroke darkbrown, 40`",
+            "solution": "stroke darkbrown, 40"
+        },
+        {
+            "hint": "We don't want the arc to have any fill - **type** `color null`",
+            "solution": "color null"
+        },
+        {
+            "hint": "Draw the bow with a big arc centered far off the screen - **type** `arc 500, 0, 2`",
+            "solution": "arc 500, 0, 2"
+        }
+    ]
+}

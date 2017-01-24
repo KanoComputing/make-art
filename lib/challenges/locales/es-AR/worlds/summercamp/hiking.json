@@ -1,0 +1,112 @@
+{
+    "id": "hiking",
+    "title": "Hiking Poster",
+    "short_title": "Hiking",
+    "icon_class": "challenge_hiking",
+    "description": "The beautiful Camp Kano mountain range is known for its deep blue colour. The ten mountains in the range always seem to be changing position though, which makes for a dangerous climb. Should campers attempt to climb it? Who knows! But management wants an advertising posts so get to it.",
+    "cover": "summercamp/day_18.png",
+    "completion_text": "Well done, you’ve made a beautiful poster! Now play around with the random values and the text. What else is the poster missing?",
+    "difficulty": 1,
+    "startAt": 0,
+    "summerCamp": true,
+    "rewards": null,
+    "steps": [
+        {
+            "hint": "Up above the clouds the sky is blue, **type** `background blue`",
+            "solution": "background blue"
+        },
+        {
+            "hint": "Camp Kano’s mountains are a beautiful shade of dark blue. Set the drawing colour with `color darkblue`.",
+            "solution": "color darkblue"
+        },
+        {
+            "hint": "The mountains also have a nice thick border, give them `stroke white, 10`",
+            "solution": "stroke white, 10"
+        },
+        {
+            "hint": "Lets draw the ten mountains of Camp Kano with a loop! This will be much faster than drawing them individually. **Type** `for i in [ 0 ... 10 ]` to open the loop.",
+            "solution": "for i in [ 0 ... 10 ]"
+        },
+        {
+            "hint": "For every time the loop runs, we want a mountain’s peak to be drawn randomly across the screen. Let’s select an x value with `x = random 0, 500`",
+            "solution": "    x = random 0, 500"
+        },
+        {
+            "hint": "However, for the y value, we only want each mountain’s peak to be drawn on the top part of the screen. **Type** `y = random 0, 200`",
+            "solution": "    y = random 0, 200"
+        },
+        {
+            "hint": "Now with our x and y values set we can move the cursor to them. **Type** `moveTo x, y`",
+            "solution": "    moveTo x, y"
+        },
+        {
+            "hint": "Draw a mountain for every loop with the polygon function. **Type** `polygon 400, 500, -400, 500`",
+            "solution": "    polygon 400, 500, -400, 500"
+        },
+        {
+            "hint": "First, get out of the previous for loop’s indent by pressing `BACKSPACE`. Now let’s draw some clouds with `stroke 0`",
+            "solution": "stroke 0"
+        },
+        {
+            "hint": "Clouds are made of small droplets of water vapor, which is see-through! To get a see-through color we use the `opacity` function. **Type** `color (opacity white, .1)`",
+            "solution": "color (opacity white, .1)",
+            "validate": "__color \\(opacity white, .1\\)"
+        },
+        {
+            "hint": "Now let’s make a new loop to draw the cloud puffs. We’ll need a lot, so let’s make this a loop last 300 iterations. **Type** `for j in [ 0 ... 250 ]`.",
+            "solution": "for j in [ 0 ... 250 ]"
+        },
+        {
+            "hint": "We want cloud puffs sprinkled randomly across the screen, so lets choose an x value between 0 and 500 with`x = random 0, 500`",
+            "solution": "    x = random 0, 500"
+        },
+        {
+            "hint": "However, for the y value, we only want the cloud puffs to be drawn on the bottom part of the screen. **Type** `y = random 300, 500`",
+            "solution": "    y = random 300, 500"
+        },
+        {
+            "hint": "Now with our x and y values set we can move the cursor to them. **Type** `moveTo x, y`",
+            "solution": "    moveTo x, y"
+        },
+        {
+            "hint": "Let’s draw the cloud puff—a big transparent `circle` of size `100`",
+            "solution": "    circle 100"
+        },
+        {
+            "hint": "Press `BACKSPACE` once to get out of the indented line. Then lets move the cursor into place for some text with `moveTo 250, 350`",
+            "solution": "moveTo 250, 350"
+        },
+        {
+            "hint": "Set the drawing color to red - **type** `color red`",
+            "solution": "color red"
+        },
+        {
+            "hint": "Our message should be strong and impactful, so lets set the font to bold with `bold true`",
+            "solution": "bold true"
+        },
+        {
+            "hint": "We also want to style our text with italics, do this with `italic true`",
+            "solution": "italic true"
+        },
+        {
+            "hint": "Finally lets select Bariol at point size 40 with `font 'Bariol', 40`",
+            "solution": "font 'Bariol', 40"
+        },
+        {
+            "hint": "Start your message off with `text 'Hike the Blue Mountains of'`",
+            "solution": "text 'Hike the Blue Mountains of'"
+        },
+        {
+            "hint": "Now for a new line with a big bold finish. **Type** `font 90`",
+            "solution": "font 90"
+        },
+        {
+            "hint": "Lets move the cursor down into place for the final line with `move 0, 90`",
+            "solution": "move 0, 90"
+        },
+        {
+            "hint": "The finishing touch: **type** `text 'Camp Kano!'`",
+            "solution": "text 'Camp Kano!'"
+        }
+    ]
+}

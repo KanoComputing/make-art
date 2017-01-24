@@ -1,0 +1,128 @@
+{
+    "id": "guitar",
+    "title": "Play a nice sweet song",
+    "short_title": "Guitar",
+    "icon_class": "challenge_guitar",
+    "description": "Did you know the oldest surviving guitar-like instrument is actually around 3,500 years old? It is a 3-string instrument with a plectrum suspended from the neck, it was owned by an Egyptian singer called Har-Mose and was buried alongside him - You can still see the instrument on display at the Archaeological Museum in Cairo, Egypt.",
+    "cover": "summercamp/day_13.png",
+    "completion_text": "What good is a guitar if we don't have a campfire to sing songs around? Try drawing a nice big campfire with some marshmallows for toasting! Maybe a big moon on the horizon too? Be wild, be creative!",
+    "difficulty": 2,
+    "startAt": 0,
+    "summerCamp": true,
+    "rewards": null,
+    "steps": [
+        {
+            "hint": "It's a very nice night! Set the background color to darkblue - **type** `background darkblue`",
+            "solution": "background darkblue"
+        },
+        {
+            "hint": "Set the `stroke` to `0` in a new line.",
+            "solution": "stroke 0"
+        },
+        {
+            "hint": "Set your guitar `color` to `lightbrown`.",
+            "solution": "color lightbrown"
+        },
+        {
+            "hint": "Move the cursor to place the guitar - **type** `moveTo 120, 250`",
+            "solution": "moveTo 120, 250"
+        },
+        {
+            "hint": "Draw the first part of the body with an ellipse - **type** `ellipse 60, 65`",
+            "solution": "ellipse 60, 65"
+        },
+        {
+            "hint": "Now for the second part of the body, `move` the cursor `70` pixels to the right.",
+            "solution": "move 70"
+        },
+        {
+            "hint": "Draw a `circle` of size `55` for the second part of the guitar.",
+            "solution": "circle 55"
+        },
+        {
+            "hint": "Every guitar needs a neck, move the cursor to place it - **type** `move 20, -10`",
+            "solution": "move 20, -10"
+        },
+        {
+            "hint": "Set the neck `color` to `brown`.",
+            "solution": "color brown"
+        },
+        {
+            "hint": "Draw the neck of the guitar with a rectangle - **type** `rectangle 150, 20`",
+            "solution": "rectangle 150, 20"
+        },
+        {
+            "hint": "Now place the headstock - **type** `move 150, -5`",
+            "solution": "move 150, -5"
+        },
+        {
+            "hint": "Draw the headstock with a `rectangle` of size `40` by `30`.",
+            "solution": "rectangle 40, 30"
+        },
+        {
+            "hint": "Time to place the soundhole in the body - **type** `move -170, 15`",
+            "solution": "move -170, 15"
+        },
+        {
+            "hint": "Set the outline of the soundhole with a `stroke` of `brown` color and size `10`.",
+            "solution": "stroke brown, 10"
+        },
+        {
+            "hint": "Set the soundhole `color` to `black`.",
+            "solution": "color black"
+        },
+        {
+            "hint": "Draw the hole with a `circle` of size `20`.",
+            "solution": "circle 20"
+        },
+        {
+            "hint": "The bridge is the piece that fixes the strings to the body. Let's place it  - **type** `move -50, -15`",
+            "solution": "move -50, -15"
+        },
+        {
+            "hint": "Set the outline of the bridge with a `stroke` of `red` color and size `10`.",
+            "solution": "stroke red, 10"
+        },
+        {
+            "hint": "Draw the bridge with a `rectangle` of size `2` by `35`.",
+            "solution": "rectangle 2, 35"
+        },
+        {
+            "hint": "That's a good looking guitar. Time for the strings - **type** `move 0, 9`",
+            "solution": "move 0, 9"
+        },
+        {
+            "hint": "Set the properties of the strings with a `stroke` of `white` color and size `1`.",
+            "solution": "stroke white, 1"
+        },
+        {
+            "hint": "Let's draw the 4 strings with a loop - **type** `for i in [ 1 .. 4 ]`",
+            "solution": "for i in [ 1 .. 4 ]"
+        },
+        {
+            "hint": "Draw a string using a line - **type** `line 250`",
+            "solution": "    line 250"
+        },
+        {
+            "hint": "And move the cursor slightly down to place the next ones - **type** `move 0, 4`",
+            "solution": "    move 0, 4"
+        },
+        {
+            "hint": "Press **Enter** and **Backspace** to set the `color` to `white` outside the loop",
+            "solution": "color white"
+        },
+        {
+            "hint": "You are ready to play music! Start a new loop - **type** `for i in [ 1 .. 10 ]`",
+            "solution": "for i in [ 1 .. 10 ]"
+        },
+        {
+            "hint": "Select a random location - **type** `moveTo (random 200, 400), (random 100, 400)`",
+            "solution": "    moveTo (random 200, 400), (random 100, 400)",
+            "validate": "__    moveTo ?\\( *random +200, +400 *\\), +\\( *random +100, +400 *\\)"
+        },
+        {
+            "hint": "Come on, play some notes! - **copy and paste** `text '♪'`",
+            "solution": "    text '♪'"
+        }
+    ]
+}
