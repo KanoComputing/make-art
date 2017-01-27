@@ -1,0 +1,208 @@
+{
+    "id": "mage",
+    "title": "RPG Mage",
+    "description": "Draw an 8-bit Aqua Mage",
+    "code": "",
+    "startAt": 2,
+    "steps": [
+        {
+            "hint": "We're going to make a Mage character for an RPG game so first we need to set the scene, we'll use the darken function to change the color teal to a more suitable shade of dark blue - **type** `background darken teal,15 `",
+            "solution": "background darken teal,15"
+        },
+        {
+            "hint": "We're making pixel art so we'll turn the stroke off - **type** `stroke 0`",
+            "solution": "stroke 0"
+        },
+        {
+            "hint": "Let's set the color to saddlebrown for her hair - **type** `color saddlebrown`",
+            "solution": "color saddlebrown"
+        },
+        {
+            "hint": "We'll use the moveTo function to move the cursor to a specific canvas coordinate - **type** `moveTo 120,80`",
+            "solution": "moveTo 120,80"
+        },
+        {
+            "hint": "We're going to draw the hair first so we can layer the rest of the character over it to create depth - **type** `rectangle 320,400`",
+            "solution": "rectangle 320,400"
+        },
+        {
+            "hint": "We're going to be drawing with blocks 20 by 20 pixels big - **type** `move 20,-20`",
+            "solution": "move 20,-20"
+        },
+        {
+            "hint": "Stack up another layer of hair - **type** `rectangle 280,20`",
+            "solution": "rectangle 280,20"
+        },
+        {
+            "hint": "Move upwards again to create a rounded effect - **type** `move 20,-20`",
+            "solution": "move 20,-20"
+        },
+        {
+            "hint": "Draw the final row of hair in - **type** `rectangle 240,20`",
+            "solution": "rectangle 240,20"
+        },
+        {
+            "hint": "Next we'll draw the face, - **type** `color sandybrown`",
+            "solution": "color sandybrown"
+        },
+        {
+            "hint": "Move the cursor to the top corner of where the face will be - **type** `move 0,120`",
+            "solution": "move 0,120"
+        },
+        {
+            "hint": "Draw the face with a `rectangle` that is 240 by 140",
+            "solution": "rectangle 240,140"
+        },
+        {
+            "hint": "The face is a little too square so move the cursor up to the forehead - **type** `move 80,-40`",
+            "solution": "move 80,-40"
+        },
+        {
+            "hint": "Draw another rectangle to create a fringe - **type** `rectangle 80,40`",
+            "solution": "rectangle 80,40"
+        },
+        {
+            "hint": "Move the cursor down the face - **type** `move -40,180`",
+            "solution": "move -40,180"
+        },
+        {
+            "hint": "Finish the face off by drawing a chin - **type** `rectangle 160,20`",
+            "solution": "rectangle 160,20"
+        },
+        {
+            "hint": "Next we'll draw some robes, our mage specialises in water magic so we'll make them blue - **type** `color paleturquoise`",
+            "solution": "color paleturquoise"
+        },
+        {
+            "hint": "Position the cursor for drawing the sleeves  - **type** `move -100,20`",
+            "solution": "move -100,20"
+        },
+        {
+            "hint": "Draw a `rectangle` 360 wide and 80 tall for the robe sleeves",
+            "solution": "rectangle 360,80"
+        },
+        {
+            "hint": "Position the cursor to draw the body of the robe - **type** `move 60,80`",
+            "solution": "move 60,80"
+        },
+        {
+            "hint": "Draw a `rectangle` 240 wide and 100 tall for the robe body",
+            "solution": "rectangle 240,100"
+        },
+        {
+            "hint": "Next we'll draw a seam on the robe, change the `color` to teal",
+            "solution": "color teal"
+        },
+        {
+            "hint": "Move the cursor to the middle of the robe - **type** `move 120,-80`",
+            "solution": "move 120,-80"
+        },
+        {
+            "hint": "Draw a thin rectangle for the seam - **type** `rectangle 40,180`",
+            "solution": "rectangle 40,180"
+        },
+        {
+            "hint": "Next up we'll draw the arms - **type** `move 140,40`",
+            "solution": "move 140,40"
+        },
+        {
+            "hint": "Change the `color` back to sandybrown",
+            "solution": "color sandybrown"
+        },
+        {
+            "hint": "Draw the arm with a `rectangle` 40 by 140",
+            "solution": "rectangle 40,140"
+        },
+        {
+            "hint": "Move to the the other side of the body - **type** `move -380,40`",
+            "solution": "move -380,40"
+        },
+        {
+            "hint": "This arm will be disconnected at first but don't worry, we haven't finished yet - **type** `rectangle 40,100`",
+            "solution": "rectangle 40,100"
+        },
+        {
+            "hint": "Every mage needs a staff to cast magic, so we'll draw that next - **type** `color darkmagenta`",
+            "solution": "color darkmagenta"
+        },
+        {
+            "hint": "Move to the top of the staff - **type** `move 60,-120`",
+            "solution": "move 60,-120"
+        },
+        {
+            "hint": "Draw the staff over the arm so it looks like it's being held - **type** `rectangle -40,220`",
+            "solution": "rectangle -40,220"
+        },
+        {
+            "hint": "As we said at the start our character uses water magic so set the color to aquamarine - **type** `color aquamarine`",
+            "solution": "color aquamarine"
+        },
+        {
+            "hint": "Draw an orb at the top of the staff, if we use negative numbers then shapes are drawn backwards - **type** `square -80`",
+            "solution": "square -80"
+        },
+        {
+            "hint": "We're also going to draw a magic circlet, move to the forehead - **type** `move 60,-200`",
+            "solution": "move 60,-200"
+        },
+        {
+            "hint": "Draw a `rectangle` that is 240 by 20",
+            "solution": "rectangle 240,20"
+        },
+        {
+            "hint": "Shift down a row on our grid - **type** `move -20,20`",
+            "solution": "move -20,20"
+        },
+        {
+            "hint": "Finish off the circlet - **type** `rectangle 280,20`",
+            "solution": "rectangle 280,20"
+        },
+        {
+            "hint": "We just need to finish off the face so position the cursor over the eyes - **type** `move 60,60`",
+            "solution": "move 60,60"
+        },
+        {
+            "hint": "Set the `color` to black",
+            "solution": "color black"
+        },
+        {
+            "hint": "Draw the eyes long and thin - **type** `rectangle 40,80`",
+            "solution": "rectangle 40,80"
+        },
+        {
+            "hint": "Move across for the other eye - **type** `move 120,0`",
+            "solution": "move 120,0"
+        },
+        {
+            "hint": "Draw the other eye - **type** `rectangle 40,80`",
+            "solution": "rectangle 40,80"
+        },
+        {
+            "hint": "One last detail, we're going to make the eyes shiny - **type** `color white`",
+            "solution": "color white"
+        },
+        {
+            "hint": "Draw a smaller rectangle within the pupil - **type** `rectangle 20,40`",
+            "solution": "rectangle 20,40"
+        },
+        {
+            "hint": "Move to the other eye - **type** `move -120,0`",
+            "solution": "move -120,0"
+        },
+        {
+            "hint": "Finish off with one last rectangle - **type** `rectangle 20,40`",
+            "solution": "rectangle 20,40"
+        }
+    ],
+    "completion_text": "Well done! Your mage is ready to raid some dungeons and cast some spells. Why not change the colours of the outfit to red for fire magic.",
+    "gallery": {
+        "cover_path": "/assets/challenges/images/pixelremixes/",
+        "remixes": [
+            "mage-fire.png",
+            "mage-light.png",
+            "mage-warrior.png"
+        ]
+    },
+    "cover": "pixel-mage.png",
+    "guide": "#### What you'll make\n1. We're going to make a Mage character for an RPG game so first we need to set the scene, we'll use the darken function to change the color teal to a more suitable shade of dark blue - **type** `background darken teal,15 `\n2. We're making pixel art so we'll turn the stroke off - **type** `stroke 0`\n3. Let's set the color to saddlebrown for her hair - **type** `color saddlebrown`\n4. We'll use the moveTo function to move the cursor to a specific canvas coordinate - **type** `moveTo 120,80`\n5. We're going to draw the hair first so we can layer the rest of the character over it to create depth - **type** `rectangle 320,400`\n6. We're going to be drawing with blocks 20 by 20 pixels big - **type** `move 20,-20`\n7. Stack up another layer of hair - **type** `rectangle 280,20`\n8. Move upwards again to create a rounded effect - **type** `move 20,-20`\n9. Draw the final row of hair in - **type** `rectangle 240,20`\n10. Next we'll draw the face, - **type** `color sandybrown`\n11. Move the cursor to the top corner of where the face will be - **type** `move 0,120`\n12. Draw the face with a `rectangle` that is 240 by 140\n13. The face is a little too square so move the cursor up to the forehead - **type** `move 80,-40`\n14. Draw another rectangle to create a fringe - **type** `rectangle 80,40`\n15. Move the cursor down the face - **type** `move -40,180`\n16. Finish the face off by drawing a chin - **type** `rectangle 160,20`\n17. Next we'll draw some robes, our mage specialises in water magic so we'll make them blue - **type** `color paleturquoise`\n18. Position the cursor for drawing the sleeves  - **type** `move -100,20`\n19. Draw a `rectangle` 360 wide and 80 tall for the robe sleeves\n20. Position the cursor to draw the body of the robe - **type** `move 60,80`\n21. Draw a `rectangle` 240 wide and 100 tall for the robe body\n22. Next we'll draw a seam on the robe, change the `color` to teal\n23. Move the cursor to the middle of the robe - **type** `move 120,-80`\n24. Draw a thin rectangle for the seam - **type** `rectangle 40,180`\n25. Next up we'll draw the arms - **type** `move 140,40`\n26. Change the `color` back to sandybrown\n27. Draw the arm with a `rectangle` 40 by 140\n28. Move to the the other side of the body - **type** `move -380,40`\n29. This arm will be disconnected at first but don't worry, we haven't finished yet - **type** `rectangle 40,100`\n30. Every mage needs a staff to cast magic, so we'll draw that next - **type** `color darkmagenta`\n31. Move to the top of the staff - **type** `move 60,-120`\n32. Draw the staff over the arm so it looks like it's being held - **type** `rectangle -40,220`\n33. As we said at the start our character uses water magic so set the color to aquamarine - **type** `color aquamarine`\n34. Draw an orb at the top of the staff, if we use negative numbers then shapes are drawn backwards - **type** `square -80`\n35. We're also going to draw a magic circlet, move to the forehead - **type** `move 60,-200`\n36. Draw a `rectangle` that is 240 by 20\n37. Shift down a row on our grid - **type** `move -20,20`\n38. Finish off the circlet - **type** `rectangle 280,20`\n39. We just need to finish off the face so position the cursor over the eyes - **type** `move 60,60`\n40. Set the `color` to black\n41. Draw the eyes long and thin - **type** `rectangle 40,80`\n42. Move across for the other eye - **type** `move 120,0`\n43. Draw the other eye - **type** `rectangle 40,80`\n44. One last detail, we're going to make the eyes shiny - **type** `color white`\n45. Draw a smaller rectangle within the pupil - **type** `rectangle 20,40`\n46. Move to the other eye - **type** `move -120,0`\n47. Finish off with one last rectangle - **type** `rectangle 20,40`\n\n#### What you’ll hack\nThis is a much more intricate drawing, so there are many more things to change. You can go through the colours making up the image and change them to a new palette, and add in new objects. Take a look at the warrior and the lightning mage as ways of powering up your warrior with new powers, armour and weapons.\n\n#### Briefing\nThe simple shapes you have been putting together into simple designs can be refined and brought into more complex creations. This RPG Mage is a much more intricate design, but uses just the same tools to create them.\n"
+}

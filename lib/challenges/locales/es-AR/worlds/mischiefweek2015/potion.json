@@ -1,0 +1,96 @@
+{
+    "id": "potion",
+    "title": "Potion Flask",
+    "description": "Brew a potion with code.",
+    "start_date": "2015-10-29T06:00:00",
+    "code": "",
+    "startAt": 2,
+    "completion_text": "Well done! You can change the color of your potion by setting potionColor to whatever you want. The clear glass you made with opacity(white, .4) will give it a cool effect, whatever color you choose.",
+    "cover": "mischiefweek2015/mw-004-potion.png",
+    "steps": [
+        {
+            "hint": "We want solid shapes for this challenge, so **type** `stroke 0`",
+            "solution": "stroke 0"
+        },
+        {
+            "hint": "For a dark look, lets set `background charcoal`",
+            "solution": "background charcoal"
+        },
+        {
+            "hint": "If we want to change our potion color we can set it to a variable. To do that **type** `potionColor = purple`",
+            "solution": "potionColor = purple"
+        },
+        {
+            "hint": "Let’s move into position with `move 0, 50`",
+            "solution": "move 0, 50"
+        },
+        {
+            "hint": "And set the drawing color with `color potionColor`",
+            "solution": "color potionColor"
+        },
+        {
+            "hint": "Finally, we can draw the potion with `circle 90`",
+            "solution": "circle 90"
+        },
+        {
+            "hint": "Our potion is going to go up the neck of the flask, and we will use a line. Set up the line style with `stroke potionColor, 40`",
+            "solution": "stroke potionColor, 40"
+        },
+        {
+            "hint": "And draw the line up from the middle with `line 0, -120`.",
+            "solution": "line 0, -120"
+        },
+        {
+            "hint": "Set the stroke back to zero for the flask’s glass. **Type** `stroke 0`",
+            "solution": "stroke 0"
+        },
+        {
+            "hint": "Let’s add in another circle to give our potion a natural look. Move to the right and up with `move 30, -30`.",
+            "solution": "move 30, -30"
+        },
+        {
+            "hint": "Set the drawing color to a shade slightly darker than the potion color with `color darken(potionColor, 10)`",
+            "solution": "color darken(potionColor, 10)"
+        },
+        {
+            "hint": "Finally, draw the circle with `circle 20`",
+            "solution": "circle 20"
+        },
+        {
+            "hint": "Move back to the center with `move -30, 30`",
+            "solution": "move -30, 30"
+        },
+        {
+            "hint": "Set the color for the glass flask with `color opacity(white, .4)`",
+            "solution": "color opacity(white, .4)"
+        },
+        {
+            "hint": "Then draw the flask with an arc. **Type** `arc 100, 1.4, 1.6`",
+            "solution": "arc 100, 1.4, 1.6"
+        },
+        {
+            "hint": "See how the arc draws almost a complete circle, but leaves a nice flat top for us? Our flask neck will meet it there, but first we need to draw a cork behind the glass. **Type** `move 0, -130`",
+            "solution": "move 0, -130"
+        },
+        {
+            "hint": "Set the drawing color for the cork with `color tan`",
+            "solution": "color tan"
+        },
+        {
+            "hint": "And draw the cork with `polygon 20, 0, 30, -40, -30, -40, -20, 0`",
+            "solution": "polygon 20, 0, 30, -40, -30, -40, -20, 0"
+        },
+        {
+            "hint": "Now for the neck, lets choose the see-through white color for our stroke. **Type** `stroke 60, opacity(white, .4)`",
+            "solution": "stroke 60, opacity(white, .4)"
+        },
+        {
+            "hint": "Move up just a little bit for the neck with `move 0, -25`",
+            "solution": "move 0, -25"
+        },
+        {
+            "hint": "Finally, draw the neck with `line 0, 60`",
+            "solution": "line 0, 60"
+        }
+    ]
+}

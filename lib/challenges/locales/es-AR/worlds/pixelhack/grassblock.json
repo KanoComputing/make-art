@@ -1,0 +1,60 @@
+{
+    "id": "grassblock",
+    "title": "8-bit Grass Block",
+    "description": "Make a block you can bring into Minecraft.",
+    "startAt": 1,
+    "steps": [
+        {
+            "hint": "We’ll just use solid shapes with no stroke. So **type** `stroke 0`.",
+            "solution": "stroke 0"
+        },
+        {
+            "hint": "We’ll have to use two loops here. **Type** `for x in [0 ... 16]`",
+            "solution": "for x in [0 ... 16]"
+        },
+        {
+            "hint": "For y use `for y in [0 ... 16]`",
+            "solution": "    for y in [0 ... 16]",
+            "validate": "    for y in \\[0 ... 16\\]"
+        },
+        {
+            "hint": "We’ll use a randomly chosen shade of brown to make the dirt. **Type** `color darken brown, random 0, 25`",
+            "solution": "        color darken brown, random 0, 25",
+            "validate": "        color darken brown, random 0, 25"
+        },
+        {
+            "hint": "We’ll need to move into position for each square with `moveTo x * 31.25, y * 31.25`",
+            "solution": "        moveTo x * 31.25, y * 31.25"
+        },
+        {
+            "hint": "Finally, draw the dirt square with `square 32`",
+            "solution": "        square 32",
+            "validate": "        square 32"
+        },
+        {
+            "hint": "The grass should only appear on the top of the block, so we’ll decide if the block should have a green bit drawn over it with `if 4 >  y + random 0, 3`",
+            "solution": "        if 4 > y + random 0, 3"
+        },
+        {
+            "hint": "Set the green color with the darken function. **Type** `color darken green, random 0, 25`",
+            "solution": "            color darken green, random 0, 25",
+            "validate": "            color darken green, random 0, 25"
+        },
+        {
+            "hint": "Finally, draw the square with `square 32`",
+            "solution": "            square 32",
+            "validate": "            square 32"
+        }
+    ],
+    "completion_text": "Nice! Now you can change the brown and green colors to get an interesting effect. Can you make a block that looks like a strawberry?",
+    "gallery": {
+        "cover_path": "/assets/challenges/images/pixelremixes/",
+        "remixes": [
+            "grass-overgrown.png",
+            "grass-strawb.png",
+            "grass-myce.png"
+        ]
+    },
+    "cover": "pixel-grassblock.png",
+    "guide": "#### What you'll make\n1. We’ll just use solid shapes with no stroke. So **type** `stroke 0`.\n2. We’ll have to use two loops here. **Type** `for x in [0 ... 16]`\n3. For y use `for y in [0 ... 16]`\n4. We’ll use a randomly chosen shade of brown to make the dirt. **Type** `color darken brown, random 0, 25`\n5. We’ll need to move into position for each square with `moveTo x * 31.25, y * 31.25`\n6. Finally, draw the dirt square with `square 32`\n7. The grass should only appear on the top of the block, so we’ll decide if the block should have a green bit drawn over it with `if 4 >  y + random 0, 3`\n8. Set the green color with the darken function. **Type** `color darken green, random 0, 25`\n9. Finally, draw the square with `square 32`\n\n#### What you’ll hack\nTo make this Minecraft Block your own all you need to change are two variables: the colour of the top and bottom parts. Make a strawberry, a water block, or anything else by just changing these two lines. For added complexity, make a Mycelium block with some randomness and another for loop. If you really want to have a challenge, try incorporating what you learned in the previous lesson and use the x and y values to add some extra color rotation to the dirt.\n\n#### Briefing \nOne of the most basic and commonly found blocks in minecraft is the grass block. Just sixteen blocks across and down, it is a very simple image, but we’re going to use randomness to give it a bit of texture. Two different layers will be used: one for the grass, and one for the dirt. \n\nIn each layer we will use the nested for loops to draw across and down the screen, and we’ll only change one thing about each: the color.\n"
+}

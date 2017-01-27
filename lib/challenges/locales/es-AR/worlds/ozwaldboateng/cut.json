@@ -1,0 +1,43 @@
+{
+    "id": "cut",
+    "title": "Cut",
+    "description": "see how a simple technique, nested looping, can be used to create very powerful illusions",
+    "code": "",
+    "startAt": 2,
+    "steps": [
+        {
+            "hint": "Boateng’s suits play tricks on the eyes, making the wearer appear both taller and slimmer. We’ll use simple shapes to create a similar illusion. Start by typing `stroke 0`.",
+            "solution": "stroke 0"
+        },
+        {
+            "hint": "We’ll set the background to a big beautiful red by typing `background rgb(208, 89, 109)`",
+            "solution": "background rgb(208, 89, 109)"
+        },
+        {
+            "hint": "And contrast it by setting the drawing color for our shapes to blue with `color rgb(102, 211, 231)`",
+            "solution": "color rgb(102, 211, 231)"
+        },
+        {
+            "hint": "Next, we start a loop that will scan left to right across the canvas, drawing shapes. Type `for x in [50 .. 450] by 20`.",
+            "solution": "for x in [50 .. 450] by 20"
+        },
+        {
+            "hint": "Each shape is going to start small on the left, grow slightly bigger in the middle, and become small again on the right. For this we will use what computer artists call a “shaping function” and store its value in the variable “size”. Type `size = Math.pow(x - 250, 2) / -4000 + 10`.",
+            "solution": "    size = Math.pow(x - 250, 2) / -4000 + 10"
+        },
+        {
+            "hint": "We’ll make another loop, this time to run top to bottom with `for y in [50 .. 450] by 20`.",
+            "solution": "    for y in [50 .. 450] by 20"
+        },
+        {
+            "hint": "Now for each iteration of the loops we want to move the drawing cursor into position by typing `moveTo x, y`",
+            "solution": "        moveTo x, y"
+        },
+        {
+            "hint": "And finally, draw the squares using the size variable we created above with `square size`",
+            "solution": "        square size"
+        }
+    ],
+    "completion_text": "Beautiful! Using only rectangles, we can achieve an image that transcends the screen it sits on. Boateng’s masterful understanding of the human body helps him cut a slim silhouette, combining simple shapes into a moving masterpiece, similar to what you have done here.",
+    "cover": "ozwaldboateng/cut.png"
+}

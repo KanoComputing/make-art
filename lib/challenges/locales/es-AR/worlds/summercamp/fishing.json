@@ -1,0 +1,110 @@
+{
+    "id": "fishing",
+    "title": "Fishing",
+    "short_title": "Fishing",
+    "icon_class": "challenge_fishing",
+    "description": "It's time to go fishing! Inside the camp's lake there are trout, catfish, and perch swimming around looking for a snack. Grab your fishing pole and some worms, and head over to the water for todays adventure. ",
+    "cover": "summercamp/day_17.png",
+    "completion_text": "Great job! Every time you press a key the image redraws, so try holding down the space bar and watch the waves ripple. Also try adding a fish or making the bobber disappear.",
+    "difficulty": 2,
+    "startAt": 0,
+    "summerCamp": true,
+    "rewards": null,
+    "steps": [
+        {
+            "hint": "It's a sunny day! Set the background color to lightblue - **type** `background lightblue`",
+            "solution": "background lightblue"
+        },
+        {
+            "hint": "We will start by drawing the waves. We want to draw without a fill - set the `color` to be `null`.",
+            "solution": "color null"
+        },
+        {
+            "hint": "Our waves will be dark blue - **type** `stroke darkblue, 8`",
+            "solution": "stroke darkblue, 8"
+        },
+        {
+            "hint": "Move to the place on the left where we will start - **type** `moveTo 10, 250`",
+            "solution": "moveTo 10, 250"
+        },
+        {
+            "hint": "We are going to draw waves on the surface by creating 25 waves inside of a loop - **type** `for i in [1 .. 25]`",
+            "solution": "for i in [1 .. 25]"
+        },
+        {
+            "hint": "Create a wave out of an arc with a radius of 20 pixels - **type** `arc 20, 0.8, 0.2`",
+            "solution": "    arc 20, 0.8, 0.2"
+        },
+        {
+            "hint": "Move each wave a random amount to the left - **type** `move (random 24, 32)`",
+            "solution": "    move (random 24, 32)",
+            "validate": "__    move \\(random 24, +32\\)"
+        },
+        {
+            "hint": "Press ENTER and then backspace to get rid of the indent. This exits the loop.\n\nNext move to the place where we will draw the rest of the water - **type** `moveTo 0, 270`.",
+            "solution": "moveTo 0, 270"
+        },
+        {
+            "hint": "Set the `color` of the water to be the same as the wave",
+            "solution": "color darkblue"
+        },
+        {
+            "hint": "Draw a big `rectangle` that is `500` pixels high and `250` pixels wide for the water",
+            "solution": "rectangle 500, 250"
+        },
+        {
+            "hint": "Let's get ready to add some little blue waves - **type** `stroke blue, 2`",
+            "solution": "stroke blue, 2"
+        },
+        {
+            "hint": "We are going to draw waves 100 times - **type** `for i in [1 .. 100]`",
+            "solution": "for i in [1 .. 100]"
+        },
+        {
+            "hint": "Move each wave to a random place on the surface of the water - **type** `moveTo (random 0, 500), (random 260, 500)`",
+            "solution": "    moveTo (random 0, 500), (random 260, 500)",
+            "validate": "__    moveTo ?\\( *random +0, +500 *\\), +\\( *random +260, +500 *\\)"
+        },
+        {
+            "hint": "Now draw each ripple as a little arc - **type** `arc 10, 0.8, 0.2`",
+            "solution": "    arc 10, 0.8, 0.2"
+        },
+        {
+            "hint": "Brilliant! When you press the spacebar, a new set of random numbers is selected and the ripples move!\n\nTo catch some fish we need a brown fishing pole - Exit the loop and **type** `stroke brown, 10`.",
+            "solution": "stroke brown, 10"
+        },
+        {
+            "hint": "Now move to the place where we will draw the end of the pole - **type** `moveTo 300, 100`",
+            "solution": "moveTo 300, 100"
+        },
+        {
+            "hint": "Draw a `line` that is `150` pixels wide and `400` pixels tall",
+            "solution": "line 150, 400"
+        },
+        {
+            "hint": "Next we need some fishing line - **type** `stroke lightgray, 1`",
+            "solution": "stroke lightgray, 1"
+        },
+        {
+            "hint": "Draw a line that goes to the left and down - **type** `line -100, 200`",
+            "solution": "line -100, 200"
+        },
+        {
+            "hint": "To see if a fish is biting we are going to draw a cork. Move to the end of the fishing line - **type** `move -100, (random 197, 202)`",
+            "solution": "move -100, (random 197, 202)",
+            "valudate": "__move -100, \\(random 197, 202\\)"
+        },
+        {
+            "hint": "The cork doesn't have an outline - **type** `stroke 0`",
+            "solution": "stroke 0"
+        },
+        {
+            "hint": "Set the cork's `color` to `red`",
+            "solution": "color red"
+        },
+        {
+            "hint": "Now draw the cork floating in the water - `arc 8, 0, 1`",
+            "solution": "arc 8, 0, 1"
+        }
+    ]
+}

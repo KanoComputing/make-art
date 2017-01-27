@@ -1,0 +1,77 @@
+{
+    "id": "flag",
+    "title": "Create your Flag",
+    "short_title": "Flag",
+    "description": "Time to show your true colors. Your campsite is shaping up, and as the campsite’s leader you need to make a flag. We’ve got you started with the basics for a flag and flagpole, but it is up to you to to make it your own.  \nYou can look to other flags for inspiration. Countries like France, Nigeria, Sweden, and Switzerland all have very simple color and shape designs, while Spain, Brazil, Kenya, and Saudi Arabia all feature complex designs. When you are done, share your flag to lay claim to your little bit of land!",
+    "icon_class": "challenge_flag",
+    "completion_text": "You have a white canvas in front of you, use it wisely. Create the most amazing flag the world has ever seen!",
+    "cover": "summercamp/day_4.png",
+    "difficulty": 1,
+    "startAt": 3,
+    "summerCamp": true,
+    "rewards": {
+        "outfit": 1
+    },
+    "steps": [
+        {
+            "hint": "Draw the sky where the flag will flutter - **type** `background blue`",
+            "solution": "background blue"
+        },
+        {
+            "hint": "Set the stroke to 0, to avoid drawing lines - **type** `stroke 0`",
+            "solution": "stroke 0"
+        },
+        {
+            "hint": "Let's move the cursor to place our flagpole in the correct place - **type** `moveTo 100, 100`",
+            "solution": "moveTo 100, 100"
+        },
+        {
+            "hint": "Set the `color` of the flagpole to `darkgray`",
+            "solution": "color darkgray"
+        },
+        {
+            "hint": "Draw a long, thin pole with a rectangle - **type** `rectangle 10, 400`",
+            "solution": "rectangle 10, 400"
+        },
+        {
+            "hint": "Move the cursor to place a ball on top-centre of the flagpole - **type** `move 5`",
+            "solution": "move 5"
+        },
+        {
+            "hint": "Set the `color` of the ornament to `gold`",
+            "solution": "color gold"
+        },
+        {
+            "hint": "Draw a circle with a size of 8 - in a new line **type** `circle 8`",
+            "solution": "circle 8"
+        },
+        {
+            "hint": "Now move the cursor to start drawing our flag - **type** `moveTo 115, 123`",
+            "solution": "moveTo 115, 123"
+        },
+        {
+            "hint": "Set the `color` of the flag to `white`",
+            "solution": "color white"
+        },
+        {
+            "hint": "Draw the flag with a `rectangle` of size `261` and  `171`",
+            "solution": "rectangle 261, 171"
+        },
+        {
+            "hint": "That flag needs something to hold of to - **type** `moveTo 100, 140`",
+            "solution": "moveTo 100, 140"
+        },
+        {
+            "hint": "Set the `color` of the holder to `brown`",
+            "solution": "color brown"
+        },
+        {
+            "hint": "Draw the holder with a `20` by `5` `rectangle`",
+            "solution": "rectangle 20, 5"
+        },
+        {
+            "hint": "Now is your turn! Draw an amazing pattern on it - **type** `moveTo 120, 125`",
+            "solution": "moveTo 120, 125"
+        }
+    ]
+}
