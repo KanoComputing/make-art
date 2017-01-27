@@ -3,7 +3,7 @@ Maintainer: Team Kano <dev@kano.me>
 Section: misc
 Priority: optional
 Standards-Version: 3.9.4
-Build-Depends: debhelper (>= 9)
+Build-Depends: debhelper (>= 9), python, python-polib, python-docopt
 
 Package: kano-draw
 Architecture: all
@@ -13,3 +13,7 @@ Suggests: kano-video-files (>= 1.2-1)
 Description: Draw with code
     An app for learning programming using a basic CoffeeScript drawing API
 
+Package: kano-draw-i18n-orig
+Architecture: all
+Description: Data for working on translations of kano-draw
+Multi-Arch: foreign

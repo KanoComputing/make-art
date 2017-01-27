@@ -4,7 +4,9 @@
 	dh $@
 
 override_dh_auto_build:
-	# NodeJS and npm
+        # NodeJS and npm
+	cd po && ./lang-extract-doc-strings 
+	cd po && ./lang-extract-strings 
 	curl --silent --location https://deb.nodesource.com/setup_0.12 | bash -
 	apt-get install --yes nodejs
 	npm install
