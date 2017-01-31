@@ -1,0 +1,151 @@
+#!/usr/bin/env python
+#
+# lang-challenge-po-to-json
+#
+# Convert docs po file to content/docs.json
+#
+# Copyright (C) 2017 Kano Computing Ltd.
+# License: http://www.gnu.org/licenses/gpl-2.0.txt GNU GPLv2
+#
+# Tool to convert locale/challenges directory into corresponding json file at lib/challenges/locales
+# in a given locale and language.
+#
+# Takes
+#    locale/challenges/worlds/
+#        basic/
+#               ballon.po
+#               breakfast.po
+#               stare.po
+#        medium/
+#               ....po
+#        .../
+# And combines with the extra data in
+#    lib/challenges/worlds/
+#        basic/
+#               ballon.json
+#               breakfast.json
+#               stare.json
+#        medium/
+#               ....json
+#        .../
+#
+# Creates
+#    lib/challenges/locales/{lang}/worlds/
+#        index.json
+#        basic/
+#               ballon.json
+#               breakfast.json
+#               stare.json
+#        medium/
+#               ....json
+#        .../
+#
+#
+# Dependencies:
+#
+#   1. python module: polib
+#   pip install polib
+#
+#   2. python module: docopt
+#   pip install docopt
+
+
+"""
+Usage:
+  lang-po-to-json <locale>
+
+
+Options:
+  -h, --help       show this message
+
+Values:
+  locale           the folder name under res/locales/
+
+Examples:
+  ./lang-po-to-json es_AR
+
+"""
+
+
+import io
+import os
+import sys
+import json
+import datetime
+import copy
+
+import polib
+import docopt
+
+CURRENT_DIR = os.path.dirname(os.path.realpath(__file__))
+
+# constants
+LOCALES_DIR = os.path.join(CURRENT_DIR, '../locales')
+DOCS_FILENAME = os.path.join(CURRENT_DIR, '../content/docs.json')
+POT_FILENAME = os.path.join(LOCALES_DIR, 'messages-docs.pot')
+DEFAULT_LOCALE = 'en'
+
+
+def convert_locale_to_browser(locale):
+    return locale.replace('_', '-')
+
+
+def get_translation(po_file, msgid):
+    entry = po_file.find(msgid)
+    if not entry:
+        print(u'Could not find translation for "{}"'.format(msgid))
+        return msgid
+    return entry.msgstr
+
+def translate_entry(po_file, entry):
+    # translate entry
+    entry['label'] = get_translation(po_file, entry['label'])
+    commands = []
+    for command in entry['commands']:
+        command['description'] = get_translation(po_file, command['description'])
+        args = []
+        for arg in command['args']:
+            args.append([
+                arg[0],
+                arg[1],
+                get_translation(po_file, arg[2]),
+                arg[3],
+            ])
+
+        command['args'] = args
+        commands.append(command)
+    entry['commands'] = commands
+
+    return entry
+
+
+def main(args):
+    locale = args['<locale>']
+    date = datetime.date.today()
+
+    LOCALE_PO_FILENAME = os.path.join(LOCALES_DIR, '{}-docs.po'.format(locale))
+    # get po file
+    if not os.path.exists(LOCALE_PO_FILENAME):
+        print('Error: Cannot find po file for locale {}'.format(locale))
+        sys.exit(1)
+
+    po_file = polib.pofile(LOCALE_PO_FILENAME)
+
+    with open(DOCS_FILENAME, 'r') as json_data_file:
+        json_data = json.load(json_data_file, encoding='utf-8')
+
+    translated_entries = []
+    for entry in json_data[DEFAULT_LOCALE]:
+        # translate each entry
+        translated_entries.append(
+            translate_entry(po_file, copy.deepcopy(entry))
+        )
+
+    json_data[convert_locale_to_browser(locale)] = translated_entries
+    with io.open(DOCS_FILENAME, 'w', encoding='utf8') as docs_file:
+        data = json.dumps(json_data, ensure_ascii=False, indent=4)
+        docs_file.write(unicode(data))
+
+if __name__ == '__main__':
+    args = docopt.docopt(__doc__)
+    sys.exit(main(args))
