@@ -1,6 +1,6 @@
 include kano-nav
 
-header: .main-navigation.page-width(ng-hide='selectedWorld && selectedWorld.display_menu')
+header: .main-navigation.page-width(ng-if='offline || !selectedWorld || !selectedWorld.display_menu')
 
     a.logo(href='/')
     //- if !offline
@@ -28,7 +28,7 @@ header: .main-navigation.page-width(ng-hide='selectedWorld && selectedWorld.disp
 
         li(ng-if='!offline && loggedIn')
             a.user-display(ng-href='http://world.kano.me/users/{{ user.username }}', target='_blank')
-                .avatar: img(ng-src='http://avatar.kano.me/username/{{ user.username }}.png')
+                .avatar: img(ng-src='{{ user.avatar.urls.circle || cfg.DEFAULT_AVATAR }}')
                 | {{ user.username }}
 
         li(ng-if='!offline && loggedIn'): a(href='#', ng-click='logout()')

@@ -1,4 +1,4 @@
-.kano-navigation(ng-show='selectedWorld && selectedWorld.display_menu')
+.kano-navigation(ng-show='!offline && selectedWorld && selectedWorld.display_menu')
     kano-nav(assets-path='/assets/kano-nav/' site-root='{{cfg.WORLD_URL}}')
         kano-primary-links(current-site='{{window.location.origin}}' slot='primary')
         ul.nav.nav-secondary(slot='secondary')
@@ -18,7 +18,7 @@
 
             li(ng-if='!offline && loggedIn')
                 a.user-display(ng-href='http://world.kano.me/users/{{ user.username }}', target='_blank')
-                    .avatar: img(ng-src='http://avatar.kano.me/username/{{ user.username }}.png')
+                    .avatar: img(ng-src='{{ user.avatar.urls.circle || cfg.DEFAULT_AVATAR }}')
                     .username
                         | {{ user.username }}
 
