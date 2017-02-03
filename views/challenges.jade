@@ -88,7 +88,7 @@ include ./partial/header
                         .detail
                             h5
                                 | {{ share.title }}
-                                em by {{ share.user.username }}
+                                em ${{ challenges.by }}$ {{ share.user.username }}
 
                 li
                     a.highlight.browse(
