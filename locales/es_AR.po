@@ -329,6 +329,10 @@ msgstr "Tu nombre..."
 msgid "Login"
 msgstr "Ingresar"
 
+#: partial.signup
+msgid "Signup"
+msgstr "Regístrate"
+
 #: partial.back_to_world
 msgid "'Back to ' + selectedWorld.name"
 msgstr "'Atrás' + selectedWorld.name"
