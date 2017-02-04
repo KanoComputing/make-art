@@ -1,12 +1,12 @@
 {
     "id": "dots",
-    "title": "PatrÃ³n de puntos",
-    "description": "Â¡Crea un patrÃ³n de puntos usando ciclos y cÃ­rculos!",
+    "title": "Patrón de Puntos",
+    "description": "¡Crea un patrón de puntos usando ciclos y círculos!",
     "code": "",
     "startAt": 1,
     "steps": [
         {
-            "hint": "Configura el fondo a rojo",
+            "hint": "Configura el color del fondo a rojo",
             "solution": "background red"
         },
         {
@@ -14,7 +14,7 @@
             "solution": "stroke 0"
         },
         {
-            "hint": "Configura el color de dibujo a amarillo",
+            "hint": "Configura el color a amarillo",
             "solution": "color yellow"
         },
         {
@@ -26,7 +26,7 @@
             "solution": "    for y in [ 0..25 ]"
         },
         {
-            "hint": "MÃºevete, **escribe** `moveTo x * 20, y * 20`",
+            "hint": "Muévete, **escribe** `moveTo x * 20, y * 20`",
             "solution": "        moveTo x * 20, y * 20",
             "validate": "        moveTo x *\\* *20,y *\\* *20"
         },
@@ -35,6 +35,6 @@
             "solution": "        circle 6"
         }
     ],
-    "completion_text": "Â¡Es matemÃ¡tico! Cambia el Ãºltimo nÃºmero y fÃ­jate lo que sucede.",
+    "completion_text": "¡Es matemático! Cambia los números y fíjate lo que sucede.",
     "cover": "dots.png"
 }

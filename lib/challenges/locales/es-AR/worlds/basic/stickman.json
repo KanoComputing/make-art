@@ -1,19 +1,19 @@
 {
     "id": "stickman",
     "title": "Hombre de palo",
-    "description": "Dibuja un hombre de palo usando cÃ­rculos y lÃ­neas",
+    "description": "Dibuja un hombre de palo usando círculos y líneas",
     "startAt": 2,
     "steps": [
         {
-            "hint": "Configura el `trazo` a `negro` y de un tamaÃ±o de `10`",
+            "hint": "Configura el `trazo` a `negro` y de un tamaño de `10` ¡usando las palabras en inglés!",
             "solution": "stroke black, 10"
         },
         {
-            "hint": "MuÃ©vete hacia arriba, **escribe** `move 0, -50`",
+            "hint": "Muévete hacia arriba, **escribe** `move 0, -50`",
             "solution": "move 0, -50"
         },
         {
-            "hint": "Dibuja el cuerpo del hombre de palo - `line 0, 150`",
+            "hint": "Dibuja el cuerpo del hombre de palo usando `line` - `line 0, 150`",
             "solution": "line 0, 150"
         },
         {
@@ -25,7 +25,7 @@
             "solution": "line 80, 120"
         },
         {
-            "hint": "MuÃ©vete hacia abajo, **escribe** `move 0, 150`",
+            "hint": "Muévete hacia abajo, **escribe** `move 0, 150`",
             "solution": "move 0, 150"
         },
         {
@@ -37,11 +37,11 @@
             "solution": "line 80, 120"
         },
         {
-            "hint": "MuÃ©vete a la parte de arriba del dibujo, **escribe** `moveTo 250, 100`",
+            "hint": "Muévete a la parte de arriba del dibujo, **escribe** `moveTo 250, 100`",
             "solution": "moveTo 250, 100"
         },
         {
-            "hint": "Configura el trazo nuevamente a 0",
+            "hint": "Configura el trazo nuevamente a 0 usando `stroke`",
             "solution": "stroke 0"
         },
         {
@@ -49,6 +49,6 @@
             "solution": "polygon -60, 50, 0, 100, 60, 50"
         }
     ],
-    "completion_text": "Â¡Felicitaciones! El fondo tiene 500 de ancho y 500 de alto, hay que ser muy hÃ¡bil para moverse dentro de Ã©l",
+    "completion_text": "¡Felicitaciones! El fondo tiene 500 de ancho por 500 de alto, hay que ser muy hábil para moverse dentro de él",
     "cover": "stickman.png"
 }
