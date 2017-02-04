@@ -1,0 +1,91 @@
+{
+    "id": "bear",
+    "title": "Oso atrevido",
+    "short_title": "Oso",
+    "description": "Los osos son muy inteligentes y incluso activan trampas para osos con rocas para poder comer el cebo de manera segura. Estos animales pueden correr a 64km/h, lo suficientemente rápido como para atrapar a un caballo que corre. Ten en cuenta que la persona más rápida del mundo es Usain Bolt ¡puede correr a 43km/h! Ya que los osos pueden caminar distancias cortas con sus patas traseras, los nativos de Estados Unidos los llaman “las bestias que caminan como humanos.”",
+    "icon_class": "challenge_bear",
+    "cover": "summercamp/day_11.png",
+    "completion_text": "Ese oso tan tierno necesita un cuerpo y un hábitat. Usa tus habilidades de programación para impresionar a otros miembros del camping. Recuerda que los íconos de la izquierda pueden ayudarte a alcanzar lo que estás pensando.",
+    "difficulty": 1,
+    "startAt": 0,
+    "summerCamp": true,
+    "rewards": null,
+    "steps": [
+        {
+            "hint": "El oso vive en el bosque. Configura el color del fondo a verde - **escribe** `background green`",
+            "solution": "background green"
+        },
+        {
+            "hint": "El pelaje de nuestro oso será marrón, empecemos por configurar el color - **escribe** `color brown`",
+            "solution": "color brown"
+        },
+        {
+            "hint": "Configura el trazo a 0 para evitar dibujar líneas - **escribe** `stroke 0`",
+            "solution": "stroke 0"
+        },
+        {
+            "hint": "Dibuja la cara con un círculo - **escribe** `circle 100`",
+            "solution": "circle 100"
+        },
+        {
+            "hint": "Vamos a mover el cursor para dibujar la oreja izquierda - **escribe** `move -80, -80`",
+            "solution": "move -80, -80"
+        },
+        {
+            "hint": "Dibuja la oreja en forma de círculo usando `circle` hazla de un tamaño de `30`",
+            "solution": "circle 30"
+        },
+        {
+            "hint": "Mueve el cursor a la derecha para dibujar la otra oreja - **escribe** `move 160`",
+            "solution": "move 160"
+        },
+        {
+            "hint": "Dibuja la oreja, igual a la otra",
+            "solution": "circle 30"
+        },
+        {
+            "hint": "Ahora muévete hacia donde estará el ojo izquierdo - **escribe** `move -110, 50`",
+            "solution": "move -110, 50"
+        },
+        {
+            "hint": "El resto de las partes de la cara serán negras por eso configura el `color` a negro o `black` en inglés.",
+            "solution": "color black"
+        },
+        {
+            "hint": "Dibuja el primer ojo - **escribe** `circle 5`",
+            "solution": "circle 5"
+        },
+        {
+            "hint": "Ahora muévete hacia donde estará el otro ojo - **escribe** `move 60`",
+            "solution": "move 60"
+        },
+        {
+            "hint": "Dibuja el ojo, idéntico al anterior",
+            "solution": "circle 5"
+        },
+        {
+            "hint": "Muévete hacia el centro para dibujar lo más característico de los osos- **escribe** `move -30, 50`",
+            "solution": "move -30, 50"
+        },
+        {
+            "hint": "Dibuja la nariz con un triángulo usando la función polygon - **escribe** `polygon 12, -16, -12, -16`",
+            "solution": "polygon 12, -16, -12, -16"
+        },
+        {
+            "hint": "Vamos a ubicarnos para dibujarle la boca - **escribe** `move 0, 20`",
+            "solution": "move 0, 20"
+        },
+        {
+            "hint": "Configura el trazo `stroke` a negro o `black` y de un tamaño de `3`",
+            "solution": "stroke black, 3"
+        },
+        {
+            "hint": "No queremos que tenga un color de relleno, por eso configura el color a transparente - **escribe** `color null`",
+            "solution": "color null"
+        },
+        {
+            "hint": "Un arco es la mitad de un círculo, nos sirve para representar una leve sonrisa - **escribe** `arc 15, 0.5, 2`",
+            "solution": "arc 15, 0.5, 2"
+        }
+    ]
+}

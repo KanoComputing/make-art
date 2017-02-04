@@ -1,0 +1,143 @@
+{
+    "id": "backpack",
+    "title": "Empaca tus cosas",
+    "short_title": "Mochila",
+    "icon_class": "challenge_backpack",
+    "description": "Dick Kelty fue quien inventó las mochilas con marco de alumnino. Kelty tuvo la idea en 1951 cuando se fue de excursión con una amigo a Sierra Nevada. Trabajando en su garage y con un préstamo de $500, Kelty y su mujer decidieron empezar el negocio; él cortaba y soldaba el aluminio mientras ella cosía el nylon. Vendían las mochilas terminadas a $24 cada una.",
+    "cover": "summercamp/day_8.png",
+    "completion_text": "Tengo un gran desafío para ti: intenta dibujar tu personaje detrás de la mochila ¡Cabeza, brazos y piernas!",
+    "difficulty": 1,
+    "startAt": 0,
+    "summerCamp": true,
+    "rewards": null,
+    "steps": [
+        {
+            "hint": "Es un hermoso día para ir a caminar por el bosque - **escribe** `background blue`",
+            "solution": "background blue"
+        },
+        {
+            "hint": "Primero, configura el trazo a 0 para evitar dibujar líneas usando `stroke 0`",
+            "solution": "stroke 0"
+        },
+        {
+            "hint": "Mueve el cursor para dibujar el piso - en una nueva línea **escribe** `moveTo 0, 250`",
+            "solution": "moveTo 0, 250"
+        },
+        {
+            "hint": "Configura el `color` del césped a verde o `green`",
+            "solution": "color green"
+        },
+        {
+            "hint": "Dibuja el piso con un rectángulo - **escribe** `rectangle 500, 250`",
+            "solution": "rectangle 500, 250"
+        },
+        {
+            "hint": "Parece un lindo sitio para un árbol - **escribe** `moveTo 220`",
+            "solution": "moveTo 220"
+        },
+        {
+            "hint": "Configura el `color` del tronco a marrón claro o `lightbrown`",
+            "solution": "color lightbrown"
+        },
+        {
+            "hint": "Dibuja el tronco usando la función `rectangle`, y con un tamaño de `50` por `400`",
+            "solution": "rectangle 50, 400"
+        },
+        {
+            "hint": "¡Hermoso! Ahora solamente necesita algunas hojas - **escribe** `move 30, -120` para ubicarlas",
+            "solution": "move 30, -120"
+        },
+        {
+            "hint": "Configura el `color` de las hojas a verde oscuro o `darkgreen`",
+            "solution": "color darkgreen"
+        },
+        {
+            "hint": "Dibuja un círculo usando `circle` de un tamaño de `200` para representar las hojas",
+            "solution": "circle 200"
+        },
+        {
+            "hint": "¡Se ve genial! Vamos a mover el cursor para dibujar la mochila - **escribe** `moveTo 150, 200`",
+            "solution": "moveTo 150, 200"
+        },
+        {
+            "hint": "Vamos a elegir el `color` marrón o `brown` para nuestra mochila",
+            "solution": "color brown"
+        },
+        {
+            "hint": "Dibuja la parte principal de la mochila usando un cuadrado - **escribe** `square 200`",
+            "solution": "square 200"
+        },
+        {
+            "hint": "Ahora mueve el cursor a la parte de abajo de la mochila - **escribe** `moveTo 250, 400`",
+            "solution": "moveTo 250, 400"
+        },
+        {
+            "hint": "Dibuja la parte de abajo usando una elipse - **escribe** `ellipse 100, 30`",
+            "solution": "ellipse 100, 30"
+        },
+        {
+            "hint": "Necesitamos guardar la bolsa de dormir en la parte de arriba de la mochila - **escribe** `moveTo 250, 200`",
+            "solution": "moveTo 250, 200"
+        },
+        {
+            "hint": "Configura el `color` de la bolsa de dormir a rojo oscuro o `darkred`",
+            "solution": "color darkred"
+        },
+        {
+            "hint": "¿Listo para dibujar la bolsa de dormir? Usa una elipse - **escribe** `ellipse 115, 40`",
+            "solution": "ellipse 115, 40"
+        },
+        {
+            "hint": "Necesitamos algo para asegurar la bolsa de dormir y que no se caiga - **escribe** `moveTo 200, 160`",
+            "solution": "moveTo 200, 160"
+        },
+        {
+            "hint": "El anaranjado o `orangered` en inglés, parece un lindo `color` para las tiras que la sostendrán",
+            "solution": "color orangered"
+        },
+        {
+            "hint": "Dibuja la tira izquierda - **escribe** `rectangle 15, 90`",
+            "solution": "rectangle 15, 90"
+        },
+        {
+            "hint": "Posiciona el cursor hacia la derecha para dibujar la segunda - **escribe** `moveTo 290, 160`",
+            "solution": "moveTo 290, 160"
+        },
+        {
+            "hint": "Usa la función `rectangle` otra vez para la tira de la derecha, igual que la anterior",
+            "solution": "rectangle 15, 90"
+        },
+        {
+            "hint": "¡Excelente! Necesitamos espacio para guardar cosas. Mueve el cursor al medio - **escribe** `moveTo 205, 320`",
+            "solution": "moveTo 205, 320"
+        },
+        {
+            "hint": "Usa la función `rectangle` para hacer un bolsillo, de `90` por `60` será suficiente",
+            "solution": "rectangle 90, 60"
+        },
+        {
+            "hint": "Necesitamos cerrar el bolsillo para que no se metan insectos - **escribe** `moveTo 250, 320`",
+            "solution": "moveTo 250, 320"
+        },
+        {
+            "hint": "Configura el `color` a marrón claro o `lightbrown`",
+            "solution": "color lightbrown"
+        },
+        {
+            "hint": "Usa la función `ellipse` de un tamaño de `48` por `7`",
+            "solution": "ellipse 48, 7"
+        },
+        {
+            "hint": "¡Se ve genial! Vamos a ponerle un botón a ese bolsillo - **escribe** `moveTo 250, 330`",
+            "solution": "moveTo 250, 330"
+        },
+        {
+            "hint": "Configura el `color` a marrón o `brown`",
+            "solution": "color brown"
+        },
+        {
+            "hint": "Dibuja un círculo usando `circle` de un tamaño de `10`",
+            "solution": "circle 10"
+        }
+    ]
+}

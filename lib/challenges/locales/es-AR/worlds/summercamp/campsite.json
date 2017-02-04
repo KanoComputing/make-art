@@ -1,0 +1,97 @@
+{
+    "id": "campsite",
+    "title": "Dibuja tu Camping",
+    "short_title": "Camping",
+    "description": "Es hora de buscar un lugar agradable para tu campamento. Lo más importante a la hora de buscar sitio para construir un campamento es que sea un terreno llano. Si es posible, que haya alguna fuente de agua cerca, esto facilitará el momento de la cocina y la limpieza. Finalmente, asegúrate de que esté rodeado de algunos árboles, ya que brindan leña y una buena protección del sol.  \nTus amigos querrán ver cómo se ve tu camping, cuando tengas uno en mente ¡dibújalo! Puedes programar el lugar donde te estarás quedando las próximas semanas.",
+    "icon_class": "challenge_location",
+    "completion_text": "¡El camping se ve genial! Intenta agregar más árboles, flores, piedras... ¿tal vez una cerca?",
+    "cover": "summercamp/day_2.png",
+    "difficulty": 1,
+    "startAt": 1,
+    "summerCamp": true,
+    "rewards": {
+        "outfit": 1
+    },
+    "steps": [
+        {
+            "hint": "Hoy es un hermoso día - **escribe** `background blue`",
+            "solution": "background blue"
+        },
+        {
+            "hint": "Configura el trazo a 0 para evitar dibujar líneas - **escribe** `stroke 0`",
+            "solution": "stroke 0"
+        },
+        {
+            "hint": "Mueve el cursor a donde se ubicará el sol - **escribe** `moveTo 400, 50`",
+            "solution": "moveTo 400, 50"
+        },
+        {
+            "hint": "Configura el `color` del sol a amarillo usando el equivalente en inglés `yellow`",
+            "solution": "color yellow"
+        },
+        {
+            "hint": "Dibuja el sol con un círculo - **escribe** `circle 40`",
+            "solution": "circle 40"
+        },
+        {
+            "hint": "Hay una nube en el horizonte. - **escribe** `moveTo 440, 80`",
+            "solution": "moveTo 440, 80"
+        },
+        {
+            "hint": "Configura el `color` de la nube a blanco o `white`",
+            "solution": "color white"
+        },
+        {
+            "hint": "Dibuja la nube usando una elipse - **escribe** `ellipse 60, 20`",
+            "solution": "ellipse 60, 20"
+        },
+        {
+            "hint": "El lago tiene un hermoso `color` aguamarina o `aquamarine`",
+            "solution": "color aquamarine"
+        },
+        {
+            "hint": "Mueve el cursor a donde se ubicará el lago  - **escribe** `moveTo 0, 190`",
+            "solution": "moveTo 0, 190"
+        },
+        {
+            "hint": "Dibuja el lago usando un simple rectángulo - **escribe** `rectangle 500, 310`",
+            "solution": "rectangle 500, 310"
+        },
+        {
+            "hint": "Configura el `color` a verde o `green` en inglés, para el césped",
+            "solution": "color green"
+        },
+        {
+            "hint": "Mueve el cursor antes de dibujar el césped - **escribe** `moveTo 250, 700`",
+            "solution": "moveTo 250, 700"
+        },
+        {
+            "hint": "Dibuja el césped con un círculo - **escribe** `circle 500`",
+            "solution": "circle 500"
+        },
+        {
+            "hint": "Se ve un poco vacío, vamos a dibujar un árbol - **escribe** `moveTo 120, 300`",
+            "solution": "moveTo 120, 300"
+        },
+        {
+            "hint": "Configura el `color` del tronco a marrón o `brown`",
+            "solution": "color brown"
+        },
+        {
+            "hint": "Dibuja el tronco del árbol usando un rectángulo - **escribe** `rectangle 15, 100`",
+            "solution": "rectangle 15, 100"
+        },
+        {
+            "hint": "Ahora posiciónate para dibujar la copa del árbol - **escribe** `move 8, -120`",
+            "solution": "move 8, -120"
+        },
+        {
+            "hint": "Configura el `color` a verde oscuro o `darkgreen`",
+            "solution": "color darkgreen"
+        },
+        {
+            "hint": "Dibuja la copa del árbol con un tríangulo usando el comando `polygon` - **escribe** `polygon -40, 160, 40, 160`",
+            "solution": "polygon -40, 160, 40, 160"
+        }
+    ]
+}

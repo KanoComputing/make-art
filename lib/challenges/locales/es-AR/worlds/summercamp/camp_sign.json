@@ -1,0 +1,87 @@
+{
+    "id": "camp_sign",
+    "title": "Tu letrero de Campamento de Verano",
+    "short_title": "Letrero de Campamento",
+    "description": "¡Bienvenido a tu primer día de campamento! Antes de salir, tu letrero de campamento necesita un poco de diseño ¡Vuélvete creativo! Usa una divertida combinación de colores o demuestra lo que te gustaría hacer estando de campamento.  \nEn la región del Noroeste Pacífico de Estados Unidos, los pueblos indígenas tallaban Tótems para contar las historias de sus ancestros y culturas. Estas hermosas esculturas están talladas en árboles y a menudo representan personajes y hechos de leyendas. Puedes buscar en internet imágenes de los Tótems para inspirarte.",
+    "icon_class": "challenge_campsign",
+    "cover": "summercamp/day_1.png",
+    "completion_text": "¡Bien hecho! Ahora otórgale a tu letrero tu propio texto y estilo. Cambia el nombre de tu campamento en el renglón 18, o el color en el 3 ¿Por qué no agregar un lindo fondo y alguna decoración? Lo íconos de utilidades a la izquierda pueden ayudarte a empezar.",
+    "difficulty": 1,
+    "startAt": 0,
+    "summerCamp": true,
+    "rewards": null,
+    "steps": [
+        {
+            "hint": "¡Es un día soleado! Configura el fondo a azul - **escribe** `background blue`",
+            "solution": "background blue"
+        },
+        {
+            "hint": "Mueve el cursor al punto en el que queremos comenzar a dibujar nuestro letrero.\n\nRecuerda presionar ENTER para agregar la próxima instrucción, y  - **escribe** `moveTo 100, 150`",
+            "solution": "moveTo 100, 150"
+        },
+        {
+            "hint": "Imagina que en Hacer Arte dibujamos figuras con bolígrafos digitales. Imagina que en Hacer Arte dibujamos figuras con bolígrafos digitales. Antes de dibujar la próxima figura, necesitamos elegir el color de la tinta para el relleno de la figura. Seleccionemos un bolígrafo marrón configurando el color a marrón claro, o lightbrown en inglés.\n\n En una nueva línea **escribe** `color lightbrown`",
+            "solution": "color lightbrown"
+        },
+        {
+            "hint": "Cuando dibujamos una figura, podemos seleccionar el grosor del trazo que nuestro bolígrafo deja en el borde. Esta línea del trazo, en inglés se llama **stroke**.\n\n  Presiona enter y configura el trazo a 0 para evitar dibujar líneas - **escribe** `stroke 0`",
+            "solution": "stroke 0"
+        },
+        {
+            "hint": "Ahora que ya configuramos el bolígrafo de dibujo ¡podemos empezar a hacer nuestro letrero de campamento!\n\nDibuja el cartel con un rectángulo. Recuerda rectángulo en inglés es rectangle - **escribe** `rectangle 300, 200`",
+            "solution": "rectangle 300, 200"
+        },
+        {
+            "hint": "Dibujemos una sombra. Primero, configura el color a marrón - **escribe** `color brown`",
+            "solution": "color brown"
+        },
+        {
+            "hint": "Dibuja una fina sombra utilizando un rectángulo alargado - **escribe** `rectangle 300, 5`",
+            "solution": "rectangle 300, 5"
+        },
+        {
+            "hint": "Ese letrero se ve demasiado limpio. Tenemos que dibujarle algunas imperfecciones.\n\nMueve el cursor al lado izquierdo del letrero - **escribe** `moveTo 100, 220`",
+            "solution": "moveTo 100, 220"
+        },
+        {
+            "hint": "Nuestra imperfección será un triángulo en el borde del letrero. Primero necesitamos configurar el `color` a azul, `blue` en inglés, para que sea el mismo que el del fondo.",
+            "solution": "color blue"
+        },
+        {
+            "hint": "Configura el trazo a un tamaño de 5 y de color marrón (para que combine con el letrero). Puedes concretar estas dos acciones de tamaño y color en un solo comando - **escribe** `stroke brown, 5`",
+            "solution": "stroke brown, 5"
+        },
+        {
+            "hint": "Ahora vamos a usar el comando `polygon` (significa polígono) para dibujar nuestra imperfección en forma de triángulo, necesitamos enumerar la posición de las esquinas del triángulo - **escribe** `polygon 16, 10, 0, 11`",
+            "solution": "polygon 16, 10, 0, 11"
+        },
+        {
+            "hint": "Este letrero necesita un palo que lo sostenga - **escribe** `moveTo 230, 350`",
+            "solution": "moveTo 230, 350"
+        },
+        {
+            "hint": "Configura el color del palo a marrón - **escribe** `color brown` ",
+            "solution": "color brown"
+        },
+        {
+            "hint": "Configura el trazo a 0 - **escribe** `stroke 0`",
+            "solution": "stroke 0"
+        },
+        {
+            "hint": "Ahora que ya configuramos el color, dibuja el palo con un rectángulo - **escribe** `rectangle 40, 150`",
+            "solution": "rectangle 40, 150"
+        },
+        {
+            "hint": "Necesitamos que nuestro letrero diga algo. Vamos a agregarle texto. Mueve el cursor a la posición del texto - **escribe** `moveTo 250, 270`",
+            "solution": "moveTo 250, 270"
+        },
+        {
+            "hint": "Ahora necesitamos elegir la fuente. Hay muchas para elegir, puede ser `Bariol`, `Georgia`, `Comic Sans MS`, `cursive`, y `Courier`.\n\nElige tu favorita y escribe el nombre de la fuente entre comillas, así: - `font 'Bariol', 70`.",
+            "solution": "font 'Bariol', 70"
+        },
+        {
+            "hint": "Ahora podemos escribir algo usando el comando de texto, en inglés se dice text - **escribe** `text 'My Camp'`",
+            "solution": "text 'My Camp'"
+        }
+    ]
+}

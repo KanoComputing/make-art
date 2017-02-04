@@ -1,0 +1,127 @@
+{
+    "id": "guitar",
+    "title": "Toca una linda y dulce canción",
+    "short_title": "Guitarra",
+    "icon_class": "challenge_guitar",
+    "description": "¿Sabes que la guitarra más antigua del mundo es de 3500 años atrás? Era un instrumento de 3 cuerdas. Su dueño era un cantante egipcio llamado Har-Mose, cuando falleció la guitarra fue enterrada a su lado. El instrumento fue desenterrado y, hoy en día, se exhibe en el Museo Arqueológico del Cairo en Egipto.",
+    "cover": "summercamp/day_13.png",
+    "completion_text": "¿De qué sirve una guitarra si no hay una fogata y gente cantando alrededor? Intenta dibujar una linda fogata con algunos malvaviscos para ser tostados. Tal vez puedes hacer una luna en el horizonte. ¡Se creativo!",
+    "difficulty": 2,
+    "startAt": 0,
+    "summerCamp": true,
+    "rewards": null,
+    "steps": [
+        {
+            "hint": "¡Es una hermosa noche! Configura el color del fondo a azul oscuro - **escribe** `background darkblue`",
+            "solution": "background darkblue"
+        },
+        {
+            "hint": "Configura el trazo a 0 usando `stroke`.",
+            "solution": "stroke 0"
+        },
+        {
+            "hint": "Configura el `color` de tu guitarra a marrón claro o `lightbrown`.",
+            "solution": "color lightbrown"
+        },
+        {
+            "hint": "Mueve el cursor al punto donde ubicaremos la caja, la parte más grande de tu guitarra - **escribe** `moveTo 120, 250`",
+            "solution": "moveTo 120, 250"
+        },
+        {
+            "hint": "Dibuja la primera parte de la caja usando una elipse - **escribe** `ellipse 60, 65`",
+            "solution": "ellipse 60, 65"
+        },
+        {
+            "hint": "Ahora para la segunda parte mueve el cursor `70` píxeles a la derecha usando `move`.",
+            "solution": "move 70"
+        },
+        {
+            "hint": "Dibuja un círculo de un tamaño de `55` usando `circle`.",
+            "solution": "circle 55"
+        },
+        {
+            "hint": "Toda guitarra necesita un mástil, mueve el cursor para ubicarlo - **escribe** `move 20, -10`",
+            "solution": "move 20, -10"
+        },
+        {
+            "hint": "Configura el `color` del mástil a marrón o `brown`.",
+            "solution": "color brown"
+        },
+        {
+            "hint": "Dibuja el mástil con un rectángulo - **escribe** `rectangle 150, 20`",
+            "solution": "rectangle 150, 20"
+        },
+        {
+            "hint": "Ahora ubiquemos el clavijero - **escribe** `move 150, -5`",
+            "solution": "move 150, -5"
+        },
+        {
+            "hint": "Dibuja el clavijero usando la función `rectangle` hazlo de `40` por `30`.",
+            "solution": "rectangle 40, 30"
+        },
+        {
+            "hint": "Ahora necesitamos una boca - **escribe** `move -170, 15`",
+            "solution": "move -170, 15"
+        },
+        {
+            "hint": "Configura el borde de la boca usando `stroke` `brown` y hazla de un tamaño de `10`.",
+            "solution": "stroke brown, 10"
+        },
+        {
+            "hint": "Configura el `color` de la boca a negro o `black`.",
+            "solution": "color black"
+        },
+        {
+            "hint": "Dibuja la boca con un círculo de `20` de tamaño, usa `circle`.",
+            "solution": "circle 20"
+        },
+        {
+            "hint": "El puente es la pieza que sostiene las cuerdas a la caja. Ubiquémoslo - **escribe** `move -50, -15`",
+            "solution": "move -50, -15"
+        },
+        {
+            "hint": "Configura el borde del puente usando `stroke` `red` y de un tamaño de `10`.",
+            "solution": "stroke red, 10"
+        },
+        {
+            "hint": "Dibuja el puente con un rectángulo de un tamaño de `2` por `35`. Usa `rectangle`.",
+            "solution": "rectangle 2, 35"
+        },
+        {
+            "hint": "Esa guitarra se ve muy bien. Es hora de hacer las cuerdas - **escribe** `move 0, 9`",
+            "solution": "move 0, 9"
+        },
+        {
+            "hint": "Configura las propiedades de las cuerdas usando `stroke` `white` de un tamaño de `1`.",
+            "solution": "stroke white, 1"
+        },
+        {
+            "hint": "Dibujemos las 4 cuerdas de una sola vez usando un ciclo - **escribe** `for i in [ 1 .. 4 ]`",
+            "solution": "for i in [ 1 .. 4 ]"
+        },
+        {
+            "hint": "Dibuja una cuerda usando una línea - **escribe** `line 250`",
+            "solution": "    line 250"
+        },
+        {
+            "hint": "Y mueve el cursor levemente para dibujar las siguientes - **escribe** `move 0, 4`",
+            "solution": "    move 0, 4"
+        },
+        {
+            "hint": "Presiona **Enter** y la tecla **Borrar** para configurar el `color` a blanco o `white` fuera del ciclo",
+            "solution": "color white"
+        },
+        {
+            "hint": "¡Estás listo para tocar música! Abre un nuevo ciclo - **escribe** `for i in [ 1 .. 10 ]`",
+            "solution": "for i in [ 1 .. 10 ]"
+        },
+        {
+            "hint": "Elige una posición aleatoria - **escribe** `moveTo (random 200, 400), (random 100, 400)`",
+            "solution": "    moveTo (random 200, 400), (random 100, 400)"
+        },
+        {
+            "hint": "¡Vamos, toca algunas notas! - **copia y pega** `text '♪'`",
+            "solution": "    text 'â™ª'"
+        }
+    ]
+}
