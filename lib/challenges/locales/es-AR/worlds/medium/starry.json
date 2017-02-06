@@ -5,7 +5,7 @@
     "startAt": 2,
     "steps": [
         {
-            "hint": "Configura el color del fondo a azul oscuro",
+            "hint": "Configura el color del fondo a azul oscuro, darkblue en inglés. Recuerda usar el comando también en inglés",
             "solution": "background darkblue",
             "validate": "^background darkblue$"
         },
@@ -14,7 +14,7 @@
             "solution": "stroke 0"
         },
         {
-            "hint": "Configura el color de dibujo a amarillo",
+            "hint": "Y configura el color de dibujo a amarillo",
             "solution": "color yellow"
         },
         {
@@ -23,10 +23,12 @@
         },
         {
             "hint": "Ahora para determinar dónde irán las estrellas -  **escribe** `moveTo (random 1, 500), (random 1, 500)`",
-            "solution": "    moveTo (random 1, 500), (random 1, 500)"
+            "solution": "    moveTo (random 1, 500), (random 1, 500)",
+            "validate": "__    moveTo ?\\( *random +1, +500 *\\), +\\( *random +1, +500 *\\)"
+
         },
         {
-            "hint": "Finalmente dibuja las estrellas usando círculos de 5 de tamaño",
+            "hint": "Finalmente dibuja las estrellas dibujando círculos de 5 de tamaño",
             "solution": "    circle 5"
         }
     ],
