@@ -1,0 +1,121 @@
+{
+    "id": "table_tennis",
+    "title": "Tenis de mesa",
+    "short_title": "Tenis de mesa",
+    "icon_class": "challenge_tennis",
+    "description": "El Tenis de mesa se juega de a dos personas, una de cada lado de una mesa que refleja una miniatura de una cancha de tenis. Los games se juegan a 11 o 21 puntos y una vez finalizada la partida, el ganador tira su pala al piso y expulsa su grito de gloria.",
+    "cover": "summercamp/day_16.png",
+    "completion_text": "¡Bien hecho! Hiciste una hermosa mesa de Ping Pong en 3D. ¡Pero no hay nadie jugando ni mirando la partida! Usa tu creatividad y los comandos para dibujar algunas personas disfrutando del juego.",
+    "difficulty": 2,
+    "startAt": 0,
+    "summerCamp": true,
+    "rewards": {
+        "wallpaper": 1
+    },
+    "steps": [
+        {
+            "hint": "Comienza por configurar el trazo a 0 con `stroke 0`",
+            "solution": "stroke 0"
+        },
+        {
+            "hint": "¡Es un hermoso día soleado! Configura el color del fondo a azul - **escribe** `background blue`",
+            "solution": "background blue"
+        },
+        {
+            "hint": "Congfigura el color a verde para hacer el césped. **escribe** `color green`.",
+            "solution": "color green"
+        },
+        {
+            "hint": "Mueve el cursor al lugar adecuado con `moveTo 0, 350`",
+            "solution": "moveTo 0, 350"
+        },
+        {
+            "hint": "Cubre la parte de abajo del lienzo con césped. Dibuja un rectángulo usando `rectangle` Hazlo de  `500` por `150`.",
+            "solution": "rectangle 500, 150"
+        },
+        {
+            "hint": "Dale a tu mesa patas sólidas para sostenerla. Configura el `color` a marrón uslando la palabra inglesa `brown`",
+            "solution": "color brown"
+        },
+        {
+            "hint": "Mueve el cursor hacia donde ubicaremos la primera pata. **Escribe** `moveTo 20, 310`",
+            "solution": "moveTo 20, 310"
+        },
+        {
+            "hint": "Ahora dibuja la primera pata. **Escribe** `rectangle 15, 150`.",
+            "solution": "rectangle 15, 150"
+        },
+        {
+            "hint": "Ahora la segunda pata  **Escribe** `moveTo 465, 310`.",
+            "solution": "moveTo 465, 310"
+        },
+        {
+            "hint": "Ahora dibuja la segunda pata. **Escribe** `rectangle 15, 150`.",
+            "solution": "rectangle 15, 150"
+        },
+        {
+            "hint": "Y la tercera. **Escribe** `moveTo 40, 250`.",
+            "solution": "moveTo 40, 250"
+        },
+        {
+            "hint": "Ahora dibuja la tercera pata idéntica a las anteriores",
+            "solution": "rectangle 15, 150"
+        },
+        {
+            "hint": "Finalmente, la cuarta pata. **Escribe** `moveTo 445, 250`.",
+            "solution": "moveTo 445, 250"
+        },
+        {
+            "hint": "Ahora dibuja la cuarta pata",
+            "solution": "rectangle 15, 150"
+        },
+        {
+            "hint": "¡Ahora a poner la mesa! Configura el `color` de la mesa a verde oscuro usando el equivalente inglés `darkgreen`.",
+            "solution": "color darkgreen"
+        },
+        {
+            "hint": "Muévete para ubicar la mesa. **Escribe** `moveTo 10, 300`.",
+            "solution": "moveTo 10, 300"
+        },
+        {
+            "hint": "Tu mesa tiene perspectiva, para dibujarla usa la función `polygon 30, -60, 450, -60, 480, 0`",
+            "solution": "polygon 30, -60, 450, -60, 480, 0"
+        },
+        {
+            "hint": "Para un efecto 3D, aclara el color de dibujo con `color lighten darkgreen, 10`",
+            "solution": "color lighten darkgreen, 10"
+        },
+        {
+            "hint": "**Dibuja** el lado de la mesa con `rectangle 480, 10`",
+            "solution": "rectangle 480, 10"
+        },
+        {
+            "hint": "Para la red, configura el `color` a blanco o `white`",
+            "solution": "color white"
+        },
+        {
+            "hint": "Mueve el cursor a `moveTo 248, 220`",
+            "solution": "moveTo 248, 220"
+        },
+        {
+            "hint": "Dibuja la red, usa la función `rectangle` de un tamaño de `4` por `80`",
+            "solution": "rectangle 4, 80"
+        },
+        {
+            "hint": "¡Necesitamos una pelota saltarina! Usa la función aleatoria (random) para elegir al alzar de qué lado de la mesa estará la pelota. **Escribe** `x = random 40, 460`.",
+            "solution": "x = random 40, 460"
+        },
+        {
+            "hint": "¡Ahora usaremos la función random otra vez para decidir cuán alto estará la pelota! **Escribe** `y = random 150, 250`.",
+            "solution": "y = random 150, 250"
+        },
+        {
+            "hint": "Mueve el cursor a las variables de X e Y que acabas de crear. **Escribe** `moveTo x, y`.",
+            "solution": "moveTo x, y"
+        },
+        {
+            "hint": "Finalmente, dibuja tu pelota con un círculo de un radio de 7. **Escribe** `circle 7`.",
+            "solution": "circle 7"
+        }
+    ]
+}

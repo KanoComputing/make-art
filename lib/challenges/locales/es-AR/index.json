@@ -2,8 +2,8 @@
     "worlds": [
         {
             "id": "basic",
-            "name": "Basic",
-            "description": "This is a first set of challenges which will make you started with Make-Art",
+            "name": "Básico",
+            "description": "Este es un primer conjunto de desafíos que te introducirá a Hacer-Arte",
             "cover": "world_covers/basic",
             "world_path": "worlds/basic",
             "css_class": "basic-challenges",
@@ -13,14 +13,55 @@
         },
         {
             "id": "medium",
-            "name": "Medium",
-            "description": "Medium challenges",
+            "name": "Medio",
+            "description": "Desafíos de nivel medio",
             "cover": "world_covers/medium",
             "world_path": "worlds/medium",
             "css_class": "medium",
             "dependency": ["basic"],
             "share_strategy": "optional",
             "type": "normal"
+        },
+        {
+            "id": "pixelhack",
+            "name": "Pixel Hack",
+            "description": "Este es un grupo de desafíos para la hora de programación",
+            "cover": "world_covers/pixelhack",
+            "world_path": "worlds/pixelhack",
+            "css_class": "pixelhack",
+            "type": "campaign",
+            "certificate_after": 2,
+            "teachers_guide": "/guides/PixelHackEducatorGuide.zip",
+            "share_strategy": "optional",
+            "socialText": {
+                "email": "¡Hackea tu propio camino a lo largo de la historia de los videojuegos con Pixel Hack desde Kano!",
+                "facebook": "¡Hackea tu propio camino a lo largo de la historia de los videojuegos con #PixelHack desde Kano!",
+                "twitter": "¡Hackea tu propio camino a lo largo de la historia de los videojuegos con #PixelHack desde @TeamKano! \nhttp://art.kano.me/challenges/pixelhack/"
+            }
+        },
+        {
+            "id": "summercamp",
+            "name": "Campamento de verano",
+            "description": "Este es un primer conjunto de desafíos que te introducirá a Hacer-Arte",
+            "cover": "world_covers/summercamp",
+            "world_path": "worlds/summercamp",
+            "css_class": "_summercamp",
+            "dependency": ["medium"],
+            "share_strategy": "optional",
+            "type": "campaign"
+
+        },
+        {
+            "id": "mischiefweek2015",
+            "name": "Semana de travesuras",
+            "description": "Este es un mundo dedicado a Halloween",
+            "cover": "world_covers/mischiefweek",
+            "world_path": "worlds/mischiefweek2015",
+            "start_date": "2015-10-26T06:00:00",
+            "css_class": "mischiefweek2015",
+            "type": "campaign",
+            "share_strategy": "optional",
+            "sales_popup_after": 2
         }
     ]
 }
