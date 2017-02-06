@@ -6,23 +6,23 @@
     "startAt": 2,
     "steps": [
         {
-            "hint": "Ahora vamos por algo un poco más desafiante. Podemos hacer del fondo un color sólido **escribiendo** `background red`.",
+            "hint": "Bueno, es hora de probar algo un poco más desafiante. Podemos hacer del fondo un color sólido. Fondo en inglés se dice background. **Escribe** `background red`.",
             "solution": "background red"
         },
         {
-            "hint": "Vamos a dibujar líneas, necesitamos ajustar un lindo trazo grueso. **Escribe** `stroke 66`",
+            "hint": "Vamos a dibujar líneas, necesitamos configurar un lindo trazo grueso. Cada vez que lo hagamos vamos a usar la palabra en inglés stroke. **Escribe** `stroke 66`",
             "solution": "stroke 66"
         },
         {
-            "hint": "Ahora ajustemos el color del trazo a blanco - en la tercera línea **escribe** `stroke white`",
+            "hint": "Ahora configuremos el color del trazo a blanco. Vamos a necesitar la palabra ingelsa para blanco que es white. En la tercera línea **escribe** `stroke white`",
             "solution": "stroke white"
         },
         {
-            "hint": "Dibujemos nuestra primera línea. Ya decidimos que será blanca y que tendrá 66 píxeles de ancho. Vamos a dibujar una línea de 100 de largo **escribiendo** `line 100`.",
-            "solution": "line 100"
+            "hint": "Dibujemos nuestra primera línea. Ya decidimos que será blanca y que tendrá 66 píxeles de ancho. Vamos a dibujar una línea de 100 de largo con la ayuda de otra palabra en inglés: line: **escribiendo** `line 100`.",
+            "solution": "line 100" 
         },
         {
-            "hint": "Qué línea corta y rechoncha. Necesita una amiga. También vamos a hacerla de 100 píxeles de largo pero ahora en la dirección opuesta. **Escribe** `line -100`.",
+            "hint": "Qué línea corta y gruesa. Necesita una amiga. También vamos a hacerla de 100 píxeles de largo pero ahora en la dirección opuesta. **Escribe** `line -100`.",
             "solution": "line -100"
         },
         {
@@ -30,7 +30,7 @@
             "solution": "line 0, 100"
         },
         {
-            "hint": "¡La línea va hacia abajo! Para que vaya hacia arriba necesitamos escribir **escribe** `line 0, -100`.",
+            "hint": "¡La línea va hacia abajo! Para que vaya hacia arriba tenemos que escribir **escribe** `line 0, -100`.",
             "solution": "line 0, -100"
         }
     ],

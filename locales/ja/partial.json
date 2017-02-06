@@ -29,5 +29,7 @@
     "share_on_twitter": "Twitterで共有する",
     "email_address": "メールアドレス",
     "share_with_friends": "友達と共有する：",
-    "skip_sharing": "共有しない"
+    "skip_sharing": "共有しない",
+    "start":"Start",
+    "draw_with_code":"Draw With Code"
 }

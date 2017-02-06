@@ -1,20 +1,20 @@
 {
     "id": "planet",
     "title": "Pintor de planetas",
-    "description": "Â¡Programa tu propio planeta!",
+    "description": "¡Programa tu propio planeta!",
     "startAt": 2,
     "steps": [
         {
-            "hint": "Configura el fondo con un cÃ³digo hexadecimal- **escribe** `background '#444444'`",
+            "hint": "Configura el fondo con un código hexadecimal- **escribe** `background '#444444'`",
             "solution": "background '#444444'",
             "validate": "background '\\#444444'"
         },
         {
-            "hint": "Configura el trazo a 0, para evitar dibujar lÃ­neas",
+            "hint": "Configura el trazo a 0, para evitar dibujar líneas",
             "solution": "stroke 0"
         },
         {
-            "hint": "Configura el color de dibujo a amarillo",
+            "hint": "Configura el color a amarillo",
             "solution": "color yellow"
         },
         {
@@ -22,32 +22,32 @@
             "solution": "for i in [ 0..32 ]"
         },
         {
-            "hint": "Ahora para configurar dÃ³nde irÃ¡ cada estrella -  **escribe** `moveTo (random 1, 500), (random 1, 500)`",
+            "hint": "Ahora para configurar dónde irá cada estrella -  **escribe** `moveTo (random 1, 500), (random 1, 500)`",
             "solution": "    moveTo (random 1, 500), (random 1, 500)",
             "validate": "    moveTo ( *random +1,500 *),( *random +1,500 *)"
         },
         {
-            "hint": "Dibuja un cÃ­rculo de un tamaÃ±o de 5 para las estrellas, se repetirÃ¡n",
+            "hint": "Dibuja un círculo de un tamaño de 5 para las estrellas, se repetirán",
             "solution": "    circle 5"
         },
         {
-            "hint": "Ahora para dibujar el planeta asegÃºrate de estar fuera del ciclo y **escribe** `color purple`",
+            "hint": "Ahora para dibujar el planeta asegúrate de estar fuera del ciclo (es decir, sin sangría de línea) y **escribe** `color purple`",
             "solution": "color purple"
         },
         {
-            "hint": "Ahora muÃ©vete `moveTo 250, 250`",
+            "hint": "Ahora muévete `moveTo 250, 250`",
             "solution": "moveTo 250, 250"
         },
         {
-            "hint": "Ahora dibuja un cÃ­rculo de 170 de tamaÃ±o",
+            "hint": "Ahora dibuja un círculo de 170 de tamaño",
             "solution": "circle 170"
         },
         {
-            "hint": "Configura el color de dibujo a blanco",
+            "hint": "Configura el color a blanco",
             "solution": "color white"
         },
         {
-            "hint": "Elige un trazo fino y blanco - en una nueva lÃ­nea, **escribe** `stroke white, 5`",
+            "hint": "Elige un trazo grueso y blanco - en una nueva línea, **escribe** `stroke white, 5`",
             "solution": "stroke white, 5"
         },
         {
@@ -55,6 +55,6 @@
             "solution": "ellipse 220, 4"
         }
     ],
-    "completion_text": "Â¡Estupendo! Â¡Cambia los colores y fÃ­jate quÃ© puedes agregar para hacerlo mÃ¡s atractivo antes de compartirlo!",
+    "completion_text": "¡Estupendo! ¡Cambia los colores y fíjate qué puedes agregar para hacerlo más atractivo antes de compartirlo!",
     "cover": "planet.png"
 }
