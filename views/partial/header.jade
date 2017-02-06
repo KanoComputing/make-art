@@ -21,7 +21,7 @@ header: .main-navigation.page-width(ng-if='offline || !selectedWorld || !selecte
             i.icon-cpu
             | ${{ partial.discover_kano }}$
 
-        li(ng-if='!offline && !loggedIn'): a(href='#', ng-click='auth.openModal()')
+        li(ng-if='!offline && !loggedIn'): a(href='', ng-click='auth.openModal()')
             i.icon-login
             | ${{ partial.login }}$
 
@@ -31,7 +31,7 @@ header: .main-navigation.page-width(ng-if='offline || !selectedWorld || !selecte
                 .avatar: img(ng-src='{{ user.avatar.urls.circle || cfg.DEFAULT_AVATAR }}')
                 | {{ user.username }}
 
-        li(ng-if='!offline && loggedIn'): a(href='#', ng-click='logout()')
+        li(ng-if='!offline && loggedIn'): a(href='', ng-click='logout()')
             i.icon-logout
             | ${{ partial.logout }}$
 

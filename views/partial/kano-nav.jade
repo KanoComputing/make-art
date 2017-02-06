@@ -12,7 +12,7 @@
                 | ${{ challenges.playground }}$
 
         ul.nav.nav-right(ng-cloak slot='right')
-            li(ng-if='!offline && !loggedIn'): a(href='#', ng-click='auth.openModal()')
+            li(ng-if='!offline && !loggedIn'): a(href='', ng-click='auth.openModal()')
                 i.icon-login
                 | ${{ partial.login }}$
 
@@ -22,7 +22,7 @@
                     .username
                         | {{ user.username }}
 
-            li(ng-if='!offline && loggedIn'): a(href='#', ng-click='logout()')
+            li(ng-if='!offline && loggedIn'): a(href='', ng-click='logout()')
                 i.icon-logout
                 | ${{ partial.logout }}$
 
