@@ -16,7 +16,7 @@
                 i.icon-login
                 | ${{ partial.login }}$
 
-            li(ng-if='!offline && !loggedIn'): a.signup(href='#', ng-click='auth.openModal("signup")')
+            li(ng-if='!offline && !loggedIn'): a.signup(href='', ng-click='auth.openModal("signup")')
                 | ${{ partial.signup }}$
 
             li(ng-if='!offline && loggedIn')
