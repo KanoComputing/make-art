@@ -27,6 +27,7 @@
     "enter_an_email_address": "Ingresa un correo electrónico",
     "your_name": "Tu nombre...",
     "login": "Ingresar",
+    "signup": "Regístrate",
     "back_to_world": "'Atrás' + selectedWorld.name",
     "thank_you": "¡Gracias!",
     "start":"Comienza",
