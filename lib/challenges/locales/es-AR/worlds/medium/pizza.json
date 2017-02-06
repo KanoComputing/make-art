@@ -1,7 +1,7 @@
 {
     "id": "pizza",
     "title": "Pizza",
-    "description": "Â¡Programa una rica pizza!",
+    "description": "¡Programa una rica pizza!",
     "startAt": 2,
     "steps": [
         {
@@ -9,23 +9,23 @@
             "solution": "stroke beige"
         },
         {
-            "hint": "Configura el trazo a 50",
+            "hint": "Configura el tamaño del trazo a 50",
             "solution": "stroke 50"
         },
         {
-            "hint": "Configura el color de dibujo a rojo",
+            "hint": "Configura el color a rojo",
             "solution": "color red"
         },
         {
-            "hint": "Dibuja un cÃ­rculo de 200 de tamaÃ±o",
+            "hint": "Dibuja un círculo de 200 de tamaño",
             "solution": "circle 200"
         },
         {
-            "hint": "Â¡Se ve sabrosa! Configura el trazo otra vez a 0",
+            "hint": "¡Se ve sabrosa! Configura el trazo otra vez a 0",
             "solution": "stroke 0"
         },
         {
-            "hint": "CÃºbrela con un rico queso amarillo en forma de cÃ­rculo, de un tamaÃ±o de 195",
+            "hint": "Cúbrela con un rico queso amarillo en forma de círculo, de un tamaño de 195",
             "solution": "color yellow\ncircle 195",
             "validate": [
                 "color yellow",
@@ -33,18 +33,18 @@
             ]
         },
         {
-            "hint": "No es una pizza si no lleva condimentos - configura el color de dibujo a rojo oscuro",
+            "hint": "No es una pizza si no lleva ingredientes salpicadas por encima - configura el color de dibujo a rojo oscuro",
             "solution": "color darkred"
         },
         {
-            "hint": "Ahora muÃ©vete `moveTo 164, 290`",
+            "hint": "Ahora muévete `moveTo 164, 290`",
             "solution": "moveTo 164, 290"
         },
         {
-            "hint": "Bien, ahora dibuja un cÃ­rculo de 20 de tamaÃ±o",
+            "hint": "Bien, ahora dibuja un círculo de 20 de tamaño",
             "solution": "circle 20"
         }
     ],
-    "completion_text": "Â¡QuÃ© rico! TermÃ­nala agregando condimentos Â¡deja fluir tu imaginaciÃ³n antes de compartirla con el mundo!",
+    "completion_text": "¡Qué rico! Termínala agregando más ingedientes, ¡deja fluir tu imaginación antes de compartirla al mundo!",
     "cover": "pizza.png"
 }

@@ -1,19 +1,19 @@
 {
     "id": "random",
-    "title": "Â¡Aleatorio!",
-    "description": "Â¿No estÃ¡s seguro de dÃ³nde ubicar algo? - Â¡hay una funciÃ³n para eso!",
+    "title": "¡Aleatorio!",
+    "description": "¿No estás seguro de dónde ubicar algo? - ¡hay una función para eso!",
     "startAt": 2,
     "steps": [
         {
-            "hint": "Movamos el cursor a cualquier sitio - **escribe** `moveTo (random 1, 500), (random 1, 500)`",
+            "hint": "Mueve el cursor a cualquier sitio - **escribe** `moveTo (random 1, 500), (random 1, 500)`",
             "solution": "moveTo (random 1, 500), (random 1, 500)"
         },
         {
-            "hint": "Configura el color de dibujo a rojo - **escribe** `color red`",
+            "hint": "Configura el color a rojo, en inglés es red - **escribe** `color red`",
             "solution": "color red"
         },
         {
-            "hint": "Ahora dibujemos un cÃ­rculo en algÃºn sitio aleatorio - **type** `circle 200`",
+            "hint": "Ahora dibujemos un círculo en algún sitio aleatorio - **escribe** `circle 200`",
             "solution": "circle 200"
         },
         {
@@ -21,7 +21,7 @@
             "solution": "color green"
         },
         {
-            "hint": "Ahora dibuja un cÃ­rculo de 150 de tamaÃ±o",
+            "hint": "Ahora dibuja un círculo de 150 de tamaño usando circle",
             "solution": "circle 150"
         },
         {
@@ -29,7 +29,7 @@
             "solution": "color yellow"
         },
         {
-            "hint": "Ahora dibuja un cÃ­rculo de 100 de tamaÃ±o",
+            "hint": "Ahora dibuja un círculo de 100 de tamaño",
             "solution": "circle 100"
         },
         {
@@ -37,10 +37,10 @@
             "solution": "color blue"
         },
         {
-            "hint": "TermÃ­nalo dibujando un cÃ­rculo de 50 de tamaÃ±o",
+            "hint": "Termínalo dibujando un círculo de 50 de tamaño",
             "solution": "circle 50"
         }
     ],
-    "completion_text": "La funciÃ³n aleatoria nos asigna un nÃºmero para ubicar objetos en cualquier punto de la hoja.",
+    "completion_text": "La función aleatoria nos asigna un número para ubicar objetos en un punto aleatorio del lienzo.",
     "cover": "random.png"
 }
