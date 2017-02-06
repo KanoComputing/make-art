@@ -12,9 +12,12 @@
                 | ${{ challenges.playground }}$
 
         ul.nav.nav-right(ng-cloak slot='right')
-            li(ng-if='!offline && !loggedIn'): a(href='', ng-click='auth.openModal()')
+            li(ng-if='!offline && !loggedIn'): a(href='', ng-click='auth.openModal("login")')
                 i.icon-login
                 | ${{ partial.login }}$
+
+            li(ng-if='!offline && !loggedIn'): a.signup(href='', ng-click='auth.openModal("signup")')
+                | ${{ partial.signup }}$
 
             li(ng-if='!offline && loggedIn')
                 a.user-display(ng-href='http://world.kano.me/users/{{ user.username }}', target='_blank')
