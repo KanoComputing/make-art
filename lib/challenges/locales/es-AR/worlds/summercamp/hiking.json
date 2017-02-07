@@ -3,9 +3,9 @@
     "title": "Cartel de Excursionismo",
     "short_title": "Excursionismo",
     "icon_class": "challenge_hiking",
-    "description": "La hermosa sierra de Camp Kano es conocida por su profundo color azul. Sin embargo las 10 montañas de la sierra parecen estar cambiando de posición todo el tiempo lo que hace difícil escalarlas. ¿Deberían los acampantes intentar escalar? ¡Quién sabe! Pero la dirección del campamento quiere un cartel promocionando la actividad.",
+    "description": "La hermosa sierra de Camp Kano es conocida por su profundo color azul. Sin embargo las 10 montaÃ±as de la sierra parecen estar cambiando de posiciÃ³n todo el tiempo lo que hace difÃ­cil escalarlas. Â¿DeberÃ­an los acampantes intentar escalar? Â¡QuiÃ©n sabe! Pero la direcciÃ³n del campamento quiere un cartel promocionando la actividad.",
     "cover": "summercamp/day_18.png",
-    "completion_text": "¡Bien hecho, has diseñado un increíble cartel publicitario! Ahora juega con los valores aleatorios y el texto. ¿Le falta otra cosa más a este cartel?",
+    "completion_text": "Â¡Bien hecho, has diseÃ±ado un increÃ­ble cartel publicitario! Ahora juega con los valores aleatorios y el texto. Â¿Le falta otra cosa mÃ¡s a este cartel?",
     "difficulty": 1,
     "startAt": 0,
     "summerCamp": true,
@@ -16,23 +16,23 @@
             "solution": "background blue"
         },
         {
-            "hint": "Las montañas de Camp Kano son de un color azul oscuro. Configura el color usando `color darkblue`.",
+            "hint": "Las montaÃ±as de Camp Kano son de un color azul oscuro. Configura el color usando `color darkblue`.",
             "solution": "color darkblue"
         },
         {
-            "hint": "Las montañas tienen un bonito borde grueso, configúralo con `stroke white, 10`",
+            "hint": "Las montaÃ±as tienen un bonito borde grueso, configÃºralo con `stroke white, 10`",
             "solution": "stroke white, 10"
         },
         {
-            "hint": "Vamos a dibujar las diez montañas de Camp Kano utilizando un ciclo. Esto será más rápido que dibujarlas una por una. **Escribe** `for i in [ 0 ... 10 ]` para abrir el ciclo.",
+            "hint": "Vamos a dibujar las diez montaÃ±as de Camp Kano utilizando un ciclo. Esto serÃ¡ mÃ¡s rÃ¡pido que dibujarlas una por una. **Escribe** `for i in [ 0 ... 10 ]` para abrir el ciclo.",
             "solution": "for i in [ 0 ... 10 ]"
         },
         {
-            "hint": "Por cada vez que se ejecuta el ciclo, queremos que se dibuje el pico de una montaña aleatoriamente a través de la pantalla. Vamos a seleccionar un valor para X en un rango usando `x = random 0, 500`",
+            "hint": "Por cada vez que se ejecuta el ciclo, queremos que se dibuje el pico de una montaÃ±a aleatoriamente a travÃ©s de la pantalla. Vamos a seleccionar un valor para X en un rango usando `x = random 0, 500`",
             "solution": "    x = random 0, 500"
         },
         {
-            "hint": "Sin embargo, para el valor de Y, queremos que cada pico de montaña sea dibujado en la parte alta de la pantalla. **Escribe** `y = random 0, 200`",
+            "hint": "Sin embargo, para el valor de Y, queremos que cada pico de montaÃ±a sea dibujado en la parte alta de la pantalla. **Escribe** `y = random 0, 200`",
             "solution": "    y = random 0, 200"
         },
         {
@@ -40,7 +40,7 @@
             "solution": "    moveTo x, y"
         },
         {
-            "hint": "Dibuja una montaña para cada ciclo usando la función polygon. **Escribe** `polygon 400, 500, -400, 500`",
+            "hint": "Dibuja una montaÃ±a para cada ciclo usando la funciÃ³n polygon. **Escribe** `polygon 400, 500, -400, 500`",
             "solution": "    polygon 400, 500, -400, 500"
         },
         {
@@ -48,19 +48,19 @@
             "solution": "stroke 0"
         },
         {
-            "hint": "Las nubes están hechas de gotitas de agua y es fácil ver a través de ellas. Para poder darle al color un efecto de transparencia podemos usar la función 'opacity'. **Escribe** `color (opacity white, .1)`",
+            "hint": "Las nubes estÃ¡n hechas de gotitas de agua y es fÃ¡cil ver a travÃ©s de ellas. Para poder darle al color un efecto de transparencia podemos usar la funciÃ³n 'opacity'. **Escribe** `color (opacity white, .1)`",
             "solution": "color (opacity white, .1)"
         },
         {
-            "hint": "Ahora abramos un nuevo ciclo para dibujar las nubes algodonadas, necesitaremos usar muchos círculos por eso pidámosle al ciclo que los repita unas 250 veces. **Escribe** `for j in [ 0 ... 250 ]`.",
+            "hint": "Ahora abramos un nuevo ciclo para dibujar las nubes algodonadas, necesitaremos usar muchos cÃ­rculos por eso pidÃ¡mosle al ciclo que los repita unas 250 veces. **Escribe** `for j in [ 0 ... 250 ]`.",
             "solution": "for j in [ 0 ... 250 ]"
         },
         {
-            "hint": "Queremos círculos de nubes salpicados aleatoriamente alrededor de la pantalla, elijamos un rango para X entre 0 y 500 usando `x = random 0, 500`",
+            "hint": "Queremos cÃ­rculos de nubes salpicados aleatoriamente alrededor de la pantalla, elijamos un rango para X entre 0 y 500 usando `x = random 0, 500`",
             "solution": "    x = random 0, 500"
         },
         {
-            "hint": "Sin embargo, para el valor de Y, queremos que sean dibujadas únicamente en la parte de abajo de la pantalla. **Escribe** `y = random 300, 500`",
+            "hint": "Sin embargo, para el valor de Y, queremos que sean dibujadas Ãºnicamente en la parte de abajo de la pantalla. **Escribe** `y = random 300, 500`",
             "solution": "    y = random 300, 500"
         },
         {
@@ -68,7 +68,7 @@
             "solution": "    moveTo x, y"
         },
         {
-            "hint": "Dibujemos las nubes con círculos salpicados por la pantalla usando `circle`, hazlos de un tamaño de `100`",
+            "hint": "Dibujemos las nubes con cÃ­rculos salpicados por la pantalla usando `circle`, hazlos de un tamaÃ±o de `100`",
             "solution": "    circle 100"
         },
         {
@@ -84,19 +84,19 @@
             "solution": "bold true"
         },
         {
-            "hint": "También queremos que el texto esté en cursiva, hazlo con `italic true`",
+            "hint": "TambiÃ©n queremos que el texto estÃ© en cursiva, hazlo con `italic true`",
             "solution": "italic true"
         },
         {
-            "hint": "Finalmente configuremos el estilo de fuente a Bariol y de un tamaño de 40 usando `font 'Bariol', 40`",
+            "hint": "Finalmente configuremos el estilo de fuente a Bariol y de un tamaÃ±o de 40 usando `font 'Bariol', 40`",
             "solution": "font 'Bariol', 40"
         },
         {
-            "hint": "Ingresa el texto con `text 'Excursión a las montañas de'`",
-            "solution": "text 'Excursión a las montañas de'"
+            "hint": "Ingresa el texto con `text 'ExcursiÃ³n a las montaÃ±as de'`",
+            "solution": "text 'ExcursiÃ³n a las montaÃ±as de'"
         },
         {
-            "hint": "Ahora, queremos una nueva línea para el gran final **escribe** `font 90`",
+            "hint": "Ahora, queremos una nueva lÃ­nea para el gran final **escribe** `font 90`",
             "solution": "font 90"
         },
         {

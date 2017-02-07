@@ -1,7 +1,7 @@
 {
     "id": "dots",
-    "title": "Patrón de Puntos",
-    "description": "¡Crea un patrón de puntos usando ciclos y círculos!",
+    "title": "PatrÃ³n de Puntos",
+    "description": "Â¡Crea un patrÃ³n de puntos usando ciclos y cÃ­rculos!",
     "code": "",
     "startAt": 1,
     "steps": [
@@ -26,7 +26,7 @@
             "solution": "    for y in [ 0..25 ]"
         },
         {
-            "hint": "Muévete, **escribe** `moveTo x * 20, y * 20`",
+            "hint": "MuÃ©vete, **escribe** `moveTo x * 20, y * 20`",
             "solution": "        moveTo x * 20, y * 20",
             "validate": "        moveTo x *\\* *20,y *\\* *20"
         },
@@ -35,6 +35,6 @@
             "solution": "        circle 6"
         }
     ],
-    "completion_text": "¡Es matemático! Cambia los números y fíjate lo que sucede.",
+    "completion_text": "Â¡Es matemÃ¡tico! Cambia los nÃºmeros y fÃ­jate lo que sucede.",
     "cover": "dots.png"
 }
