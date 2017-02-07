@@ -2,9 +2,9 @@
     "id": "campfire",
     "title": "Fogata",
     "short_title": "Fogata",
-    "description": "Es tiempo de iniciar una fogata. En el descampado, ésta podría ser tu única fuente de luz y calor. Ardiendo por encima de los 600 grados centígrados, ¡esto será seguro para mantener el calor y alimentarte también! Sobre la llama y con la ayuda de algún pinche puedes cocinar carne, vegetales y malvaviscos.  \nLas fogatas se arman con leños pero tú la harás programando y utilizando un cilco. A medida que tu fuego crece y se mezcla con el oxígeno, cambia de color entre los distintos tonos de naranja. Tus códigos de programación darán lugar a cientos de colores utilizando únicamente algunas líneas de comandos.",
+    "description": "Es tiempo de iniciar una fogata. En el descampado, Ã©sta podrÃ­a ser tu Ãºnica fuente de luz y calor. Ardiendo por encima de los 600 grados centÃ­grados, Â¡esto serÃ¡ seguro para mantener el calor y alimentarte tambiÃ©n! Sobre la llama y con la ayuda de algÃºn pinche puedes cocinar carne, vegetales y malvaviscos.  \nLas fogatas se arman con leÃ±os pero tÃº la harÃ¡s programando y utilizando un cilco. A medida que tu fuego crece y se mezcla con el oxÃ­geno, cambia de color entre los distintos tonos de naranja. Tus cÃ³digos de programaciÃ³n darÃ¡n lugar a cientos de colores utilizando Ãºnicamente algunas lÃ­neas de comandos.",
     "icon_class": "challenge_fire",
-    "completion_text": "¡Intenta agregar un cielo estrellado, más llamas de fuego o un aro de rocas alrededor de tu fogata para que sea más seguro cocinar algo!",
+    "completion_text": "Â¡Intenta agregar un cielo estrellado, mÃ¡s llamas de fuego o un aro de rocas alrededor de tu fogata para que sea mÃ¡s seguro cocinar algo!",
     "difficulty": 2,
     "cover": "summercamp/day_6.png",
     "startAt": 5,
@@ -14,11 +14,11 @@
     },
     "steps": [
         {
-            "hint": "Es una noche oscura. Configura el fondo usando `background` a azul oscuro o `darkblue` en inglés",
+            "hint": "Es una noche oscura. Configura el fondo usando `background` a azul oscuro o `darkblue` en inglÃ©s",
             "solution": "background darkblue"
         },
         {
-            "hint": "Configura el trazo a 0 para evitar dibujar líneas - **escribe** `stroke 0`",
+            "hint": "Configura el trazo a 0 para evitar dibujar lÃ­neas - **escribe** `stroke 0`",
             "solution": "stroke 0"
         },
         {
@@ -30,7 +30,7 @@
             "solution": "color darkgreen"
         },
         {
-            "hint": "Dibuja el césped usando un rectángulo - **escribe** `rectangle 500, 200`",
+            "hint": "Dibuja el cÃ©sped usando un rectÃ¡ngulo - **escribe** `rectangle 500, 200`",
             "solution": "rectangle 500, 200"
         },
         {
@@ -46,11 +46,11 @@
             "solution": "ellipse 200, 30"
         },
         {
-            "hint": "Necesitamos leños de madera para crear el fuego - **escribe** `moveTo 110, 390`",
+            "hint": "Necesitamos leÃ±os de madera para crear el fuego - **escribe** `moveTo 110, 390`",
             "solution": "moveTo 110, 390"
         },
         {
-            "hint": "Configura el trazo para los leños - **escribe** `stroke brown, 25`",
+            "hint": "Configura el trazo para los leÃ±os - **escribe** `stroke brown, 25`",
             "solution": "stroke brown, 25"
         },
         {
@@ -62,28 +62,28 @@
             "solution": "moveTo 420, 390"
         },
         {
-            "hint": "Dibuja el segundo leño - **escribe** `line -290, 30`",
+            "hint": "Dibuja el segundo leÃ±o - **escribe** `line -290, 30`",
             "solution": "line -290, 30"
         },
         {
-            "hint": "¡Excelente! Ahora estamos listos para encender el fuego - **escribe** `moveTo 180, 400`",
+            "hint": "Â¡Excelente! Ahora estamos listos para encender el fuego - **escribe** `moveTo 180, 400`",
             "solution": "moveTo 180, 400"
         },
         {
-            "hint": "Nuestro fuego estará formado por 150 líneas de color naranja - **escribe** `for i in [ 1 .. 150 ]`",
+            "hint": "Nuestro fuego estarÃ¡ formado por 150 lÃ­neas de color naranja - **escribe** `for i in [ 1 .. 150 ]`",
             "solution": "for i in [ 1 .. 150 ]"
         },
         {
-            "hint": "Configura el tamaño y el color de cada línea - **escribe** `stroke 'rgba(255, ' + (i + 50) + ', 0, 0.3)', 10`",
+            "hint": "Configura el tamaÃ±o y el color de cada lÃ­nea - **escribe** `stroke 'rgba(255, ' + (i + 50) + ', 0, 0.3)', 10`",
             "solution": "    stroke 'rgba(255, ' + (i + 50) + ', 0, 0.3)', 10",
             "validate": "__^    stroke 'rgba*\\(255, ' \\+ \\(i *\\+ *50\\) *\\+ *', *0, *0.3\\)', 10"
         },
         {
-            "hint": "Ahora dibuja la línea - **escribe** `line 150 - i`",
+            "hint": "Ahora dibuja la lÃ­nea - **escribe** `line 150 - i`",
             "solution": "    line 150 - i"
         },
         {
-            "hint": "Mueve el cursor para la siguiente línea - **escribe** `move 0.5, -2`",
+            "hint": "Mueve el cursor para la siguiente lÃ­nea - **escribe** `move 0.5, -2`",
             "solution": "    move 0.5, -2"
         }
     ]

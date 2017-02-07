@@ -13,11 +13,11 @@
             "solution": "stroke black, 20"
         },
         {
-            "hint": "Dibuja un círculo de un tamaño de 200. Recuerda, círculo en inglés es circle",
+            "hint": "Dibuja un cÃ­rculo de un tamaÃ±o de 200. Recuerda, cÃ­rculo en inglÃ©s es circle",
             "solution": "circle 200"
         },
         {
-            "hint": "Muévete 80 a la izquierda y 80 hacia arriba - **escribe** `move -80, -80`",
+            "hint": "MuÃ©vete 80 a la izquierda y 80 hacia arriba - **escribe** `move -80, -80`",
             "solution": "move -80, -80"
         },
         {
@@ -25,26 +25,26 @@
             "solution": "color black"
         },
         {
-            "hint": "Dibuja un círculo de un radio de 20",
+            "hint": "Dibuja un cÃ­rculo de un radio de 20",
             "solution": "circle 20"
         },
         {
-            "hint": "Muévete 160 a la derecha - **escribe** `move 160`",
+            "hint": "MuÃ©vete 160 a la derecha - **escribe** `move 160`",
             "solution": "move 160"
         },
         {
-            "hint": "Dibuja otro círculo de un tamaño de 20",
+            "hint": "Dibuja otro cÃ­rculo de un tamaÃ±o de 20",
             "solution": "circle 20"
         },
         {
-            "hint": "Muévete al centro y hacia abajo - En una nueva línea, **escribe** `moveTo 250, 270`",
+            "hint": "MuÃ©vete al centro y hacia abajo - En una nueva lÃ­nea, **escribe** `moveTo 250, 270`",
             "solution": "moveTo 250, 270"
         },
         {
-            "hint": "Un arco es la mitad de un círculo, y en inglés se dice arc. Podemos dibujarlo como si fuera la boca - **escribe** `arc 100, 1, 2`",
+            "hint": "Un arco es la mitad de un cÃ­rculo, y en inglÃ©s se dice arc. Podemos dibujarlo como si fuera la boca - **escribe** `arc 100, 1, 2`",
             "solution": "arc 100, 1, 2"
         }
     ],
-    "completion_text": "¡Bien! ¡Sigue trabajando de esta manera, genio dibujante de caras!",
+    "completion_text": "Â¡Bien! Â¡Sigue trabajando de esta manera, genio dibujante de caras!",
     "cover": "smiley.png"
 }

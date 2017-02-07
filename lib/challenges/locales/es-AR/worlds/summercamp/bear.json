@@ -2,10 +2,10 @@
     "id": "bear",
     "title": "Oso atrevido",
     "short_title": "Oso",
-    "description": "Los osos son muy inteligentes y incluso activan trampas para osos con rocas para poder comer el cebo de manera segura. Estos animales pueden correr a 64km/h, lo suficientemente r·pido como para atrapar a un caballo que corre. Ten en cuenta que la persona m·s r·pida del mundo es Usain Bolt °puede correr a 43km/h! Ya que los osos pueden caminar distancias cortas con sus patas traseras, los nativos de Estados Unidos los llaman ìlas bestias que caminan como humanos.î",
+    "description": "Los osos son muy inteligentes y incluso activan trampas para osos con rocas para poder comer el cebo de manera segura. Estos animales pueden correr a 64km/h, lo suficientemente r√°pido como para atrapar a un caballo que corre. Ten en cuenta que la persona m√°s r√°pida del mundo es Usain Bolt ¬°puede correr a 43km/h! Ya que los osos pueden caminar distancias cortas con sus patas traseras, los nativos de Estados Unidos los llaman ‚Äúlas bestias que caminan como humanos.‚Äù",
     "icon_class": "challenge_bear",
     "cover": "summercamp/day_11.png",
-    "completion_text": "Ese oso tan tierno necesita un cuerpo y un h·bitat. Usa tus habilidades de programaciÛn para impresionar a otros miembros del camping. Recuerda que los Ìconos de la izquierda pueden ayudarte a alcanzar lo que est·s pensando.",
+    "completion_text": "Ese oso tan tierno necesita un cuerpo y un h√°bitat. Usa tus habilidades de programaci√≥n para impresionar a otros miembros del camping. Recuerda que los √≠conos de la izquierda pueden ayudarte a alcanzar lo que est√°s pensando.",
     "difficulty": 1,
     "startAt": 0,
     "summerCamp": true,
@@ -16,15 +16,15 @@
             "solution": "background green"
         },
         {
-            "hint": "El pelaje de nuestro oso ser· marrÛn, empecemos por configurar el color - **escribe** `color brown`",
+            "hint": "El pelaje de nuestro oso ser√° marr√≥n, empecemos por configurar el color - **escribe** `color brown`",
             "solution": "color brown"
         },
         {
-            "hint": "Configura el trazo a 0 para evitar dibujar lÌneas - **escribe** `stroke 0`",
+            "hint": "Configura el trazo a 0 para evitar dibujar l√≠neas - **escribe** `stroke 0`",
             "solution": "stroke 0"
         },
         {
-            "hint": "Dibuja la cara con un cÌrculo - **escribe** `circle 100`",
+            "hint": "Dibuja la cara con un c√≠rculo - **escribe** `circle 100`",
             "solution": "circle 100"
         },
         {
@@ -32,7 +32,7 @@
             "solution": "move -80, -80"
         },
         {
-            "hint": "Dibuja la oreja en forma de cÌrculo usando `circle` hazla de un tamaÒo de `30`",
+            "hint": "Dibuja la oreja en forma de c√≠rculo usando `circle` hazla de un tama√±o de `30`",
             "solution": "circle 30"
         },
         {
@@ -44,11 +44,11 @@
             "solution": "circle 30"
         },
         {
-            "hint": "Ahora muÈvete hacia donde estar· el ojo izquierdo - **escribe** `move -110, 50`",
+            "hint": "Ahora mu√©vete hacia donde estar√° el ojo izquierdo - **escribe** `move -110, 50`",
             "solution": "move -110, 50"
         },
         {
-            "hint": "El resto de las partes de la cara ser·n negras por eso configura el `color` a negro o `black` en inglÈs.",
+            "hint": "El resto de las partes de la cara ser√°n negras por eso configura el `color` a negro o `black` en ingl√©s.",
             "solution": "color black"
         },
         {
@@ -56,19 +56,19 @@
             "solution": "circle 5"
         },
         {
-            "hint": "Ahora muÈvete hacia donde estar· el otro ojo - **escribe** `move 60`",
+            "hint": "Ahora mu√©vete hacia donde estar√° el otro ojo - **escribe** `move 60`",
             "solution": "move 60"
         },
         {
-            "hint": "Dibuja el ojo, idÈntico al anterior",
+            "hint": "Dibuja el ojo, id√©ntico al anterior",
             "solution": "circle 5"
         },
         {
-            "hint": "MuÈvete hacia el centro para dibujar lo m·s caracterÌstico de los osos- **escribe** `move -30, 50`",
+            "hint": "Mu√©vete hacia el centro para dibujar lo m√°s caracter√≠stico de los osos- **escribe** `move -30, 50`",
             "solution": "move -30, 50"
         },
         {
-            "hint": "Dibuja la nariz con un tri·ngulo usando la funciÛn polygon - **escribe** `polygon 12, -16, -12, -16`",
+            "hint": "Dibuja la nariz con un tri√°ngulo usando la funci√≥n polygon - **escribe** `polygon 12, -16, -12, -16`",
             "solution": "polygon 12, -16, -12, -16"
         },
         {
@@ -76,7 +76,7 @@
             "solution": "move 0, 20"
         },
         {
-            "hint": "Configura el trazo `stroke` a negro o `black` y de un tamaÒo de `3`",
+            "hint": "Configura el trazo `stroke` a negro o `black` y de un tama√±o de `3`",
             "solution": "stroke black, 3"
         },
         {
@@ -84,7 +84,7 @@
             "solution": "color null"
         },
         {
-            "hint": "Un arco es la mitad de un cÌrculo, nos sirve para representar una leve sonrisa - **escribe** `arc 15, 0.5, 2`",
+            "hint": "Un arco es la mitad de un c√≠rculo, nos sirve para representar una leve sonrisa - **escribe** `arc 15, 0.5, 2`",
             "solution": "arc 15, 0.5, 2"
         }
     ]

@@ -5,7 +5,7 @@
     "icon_class": "challenge_tennis",
     "description": "El Tenis de mesa se juega de a dos personas, una de cada lado de una mesa que refleja una miniatura de una cancha de tenis. Los games se juegan a 11 o 21 puntos y una vez finalizada la partida, el ganador tira su pala al piso y expulsa su grito de gloria.",
     "cover": "summercamp/day_16.png",
-    "completion_text": "¡Bien hecho! Hiciste una hermosa mesa de Ping Pong en 3D. ¡Pero no hay nadie jugando ni mirando la partida! Usa tu creatividad y los comandos para dibujar algunas personas disfrutando del juego.",
+    "completion_text": "Â¡Bien hecho! Hiciste una hermosa mesa de Ping Pong en 3D. Â¡Pero no hay nadie jugando ni mirando la partida! Usa tu creatividad y los comandos para dibujar algunas personas disfrutando del juego.",
     "difficulty": 2,
     "startAt": 0,
     "summerCamp": true,
@@ -18,11 +18,11 @@
             "solution": "stroke 0"
         },
         {
-            "hint": "¡Es un hermoso día soleado! Configura el color del fondo a azul - **escribe** `background blue`",
+            "hint": "Â¡Es un hermoso dÃ­a soleado! Configura el color del fondo a azul - **escribe** `background blue`",
             "solution": "background blue"
         },
         {
-            "hint": "Congfigura el color a verde para hacer el césped. **escribe** `color green`.",
+            "hint": "Congfigura el color a verde para hacer el cÃ©sped. **escribe** `color green`.",
             "solution": "color green"
         },
         {
@@ -30,11 +30,11 @@
             "solution": "moveTo 0, 350"
         },
         {
-            "hint": "Cubre la parte de abajo del lienzo con césped. Dibuja un rectángulo usando `rectangle` Hazlo de  `500` por `150`.",
+            "hint": "Cubre la parte de abajo del lienzo con cÃ©sped. Dibuja un rectÃ¡ngulo usando `rectangle` Hazlo de  `500` por `150`.",
             "solution": "rectangle 500, 150"
         },
         {
-            "hint": "Dale a tu mesa patas sólidas para sostenerla. Configura el `color` a marrón uslando la palabra inglesa `brown`",
+            "hint": "Dale a tu mesa patas sÃ³lidas para sostenerla. Configura el `color` a marrÃ³n uslando la palabra inglesa `brown`",
             "solution": "color brown"
         },
         {
@@ -58,7 +58,7 @@
             "solution": "moveTo 40, 250"
         },
         {
-            "hint": "Ahora dibuja la tercera pata idéntica a las anteriores",
+            "hint": "Ahora dibuja la tercera pata idÃ©ntica a las anteriores",
             "solution": "rectangle 15, 150"
         },
         {
@@ -70,15 +70,15 @@
             "solution": "rectangle 15, 150"
         },
         {
-            "hint": "¡Ahora a poner la mesa! Configura el `color` de la mesa a verde oscuro usando el equivalente inglés `darkgreen`.",
+            "hint": "Â¡Ahora a poner la mesa! Configura el `color` de la mesa a verde oscuro usando el equivalente inglÃ©s `darkgreen`.",
             "solution": "color darkgreen"
         },
         {
-            "hint": "Muévete para ubicar la mesa. **Escribe** `moveTo 10, 300`.",
+            "hint": "MuÃ©vete para ubicar la mesa. **Escribe** `moveTo 10, 300`.",
             "solution": "moveTo 10, 300"
         },
         {
-            "hint": "Tu mesa tiene perspectiva, para dibujarla usa la función `polygon 30, -60, 450, -60, 480, 0`",
+            "hint": "Tu mesa tiene perspectiva, para dibujarla usa la funciÃ³n `polygon 30, -60, 450, -60, 480, 0`",
             "solution": "polygon 30, -60, 450, -60, 480, 0"
         },
         {
@@ -98,15 +98,15 @@
             "solution": "moveTo 248, 220"
         },
         {
-            "hint": "Dibuja la red, usa la función `rectangle` de un tamaño de `4` por `80`",
+            "hint": "Dibuja la red, usa la funciÃ³n `rectangle` de un tamaÃ±o de `4` por `80`",
             "solution": "rectangle 4, 80"
         },
         {
-            "hint": "¡Necesitamos una pelota saltarina! Usa la función aleatoria (random) para elegir al alzar de qué lado de la mesa estará la pelota. **Escribe** `x = random 40, 460`.",
+            "hint": "Â¡Necesitamos una pelota saltarina! Usa la funciÃ³n aleatoria (random) para elegir al alzar de quÃ© lado de la mesa estarÃ¡ la pelota. **Escribe** `x = random 40, 460`.",
             "solution": "x = random 40, 460"
         },
         {
-            "hint": "¡Ahora usaremos la función random otra vez para decidir cuán alto estará la pelota! **Escribe** `y = random 150, 250`.",
+            "hint": "Â¡Ahora usaremos la funciÃ³n random otra vez para decidir cuÃ¡n alto estarÃ¡ la pelota! **Escribe** `y = random 150, 250`.",
             "solution": "y = random 150, 250"
         },
         {
@@ -114,7 +114,7 @@
             "solution": "moveTo x, y"
         },
         {
-            "hint": "Finalmente, dibuja tu pelota con un círculo de un radio de 7. **Escribe** `circle 7`.",
+            "hint": "Finalmente, dibuja tu pelota con un cÃ­rculo de un radio de 7. **Escribe** `circle 7`.",
             "solution": "circle 7"
         }
     ]

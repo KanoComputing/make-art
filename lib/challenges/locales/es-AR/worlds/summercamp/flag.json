@@ -2,9 +2,9 @@
     "id": "flag",
     "title": "Crea tu Bandera",
     "short_title": "Bandera",
-    "description": "Es tiempo de mostrar tus verdaderos colores. El camping va tomando forma, y como todo lÌder de campamento necesitas hacer tu propia bandera. Te llevamos a lo b·sico con una simple bandera y su m·stil, pero depende de ti personalizarla.  \nPuedes buscar inspiraciÛn en otras banderas. PaÌses como Francia, Nigeria, Suecia o Suiza tienen banderas con colores y diseÒos simples, mientras que EspaÒa, Brasil, Kenia y Arabia Saudita tienen diseÒos m·s complejos °Cuando hayas terminado comparte tu bandera para poder marcar tu territorio!",
+    "description": "Es tiempo de mostrar tus verdaderos colores. El camping va tomando forma, y como todo l√≠der de campamento necesitas hacer tu propia bandera. Te llevamos a lo b√°sico con una simple bandera y su m√°stil, pero depende de ti personalizarla.  \nPuedes buscar inspiraci√≥n en otras banderas. Pa√≠ses como Francia, Nigeria, Suecia o Suiza tienen banderas con colores y dise√±os simples, mientras que Espa√±a, Brasil, Kenia y Arabia Saudita tienen dise√±os m√°s complejos ¬°Cuando hayas terminado comparte tu bandera para poder marcar tu territorio!",
     "icon_class": "challenge_flag",
-    "completion_text": "Tienes un lienzo blanco esperando ser pintado, ˙salo sabiamente. °Crea la bandera m·s increÌble de todos los tiempos!",
+    "completion_text": "Tienes un lienzo blanco esperando ser pintado, √∫salo sabiamente. ¬°Crea la bandera m√°s incre√≠ble de todos los tiempos!",
     "cover": "summercamp/day_4.png",
     "difficulty": 1,
     "startAt": 3,
@@ -14,27 +14,27 @@
     },
     "steps": [
         {
-            "hint": "Dibuja el cielo en el que flamear· tu bandera - **escribe** `background blue`",
+            "hint": "Dibuja el cielo en el que flamear√° tu bandera - **escribe** `background blue`",
             "solution": "background blue"
         },
         {
-            "hint": "Configura el trazo a 0 para evitar dibujar lÌneas - **escribe** `stroke 0`",
+            "hint": "Configura el trazo a 0 para evitar dibujar l√≠neas - **escribe** `stroke 0`",
             "solution": "stroke 0"
         },
         {
-            "hint": "Vamos a mover el cursor hacia donde estar· el m·stil de nuestra bandera - **escribe** `moveTo 100, 100`",
+            "hint": "Vamos a mover el cursor hacia donde estar√° el m√°stil de nuestra bandera - **escribe** `moveTo 100, 100`",
             "solution": "moveTo 100, 100"
         },
         {
-            "hint": "Configura el `color` del m·stil a gris oscuro o `darkgray` en inglÈs",
+            "hint": "Configura el `color` del m√°stil a gris oscuro o `darkgray` en ingl√©s",
             "solution": "color darkgray"
         },
         {
-            "hint": "Dibuja un fino y largo m·stil con un rect·ngulo - **escribe** `rectangle 10, 400`",
+            "hint": "Dibuja un fino y largo m√°stil con un rect√°ngulo - **escribe** `rectangle 10, 400`",
             "solution": "rectangle 10, 400"
         },
         {
-            "hint": "Mueve el cursor a lo alto del m·stil para dibujarle un adorno - **escribe** `move 5`",
+            "hint": "Mueve el cursor a lo alto del m√°stil para dibujarle un adorno - **escribe** `move 5`",
             "solution": "move 5"
         },
         {
@@ -42,7 +42,7 @@
             "solution": "color gold"
         },
         {
-            "hint": "Dibuja un cÌrculo de un tamaÒo de 8 - en una nueva lÌnea **escribe** `circle 8`",
+            "hint": "Dibuja un c√≠rculo de un tama√±o de 8 - en una nueva l√≠nea **escribe** `circle 8`",
             "solution": "circle 8"
         },
         {
@@ -54,23 +54,23 @@
             "solution": "color white"
         },
         {
-            "hint": "Dibuja la bandera usando la funciÛn `rectangle` de un tamaÒo de `261` por `171`",
+            "hint": "Dibuja la bandera usando la funci√≥n `rectangle` de un tama√±o de `261` por `171`",
             "solution": "rectangle 261, 171"
         },
         {
-            "hint": "La bandera necesita una soga que la sostenga al m·stil - **escribe** `moveTo 100, 140`",
+            "hint": "La bandera necesita una soga que la sostenga al m√°stil - **escribe** `moveTo 100, 140`",
             "solution": "moveTo 100, 140"
         },
         {
-            "hint": "Configura el `color` de la soga a marrÛn o `brown`",
+            "hint": "Configura el `color` de la soga a marr√≥n o `brown`",
             "solution": "color brown"
         },
         {
-            "hint": "Dibuja la soga usando `rectangle` de un tamaÒo de `20` por `5` ",
+            "hint": "Dibuja la soga usando `rectangle` de un tama√±o de `20` por `5` ",
             "solution": "rectangle 20, 5"
         },
         {
-            "hint": "°Ahora es tu turno! Dale a tu bandera el toque final con tu propio diseÒo - **escribe** `moveTo 120, 125`",
+            "hint": "¬°Ahora es tu turno! Dale a tu bandera el toque final con tu propio dise√±o - **escribe** `moveTo 120, 125`",
             "solution": "moveTo 120, 125"
         }
     ]
