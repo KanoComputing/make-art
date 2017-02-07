@@ -1,11 +1,11 @@
 {
     "id": "colorfrenzy",
-    "title": "Frenesí de colores",
-    "description": "Utiliza un ciclo para dibujar un patrón en 8-bits.",
+    "title": "FrenesÃ­ de colores",
+    "description": "Utiliza un ciclo para dibujar un patrÃ³n en 8-bits.",
     "startAt": 2,
     "steps": [
         {
-            "hint": "Únicamente utilizaremos figuras sólidas sin trazo. Entonces **escribe** `stroke 0`.",
+            "hint": "Ãšnicamente utilizaremos figuras sÃ³lidas sin trazo. Entonces **escribe** `stroke 0`.",
             "solution": "stroke 0"
         },
         {
@@ -23,7 +23,7 @@
             "validate": "        color rotate red, x \\+ y \\* 10"
         },
         {
-            "hint": "Posiciónate utilizando `moveTo x * 25, y * 25`",
+            "hint": "PosiciÃ³nate utilizando `moveTo x * 25, y * 25`",
             "solution": "        moveTo x * 25, y * 25",
             "validate": "        moveTo x \\* 25, y \\* 25"
         },
@@ -33,7 +33,7 @@
             "validate": "        square 25"
         }
     ],
-    "completion_text": "¡Bien hecho! La función rotate, rota todos los colores creando el efecto de un arcoiris.",
+    "completion_text": "Â¡Bien hecho! La funciÃ³n rotate, rota todos los colores creando el efecto de un arcoiris.",
     "gallery": {
         "cover_path": "/assets/challenges/images/pixelremixes/",
         "remixes": [
@@ -43,5 +43,5 @@
         ]
     },
     "cover": "pixel-colorfrenzy.png",
-    "guide": "#### Lo que crearás\n1. Únicamente utilizaremos figuras sólidas sin trazo. Entonces **escribe** `stroke 0`.\n2. Para este dibujo usaremos dos ciclos. Uno para que se repita verticalmente y otro horizontalmente **Escribe** `for x in [ 0 .. 20 ]`\n3. Para el segundo ciclo **escribe** `for y in [ 0 .. 20 ]`\n4. Configura el color utilizando `color rotate red, x * 10`\n5. Posiciónate utilizando `moveTo x * 25, y * 25`\n6. Finalmente, agreguemos cuadrados. **Escribe** `square 25`\n\n#### Lo que hackearás\nComo estás viajando a través de los ejes X e Y, puedes obtener lindas combinaciones de colores. Usando la matemática, puedes hacer que el arcoiris se repita de manera interesante, y cambiar tu forma de dibujar usando la función aleatoria. Hay muchas variaciones posibles, ¡fíjate lo que puedes descubrir!\n\n#### Informe\nUtilizamos un sólo ciclo en los desafíos anteriores para reptir una única acción, esta vez estaremos utilizando dos. El primero recorrerá la cooredenada X y el segundo la coordenada Y. Al tener dos ciclos, podemos controlar el color en ambas direcciones (horizontal y vertical) y también dibujar cuadrados en esas direcciones ¡Nos permitirán llenar el fondo de puro color!\n"
+    "guide": "#### Lo que crearÃ¡s\n1. Ãšnicamente utilizaremos figuras sÃ³lidas sin trazo. Entonces **escribe** `stroke 0`.\n2. Para este dibujo usaremos dos ciclos. Uno para que se repita verticalmente y otro horizontalmente **Escribe** `for x in [ 0 .. 20 ]`\n3. Para el segundo ciclo **escribe** `for y in [ 0 .. 20 ]`\n4. Configura el color utilizando `color rotate red, x * 10`\n5. PosiciÃ³nate utilizando `moveTo x * 25, y * 25`\n6. Finalmente, agreguemos cuadrados. **Escribe** `square 25`\n\n#### Lo que hackearÃ¡s\nComo estÃ¡s viajando a travÃ©s de los ejes X e Y, puedes obtener lindas combinaciones de colores. Usando la matemÃ¡tica, puedes hacer que el arcoiris se repita de manera interesante, y cambiar tu forma de dibujar usando la funciÃ³n aleatoria. Hay muchas variaciones posibles, Â¡fÃ­jate lo que puedes descubrir!\n\n#### Informe\nUtilizamos un sÃ³lo ciclo en los desafÃ­os anteriores para reptir una Ãºnica acciÃ³n, esta vez estaremos utilizando dos. El primero recorrerÃ¡ la cooredenada X y el segundo la coordenada Y. Al tener dos ciclos, podemos controlar el color en ambas direcciones (horizontal y vertical) y tambiÃ©n dibujar cuadrados en esas direcciones Â¡Nos permitirÃ¡n llenar el fondo de puro color!\n"
 }

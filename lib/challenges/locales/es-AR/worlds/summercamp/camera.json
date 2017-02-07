@@ -1,11 +1,11 @@
 {
     "id": "camera",
-    "title": "¡Toma una fotografía!",
-    "short_title": "Cámara",
+    "title": "Â¡Toma una fotografÃ­a!",
+    "short_title": "CÃ¡mara",
     "icon_class": "challenge_camera",
-    "description": "Hacia 1820, las primeras cámaras tardaban algunas horas en capturar un simple momento. Con largas y molestas horas de exposición, fotografiar gente con una sonrisa en la cara resultaba imposible. ¿Por qué? Bueno, intenta sostener una linda sonrisa durante horas sin moverte y obtendrás la respuesta. Hoy en día, la cantidad de fotografías tomadas cada dos minutos es la misma cantidad de fotografías tomadas por la humanidad entera en el 1800",
+    "description": "Hacia 1820, las primeras cÃ¡maras tardaban algunas horas en capturar un simple momento. Con largas y molestas horas de exposiciÃ³n, fotografiar gente con una sonrisa en la cara resultaba imposible. Â¿Por quÃ©? Bueno, intenta sostener una linda sonrisa durante horas sin moverte y obtendrÃ¡s la respuesta. Hoy en dÃ­a, la cantidad de fotografÃ­as tomadas cada dos minutos es la misma cantidad de fotografÃ­as tomadas por la humanidad entera en el 1800",
     "cover": "summercamp/day_10.png",
-    "completion_text": "Intenta dibujarte a ti mismo tomando una fotografía detrás de esa bonita cámara. ¿Tal vez también puedas agregar la luz del flash?",
+    "completion_text": "Intenta dibujarte a ti mismo tomando una fotografÃ­a detrÃ¡s de esa bonita cÃ¡mara. Â¿Tal vez tambiÃ©n puedas agregar la luz del flash?",
     "difficulty": 1,
     "startAt": 0,
     "summerCamp": true,
@@ -22,15 +22,15 @@
             "solution": "stroke 0"
         },
         {
-            "hint": "Mueve el cursor para posicionar la cámara en el centro - **escribe** `moveTo 100, 150`",
+            "hint": "Mueve el cursor para posicionar la cÃ¡mara en el centro - **escribe** `moveTo 100, 150`",
             "solution": "moveTo 100, 150"
         },
         {
-            "hint": "Configura el `color` de la cámara a un tono de gris, `dimgray` en inglés",
+            "hint": "Configura el `color` de la cÃ¡mara a un tono de gris, `dimgray` en inglÃ©s",
             "solution": "color dimgray"
         },
         {
-            "hint": "Ahora dibuja el cuerpo de la cámara usando un rectángulo - **escribe** `rectangle 300, 200`",
+            "hint": "Ahora dibuja el cuerpo de la cÃ¡mara usando un rectÃ¡ngulo - **escribe** `rectangle 300, 200`",
             "solution": "rectangle 300, 200"
         },
         {
@@ -42,15 +42,15 @@
             "solution": "color lightblue"
         },
         {
-            "hint": "Configura el borde de la lente usando `stroke` a negro o `black` en inglés y de un tamaño de `10`",
+            "hint": "Configura el borde de la lente usando `stroke` a negro o `black` en inglÃ©s y de un tamaÃ±o de `10`",
             "solution": "stroke black, 10"
         },
         {
-            "hint": "La lente es un círculo, dibújala con `circle` y un tamaño de `50`",
+            "hint": "La lente es un cÃ­rculo, dibÃºjala con `circle` y un tamaÃ±o de `50`",
             "solution": "circle 50"
         },
         {
-            "hint": "Configura el `color` de la segunda mitad de la lente a gris claro o `lightgray` en inglés",
+            "hint": "Configura el `color` de la segunda mitad de la lente a gris claro o `lightgray` en inglÃ©s",
             "solution": "color lightgray"
         },
         {
@@ -58,11 +58,11 @@
             "solution": "arc 50, 2, 1"
         },
         {
-            "hint": "¡Esta cámara necesita un flash! Mueve el cursor para ubicarlo - **escribe** `move -30, -125`",
+            "hint": "Â¡Esta cÃ¡mara necesita un flash! Mueve el cursor para ubicarlo - **escribe** `move -30, -125`",
             "solution": "move -30, -125"
         },
         {
-            "hint": "Dibuja el flash con un rectángulo, recuerda que en inglés se dice `rectangle` - hazlo de un tamaño de `60` por `20`",
+            "hint": "Dibuja el flash con un rectÃ¡ngulo, recuerda que en inglÃ©s se dice `rectangle` - hazlo de un tamaÃ±o de `60` por `20`",
             "solution": "rectangle 60, 20"
         },
         {
@@ -74,23 +74,23 @@
             "solution": "color lightblue"
         },
         {
-            "hint": "Dibuja un polígono para el reflejo del flash - **escribe** `polygon 40, 0, 0, 20`",
+            "hint": "Dibuja un polÃ­gono para el reflejo del flash - **escribe** `polygon 40, 0, 0, 20`",
             "solution": "polygon 40, 0, 0, 20"
         },
         {
-            "hint": "Solamente nos queda hacer el botón para tomar la fotografía - **escribe** `move 100, 10`",
+            "hint": "Solamente nos queda hacer el botÃ³n para tomar la fotografÃ­a - **escribe** `move 100, 10`",
             "solution": "move 100, 10"
         },
         {
-            "hint": "Configura el `color` del botón a rojo o `red` en inglés.",
+            "hint": "Configura el `color` del botÃ³n a rojo o `red` en inglÃ©s.",
             "solution": "color red"
         },
         {
-            "hint": "Dibuja el botón con un rectángulo, usa `rectangle` y hazlo de un tamaño de `50` por `15`",
+            "hint": "Dibuja el botÃ³n con un rectÃ¡ngulo, usa `rectangle` y hazlo de un tamaÃ±o de `50` por `15`",
             "solution": "rectangle 50, 15"
         },
         {
-            "hint": "¡Un último detalle! Mueve el cursor - **escribe** `move 25, -20`",
+            "hint": "Â¡Un Ãºltimo detalle! Mueve el cursor - **escribe** `move 25, -20`",
             "solution": "move 25, -20"
         },
         {

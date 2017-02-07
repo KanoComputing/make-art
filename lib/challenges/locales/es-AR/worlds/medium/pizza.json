@@ -1,7 +1,7 @@
 {
     "id": "pizza",
     "title": "Pizza",
-    "description": "¡Programa una rica pizza!",
+    "description": "Â¡Programa una rica pizza!",
     "startAt": 2,
     "steps": [
         {
@@ -9,7 +9,7 @@
             "solution": "stroke beige"
         },
         {
-            "hint": "Configura el tamaño del trazo a 50",
+            "hint": "Configura el tamaÃ±o del trazo a 50",
             "solution": "stroke 50"
         },
         {
@@ -17,15 +17,15 @@
             "solution": "color red"
         },
         {
-            "hint": "Dibuja un círculo de 200 de tamaño",
+            "hint": "Dibuja un cÃ­rculo de 200 de tamaÃ±o",
             "solution": "circle 200"
         },
         {
-            "hint": "¡Se ve sabrosa! Configura el trazo otra vez a 0",
+            "hint": "Â¡Se ve sabrosa! Configura el trazo otra vez a 0",
             "solution": "stroke 0"
         },
         {
-            "hint": "Cúbrela con un rico queso amarillo en forma de círculo, de un tamaño de 195",
+            "hint": "CÃºbrela con un rico queso amarillo en forma de cÃ­rculo, de un tamaÃ±o de 195",
             "solution": "color yellow\ncircle 195",
             "validate": [
                 "color yellow",
@@ -37,14 +37,14 @@
             "solution": "color darkred"
         },
         {
-            "hint": "Ahora muévete `moveTo 164, 290`",
+            "hint": "Ahora muÃ©vete `moveTo 164, 290`",
             "solution": "moveTo 164, 290"
         },
         {
-            "hint": "Bien, ahora dibuja un círculo de 20 de tamaño",
+            "hint": "Bien, ahora dibuja un cÃ­rculo de 20 de tamaÃ±o",
             "solution": "circle 20"
         }
     ],
-    "completion_text": "¡Qué rico! Termínala agregando más ingedientes, ¡deja fluir tu imaginación antes de compartirla al mundo!",
+    "completion_text": "Â¡QuÃ© rico! TermÃ­nala agregando mÃ¡s ingedientes, Â¡deja fluir tu imaginaciÃ³n antes de compartirla al mundo!",
     "cover": "pizza.png"
 }

@@ -3,16 +3,16 @@
     "title": "Fuergos Artificiales",
     "short_title": "Fuegos Artificiales",
     "icon_class": "challenge_fireworks",
-    "description": "¡El campamento está llegando a su fin y tenemos fuegos artificiales para celebrar! Los fuegos artificiales fueron utilizados durante muchos siglos, se cree que los inventaron los chinos. Estamos listos para empezar el show pero necesitamos un poco de ayuda diseñando los fuegos artificiales ¿podrías hacerlo?",
+    "description": "Â¡El campamento estÃ¡ llegando a su fin y tenemos fuegos artificiales para celebrar! Los fuegos artificiales fueron utilizados durante muchos siglos, se cree que los inventaron los chinos. Estamos listos para empezar el show pero necesitamos un poco de ayuda diseÃ±ando los fuegos artificiales Â¿podrÃ­as hacerlo?",
     "cover": "summercamp/day_21.png",
-    "completion_text": "¡Buen trabajo! ¡Hiciste una función para dibujar fuegos artificiales! ¿Puedes mejorarla? ¡Dibújalos a lo largo de toda la pantalla, agrega otras creaciones y comparte tu dibujo!",
+    "completion_text": "Â¡Buen trabajo! Â¡Hiciste una funciÃ³n para dibujar fuegos artificiales! Â¿Puedes mejorarla? Â¡DibÃºjalos a lo largo de toda la pantalla, agrega otras creaciones y comparte tu dibujo!",
     "difficulty": 3,
     "startAt": 0,
     "summerCamp": true,
     "rewards": null,
     "steps": [
         {
-            "hint": "El sol ya bajó y hay luna nueva, vamos a dibujar un cielo oscuro con `background black`",
+            "hint": "El sol ya bajÃ³ y hay luna nueva, vamos a dibujar un cielo oscuro con `background black`",
             "solution": "background black"
         },
         {
@@ -20,30 +20,30 @@
             "solution": "stroke red"
         },
         {
-            "hint": "Queremos dibujar 60 líneas que salen de un mismo punto, vamos a usar un ciclo `for i in [0 ... 60]`",
+            "hint": "Queremos dibujar 60 lÃ­neas que salen de un mismo punto, vamos a usar un ciclo `for i in [0 ... 60]`",
             "solution": "for i in [0 ... 60]"
         },
         {
-            "hint": "Todas las líneas deberían diferenciarse en su longitud. Configuremos una longitud aleatoria para cada una usando `length = random 1, 200`.",
+            "hint": "Todas las lÃ­neas deberÃ­an diferenciarse en su longitud. Configuremos una longitud aleatoria para cada una usando `length = random 1, 200`.",
             "solution": "    length = random 1, 200"
         },
         {
-            "hint": "En cada vuelta de nuestro ciclo, dibujaremos una nueva línea que sale del centro. Cada vez que se ejecute el comando, el ángulo de la línea debería cambiar. Para esto necesitamos un poco de matemática avanzada pero no temas, sólo **escribe** `angle = (360 / 60 * i) * (Math.PI / 180)`.",
+            "hint": "En cada vuelta de nuestro ciclo, dibujaremos una nueva lÃ­nea que sale del centro. Cada vez que se ejecute el comando, el Ã¡ngulo de la lÃ­nea deberÃ­a cambiar. Para esto necesitamos un poco de matemÃ¡tica avanzada pero no temas, sÃ³lo **escribe** `angle = (360 / 60 * i) * (Math.PI / 180)`.",
             "solution": "    angle = (360 / 60 * i) * (Math.PI / 180)",
             "validate": "__^    angle *= *\\(360 */ *60 \\* i\\) *\\* *\\(Math[.]PI */ *180\\) *$"
         },
         {
-            "hint": "Ya hemos configurado aleatoriamente los ángulos y la longitud de las líneas, ahora configuremos aleatoriamente el punto de la coordenada X donde terminarán las líneas. **Escribe** `dx = 250 + Math.sin(angle) * length`.",
+            "hint": "Ya hemos configurado aleatoriamente los Ã¡ngulos y la longitud de las lÃ­neas, ahora configuremos aleatoriamente el punto de la coordenada X donde terminarÃ¡n las lÃ­neas. **Escribe** `dx = 250 + Math.sin(angle) * length`.",
             "solution": "    dx = 250 + Math.sin(angle) * length",
             "validate": "__^    dx *= *250 *\\+ *Math.sin\\(angle\\) *\\* *length"
         },
         {
-            "hint": "Ahora calculemos el punto de la coordenada Y para el final de las líneas. **Escribe** `dy = 250 + Math.cos(angle) * length`.",
+            "hint": "Ahora calculemos el punto de la coordenada Y para el final de las lÃ­neas. **Escribe** `dy = 250 + Math.cos(angle) * length`.",
             "solution": "    dy = 250 + Math.cos(angle) * length",
             "validate": "__^    dy *= *250 *\\+ *Math.cos\\(angle\\) *\\* *length"
         },
         {
-            "hint": "Finalmente, con todas las coordenadas ya configuradas estamos listos para dibujar las líneas. **Escribe** `lineTo dx, dy` ",
+            "hint": "Finalmente, con todas las coordenadas ya configuradas estamos listos para dibujar las lÃ­neas. **Escribe** `lineTo dx, dy` ",
             "solution": "    lineTo dx, dy"
         }
     ]

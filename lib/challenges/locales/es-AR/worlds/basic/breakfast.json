@@ -1,7 +1,7 @@
 {
     "id": "breakfast",
     "title": "Desayuno",
-    "description": "°Dibuja un desayuno inglÈs de tocino y huevos!",
+    "description": "¬°Dibuja un desayuno ingl√©s de tocino y huevos!",
     "startAt": 2,
     "fatherDay": true,
     "steps": [
@@ -10,7 +10,7 @@
             "solution": "background blue"
         },
         {
-            "hint": "Configura el trazo a 0, para evitar dibujar lÌneas",
+            "hint": "Configura el trazo a 0, para evitar dibujar l√≠neas",
             "solution": "stroke 0"
         },
         {
@@ -18,7 +18,7 @@
             "solution": "color white"
         },
         {
-            "hint": "Dibuja un cÌrculo de 240 de tamaÒo",
+            "hint": "Dibuja un c√≠rculo de 240 de tama√±o",
             "solution": "\n#Plate\ncircle 240",
             "validate": "circle 240"
         },
@@ -27,11 +27,11 @@
             "solution": "color '#eee'"
         },
         {
-            "hint": "Dibuja un cÌrculo de 200 de tamaÒo",
+            "hint": "Dibuja un c√≠rculo de 200 de tama√±o",
             "solution": "circle 200"
         },
         {
-            "hint": "MuÈvete arriba y hacia la izquierda - **escribe** `move -70, -70`",
+            "hint": "Mu√©vete arriba y hacia la izquierda - **escribe** `move -70, -70`",
             "solution": "\n#Egg\nmove -70, -70",
             "validate": "move -70,-70"
         },
@@ -40,7 +40,7 @@
             "solution": "color  white"
         },
         {
-            "hint": "Dibuja un cÌrculo de 80 de tamaÒo",
+            "hint": "Dibuja un c√≠rculo de 80 de tama√±o",
             "solution": "circle 80"
         },
         {
@@ -48,11 +48,11 @@
             "solution": "color yellow"
         },
         {
-            "hint": "Dibuja un cÌrculo de 30 de tamaÒo",
+            "hint": "Dibuja un c√≠rculo de 30 de tama√±o",
             "solution": "circle 30"
         },
         {
-            "hint": "MuÈvete arriba y hacia la derecha - **escribe** `move 90, -60`",
+            "hint": "Mu√©vete arriba y hacia la derecha - **escribe** `move 90, -60`",
             "solution": "\n#Bacon 1\nmove 90, -60",
             "validate": "move 90,-60"
         },
@@ -61,11 +61,11 @@
             "solution": "color red"
         },
         {
-            "hint": "Dibuja un rect·ngulo de un tamaÒo de 60 por 200 - **escribe** `rectangle 60, 200`",
+            "hint": "Dibuja un rect√°ngulo de un tama√±o de 60 por 200 - **escribe** `rectangle 60, 200`",
             "solution": "rectangle 60, 200"
         },
         {
-            "hint": "MuÈvete 30 hacia la derecha - **escribe** `move 30`",
+            "hint": "Mu√©vete 30 hacia la derecha - **escribe** `move 30`",
             "solution": "move 30"
         },
         {
@@ -73,11 +73,11 @@
             "solution": "color '#aa0000'"
         },
         {
-            "hint": "Dibuja un rect·ngulo de un tamaÒo de 30 por 200 - **escribe** `rectangle 30, 200`",
+            "hint": "Dibuja un rect√°ngulo de un tama√±o de 30 por 200 - **escribe** `rectangle 30, 200`",
             "solution": "rectangle 30, 200"
         },
         {
-            "hint": "MuÈvete hacia abajo y a la izquierda - **escribe** `move -3, 10`",
+            "hint": "Mu√©vete hacia abajo y a la izquierda - **escribe** `move -3, 10`",
             "solution": "move -3, 10"
         },
         {
@@ -85,11 +85,11 @@
             "solution": "color white"
         },
         {
-            "hint": "Dibuja un rect·ngulo de un tamaÒo de 6 por 180 - **escribe** `rectangle 6, 180`",
+            "hint": "Dibuja un rect√°ngulo de un tama√±o de 6 por 180 - **escribe** `rectangle 6, 180`",
             "solution": "rectangle 6, 180"
         },
         {
-            "hint": "MuÈvete hacia abajo y a la derecha - **escribe** `move 40, 50`",
+            "hint": "Mu√©vete hacia abajo y a la derecha - **escribe** `move 40, 50`",
             "solution": "\n#Bacon 2\nmove 40, 50",
             "validate": "move 40, 50"
         },
@@ -98,11 +98,11 @@
             "solution": "color red"
         },
         {
-            "hint": "Dibuja un rect·ngulo de un tamaÒo de 60 por 200 - **escribe** `rectangle 60, 200`",
+            "hint": "Dibuja un rect√°ngulo de un tama√±o de 60 por 200 - **escribe** `rectangle 60, 200`",
             "solution": "rectangle 60, 200"
         },
         {
-            "hint": "MuÈvete hacia la derecha 30 - **escribe** `move 30`",
+            "hint": "Mu√©vete hacia la derecha 30 - **escribe** `move 30`",
             "solution": "move 30"
         },
         {
@@ -110,11 +110,11 @@
             "solution": "color '#aa0000'"
         },
         {
-            "hint": "Dibuja un rect·ngulo de un tamaÒo de 30 por 200 - **escribe** `rectangle 30, 200`",
+            "hint": "Dibuja un rect√°ngulo de un tama√±o de 30 por 200 - **escribe** `rectangle 30, 200`",
             "solution": "rectangle 30, 200"
         },
         {
-            "hint": "MuÈvete hacia abajo y a la izquierda - **escribe** `move -3, 10`",
+            "hint": "Mu√©vete hacia abajo y a la izquierda - **escribe** `move -3, 10`",
             "solution": "move -3, 10"
         },
         {
@@ -122,11 +122,11 @@
             "solution": "color white"
         },
         {
-            "hint": "Dibuja un rect·ngulo de un tamaÒo de 6 por 180 - **escribe** `rectangle 6, 180`",
+            "hint": "Dibuja un rect√°ngulo de un tama√±o de 6 por 180 - **escribe** `rectangle 6, 180`",
             "solution": "rectangle 6, 180"
         },
         {
-            "hint": "MuÈvete hacia abajo y a la izquierda - **escribe** `move -200, 150`",
+            "hint": "Mu√©vete hacia abajo y a la izquierda - **escribe** `move -200, 150`",
             "solution": "\n#Tomato 1\nmove -200, 150",
             "validate": "move -200, 150"
         },
@@ -135,7 +135,7 @@
             "solution": "color red"
         },
         {
-            "hint": "Dibuja un cÌrculo de 40 de tamaÒo",
+            "hint": "Dibuja un c√≠rculo de 40 de tama√±o",
             "solution": "circle 40"
         },
         {
@@ -143,7 +143,7 @@
             "solution": "color '#cc4444'"
         },
         {
-            "hint": "Dibuja un cÌrculo de 35 de tamaÒo",
+            "hint": "Dibuja un c√≠rculo de 35 de tama√±o",
             "solution": "circle 35"
         },
         {
@@ -151,15 +151,15 @@
             "solution": "color '#aa4444'"
         },
         {
-            "hint": "Dibuja una elipse de un tamaÒo de 30 por 10",
+            "hint": "Dibuja una elipse de un tama√±o de 30 por 10",
             "solution": "ellipse 30, 10"
         },
         {
-            "hint": "Dibuja una elipse de un tamaÒo de 10 por 30",
+            "hint": "Dibuja una elipse de un tama√±o de 10 por 30",
             "solution": "ellipse 10, 30"
         },
         {
-            "hint": "MuÈvete hacia abajo y a la derecha - **escribe** `move 70, 50`",
+            "hint": "Mu√©vete hacia abajo y a la derecha - **escribe** `move 70, 50`",
             "solution": "\n#Tomato 2\nmove 70, 50",
             "validate": "move 70, 50"
         },
@@ -168,7 +168,7 @@
             "solution": "color red"
         },
         {
-            "hint": "Dibuja un cÌrculo de un tamaÒo de 40",
+            "hint": "Dibuja un c√≠rculo de un tama√±o de 40",
             "solution": "circle 40"
         },
         {
@@ -176,7 +176,7 @@
             "solution": "color '#cc4444'"
         },
         {
-            "hint": "Dibuja un cÌrculo de un tamaÒo de 35",
+            "hint": "Dibuja un c√≠rculo de un tama√±o de 35",
             "solution": "circle 35"
         },
         {
@@ -184,14 +184,14 @@
             "solution": "color '#aa4444'"
         },
         {
-            "hint": "Dibuja una elipse de un tamaÒo de 30 por 10",
+            "hint": "Dibuja una elipse de un tama√±o de 30 por 10",
             "solution": "ellipse 30, 10"
         },
         {
-            "hint": "Dibuja una elipse de un tamaÒo de 10 por 30",
+            "hint": "Dibuja una elipse de un tama√±o de 10 por 30",
             "solution": "ellipse 10, 30"
         }
     ],
-    "completion_text": "°Bien hecho!"
+    "completion_text": "¬°Bien hecho!"
     "cover": "breakfast.png"
 }

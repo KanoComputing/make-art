@@ -3,48 +3,48 @@
     "title": "Empaca tus cosas",
     "short_title": "Mochila",
     "icon_class": "challenge_backpack",
-    "description": "Dick Kelty fue quien inventó las mochilas con marco de alumnino. Kelty tuvo la idea en 1951 cuando se fue de excursión con una amigo a Sierra Nevada. Trabajando en su garage y con un préstamo de $500, Kelty y su mujer decidieron empezar el negocio; él cortaba y soldaba el aluminio mientras ella cosía el nylon. Vendían las mochilas terminadas a $24 cada una.",
+    "description": "Dick Kelty fue quien inventÃ³ las mochilas con marco de alumnino. Kelty tuvo la idea en 1951 cuando se fue de excursiÃ³n con una amigo a Sierra Nevada. Trabajando en su garage y con un prÃ©stamo de $500, Kelty y su mujer decidieron empezar el negocio; Ã©l cortaba y soldaba el aluminio mientras ella cosÃ­a el nylon. VendÃ­an las mochilas terminadas a $24 cada una.",
     "cover": "summercamp/day_8.png",
-    "completion_text": "Tengo un gran desafío para ti: intenta dibujar tu personaje detrás de la mochila ¡Cabeza, brazos y piernas!",
+    "completion_text": "Tengo un gran desafÃ­o para ti: intenta dibujar tu personaje detrÃ¡s de la mochila Â¡Cabeza, brazos y piernas!",
     "difficulty": 1,
     "startAt": 0,
     "summerCamp": true,
     "rewards": null,
     "steps": [
         {
-            "hint": "Es un hermoso día para ir a caminar por el bosque - **escribe** `background blue`",
+            "hint": "Es un hermoso dÃ­a para ir a caminar por el bosque - **escribe** `background blue`",
             "solution": "background blue"
         },
         {
-            "hint": "Primero, configura el trazo a 0 para evitar dibujar líneas usando `stroke 0`",
+            "hint": "Primero, configura el trazo a 0 para evitar dibujar lÃ­neas usando `stroke 0`",
             "solution": "stroke 0"
         },
         {
-            "hint": "Mueve el cursor para dibujar el piso - en una nueva línea **escribe** `moveTo 0, 250`",
+            "hint": "Mueve el cursor para dibujar el piso - en una nueva lÃ­nea **escribe** `moveTo 0, 250`",
             "solution": "moveTo 0, 250"
         },
         {
-            "hint": "Configura el `color` del césped a verde o `green`",
+            "hint": "Configura el `color` del cÃ©sped a verde o `green`",
             "solution": "color green"
         },
         {
-            "hint": "Dibuja el piso con un rectángulo - **escribe** `rectangle 500, 250`",
+            "hint": "Dibuja el piso con un rectÃ¡ngulo - **escribe** `rectangle 500, 250`",
             "solution": "rectangle 500, 250"
         },
         {
-            "hint": "Parece un lindo sitio para un árbol - **escribe** `moveTo 220`",
+            "hint": "Parece un lindo sitio para un Ã¡rbol - **escribe** `moveTo 220`",
             "solution": "moveTo 220"
         },
         {
-            "hint": "Configura el `color` del tronco a marrón claro o `lightbrown`",
+            "hint": "Configura el `color` del tronco a marrÃ³n claro o `lightbrown`",
             "solution": "color lightbrown"
         },
         {
-            "hint": "Dibuja el tronco usando la función `rectangle`, y con un tamaño de `50` por `400`",
+            "hint": "Dibuja el tronco usando la funciÃ³n `rectangle`, y con un tamaÃ±o de `50` por `400`",
             "solution": "rectangle 50, 400"
         },
         {
-            "hint": "¡Hermoso! Ahora solamente necesita algunas hojas - **escribe** `move 30, -120` para ubicarlas",
+            "hint": "Â¡Hermoso! Ahora solamente necesita algunas hojas - **escribe** `move 30, -120` para ubicarlas",
             "solution": "move 30, -120"
         },
         {
@@ -52,15 +52,15 @@
             "solution": "color darkgreen"
         },
         {
-            "hint": "Dibuja un círculo usando `circle` de un tamaño de `200` para representar las hojas",
+            "hint": "Dibuja un cÃ­rculo usando `circle` de un tamaÃ±o de `200` para representar las hojas",
             "solution": "circle 200"
         },
         {
-            "hint": "¡Se ve genial! Vamos a mover el cursor para dibujar la mochila - **escribe** `moveTo 150, 200`",
+            "hint": "Â¡Se ve genial! Vamos a mover el cursor para dibujar la mochila - **escribe** `moveTo 150, 200`",
             "solution": "moveTo 150, 200"
         },
         {
-            "hint": "Vamos a elegir el `color` marrón o `brown` para nuestra mochila",
+            "hint": "Vamos a elegir el `color` marrÃ³n o `brown` para nuestra mochila",
             "solution": "color brown"
         },
         {
@@ -84,7 +84,7 @@
             "solution": "color darkred"
         },
         {
-            "hint": "¿Listo para dibujar la bolsa de dormir? Usa una elipse - **escribe** `ellipse 115, 40`",
+            "hint": "Â¿Listo para dibujar la bolsa de dormir? Usa una elipse - **escribe** `ellipse 115, 40`",
             "solution": "ellipse 115, 40"
         },
         {
@@ -92,7 +92,7 @@
             "solution": "moveTo 200, 160"
         },
         {
-            "hint": "El anaranjado o `orangered` en inglés, parece un lindo `color` para las tiras que la sostendrán",
+            "hint": "El anaranjado o `orangered` en inglÃ©s, parece un lindo `color` para las tiras que la sostendrÃ¡n",
             "solution": "color orangered"
         },
         {
@@ -104,15 +104,15 @@
             "solution": "moveTo 290, 160"
         },
         {
-            "hint": "Usa la función `rectangle` otra vez para la tira de la derecha, igual que la anterior",
+            "hint": "Usa la funciÃ³n `rectangle` otra vez para la tira de la derecha, igual que la anterior",
             "solution": "rectangle 15, 90"
         },
         {
-            "hint": "¡Excelente! Necesitamos espacio para guardar cosas. Mueve el cursor al medio - **escribe** `moveTo 205, 320`",
+            "hint": "Â¡Excelente! Necesitamos espacio para guardar cosas. Mueve el cursor al medio - **escribe** `moveTo 205, 320`",
             "solution": "moveTo 205, 320"
         },
         {
-            "hint": "Usa la función `rectangle` para hacer un bolsillo, de `90` por `60` será suficiente",
+            "hint": "Usa la funciÃ³n `rectangle` para hacer un bolsillo, de `90` por `60` serÃ¡ suficiente",
             "solution": "rectangle 90, 60"
         },
         {
@@ -120,23 +120,23 @@
             "solution": "moveTo 250, 320"
         },
         {
-            "hint": "Configura el `color` a marrón claro o `lightbrown`",
+            "hint": "Configura el `color` a marrÃ³n claro o `lightbrown`",
             "solution": "color lightbrown"
         },
         {
-            "hint": "Usa la función `ellipse` de un tamaño de `48` por `7`",
+            "hint": "Usa la funciÃ³n `ellipse` de un tamaÃ±o de `48` por `7`",
             "solution": "ellipse 48, 7"
         },
         {
-            "hint": "¡Se ve genial! Vamos a ponerle un botón a ese bolsillo - **escribe** `moveTo 250, 330`",
+            "hint": "Â¡Se ve genial! Vamos a ponerle un botÃ³n a ese bolsillo - **escribe** `moveTo 250, 330`",
             "solution": "moveTo 250, 330"
         },
         {
-            "hint": "Configura el `color` a marrón o `brown`",
+            "hint": "Configura el `color` a marrÃ³n o `brown`",
             "solution": "color brown"
         },
         {
-            "hint": "Dibuja un círculo usando `circle` de un tamaño de `10`",
+            "hint": "Dibuja un cÃ­rculo usando `circle` de un tamaÃ±o de `10`",
             "solution": "circle 10"
         }
     ]

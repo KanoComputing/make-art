@@ -1,11 +1,11 @@
 {
     "id": "cinema",
-    "title": "Relájate viendo una película",
+    "title": "RelÃ¡jate viendo una pelÃ­cula",
     "short_title": "Cine",
     "icon_class": "challenge_cinema",
-    "description": "En 1895 y luego de transmitir una presentación de los hermanos Skladanowsky que consistía en una seguidilla de películas cortas de 6 segundos de duración acompañadas de una pieza musical, el teatro Berlín Wintergarten ubicado en Mitte, Berlín, se convirtió en el primer teatro-cine. Desafortunadamente, el teatro fue destruído en 1944 durante la Segunda Guerra Mundial a causa de bombardeos.",
+    "description": "En 1895 y luego de transmitir una presentaciÃ³n de los hermanos Skladanowsky que consistÃ­a en una seguidilla de pelÃ­culas cortas de 6 segundos de duraciÃ³n acompaÃ±adas de una pieza musical, el teatro BerlÃ­n Wintergarten ubicado en Mitte, BerlÃ­n, se convirtiÃ³ en el primer teatro-cine. Desafortunadamente, el teatro fue destruÃ­do en 1944 durante la Segunda Guerra Mundial a causa de bombardeos.",
     "cover": "summercamp/day_14.png",
-    "completion_text": "¿Qué tan divertido es un cine si no transmite una película? Intenta dibujar una escena de tu película favorita en la pantalla grande y tal vez algunos amigos mirando la película contigo ¡No olvides las palomitas de maíz!",
+    "completion_text": "Â¿QuÃ© tan divertido es un cine si no transmite una pelÃ­cula? Intenta dibujar una escena de tu pelÃ­cula favorita en la pantalla grande y tal vez algunos amigos mirando la pelÃ­cula contigo Â¡No olvides las palomitas de maÃ­z!",
     "difficulty": 2,
     "startAt": 0,
     "summerCamp": true,
@@ -14,11 +14,11 @@
     },
     "steps": [
         {
-            "hint": "Está oscuro en el cine. Configura el fondo,`background` a negro o `black`, en inglés",
+            "hint": "EstÃ¡ oscuro en el cine. Configura el fondo,`background` a negro o `black`, en inglÃ©s",
             "solution": "background black"
         },
         {
-            "hint": "En una nueva línea configura el trazo a `0` usando `stroke`",
+            "hint": "En una nueva lÃ­nea configura el trazo a `0` usando `stroke`",
             "solution": "stroke 0"
         },
         {
@@ -30,7 +30,7 @@
             "solution": "color gray"
         },
         {
-            "hint": "Dibuja el piso usando un rectángulo - **escribe** `rectangle 500, 200`",
+            "hint": "Dibuja el piso usando un rectÃ¡ngulo - **escribe** `rectangle 500, 200`",
             "solution": "rectangle 500, 200"
         },
         {
@@ -38,15 +38,15 @@
             "solution": "moveTo 50, 20"
         },
         {
-            "hint": "Configura el `color` de la pantalla a blanco, `white` en inglés",
+            "hint": "Configura el `color` de la pantalla a blanco, `white` en inglÃ©s",
             "solution": "color white"
         },
         {
-            "hint": "La pantalla es un rectángulo perfecto de `400` por `250`, recuerda usar la función `rectangle`",
+            "hint": "La pantalla es un rectÃ¡ngulo perfecto de `400` por `250`, recuerda usar la funciÃ³n `rectangle`",
             "solution": "rectangle 400, 250"
         },
         {
-            "hint": "¡Increíble! Este teatro necesita cortinas - **escribe** `moveTo 0`",
+            "hint": "Â¡IncreÃ­ble! Este teatro necesita cortinas - **escribe** `moveTo 0`",
             "solution": "moveTo 0"
         },
         {
@@ -54,15 +54,15 @@
             "solution": "color red"
         },
         {
-            "hint": "Dibuja un rectángulo vertical usando `rectangle` Hazlo de un tamaño de `30` por `330`",
+            "hint": "Dibuja un rectÃ¡ngulo vertical usando `rectangle` Hazlo de un tamaÃ±o de `30` por `330`",
             "solution": "rectangle 30, 330"
         },
         {
-            "hint": "Ahora dibuja una cortina horizontal de un tamaño de `500` por `10`",
+            "hint": "Ahora dibuja una cortina horizontal de un tamaÃ±o de `500` por `10`",
             "solution": "rectangle 500, 10"
         },
         {
-            "hint": "¡Se ve genial! Ubica la cortina de la derecha - **escribe** `move 470`",
+            "hint": "Â¡Se ve genial! Ubica la cortina de la derecha - **escribe** `move 470`",
             "solution": "move 470"
         },
         {
@@ -74,7 +74,7 @@
             "solution": "moveTo 0, 360"
         },
         {
-            "hint": "Configura el borde de los asientos usando `stroke` Hazlo anaranjado o `orangered` y de un tamaño de `10`.",
+            "hint": "Configura el borde de los asientos usando `stroke` Hazlo anaranjado o `orangered` y de un tamaÃ±o de `10`.",
             "solution": "stroke orangered, 10"
         },
         {
@@ -82,19 +82,19 @@
             "solution": "for x in [ 1 .. 3 ]"
         },
         {
-            "hint": "Configura el `color` de los asientos a rojo o en inglés: `red`",
+            "hint": "Configura el `color` de los asientos a rojo o en inglÃ©s: `red`",
             "solution": "    color red"
         },
         {
-            "hint": "Usa la función `rectangle` para los asientos, hazlos de un tamaño de `500` por `40`",
+            "hint": "Usa la funciÃ³n `rectangle` para los asientos, hazlos de un tamaÃ±o de `500` por `40`",
             "solution": "    rectangle 500, 40"
         },
         {
-            "hint": "Mueve el cursor para dibujar la parte de atrás de los asientos - **escribe** `move 0, 50`",
+            "hint": "Mueve el cursor para dibujar la parte de atrÃ¡s de los asientos - **escribe** `move 0, 50`",
             "solution": "    move 0, 50"
         },
         {
-            "hint": "Dentro del ciclo, abre un segundo ciclo para la parte de atrás de los asientos - **escribe** `for y in [ 1 .. 6 ]`",
+            "hint": "Dentro del ciclo, abre un segundo ciclo para la parte de atrÃ¡s de los asientos - **escribe** `for y in [ 1 .. 6 ]`",
             "solution": "    for y in [ 1 .. 6 ]"
         },
         {
@@ -102,15 +102,15 @@
             "solution": "        color darkred"
         },
         {
-            "hint": "¡Brillante! Ya casi está listo. Ahora dibuja la parte trasera de los asientos usando un arco - **escribe** `arc 60, 0, 1`",
+            "hint": "Â¡Brillante! Ya casi estÃ¡ listo. Ahora dibuja la parte trasera de los asientos usando un arco - **escribe** `arc 60, 0, 1`",
             "solution": "        arc 60, 0, 1"
         },
         {
-            "hint": "Ahora separa los asientos entre sí una distancia de `130` píxeles a la derecha",
+            "hint": "Ahora separa los asientos entre sÃ­ una distancia de `130` pÃ­xeles a la derecha",
             "solution": "        move 130"
         },
         {
-            "hint": "Por último, asegúrate de que los asientos estén ubicados correctamente - Presiona **Enter**, luego la tecla **Borar** una sola vez y **escribe** `move -800` dentro del **primer** ciclo",
+            "hint": "Por Ãºltimo, asegÃºrate de que los asientos estÃ©n ubicados correctamente - Presiona **Enter**, luego la tecla **Borar** una sola vez y **escribe** `move -800` dentro del **primer** ciclo",
             "solution": "    move -800"
         }
     ]
