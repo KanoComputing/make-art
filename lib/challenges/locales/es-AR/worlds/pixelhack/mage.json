@@ -6,19 +6,19 @@
     "startAt": 2,
     "steps": [
         {
-            "hint": "Crearemos el personaje de una Maga en un Juego de Rol. Primero necesitamos montar el escenario, utilizaremos la funciÛn de oscurecer para cambiar el color verde azulado a un tono m·s similar al azul oscuro - **escribe** `background darken teal,15 `",
+            "hint": "Crearemos el personaje de una Maga en un Juego de Rol. Primero necesitamos montar el escenario, utilizaremos la funci√≥n de oscurecer para cambiar el color verde azulado a un tono m√°s similar al azul oscuro - **escribe** `background darken teal,15 `",
             "solution": "background darken teal,15"
         },
         {
-            "hint": "Estamos haciendo arte en pÌxeles, no necesitamos el trazo - **escribe** `stroke 0`",
+            "hint": "Estamos haciendo arte en p√≠xeles, no necesitamos el trazo - **escribe** `stroke 0`",
             "solution": "stroke 0"
         },
         {
-            "hint": "Configuremos el color a un tono de marrÛn para su cabello - **escribe** `color saddlebrown`",
+            "hint": "Configuremos el color a un tono de marr√≥n para su cabello - **escribe** `color saddlebrown`",
             "solution": "color saddlebrown"
         },
         {
-            "hint": "Utilizaremos la funciÛn moveTo para mover el cursor a una coordenada especÌfica - **escribe** `moveTo 120,80`",
+            "hint": "Utilizaremos la funci√≥n moveTo para mover el cursor a una coordenada espec√≠fica - **escribe** `moveTo 120,80`",
             "solution": "moveTo 120,80"
         },
         {
@@ -26,7 +26,7 @@
             "solution": "rectangle 320,400"
         },
         {
-            "hint": "Dibujaremos con bloques de 20 por 20 pÌxeles de tamaÒo- **escribe** `move 20,-20`",
+            "hint": "Dibujaremos con bloques de 20 por 20 p√≠xeles de tama√±o- **escribe** `move 20,-20`",
             "solution": "move 20,-20"
         },
         {
@@ -34,11 +34,11 @@
             "solution": "rectangle 280,20"
         },
         {
-            "hint": "MuÈvete hacia arriba otra vez para crear un efecto redondeado - **escribe** `move 20,-20`",
+            "hint": "Mu√©vete hacia arriba otra vez para crear un efecto redondeado - **escribe** `move 20,-20`",
             "solution": "move 20,-20"
         },
         {
-            "hint": "Dibuja una fila m·s de cabello - **escribe** `rectangle 240,20`",
+            "hint": "Dibuja una fila m√°s de cabello - **escribe** `rectangle 240,20`",
             "solution": "rectangle 240,20"
         },
         {
@@ -50,7 +50,7 @@
             "solution": "move 0,120"
         },
         {
-            "hint": "Dibuja la cara utilizando un rect·ngulo de 240 por 140 de tamaÒo",
+            "hint": "Dibuja la cara utilizando un rect√°ngulo de 240 por 140 de tama√±o",
             "solution": "rectangle 240,140"
         },
         {
@@ -58,7 +58,7 @@
             "solution": "move 80,-40"
         },
         {
-            "hint": "Dibuja otro rect·ngulo para darle un flequillo - **escribe** `rectangle 80,40`",
+            "hint": "Dibuja otro rect√°ngulo para darle un flequillo - **escribe** `rectangle 80,40`",
             "solution": "rectangle 80,40"
         },
         {
@@ -66,11 +66,11 @@
             "solution": "move -40,180"
         },
         {
-            "hint": "Termina la cara dibujando el mentÛn - **escribe** `rectangle 160,20`",
+            "hint": "Termina la cara dibujando el ment√≥n - **escribe** `rectangle 160,20`",
             "solution": "rectangle 160,20"
         },
         {
-            "hint": "Ahora le dibujaremos una t˙nica, nuestra maga se maneja en la Magia de Agua entonces la haremos azul- **escribe** `color paleturquoise`",
+            "hint": "Ahora le dibujaremos una t√∫nica, nuestra maga se maneja en la Magia de Agua entonces la haremos azul- **escribe** `color paleturquoise`",
             "solution": "color paleturquoise"
         },
         {
@@ -78,27 +78,27 @@
             "solution": "move -100,20"
         },
         {
-            "hint": "Dibuja un rect·ngulo de 360 de largo y 80 de alto para las mangas",
+            "hint": "Dibuja un rect√°ngulo de 360 de largo y 80 de alto para las mangas",
             "solution": "rectangle 360,80"
         },
         {
-            "hint": "Posiciona el cursor para dibujar el cuerpo de la t˙nica - **escribe** `move 60,80`",
+            "hint": "Posiciona el cursor para dibujar el cuerpo de la t√∫nica - **escribe** `move 60,80`",
             "solution": "move 60,80"
         },
         {
-            "hint": "Dibuja un rect·ngulo de 240 de ancho y 100 de alto para el cuerpo de la t˙nica",
+            "hint": "Dibuja un rect√°ngulo de 240 de ancho y 100 de alto para el cuerpo de la t√∫nica",
             "solution": "rectangle 240,100"
         },
         {
-            "hint": "Ahora dibujaremos una costura en la t˙nica, cambia el color a verde azulado",
+            "hint": "Ahora dibujaremos una costura en la t√∫nica, cambia el color a verde azulado",
             "solution": "color teal"
         },
         {
-            "hint": "Mueve el cursor a la mitad de la t˙nica - **escribe** `move 120,-80`",
+            "hint": "Mueve el cursor a la mitad de la t√∫nica - **escribe** `move 120,-80`",
             "solution": "move 120,-80"
         },
         {
-            "hint": "Dibuja un rect·ngulo angosto para la costura - **escribe** `rectangle 40,180`",
+            "hint": "Dibuja un rect√°ngulo angosto para la costura - **escribe** `rectangle 40,180`",
             "solution": "rectangle 40,180"
         },
         {
@@ -106,51 +106,51 @@
             "solution": "move 140,40"
         },
         {
-            "hint": "Cambia el color a un tono de marrÛn, sandybrown en inglÈs",
+            "hint": "Cambia el color a un tono de marr√≥n, sandybrown en ingl√©s",
             "solution": "color sandybrown"
         },
         {
-            "hint": "Dibuja un brazo utilizando un rect·ngulo de 40 por 140",
+            "hint": "Dibuja un brazo utilizando un rect√°ngulo de 40 por 140",
             "solution": "rectangle 40,140"
         },
         {
-            "hint": "MuÈvete hacia el otro lado del cuerpo - **escribe** `move -380,40`",
+            "hint": "Mu√©vete hacia el otro lado del cuerpo - **escribe** `move -380,40`",
             "solution": "move -380,40"
         },
         {
-            "hint": "Este brazo no estar· unido al cuerpo pero no te preocupes, no lo hemos terminado a˙n - **escribe** `rectangle 40,100`",
+            "hint": "Este brazo no estar√° unido al cuerpo pero no te preocupes, no lo hemos terminado a√∫n - **escribe** `rectangle 40,100`",
             "solution": "rectangle 40,100"
         },
         {
-            "hint": "Toda maga necesita un bastÛn para lanzar su magia, dibujaremos eso - **escribe** `color darkmagenta`",
+            "hint": "Toda maga necesita un bast√≥n para lanzar su magia, dibujaremos eso - **escribe** `color darkmagenta`",
             "solution": "color darkmagenta"
         },
         {
-            "hint": "MuÈvete hacia arriba del bastÛn - **escribe** `move 60,-120`",
+            "hint": "Mu√©vete hacia arriba del bast√≥n - **escribe** `move 60,-120`",
             "solution": "move 60,-120"
         },
         {
-            "hint": "Dibuja el bastÛn por encima del brazo para que parezca que la sostiene en su mano - **escribe** `rectangle -40,220`",
+            "hint": "Dibuja el bast√≥n por encima del brazo para que parezca que la sostiene en su mano - **escribe** `rectangle -40,220`",
             "solution": "rectangle -40,220"
         },
         {
-            "hint": "Como dijimos al comienzo, nuestro personaje usa magia acu·tica, entonces configura el color a aguamarina - **escribe** `color aquamarine`",
+            "hint": "Como dijimos al comienzo, nuestro personaje usa magia acu√°tica, entonces configura el color a aguamarina - **escribe** `color aquamarine`",
             "solution": "color aquamarine"
         },
         {
-            "hint": "Dibuja el extremo del bastÛn, si utilizas n˙meros negativos las figuras se dar·n vuelta - **escribe** `square -80`",
+            "hint": "Dibuja el extremo del bast√≥n, si utilizas n√∫meros negativos las figuras se dar√°n vuelta - **escribe** `square -80`",
             "solution": "square -80"
         },
         {
-            "hint": "TambiÈn dibujaremos una diadema m·gica, muÈvete hacia la frente - **escribe** `move 60,-200`",
+            "hint": "Tambi√©n dibujaremos una diadema m√°gica, mu√©vete hacia la frente - **escribe** `move 60,-200`",
             "solution": "move 60,-200"
         },
         {
-            "hint": "Dibuja un rect·ngulo de 240 por 20",
+            "hint": "Dibuja un rect√°ngulo de 240 por 20",
             "solution": "rectangle 240,20"
         },
         {
-            "hint": "MuÈvete un espacio hacia abajo en la grilla - **escribe** `move -20,20`",
+            "hint": "Mu√©vete un espacio hacia abajo en la grilla - **escribe** `move -20,20`",
             "solution": "move -20,20"
         },
         {
@@ -158,7 +158,7 @@
             "solution": "rectangle 280,20"
         },
         {
-            "hint": "A˙n debemos terminar la cara, posiciona el cursor en el sector de los ojos - **escribe** `move 60,60`",
+            "hint": "A√∫n debemos terminar la cara, posiciona el cursor en el sector de los ojos - **escribe** `move 60,60`",
             "solution": "move 60,60"
         },
         {
@@ -170,7 +170,7 @@
             "solution": "rectangle 40,80"
         },
         {
-            "hint": "MuÈvete al sector del otro ojo - **escribe** `move 120,0`",
+            "hint": "Mu√©vete al sector del otro ojo - **escribe** `move 120,0`",
             "solution": "move 120,0"
         },
         {
@@ -178,23 +178,23 @@
             "solution": "rectangle 40,80"
         },
         {
-            "hint": "Un ˙ltimo detalle. Haremos los ojos un poco m·s brillantes - **escribe** `color white`",
+            "hint": "Un √∫ltimo detalle. Haremos los ojos un poco m√°s brillantes - **escribe** `color white`",
             "solution": "color white"
         },
         {
-            "hint": "Dibuja un rect·ngulo m·s pequeÒo - **escribe** `rectangle 20,40`",
+            "hint": "Dibuja un rect√°ngulo m√°s peque√±o - **escribe** `rectangle 20,40`",
             "solution": "rectangle 20,40"
         },
         {
-            "hint": "MuÈvete al otro ojo - **escribe** `move -120,0`",
+            "hint": "Mu√©vete al otro ojo - **escribe** `move -120,0`",
             "solution": "move -120,0"
         },
         {
-            "hint": "TermÌnalo con un ˙ltimo rect·ngulo - **escribe** `rectangle 20,40`",
+            "hint": "Term√≠nalo con un √∫ltimo rect√°ngulo - **escribe** `rectangle 20,40`",
             "solution": "rectangle 20,40"
         }
     ],
-    "completion_text": "°Bien hecho! Tu maga est· lista para ingresar a alguna cueva y lanzar algunos hechizos. øPor quÈ no cambias los colores de su vestimenta a rojo para que sea una Maga de Fuego?",
+    "completion_text": "¬°Bien hecho! Tu maga est√° lista para ingresar a alguna cueva y lanzar algunos hechizos. ¬øPor qu√© no cambias los colores de su vestimenta a rojo para que sea una Maga de Fuego?",
     "gallery": {
         "cover_path": "/assets/challenges/images/pixelremixes/",
         "remixes": [
@@ -204,5 +204,5 @@
         ]
     },
     "cover": "pixel-mage.png",
-    "guide": "#### Lo que crear·s\n1. Crearemos el personaje de una Maga en un Juego de Rol. Primero necesitamos montar el escenario, utilizaremos la funciÛn de oscurecer para cambiar el color aguamarina a un tono m·s similar al azul oscuro - **escribe** `background darken teal,15 `\n2. Estamos haciendo arte en pÌxeles, no necesitamos el trazo - **escribe** `stroke 0`\n3. Configuremos el color a un tono de marrÛn para su cabello - **escribe** `color saddlebrown`\n4. Utilizaremos la funciÛn moveTo para mover el cursor a una coordenada especÌfica - **escribe** `moveTo 120,80`\n5. Primero dibujaremos su cabello y el resto de los rasgos de la cara por encima para crearle profundidad - **escribe** `rectangle 320,400`\n6. Dibujaremos con bloques de 20 por 20 pÌxeles de tamaÒo- **escribe** `move 20,-20`\n7. Dibuja otra capa de cabello - **escribe** `rectangle 280,20`\n8. MuÈvete hacia arriba otra vez para crear un efecto redondeado - **escribe** `move 20,-20`\n9. Dibuja una fila m·s de cabello - **escribe** `rectangle 240,20`\n10. Ahora dibujaremos la cara, - **escribe** `color sandybrown`\n11. Mueve el cursor a la esquina de arriba en donde dibujaremos la cara- **escribe** `move 0,120`\n12. Dibuja la cara utilizando un rect·ngulo de 240 por 140 de tamaÒo\n13. La cara se ve un poco cuadrada, por eso mueve el cursor hacia la frente - **escribe** `move 80,-40`\n14. Dibuja otro rect·ngulo para darle un flequillo - **escribe** `rectangle 80,40`\n15. Mueve el cursor hacia abajo en la cara - **escribe** `move -40,180`\n16. Termina la cara dibujando la mentÛn - **escribe** `rectangle 160,20`\n17. Ahora le dibujaremos una t˙nica, nuestra maga se maneja en la Magia de Agua entonces la haremos azul- **escribe** `color paleturquoise`\n18. Posiciona el cursor para dibujarle las mangas - **escribe** `move -100,20`\n19. Dibuja un rect·ngulo de 360 de largo y 80 de alto para las mangas \n20. Posiciona el cursor para dibujar el cuerpo de la t˙nica - **escribe** `move 60,80`\n21. Dibuja un rect·ngulo de 240 de ancho y 100 de alto para el cuerpo de la t˙nica\n22. Ahora dibujaremos una costura en la t˙nica, cambia el color a aguamarina\n23. Mueve el cursor a la mitad de la t˙nica - **escribe** `move 120,-80`\n24. Dibuja un rect·ngulo angosto para la costura - **escribe** `rectangle 40,180`\n25. Ahora dibujaremos los brazos - **escribe** `move 140,40`\n26. Cambia el color a un tono de marrÛn, sandybrown en inglÈs\n27. Dibuja un brazo utilizando un rect·ngulo de 40 por 140\n28. MuÈvete hacia el otro lado del cuerpo - **escribe** `move -380,40`\n29. Este brazo no estr· unido al cuerpo pero no te preocupes, no lo hemos terminado a˙n - **escribe** `rectangle 40,100`\n30. Toda maga necesita un bastÛn para lanzar su magia, dibujaremos eso - **escribe** `color darkmagenta`\n31. MuÈvete hacia arriba del bastÛn - **escribe** `move 60,-120`\n32. Dibuja el bastÛn por encima del brazo para que parezca que la sostiene en su mano - **escribe** `rectangle -40,220`\n33. Como dijimos al comienzo, nuestro personaje usa magia acu·tica, entonces configura el color a aguamarina - **escribe** `color aquamarine`\n34. Dibuja el extremo del bastÛn, si utilizas n˙meros negativos las figuras se dar·n vuelta - **escribe** `square -80`\n35. TambiÈn dibujaremos una diadema m·gica, muÈvete hacia la frente - **escribe** `move 60,-200`\n36. Dibuja un rect·ngulo de 240 por 20\n37. MuÈvete un espacio hacia abajo en la grilla - **escribe** `move -20,20`\n38. Termina la diadema - **escribe** `rectangle 280,20`\n39. A˙n debemos terminar la cara, posiciona el cursor en el sector de los ojos - **escribe** `move 60,60`\n40. Configura el color a negro\n41. Dibuja los ojos largos y finos - **escribe** `rectangle 40,80`\n42. MuÈvete al sector del otro ojo - **escribe** `move 120,0`\n43. Dibuja el otro ojo - **escribe** `rectangle 40,80`\n44. Un ˙ltimo detalle. Haremos los ojos un poco m·s brillantes - **escribe** `color white`\n45.Dibuja un rect·ngulo m·s pequeÒo - **escribe** `rectangle 20,40`\n46. MuÈvete al otro ojo - **escribe** `move -120,0`\n47. TermÌnalo con un ˙ltimo rect·ngulo - **escribe** `rectangle 20,40`\n\n#### Lo que hackear·s\nEste es un dibujo mucho m·s intrincado, hay muchas cosas para cambiar. Puedes ir a travÈs del dibujo y cambiar los colores creando una nueva paleta de colores y agregar nuevos objetos. Echa un vistazo a la guerrera y a otras magas elementales como ejemplos para mejorarla con nuevos poderes, armaduras y armas.\n\n#### Informe\nLas figuras simples que has estado juntando en estos diseÒos pueden ser redefinidas y transformadas en creaciones m·s complejas. La Maga de los Juegos de Rol sigue un diseÒo un poco m·s sofisticado, pero se utilizan las mismas funciones para crearla.\n"
+    "guide": "#### Lo que crear√°s\n1. Crearemos el personaje de una Maga en un Juego de Rol. Primero necesitamos montar el escenario, utilizaremos la funci√≥n de oscurecer para cambiar el color aguamarina a un tono m√°s similar al azul oscuro - **escribe** `background darken teal,15 `\n2. Estamos haciendo arte en p√≠xeles, no necesitamos el trazo - **escribe** `stroke 0`\n3. Configuremos el color a un tono de marr√≥n para su cabello - **escribe** `color saddlebrown`\n4. Utilizaremos la funci√≥n moveTo para mover el cursor a una coordenada espec√≠fica - **escribe** `moveTo 120,80`\n5. Primero dibujaremos su cabello y el resto de los rasgos de la cara por encima para crearle profundidad - **escribe** `rectangle 320,400`\n6. Dibujaremos con bloques de 20 por 20 p√≠xeles de tama√±o- **escribe** `move 20,-20`\n7. Dibuja otra capa de cabello - **escribe** `rectangle 280,20`\n8. Mu√©vete hacia arriba otra vez para crear un efecto redondeado - **escribe** `move 20,-20`\n9. Dibuja una fila m√°s de cabello - **escribe** `rectangle 240,20`\n10. Ahora dibujaremos la cara, - **escribe** `color sandybrown`\n11. Mueve el cursor a la esquina de arriba en donde dibujaremos la cara- **escribe** `move 0,120`\n12. Dibuja la cara utilizando un rect√°ngulo de 240 por 140 de tama√±o\n13. La cara se ve un poco cuadrada, por eso mueve el cursor hacia la frente - **escribe** `move 80,-40`\n14. Dibuja otro rect√°ngulo para darle un flequillo - **escribe** `rectangle 80,40`\n15. Mueve el cursor hacia abajo en la cara - **escribe** `move -40,180`\n16. Termina la cara dibujando la ment√≥n - **escribe** `rectangle 160,20`\n17. Ahora le dibujaremos una t√∫nica, nuestra maga se maneja en la Magia de Agua entonces la haremos azul- **escribe** `color paleturquoise`\n18. Posiciona el cursor para dibujarle las mangas - **escribe** `move -100,20`\n19. Dibuja un rect√°ngulo de 360 de largo y 80 de alto para las mangas \n20. Posiciona el cursor para dibujar el cuerpo de la t√∫nica - **escribe** `move 60,80`\n21. Dibuja un rect√°ngulo de 240 de ancho y 100 de alto para el cuerpo de la t√∫nica\n22. Ahora dibujaremos una costura en la t√∫nica, cambia el color a aguamarina\n23. Mueve el cursor a la mitad de la t√∫nica - **escribe** `move 120,-80`\n24. Dibuja un rect√°ngulo angosto para la costura - **escribe** `rectangle 40,180`\n25. Ahora dibujaremos los brazos - **escribe** `move 140,40`\n26. Cambia el color a un tono de marr√≥n, sandybrown en ingl√©s\n27. Dibuja un brazo utilizando un rect√°ngulo de 40 por 140\n28. Mu√©vete hacia el otro lado del cuerpo - **escribe** `move -380,40`\n29. Este brazo no estr√° unido al cuerpo pero no te preocupes, no lo hemos terminado a√∫n - **escribe** `rectangle 40,100`\n30. Toda maga necesita un bast√≥n para lanzar su magia, dibujaremos eso - **escribe** `color darkmagenta`\n31. Mu√©vete hacia arriba del bast√≥n - **escribe** `move 60,-120`\n32. Dibuja el bast√≥n por encima del brazo para que parezca que la sostiene en su mano - **escribe** `rectangle -40,220`\n33. Como dijimos al comienzo, nuestro personaje usa magia acu√°tica, entonces configura el color a aguamarina - **escribe** `color aquamarine`\n34. Dibuja el extremo del bast√≥n, si utilizas n√∫meros negativos las figuras se dar√°n vuelta - **escribe** `square -80`\n35. Tambi√©n dibujaremos una diadema m√°gica, mu√©vete hacia la frente - **escribe** `move 60,-200`\n36. Dibuja un rect√°ngulo de 240 por 20\n37. Mu√©vete un espacio hacia abajo en la grilla - **escribe** `move -20,20`\n38. Termina la diadema - **escribe** `rectangle 280,20`\n39. A√∫n debemos terminar la cara, posiciona el cursor en el sector de los ojos - **escribe** `move 60,60`\n40. Configura el color a negro\n41. Dibuja los ojos largos y finos - **escribe** `rectangle 40,80`\n42. Mu√©vete al sector del otro ojo - **escribe** `move 120,0`\n43. Dibuja el otro ojo - **escribe** `rectangle 40,80`\n44. Un √∫ltimo detalle. Haremos los ojos un poco m√°s brillantes - **escribe** `color white`\n45.Dibuja un rect√°ngulo m√°s peque√±o - **escribe** `rectangle 20,40`\n46. Mu√©vete al otro ojo - **escribe** `move -120,0`\n47. Term√≠nalo con un √∫ltimo rect√°ngulo - **escribe** `rectangle 20,40`\n\n#### Lo que hackear√°s\nEste es un dibujo mucho m√°s intrincado, hay muchas cosas para cambiar. Puedes ir a trav√©s del dibujo y cambiar los colores creando una nueva paleta de colores y agregar nuevos objetos. Echa un vistazo a la guerrera y a otras magas elementales como ejemplos para mejorarla con nuevos poderes, armaduras y armas.\n\n#### Informe\nLas figuras simples que has estado juntando en estos dise√±os pueden ser redefinidas y transformadas en creaciones m√°s complejas. La Maga de los Juegos de Rol sigue un dise√±o un poco m√°s sofisticado, pero se utilizan las mismas funciones para crearla.\n"
 }

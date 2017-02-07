@@ -1,7 +1,7 @@
 {
     "id": "gradient",
-    "title": "Arcoiris en degradé",
-    "description": "¡Combina ciclos y colores para hacer algo mágico!",
+    "title": "Arcoiris en degradÃ©",
+    "description": "Â¡Combina ciclos y colores para hacer algo mÃ¡gico!",
     "code": "",
     "startAt": 1,
     "steps": [
@@ -24,10 +24,10 @@
             "validate": "        moveTo 20 *\\* *x,20 *\\* *y"
         },
         {
-            "hint": "Ahora dibujemos los cuadrados de un tamaño de 20",
+            "hint": "Ahora dibujemos los cuadrados de un tamaÃ±o de 20",
             "solution": "        square 20"
         }
     ],
-    "completion_text": "Intenta cambiar los números en el espectro de colores y fíjate lo que sucede.",
+    "completion_text": "Intenta cambiar los nÃºmeros en el espectro de colores y fÃ­jate lo que sucede.",
     "cover": "gradient.png"
 }

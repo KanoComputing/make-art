@@ -5,11 +5,11 @@
     "startAt": 2,
     "steps": [
         {
-            "hint": "Configura el color del fondo a negro. Recuerda escribir el color en inglés: black; fondo en inglés es background.",
+            "hint": "Configura el color del fondo a negro. Recuerda escribir el color en inglÃ©s: black; fondo en inglÃ©s es background.",
             "solution": "background black"
         },
         {
-            "hint": "Muévete 80 a la izquierda **escribe** `move -80`",
+            "hint": "MuÃ©vete 80 a la izquierda **escribe** `move -80`",
             "solution": "move -80",
             "validate": "move -80"
         },
@@ -18,7 +18,7 @@
             "solution": "color white"
         },
         {
-            "hint": "Dibuja una elipse, es como un círculo estirado. Elipse en inglés se dice ellipse - **escribe** `ellipse 60, 40`",
+            "hint": "Dibuja una elipse, es como un cÃ­rculo estirado. Elipse en inglÃ©s se dice ellipse - **escribe** `ellipse 60, 40`",
             "solution": "ellipse 60, 40"
         },
         {
@@ -26,11 +26,11 @@
             "solution": "color black"
         },
         {
-            "hint": "Dibuja un círculo de 10 de tamaño - **escribe** `circle 10`",
+            "hint": "Dibuja un cÃ­rculo de 10 de tamaÃ±o - **escribe** `circle 10`",
             "solution": "circle 10"
         },
         {
-            "hint": "Muévete 160 a la derecha - **escribe** `move 160`",
+            "hint": "MuÃ©vete 160 a la derecha - **escribe** `move 160`",
             "solution": "move 160"
         },
         {
@@ -46,10 +46,10 @@
             "solution": "color black"
         },
         {
-            "hint": "Termínalo dibujando un círculo de un tamaño de 10 ¡No olvides usar el comando en inglés!",
+            "hint": "TermÃ­nalo dibujando un cÃ­rculo de un tamaÃ±o de 10 Â¡No olvides usar el comando en inglÃ©s!",
             "solution": "circle 10"
         }
     ],
-    "completion_text": "¡Eres un mago! ¡La próxima vez que necesite ojos fantasmales ya sé a quién llamar!",
+    "completion_text": "Â¡Eres un mago! Â¡La prÃ³xima vez que necesite ojos fantasmales ya sÃ© a quiÃ©n llamar!",
     "cover": "stare.png"
 }

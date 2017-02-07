@@ -1,23 +1,23 @@
 {
     "id": "sunnyday",
-    "title": "Día soleado",
-    "description": "Aprende lo básico de programación haciendo un despejado y soleado día.",
+    "title": "DÃ­a soleado",
+    "description": "Aprende lo bÃ¡sico de programaciÃ³n haciendo un despejado y soleado dÃ­a.",
     "code": "",
     "startAt": 2,
     "steps": [
         {
-            "hint": "Siempre que ingresemos un comando debemos escribirlo en inglés. Primero vamos a llenar el fondo con un lindo cielo azul usando la palabra en inglés: background - **Escribe** `background blue`",
+            "hint": "Siempre que ingresemos un comando debemos escribirlo en inglÃ©s. Primero vamos a llenar el fondo con un lindo cielo azul usando la palabra en inglÃ©s: background - **Escribe** `background blue`",
             "solution": "background blue"
         },
         {
-            "hint": "Ahora necesitamos cambiar el color de dibujo a un amarillo brillante. Vamos a utilizar la palabra en inglés yelloe - en una nueva línea **escribe** `color yellow`",
+            "hint": "Ahora necesitamos cambiar el color de dibujo a un amarillo brillante. Vamos a utilizar la palabra en inglÃ©s yelloe - en una nueva lÃ­nea **escribe** `color yellow`",
             "solution": "color yellow"
         },
         {
-            "hint": "Finalmente vamos a dibujar el sol, usamos el comando de círculo seguido del tamaño que queremos que tenga. La palabra en inglés para círculo es: circle - en una nueva línea **escribe** `circle 150`",
+            "hint": "Finalmente vamos a dibujar el sol, usamos el comando de cÃ­rculo seguido del tamaÃ±o que queremos que tenga. La palabra en inglÃ©s para cÃ­rculo es: circle - en una nueva lÃ­nea **escribe** `circle 150`",
             "solution": "circle 150"
         }
     ],
-    "completion_text": "¡Muy bien! Es un día soleado y brillante, ahora cambia el número que está al lado del círculo y mira lo que pasa",
+    "completion_text": "Â¡Muy bien! Es un dÃ­a soleado y brillante, ahora cambia el nÃºmero que estÃ¡ al lado del cÃ­rculo y mira lo que pasa",
     "cover": "sunny-day.png"
 }

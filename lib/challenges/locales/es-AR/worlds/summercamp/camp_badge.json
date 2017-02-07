@@ -3,8 +3,8 @@
     "title": "Insignia de Campamento",
     "short_title": "Insignia de Campamento",
     "icon_class": "challenge_badge",
-    "description": "La insignia de primeros auxilios es la m·s popular en los campamentos de verano. De hecho, 6.9 millones de Scouts la han obtenido desde 1911. Las otras m·s populares son las de Ciencias Ambientales, B˙squeda y Rescate y nuestra favorita, °la de ProgramaciÛn y DiseÒo de Juegos! TambiÈn existen otras m·s extraÒas. Por ejemplo, la de Transporte en Camiones: imagina que tienes que cargar en un camiÛn 300 kilos de mercaderÌa de un pueblo que est· a 500 millas del tuyo. Tu pedido debe llegar en el transcurso de tres dÌas. Explica por escrito...î TambiÈn la de Ciencias Nucleares: ìPrepara dos platos de comida, uno con alimentos irradiados y otro no, luego compara el gusto y las texturas.î",
-    "completion_text": "Esta insignia distinguir· tu campamento de otros. Sorprende al mundo con una creaciÛn asombrosa.",
+    "description": "La insignia de primeros auxilios es la m√°s popular en los campamentos de verano. De hecho, 6.9 millones de Scouts la han obtenido desde 1911. Las otras m√°s populares son las de Ciencias Ambientales, B√∫squeda y Rescate y nuestra favorita, ¬°la de Programaci√≥n y Dise√±o de Juegos! Tambi√©n existen otras m√°s extra√±as. Por ejemplo, la de Transporte en Camiones: imagina que tienes que cargar en un cami√≥n 300 kilos de mercader√≠a de un pueblo que est√° a 500 millas del tuyo. Tu pedido debe llegar en el transcurso de tres d√≠as. Explica por escrito...‚Äù Tambi√©n la de Ciencias Nucleares: ‚ÄúPrepara dos platos de comida, uno con alimentos irradiados y otro no, luego compara el gusto y las texturas.‚Äù",
+    "completion_text": "Esta insignia distinguir√° tu campamento de otros. Sorprende al mundo con una creaci√≥n asombrosa.",
     "cover": "summercamp/day_5.png",
     "difficulty": 1,
     "startAt": 4,
@@ -17,39 +17,39 @@
             "solution": "background black"
         },
         {
-            "hint": "Configura el `color` de tu insignia a celeste o `lightblue` en inglÈs",
+            "hint": "Configura el `color` de tu insignia a celeste o `lightblue` en ingl√©s",
             "solution": "color lightblue"
         },
         {
-            "hint": "Configura el trazo para el primer cÌrculo - **escribe** `stroke red, 20`",
+            "hint": "Configura el trazo para el primer c√≠rculo - **escribe** `stroke red, 20`",
             "solution": "stroke red, 20"
         },
         {
-            "hint": "Dibuja un cÌrculo o `circle` en inglÈs, de un tamaÒo de `200`",
+            "hint": "Dibuja un c√≠rculo o `circle` en ingl√©s, de un tama√±o de `200`",
             "solution": "circle 200"
         },
         {
-            "hint": "Configura el trazo para el segundo cÌrculo  - **escribe** `stroke yellow, 20`",
+            "hint": "Configura el trazo para el segundo c√≠rculo  - **escribe** `stroke yellow, 20`",
             "solution": "stroke yellow, 20"
         },
         {
-            "hint": "Dib˙jalo usando `circle` de un tamaÒo de `190`",
+            "hint": "Dib√∫jalo usando `circle` de un tama√±o de `190`",
             "solution": "circle 190"
         },
         {
-            "hint": "Configura el trazo, `stroke`, para el tercer cÌrculo a violeta o `purple` en inglÈs y de un tamaÒo de `20`",
+            "hint": "Configura el trazo, `stroke`, para el tercer c√≠rculo a violeta o `purple` en ingl√©s y de un tama√±o de `20`",
             "solution": "stroke purple, 20"
         },
         {
-            "hint": "Dib˙jalo usando `circle` de un tamaÒo de `180`",
+            "hint": "Dib√∫jalo usando `circle` de un tama√±o de `180`",
             "solution": "circle 180"
         },
         {
-            "hint": "Agrega decoraciÛn. Configura el `color` a verde o `green`",
+            "hint": "Agrega decoraci√≥n. Configura el `color` a verde o `green`",
             "solution": "color green"
         },
         {
-            "hint": "Un arco es la mitad de un cÌrculo, dibuja uno que encaje en el cÌrculo interior - **escribe** `arc 180, 1, 2`",
+            "hint": "Un arco es la mitad de un c√≠rculo, dibuja uno que encaje en el c√≠rculo interior - **escribe** `arc 180, 1, 2`",
             "solution": "arc 180, 1, 2"
         }
     ]

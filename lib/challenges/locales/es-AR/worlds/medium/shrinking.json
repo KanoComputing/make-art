@@ -1,7 +1,7 @@
 {
     "id": "shrinking",
-    "title": "Círculos que se encogen",
-    "description": "¡Círculos que se van encogiendo!",
+    "title": "CÃ­rculos que se encogen",
+    "description": "Â¡CÃ­rculos que se van encogiendo!",
     "code": "",
     "startAt": 1,
     "steps": [
@@ -10,19 +10,19 @@
             "solution": "stroke gray, 3"
         },
         {
-            "hint": "Configura el color a transparente para poder ver a través - **escribe** `color null`",
+            "hint": "Configura el color a transparente para poder ver a travÃ©s - **escribe** `color null`",
             "solution": "color null"
         },
         {
-            "hint": "Vamos a dibujar 32 círculos todos de una vez, necesitamos abrir un ciclo con un nuevo comando - **escribe** `for i in [ 0 .. 32 ]`",
+            "hint": "Vamos a dibujar 32 cÃ­rculos todos de una vez, necesitamos abrir un ciclo con un nuevo comando - **escribe** `for i in [ 0 .. 32 ]`",
             "solution": "for i in [ 0..32 ]"
         },
         {
-            "hint": "Genial, ahora para hacer los círculos - dentro del ciclo, **escribe** `circle 10 * i`",
+            "hint": "Genial, ahora para hacer los cÃ­rculos - dentro del ciclo, **escribe** `circle 10 * i`",
             "solution": "    circle 10 * i",
             "validate": "    circle 10 *\\* *i"
         }
     ],
-    "completion_text": "¡Genial! Los ciclos nos permiten repetir secciones de código (¡nos ahorramos escribir!)",
+    "completion_text": "Â¡Genial! Los ciclos nos permiten repetir secciones de cÃ³digo (Â¡nos ahorramos escribir!)",
     "cover": "shrinking.png"
 }

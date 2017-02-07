@@ -2,7 +2,7 @@
     "id": "baloon",
     "title": "Globo Azul",
     "cover": "blue-baloon.png",
-    "description": "¡Dibuja un globo flotando en el aire usando polígonos!",
+    "description": "Â¡Dibuja un globo flotando en el aire usando polÃ­gonos!",
     "startAt": 2,
     "steps": [
         {
@@ -10,23 +10,23 @@
             "solution": "color blue"
         },
         {
-            "hint": "Configura el trazo a 0, para evitar dibujar líneas. Recuerda, trazo en inglés es stroke",
+            "hint": "Configura el trazo a 0, para evitar dibujar lÃ­neas. Recuerda, trazo en inglÃ©s es stroke",
             "solution": "stroke 0"
         },
         {
-            "hint": "Dibuja un círculo de 100 de tamaño",
+            "hint": "Dibuja un cÃ­rculo de 100 de tamaÃ±o",
             "solution": "circle 100"
         },
         {
-            "hint": "Muévete 100 hacia abajo - **escribe** `move 0, 100`",
+            "hint": "MuÃ©vete 100 hacia abajo - **escribe** `move 0, 100`",
             "solution": "move 0, 100"
         },
         {
-            "hint": "Dibuja el nudo del globo usando un polígono o polygon en inglés - **escribe** `polygon 15, 15, -15, 15`",
+            "hint": "Dibuja el nudo del globo usando un polÃ­gono o polygon en inglÃ©s - **escribe** `polygon 15, 15, -15, 15`",
             "solution": "polygon 15, 15, -15, 15"
         },
         {
-            "hint": "Muévete un poco más hacia abajo - **escribe** `move 0, 15`",
+            "hint": "MuÃ©vete un poco mÃ¡s hacia abajo - **escribe** `move 0, 15`",
             "solution": "move 0, 15"
         },
         {
@@ -34,9 +34,9 @@
             "solution": "stroke black, 5"
         },
         {
-            "hint": "Dibuja la línea del lazo del globo - **escribe** `line 0, 200`",
+            "hint": "Dibuja la lÃ­nea del lazo del globo - **escribe** `line 0, 200`",
             "solution": "line 0, 200"
         }
     ],
-    "completion_text": "¡Increíble globo! ¿Por qué no intentas cambiarle el color antes de continuar?"
+    "completion_text": "Â¡IncreÃ­ble globo! Â¿Por quÃ© no intentas cambiarle el color antes de continuar?"
 }

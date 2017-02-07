@@ -4,7 +4,7 @@
     "cover": "mischiefweek2015/mw-001-skull.png",
     "start_date": "2015-10-26T06:00:00",
     "description": "",
-    "completion_text": "¡Increíble calavera! Puedes agregarle un fondo con algún patrón o algunos accesorios faciales. Cuando hayas finalizado, ¡comparte tu creación para participar y ganarte una camiseta con tu diseño de calavera!",
+    "completion_text": "Â¡IncreÃ­ble calavera! Puedes agregarle un fondo con algÃºn patrÃ³n o algunos accesorios faciales. Cuando hayas finalizado, Â¡comparte tu creaciÃ³n para participar y ganarte una camiseta con tu diseÃ±o de calavera!",
     "startAt": 0,
     "steps": [
             {
@@ -12,43 +12,43 @@
                 "solution": "background charcoal"
             },
             {
-                "hint": "Vamos a dibujar figuras sólidas sin utilizar el trazo, entonces **escribe** `stroke 0`",
+                "hint": "Vamos a dibujar figuras sÃ³lidas sin utilizar el trazo, entonces **escribe** `stroke 0`",
                 "solution": "stroke 0"
             },
             {
-                "hint": "Podemos movernos hacia la posición de la calavera utilizando `moveTo 250, 200`",
+                "hint": "Podemos movernos hacia la posiciÃ³n de la calavera utilizando `moveTo 250, 200`",
                 "solution": "moveTo 250, 200"
             },
             {
-                "hint": "Nuestra calavera debería ser blanca, entonces configura el color de dibujo a blanco usando `color white`",
+                "hint": "Nuestra calavera deberÃ­a ser blanca, entonces configura el color de dibujo a blanco usando `color white`",
                 "solution": "color white"
             },
             {
-                "hint": "La calavera la haremos con una elipse, una especie de círculo estirado. Dibújala escribiendo `ellipse 140, 120`",
+                "hint": "La calavera la haremos con una elipse, una especie de cÃ­rculo estirado. DibÃºjala escribiendo `ellipse 140, 120`",
                 "solution": "ellipse 140, 120"
             },
             {
-                "hint": "Ya comienza a tomar forma, para terminar el cráneo mueve el cursor - **escribe** `move -60, 90`",
+                "hint": "Ya comienza a tomar forma, para terminar el crÃ¡neo mueve el cursor - **escribe** `move -60, 90`",
                 "solution": "move -60, 90"
             },
             {
-                "hint": "La mandíbula de la calavera es un cuadrado, dibújalo usando `square 120`",
+                "hint": "La mandÃ­bula de la calavera es un cuadrado, dibÃºjalo usando `square 120`",
                 "solution": "square 120"
             },
             {
-                "hint": "Muévete hacia arriba para dibujar los ojos - **escribe** `move 10, -50`",
+                "hint": "MuÃ©vete hacia arriba para dibujar los ojos - **escribe** `move 10, -50`",
                 "solution": "move 10, -50"
             },
             {
-                "hint": "Los ojos de nuestra calavera están tan vacíos que te penetran el alma, llevarán el mismo color del fondo. Configúralo usando `color charcoal`",
+                "hint": "Los ojos de nuestra calavera estÃ¡n tan vacÃ­os que te penetran el alma, llevarÃ¡n el mismo color del fondo. ConfigÃºralo usando `color charcoal`",
                 "solution": "color charcoal"
             },
             {
-                "hint": "El ojo es un círculo. Dibújalo con `circle 40`",
+                "hint": "El ojo es un cÃ­rculo. DibÃºjalo con `circle 40`",
                 "solution": "circle 40"
             },
             {
-                "hint": "Muévete para dibujar el otro ojo. **Escribe** `move 100`",
+                "hint": "MuÃ©vete para dibujar el otro ojo. **Escribe** `move 100`",
                 "solution": "move 100"
             },
             {
@@ -56,7 +56,7 @@
                 "solution": "circle 40"
             },
             {
-                "hint": "Muévete para hacer la nariz con `move -50, 60`",
+                "hint": "MuÃ©vete para hacer la nariz con `move -50, 60`",
                 "solution": "move -50, 60"
             },
             {
@@ -64,11 +64,11 @@
                 "solution": "circle 10"
             },
             {
-                "hint": "Finalmente, para la boca muévete hacia abajo **escribiendo** `move -40, 60`",
+                "hint": "Finalmente, para la boca muÃ©vete hacia abajo **escribiendo** `move -40, 60`",
                 "solution": "move -40, 60"
             },
             {
-                "hint": "Finalmente, dibuja la boca con un rectángulo, usa `rectangle 80, 20`",
+                "hint": "Finalmente, dibuja la boca con un rectÃ¡ngulo, usa `rectangle 80, 20`",
                 "solution": "rectangle 80, 20"
             }
     ]
