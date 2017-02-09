@@ -1,4 +1,4 @@
-.modal-overlay(ng-controller='SplashController', ng-show='isSplashOpen')
+.modal-overlay(ng-controller='SplashController', ng-show='splash.display && !splash.hasDisplayed')
     .modal-inner.split-modal.splash
 
         //- Logo
@@ -9,4 +9,4 @@
         //- Start button
         .center.bottom-section
 
-            button.button.large(ng-click='isSplashOpen = false') ${{ partial.start }}$
+            button.button.large(ng-click='splash.close()') ${{ partial.start }}$
