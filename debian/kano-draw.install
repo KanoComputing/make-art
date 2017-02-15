@@ -5,6 +5,7 @@ www/* /usr/share/kano-draw
 kdesktop/Draw.lnk usr/share/kano-desktop/kdesk/kdesktop/
 kdesktop/kano-draw.xml /usr/share/mime/packages/
 icon/kano-draw.png usr/share/icons/Kano/88x88/apps
+icon/locale/es_AR/*.app /usr/share/applications/locale/es_AR/
 icon/application-x-kano-draw.png usr/share/icons/Kano/88x88/mimetypes
 icon/kano-draw-hover.png usr/share/icons/Kano/88x88/apps
 icon/kano-draw.app usr/share/applications
