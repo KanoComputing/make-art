@@ -19,8 +19,7 @@
         },
         {
             "hint": "Genial, ahora para hacer los círculos - dentro del ciclo, **escribe** `circle 10 * i`",
-            "solution": "    circle 10 * i",
-            "validate": "    circle 10 *\\* *i"
+            "solution": "    circle 10 * i"
         }
     ],
     "completion_text": "¡Genial! Los ciclos nos permiten repetir secciones de código (¡nos ahorramos escribir!)",
