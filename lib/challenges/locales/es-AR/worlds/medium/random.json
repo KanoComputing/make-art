@@ -6,7 +6,8 @@
     "steps": [
         {
             "hint": "Mueve el cursor a cualquier sitio - **escribe** `moveTo (random 1, 500), (random 1, 500)`",
-            "solution": "moveTo (random 1, 500), (random 1, 500)"
+            "solution": "moveTo (random 1, 500), (random 1, 500)",
+            "validate": "__moveTo ?\\( *random +1, +500 *\\), +\\( *random +1, +500 *\\)"
         },
         {
             "hint": "Configura el color a rojo, en inglés es red - **escribe** `color red`",

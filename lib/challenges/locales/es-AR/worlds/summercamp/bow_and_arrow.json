@@ -17,7 +17,8 @@
         },
         {
             "hint": "Queremos que el fondo se agite así que comenzaremos por dibujarlo en un punto aleatorio. **escribe** `moveTo (random -20, 0), (random 240, 260)`.",
-            "solution": "moveTo (random -20, 0), (random 240, 260)"
+            "solution": "moveTo (random -20, 0), (random 240, 260)",
+            "validate": "__moveTo ?\\( *random +-20, +0 *\\), +\\( *random +240, +260 *\\)"
         },
         {
             "hint": "Nuestro blanco está en un campo de césped, configuremos el color a verde usando `color green`",
