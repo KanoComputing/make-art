@@ -15,13 +15,11 @@
         },
         {
             "hint": "Vamos a desplegar el espectro de colores - **escribe** `color rotate red, 10 * x + 10 * y`",
-            "solution": "        color rotate red, 10 * x + 10 * y",
-            "validate": "        color rotate +red,10 *\\* *x *\\+ *10 *\\* *y"
+            "solution": "        color rotate red, 10 * x + 10 * y"
         },
         {
             "hint": "Ahora necesitamos repetir la distancia que nos vamos a mover cada vez que dibujemos - **escribe** `moveTo 20 * x, 20 * y`",
-            "solution": "        moveTo 20 * x, 20 * y",
-            "validate": "        moveTo 20 *\\* *x,20 *\\* *y"
+            "solution": "        moveTo 20 * x, 20 * y"
         },
         {
             "hint": "Ahora dibujemos los cuadrados de un tamaño de 20",

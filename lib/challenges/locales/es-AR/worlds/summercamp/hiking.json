@@ -49,7 +49,8 @@
         },
         {
             "hint": "Las nubes están hechas de gotitas de agua y es fácil ver a través de ellas. Para poder darle al color un efecto de transparencia podemos usar la función 'opacity'. **Escribe** `color (opacity white, .1)`",
-            "solution": "color (opacity white, .1)"
+            "solution": "color (opacity white, .1)",
+            "validate": "__color \\(opacity white, .1\\)"
         },
         {
             "hint": "Ahora abramos un nuevo ciclo para dibujar las nubes algodonadas, necesitaremos usar muchos círculos por eso pidámosle al ciclo que los repita unas 250 veces. **Escribe** `for j in [ 0 ... 250 ]`.",
