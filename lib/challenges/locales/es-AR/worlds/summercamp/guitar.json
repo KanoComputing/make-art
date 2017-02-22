@@ -117,11 +117,12 @@
         },
         {
             "hint": "Elige una posición aleatoria - **escribe** `moveTo (random 200, 400), (random 100, 400)`",
-            "solution": "    moveTo (random 200, 400), (random 100, 400)"
+            "solution": "    moveTo (random 200, 400), (random 100, 400)",
+            "validate": "__    moveTo ?\\( *random +200, +400 *\\), +\\( *random +100, +400 *\\)"
         },
         {
             "hint": "¡Vamos, toca algunas notas! - **copia y pega** `text '♪'`",
-            "solution": "    text 'â™ª'"
+            "solution": "    text '♪'"
         }
     ]
 }

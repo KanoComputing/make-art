@@ -24,7 +24,7 @@
         {
             "hint": "Ahora para configurar dónde irá cada estrella -  **escribe** `moveTo (random 1, 500), (random 1, 500)`",
             "solution": "    moveTo (random 1, 500), (random 1, 500)",
-            "validate": "    moveTo ( *random +1,500 *),( *random +1,500 *)"
+            "validate": "__    moveTo ?\\( *random +1, +500 *\\), +\\( *random +1, +500 *\\)"
         },
         {
             "hint": "Dibuja un círculo de un tamaño de 5 para las estrellas, se repetirán",

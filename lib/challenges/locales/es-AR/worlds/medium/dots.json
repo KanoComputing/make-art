@@ -27,8 +27,7 @@
         },
         {
             "hint": "Muévete, **escribe** `moveTo x * 20, y * 20`",
-            "solution": "        moveTo x * 20, y * 20",
-            "validate": "        moveTo x *\\* *20,y *\\* *20"
+            "solution": "        moveTo x * 20, y * 20"
         },
         {
             "hint": "Ahora para hacer los puntos - **escribe** `circle 6`",

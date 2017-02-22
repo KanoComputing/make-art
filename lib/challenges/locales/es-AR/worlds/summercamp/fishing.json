@@ -37,7 +37,8 @@
         },
         {
             "hint": "Mueve cada ola de manera aleatoria hacia la izquierda - **escribe** `move (random 24, 32)`",
-            "solution": "    move (random 24, 32)"
+            "solution": "    move (random 24, 32)",
+            "validate": "__    move \\(random 24, +32\\)"
         },
         {
             "hint": "Presiona ENTER y la tecla borrar para eliminar la sangría y salir del ciclo.\n\nLuego muévete al sitio donde dibujaremos el resto del agua - **escribe** `moveTo 0, 270`.",
@@ -61,7 +62,8 @@
         },
         {
             "hint": "Mueve cada ola a una posición aleatoria en la superficie del agua - **escribe** `moveTo (random 0, 500), (random 260, 500)`",
-            "solution": "    moveTo (random 0, 500), (random 260, 500)"
+            "solution": "    moveTo (random 0, 500), (random 260, 500)",
+            "validate": "__    moveTo ?\\( *random +0, +500 *\\), +\\( *random +260, +500 *\\)"
         },
         {
             "hint": "Ahora dibuja cada ola pequeña como si fuera un arco - **escribe** `arc 10, 0.8, 0.2`",
@@ -89,7 +91,8 @@
         },
         {
             "hint": "Para enterarnos cuando un pez muerde la carnada tenemos que hacer un corcho flotando. Muévete hacia el final del hilo - **escribe** `move -100, (random 197, 202)`",
-            "solution": "move -100, (random 197, 202)"
+            "solution": "move -100, (random 197, 202)",
+            "valudate": "__move -100, \\(random 197, 202\\)"
         },
         {
             "hint": "El corcho no tendrá líneas de borde - **escribe** `stroke 0`",
