@@ -22,5 +22,8 @@
     "download_teachers_guide": "Download teacher's guide",
     "guide": "Guide",
     "recipients_email_address": "Recipient\\'s email address",
-    "your_message": "Your message"
+    "your_message": "Your message",
+    "error": "{{ error.type | upperfirst }} Error",
+    "error_line": "on line {{ error.row + 1 || 0  }}",
+    "error_text": "{{ error.text || 0 }}"
 }
