@@ -22,5 +22,8 @@
     "download_teachers_guide": "教師用のガイドをダウンロード",
     "guide": "ガイド",
     "recipients_email_address": "宛先のメールアドレス",
-    "your_message": "メッセージ"
+    "your_message": "メッセージ",
+    "error": "{{ error.type | upperfirst }} Error",
+    "error_line": "on line {{ error.row + 1 || 0  }}",
+    "error_text": "{{ error.text || 0 }}"
 }
