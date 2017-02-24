@@ -16,6 +16,8 @@
     "playground": "Playground",
     "you_did_it_go_back_for_more_coding_fun": "You did it, go back for more coding fun!",
     "hour_of_code": "Hour Of Code",
-    "solution": "Solution"
+    "solution": "Solution",
+    "success_online": "{{ content.completion_text || 'Well done!' }}",
+    "success_offline": "{{ content.completion_text || 'Well done!' }} You've earned {{ xpGain }} XP!"
 }
 
