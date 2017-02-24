@@ -12,10 +12,10 @@
         .error-display(ng-if='error', ng-class='"error-" + error.type')
 
             h3
-                | {{ error.type | upperfirst }} Error 
-                span(ng-if='error.row !== null') on line {{ error.row + 1 || 0  }}
+                | ${{ directive.error }}$ 
+                span(ng-if='error.row !== null') ${{ directive.error_line }}$
 
-            p {{ error.text || 0 }}
+            p ${{ directive.error_text }}$
 
     .actions
         

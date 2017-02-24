@@ -20,5 +20,8 @@
     "reset": "Reiniciar", 
     "click_plus_to_add_a_shape_2": "para agregar una figura", 
     "autocomplete": "Autocompletar", 
-    "guide": "Guía"
+    "guide": "Guía",
+    "error": "Error de Sintaxis",
+    "error_line": "en la línea {{ error.row + 1 || 0  }}",
+    "error_text": ""
 }
