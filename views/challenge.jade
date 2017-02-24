@@ -26,7 +26,8 @@ include ./partial/header
         .inner.center(ng-if='completed && !fatherDay')
             .completion
                 .text
-                    h4 {{ successMessage() }}
+                    h4(ng-if='offline') ${{ challenge.success_offline }}$
+                    h4(ng-if='!offline') ${{ challenge.success_online }}$
                     a.button.button-success(ng-click='goToNext()') {{ next ? '${{ challenge.next }}$' : '${{ challenge.done }}$' }} &rsaquo;
 
                 .gallery(ng-if='content.gallery')
