@@ -16,5 +16,7 @@
     "now_make_something_new": "¡Ahora crea algo nuevo!",
     "can_you_hack_this_challenge": "¿Puedes hackear este desafío?",
     "you_did_it_go_back_for_more_coding_fun": "¡Lo lograste, vuelve atrás para programar más!",
-    "make_it_into_a_fathers_day_card": "¡Crea una tarjeta para el Día del Padre!"
+    "make_it_into_a_fathers_day_card": "¡Crea una tarjeta para el Día del Padre!",
+    "success_online": "{{ content.completion_text || 'Buen trabajo!' }}",
+    "success_offline": "{{ content.completion_text || 'Buen trabajo!' }} ¡Ganaste {{ xpGain }} PX!"
 }
