@@ -12,7 +12,7 @@
 
     "packages": [],
     "dependencies": ["kano-draw"],
-    "launch_command": "kano-app-launcher kano-draw",
+    "launch_command": "kano-draw",
     "overrides": [],
     "desktop": false,
     "priority": 950
