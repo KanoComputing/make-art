@@ -17,8 +17,7 @@ from kano_profile.badges import increment_app_state_variable_with_dialog, \
 from kano_world.share_helpers import login_and_share
 from kano.network import is_internet
 from kano.utils.audio import play_sound
-from kano.utils.file_operations import empty_directory, ensure_dir, \
-    recursively_copy
+from kano.utils.file_operations import ensure_dir
 from kano.logging import logger
 
 
@@ -30,140 +29,22 @@ WALLPAPER_DIR = os.path.join(CHALLENGE_DIR, 'wallpapers')
 STATIC_ASSET_DIR = os.path.join(os.path.expanduser('~'),
                                 '.make-art-assets')
 
+# Create the directories if necessary
 ensure_dir(CHALLENGE_DIR)
 ensure_dir(WALLPAPER_DIR)
 ensure_dir(STATIC_ASSET_DIR)
 
-
-def _copy_package_assets():
-    # Use abs paths for both src and dest for subsequent replacements to work
-    src_dir = os.path.abspath(_get_package_static_dir())
-    dest_dir = os.path.abspath(STATIC_ASSET_DIR)
-
-    # First Clear this cache
-    empty_directory(dest_dir)
-
-    # Now copy the static assets
-    recursively_copy(src_dir, dest_dir)
-
-    logger.info('Successfully copied over static assets')
-
-
-def _get_package_static_dir():
-    bin_path = os.path.abspath(os.path.dirname(__file__))
-
-    if bin_path.startswith('/usr'):
-        return '/usr/share/kano-draw'
-    else:
-        return os.path.abspath(os.path.join(bin_path, '../www'))
-
-
-def _get_co_assets():
-    from kano_content.api import ContentManager
-
-    cm = ContentManager.from_local()
-
-    co_index = {}
-
-    for co in cm.list_local_objects(spec='make-art-assets'):
-        co_files = co.get_data('').get_content()
-        if len(co_files) != 2:
-            logger.warning(
-                'Count of files other than 2 in co[{}], skipping'.format(
-                    co.get_data('').get_dir()
-                )
-            )
-            continue
-
-        # Check whether the first file is the index
-        index_no = _get_co_index_apply_order(co_files[0])
-        if index_no is not None:
-            co_index[index_no] = co_files[1]
-        else:
-            # It wasn't the first one, go for the second one
-            index_no = _get_co_index_apply_order(co_files[1])
-            if index_no is not None:
-                co_index[index_no] = co_files[0]
-            else:
-                err_msg = 'None of the files contained in co have apply index'
-                logger.error(err_msg)
-                continue
-
-    return co_index
-
-
-def _apply_co_packages(dest_dir):
-    import tarfile
-
-    co_index = _get_co_assets()
-
-    for order in sorted(co_index.iterkeys()):
-        tar_file = co_index[order]
-        # First try to open the file
-        try:
-            tarball = tarfile.open(tar_file)
-        except (IOError, OSError) as exc:
-            err_msg = "Couldn't open file '{}', [{}]".format(tar_file, exc)
-            logger.error(err_msg)
-            continue
-        except tarfile.ReadError as exc:
-            err_msg = 'Error parsing tarfile "{}", [{}]'.format(tar_file, exc)
-            logger.error(err_msg)
-            continue
-        else:
-            # Now try to extract the files one by one
-            with tarball:
-                for tarred_file in tarball:
-                    try:
-                        tarball.extract(tarred_file, path=dest_dir)
-                    except IOError as exc:
-                        # This is to guard against weird tar behaviour when
-                        # trying to ovewrite symlinks
-                        bad_filename = os.path.join(dest_dir, tarred_file.name)
-                        if os.path.islink(bad_filename):
-                            logger.debug(
-                                'Remove link and ovewrite "{}"'.format(
-                                    bad_filename)
-                            )
-                            os.remove(os.path.join(dest_dir, tarred_file.name))
-                            tarball.extract(tarred_file, path=dest_dir)
-
-
-def _get_co_index_apply_order(fname):
-    index_no = None
-    # Files names have absolute path
-    if os.path.basename(fname) == 'index.json':
-        try:
-            index_fh = open(fname)
-        except (IOError, OSError) as exc:
-            err_msg = 'Error opening file "{}". [{}]'.format(
-                fname,
-                exc
-            )
-            logger.error(err_msg)
-        else:
-            with index_fh:
-                try:
-                    ind_data = json.load(index_fh)
-                    index_no = ind_data['apply_order']
-                except KeyError as exc:
-                    err_msg = ("JSON in '{}' doesn't contain right key: "
-                               "[{}]").format(fname, exc)
-                    logger.error(err_msg)
-                except ValueError as exc:
-                    err_msg = 'File "{}" is not a valid JSON: [{}]'.format(
-                        fname,
-                        exc
-                    )
-                    logger.error(err_msg)
-    return index_no
-
-
 def _get_static_dir():
-    return STATIC_ASSET_DIR
+    '''
+    Returns directory where http server content is located
+    '''
+    return '/usr/share/kano-draw'
 
 
 def _get_image_from_str(img_str):
+    '''
+    Returns a base64 encoded data of the img_str image file.
+    '''
     import base64
 
     image_b64 = img_str.split(',')[-1]
@@ -173,6 +54,9 @@ def _get_image_from_str(img_str):
 
 
 def _save(data):
+    '''
+    Save the current creation in the user home directory
+    '''
     filename = data['filename']
     try:
         desc = data['description']
@@ -202,12 +86,14 @@ def _save(data):
     return (filename, filepath)
 
 
-_copy_package_assets()
-_apply_co_packages(STATIC_ASSET_DIR)
+# Start the http server now
+
 server = Flask(__name__, static_folder=_get_static_dir(), static_url_path='/')
 server_logger = logging.getLogger('werkzeug')
 server_logger.setLevel(logging.ERROR)
 
+
+# Server backend methods
 
 @server.route('/')
 # Return the homepage for pages routed through Angular
@@ -406,7 +292,6 @@ def page_not_found(err):
 
 @server.route('/play_sound/<path:filename>', methods=['POST'])
 def play_sounds(filename):
-    print os.path.realpath(os.path.join(_get_static_dir(), filename))
     sound_file = os.path.realpath(os.path.join(_get_static_dir(), filename))
     play_sound(sound_file)
 
