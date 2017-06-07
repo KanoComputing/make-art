@@ -43,7 +43,7 @@ def _get_static_dir():
 
 def _get_image_from_str(img_str):
     '''
-    Create a unique filename that points to img_str
+    Returns a base64 encoded data of the img_str image file.
     '''
     import base64
 
