@@ -4,7 +4,8 @@
     "description": "Use variables to create a maze dwelling ghost",
     "code": "",
     "startAt": 2,
-    "steps": [{
+    "steps": [
+        {
             "hint": "This classic ghost character first appeared in Pac-Man (1980), because it's a ghost we're going to need a spooky background **type** `background navy`",
             "solution": "background navy"
         },

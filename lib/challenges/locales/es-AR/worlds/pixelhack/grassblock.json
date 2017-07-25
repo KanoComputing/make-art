@@ -24,8 +24,7 @@
         },
         {
             "hint": "Necesitaremos movernos para cada cuadrado utilizando `moveTo x * 31.25, y * 31.25`",
-            "solution": "        moveTo x * 31.25, y * 31.25",
-            "validate": "        moveTo x \\* 31.25, y \\* 31.25"
+            "solution": "        moveTo x * 31.25, y * 31.25"
         },
         {
             "hint": "Finalmente dibujemos los cuadrados de tierra utilizando `square 32`",
@@ -34,8 +33,7 @@
         },
         {
             "hint": "El césped debería aparecer en la parte de arriba del bloque por eso determinemos una condición que posicione los bits verdes utilizando `if 4 >  y + random 0, 3`",
-            "solution": "        if 4 > y + random 0, 3",
-            "validate": "        if 4 > y \\+ random 0, 3"
+            "solution": "        if 4 > y + random 0, 3"
         },
         {
             "hint": "Configura el color verde con la función para oscurecer. **Escribe** `color darken green, random 0, 25`",

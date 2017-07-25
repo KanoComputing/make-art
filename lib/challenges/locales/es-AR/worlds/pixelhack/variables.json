@@ -35,8 +35,7 @@
         },
         {
             "hint": "Es hora de dibujar el resto del cuerpo del fantasma, como que el cuerpo se encuentra en relación con el tamaño de la cabeza, vamos a utilizar la variable otra vez **escribe** `square ghostsize * 2`",
-            "solution": "square ghostsize * 2",
-            "validate": "square ghostsize \\* 2"
+            "solution": "square ghostsize * 2"
         },
         {
             "hint": "Vamos a dibujarle ojos. Para asegurarnos de que están ubicados correctamente dentro de la cabeza, vamos a utilizar la variable otra vez. **type** `move ghostsize / 2`",

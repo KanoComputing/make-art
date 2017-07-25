@@ -26,7 +26,8 @@
         },
         {
             "hint": "Finally, lets add squares. **Type** `square 25`",
-            "solution": "        square 25"        }
+            "solution": "        square 25"
+        }
     ],
     "completion_text": "Well done! The rotate function cycles through colours creating a rainbow effect.",
     "gallery": {
