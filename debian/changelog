@@ -1,3 +1,9 @@
+kano-draw (3.11.0-1) unstable; urgency=low
+
+  * Bump version for OS 3.11.0 release
+
+ -- Team Kano <dev@kano.me>  Tue, 25 Jul 2017 15:35:00 +0100
+
 kano-draw (3.9.2-1) unstable; urgency=low
 
   * Initial es_AR customer release
