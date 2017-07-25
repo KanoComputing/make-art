@@ -23,8 +23,7 @@
         },
         {
             "hint": "Muévete en la posición para cada cuadrado utilizando `moveTo x * 31.25, y * 31.25`",
-            "solution": "        moveTo x * 31.25, y * 31.25",
-            "validate": "        moveTo x \\* 31.25, y \\* 31.25"
+            "solution": "        moveTo x * 31.25, y * 31.25"
         },
         {
             "hint": "Finalmente dibuja los cuadrados utilizando `square 32`",
@@ -51,8 +50,7 @@
         },
         {
             "hint": "Muévete en la posición para cada cuadrado utilizando `moveTo x * 31.25, y * 31.25`",
-            "solution": "            moveTo x * 31.25, y * 31.25",
-            "validate": "            moveTo x \\* 31.25, y \\* 31.25"
+            "solution": "            moveTo x * 31.25, y * 31.25"
         },
         {
             "hint": "Finalmente dibuja los cuadrados de diamante utilizando `square 32`",
