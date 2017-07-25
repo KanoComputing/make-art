@@ -18,8 +18,7 @@
         },
         {
             "hint": "Para entender mejor cómo funciona nuestro ciclo, vamos a dibujar cada uno de los valores. Muévete a la posición usando `moveTo 250, y * 50`",
-            "solution": "    moveTo 250, y * 50",
-            "validate": "    moveTo 250, y \\* 50"
+            "solution": "    moveTo 250, y * 50"
         },
         {
             "hint": "Vamos a inspeccionar qué hace nuestro ciclo. La función de texto (text en inglés) nos permitirá verlo. **Escribe ** `text y` para ver los valores de Y a través de la pantalla.",
@@ -28,13 +27,11 @@
         },
         {
             "hint": "La variable Y crece a medida que avanza el ciclo. Va de 0 (que se encuentra fuera de la pantalla) a 10. Para dibujar el atardecer necesitamos movernos al borde izquierdo **Escribe ** `moveTo 0, y * 50`",
-            "solution": "    moveTo 0, y * 50",
-            "validate": "    moveTo 0, y \\* 50"
+            "solution": "    moveTo 0, y * 50"
         },
         {
             "hint": "Utilizaremos una función especial para ir oscureciendo el color en cada valor del ciclo. **Escribe ** `color darken blue, y * 3`.",
-            "solution": "    color darken blue, y * 3",
-            "validate": "    color darken blue, y \\* 3"
+            "solution": "    color darken blue, y * 3"
         },
         {
             "hint": "Ahora para el cielo haremos rectángulos que ocupan toda la pantalla, cubrirán los números. **Escribe ** `rectangle 500, 50`.",
