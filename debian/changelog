@@ -1,3 +1,9 @@
+kano-draw (3.9.2-1) unstable; urgency=low
+
+  * Initial es_AR customer release
+
+ -- Team Kano <dev@kano.me>  Tue, 25 Jul 2017 15:30:00 +0100
+
 kano-draw (2.3.0-1) unstable; urgency=low
 
   * Introduce Pixel Hack challenge group
