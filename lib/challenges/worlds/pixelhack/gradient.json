@@ -18,7 +18,7 @@
         },
         {
             "hint": "To understand how this loop works, we’ll draw the loop value out. Move into position with `moveTo 250, y * 50`",
-            "solution": "    moveTo 250, y * 50"        
+            "solution": "    moveTo 250, y * 50"
         },
         {
             "hint": "Let’s inspect what our loop is doing. You can use the text function with plain text, but you can also pass it a variable. **Type** `text y` to see what the y values are across the screen.",
