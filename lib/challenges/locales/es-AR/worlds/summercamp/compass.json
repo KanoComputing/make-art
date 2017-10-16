@@ -3,7 +3,7 @@
     "title": "Una brújula es una herramienta esencial",
     "short_title": "Brújula",
     "icon_class": "challenge_compass",
-    "description": "Una brújula es simplemente un imán, generalmente una aguja magnetizada. Dado que los opuestos se atraen, el polo sur de la aguja se encuentra atraído al polo norte mágnetico y natural de la Tierra. ¿Sabías que puedes construir la tuya propia con un clip, un corcho y un imán?",
+    "description": "Una brújula es simplemente un imán, generalmente una aguja magnetizada. Dado que los opuestos se atraen, el polo sur de la aguja se encuentra atraído al polo norte magnético y natural de la Tierra. ¿Sabías que puedes construir la tuya propia con un clip, un corcho y un imán?",
     "cover": "summercamp/day_9.png",
     "completion_text": "Ahora intenta agregar los otros componentes de la brújula: los demás puntos cardinales (E, S, O y también podría ser NE, NO, SE y SO) ¿Por qué no una mano que la sostenga?",
     "difficulty": 1,
@@ -18,7 +18,7 @@
             "solution": "background lightgray"
         },
         {
-            "hint": "En una nueva línea, configura el trazo de color dorado usando `stroke`, dorado en inglés es `gold` y hazlo de un tamaño de `20`",
+            "hint": "En una nueva línea, configura el trazo de color dorado usando `stroke`. Dorado en inglés es `gold` y hazlo de un tamaño de `20`",
             "solution": "stroke gold, 20"
         },
         {
@@ -58,7 +58,7 @@
             "solution": "text 'N'"
         },
         {
-            "hint": "Ahora necesitamos una aguja con dos puntas. Configura el `color` a `red` para la primera punta",
+            "hint": "Ahora necesitamos una aguja con dos puntas. Configura el `color` a `red` - que es rojo - para la primera punta",
             "solution": "color red"
         },
         {

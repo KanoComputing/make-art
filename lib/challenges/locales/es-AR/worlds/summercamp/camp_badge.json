@@ -25,7 +25,7 @@
             "solution": "stroke red, 20"
         },
         {
-            "hint": "Dibuja un círculo o `circle` en inglés, de un tamaño de `200`",
+            "hint": "Dibuja un círculo, o `circle` en inglés, de un tamaño de `200`",
             "solution": "circle 200"
         },
         {
@@ -45,7 +45,7 @@
             "solution": "circle 180"
         },
         {
-            "hint": "Agrega decoración. Configura el `color` a verde o `green`",
+            "hint": "Agreguemos algo de decoración. Configura el `color` a verde o `green`",
             "solution": "color green"
         },
         {
