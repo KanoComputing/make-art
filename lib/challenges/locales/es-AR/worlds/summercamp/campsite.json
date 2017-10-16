@@ -2,7 +2,7 @@
     "id": "campsite",
     "title": "Dibuja tu Camping",
     "short_title": "Camping",
-    "description": "Es hora de buscar un lugar agradable para tu campamento. Lo más importante a la hora de buscar sitio para construir un campamento es que sea un terreno llano. Si es posible, que haya alguna fuente de agua cerca, esto facilitará el momento de la cocina y la limpieza. Finalmente, asegúrate de que esté rodeado de algunos árboles, ya que brindan leña y una buena protección del sol.  \nTus amigos querrán ver cómo se ve tu camping, cuando tengas uno en mente ¡dibújalo! Puedes programar el lugar donde te estarás quedando las próximas semanas.",
+    "description": "Es hora de buscar un lugar agradable para tu campamento. Lo más importante a la hora de buscar sitio para construir un campamento es que sea un terreno llano. Si es posible, que haya alguna fuente de agua cerca, esto facilitará el momento de la cocina y la limpieza. Finalmente, asegúrate de que esté rodeado de algunos árboles, ya que brindan leña y una buena protección del sol.  \nTus amigos querrán ver cómo se ve tu camping, cuando tengas uno en mente ¡dibújalo!",
     "icon_class": "challenge_location",
     "completion_text": "¡El camping se ve genial! Intenta agregar más árboles, flores, piedras... ¿tal vez una cerca?",
     "cover": "summercamp/day_2.png",
@@ -34,7 +34,7 @@
             "solution": "circle 40"
         },
         {
-            "hint": "Hay una nube en el horizonte. - **escribe** `moveTo 440, 80`",
+            "hint": "Hay una nube en el horizonte - **escribe** `moveTo 440, 80`",
             "solution": "moveTo 440, 80"
         },
         {
@@ -58,7 +58,7 @@
             "solution": "rectangle 500, 310"
         },
         {
-            "hint": "Configura el `color` a verde o `green` en inglés, para el césped",
+            "hint": "Configura el `color` a verde, o `green` en inglés, para el césped",
             "solution": "color green"
         },
         {

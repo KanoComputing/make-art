@@ -16,7 +16,7 @@
             "solution": "background blue"
         },
         {
-            "hint": "Queremos que el fondo se agite así que comenzaremos por dibujarlo en un punto aleatorio. **escribe** `moveTo (random -20, 0), (random 240, 260)`.",
+            "hint": "Queremos que el fondo se agite, así que comenzaremos por dibujarlo en un punto aleatorio. **escribe** `moveTo (random -20, 0), (random 240, 260)`.",
             "solution": "moveTo (random -20, 0), (random 240, 260)",
             "validate": "__moveTo ?\\( *random +-20, +0 *\\), +\\( *random +240, +260 *\\)"
         },
@@ -25,7 +25,7 @@
             "solution": "color green"
         },
         {
-            "hint": "Dibuja el césped usando `rectangle` hazlo de un tamaño de `550` píxeles de alto por `300` píxeles de ancho",
+            "hint": "Dibuja el césped usando `rectangle`, y hazlo de un tamaño de `550` píxeles de alto por `300` píxeles de ancho",
             "solution": "rectangle 550, 300"
         },
         {
@@ -93,7 +93,7 @@
             "solution": "moveTo 800, 375"
         },
         {
-            "hint": "Claro que vamos a dibujarlo con forma de arco, díbujalo con un trazo grueso de color madera oscura - **escribe** `stroke darkbrown, 40`",
+            "hint": "Claro que vamos a dibujarlo con forma de arco, dibújalo con un trazo grueso de color madera oscura - **escribe** `stroke darkbrown, 40`",
             "solution": "stroke darkbrown, 40"
         },
         {

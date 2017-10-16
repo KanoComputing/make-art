@@ -2,7 +2,7 @@
     "id": "campfire",
     "title": "Fogata",
     "short_title": "Fogata",
-    "description": "Es tiempo de iniciar una fogata. En el descampado, ésta podría ser tu única fuente de luz y calor. Ardiendo por encima de los 600 grados centígrados, ¡esto será seguro para mantener el calor y alimentarte también! Sobre la llama y con la ayuda de algún pinche puedes cocinar carne, vegetales y malvaviscos.  \nLas fogatas se arman con leños pero tú la harás programando y utilizando un cilco. A medida que tu fuego crece y se mezcla con el oxígeno, cambia de color entre los distintos tonos de naranja. Tus códigos de programación darán lugar a cientos de colores utilizando únicamente algunas líneas de comandos.",
+    "description": "Es tiempo de iniciar una fogata. En el descampado, ésta podría ser tu única fuente de luz y calor. Ardiendo por encima de los 600 grados centígrados, ¡esto será seguro para mantener el calor y alimentarte también! Sobre la llama y con la ayuda de algún pinche puedes cocinar carne, vegetales y malvaviscos.  \nLas fogatas se arman con leños pero tú la harás programando y utilizando un ciclo. A medida que tu fuego crece y se mezcla con el oxígeno, cambia de color entre los distintos tonos de naranja. Tus códigos de programación darán lugar a cientos de colores utilizando únicamente algunas líneas de comandos.",
     "icon_class": "challenge_fire",
     "completion_text": "¡Intenta agregar un cielo estrellado, más llamas de fuego o un aro de rocas alrededor de tu fogata para que sea más seguro cocinar algo!",
     "difficulty": 2,

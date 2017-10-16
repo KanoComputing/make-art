@@ -18,7 +18,7 @@
             "solution": "background darkblue"
         },
         {
-            "hint": "Configura el trazo usando `stroke` a `0`, en este desafío no lo necesitamos",
+            "hint": "Configura el trazo usando `stroke` a `0`, en este desafío no lo necesitaremos",
             "solution": "stroke 0"
         },
         {
@@ -82,7 +82,7 @@
             "solution": "color \"rgba(255, 255, 0, 0.8)\""
         },
         {
-            "hint": "Coloca el rayo de luz en frente de la linterna - **escribe** `move -50, -140`",
+            "hint": "Coloca el rayo de luz enfrente de la linterna - **escribe** `move -50, -140`",
             "solution": "move -50, -140"
         },
         {

@@ -6,7 +6,7 @@
     "startAt": 1,
     "steps": [
         {
-            "hint": "¡Empecemos por el cielo! Configura el color del fondo a azul, usando background",
+            "hint": "¡Empecemos por el cielo! Configura el color del fondo a azul, usando los comandos en inglés",
             "solution": "background blue"
         },
         {
@@ -54,7 +54,7 @@
             "solution": "move 220, -80"
         },
         {
-            "hint": "Ahora configura el color a marrón para hacer la puerta de madera",
+            "hint": "Ahora configura el color a marrón (o brown en inglés) para hacer la puerta de madera",
             "solution": "color brown"
         },
         {

@@ -1,9 +1,9 @@
 {
     "id": "fireworks",
-    "title": "Fuergos Artificiales",
+    "title": "Fuegos Artificiales",
     "short_title": "Fuegos Artificiales",
     "icon_class": "challenge_fireworks",
-    "description": "¡El campamento está llegando a su fin y tenemos fuegos artificiales para celebrar! Los fuegos artificiales fueron utilizados durante muchos siglos, se cree que los inventaron los chinos. Estamos listos para empezar el show pero necesitamos un poco de ayuda diseñando los fuegos artificiales ¿podrías hacerlo?",
+    "description": "¡El campamento está llegando a su fin y tenemos fuegos artificiales para celebrar! Los fuegos artificiales fueron utilizados durante muchos siglos: se cree que los inventaron los chinos. Estamos listos para empezar el show pero necesitamos un poco de ayuda diseñando los fuegos artificiales ¿podrías hacerlo?",
     "cover": "summercamp/day_21.png",
     "completion_text": "¡Buen trabajo! ¡Hiciste una función para dibujar fuegos artificiales! ¿Puedes mejorarla? ¡Dibújalos a lo largo de toda la pantalla, agrega otras creaciones y comparte tu dibujo!",
     "difficulty": 3,

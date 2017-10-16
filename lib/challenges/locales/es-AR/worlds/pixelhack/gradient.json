@@ -9,7 +9,7 @@
             "solution": "stroke 0"
         },
         {
-            "hint": "Para ver mejor los resultados en esta prueba activa la negrita del texto utilizando el comando `bold true` bold significa negrita y true verdadero, eso quiere decir que está activado",
+            "hint": "Para ver mejor los resultados en esta prueba activa la negrita del texto utilizando el comando `bold true`. Bold significa negrita y true verdadero, eso quiere decir que está activado",
             "solution": "bold true"
         },
         {

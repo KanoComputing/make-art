@@ -44,7 +44,7 @@
             "solution": "    polygon 400, 500, -400, 500"
         },
         {
-            "hint": "Primero, sal del ciclo usando la tecla `BORRAR`. Ahora dibujemos algunas nubes, empieza por suprimir el trazo con `stroke 0`",
+            "hint": "Primero, sal del ciclo usando la tecla `borrar`. Ahora dibujemos algunas nubes, empieza por suprimir el trazo con `stroke 0`",
             "solution": "stroke 0"
         },
         {
@@ -73,7 +73,7 @@
             "solution": "    circle 100"
         },
         {
-            "hint": "Presiona la tecla `BORRAR` una vez para salir del ciclo. Ahora mueve el cursor a donde escribiremos un poco de texto `moveTo 250, 350`",
+            "hint": "Presiona la tecla `borrar` una vez para salir del ciclo. Ahora mueve el cursor a donde escribiremos un poco de texto `moveTo 250, 350`",
             "solution": "moveTo 250, 350"
         },
         {

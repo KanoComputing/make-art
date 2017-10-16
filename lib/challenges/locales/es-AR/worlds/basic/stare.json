@@ -5,7 +5,7 @@
     "startAt": 2,
     "steps": [
         {
-            "hint": "Configura el color del fondo a negro. Recuerda escribir el color en inglés: black; fondo en inglés es background.",
+            "hint": "Configura el color del fondo a negro. Negro en inglés se dice **black**; fondo es **background**.",
             "solution": "background black"
         },
         {
@@ -14,11 +14,11 @@
             "validate": "move -80"
         },
         {
-            "hint": "Configura el color de dibujo a blanco",
+            "hint": "Configura el color de dibujo a blanco. ¿Te acuerdas cómo se dice en inglés?",
             "solution": "color white"
         },
         {
-            "hint": "Dibuja una elipse, es como un círculo estirado. Elipse en inglés se dice ellipse - **escribe** `ellipse 60, 40`",
+            "hint": "Dibuja una elipse: es como un círculo estirado. Elipse en inglés se dice casi igual **ellipse** - **escribe** `ellipse 60, 40`",
             "solution": "ellipse 60, 40"
         },
         {

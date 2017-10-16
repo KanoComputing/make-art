@@ -5,7 +5,7 @@
     "description": "Los osos son muy inteligentes y incluso activan trampas para osos con rocas para poder comer el cebo de manera segura. Estos animales pueden correr a 64km/h, lo suficientemente rápido como para atrapar a un caballo que corre. Ten en cuenta que la persona más rápida del mundo es Usain Bolt ¡puede correr a 43km/h! Ya que los osos pueden caminar distancias cortas con sus patas traseras, los nativos de Estados Unidos los llaman “las bestias que caminan como humanos.”",
     "icon_class": "challenge_bear",
     "cover": "summercamp/day_11.png",
-    "completion_text": "Ese oso tan tierno necesita un cuerpo y un hábitat. Usa tus habilidades de programación para impresionar a otros miembros del camping. Recuerda que los íconos de la izquierda pueden ayudarte a alcanzar lo que estás pensando.",
+    "completion_text": "Ese oso tan tierno necesita un cuerpo y un hábitat. Usa tus habilidades de programación para impresionar a tus compañeros. Recuerda que los íconos de la izquierda pueden ayudarte a alcanzar lo que estás pensando.",
     "difficulty": 1,
     "startAt": 0,
     "summerCamp": true,
