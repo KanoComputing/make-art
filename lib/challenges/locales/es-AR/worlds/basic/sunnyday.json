@@ -6,15 +6,15 @@
     "startAt": 2,
     "steps": [
         {
-            "hint": "Siempre que ingresemos un comando debemos escribirlo en inglés. Primero vamos a llenar el fondo con un lindo cielo azul usando la palabra en inglés: background - **Escribe** `background blue`",
+            "hint": "Siempre que ingresemos un comando debemos escribirlo en inglés. Primero vamos a llenar el fondo con un lindo cielo azul usando la palabra en inglés: **background** - **escribe** `background blue`",
             "solution": "background blue"
         },
         {
-            "hint": "Ahora necesitamos cambiar el color de dibujo a un amarillo brillante. Vamos a utilizar la palabra en inglés yelloe - en una nueva línea **escribe** `color yellow`",
+            "hint": "Ahora necesitamos cambiar el color de dibujo a un amarillo brillante. Vamos a utilizar la palabra en inglés **yellow** - en una nueva línea **escribe** `color yellow`",
             "solution": "color yellow"
         },
         {
-            "hint": "Finalmente vamos a dibujar el sol, usamos el comando de círculo seguido del tamaño que queremos que tenga. La palabra en inglés para círculo es: circle - en una nueva línea **escribe** `circle 150`",
+            "hint": "Finalmente vamos a dibujar el sol. Usamos el comando de círculo seguido del tamaño que queremos que tenga. La palabra en inglés para círculo es **circle**. En una nueva línea **escribe** `circle 150`",
             "solution": "circle 150"
         }
     ],

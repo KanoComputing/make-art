@@ -49,6 +49,6 @@
             "solution": "polygon -60, 50, 0, 100, 60, 50"
         }
     ],
-    "completion_text": "¡Felicitaciones! El fondo tiene 500 de ancho por 500 de alto, hay que ser muy hábil para moverse dentro de él",
+    "completion_text": "¡Felicitaciones! El fondo tiene 500 de ancho por 500 de alto - hay que ser muy hábil para moverse dentro de él",
     "cover": "stickman.png"
 }

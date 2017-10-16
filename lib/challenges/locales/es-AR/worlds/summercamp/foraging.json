@@ -14,7 +14,7 @@
     },
     "steps": [
         {
-            "hint": "Configura el trazo a `0` usando`stroke`",
+            "hint": "Configura el trazo a `0` usando `stroke`",
             "solution": "stroke 0"
         },
         {
