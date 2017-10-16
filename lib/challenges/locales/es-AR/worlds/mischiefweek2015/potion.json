@@ -61,7 +61,7 @@
             "solution": "move -30, 30"
         },
         {
-            "hint": "Configura el color del vidrio del frasco opacando el blanco, usa `color opacity(white, .4)`",
+            "hint": "Configura el color del vidrio del frasco haciéndolo opaco el blanco, usa `color opacity(white, .4)`",
             "solution": "color opacity(white, .4)"
         },
         {

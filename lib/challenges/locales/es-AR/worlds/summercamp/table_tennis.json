@@ -22,7 +22,7 @@
             "solution": "background blue"
         },
         {
-            "hint": "Congfigura el color a verde para hacer el césped. **escribe** `color green`.",
+            "hint": "Configura el color a verde para hacer el césped. **escribe** `color green`.",
             "solution": "color green"
         },
         {
@@ -34,7 +34,7 @@
             "solution": "rectangle 500, 150"
         },
         {
-            "hint": "Dale a tu mesa patas sólidas para sostenerla. Configura el `color` a marrón uslando la palabra inglesa `brown`",
+            "hint": "Dale a tu mesa patas sólidas para sostenerla. Configura el `color` a marrón usando la palabra inglesa `brown`",
             "solution": "color brown"
         },
         {
@@ -66,7 +66,7 @@
             "solution": "moveTo 445, 250"
         },
         {
-            "hint": "Ahora dibuja la cuarta pata",
+            "hint": "Dibuja la cuarta pata",
             "solution": "rectangle 15, 150"
         },
         {

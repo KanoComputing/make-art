@@ -3,9 +3,9 @@
     "title": "Relájate viendo una película",
     "short_title": "Cine",
     "icon_class": "challenge_cinema",
-    "description": "En 1895 y luego de transmitir una presentación de los hermanos Skladanowsky que consistía en una seguidilla de películas cortas de 6 segundos de duración acompañadas de una pieza musical, el teatro Berlín Wintergarten ubicado en Mitte, Berlín, se convirtió en el primer teatro-cine. Desafortunadamente, el teatro fue destruído en 1944 durante la Segunda Guerra Mundial a causa de bombardeos.",
+    "description": "En 1895 y luego de transmitir una presentación de los hermanos Skladanowsky que consistía en una seguidilla de películas cortas de 6 segundos de duración acompañadas de una pieza musical, el teatro Berlín Wintergarten se convirtió en el primer teatro-cine. Desafortunadamente, el teatro fue destruido en 1944 durante la Segunda Guerra Mundial a causa de bombardeos.",
     "cover": "summercamp/day_14.png",
-    "completion_text": "¿Qué tan divertido es un cine si no transmite una película? Intenta dibujar una escena de tu película favorita en la pantalla grande y tal vez algunos amigos mirando la película contigo ¡No olvides las palomitas de maíz!",
+    "completion_text": "¿Qué tan divertido es un cine si no transmite una película? Intenta dibujar una escena de tu película favorita en la pantalla grande y tal vez algunos amigos mirando la película contigo. ¡No olvides las palomitas de maíz!",
     "difficulty": 2,
     "startAt": 0,
     "summerCamp": true,
@@ -70,7 +70,7 @@
             "solution": "rectangle 30, 330"
         },
         {
-            "hint": "Este cine necesita asientos para la audiencia - **escribe** `moveTo 0, 360`",
+            "hint": "Este cine necesita asientos - **escribe** `moveTo 0, 360`",
             "solution": "moveTo 0, 360"
         },
         {
@@ -110,7 +110,7 @@
             "solution": "        move 130"
         },
         {
-            "hint": "Por último, asegúrate de que los asientos estén ubicados correctamente - Presiona **Enter**, luego la tecla **Borar** una sola vez y **escribe** `move -800` dentro del **primer** ciclo",
+            "hint": "Por último, asegúrate de que los asientos estén ubicados correctamente - presiona **Enter**, luego la tecla **Borrar** una sola vez y **escribe** `move -800` dentro del **primer** ciclo",
             "solution": "    move -800"
         }
     ]
