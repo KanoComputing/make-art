@@ -3,7 +3,7 @@
     "title": "Pesca",
     "short_title": "Pesca",
     "icon_class": "challenge_fishing",
-    "description": "¡Es hora de ir a pescar! Dentro del lago del campamento hay trucha, bagre y perca nadando por un bocado. Toma tu caña de pescar, alguna carnada y encamínate hacia al lago para la aventura de hoy.",
+    "description": "¡Es hora de ir a pescar! Dentro del lago del campamento hay trucha, bagre y perca nadando por un bocado. Toma tu caña de pescar, alguna carnada y encamínate hacia el lago para la aventura de hoy.",
     "cover": "summercamp/day_17.png",
     "completion_text": "¡Buen trabajo! Cada vez que presionas una tecla, la imagen se re-dibuja. Intenta mantener apretada la barra espaciadora y fíjate cómo se mueven las olas. Además intenta agregar algún pez o hacer que desaparezca el corcho. ",
     "difficulty": 2,
@@ -16,7 +16,7 @@
             "solution": "background lightblue"
         },
         {
-            "hint": "Vamos a empezar por dibujar las olas en el lago. Queremos dibujarlas sin color de rellono - configura el `color` a `null`.",
+            "hint": "Vamos a empezar por dibujar las olas en el lago. Queremos dibujarlas sin color de relleno - configura el `color` a `null`.",
             "solution": "color null"
         },
         {
@@ -70,7 +70,7 @@
             "solution": "    arc 10, 0.8, 0.2"
         },
         {
-            "hint": "¡Brillante! ¡Cada vez que presiones la barra espaciadora, nuevas olas aparecerán en lugares aleatorios, le da un efecto de movimiento al agua!\n\nPara poder pescar algo necesitamos una caña  de pescar marrón - Sal del ciclo y **escribe** `stroke brown, 10`.",
+            "hint": "¡Brillante! ¡Cada vez que presiones la barra espaciadora, nuevas olas aparecerán en lugares aleatorios, le da un efecto de movimiento al agua!\n\nPara poder pescar algo necesitaremos una caña de pescar marrón - Sal del ciclo y **escribe** `stroke brown, 10`.",
             "solution": "stroke brown, 10"
         },
         {

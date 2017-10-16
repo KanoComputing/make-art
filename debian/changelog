@@ -1,8 +1,9 @@
-kano-draw (3.9.2-1) unstable; urgency=low
+kano-draw (3.9.2-0) unstable; urgency=low
 
   * Initial es_AR customer release
+  * Updated es_AR translations of nearly all challenges (backport)
 
- -- Team Kano <dev@kano.me>  Tue, 25 Jul 2017 15:30:00 +0100
+ -- Team Kano <dev@kano.me>  Mon, 16 Oct 2017 11:08:00 +0100
 
 kano-draw (2.3.0-1) unstable; urgency=low
 

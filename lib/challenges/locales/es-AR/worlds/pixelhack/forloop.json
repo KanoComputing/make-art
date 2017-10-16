@@ -1,11 +1,11 @@
 {
     "id": "forloop",
     "title": "For Loop",
-    "description": "Usa un Ciclo For para crear fácilmente una viborita.",
+    "description": "Usa un Ciclo for para crear fácilmente una viborita.",
     "startAt": 2,
     "steps": [
         {
-            "hint": "Vamos a recrear el clásico juego de la serpiente usando el poder de los ciclos For para evitar dibujar círculo por círculo. Primero configura un fondo sucio  - **escribe** `background tan`",
+            "hint": "Vamos a recrear el clásico juego de la serpiente usando el poder de los ciclos for. For significa por en inglés y esta función útil nos permite evitar dibujar círculo por círculo. Primero configura un fondo sucio - **escribe** `background tan`",
             "solution": "background tan"
         },
         {

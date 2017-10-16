@@ -1,8 +1,8 @@
 {
     "id": "spiderweb",
     "title": "Telaraña",
-    "description": "¡Juega con la telearaña!",
-    "completion_text": "¡Feliz Halloween! El desafío de hoy es que jueges con los comandos que ya están ingresados. ¿Puedes cambiar el color de la telaraña? ¿O el tamaño? ¡Gracias al miembro de la comunidad @NOPx90 que programó esta telaraña!",
+    "description": "¡Juega con la telaraña!",
+    "completion_text": "¡Feliz Halloween! El desafío de hoy es que juegues con los comandos que ya están ingresados. ¿Puedes cambiar el color de la telaraña? ¿O el tamaño? ¡Gracias al miembro de la comunidad @NOPx90 que programó esta telaraña!",
     "cover": "mischiefweek2015/mw-006-spiderweb.png",
     "start_date": "2015-10-31T06:00:00",
     "startAt": 0,

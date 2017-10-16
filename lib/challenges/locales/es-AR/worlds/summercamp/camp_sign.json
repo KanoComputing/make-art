@@ -5,7 +5,7 @@
     "description": "¡Bienvenido a tu primer día de campamento! Antes de salir, tu letrero de campamento necesita un poco de diseño ¡Vuélvete creativo! Usa una divertida combinación de colores o demuestra lo que te gustaría hacer estando de campamento.  \nEn la región del Noroeste Pacífico de Estados Unidos, los pueblos indígenas tallaban Tótems para contar las historias de sus ancestros y culturas. Estas hermosas esculturas están talladas en árboles y a menudo representan personajes y hechos de leyendas. Puedes buscar en internet imágenes de los Tótems para inspirarte.",
     "icon_class": "challenge_campsign",
     "cover": "summercamp/day_1.png",
-    "completion_text": "¡Bien hecho! Ahora otórgale a tu letrero tu propio texto y estilo. Cambia el nombre de tu campamento en el renglón 18, o el color en el 3 ¿Por qué no agregar un lindo fondo y alguna decoración? Lo íconos de utilidades a la izquierda pueden ayudarte a empezar.",
+    "completion_text": "¡Bien hecho! Ahora otórgale a tu letrero tu propio texto y estilo. Cambia el nombre de tu campamento en el renglón 18, o el color en el 3 ¿Por qué no agregar un lindo fondo y alguna decoración? Los íconos de utilidades a la izquierda pueden ayudarte a empezar.",
     "difficulty": 1,
     "startAt": 0,
     "summerCamp": true,
@@ -16,15 +16,15 @@
             "solution": "background blue"
         },
         {
-            "hint": "Mueve el cursor al punto en el que queremos comenzar a dibujar nuestro letrero.\n\nRecuerda presionar ENTER para agregar la próxima instrucción, y  - **escribe** `moveTo 100, 150`",
+            "hint": "Mueve el cursor al punto en el que queremos comenzar a dibujar nuestro letrero.\n\nRecuerda presionar ENTER para agregar la próxima instrucción y  - **escribe** `moveTo 100, 150`",
             "solution": "moveTo 100, 150"
         },
         {
-            "hint": "Imagina que en Hacer Arte dibujamos figuras con bolígrafos digitales. Imagina que en Hacer Arte dibujamos figuras con bolígrafos digitales. Antes de dibujar la próxima figura, necesitamos elegir el color de la tinta para el relleno de la figura. Seleccionemos un bolígrafo marrón configurando el color a marrón claro, o lightbrown en inglés.\n\n En una nueva línea **escribe** `color lightbrown`",
+            "hint": "Imagina que en Make Art dibujamos figuras con bolígrafos digitales. Antes de dibujar la próxima figura, necesitaremos elegir el color de la tinta para el relleno de la figura. Seleccionemos un bolígrafo marrón configurando el color a marrón claro, o lightbrown en inglés.\n\n En una nueva línea **escribe** `color lightbrown`",
             "solution": "color lightbrown"
         },
         {
-            "hint": "Cuando dibujamos una figura, podemos seleccionar el grosor del trazo que nuestro bolígrafo deja en el borde. Esta línea del trazo, en inglés se llama **stroke**.\n\n  Presiona enter y configura el trazo a 0 para evitar dibujar líneas - **escribe** `stroke 0`",
+            "hint": "Cuando dibujamos una figura, podemos seleccionar el grosor del trazo que nuestro bolígrafo deja en el borde. Esta línea del trazo en inglés se llama **stroke**.\n\n  Presiona enter y configura el trazo a 0 para evitar dibujar líneas - **escribe** `stroke 0`",
             "solution": "stroke 0"
         },
         {
@@ -52,7 +52,7 @@
             "solution": "stroke brown, 5"
         },
         {
-            "hint": "Ahora vamos a usar el comando `polygon` (significa polígono) para dibujar nuestra imperfección en forma de triángulo, necesitamos enumerar la posición de las esquinas del triángulo - **escribe** `polygon 16, 10, 0, 11`",
+            "hint": "Ahora vamos a usar el comando `polygon` (significa polígono) para dibujar nuestra imperfección en forma de triángulo. Para hacerlo, necesitaremos enumerar la posición de las demás esquinas del triángulo - **escribe** `polygon 16, 10, 0, 11`",
             "solution": "polygon 16, 10, 0, 11"
         },
         {
@@ -76,11 +76,11 @@
             "solution": "moveTo 250, 270"
         },
         {
-            "hint": "Ahora necesitamos elegir la fuente. Hay muchas para elegir, puede ser `Bariol`, `Georgia`, `Comic Sans MS`, `cursive`, y `Courier`.\n\nElige tu favorita y escribe el nombre de la fuente entre comillas, así: - `font 'Bariol', 70`.",
+            "hint": "Ahora necesitamos elegir la fuente. Hay muchas para elegir, puede ser `Bariol`, `Georgia`, `Comic Sans MS`, `cursive`, y `Courier`.\n\nElige tu favorita y escribe el nombre de la fuente entre comillas, así - `font 'Bariol', 70`.",
             "solution": "font 'Bariol', 70"
         },
         {
-            "hint": "Ahora podemos escribir algo usando el comando de texto, en inglés se dice text - **escribe** `text 'My Camp'`",
+            "hint": "Ahora podemos escribir algo usando el comando de texto. En inglés se dice text - **escribe** `text 'My Camp'`",
             "solution": "text 'My Camp'"
         }
     ]

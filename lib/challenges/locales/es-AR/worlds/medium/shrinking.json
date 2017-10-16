@@ -6,15 +6,15 @@
     "startAt": 1,
     "steps": [
         {
-            "hint": "Configura el trazo - **escribe** `stroke gray, 3`",
+            "hint": "Configura el trazo a gris- **escribe** `stroke gray, 3`",
             "solution": "stroke gray, 3"
         },
         {
-            "hint": "Configura el color a transparente para poder ver a través - **escribe** `color null`",
+            "hint": "Configura el color a transparente usando null (nulo) para poder ver a través - **escribe** `color null`",
             "solution": "color null"
         },
         {
-            "hint": "Vamos a dibujar 32 círculos todos de una vez, necesitamos abrir un ciclo con un nuevo comando - **escribe** `for i in [ 0 .. 32 ]`",
+            "hint": "Vamos a dibujar 32 círculos todos de una vez, necesitaremos abrir un ciclo con un nuevo comando - **escribe** `for i in [ 0 .. 32 ]`",
             "solution": "for i in [ 0..32 ]"
         },
         {
