@@ -1,6 +1,7 @@
 kano-draw (3.14.0-0) unstable; urgency=low
 
   * Applied changes from v3.9.2 es_AR backports to latest
+  * Added Loading animation splash window
 
  -- Team Kano <dev@kano.me>  Mon, 16 Oct 2017 15:12:00 +0100
 
