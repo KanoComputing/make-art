@@ -1,4 +1,4 @@
-#!/usr/bin/kano-splash /usr/share/kano-draw/media/splash.png /usr/bin/env python
+#!/usr/bin/kano-splash loader-animation /usr/bin/env python
 
 # kano-draw
 #
