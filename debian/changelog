@@ -2,8 +2,9 @@ kano-draw (3.14.0-0) unstable; urgency=low
 
   * Applied changes from v3.9.2 es_AR backports to latest
   * Added Loading animation splash window
+  * Fixed returning from shares when launched through challenge pack pages
 
- -- Team Kano <dev@kano.me>  Mon, 16 Oct 2017 15:12:00 +0100
+ -- Team Kano <dev@kano.me>  Mon, 4 Dec 2017 10:50:00 +0100
 
 kano-draw (3.11.0-1) unstable; urgency=low
 
