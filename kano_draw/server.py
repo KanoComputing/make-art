@@ -1,6 +1,6 @@
 # server.py
 #
-# Copyright (C) 2014-2015 Kano Computing Ltd.
+# Copyright (C) 2014-2015, 2017 Kano Computing Ltd.
 # License: http://www.gnu.org/licenses/gpl-2.0.txt GNU GPL v2
 #
 
@@ -99,6 +99,7 @@ server_logger.setLevel(logging.ERROR)
 # Return the homepage for pages routed through Angular
 @server.route('/localLoad/<path:path>')
 @server.route('/challenges')
+@server.route('/challenges/<path:path>')
 @server.route('/playground')
 def root(path=None):
     return server.send_static_file('index.html')
