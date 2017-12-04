@@ -3,7 +3,7 @@ Maintainer: Team Kano <dev@kano.me>
 Section: misc
 Priority: optional
 Standards-Version: 3.9.4
-Build-Depends: debhelper (>= 9), python, python-polib, python-docopt
+Build-Depends: debhelper (>= 9), python, python-polib, python-docopt, nodejs
 
 Package: kano-draw
 Architecture: all
