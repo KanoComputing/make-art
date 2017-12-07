@@ -7,6 +7,10 @@ override_dh_auto_build:
 	# NodeJS and npm
 	cd po && ./lang-extract-doc-strings
 	cd po && ./lang-extract-strings
+	# Add NPM repository and install Node
+	curl --silent --location https://deb.nodesource.com/setup_6.x | bash -
+	apt-get install --yes nodejs
+	# Actually build
 	npm install
 	./node_modules/bower/bin/bower --allow-root install
 	NODE_ENV=production OFFLINE=true npm run build
