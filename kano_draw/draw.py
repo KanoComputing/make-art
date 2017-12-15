@@ -1,7 +1,7 @@
-from kano.webapp import WebApp
+from kano.utils.shell import run_cmd
 
 
-class Draw(WebApp):
+class Draw(object):
     def __init__(self, load_path='', make=False, play=False):
         super(Draw, self).__init__()
 
@@ -18,15 +18,11 @@ class Draw(WebApp):
             url = base_url.format(path='')
 
         self._index = url
-
-        self._title = "Art"
         self._app_icon = '/usr/share/icons/Kano/88x88/apps/kano-draw.png'
 
-        self._decoration = False
-        self._maximized = True
 
-        # Enable developer extras to allow error reporting to work
-        self._inspector = True
+    def run(self):
+        run_cmd("chromium-browser --start-maximized --app={}".format(self._index))
 
 
 # We require this function for starting the UI as a subprocess
