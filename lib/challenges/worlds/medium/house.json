@@ -46,7 +46,7 @@
             "solution": "color green"
         },
         {
-            "hint": "Draw rectangle for the grass, width a size of 500, 100",
+            "hint": "Draw rectangle for the grass, with a size of 500, 100",
             "solution": "rectangle 500, 100"
         },
         {
