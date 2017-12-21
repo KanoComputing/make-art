@@ -37,7 +37,7 @@
             "solution": "        direction *= -1"
         },
         {
-            "hint": "Exit the second loop by typing `BACKSPACE` once. Next, type `move -100, 10`, making sure you only have one tab before it.",
+            "hint": "Exit the second loop by pressing `BACKSPACE` once. Next, type `move -100, 10`, making sure you only have one tab before it.",
             "solution": "    move -100, 10"
         }
     ],
