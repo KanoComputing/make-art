@@ -18,6 +18,15 @@
   "dependencies": {
     "kano-nav": "KanoComputing/kano-nav",
     "kano-primary-links": "KanoComputing/kano-primary-links",
-    "iron-image": "PolymerElements/iron-image#^1.2.5"
+    "iron-image": "PolymerElements/iron-image#^2.1.2"
+  },
+  "resolutions": {
+    "iron-flex-layout": "^2.0.0",
+    "iron-pages": "^2.0.0",
+    "iron-media-query": "^2.0.0",
+    "iron-icon": "^2.0.1",
+    "iron-iconset-svg": "^2.0.1",
+    "webcomponentsjs": "^v1.0.19",
+    "polymer": "^2.0.2"
   }
 }
