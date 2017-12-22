@@ -18,10 +18,9 @@
   "dependencies": {
     "kano-nav": "KanoComputing/kano-nav",
     "kano-primary-links": "KanoComputing/kano-primary-links",
-    "iron-image": "PolymerElements/iron-image#^1.2.5"
+    "iron-image": "PolymerElements/iron-image#^2.1.2"
   },
   "resolutions": {
-    "iron-image": "^2.1.2",
     "iron-flex-layout": "^2.0.0",
     "iron-pages": "^2.0.0",
     "iron-media-query": "^2.0.0",
