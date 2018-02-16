@@ -1,3 +1,10 @@
+kano-draw (3.15.0-0) unstable; urgency=low
+
+  * Small challenge copy fixes
+  * Disabled kano.profiling calls
+
+ -- Team Kano <dev@kano.me>  Wed, 31 Jan 2018 15:37:00 +0100
+
 kano-draw (3.14.0-0) unstable; urgency=low
 
   * Applied changes from v3.9.2 es_AR backports to latest
