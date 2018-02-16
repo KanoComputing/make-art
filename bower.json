@@ -16,8 +16,13 @@
     "tests"
   ],
   "dependencies": {
-    "kano-nav": "KanoComputing/kano-nav",
-    "kano-primary-links": "KanoComputing/kano-primary-links",
+    "web-components": "git@github.com:KanoComputing/web-components",
     "iron-image": "PolymerElements/iron-image#^1.2.5"
+  },
+  "resolutions": {
+    "iron-image": "^2.1.2",
+    "iron-flex-layout": "^2.0.0",
+    "polymer": "1.9 - 2",
+    "webcomponentsjs": "^v1.0.19"
   }
 }
