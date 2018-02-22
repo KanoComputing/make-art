@@ -28,10 +28,10 @@ describe("i18n", function() {
         var challengePath = i18n.getChallengeLocalePath();
         assert.equal(challengePath, '');
 
-        global.window.navigator.language = 'es-AR';
+        global.window.navigator.language = 'es';
 
         var challengePath = i18n.getChallengeLocalePath();
-        assert.equal(challengePath, '/locales/es-AR');
+        assert.equal(challengePath, '/locales/es');
     });
 
     it("should return correct html locale path", function() {
@@ -40,10 +40,10 @@ describe("i18n", function() {
         var challengePath = i18n.getHtmlLocalePath();
         assert.equal(challengePath, '/locales/en');
 
-        global.window.navigator.language = 'es-AR';
+        global.window.navigator.language = 'es';
 
         var challengePath = i18n.getHtmlLocalePath();
-        assert.equal(challengePath, '/locales/es-AR');
+        assert.equal(challengePath, '/locales/es');
     });
 
     it("should allow language override from url param", function() {
@@ -61,4 +61,3 @@ describe("i18n", function() {
         assert.equal(lang, 'en');
     });
 });
-
