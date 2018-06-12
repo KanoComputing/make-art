@@ -1,4 +1,4 @@
-.modal-overlay(ng-if='selectedChallenge')
+.modal-overlay(ng-if='selectedChallenge && !offline')
     .modal-inner.modal-challenge-info.center
 
         .cover(ng-style='{ "background-image": "url(/assets/challenges/images/" + selectedChallenge.cover +")" }')
