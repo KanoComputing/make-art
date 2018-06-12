@@ -1,0 +1,15 @@
+.modal-overlay(ng-if='selectedChallenge && offline')
+
+    .modal-inner.modal-challenge-info.center
+
+        .cover(ng-style='{ "background-image": "url(/assets/layout/keyboard.gif)" }')
+
+        button.close(ng-click='deselectedChallenge()'): i.icon-cross
+
+        .detail
+
+            h3 Grab Your Keyboard!
+
+            p.description You'll need it to type code...
+
+            a.button.button-success(ng-href='/challenge/{{selectedWorld.id}}/{{selectedChallenge.id}}') ${{ challenge.start }}$
