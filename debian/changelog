@@ -1,3 +1,9 @@
+kano-draw (4.2.0-0) unstable; urgency=low
+
+  * Minor spelling fixes in challenges
+
+ -- Team Kano <dev@kano.me>  Thu, 4 Oct 2018 11:47:00 +0100
+
 kano-draw (4.0.0-0) unstable; urgency=low
 
   * Start challenge screen for grabbing keyboard
