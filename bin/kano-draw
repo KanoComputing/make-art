@@ -40,6 +40,7 @@ UI_PROC = None
 
 def _kill_subprocess(proc_handle):
     if proc_handle is not None and proc_handle.is_alive():
+        logger.warn('_kill_subprocess() terminating app')
         proc_handle.terminate()
         os.kill(proc_handle.pid, signal.SIGKILL)
 
@@ -55,6 +56,7 @@ def _kill_lingering_processes():
         pids = pid_no.splitlines()
         for pid in pids:
             try:
+                logger.warn('_kill_lingering_processes() killing pid:{}'.format(pid))
                 os.kill(int(pid), signal.SIGTERM)
             except ValueError:
                 pass
@@ -63,11 +65,17 @@ def _kill_lingering_processes():
 def _at_exit_hook():
     """ Ensure that the two subprocesses are killed before this process exits
     """
+
+    logger.warn('_at_exit_hook() cleanup process space')
+
     _kill_subprocess(UI_PROC)
+
     # Give the server subprocess 10 secs to die
     SERVER_PROC.join(5)
+
     # Now kill it anyway
     _kill_subprocess(SERVER_PROC)
+
     # Cleanup the lingering processes (usually produced by omxplayer)
     _kill_lingering_processes()
 
