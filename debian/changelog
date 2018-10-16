@@ -1,8 +1,9 @@
 kano-draw (4.2.0-0) unstable; urgency=low
 
   * Minor spelling fixes in challenges
+  * Added more logging at application termination time
 
- -- Team Kano <dev@kano.me>  Thu, 4 Oct 2018 11:47:00 +0100
+ -- Team Kano <dev@kano.me>  Thu, 16 Oct 2018 18:48:19 +0100
 
 kano-draw (4.0.0-0) unstable; urgency=low
 
