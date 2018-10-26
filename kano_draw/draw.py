@@ -25,9 +25,6 @@ class Draw(WebApp):
         self._decoration = False
         self._maximized = True
 
-        # Enable developer extras to allow error reporting to work
-        self._inspector = True
-
 
 # We require this function for starting the UI as a subprocess
 def start_draw(load_path='', make=False, play=False):
