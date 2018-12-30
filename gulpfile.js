@@ -29,7 +29,7 @@ var gulp = require('gulp'),
     testmode = process.env.TEST_MODE === 'true',
     chDescriptorsPath = 'www/assets/challenges/descriptors/',
     libPath = 'lib/challenges/',
-    locales = ["", "ja", "es-AR"],
+    locales = ["", "ja", "es"],
 
     paths = {
         views      : { watch: ['views/**/*.jade', 'content/**/*'], src: 'views/**/*.jade', out: 'www' },
