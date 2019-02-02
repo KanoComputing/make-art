@@ -13,13 +13,10 @@ html(lang='en',  xmlns:ng="http://angularjs.org")
         meta(name='apple-mobile-web-app-status-bar-style', content='orange')
         meta(name='viewport', content='initial-scale=1, maximum-scale=1, user-scalable=no')
 
-        //- Components
-        link(rel='import' href='/components/web-components/kano-nav/kano-nav.html')
-        link(rel='import' href='/components/web-components/kano-primary-links/kano-primary-links.html')
-        link(rel='import' href='/components/web-components/kano-secondary-links/kano-secondary-links.html')
-
         //- Styles
         link(href='/css/main.css', rel='stylesheet', type='text/css')
+
+        script(type="module", src="./js/kwc-auth.js")
 
         script(type="text/javascript").
             window.dataLayer = [];
@@ -39,7 +36,6 @@ html(lang='en',  xmlns:ng="http://angularjs.org")
         script(src='/js/vendor/xtag.js')
 
     body(id="ng-app", ng-app='draw', class=offline ? 'offline' : 'online')
-
 
         script(src='/js/vendor/console-polyfill.js', type='text/javascript')
         .loading-overlay(ng-cloak): .spinner
@@ -61,6 +57,7 @@ html(lang='en',  xmlns:ng="http://angularjs.org")
                 SEGMENTIO_ID    : '#{segmentioId}',
                 FACEBOOK_APP_ID : '#{facebookAppId}',
                 API_URL         : '#{api_url}',
+                API_URL_V2      : '#{api_url_v2}',
                 WORLD_URL       : '#{world_url}',
                 CHALLENGES_URL  : '#{challenges_url}',
                 TEST_MODE       : #{testmode},

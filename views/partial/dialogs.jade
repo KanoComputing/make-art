@@ -3,6 +3,7 @@ if !offline
     .kano-feedback-container(ng-click='feedback.openModal()', ng-init='feedbackLoaded()') 
         span ${{ partial.feedback }}$
         .kano-feedback
+    .modal-overlay(ng-show='auth.showModal', ng-cloak, ng-click="auth.overlayClicked($event)")
+        kwc-auth()
     include ./feedback
-    include ./auth-modal
 

@@ -6,12 +6,13 @@
   "scripts": {
     "start": "node ./server/index.js",
     "watch": "gulp watch",
-    "build": "gulp",
+    "build": "npm run kwc-auth && gulp",
     "bundle": "./bundle",
-    "postinstall": "node node_modules/.bin/bower i && node_modules/.bin/gulp default",
+    "postinstall": "gulp default",
     "jshint": "jshint lib",
     "jscs": "jscs lib",
-    "test": "./node_modules/.bin/mocha test/**/*"
+    "test": "mocha test/**/*",
+    "kwc-auth": "rollup -c"
   },
   "author": "Tancredi Trugenberger",
   "repository": {
@@ -20,8 +21,8 @@
   },
   "license": "MIT2",
   "dependencies": {
+    "@kano/kwc-auth": "^3.0.0-beta.18",
     "api-service": "1.0.0",
-    "bower": "^1.8.0",
     "cli-color": "~0.2.x",
     "coffee-script": "~1.7.x",
     "color": "^0.7.3",
@@ -51,7 +52,9 @@
   },
   "devDependencies": {
     "chai": "3.2.x",
-    "mocha": "2.3.x"
+    "mocha": "2.3.x",
+    "rollup": "^1.1.2",
+    "rollup-plugin-node-resolve": "^4.0.0"
   },
   "engines": {
     "node": "6.10.x"
