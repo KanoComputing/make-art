@@ -12,23 +12,17 @@ include ./partial/header
 
         .inner(ng-if='started && !completed')
 
-            .inner-header
-                .inner-title
-                    .progress-circle-image
-                        progress-circle(value='step', max='content.steps.length')
+            a.button.button-hint.large.right(
+                ng-click='toggleSolution()',
+                ng-class='{ active: showSolution, "animate-pulse-highlight": highlightHelp }'
+                )
+                i.icon-hint
+                | ${{ challenge.hint }}$
 
-                    .inner-text
-                        h3 {{ challenges[ id - 1 ].title }}
-                        h4.hint(ng-bind-html='hint | markdown', ng-if='hint') 
-
-                .button-container
-                       a.button.button-hint.large.right(
-                            ng-click='toggleSolution()',
-                            ng-class='{ active: showSolution, "animate-pulse-highlight": highlightHelp }'
-                            )
-                            i.icon-hint
-                            | ${{ challenge.hint }}$
-
+            progress-circle(value='step', max='content.steps.length')
+            h3 {{ challenges[ id - 1 ].title }} EXAMPLE!!!
+            h4.hint(ng-bind-html='hint | markdown', ng-if='hint') 
+            
 
         .inner.center(ng-if='completed && !fatherDay')
             .completion
