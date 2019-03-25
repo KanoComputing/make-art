@@ -80,7 +80,7 @@ include ./partial/header
 
             ul.shares-list
 
-                li(ng-repeat='share in shares' ng-if='$index < shares.length-1 || offline')
+                li(ng-repeat='share in shares' ng-if='$index < shares.length - 1 || offline')
                     a(href='{{cfg.WORLD_URL}}/shared/{{ share.slug }}')
 
                         .cover(ng-style='{ "background-image": "url(" + share.cover_url + ")" }')
