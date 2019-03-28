@@ -80,7 +80,7 @@ include ./partial/header
 
             ul.shares-list
 
-                li(ng-repeat='share in shares')
+                li(ng-repeat='share in shares' ng-if='$index < shares.length - 1 || offline')
                     a(href='{{cfg.WORLD_URL}}/shared/{{ share.slug }}')
 
                         .cover(ng-style='{ "background-image": "url(" + share.cover_url + ")" }')
@@ -89,8 +89,9 @@ include ./partial/header
                             h5
                                 | {{ share.title }}
                                 em ${{ challenges.by }}$ {{ share.user.username }}
+                    
 
-                li
+                li(ng-if='!offline')
                     a.highlight.browse(
                         href='{{cfg.WORLD_URL}}/shares/make-art',
                         ng-click='browseMore($event)',
