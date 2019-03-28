@@ -52,4 +52,4 @@ which will start the server and open a
 Art.
 
     user@kano-os ~ $ cd ~/make-art/bin
-    user@kano-os ~ $ cd ./kano-draw
+    user@kano-os ~ $ ./kano-draw
