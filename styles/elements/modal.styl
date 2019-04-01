@@ -1,3 +1,11 @@
+
+.flexcenter {
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+}
+
 .modal-overlay
     absolute-cover()
     background rgba(#000, .8)
@@ -17,14 +25,10 @@
 .modal-inner
     border-radius()
     background color-white
-    position absolute
-    left 50%
-    top 150px
-    margin-left -360px
-    width 720px
     box-sizing border-box
     padding 25px
     min-height 50px
+    position relative
 
     button.close
         button-color(color-white, color-grey)
@@ -36,6 +40,8 @@
         top 20px
         width 30px
         line-height @width
+
+        width 
 
         &:hover
             background color-grey-mid

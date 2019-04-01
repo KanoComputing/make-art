@@ -1,24 +1,49 @@
-.modal-challenge-info
-    top 50px
-    width 480px
-    margin-left -240px
-    padding 0
+@media (max-height: 153px )and (min-width: 250px)
+    body 
+        resize: none;
 
-    h3, p
-        text-transform none
+    
+    
 
-    h3
-        smooth-font()
-        font-weight bold
-        margin-bottom 5px
+@media (max-height: 400px )
+    .modal-challenge-info
+        width 44%
+        min-width: 223px;
+        min-height: 102px;
 
-    p
-        font-size 18px
+    
+    
 
-    .cover
-        min-height 400px
-        background-size cover
-        background-position center center
+@media (min-height: 401px )
+    .modal-challenge-info
+        width 44%
+        height: 65%;
+        min-height: 380px;
+        padding 0
 
-    .detail
-        padding 30px
+        h3, p
+            text-transform none
+
+        h3
+            smooth-font()
+            font-weight bold
+            margin-bottom 5px
+
+        p
+            font-size 18px
+
+        .cover
+            min-height 70%
+            background-size cover
+            background-position center center
+
+        .detail
+            min-height: 30%;
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+
+
+
+
