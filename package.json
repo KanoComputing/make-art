@@ -20,6 +20,7 @@
   },
   "license": "MIT2",
   "dependencies": {
+    "@webcomponents/webcomponentsjs": "^2.2.7",
     "api-service": "^1.0.8",
     "bower": "^1.8.8",
     "cli-color": "~0.2.x",
@@ -46,8 +47,10 @@
     "moment": "^2.10.6",
     "nib": "^1.1.2",
     "partialify": "^3.1.1",
+    "polyfills": "^2.1.1",
     "throttle-debounce": "^0.1.1",
-    "tiny-lr": "0.0.9"
+    "tiny-lr": "0.0.9",
+    "x-tag": "^2.0.3-beta"
   },
   "devDependencies": {
     "chai": "3.2.x",

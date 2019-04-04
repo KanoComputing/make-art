@@ -14,9 +14,12 @@ html(lang='en',  xmlns:ng="http://angularjs.org")
         meta(name='viewport', content='initial-scale=1, maximum-scale=1, user-scalable=no')
 
         //- Components
-        link(rel='import' href='/components/web-components/kano-nav/kano-nav.html')
-        link(rel='import' href='/components/web-components/kano-primary-links/kano-primary-links.html')
-        link(rel='import' href='/components/web-components/kano-secondary-links/kano-secondary-links.html')
+        script(src='/components/web-components/kano-nav/kano-nav.html')
+        script(src='/components/web-components/kano-primary-links/kano-primary-links.html')
+        script(src='/components/web-components/kano-secondary-links/kano-secondary-links.html')
+
+        //- load webcomponents bundle, which includes all the necessary polyfills
+        script(src='node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js')
 
         //- Styles
         link(href='/css/main.css', rel='stylesheet', type='text/css')
