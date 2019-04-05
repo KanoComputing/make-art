@@ -1,6 +1,5 @@
-.modal-overlay(ng-if='nextModal')
+.modal-overlay.flexcenter-top(ng-if='nextModal')
     .modal-inner.modal-next-challenge.center
-
         .cover(ng-style='{ "background-image": "url(/assets/challenges/images/" + next.cover +")" }')
 
         button.close(ng-click='closeNextModal()'): i.icon-cross

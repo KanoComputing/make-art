@@ -1,4 +1,4 @@
-.modal-overlay(ng-if='selectedChallenge && !offline')
+.modal-overlay.flexcenter(ng-if='selectedChallenge && !offline')
     .modal-inner.modal-challenge-info.center
 
         .cover(ng-style='{ "background-image": "url(/assets/challenges/images/" + selectedChallenge.cover +")" }')
@@ -6,9 +6,10 @@
         button.close(ng-click='deselectedChallenge()'): i.icon-cross
 
         .detail
+            .detail-content
 
-            h3 {{ selectedChallenge.title }}
+                h3 {{ selectedChallenge.title }}
 
-            p.description {{ selectedChallenge.description }}
+                p.description {{ selectedChallenge.description }}
 
-            a.button.button-success(ng-href='/challenge/{{selectedWorld.id}}/{{selectedChallenge.id}}') ${{ challenge.start }}$
+                a.button.button-success(ng-href='/challenge/{{selectedWorld.id}}/{{selectedChallenge.id}}') ${{ challenge.start }}$
