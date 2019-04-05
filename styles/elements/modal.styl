@@ -1,9 +1,26 @@
+.flexcenter 
+    display flex
+    flex-direction column
+    justify-content center
+    align-items center
+
+.flexcenter-top
+    display flex
+    justify-content center
+    align-items flex-start
+
 .modal-overlay
     absolute-cover()
     background rgba(#000, .8)
     transition opacity .2s
     position fixed
     z-index 9
+
+    display flex
+    flex-direction column
+    justify-content center
+    align-items center
+    
 
     &, h1, h2, h3, h4, h5
         color color-black
@@ -17,14 +34,11 @@
 .modal-inner
     border-radius()
     background color-white
-    position absolute
-    left 50%
-    top 150px
-    margin-left -360px
-    width 720px
     box-sizing border-box
     padding 25px
     min-height 50px
+    position relative
+    max-width: 680px
 
     button.close
         button-color(color-white, color-grey)
