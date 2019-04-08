@@ -14,13 +14,14 @@ html(lang='en',  xmlns:ng="http://angularjs.org")
         meta(name='viewport', content='initial-scale=1, maximum-scale=1, user-scalable=no')
 
         //- Components
+        //- <link rel="import"> is deprecated because no other browsers implemented it, 
+        //- the working group has instead been developing "html modules" which currently (4/2019) are not ready.
+        //- For now we can just use a <script> tag to load webcomponents instead (e.g. <script src="./my-component.js">).
+
         script(src='/components/web-components/kano-nav/kano-nav.html')
         script(src='/components/web-components/kano-primary-links/kano-primary-links.html')
         script(src='/components/web-components/kano-secondary-links/kano-secondary-links.html')
 
-        //- load webcomponents bundle, which includes all the necessary polyfills
-        script(src='/js/polyfills.js')
-        script(src='/node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js')
 
         //- Styles
         link(href='/css/main.css', rel='stylesheet', type='text/css')
