@@ -1,7 +1,8 @@
-from kano.webapp import WebApp
+# from kano.webapp import WebApp
+import os
 
 
-class Draw(WebApp):
+class Draw():
     def __init__(self, load_path='', make=False, play=False):
         super(Draw, self).__init__()
 
@@ -17,7 +18,7 @@ class Draw(WebApp):
         else:
             url = base_url.format(path='')
 
-        self._index = url
+        self._index = 'chromium {url}'.format(url=url)
 
         self._title = "Art"
         self._app_icon = '/usr/share/icons/Kano/88x88/apps/kano-draw.png'
@@ -25,6 +26,8 @@ class Draw(WebApp):
         self._decoration = False
         self._maximized = True
 
+    def run(self):
+        os.system(self._index)
 
 # We require this function for starting the UI as a subprocess
 def start_draw(load_path='', make=False, play=False):
