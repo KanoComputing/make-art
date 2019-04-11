@@ -1,8 +1,6 @@
-# from kano.webapp import WebApp
 import os
 
-
-class Draw():
+class Draw(object):
     def __init__(self, load_path='', make=False, play=False):
         super(Draw, self).__init__()
 
@@ -18,7 +16,7 @@ class Draw():
         else:
             url = base_url.format(path='')
 
-        self._index = 'chromium {url}'.format(url=url)
+        self._index = 'chromium --app={url} --start-fullscreen'.format(url=url)
 
         self._title = "Art"
         self._app_icon = '/usr/share/icons/Kano/88x88/apps/kano-draw.png'
