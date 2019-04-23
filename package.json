@@ -62,6 +62,7 @@
         "rollup-plugin-commonjs": "^9.3.4",
         "rollup-plugin-node-resolve": "^4.2.3",
         "rollup-plugin-replace": "^2.2.0",
+        "selenium-webdriver": "4.0.0-alpha.1",
         "tiny-lr": "0.0.9"
     }
 }
