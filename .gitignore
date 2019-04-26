@@ -1,4 +1,5 @@
 www/*.html
+www/js/*.js
 www/**/*.html
 www/css/*.css
 www/js/index.js

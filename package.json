@@ -6,13 +6,13 @@
     "scripts": {
         "start": "node ./server/index.js",
         "watch": "gulp watch",
-        "build": "npm run kwc-auth && gulp",
+        "build": "gulp",
         "bundle": "./bundle",
         "postinstall": "gulp default",
         "jshint": "jshint lib",
         "jscs": "jscs lib",
         "test": "./node_modules/.bin/mocha test/**/*",
-        "kwc-auth": "rollup -c"
+        "rollup": "rollup"
     },
     "author": "Tancredi Trugenberger",
     "repository": {
@@ -47,6 +47,7 @@
         "lodash": "^4.17.11",
         "mocha": "2.3.x",
         "nib": "^1.1.2",
+        "rollup": "^1.10.1",
         "rollup-analyzer-plugin": "^1.2.0",
         "rollup-plugin-commonjs": "^9.3.4",
         "rollup-plugin-node-resolve": "^4.2.3",

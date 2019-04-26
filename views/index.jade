@@ -32,7 +32,7 @@ html(lang='en',  xmlns:ng="http://angularjs.org")
             })();
         title Draw
 
-    body(id="ng-app", ng-app='draw', class=offline ? 'offline' : 'online')
+    body(id="ng-app", class=offline ? 'offline' : 'online')
 
         script(src='/js/vendor/console-polyfill.js', type='text/javascript')
         .loading-overlay(ng-cloak): .spinner
@@ -40,6 +40,9 @@ html(lang='en',  xmlns:ng="http://angularjs.org")
         ng-view
 
         //- Vendor
+        script(src='/js/vendor/require.js', type='text/javascript')
+        script(type='text/javascript').
+            window.appRequire = require.config({ context: 'app' })
         script(src='/js/vendor/angular.min.js', type='text/javascript')
         script(src='/js/vendor/angular-route.min.js', type='text/javascript')
         script(src='/js/vendor/ace/ace.js', type='text/javascript')
@@ -63,7 +66,8 @@ html(lang='en',  xmlns:ng="http://angularjs.org")
             };
 
         //- App
-        script(src='/js/index.js', type='text/javascript')
+        script(type='text/javascript').
+            window.appRequire(['/js/index.js'], function() { angular.bootstrap(document, ['draw']); }, function(e) { console.error(e) })
 
         //- Livereload
         if !production && !staging
