@@ -1,62 +1,61 @@
 {
-  "name": "draw",
-  "version": "0.1.0",
-  "description": "App to learn programming using a basic CoffeeScript drawing API",
-  "main": "index.js",
-  "scripts": {
-    "start": "node ./server/index.js",
-    "watch": "gulp watch",
-    "build": "npm run kwc-auth && gulp",
-    "bundle": "./bundle",
-    "postinstall": "gulp default",
-    "jshint": "jshint lib",
-    "jscs": "jscs lib",
-    "test": "mocha test/**/*",
-    "kwc-auth": "rollup -c"
-  },
-  "author": "Tancredi Trugenberger",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/KanoComputing/kano-draw"
-  },
-  "license": "MIT2",
-  "dependencies": {
-    "@kano/kwc-auth": "^3.0.0-beta.18",
-    "api-service": "1.0.0",
-    "cli-color": "~0.2.x",
-    "coffee-script": "~1.7.x",
-    "color": "^0.7.3",
-    "deep-equal": "^1.0.0",
-    "del": "1.1.1",
-    "express": "^4.10.5",
-    "griddy": "0.0.x",
-    "gulp": "^3.9.x",
-    "gulp-browserify": "~0.4.x",
-    "gulp-callback": "0.0.3",
-    "gulp-html-i18n": "0.3.4",
-    "gulp-jade": "~0.4.x",
-    "gulp-livereload": "1.2.0",
-    "gulp-ng-annotate": "^2.0.0",
-    "gulp-rename": "~0.2.x",
-    "gulp-stylus": "^2.0.1",
-    "gulp-uglify": "^2.0.0",
-    "http-server": "~0.6.x",
-    "kano-world-sdk": "3.0.14",
-    "lodash": "~2.4.x",
-    "marked": "~0.3.x",
-    "moment": "^2.10.6",
-    "nib": "~1.0.x",
-    "partialify": "^3.1.1",
-    "throttle-debounce": "^0.1.1",
-    "tiny-lr": "0.0.9"
-  },
-  "devDependencies": {
-    "chai": "3.2.x",
-    "mocha": "2.3.x",
-    "rollup": "^1.1.2",
-    "rollup-plugin-node-resolve": "^4.0.0"
-  },
-  "engines": {
-    "node": "6.10.x"
-  }
+    "name": "draw",
+    "version": "0.1.0",
+    "description": "App to learn programming using a basic CoffeeScript drawing API",
+    "main": "index.js",
+    "scripts": {
+        "start": "node ./server/index.js",
+        "watch": "gulp watch",
+        "build": "npm run kwc-auth && gulp",
+        "bundle": "./bundle",
+        "postinstall": "gulp default",
+        "jshint": "jshint lib",
+        "jscs": "jscs lib",
+        "test": "./node_modules/.bin/mocha test/**/*",
+        "kwc-auth": "rollup -c"
+    },
+    "author": "Tancredi Trugenberger",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/KanoComputing/kano-draw"
+    },
+    "license": "MIT2",
+    "dependencies": {
+        "api-service": "^1.0.8",
+        "@kano/kwc-auth": "^3.0.0-beta.18",
+        "bower": "^1.8.8",
+        "cli-color": "~0.2.x",
+        "coffee-script": "~1.7.x",
+        "color": "^0.7.3",
+        "deep-equal": "^1.0.0",
+        "griddy": "0.0.x",
+        "http-server": "^0.11.1",
+        "kano-world-sdk": "^3.0.15",
+        "lodash": "~2.4.x",
+        "marked": "~0.3.x",
+        "moment": "^2.10.6",
+        "nib": "^1.1.2",
+        "partialify": "^3.1.1",
+        "throttle-debounce": "^0.1.1"
+    },
+    "devDependencies": {
+        "tiny-lr": "0.0.9",
+        "del": "1.1.1",
+        "express": "^4.10.5",
+        "gulp": "^3.9.x",
+        "gulp-browserify": "^0.5.1",
+        "gulp-callback": "0.0.3",
+        "gulp-html-i18n": "0.3.4",
+        "gulp-jade": "~0.4.x",
+        "gulp-livereload": "1.2.0",
+        "gulp-ng-annotate": "^2.0.0",
+        "gulp-rename": "~0.2.x",
+        "gulp-stylus": "^2.0.1",
+        "gulp-uglify": "^2.0.0",
+        "chai": "3.2.x",
+        "mocha": "2.3.x"
+    },
+    "engines": {
+        "node": "6.10.x"
+    }
 }

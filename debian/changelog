@@ -1,3 +1,9 @@
+kano-draw (4.3.0-0) unstable; urgency=low
+
+  * Fix overflow on challenges' tips
+
+ -- Team Kano <dev@kano.me>  Tue, 12 Mar 2019 17:58:19 +0100
+
 kano-draw (4.2.0-0) unstable; urgency=low
 
   * Minor spelling fixes in challenges

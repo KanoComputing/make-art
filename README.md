@@ -12,16 +12,18 @@ You can try the app [here »](http://art.kano.me/)
     cd make-art
     npm install
     bower install
+        - if you are linux you may use `sudo npm install bower`
 
 ## Build
 
 Build the app before running it
 
-    npm run build
+- `npm run build`
+    - run again the command everytime you update the html structure
 
 ## Run
 
-    npm start
+- `npm start`
 
 Open your browser at [http://localhost:3000](http://localhost:3000)
 
@@ -29,7 +31,7 @@ Open your browser at [http://localhost:3000](http://localhost:3000)
 
 Run the watch script when developing
 
-    npm run watch
+- `npm run watch`
 
 ## Offline
 
@@ -50,4 +52,4 @@ which will start the server and open a
 Art.
 
     user@kano-os ~ $ cd ~/make-art/bin
-    user@kano-os ~ $ cd ./kano-draw
+    user@kano-os ~ $ ./kano-draw

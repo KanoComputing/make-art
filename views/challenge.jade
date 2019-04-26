@@ -12,16 +12,23 @@ include ./partial/header
 
         .inner(ng-if='started && !completed')
 
-            a.button.button-hint.large.right(
-                ng-click='toggleSolution()',
-                ng-class='{ active: showSolution, "animate-pulse-highlight": highlightHelp }'
-                )
-                i.icon-hint
-                | ${{ challenge.hint }}$
+            .hint-container
+                .hint-content
+                    .progress-circle-image
+                        progress-circle(value='step', max='content.steps.length')
 
-            progress-circle(value='step', max='content.steps.length')
-            h3 {{ challenges[ id - 1 ].title }}
-            h4.hint(ng-bind-html='hint | markdown', ng-if='hint')
+                    .inner-text
+                        h3 {{ challenges[ id - 1 ].title }}
+                        h4.hint(ng-bind-html='hint | markdown', ng-if='hint') 
+
+                .button-container
+                       a.button.button-hint.large.right(
+                            ng-click='toggleSolution()',
+                            ng-class='{ active: showSolution, "animate-pulse-highlight": highlightHelp }'
+                            )
+                            i.icon-hint
+                            | ${{ challenge.hint }}$
+
 
         .inner.center(ng-if='completed && !fatherDay')
             .completion
@@ -48,7 +55,6 @@ include ./partial/header
 
                 p.
                     ${{ challenge.now_sign_up_to_kano_world_to_share_your_creation }}$
-
                 a.button.large.button-success(ng-click='login()', href='#') Log In / Sign Up
 
             div(ng-if='user')
@@ -59,7 +65,6 @@ include ./partial/header
 
                 p.
                     ${{ challenge.now_you_can_share_the_card_on_kano_world }}$
-
                 a.button.large.button-success(ng-click='shareFatherDay()', href='#') Share it!
 
     .row(ng-if='started')

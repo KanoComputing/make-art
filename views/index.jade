@@ -13,6 +13,7 @@ html(lang='en',  xmlns:ng="http://angularjs.org")
         meta(name='apple-mobile-web-app-status-bar-style', content='orange')
         meta(name='viewport', content='initial-scale=1, maximum-scale=1, user-scalable=no')
 
+
         //- Styles
         link(href='/css/main.css', rel='stylesheet', type='text/css')
 
@@ -33,7 +34,7 @@ html(lang='en',  xmlns:ng="http://angularjs.org")
             })();
         title Draw
 
-        script(src='/js/vendor/xtag.js')
+        script(src="/components/xtag/src/xtag.js")
 
     body(id="ng-app", ng-app='draw', class=offline ? 'offline' : 'online')
 
