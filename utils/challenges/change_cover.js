@@ -18,7 +18,7 @@ var fs = require('fs'),
         'pizza',
         'breakfast'
     ],
-    baseDir = '../worlds/basic/';
+    baseDir = '../../lib/challenges/worlds/basic/';
 
 challenges.forEach(function (ch) {
     var obj = require(baseDir + ch),

@@ -28,8 +28,8 @@ var fs = require('fs'),
         'day_twenty',
         'day_twentyone'
     ],
-    baseDir = "../summer_camp/",
-    jsonBaseDir = "../worlds/summercamp/",
+    baseDir = "../../lib/challenges/summer_camp/",
+    jsonBaseDir = "../../lib/challenges/worlds/summercamp/",
     arr = [];
 
 console.log("Length " + challenges.length);

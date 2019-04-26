@@ -19,8 +19,8 @@ var fs = require('fs'),
         'pizza',
         'breakfast'
     ],
-    baseDir = "../",
-    jsonBaseDir = "../descriptors/",
+    baseDir = "../../lib/challenges/",
+    jsonBaseDir = "../../lib/challenges/descriptors/",
     SUCCESS_MESSAGES = [
             'Nice work! That is one cool flag!', //Japan
             'Cool beans - enough of flags, let\'s try something else!', //Sweden
