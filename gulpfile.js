@@ -1,17 +1,14 @@
 "use strict";
 var gulp = require('gulp'),
     jade = require('gulp-jade'),
-    browserify = require('gulp-browserify'),
     stylus = require('gulp-stylus'),
     lr = require('tiny-lr'),
     livereload = require('gulp-livereload'),
-    rename = require('gulp-rename'),
     jadeHelpers = require('./utils/jadeHelpers'),
     _ = require('lodash'),
     color = require('cli-color'),
     uglify = require('gulp-uglify'),
     ngAnnotate = require('gulp-ng-annotate'),
-    partialify = require('partialify/custom'),
     griddy = require('griddy'),
     nib = require('nib'),
     fs = require('fs'),
@@ -35,7 +32,6 @@ var gulp = require('gulp'),
     paths = {
         views      : { watch: ['views/**/*.jade', 'content/**/*'], src: 'views/**/*.jade', out: 'www' },
         viewsi18n  : { watch: 'www/**/*.html', src: 'www/**/*.html', out: 'www/locales' },
-        browserify : { watch: ['lib/**/*', 'content/**/*', 'lib/**/**/*'], src: 'lib/index.js', out: 'www/js' },
         styles     : { watch: 'styles/**/*.styl', src: 'styles/main.styl', out: 'www/css' },
         content    : { watch: 'lib/challenges/**/*' }
     };
@@ -43,20 +39,6 @@ var gulp = require('gulp'),
 function handleError(error) {
     console.log(color.bold('[ error caught ]:\n') + color.red(error));
 }
-
-gulp.task('browserify', function () {
-    return gulp.src(paths.browserify.src,  { read: false })
-        .pipe(browserify({
-            transform : [
-                partialify.alsoAllow('md'),
-                partialify.alsoAllow('coffee')
-            ]
-        }))
-        .on('error', handleError)
-        .pipe(rename('index.js'))
-        .pipe(gulp.dest(paths.browserify.out))
-        .pipe(livereload(server));
-});
 
 gulp.task('styles', function () {
     return gulp.src(paths.styles.src)
@@ -251,11 +233,6 @@ gulp.task('copy-challenges', function (next) {
 
 });
 
-gulp.task('copy-vendor', function () {
-    return gulp.src('bower_components/**')
-        .pipe(gulp.dest('www/components'));
-});
-
 gulp.task('compress', function () {
     return gulp.src('www/js/index.js', { base: 'www' })
         .pipe(ngAnnotate())
@@ -275,10 +252,9 @@ gulp.task('listen', function (next) {
 });
 gulp.task('prepare-challenges', ['copy-challenges', 'apify-challenges']);
 
-gulp.task('build', ['browserify', 'copy-vendor', 'styles', 'views-i18n', 'prepare-challenges']);
+gulp.task('build', ['styles', 'views-i18n', 'prepare-challenges']);
 
 gulp.task('watch', ['build', 'listen'], function () {
-    gulp.watch(paths.browserify.watch, ['browserify']);
     gulp.watch(paths.styles.watch, ['styles']);
     gulp.watch(paths.content.watch, ['prepare-challenges']);
     gulp.watch(paths.views.watch, ['views']);
