@@ -12,7 +12,7 @@
         "EXTENSIONS": [{
             "TYPE": "FILE_TYPE_ASSOCIATION",
             "NAME": "make-art",
-            "LOGO": "www/assets/kano-draw.png",
+            "LOGO": "assets/kano-draw.png",
             "DISPLAY_NAME": "Make Art",
             "SUPPORTED_FILE_TYPES": [{
                 "CONTENT_TYPE": "text/draw",

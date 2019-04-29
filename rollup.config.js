@@ -1,9 +1,6 @@
 // rollup.config.js
 import resolve from 'rollup-plugin-node-resolve';
-import cjs from 'rollup-plugin-commonjs';
 import replace from 'rollup-plugin-replace';
-
-const opts = {limit: 5, root: __dirname}
 
 export default [{
   input: 'lib/index.js',
@@ -12,12 +9,6 @@ export default [{
     format: 'amd',
   },
   plugins: [
-    replace({
-      include: require.resolve('api-resource'),
-      values: {
-        'typeof window': '"object"',
-      }
-    }),
     replace({
       include: require.resolve('marked'),
       values: {
@@ -41,11 +32,6 @@ export default [{
       }
     }),
     resolve(),
-    cjs({
-      exclude: [
-        require.resolve('marked'),
-      ],
-    }),
   ],
   moduleContext: {
     [require.resolve('./lib/vendor/ace/ace.js')]: 'window',

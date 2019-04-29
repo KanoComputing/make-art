@@ -25,7 +25,7 @@ var gulp = require('gulp'),
     world_url = process.env.WORLD_URL || null,
     offline = process.env.OFFLINE === 'true',
     testmode = process.env.TEST_MODE === 'true',
-    chDescriptorsPath = 'www/assets/challenges/descriptors/',
+    chDescriptorsPath = 'assets/challenges/descriptors/',
     libPath = 'lib/challenges/',
     locales = ["", "ja", "es-AR"],
 

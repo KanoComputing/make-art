@@ -31,7 +31,7 @@ include ./partial/header
                 a.world-cover(
                     ng-href='{{!isWorldLocked(world) ? "/challenges/" + world.id : ""}}'
                     ng-class='{locked: isWorldLocked(world), completed: isWorldCompleted(world), current: isWorldCurrent(world)}'
-                    ng-style='{ "background-image": "url(" + _config.APP_ROOT + "assets/challenges/images/" + world.cover + ".png)" }'
+                    ng-style='{ "background-image": "url(" + _config.UI_ROOT + "assets/challenges/images/" + world.cover + ".png)" }'
                     )
 
                     h4 {{ world.name }}
@@ -44,7 +44,7 @@ include ./partial/header
                     ng-class='{ locked: isLocked(challenge), completed: isCompleted(challenge), current: isCurrent(challenge) }'
                     )
 
-                    .cover(ng-style='{ "background-image": "url(" + _config.APP_ROOT + "assets/challenges/images/" + challenge.cover + ")" }')
+                    .cover(ng-style='{ "background-image": "url(" + _config.UI_ROOT + "assets/challenges/images/" + challenge.cover + ")" }')
 
                     .detail
                         h5 {{ challenge.short_title || challenge.title }}
@@ -53,7 +53,7 @@ include ./partial/header
 
                 a.highlight(href='/playground', ng-class='{ locked: false}')
 
-                    .cover(ng-style='{"background-image": "url(" + _config.APP_ROOT + "assets/challenges/images/playground.png)"}')
+                    .cover(ng-style='{"background-image": "url(" + _config.UI_ROOT + "assets/challenges/images/playground.png)"}')
 
                     .detail
                         h5 ${{ challenges.playground }}$
@@ -67,7 +67,7 @@ include ./partial/header
                             ng-click='checkCertOnPi($event)'
                             )
 
-                    .cover(ng-style='{"background-image": "url(" + _config.APP_ROOT + "assets/challenges/images/cert-icon.png)"}')
+                    .cover(ng-style='{"background-image": "url(" + _config.UI_ROOT + "assets/challenges/images/cert-icon.png)"}')
 
                     .detail
                         h5 ${{ challenges.certificate }}$
@@ -98,7 +98,7 @@ include ./partial/header
                         target='_blank'
                         )
 
-                        .cover(ng-style='{"background-image": "url(" + _config.APP_ROOT + "assets/challenges/images/browse.png)"}')
+                        .cover(ng-style='{"background-image": "url(" + _config.UI_ROOT + "assets/challenges/images/browse.png)"}')
 
                         .detail
                             h5 ${{ challenges.browse_more }}$
@@ -106,5 +106,4 @@ include ./partial/header
 include ./partial/selected-challenge
 include ./partial/grab-keyboard
 include ./partial/certificate-modal
-include ./partial/promo-popup
 include ./partial/dialogs

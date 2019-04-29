@@ -1,7 +1,7 @@
 .modal-overlay.flexcenter(ng-if='selectedChallenge && !offline')
     .modal-inner.modal-challenge-info.center
 
-        .cover(ng-style='{ "background-image": "url(/assets/challenges/images/" + selectedChallenge.cover +")" }')
+        .cover(ng-style='{ "background-image": "url(" + _config.UI_ROOT + "assets/challenges/images/" + selectedChallenge.cover +")" }')
 
         button.close(ng-click='deselectedChallenge()'): i.icon-cross
 

@@ -1,11 +1,5 @@
-// Series of replacements to kill the AMD logic in some 3rd party dependencies
-// This will create tautologies that will force rollup to strip modules out and
-// make the 3rd party libraries use `window` instead of require/exports/define/global/self
-const AMDBuster = {
+const DefineBuster = {
     'typeof define': `'undefined'`,
-    'typeof exports': `'undefined'`,
-    'typeof global': `'undefined'`,
-    'typeof self': `'undefined'`,
 };
 
 /**
@@ -14,23 +8,66 @@ const AMDBuster = {
 module.exports = {
     build: {
         resources: [
-            './lib/vendor/ace/**/*',
-            './www/assets/**/*',
+            './lib/vendor/ace/theme-dawn.js',
+            './lib/vendor/ace/mode-coffee.js',
+            './lib/vendor/ace/worker-coffee.js',
+            './assets/button-icons/**/*',
+            './assets/category-icons/**/*',
+            './assets/challenges/**/*',
+            './assets/layout/**/*',
+            './assets/mischiefweek/**/*',
+            './assets/pixelhack/**/*',
+            './assets/sounds/**/*',
+            './assets/summercamp/**/*',
+            './assets/*.png',
             './www/css/**/*',
             './www/directive/**/*',
             './www/fonts/**/*',
-            './www/js/**/*',
             './www/locales/**/*',
             './www/partial/**/*',
             './www/*.html',
         ],
+        moduleContext: {
+            [require.resolve('./lib/vendor/ace/ace.js')]: 'window',
+            [require.resolve('marked/marked.min.js')]: 'window',
+            [require.resolve('color/color-0.4.1.js')]: 'window',
+            [require.resolve('coffeescript/lib/coffeescript-browser-compiler-legacy/coffeescript.js')]: 'window'
+        },
         replaces: [{
-            // Special twemoji module support. Changes the old `var` into a window export
-            include: require.resolve('@polymer/polymer/lib/legacy/polymer.dom.js'),
+            // Special polymer patch. Fixes an issue for IE and Edge
+            include: [require.resolve('@polymer/polymer/lib/legacy/polymer.dom.js')],
             values: {
                 'observerHandle.disconnect();': 'observerHandle && observerHandle.disconnect();',
             },
+        }, {
+            include: [
+                require.resolve('marked/marked.min.js'),
+                require.resolve('coffeescript/lib/coffeescript-browser-compiler-legacy/coffeescript.js'),
+            ],
+            values: DefineBuster,
+        }, {
+            include: [require.resolve('color/color-0.4.1.js')],
+            values: {
+                ';Color =': ';window.Color =',
+            }
+        }, {
+            // Angular is bad at guessing things, It tries to use the base href to do routing.
+            // This forces angular to use the root as base for the app
+            include: [require.resolve('angular/angular.js')],
+            values: {
+                'self.baseHref = function() {': 'self.baseHref = function() {return "/";',
+            }
         }],
+    },
+    run: {
+        replaces: [
+            {
+                include: [require.resolve('coffeescript/lib/coffeescript-browser-compiler-legacy/coffeescript.js')],
+                values: {
+                    'CoffeeScript})(this);': 'CoffeeScript})(window);'
+                },
+            },
+        ],
     },
     web: {
         port: 4000,

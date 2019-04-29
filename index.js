@@ -7,7 +7,7 @@ class MakeArt {
         link.rel = 'stylesheet';
         link.href = `${config.UI_ROOT}www/css/main.css`;
         document.head.appendChild(link);
-        require([`${config.UI_ROOT}www/js/index.js`], () => {
+        import('./lib/index.js').then(() => {
             config.APP_ROOT = `${config.UI_ROOT}www/`;
             window.MakeArt.app.constant('_config', config);
             window.MakeArt.bootstrap(this.root);

@@ -3,7 +3,7 @@ www/js/*.js
 www/**/*.html
 www/css/*.css
 www/js/index.js
-www/assets/challenges/descriptors
+assets/challenges/descriptors
 www/components/**/**
 .tmp
 node_modules
