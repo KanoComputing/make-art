@@ -1,6 +1,6 @@
 .modal-overlay.flexcenter-top(ng-if='nextModal')
     .modal-inner.modal-next-challenge.center
-        .cover(ng-style='{ "background-image": "url(/assets/challenges/images/" + next.cover +")" }')
+        .cover(ng-style='{ "background-image": "url(" + _config.UI_ROOT + "assets/challenges/images/" + next.cover +")" }')
 
         button.close(ng-click='closeNextModal()'): i.icon-cross
 
@@ -32,10 +32,10 @@
                     i.icon-mail
 
                 a.button.button-facebook(ng-click='facebookShare(creation)')
-                    img(src='/assets/button-icons/facebook-white.png' title='${{ partial.share_on_facebook }}$')
+                    img(ng-src='{{ _config.UI_ROOT + "assets/button-icons/facebook-white.png" }}' title='${{ partial.share_on_facebook }}$')
 
                 a.button.button-twitter(target='_new', ng-href='{{ buildURL(creation) }}')
-                    img(src='/assets/button-icons/twitter-white.png' title='${{ partial.share_on_twitter }}$')
+                    img(ng-src='{{ _config.UI_ROOT + "assets/button-icons/twitter-white.png" }}' title='${{ partial.share_on_twitter }}$')
 
         .mail-tab.center(ng-if='mailTab')
             span ${{ partial.share_by_email }}$

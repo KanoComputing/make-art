@@ -1,10 +1,10 @@
 .social-sharing
     .buttons
         a.button.button-facebook(ng-click='facebookShare()')
-            img(src='/assets/button-icons/facebook-white.png' title='${{ partial.share_on_facebook }}$')
+            img(ng-src='{{ _config.UI_ROOT + "assets/button-icons/facebook-white.png" }}' title='${{ partial.share_on_facebook }}$')
 
         a.button.button-twitter(ng-click='twitterShare()')
-            img(src='/assets/button-icons/twitter-white.png' title='${{ partial.share_on_twitter }}$')
+            img(ng-src='{{ _config.UI_ROOT + "assets/button-icons/twitter-white.png" }}' title='${{ partial.share_on_twitter }}$')
 
         a.button.button-mail(ng-click='open()')
             i.icon-mail

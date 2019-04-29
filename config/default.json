@@ -18,6 +18,11 @@
                 "CONTENT_TYPE": "text/draw",
                 "FILE_TYPE": ".draw"
             }]
+        }, {
+            "TYPE": "SHARE_TARGET",
+            "DESCRIPTION": "Share on Kano World",
+            "DATA_FORMAT": "StorageItems",
+            "SUPPORTED_FILE_TYPES": [".draw"]
         }]
     },
     "BACKGROUND_COLOR": "#51555c",

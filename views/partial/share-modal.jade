@@ -18,10 +18,10 @@
                 i.icon-mail
 
             a.button.button-facebook(ng-click='facebookShare(creation)')
-                img(src='/assets/button-icons/facebook-white.png' title='${{ partial.share_on_facebook }}$')
+                img(ng-src='{{ _config.UI_ROOT + "assets/button-icons/facebook-white.png" }}' title='${{ partial.share_on_facebook }}$')
 
             a.button.button-twitter(ng-click='twitterShare(creation)')
-                img(src='/assets/button-icons/twitter-white.png' title='${{ partial.share_on_twitter }}$')
+                img(ng-src='{{ _config.UI_ROOT + "assets/button-icons/twitter-white.png" }}' title='${{ partial.share_on_twitter }}$')
 
         .skip-sharing(ng-if='selectedWorld.share_strategy === "optional"')
             button.button-success(ng-click='skipSocialSharing()') ${{ partial.skip_sharing }}$
