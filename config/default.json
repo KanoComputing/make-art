@@ -1,0 +1,28 @@
+{
+    "APP_NAME": "Make Art",
+    "APP_DESCRIPTION": "Make Art with code",
+    "ICONS": {
+        "UWP": "icon/kano-draw.png"
+    },
+    "UWP": {
+        "PACKAGE_NAME": "KanoComputing.MakeArt",
+        "PACKAGE_DISPLAY_NAME": "Make Art",
+        "PUBLISHER": "CN=5F3CCEA7-D562-4AF0-A330-11A092BC3806",
+        "PUBLISHER_DISPLAY_NAME": "Kano Computing",
+        "EXTENSIONS": [{
+            "TYPE": "FILE_TYPE_ASSOCIATION",
+            "NAME": "make-art",
+            "LOGO": "www/assets/kano-draw.png",
+            "DISPLAY_NAME": "Make Art",
+            "SUPPORTED_FILE_TYPES": [{
+                "CONTENT_TYPE": "text/draw",
+                "FILE_TYPE": ".draw"
+            }]
+        }]
+    },
+    "BACKGROUND_COLOR": "#51555c",
+    "CONFIG": {
+        "API_URL_V2": "https://worldapi-dev.kano.me",
+        "CHALLENGES_URL": "/assets/challenges/descriptors"
+    }
+}

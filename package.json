@@ -22,6 +22,8 @@
     "license": "MIT2",
     "dependencies": {
         "@kano/kwc-auth": "^3.0.0-beta.18",
+        "angular": "^1.7.8",
+        "angular-route": "^1.7.8",
         "api-service": "^1.0.8",
         "coffeescript": "^2.4.1",
         "color": "^0.7.3",
@@ -29,6 +31,8 @@
         "marked": "^0.6.2"
     },
     "devDependencies": {
+        "@types/ace": "0.0.42",
+        "@types/angular": "^1.6.54",
         "chai": "3.2.x",
         "cli-color": "~0.2.x",
         "del": "1.1.1",
