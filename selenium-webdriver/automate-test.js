@@ -9,12 +9,11 @@ let challengeSunnyDay = ['background blue', 'color yellow', 'circle 150'];
 let challengeswissFlag = ['background red', 'stroke 66', 'stroke white', 'line 100', 'line -100', 'line 0, 100', 'line 0, -100'];
 let challengePlayGround = ['background green', 'color yellow\ncircle 100'];
 
-let browserLaunchStartTime = process.hrtime();
+let browserLaunchStartTime, goIntoTheChallengeTime = process.hrtime();
 let browserLaunchDuration = 0; // it will retutn an array => [seconds, nanoseconds]
-let goIntoTheChallengeTime = browserLaunchStartTime;
 let goIntoTheChallengeDuration = 0;
-let canvasStart = browserLaunchStartTime;
-let canvasHasChange = 0;
+let dataCanvasperformance = [];
+
 
 
 
@@ -43,39 +42,18 @@ const searchTest = async (driver, website) => {
   // Home
   await driver.findElement(By.css('button.button.large')).click();
   // Go in Playground
-  goInPlayGround(driver)
-  testCanvas(driver,drawFigure(colors));
+  await goInPlayGround(driver)
+  await testCanvas(driver, drawFigure(colors));
 
   // // first challenge pack
-  goToChallenges(driver);
-  testChallengesPath(driver, challengeSunnyDay);
-
-  // const click = async function(cssClassEl){
-  //   await driver.findElement(By.css(cssClassEl)).click()
-  // }
-
-  // click(classesOfTheElementsToTest);
-
-  // test 2: 
-  // driver.sleep(1000).then(function () {
-  //   driver.findElement(By.name('q')).sendKeys(webdriver.Key.TAB);
-  // });
-
-  // driver.findElement(By.name('btnK')).click();
-
-  // driver.sleep(20000).then(function () {
-  //   driver.getTitle().then(function (title) {
-  //     if (title === 'webdriver - Google Search') {
-  //       console.log('Test passed');
-  //     } else {
-  //       console.log('Test failed');
-  //     }
-  //     driver.quit();
-  // });
-  // });
+  await goToChallenges(driver);
+  await testChallengesPath(driver, challengeSunnyDay);
+  driver.sleep(1000).then(function () {
+    driver.quit();
+  });
 }
 
-async function testChallengesPath(driver, challengeSolution=challengeSunnyDay) {
+async function testChallengesPath(driver, challengeSolution = challengeSunnyDay) {
   // First challenge
   if (driver.wait(until.elementLocated(By.css('.page-challenge'))).click()) {
     goIntoTheChallengeDuration = process.hrtime(goIntoTheChallengeTime);
@@ -89,13 +67,6 @@ async function testChallengesPath(driver, challengeSolution=challengeSunnyDay) {
   //  - Write the challenge and reset
   await driver.findElement(By.css('.ace_editor')).click();
   driver.findElement(By.css('.ace_text-input')).sendKeys(challengeSolution.join('\n'));
-  console.time('draw')
-  // await driver.wait(async () => {
-  //   const newValue = await getCanvasValue(canvas);
-  //   return newValue !== initialValue
-  // })
-  console.timeEnd('draw')
-  // query canvas and compare with expected
   await driver.findElement(By.css('.action-reset')).click();
   // - go througth the help menu
   await driver.findElement(By.css('.icon-shapes')).click();
@@ -130,26 +101,31 @@ async function testChallengesPath(driver, challengeSolution=challengeSunnyDay) {
 
 // List functions:
 
-async function testCanvas(driver, challengeCommandsArray=challengePlayGround) {
-  const canvas = driver.wait(until.elementLocated(By.css('canvas')));
-  
-  async function getCanvasValue(canvas) {
-    return await driver.executeScript('return arguments[0].toDataURL()', canvas)
+async function testCanvas(driver, challengeCommandsArray = challengePlayGround) {
+  const canvasElem = driver.wait(until.elementLocated(By.css('canvas')));
+
+  async function getCanvasValue(canvasElem) {
+    return await driver.executeScript('return arguments[0].toDataURL()', canvasElem)
   }
 
-  canvasHasChange = process.hrtime(canvasStart);
-
-  // if (canvas.toDataURL() == document.getElementsByTagName('canvas').toDataURL())
-  //   console.log('it\'s blank')
-  // else
-  //   console.log('It has change')
-  // console.log('browserLaunchDuration =>', canvasHasChange[0], 's', canvasHasChange[1], 'ns');
-
   async function inputLine(line) {
-    const initialValue = await getCanvasValue(canvas);
+    let canvasHasChange = 0;
+    let canvasStart = null;
+    const initialValue = await getCanvasValue(canvasElem);
     await driver.findElement(By.css('.ace_text-input')).sendKeys(`${line}\n`);
+    console.time('draw')
+     canvasStart = process.hrtime()
     await driver.wait(async () => {
-      const newValue = await getCanvasValue(canvas);
+      const newValue = await getCanvasValue(canvasElem);
+      return newValue !== initialValue
+    })
+    console.timeEnd('draw')
+    canvasHasChange = process.hrtime(canvasStart);
+    console.log('canvasHasChange=>', canvasHasChange[0], 's ', canvasHasChange[1], 'ns')
+    dataCanvasperformance.push(canvasHasChange[1])
+    // query canvas and compare with expected
+    await driver.wait(async () => {
+      const newValue = await getCanvasValue(canvasElem);
       return newValue !== initialValue;
     });
   }
@@ -157,9 +133,16 @@ async function testCanvas(driver, challengeCommandsArray=challengePlayGround) {
   for (let i = 0; i < challengeCommandsArray.length; i++) {
     await inputLine(challengeCommandsArray[i])
   }
+  console.log('dataCanvasperformance=>', dataCanvasperformance)
+  let sumData = dataCanvasperformance.reduce((acc,val)=> {
+    return acc+val;
+  },0)
+  console.log('challengeCommandsArray.length=>', challengeCommandsArray.length)
+  console.log('sumData =>',sumData/challengeCommandsArray.length);
 }
 
-async function goToChallenges(driver, nameChallenge='Sunny Day') {
+
+async function goToChallenges(driver, nameChallenge = 'Sunny Day') {
   await driver.findElement(By.css('a.logo')).click();
   await driver.findElement(By.linkText('Basic')).click()
   await driver.findElement(By.linkText(nameChallenge)).click()
@@ -171,44 +154,31 @@ async function goInPlayGround(driver) {
   await driver.findElement(By.css('a.logo')).click();
   await driver.findElement(By.css('a.world-cover')).click();
   await driver.findElement(By.linkText('Playground')).click()
-  await driver.findElement(By.css('.ace_editor')).click();
+  await driver.wait(until.elementLocated(By.css('.ace_editor'))).click();
 }
-
-
-  // how long the canvas need to update
-  // await driver.findElement(By.css('canvas')).then((result, rejec) => {
-  //   if (result) {
-  //     console.log('result =>', result);
-  //   } else {
-  //     console.log('rejec =>', rejec);
-  //   }
-  // })
-
-// let remoteWebdriver = new RemoteWebDriver("http://localhost:9515", DesiredCapabilities.chrome());
-// driver.get("http://www.google.com");
 
 let colors = ['yellow', 'orange', 'red', 'orangered', 'darkred',
-    'green', 'aquamarine', 'lightblue', ' aqua', 'blue',
-    'darkblue', 'purple', 'brown', 'lightbrown', 'white',
-    'lightgray', 'dimgray'
+  'green', 'aquamarine', 'lightblue', ' aqua', 'blue',
+  'darkblue', 'purple', 'brown', 'lightbrown', 'white',
+  'lightgray', 'dimgray'
 ];
 
-function drawFigure(colorsArray, figure = 'circle') {
-    let maxNumber = 200;
-    let resultColor = ''
-    let resultFigure = ''
-    let array = [];
-
-    for (let i = maxNumber; i >= 10; i = i - 10) {
-        maxNumber = i
-        let col = colorsArray[Math.floor(colorsArray.length * Math.random())]
-        resultFigure = `color ${col}\n${figure} ${maxNumber}`
-        array.push(resultFigure)
-        console.log('resultFigure=>', `${figure} ${maxNumber}`)
-    }
-    console.log(`${resultColor}\n ${resultFigure}`)
-    return array;
+function randomColor(colorsArray) {
+  return colorsArray[Math.floor(colorsArray.length * Math.random())]
 }
 
+function drawFigure(colorsArray, figure = 'circle') {
+  let maxNumber = 200;
+  let resultDraw = ''
+  let array = [`background ${randomColor(colorsArray)}`];
+
+  for (let i = maxNumber; i >= 10; i = i - 10) {
+    maxNumber = i
+    let col = randomColor(colorsArray)
+    resultDraw = `color ${col}\n${figure} ${maxNumber}`
+    array.push(resultDraw)
+  }
+  return array;
+}
 
 drawFigure(colors, 'circle')
