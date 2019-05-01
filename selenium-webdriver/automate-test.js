@@ -1,5 +1,9 @@
-const { Builder, By, Keys, until } = require('selenium-webdriver');
+const { Builder, By, until } = require('selenium-webdriver');
 const getTime = require('./getTime');
+const { goToChallenges, goToPlayGround } = require('./navigation');
+const { testCanvas } = require('./testCanvasPerformance');
+const { drawFigure } = require('./canvasPerformanceGenerateData');
+const colorsConsole = require('colors'); 
 
 let myServer = 'http://172.16.254.110:3000'
 let chrome = require('selenium-webdriver/chrome')
@@ -8,10 +12,6 @@ chrome_options.setChromeBinaryPath('/usr/bin/chromium-browser');
 
 let challengeSunnyDay = ['background blue', 'color yellow', 'circle 150'];
 let challengeswissFlag = ['background red', 'stroke 66', 'stroke white', 'line 100', 'line -100', 'line 0, 100', 'line 0, -100'];
-let challengePlayGround = ['background green', 'color yellow\ncircle 100'];
-let dataCanvasperformance = [];
-
-
 
 async function main() {
   let driver_builder = await new Builder()
@@ -21,8 +21,6 @@ async function main() {
   let driver_chr = driver_builder.build();
 
   searchTest(driver_chr, myServer);
-
-  // await driver_chr.quit();
 }
 
 main()
@@ -31,14 +29,16 @@ const searchTest = async (driver, website) => {
   driver.get(website);
   getTime.start('browserLaunchStartTime')
   // test 1: Check the performance of the lunching browser 
-  driver.wait(until.elementLocated(By.css('button.button.large')));
-  await getTime.end('browserLaunchDuration')
+  await driver.wait(until.elementLocated(By.css('button.button.large')));
+  getTime.end('browserLaunchDuration')
   // Home
   await driver.wait(until.elementLocated(By.css('button.button.large'))).click();
   // Go in Playground
-  getTime.start('goInPlayGroundStart')
-  await goInPlayGround(driver)
-  await testCanvas(driver, drawFigure(colors));
+  getTime.start('goToPlayGroundStart')
+  await goToPlayGround(driver)
+  getTime.end('goToPlayGroundDuration')
+
+  await testCanvas(driver, drawFigure());
   // // first challenge pack
   getTime.start('gotoTheChallengeStart')
   await goToChallenges(driver);
@@ -54,10 +54,8 @@ async function testChallengesPath(driver, challengeSolution = challengeSunnyDay)
   if (driver.wait(until.elementLocated(By.css('.page-challenge'))).click()) {
     getTime.end('gotoTheChallengeDuration')
   } else {
-    return console.warm(`goIntoTheChallengeDuration didn't work`.yellow)
+    return console.warn(`goIntoTheChallengeDuration didn't work`.yellow)
   }
-
-
   //  - Hint menu
   await driver.wait(until.elementLocated(By.css('.button-hint'))).click();
   await driver.wait(until.elementLocated(By.css('.button-hint'))).click();
@@ -94,84 +92,3 @@ async function testChallengesPath(driver, challengeSolution = challengeSunnyDay)
   await driver.wait(until.elementLocated(By.css('div.close-button')));
   await driver.wait(until.elementLocated(By.css('.button-success.skip'))).click();
 }
-
-// List functions:
-
-async function testCanvas(driver, challengeCommandsArray = challengePlayGround) {
-  const canvasElem = driver.wait(until.elementLocated(By.css('canvas')));
-
-  async function getCanvasValue(canvasElem) {
-    return await driver.executeScript('return arguments[0].toDataURL()', canvasElem)
-  }
-
-  async function inputLine(line) {
-    const initialValue = await getCanvasValue(canvasElem);
-    await driver.wait(until.elementLocated(By.css('.ace_text-input'))).sendKeys(`${line}\n`);
-    // console.time('draw')
-    getTime.start('canvasStart')
-    await driver.wait(async () => {
-      const newValue = await getCanvasValue(canvasElem);
-      return newValue !== initialValue
-    })
-    // console.timeEnd('draw')
-    // getTime.end('canvasHasChange')
-    dataCanvasperformance.push(getTime.end('canvasHasChange'))
-    // query canvas and compare with expected
-    await driver.wait(async () => {
-      const newValue = await getCanvasValue(canvasElem);
-      return newValue !== initialValue;
-    });
-  }
-
-  for (let i = 0; i < challengeCommandsArray.length; i++) {
-    await inputLine(challengeCommandsArray[i])
-  }
-  console.log('dataCanvasperformance=>', dataCanvasperformance)
-  let sumData = dataCanvasperformance[0].reduce((acc, val) => {
-    return acc + val;
-  }, 0)
-  console.log('challengeCommandsArray.length=>', `${challengeCommandsArray.length}`.yellow)
-  console.log('sumData =>', sumData, 'mean =>', `${sumData / challengeCommandsArray.length}`.yellow);
-}
-
-
-async function goToChallenges(driver, nameChallenge = 'Sunny Day') {
-  await driver.wait(until.elementLocated(By.css('a.logo'))).click();
-  await driver.wait(until.elementLocated(By.linkText('Basic'))).click()
-  await driver.wait(until.elementLocated(By.linkText(nameChallenge))).click()
-  await driver.wait(until.elementLocated(By.css('a.button.button-success'))).click(); // <- measure time into challenge
-}
-
-async function goInPlayGround(driver) {
-  getTime.end('goInPlayGroundDuration')
-  await driver.wait(until.elementLocated(By.css('a.logo'))).click();
-  await driver.wait(until.elementLocated(By.css('a.world-cover'))).click();
-  await driver.wait(until.elementLocated(By.linkText('Playground'))).click();
-  await driver.wait(until.elementLocated(By.css('.ace_editor'))).click();
-}
-
-let colors = ['yellow', 'orange', 'red', 'orangered', 'darkred',
-  'green', 'aquamarine', 'lightblue', ' aqua', 'blue',
-  'darkblue', 'purple', 'brown', 'lightbrown', 'white',
-  'lightgray', 'dimgray'
-];
-
-function randomColor(colorsArray) {
-  return colorsArray[Math.floor(colorsArray.length * Math.random())]
-}
-
-function drawFigure(colorsArray, figure = 'circle') {
-  let maxNumber = 200;
-  let resultDraw = ''
-  let array = [`background ${randomColor(colorsArray)}`];
-
-  for (let i = maxNumber; i >= 10; i = i - 10) {
-    maxNumber = i
-    let col = randomColor(colorsArray)
-    resultDraw = `color ${col}\n${figure} ${maxNumber}`
-    array.push(resultDraw)
-  }
-  return array;
-}
-
-drawFigure(colors, 'circle')
