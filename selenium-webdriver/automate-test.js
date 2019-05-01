@@ -32,9 +32,9 @@ const searchTest = async (driver, website) => {
   getTime.start('browserLaunchStartTime')
   // test 1: Check the performance of the lunching browser 
   driver.wait(until.elementLocated(By.css('button.button.large')));
-  getTime.end('browserLaunchDuration')
+  await getTime.end('browserLaunchDuration')
   // Home
-  await driver.findElement(By.css('button.button.large')).click();
+  await driver.wait(until.elementLocated(By.css('button.button.large'))).click();
   // Go in Playground
   getTime.start('goInPlayGroundStart')
   await goInPlayGround(driver)
@@ -63,37 +63,36 @@ async function testChallengesPath(driver, challengeSolution = challengeSunnyDay)
   await driver.wait(until.elementLocated(By.css('.button-hint'))).click();
   //  - Write the challenge and reset
   await driver.wait(until.elementLocated(By.css('.ace_editor'))).click();
-  driver.findElement(By.css('.ace_text-input')).sendKeys(challengeSolution.join('\n'));
-  await driver.findElement(By.css('.action-reset')).click();
+  await driver.wait(until.elementLocated(By.css('.ace_text-input'))).sendKeys(challengeSolution.join('\n'));
+  await driver.wait(until.elementLocated(By.css('.action-reset'))).click();
   // - go througth the help menu
-  await driver.findElement(By.css('.icon-shapes')).click();
-  await driver.findElement(By.css('.icon-lines')).click();
-  await driver.findElement(By.css('.icon-position')).click();
-  await driver.findElement(By.css('.icon-text')).click();
-  await driver.findElement(By.css('.icon-general')).click();
-  await driver.findElement(By.css('.icon-colors')).click();
-  await driver.findElement(By.css('.icon-code')).click();
+  await driver.wait(until.elementLocated(By.css('.icon-shapes'))).click();
+  await driver.wait(until.elementLocated(By.css('.icon-lines'))).click();
+  await driver.wait(until.elementLocated(By.css('.icon-position'))).click();
+  await driver.wait(until.elementLocated(By.css('.icon-text'))).click();
+  await driver.wait(until.elementLocated(By.css('.icon-general'))).click();
+  await driver.wait(until.elementLocated(By.css('.icon-colors'))).click();
+  await driver.wait(until.elementLocated(By.css('.icon-code'))).click();
   //  - complete the challenge
-  await driver.findElement(By.css('.ace_editor')).click();
-  driver.findElement(By.css('.ace_text-input')).sendKeys(challengeSunnyDay.join('\n'));
+  await driver.wait(until.elementLocated(By.css('.ace_editor'))).click();
+  await driver.wait(until.elementLocated(By.css('.ace_text-input'))).sendKeys(challengeSunnyDay.join('\n'));
   await driver.wait(until.elementLocated(By.css('a.button.button-success'))).click();
   // - Share modal and close it
   await driver.wait(until.elementLocated(By.css('input.filename'))).sendKeys('First string written to test!');
-  driver.findElement(By.css('textarea.description')).sendKeys('Second string written to test!');
-  await driver.findElement(By.css('button.button-success')).click();
-  await driver.findElement(By.css('div.close-button')).click();
+  await driver.wait(until.elementLocated(By.css('textarea.description'))).sendKeys('Second string written to test!');
+  await driver.wait(until.elementLocated(By.css('button.button-success'))).click();
+  await driver.wait(until.elementLocated(By.css('div.close-button'))).click();
   await driver.wait(until.elementLocated(By.css('div.close-button')));
-  await driver.findElement(By.css('.button-success.skip')).click();
-
-  await driver.findElement(By.css('.close')).click();
+  await driver.wait(until.elementLocated(By.css('.button-success.skip'))).click();
+  await driver.wait(until.elementLocated(By.css('.close'))).click();
   // // Share modal and skip to the next challenge
   await driver.wait(until.elementLocated(By.css('a.button.button-success'))).click();
   await driver.wait(until.elementLocated(By.css('input.filename'))).sendKeys('First string written to test!');
-  await driver.findElement(By.css('textarea.description')).sendKeys('Second string written to test!');
-  await driver.findElement(By.css('button.button-success')).click();
-  await driver.findElement(By.css('div.close-button')).click();
+  await driver.wait(until.elementLocated(By.css('textarea.description'))).sendKeys('Second string written to test!');
+  await driver.wait(until.elementLocated(By.css('button.button-success'))).click();
+  await driver.wait(until.elementLocated(By.css('div.close-button'))).click();
   await driver.wait(until.elementLocated(By.css('div.close-button')));
-  await driver.findElement(By.css('.button-success.skip')).click();
+  await driver.wait(until.elementLocated(By.css('.button-success.skip'))).click();
 }
 
 // List functions:
@@ -107,7 +106,7 @@ async function testCanvas(driver, challengeCommandsArray = challengePlayGround) 
 
   async function inputLine(line) {
     const initialValue = await getCanvasValue(canvasElem);
-    await driver.findElement(By.css('.ace_text-input')).sendKeys(`${line}\n`);
+    await driver.wait(until.elementLocated(By.css('.ace_text-input'))).sendKeys(`${line}\n`);
     // console.time('draw')
     getTime.start('canvasStart')
     await driver.wait(async () => {
@@ -132,24 +131,22 @@ async function testCanvas(driver, challengeCommandsArray = challengePlayGround) 
     return acc + val;
   }, 0)
   console.log('challengeCommandsArray.length=>', `${challengeCommandsArray.length}`.yellow)
-  console.log('sumData =>', sumData,'mean =>',`${sumData / challengeCommandsArray.length}`.yellow);
+  console.log('sumData =>', sumData, 'mean =>', `${sumData / challengeCommandsArray.length}`.yellow);
 }
 
 
 async function goToChallenges(driver, nameChallenge = 'Sunny Day') {
-  await driver.findElement(By.css('a.logo')).click();
-  await driver.findElement(By.linkText('Basic')).click()
-  await driver.findElement(By.linkText(nameChallenge)).click()
-  await driver.findElement(By.css('a.button.button-success')).click(); // <- measure time into challenge
+  await driver.wait(until.elementLocated(By.css('a.logo'))).click();
+  await driver.wait(until.elementLocated(By.linkText('Basic'))).click()
+  await driver.wait(until.elementLocated(By.linkText(nameChallenge))).click()
+  await driver.wait(until.elementLocated(By.css('a.button.button-success'))).click(); // <- measure time into challenge
 }
-
 
 async function goInPlayGround(driver) {
   getTime.end('goInPlayGroundDuration')
-  await driver.findElement(By.css('a.logo')).click();
-  await driver.findElement(By.css('a.world-cover')).click();
+  await driver.wait(until.elementLocated(By.css('a.logo'))).click();
+  await driver.wait(until.elementLocated(By.css('a.world-cover'))).click();
   await driver.wait(until.elementLocated(By.linkText('Playground'))).click();
-  // await driver.findElement(By.linkText('Playground')).click()
   await driver.wait(until.elementLocated(By.css('.ace_editor'))).click();
 }
 
