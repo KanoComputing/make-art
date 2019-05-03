@@ -81,11 +81,7 @@ let challenges = {
   },
 }
 
-
-
-
 let names = Object.keys(challenges);
-
 
 module.exports = {
   challenges: challenges,
