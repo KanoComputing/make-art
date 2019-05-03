@@ -1,7 +1,7 @@
 const { By, until } = require('selenium-webdriver');
 const { goToChallenges } = require('./navigation');
 const getTime = require('./getTime');
-const {challenges, names} = require('./challenges-solution')
+const { challenges, names } = require('./challenges-solution')
 
 
 async function testChallengesPath(driver, solutionChallenge = challenges[names[0]].solution) {
@@ -46,13 +46,20 @@ async function testChallengesPath(driver, solutionChallenge = challenges[names[0
   // await driver.wait(until.elementLocated(By.css('div.close-button'))).click();
   // await driver.wait(until.elementLocated(By.css('div.close-button')));
   await driver.wait(until.elementLocated(By.css('.button-success.skip'))).click();
-  await driver.wait(until.elementLocated(By.xpath("/html[1]/body[1]/ng-view[1]/div[3]/div[1]/div[2]/div[1]/a[1]"))).click();
-  // await driver.wait(until.elementLocated(By.css('a.button.button-success'))).click();
+  if (driver.wait(until.elementLocated(By.css('button.button-success')))){
+    //next-challenge
+    await driver.wait(until.elementLocated(By.xpath("/html[1]/body[1]/ng-view[1]/div[3]/div[1]/div[2]/div[1]/a[1]"))).click();
+    // Go back to Home Menu or to Playground
+  } else {
+    // Go back to Home Menu
+     await driver.wait(until.elementLocated(By.xpath("/html[1]/body[1]/ng-view[1]/div[2]/div[1]/div[3]/div[1]/div[2]/a[1]"))).click();
+  }
+
+
 }
 
 async function goThroughTheChallenges(driver, challenges) {
-  for (let i = 0; i < 10; i++) { 
-    console.log(`name=${names[i]}  value=${challenges[names[i]]}`, challenges[names[i]])
+  for (let i = 0; i < 10; i++) {
     await goToChallenges(driver, names[i])
     await testChallengesPath(driver, challenges[names[i]].solution)
   }

@@ -1,5 +1,4 @@
 const { By, until } = require('selenium-webdriver');
-const {listChallengesName} = require('./challenges-solution')
 
 async function goToChallenges(driver, nameChallenge = 'Sunny Day') {
   await driver.wait(until.elementLocated(By.css('a.logo'))).click();
