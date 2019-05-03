@@ -1,4 +1,4 @@
-let challenges = {
+const challenges = {
   'Sunny Day': {
     solution: [
       'background blue',
@@ -81,7 +81,7 @@ let challenges = {
   },
 }
 
-let names = Object.keys(challenges);
+const names = Object.keys(challenges);
 
 module.exports = {
   challenges: challenges,

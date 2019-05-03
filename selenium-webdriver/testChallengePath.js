@@ -3,7 +3,6 @@ const { goToChallenges } = require('./navigation');
 const getTime = require('./getTime');
 const { challenges, names } = require('./challenges-solution')
 
-
 async function testChallengesPath(driver, solutionChallenge = challenges[names[0]].solution) {
   // First challenge
   if (driver.wait(until.elementLocated(By.css('.page-challenge'))).click()) {
@@ -54,8 +53,6 @@ async function testChallengesPath(driver, solutionChallenge = challenges[names[0
     // Go back to Home Menu
      await driver.wait(until.elementLocated(By.xpath("/html[1]/body[1]/ng-view[1]/div[2]/div[1]/div[3]/div[1]/div[2]/a[1]"))).click();
   }
-
-
 }
 
 async function goThroughTheChallenges(driver, challenges) {

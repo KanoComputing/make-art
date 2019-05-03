@@ -18,5 +18,3 @@ module.exports = {
   goToChallenges: goToChallenges,
   goToPlayGround: goToPlayGround
 }
-
-

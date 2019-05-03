@@ -32,12 +32,12 @@ async function testCanvas(driver, challengeCommandsArray = challengePlayGround) 
   for (let i = 0; i < challengeCommandsArray.length; i++) {
     await inputLine(challengeCommandsArray[i])
   }
-  // console.log('dataCanvasperformance=>', dataCanvasperformance)
-  // let sumData = dataCanvasperformance[0].reduce((acc, val) => {
-  //   return acc + val;
-  // }, 0)
-  // console.log('challengeCommandsArray.length=>', `${challengeCommandsArray.length}`.yellow)
-  // console.log('sumData =>', sumData, 'mean =>', `${sumData / challengeCommandsArray.length}`.yellow);
+  console.log('dataCanvasperformance=>', dataCanvasperformance)
+  let sumData = dataCanvasperformance[0].reduce((acc, val) => {
+    return acc + val;
+  }, 0)
+  console.log('challengeCommandsArray.length=>', `${challengeCommandsArray.length}`.yellow)
+  console.log('sumData =>', sumData, 'mean =>', `${sumData / challengeCommandsArray.length}`.yellow);
 }
 
 module.exports = {
