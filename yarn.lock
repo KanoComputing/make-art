@@ -789,10 +789,10 @@
     rollup-plugin-node-resolve "^4.0.0"
     rollup-plugin-replace "^2.1.0"
 
-"@kano/kit-app-shell-uwp@^0.0.3-alpha.36":
-  version "0.0.3-alpha.36"
-  resolved "https://registry.yarnpkg.com/@kano/kit-app-shell-uwp/-/kit-app-shell-uwp-0.0.3-alpha.36.tgz#b988786809ec9b8a2e9ff0ec786026cda36d9fd1"
-  integrity sha512-k+p3Zx8QH2y73j6gGwAWKIsmh7fB95ac3Q3XxD5yXUeUf+2KqyHqQil6srF2IgczoXEx7nXY8Z1EmqbK24pytg==
+"@kano/kit-app-shell-uwp@^0.0.3-alpha.37":
+  version "0.0.3-alpha.37"
+  resolved "https://registry.yarnpkg.com/@kano/kit-app-shell-uwp/-/kit-app-shell-uwp-0.0.3-alpha.37.tgz#462a91dbaec2490a0ffe4ccd25505a6ce38b1ce1"
+  integrity sha512-Uk2BFELocQeVhPpnSqRqIcpQmStj8WHlFrsxOKzitR7/AomAnF9gRoOs7R7zxGIDyogYAhkvPkJcYlqb2dXq9A==
   dependencies:
     "@kano/devices-sdk-uwp" "^1.0.0-alpha.2"
     "@kano/kit-app-shell-windows-store" "^0.0.3-alpha.36"

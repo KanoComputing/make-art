@@ -14,7 +14,9 @@ pipeline {
     environment {
         KASH_TMP_DIR = '.tmp'
         WINDOWS_KIT = 'C:/Program Files (x86)/Windows Kits/10/bin/10.0.15063.0/x64/' /* Location of the windows kit on win-slave-1 */
-        PUBLISHER_ID = '5F3CCEA7-D562-4AF0-A330-11A092BC3806' /* Publisher id for the Kano App */
+        PUBLISHER_ID = '5F3CCEA7-D562-4AF0-A330-11A092BC3806' /* Publisher id for the App */
+        MSBUILD_PATH = "D:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\MSBuild\\15.0\\Bin\\MsBuild.exe"
+        DevEnvDir = "D:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\Common7\\IDE"
     }
     stages {
         stage('checkout') {
@@ -32,7 +34,7 @@ pipeline {
                         bat "yarn"
                     }
                     withCredentials([file(credentialsId: PUBLISHER_ID, variable: 'devCert')]) {
-                        bat "yarn build:uwp --dev-cert=${devCert} --windows-kit=\"${WINDOWS_KIT}\" --env=${env.NODE_ENV} --release"
+                        bat "yarn build:uwp --dev-cert=${devCert} --windows-kit=\"${WINDOWS_KIT}\" --env=${env.NODE_ENV} --msbuild-path=\"${env.MSBUILD_PATH}\" --release"
                     }
                     withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'kart']]) {
                         archiveUrl = bat returnStdout: true, script: "@yarn run --silent kart archive ./KanoComputing.MakeArt.appx -a releases.kano.me --name make-art --arch appx -t none -b ${env.BUILD_NUMBER} -c ${env.NODE_ENV} -r ."
