@@ -67,6 +67,12 @@ module.exports = {
                     'CoffeeScript})(this);': 'CoffeeScript})(window);'
                 },
             },
+            {
+                include: [require.resolve('color/color-0.4.1.js')],
+                values: {
+                    ';Color =': ';window.Color =',
+                }
+            }
         ],
     },
     web: {

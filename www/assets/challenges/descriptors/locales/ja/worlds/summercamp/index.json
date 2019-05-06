@@ -1,0 +1,184 @@
+{
+    "challenges": [
+        {
+            "id": "camp_sign",
+            "title": "Your Summer Camp sign",
+            "short_title": "Camp Sign",
+            "cover": "summercamp/day_1.png",
+            "index": 1,
+            "hasNext": true
+        },
+        {
+            "id": "campsite",
+            "title": "Draw your Campsite",
+            "short_title": "Campsite",
+            "cover": "summercamp/day_2.png",
+            "index": 2,
+            "hasNext": true
+        },
+        {
+            "id": "tent",
+            "title": "Pitch your Tent",
+            "short_title": "Tent",
+            "cover": "summercamp/day_3.png",
+            "index": 3,
+            "hasNext": true
+        },
+        {
+            "id": "flag",
+            "title": "Create your Flag",
+            "short_title": "Flag",
+            "cover": "summercamp/day_4.png",
+            "index": 4,
+            "hasNext": true
+        },
+        {
+            "id": "camp_badge",
+            "title": "Camp Badge",
+            "short_title": "Camp Badge",
+            "cover": "summercamp/day_5.png",
+            "index": 5,
+            "hasNext": true,
+            "start_date": "2015-10-07 06:00:00"
+        },
+        {
+            "id": "campfire",
+            "title": "Campfire",
+            "short_title": "Campfire",
+            "cover": "summercamp/day_6.png",
+            "index": 6,
+            "hasNext": true
+        },
+        {
+            "id": "ghost",
+            "title": "Ghost gathering",
+            "short_title": "Ghost",
+            "cover": "summercamp/day_7.png",
+            "index": 7,
+            "hasNext": true
+        },
+        {
+            "id": "backpack",
+            "title": "Pack your things",
+            "short_title": "Backpack",
+            "cover": "summercamp/day_8.png",
+            "index": 8,
+            "hasNext": true
+        },
+        {
+            "id": "compass",
+            "title": "A compass is an essential tool",
+            "short_title": "Compass",
+            "cover": "summercamp/day_9.png",
+            "index": 9,
+            "hasNext": true
+        },
+        {
+            "id": "camera",
+            "title": "Take a pic!",
+            "short_title": "Camera",
+            "cover": "summercamp/day_10.png",
+            "index": 10,
+            "hasNext": true
+        },
+        {
+            "id": "bear",
+            "title": "Cheeky Bear",
+            "short_title": "Bear",
+            "cover": "summercamp/day_11.png",
+            "index": 11,
+            "hasNext": true
+        },
+        {
+            "id": "flashlight",
+            "title": "Lights on!",
+            "short_title": "Flashlight",
+            "cover": "summercamp/day_12.png",
+            "index": 12,
+            "hasNext": true
+        },
+        {
+            "id": "guitar",
+            "title": "Play a nice sweet song",
+            "short_title": "Guitar",
+            "cover": "summercamp/day_13.png",
+            "index": 13,
+            "hasNext": true
+        },
+        {
+            "id": "cinema",
+            "title": "Relax watching a movie",
+            "short_title": "Cinema",
+            "cover": "summercamp/day_14.png",
+            "index": 14,
+            "hasNext": true
+        },
+        {
+            "id": "bow_and_arrow",
+            "title": "Bow and Arrow",
+            "short_title": "Bow and Arrow",
+            "cover": "summercamp/day_15.png",
+            "index": 15,
+            "hasNext": true
+        },
+        {
+            "id": "table_tennis",
+            "title": "Table Tennis",
+            "short_title": "Table Tennis",
+            "cover": "summercamp/day_16.png",
+            "index": 16,
+            "hasNext": true
+        },
+        {
+            "id": "fishing",
+            "title": "Fishing",
+            "short_title": "Fishing",
+            "cover": "summercamp/day_17.png",
+            "index": 17,
+            "hasNext": true
+        },
+        {
+            "id": "hiking",
+            "title": "Hiking Poster",
+            "short_title": "Hiking",
+            "cover": "summercamp/day_18.png",
+            "index": 18,
+            "hasNext": true
+        },
+        {
+            "id": "foraging",
+            "title": "Foraging",
+            "short_title": "Foraging",
+            "cover": "summercamp/day_19.png",
+            "index": 19,
+            "hasNext": true
+        },
+        {
+            "id": "tree",
+            "title": "Fractal Tree",
+            "short_title": "Tree",
+            "cover": "summercamp/day_20.png",
+            "index": 20,
+            "hasNext": true
+        },
+        {
+            "id": "fireworks",
+            "title": "Fireworks",
+            "short_title": "Fireworks",
+            "cover": "summercamp/day_21.png",
+            "index": 21,
+            "hasNext": false
+        }
+    ],
+    "id": "summercamp",
+    "name": "夏キャンプ",
+    "description": "このチャレンジを通して、メークアートの基礎を身につけよう",
+    "world_path": "worlds/summercamp",
+    "cover": "world_covers/summercamp",
+    "css_class": "_summercamp",
+    "dependency": [
+        "medium"
+    ],
+    "type": "campaign",
+    "share_strategy": "optional"
+}

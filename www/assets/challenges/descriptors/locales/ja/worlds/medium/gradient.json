@@ -1,0 +1,35 @@
+{
+    "id": "gradient",
+    "title": "虹のパレット",
+    "description": "ループと色を組み合わせ、魔法の絵を！",
+    "code": "",
+    "startAt": 1,
+    "steps": [
+        {
+            "hint": "まず、forループを始めよう。`for x in [ 0 .. 25 ]`を**タイプ**",
+            "solution": "for x in [ 0..25 ]"
+        },
+        {
+            "hint": "次は２つ目のforループを始めよう。`for y in [ 0 .. 25 ]`を**タイプ**",
+            "solution": "    for y in [ 0..25 ]"
+        },
+        {
+            "hint": "色のトーンを回転させよう。`color rotate red, 10 * x + 10 * y`を**タイプ**",
+            "solution": "        color rotate red, 10 * x + 10 * y",
+            "validate": "        color rotate +red,10 *\\* *x *\\+ *10 *\\* *y"
+        },
+        {
+            "hint": "そして描くときに毎回動かなきゃ。`moveTo 20 * x, 20 * y`を**タイプ**",
+            "solution": "        moveTo 20 * x, 20 * y",
+            "validate": "        moveTo 20 *\\* *x,20 *\\* *y"
+        },
+        {
+            "hint": "最後に大きさ20の四角を描こう。",
+            "solution": "        square 20"
+        }
+    ],
+    "completion_text": "回転(rotate)で数字を変えると、どうなるんだろう？",
+    "cover": "gradient.png",
+    "index": 6,
+    "hasNext": true
+}

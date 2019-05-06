@@ -1,0 +1,62 @@
+{
+    "id": "planet",
+    "title": "Planet painter",
+    "description": "Code your own planet!",
+    "startAt": 2,
+    "steps": [
+        {
+            "hint": "Set the background using a hex code - **type** `background '#444444'`",
+            "solution": "background '#444444'",
+            "validate": "background '\\#444444'"
+        },
+        {
+            "hint": "Set the stroke to 0, to avoid drawing lines",
+            "solution": "stroke 0"
+        },
+        {
+            "hint": "Set the color to yellow",
+            "solution": "color yellow"
+        },
+        {
+            "hint": "Now let's open a loop - **type** `for i in [ 0 .. 32 ]`",
+            "solution": "for i in [ 0..32 ]"
+        },
+        {
+            "hint": "Now to set where each star will go -  **type** `moveTo (random 1, 500), (random 1, 500)`",
+            "solution": "    moveTo (random 1, 500), (random 1, 500)",
+            "validate": "__    moveTo ?\\( *random +1, +500 *\\), +\\( *random +1, +500 *\\)"
+        },
+        {
+            "hint": "Draw each star as a circle with a size of 5",
+            "solution": "    circle 5"
+        },
+        {
+            "hint": "Now, make sure you're out of the for loop (not indented) and **type** `color purple`",
+            "solution": "color purple"
+        },
+        {
+            "hint": "Now `moveTo 250, 250`",
+            "solution": "moveTo 250, 250"
+        },
+        {
+            "hint": "Now draw a circle with a size of 170",
+            "solution": "circle 170"
+        },
+        {
+            "hint": "Set the color to white",
+            "solution": "color white"
+        },
+        {
+            "hint": "Choose a thick, white stroke - in a new line, **type** `stroke white, 5`",
+            "solution": "stroke white, 5"
+        },
+        {
+            "hint": "Now draw an ellipse - **type** `ellipse 220, 4`",
+            "solution": "ellipse 220, 4"
+        }
+    ],
+    "completion_text": "Astronomical! Change the colors and see what you can add to make your planet even cooler before hitting share!",
+    "cover": "planet.png",
+    "index": 7,
+    "hasNext": true
+}

@@ -1,0 +1,92 @@
+{
+    "id": "campfire",
+    "title": "Fogata",
+    "short_title": "Fogata",
+    "description": "Es tiempo de iniciar una fogata. En el descampado, ésta podría ser tu única fuente de luz y calor. Ardiendo por encima de los 600 grados centígrados, ¡esto será seguro para mantener el calor y alimentarte también! Sobre la llama y con la ayuda de algún pinche puedes cocinar carne, vegetales y malvaviscos.  \nLas fogatas se arman con leños pero tú la harás programando y utilizando un ciclo. A medida que tu fuego crece y se mezcla con el oxígeno, cambia de color entre los distintos tonos de naranja. Tus códigos de programación darán lugar a cientos de colores utilizando únicamente algunas líneas de comandos.",
+    "icon_class": "challenge_fire",
+    "completion_text": "¡Intenta agregar un cielo estrellado, más llamas de fuego o un aro de rocas alrededor de tu fogata para que sea más seguro cocinar algo!",
+    "difficulty": 2,
+    "cover": "summercamp/day_6.png",
+    "startAt": 5,
+    "summerCamp": true,
+    "rewards": {
+        "wallpaper": 1
+    },
+    "steps": [
+        {
+            "hint": "Es una noche oscura. Configura el fondo usando `background` a azul oscuro o `darkblue` en inglés",
+            "solution": "background darkblue"
+        },
+        {
+            "hint": "Configura el trazo a 0 para evitar dibujar líneas - **escribe** `stroke 0`",
+            "solution": "stroke 0"
+        },
+        {
+            "hint": "Mueve el cursor para dibujar el piso - **escribe** `moveTo 0, 300`",
+            "solution": "moveTo 0, 300"
+        },
+        {
+            "hint": "Configura el `color` a verde oscuro o `darkgreen`",
+            "solution": "color darkgreen"
+        },
+        {
+            "hint": "Dibuja el césped usando un rectángulo - **escribe** `rectangle 500, 200`",
+            "solution": "rectangle 500, 200"
+        },
+        {
+            "hint": "Mueve el cursor para dibujar el efecto de luz que genera el fuego en el piso - **escribe** `moveTo 250, 400`",
+            "solution": "moveTo 250, 400"
+        },
+        {
+            "hint": "Configura el `color` a verde o `green`",
+            "solution": "color green"
+        },
+        {
+            "hint": "Dibuja la luz usando una elipse - **escribe** `ellipse 200, 30`",
+            "solution": "ellipse 200, 30"
+        },
+        {
+            "hint": "Necesitamos leños de madera para crear el fuego - **escribe** `moveTo 110, 390`",
+            "solution": "moveTo 110, 390"
+        },
+        {
+            "hint": "Configura el trazo para los leños - **escribe** `stroke brown, 25`",
+            "solution": "stroke brown, 25"
+        },
+        {
+            "hint": "Bien, ahora dibuja el primero - **escribe** `line 270, 30`",
+            "solution": "line 270, 30"
+        },
+        {
+            "hint": "Mueve el cursor para dibujar el segundo - **escribe** `moveTo 420, 390`",
+            "solution": "moveTo 420, 390"
+        },
+        {
+            "hint": "Dibuja el segundo leño - **escribe** `line -290, 30`",
+            "solution": "line -290, 30"
+        },
+        {
+            "hint": "¡Excelente! Ahora estamos listos para encender el fuego - **escribe** `moveTo 180, 400`",
+            "solution": "moveTo 180, 400"
+        },
+        {
+            "hint": "Nuestro fuego estará formado por 150 líneas de color naranja - **escribe** `for i in [ 1 .. 150 ]`",
+            "solution": "for i in [ 1 .. 150 ]"
+        },
+        {
+            "hint": "Configura el tamaño y el color de cada línea - **escribe** `stroke 'rgba(255, ' + (i + 50) + ', 0, 0.3)', 10`",
+            "solution": "    stroke 'rgba(255, ' + (i + 50) + ', 0, 0.3)', 10",
+            "validate": "__^    stroke 'rgba*\\(255, ' \\+ \\(i *\\+ *50\\) *\\+ *', *0, *0.3\\)', 10"
+        },
+        {
+            "hint": "Ahora dibuja la línea - **escribe** `line 150 - i`",
+            "solution": "    line 150 - i"
+        },
+        {
+            "hint": "Mueve el cursor para la siguiente línea - **escribe** `move 0.5, -2`",
+            "solution": "    move 0.5, -2"
+        }
+    ],
+    "index": 6,
+    "hasNext": true
+}
