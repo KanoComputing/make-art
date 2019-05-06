@@ -10,28 +10,25 @@ You can try the app [here »](http://art.kano.me/)
 
     git clone git@github.com:KanoComputing/make-art.git
     cd make-art
-    npm install
-    bower install
-        - if you are linux you may use `sudo npm install bower`
+    yarn
 
 ## Build
 
 Build the app before running it
 
-- `npm run build`
-    - run again the command everytime you update the html structure
+- `yarn build`
 
 ## Run
 
-- `npm start`
+- `yarn serve`
 
-Open your browser at [http://localhost:3000](http://localhost:3000)
+Open your browser at [http://localhost:4000](http://localhost:4000)
 
 ## Develop
 
 Run the watch script when developing
 
-- `npm run watch`
+- `yarn watch`
 
 ## Offline
 

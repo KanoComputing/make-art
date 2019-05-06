@@ -30,7 +30,6 @@ module.exports = {
         moduleContext: {
             [require.resolve('./lib/vendor/ace/ace.js')]: 'window',
             [require.resolve('marked/marked.min.js')]: 'window',
-            [require.resolve('color/color-0.4.1.js')]: 'window',
             [require.resolve('coffeescript/lib/coffeescript-browser-compiler-legacy/coffeescript.js')]: 'window'
         },
         replaces: [{
@@ -45,11 +44,6 @@ module.exports = {
                 require.resolve('coffeescript/lib/coffeescript-browser-compiler-legacy/coffeescript.js'),
             ],
             values: DefineBuster,
-        }, {
-            include: [require.resolve('color/color-0.4.1.js')],
-            values: {
-                ';Color =': ';window.Color =',
-            }
         }, {
             // Angular is bad at guessing things, It tries to use the base href to do routing.
             // This forces angular to use the root as base for the app
@@ -67,12 +61,6 @@ module.exports = {
                     'CoffeeScript})(this);': 'CoffeeScript})(window);'
                 },
             },
-            {
-                include: [require.resolve('color/color-0.4.1.js')],
-                values: {
-                    ';Color =': ';window.Color =',
-                }
-            }
         ],
     },
     web: {
