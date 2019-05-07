@@ -53,7 +53,7 @@
         "gulp-rename": "~0.2.x",
         "gulp-stylus": "^2.0.1",
         "gulp-uglify": "^2.1.2",
-        "kart": "^0.9.1",
+        "kart": "^0.9.2",
         "lodash": "^4.17.11",
         "mocha": "2.3.x",
         "nib": "^1.1.2",
