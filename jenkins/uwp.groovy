@@ -1,4 +1,7 @@
 #!/usr/bin/env groovy
+import net.sf.json.JSONArray;
+import net.sf.json.JSONObject;
+
 @Library('kanolib') _
 
 def archiveUrl;
