@@ -14,7 +14,8 @@
         "kash": "kash",
         "kart": "kart",
         "build:web": "kash build web . -o out/www --bundle-only",
-        "build:uwp": "kash build uwp . -o . --bundle-only"
+        "build:uwp": "kash build uwp . -o . --bundle-only",
+        "find-app:uwp": "node ./utils/find-app.js"
     },
     "author": "Kano Computing",
     "repository": {
