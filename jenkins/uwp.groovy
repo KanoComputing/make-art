@@ -4,6 +4,26 @@
 def archiveUrl;
 def utils;
 
+def notify(data) {
+    JSONArray attachments = new JSONArray();
+
+    JSONObject message = new JSONObject();
+    message.put('title', "New version of Make Art available for ${data.platformName} available");
+    message.put('color', '#36a64f');
+
+    attachments.add(message);
+
+    JSONObject platform = new JSONObject();
+    platform.put('title', data.downloadLink);
+    platform.put('author_name', data.platformName);
+    platform.put('author_icon', data.icon);
+    platform.put('color', '#36a64f');
+
+    attachments.add(platform);
+
+    slackSend channel: data.channel, attachments: attachments.toString()
+}
+
 pipeline {
     agent {
         node {
@@ -41,6 +61,7 @@ pipeline {
                     withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'kart']]) {
                         archiveUrl = bat returnStdout: true, script: "@yarn run --silent kart archive ${appPath.trim()} -a releases.kano.me --name make-art-pc --arch appx -t none -b ${env.BUILD_NUMBER} -c ${env.NODE_ENV} -r ."
                         archiveUrl = archiveUrl.replace("releases.kano.me.s3.amazonaws.com", "releases.kano.me")
+                        notify channel: '#beta-releases', platformName: 'Microsoft Store', downloadLink: archiveUrl, icon: 'https://upload.wikimedia.org/wikipedia/fr/2/2b/Microsoft_Store_Logo.png'
                     }
                 }
             }
