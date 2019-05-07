@@ -698,43 +698,7 @@
     pretty-bytes "^5.1.0"
     sywac "^1.2.1"
 
-"@kano/kit-app-shell-core@^0.0.3-alpha.35":
-  version "0.0.3-alpha.35"
-  resolved "https://registry.yarnpkg.com/@kano/kit-app-shell-core/-/kit-app-shell-core-0.0.3-alpha.35.tgz#57bea912a62e27a9d174c55d053ac83d20326b16"
-  integrity sha512-DtnvFG41ELRfI5q/yE5jFIVpX4m1FOdmK3fgTKtxQrX159TQjKC+KbSApkNS7pMhRlQB1uaE5X6YUi7enbnmig==
-  dependencies:
-    "@babel/core" "^7.2.2"
-    "@babel/plugin-syntax-dynamic-import" "^7.2.0"
-    "@babel/preset-env" "^7.2.3"
-    acorn "^6.0.4"
-    acorn-walk "^6.1.1"
-    deepmerge "^3.0.0"
-    escape-regexp "^0.0.1"
-    get-folder-size "^2.0.0"
-    glob "^7.1.3"
-    html-minifier "^3.5.21"
-    html-postcss "^0.1.2"
-    mkdirp "^0.5.1"
-    mocha "^5.2.0"
-    parse5 "^5.1.0"
-    pretty-bytes "^5.1.0"
-    requirejs "^2.3.6"
-    rimraf "^2.6.3"
-    rollup "^1.10.0"
-    rollup-plugin-babel "^4.3.2"
-    rollup-plugin-inject "^2.2.0"
-    rollup-plugin-minify-html-literals "^1.2.2"
-    rollup-plugin-node-resolve "^3.4.0"
-    rollup-plugin-polyfill "^2.0.1"
-    rollup-plugin-terser "^4.0.4"
-    rollup-plugin-uglify-es "^0.0.1"
-    rollup-plugin-virtual "^1.0.1"
-    rollup-pluginutils "^2.3.3"
-    stream-replace "^1.0.0"
-    walk-parse5 "^1.0.0"
-    wd "^1.11.1"
-
-"@kano/kit-app-shell-core@^0.0.3-alpha.36":
+"@kano/kit-app-shell-core@^0.0.3-alpha.35", "@kano/kit-app-shell-core@^0.0.3-alpha.36":
   version "0.0.3-alpha.36"
   resolved "https://registry.yarnpkg.com/@kano/kit-app-shell-core/-/kit-app-shell-core-0.0.3-alpha.36.tgz#d0769c3b92d49476d5a137d32abc208548f18683"
   integrity sha512-7IDroTriw/L8Kpy7cncwkdllCmU0DnnB+121mT5E305OhMpRh3laGHUUUTlIh0vVEx9dkIbVGedk6QGj0GXz0w==
