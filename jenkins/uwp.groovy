@@ -4,6 +4,11 @@
 def archiveUrl;
 def utils;
 
+def findFileWithExtension(data) {
+    def appPath = sh returnStdout: true, script: "find . -maxdepth ${data.depth ?: 1} -iname *.${data.ext}"
+    return appPath.trim()
+}
+
 pipeline {
     agent {
         node {
@@ -17,6 +22,7 @@ pipeline {
         PUBLISHER_ID = '5F3CCEA7-D562-4AF0-A330-11A092BC3806' /* Publisher id for the App */
         MSBUILD_PATH = "D:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\MSBuild\\15.0\\Bin\\MsBuild.exe"
         DevEnvDir = "D:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\Common7\\IDE"
+        NODE_ENV = 'staging'
     }
     stages {
         stage('checkout') {
@@ -36,8 +42,9 @@ pipeline {
                     withCredentials([file(credentialsId: PUBLISHER_ID, variable: 'devCert')]) {
                         bat "yarn build:uwp --dev-cert=${devCert} --windows-kit=\"${WINDOWS_KIT}\" --env=${env.NODE_ENV} --msbuild-path=\"${env.MSBUILD_PATH}\" --release"
                     }
+                    def appPath = utils.findFileWithExtension ext: 'appxbundle'
                     withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'kart']]) {
-                        archiveUrl = bat returnStdout: true, script: "@yarn run --silent kart archive ./KanoComputing.MakeArt.appx -a releases.kano.me --name make-art --arch appx -t none -b ${env.BUILD_NUMBER} -c ${env.NODE_ENV} -r ."
+                        archiveUrl = bat returnStdout: true, script: "@yarn run --silent kart archive ${appPath} -a releases.kano.me --name make-art-pc --arch appx -t none -b ${env.BUILD_NUMBER} -c ${env.NODE_ENV} -r ."
                         archiveUrl = archiveUrl.replace("releases.kano.me.s3.amazonaws.com", "releases.kano.me")
                     }
                 }
