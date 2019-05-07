@@ -37,7 +37,7 @@ pipeline {
                     withCredentials([file(credentialsId: PUBLISHER_ID, variable: 'devCert')]) {
                         bat "yarn build:uwp --dev-cert=${devCert} --windows-kit=\"${WINDOWS_KIT}\" --env=${env.NODE_ENV} --msbuild-path=\"${env.MSBUILD_PATH}\" --release"
                     }
-                    def appPath = bat returnStdout: true, script: "@yarn run --silent fond-app:uwp"
+                    def appPath = bat returnStdout: true, script: "@yarn run --silent find-app:uwp"
                     withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'kart']]) {
                         archiveUrl = bat returnStdout: true, script: "@yarn run --silent kart archive ${appPath} -a releases.kano.me --name make-art-pc --arch appx -t none -b ${env.BUILD_NUMBER} -c ${env.NODE_ENV} -r ."
                         archiveUrl = archiveUrl.replace("releases.kano.me.s3.amazonaws.com", "releases.kano.me")
