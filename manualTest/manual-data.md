@@ -1,4 +1,4 @@
-# Manual test QtWebengine
+# Manual test QtWebengine with EGLFS
 
 launchbrowserduration:
 ```
