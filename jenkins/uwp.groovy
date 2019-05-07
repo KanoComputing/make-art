@@ -39,7 +39,7 @@ pipeline {
                     }
                     def appPath = bat returnStdout: true, script: "@yarn run --silent find-app:uwp"
                     withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'kart']]) {
-                        archiveUrl = bat returnStdout: true, script: "@yarn run --silent kart archive ${appPath} -a releases.kano.me --name make-art-pc --arch appx -t none -b ${env.BUILD_NUMBER} -c ${env.NODE_ENV} -r ."
+                        archiveUrl = bat returnStdout: true, script: "@yarn run --silent kart archive ${appPath.trim()} -a releases.kano.me --name make-art-pc --arch appx -t none -b ${env.BUILD_NUMBER} -c ${env.NODE_ENV} -r ."
                         archiveUrl = archiveUrl.replace("releases.kano.me.s3.amazonaws.com", "releases.kano.me")
                     }
                 }
