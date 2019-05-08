@@ -2,7 +2,7 @@ const { By, until } = require('selenium-webdriver');
 const getTime = require('./getTime');
 const { goThroughTheChallenges } = require('./testChallengePath');
 const {challenges} = require('./challenges-solution')
-const {main, myServer} = require('./mainSetup');
+const {driver, myServer} = require('./driverSetup');
 
 const launchChallenges = async (driver, website) => {
   driver.get(website);
@@ -20,4 +20,4 @@ const launchChallenges = async (driver, website) => {
   });
 }
 
-launchChallenges(main(),myServer)
+launchChallenges(driver(),myServer)

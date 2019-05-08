@@ -3,8 +3,7 @@ let startTime = process.hrtime();
 
 module.exports = {
   start : (el) => {
-    startTime = process.hrtime();
-    console.log(`startTime ${el} =>`.green, `${startTime[0]} s ${startTime[1]} ns`.yellow)   
+    startTime = process.hrtime(); 
     return startTime
   },
   end : (el) => {

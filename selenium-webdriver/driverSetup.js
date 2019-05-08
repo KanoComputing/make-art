@@ -1,11 +1,11 @@
 const { Builder } = require('selenium-webdriver');
 
-let myServer = 'http://172.16.254.110:3000'
+let myServer = 'http://127.0.0.1:3000'
 const chrome = require('selenium-webdriver/chrome')
-const chrome_options = new chrome.Options(); // you will need to setup Chroumium
+const chrome_options = new chrome.Options(); // you will need to setup Chromium
 chrome_options.setChromeBinaryPath('/usr/bin/chromium-browser');
 
-function main() {
+function driver() {
   const driver_builder = new Builder()
     .forBrowser('chrome')
     .setChromeOptions(chrome_options)
@@ -16,5 +16,5 @@ function main() {
 
 module.exports = {
   myServer: myServer,
-  main: main
+  driver: driver
 }

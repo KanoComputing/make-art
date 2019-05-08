@@ -2,7 +2,7 @@ const { By, until } = require('selenium-webdriver');
 const getTime = require('./getTime');
 const { testCanvas } = require('./testCanvasPerformance');
 const { drawFigure } = require('./canvasPerformanceGenerateData');
-const {main, myServer} = require('./mainSetup');
+const {driver, myServer} = require('./driverSetup');
 const { goToPlayGround } = require('./navigation');
 
 const benchmark = async (driver, website) => {
@@ -23,4 +23,4 @@ const benchmark = async (driver, website) => {
   });
 }
 
-benchmark(main(),myServer)
+benchmark(driver(),myServer)
