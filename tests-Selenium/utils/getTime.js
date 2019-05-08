@@ -3,7 +3,7 @@ let colors = require('colors');
 let startTime = process.hrtime();
 
 module.exports = {
-    start: (el) => {
+    start: () => {
         startTime = process.hrtime();
         return startTime;
     },

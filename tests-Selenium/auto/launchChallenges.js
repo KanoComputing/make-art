@@ -1,9 +1,9 @@
 "use strict";
 const { By, until } = require('selenium-webdriver');
-const getTime = require('./getTime');
+const getTime = require('../utils/getTime');
 const { goThroughTheChallenges } = require('./testChallengePath');
-const { challenges } = require('./challenges-solution');
-const { driver, myServer } = require('./driverSetup');
+const { challenges } = require('../utils/challenges-solution');
+const { driver, myServer } = require('../driverSetup');
 
 const launchChallenges = async (driver, website) => {
     driver.get(website);

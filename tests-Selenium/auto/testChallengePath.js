@@ -1,8 +1,8 @@
 "use strict";
 const { By, until } = require('selenium-webdriver');
-const { goToChallenges } = require('./navigation');
-const getTime = require('./getTime');
-const { challenges, names } = require('./challenges-solution');
+const { goToChallenges } = require('../utils/navigation');
+const getTime = require('../utils/getTime');
+const { challenges, names } = require('../utils/challenges-solution');
 
 async function testChallengesPath(driver, solutionChallenge = challenges[names[0]].solution) {
     // First challenge

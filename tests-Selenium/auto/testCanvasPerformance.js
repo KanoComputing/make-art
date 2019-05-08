@@ -1,6 +1,6 @@
 "use strict";
 const { By, until } = require('selenium-webdriver');
-const getTime = require('./getTime');
+const getTime = require('../utils/getTime');
 
 let challengePlayGround = ['background green', 'color yellow\ncircle 100'];
 let dataCanvasperformance = [];

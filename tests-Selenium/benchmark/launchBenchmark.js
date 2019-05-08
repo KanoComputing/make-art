@@ -1,10 +1,10 @@
 "use strict";
 const { By, until } = require('selenium-webdriver');
-const getTime = require('./getTime');
-const { testCanvas } = require('./testCanvasPerformance');
-const { drawFigure } = require('./canvasPerformanceGenerateData');
-const { driver, myServer } = require('./driverSetup');
-const { goToPlayGround } = require('./navigation');
+const getTime = require('../utils/getTime');
+const { testCanvas } = require('../auto/testCanvasPerformance');
+const { drawFigure } = require('../utils/canvasPerformanceGenerateData');
+const { driver, myServer } = require('../driverSetup');
+const { goToPlayGround } = require('../utils/navigation');
 
 const benchmark = async (driver, website) => {
     driver.get(website);
