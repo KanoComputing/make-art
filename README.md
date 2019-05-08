@@ -60,7 +60,7 @@ Tool used: **Selenium Web driver**
 
 Follow this [Setting up your own test automation environment](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment)
 
-- run `npm install selenium-webdriver` inside your local repo
+- selenium-webdriver should be installed when you run `npm install ` inside your local repo
 - install in the kano-kit `sudo apt-get install chromium-chromedriver` - [reference](https://github.com/SeleniumHQ/selenium/wiki/ChromeDriver)
 - Add the chromedriver driver's location to your system PATH variable. 
     - Open your .bash_profile (or .bashrc) file

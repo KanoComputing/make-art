@@ -181,3 +181,112 @@ launchbrowserduration:
 
 
 
+# Local host automatic Chromium Benchmark
+```pl
+endtime browserLaunchDuration => 0 s 839523101 ns
+endtime goToPlayGroundDuration => 0 s 901625566 ns
+
+endtime canvasHasChange => 0 s 8740951 ns
+endtime canvasHasChange => 0 s 10102999 ns
+endtime canvasHasChange => 0 s 12083423 ns
+endtime canvasHasChange => 0 s 15343646 ns
+endtime canvasHasChange => 0 s 17220913 ns
+endtime canvasHasChange => 0 s 17052053 ns
+endtime canvasHasChange => 0 s 17219008 ns
+endtime canvasHasChange => 0 s 15594107 ns
+endtime canvasHasChange => 0 s 22694187 ns
+endtime canvasHasChange => 0 s 24236588 ns
+endtime canvasHasChange => 0 s 27054740 ns
+endtime canvasHasChange => 0 s 22885171 ns
+endtime canvasHasChange => 0 s 25629604 ns
+endtime canvasHasChange => 0 s 18260233 ns
+endtime canvasHasChange => 0 s 19506002 ns
+endtime canvasHasChange => 0 s 21422695 ns
+endtime canvasHasChange => 0 s 19369417 ns
+endtime canvasHasChange => 0 s 22879638 ns
+endtime canvasHasChange => 0 s 22658812 ns
+endtime canvasHasChange => 0 s 23332849 ns
+endtime canvasHasChange => 0 s 23760031 ns
+
+dataCanvasperformance=> [ [ 0, 8740951 ],
+  [ 0, 10102999 ],
+  [ 0, 12083423 ],
+  [ 0, 15343646 ],
+  [ 0, 17220913 ],
+  [ 0, 17052053 ],
+  [ 0, 17219008 ],
+  [ 0, 15594107 ],
+  [ 0, 22694187 ],
+  [ 0, 24236588 ],
+  [ 0, 27054740 ],
+  [ 0, 22885171 ],
+  [ 0, 25629604 ],
+  [ 0, 18260233 ],
+  [ 0, 19506002 ],
+  [ 0, 21422695 ],
+  [ 0, 19369417 ],
+  [ 0, 22879638 ],
+  [ 0, 22658812 ],
+  [ 0, 23332849 ],
+  [ 0, 23760031 ] ]
+  
+challengeCommandsArray.length=> 21
+
+sumData => 8740951 mean => 416235.7619047619
+```
+# KanoKit automatic Chromium Benchmark
+```pl
+
+endtime browserLaunchDuration => 14 s 257763625 ns
+
+endtime goToPlayGroundDuration => 14 s 585122066 ns
+
+endtime canvasHasChange => 0 s 58083319 ns
+endtime canvasHasChange => 0 s 66103639 ns
+endtime canvasHasChange => 0 s 69827970 ns
+endtime canvasHasChange => 0 s 99728707 ns
+endtime canvasHasChange => 0 s 86853861 ns
+endtime canvasHasChange => 0 s 90541629 ns
+endtime canvasHasChange => 0 s 98004248 ns
+endtime canvasHasChange => 0 s 103025752 ns
+endtime canvasHasChange => 0 s 103068720 ns
+endtime canvasHasChange => 0 s 162800873 ns
+endtime canvasHasChange => 0 s 128705030 ns
+endtime canvasHasChange => 0 s 113144068 ns
+endtime canvasHasChange => 0 s 137460758 ns
+endtime canvasHasChange => 0 s 125057312 ns
+endtime canvasHasChange => 0 s 123560039 ns
+endtime canvasHasChange => 0 s 135689165 ns
+endtime canvasHasChange => 0 s 118932958 ns
+endtime canvasHasChange => 0 s 132725815 ns
+endtime canvasHasChange => 0 s 126789323 ns
+endtime canvasHasChange => 0 s 129480021 ns
+endtime canvasHasChange => 0 s 126134070 ns
+
+
+dataCanvasperformance=> [ [ 0, 58083319 ],
+  [ 0, 66103639 ],
+  [ 0, 69827970 ],
+  [ 0, 99728707 ],
+  [ 0, 86853861 ],
+  [ 0, 90541629 ],
+  [ 0, 98004248 ],
+  [ 0, 103025752 ],
+  [ 0, 103068720 ],
+  [ 0, 162800873 ],
+  [ 0, 128705030 ],
+  [ 0, 113144068 ],
+  [ 0, 137460758 ],
+  [ 0, 125057312 ],
+  [ 0, 123560039 ],
+  [ 0, 135689165 ],
+  [ 0, 118932958 ],
+  [ 0, 132725815 ],
+  [ 0, 126789323 ],
+  [ 0, 129480021 ],
+  [ 0, 126134070 ] ]
+
+challengeCommandsArray.length=> 21
+
+sumData => 58083319 mean => 2765872.3333333335
+```
