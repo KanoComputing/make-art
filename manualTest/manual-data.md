@@ -142,7 +142,19 @@ launchbrowserduration:
 
 ## Automatic test Chromium webdriver
 
+### browserLaunchDuration: 
 
+```
+2 s 134480783 ns
+```
+
+### goToPlayGroundDuration
+
+```
+2 s 194058218 ns
+```
+### CanvasHasChange
+```
 01 => 0, 12210418
 02 => 0, 18321561
 03 => 0, 16118387
@@ -163,7 +175,7 @@ launchbrowserduration:
 18 => 0, 33609643 
 19 => 0, 39965066 
 20 => 0, 32766363
-
+```
 
 
 
