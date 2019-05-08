@@ -40,6 +40,7 @@
     "gulp-stylus": "^2.0.1",
     "gulp-uglify": "^2.0.0",
     "http-server": "^0.11.1",
+    "jshint": "2.10.2",
     "kano-world-sdk": "^3.0.15",
     "lodash": "~2.4.x",
     "marked": "0.6.2",

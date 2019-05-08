@@ -1,14 +1,15 @@
+"use strict";
 const { By, until } = require('selenium-webdriver');
 const { goToChallenges } = require('./navigation');
 const getTime = require('./getTime');
-const { challenges, names } = require('./challenges-solution')
+const { challenges, names } = require('./challenges-solution');
 
 async function testChallengesPath(driver, solutionChallenge = challenges[names[0]].solution) {
     // First challenge
     if (driver.wait(until.elementLocated(By.css('.page-challenge'))).click()) {
-        getTime.end('gotoTheChallengeDuration')
+        getTime.end('gotoTheChallengeDuration');
     } else {
-        return console.warn(`goIntoTheChallengeDuration didn't work`.yellow)
+        return console.warn(`goIntoTheChallengeDuration didn't work`.yellow);
     }
     //  - Hint menu
     await driver.wait(until.elementLocated(By.css('.button-hint'))).click();
@@ -57,12 +58,12 @@ async function testChallengesPath(driver, solutionChallenge = challenges[names[0
 
 async function goThroughTheChallenges(driver, challenges) {
     for (let i = 0; i < 10; i++) {
-        await goToChallenges(driver, names[i])
-        await testChallengesPath(driver, challenges[names[i]].solution)
+        await goToChallenges(driver, names[i]);
+        await testChallengesPath(driver, challenges[names[i]].solution);
     }
 }
 
 module.exports = {
     testChallengesPath: testChallengesPath,
     goThroughTheChallenges: goThroughTheChallenges
-}
+};

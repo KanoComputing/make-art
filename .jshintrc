@@ -1,6 +1,5 @@
-{
+{ "esversion": 9,
   "browser": true,
-  "esnext": true,
   "globals": { "angular": true, 
   		"describe": true,
         "xdescribe": true,

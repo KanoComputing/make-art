@@ -1,3 +1,4 @@
+"use strict";
 const challenges = {
     'Sunny Day': {
         solution: [
@@ -79,11 +80,11 @@ const challenges = {
         ]
 
     },
-}
+};
 
 const names = Object.keys(challenges);
 
 module.exports = {
     challenges: challenges,
     names: names
-}
+};

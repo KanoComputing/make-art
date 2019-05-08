@@ -16,7 +16,7 @@ class Draw(object):
         else:
             url = base_url.format(path='')
 
-        self._index = 'chromium --app={url} --start-fullscreen'.format(url=url)
+        self._index =  self._index = url
 
         self._title = "Art"
         self._app_icon = '/usr/share/icons/Kano/88x88/apps/kano-draw.png'
