@@ -1,4 +1,4 @@
-# Manual test Chromium
+# Manual test Chromium  on the kit
 
 launchbrowserduration:
 ```
@@ -23,31 +23,31 @@ launchbrowserduration:
 19. 8.53
 20. 8.43
 ```
-### GoToChallenges
+### GoToChallenges  on the kit
 ```
-01 => 
-02 => 
-03 => 
-04 => 
-05 => 
-06 => 
-07 => 
-08 => 
-09 => 
-10 => 
-11 => 
-12 => 
-13 => 
-14 => 
-15 => 
-16 => 
-17 => 
-18 => 
-19 => 
-20 => 
+01 => 6.40
+02 => 5.05
+03 => 5.06
+04 => 5.23
+05 => 4.87
+06 => 6.48
+07 => 5.97
+08 => 5.31
+09 => 5.81
+10 => 5.43
+11 => 5.27
+12 => 4.61
+13 => 5.46
+14 => 5.47
+15 => 6.06
+16 => 5.13
+17 => 6.18
+18 => 5.41
+19 => 4.99
+20 => 5.43
 ```
 
-### CanvasHasChange
+### CanvasHasChange on the kit
 
 ```
 01 => 
