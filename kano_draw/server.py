@@ -38,7 +38,7 @@ def _get_static_dir():
     '''
     Returns directory where http server content is located
     '''
-    DIR_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'www'))
+    DIR_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'out/www'))
 
     if not DIR_PATH.startswith('/usr'):
         return DIR_PATH
