@@ -1,6 +1,7 @@
 kano-draw (4.3.0-0) unstable; urgency=low
 
   * Fix overflow on challenges' tips
+  * Fix flow's progress when redo a challenge
 
  -- Team Kano <dev@kano.me>  Tue, 12 Mar 2019 17:58:19 +0100
 
