@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.352
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MakeArt", "MakeArt\MakeArt.csproj", "{366263B9-3FE3-471F-99CF-6329B1E99583}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM = Debug|ARM
+		Debug|ARM64 = Debug|ARM64
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|ARM = Release|ARM
+		Release|ARM64 = Release|ARM64
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{366263B9-3FE3-471F-99CF-6329B1E99583}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{366263B9-3FE3-471F-99CF-6329B1E99583}.Debug|Any CPU.Build.0 = Debug|x86
+		{366263B9-3FE3-471F-99CF-6329B1E99583}.Debug|Any CPU.Deploy.0 = Debug|x86
+		{366263B9-3FE3-471F-99CF-6329B1E99583}.Debug|ARM.ActiveCfg = Debug|ARM
+		{366263B9-3FE3-471F-99CF-6329B1E99583}.Debug|ARM.Build.0 = Debug|ARM
+		{366263B9-3FE3-471F-99CF-6329B1E99583}.Debug|ARM.Deploy.0 = Debug|ARM
+		{366263B9-3FE3-471F-99CF-6329B1E99583}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{366263B9-3FE3-471F-99CF-6329B1E99583}.Debug|ARM64.Build.0 = Debug|ARM64
+		{366263B9-3FE3-471F-99CF-6329B1E99583}.Debug|ARM64.Deploy.0 = Debug|ARM64
+		{366263B9-3FE3-471F-99CF-6329B1E99583}.Debug|x64.ActiveCfg = Debug|x64
+		{366263B9-3FE3-471F-99CF-6329B1E99583}.Debug|x64.Build.0 = Debug|x64
+		{366263B9-3FE3-471F-99CF-6329B1E99583}.Debug|x64.Deploy.0 = Debug|x64
+		{366263B9-3FE3-471F-99CF-6329B1E99583}.Debug|x86.ActiveCfg = Debug|x86
+		{366263B9-3FE3-471F-99CF-6329B1E99583}.Debug|x86.Build.0 = Debug|x86
+		{366263B9-3FE3-471F-99CF-6329B1E99583}.Debug|x86.Deploy.0 = Debug|x86
+		{366263B9-3FE3-471F-99CF-6329B1E99583}.Release|Any CPU.ActiveCfg = Release|x86
+		{366263B9-3FE3-471F-99CF-6329B1E99583}.Release|ARM.ActiveCfg = Release|ARM
+		{366263B9-3FE3-471F-99CF-6329B1E99583}.Release|ARM.Build.0 = Release|ARM
+		{366263B9-3FE3-471F-99CF-6329B1E99583}.Release|ARM.Deploy.0 = Release|ARM
+		{366263B9-3FE3-471F-99CF-6329B1E99583}.Release|ARM64.ActiveCfg = Release|ARM64
+		{366263B9-3FE3-471F-99CF-6329B1E99583}.Release|ARM64.Build.0 = Release|ARM64
+		{366263B9-3FE3-471F-99CF-6329B1E99583}.Release|ARM64.Deploy.0 = Release|ARM64
+		{366263B9-3FE3-471F-99CF-6329B1E99583}.Release|x64.ActiveCfg = Release|x64
+		{366263B9-3FE3-471F-99CF-6329B1E99583}.Release|x64.Build.0 = Release|x64
+		{366263B9-3FE3-471F-99CF-6329B1E99583}.Release|x64.Deploy.0 = Release|x64
+		{366263B9-3FE3-471F-99CF-6329B1E99583}.Release|x86.ActiveCfg = Release|x86
+		{366263B9-3FE3-471F-99CF-6329B1E99583}.Release|x86.Build.0 = Release|x86
+		{366263B9-3FE3-471F-99CF-6329B1E99583}.Release|x86.Deploy.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BE18E691-0A86-4CD9-A59E-67C79CBD22A0}
+	EndGlobalSection
+EndGlobal
