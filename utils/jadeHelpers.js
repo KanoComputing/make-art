@@ -5,6 +5,7 @@ var contentPath = 'content',
     examplesPath = 'examples';
 
 function getFileContent (file) {
+    console.log('jadeHelpers.js => 1')
     return fs.readFileSync(path.resolve(contentPath, file), 'utf8');
 }
 

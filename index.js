@@ -12,11 +12,13 @@ class MakeArt {
             window.MakeArt.app.constant('_config', config);
             window.MakeArt.bootstrap(this.root);
             if (config.launchActivatedEventArgs) {
+                console.log('launchActivatedEventArgs() => 1')
                 this.handleActivation(config.launchActivatedEventArgs)
             }
         });
     }
     handleActivation(args) {
+        console.log('handleActivation() => 1')
         const { ActivationKind } = Windows.ApplicationModel.Activation;
         const { StandardDataFormats } = Windows.ApplicationModel.DataTransfer;
         if (args.kind === ActivationKind.file) {
@@ -34,6 +36,7 @@ class MakeArt {
         }
     }
     readFile(file) {
+        console.log('readFile() => 1')
         return file.openReadAsync()
             .then((stream) => {
                 const inputStream = stream.getInputStreamAt(0);
@@ -46,12 +49,14 @@ class MakeArt {
             });
     }
     loadFile(file) {
+        console.log('loadFile() => 1')
         return this.readFile(file)
             .then((text) => {
                 window.MakeArt.app.loadCode(text);
             });
     }
     shareFile(file, properties) {
+        console.log('shareFile() => 1')
         return this.readFile(file)
             .then((text) => {
                 const share = {
