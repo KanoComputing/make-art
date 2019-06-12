@@ -4,4 +4,5 @@ console.log('find-app.js => 1')
 fg('./out/*.appxbundle', { cwd: path.join(__dirname, '../') })
     .then((results) => {
         console.log(results[0]);
+        console.log('results =>',results);
     });

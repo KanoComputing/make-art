@@ -24,12 +24,15 @@ class MakeArt {
         if (args.kind === ActivationKind.file) {
             const [file] = args.files;
             this.loadFile(file);
+            console.log('=>')
         } else if (args.kind === ActivationKind.shareTarget) {
             const { data } = args.shareOperation
+            console.log('data =>')
             if (data.contains(StandardDataFormats.storageItems)) {
                 data.getStorageItemsAsync()
                     .done((items) => {
                         const [item] = items;
+                        console.log('item =>',[item])
                         this.shareFile(item, data.properties);
                     });
             }
@@ -41,9 +44,11 @@ class MakeArt {
             .then((stream) => {
                 const inputStream = stream.getInputStreamAt(0);
                 var dataReader = new Windows.Storage.Streams.DataReader(inputStream);
+                console.log('dataReader =>')
                 return dataReader.loadAsync(stream.size)
                     .then((loaded) => {
                         const text = dataReader.readString(loaded);
+                        console.log('text =>',text)
                         return text;
                     });
             });
@@ -52,6 +57,7 @@ class MakeArt {
         console.log('loadFile() => 1')
         return this.readFile(file)
             .then((text) => {
+                console.log('index.js loadFile text =>',text)
                 window.MakeArt.app.loadCode(text);
             });
     }
@@ -64,7 +70,9 @@ class MakeArt {
                     title: properties.title,
                     description: properties.description,
                 }
+                console.log('share() 1x =>', share)
                 window.MakeArt.app.shareCode(share);
+                console.log('share() 2x =>', share)
             });
     }
 }
