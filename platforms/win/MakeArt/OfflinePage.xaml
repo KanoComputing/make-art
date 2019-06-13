@@ -11,7 +11,7 @@
     <Grid>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBlock FontWeight="Normal" FontSize="48" HorizontalAlignment="Center">Check your connection</TextBlock>
-            <TextBlock HorizontalAlignment="Center" FontSize="24">The Projects App needs to be online. It looks like you're not.</TextBlock>
+            <TextBlock HorizontalAlignment="Center" FontSize="24">Make Art needs to be online. It looks like you're not.</TextBlock>
             <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,32,0,0">
                 <Button Margin="0,0,16,0" Click="Refresh_Click">Refresh the page</Button>
                 <Button Click="CheckConnection_Click">Check connection</Button>
