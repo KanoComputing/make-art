@@ -2,8 +2,6 @@
 var gulp = require('gulp'),
     jade = require('gulp-jade'),
     stylus = require('gulp-stylus'),
-    lr = require('tiny-lr'),
-    livereload = require('gulp-livereload'),
     jadeHelpers = require('./utils/jadeHelpers'),
     _ = require('lodash'),
     color = require('cli-color'),
@@ -14,7 +12,6 @@ var gulp = require('gulp'),
     fs = require('fs'),
     i18n = require('gulp-html-i18n'),
     del = require('del'),
-    server = lr(),
     env = process.env.NODE_ENV || 'development',
     production = env === 'production',
     segmentioId = process.env.SEGMENTIO_ID || null,
@@ -47,8 +44,7 @@ gulp.task('styles', function () {
             use    : [griddy(), nib()]
         }))
         .on('error', handleError)
-        .pipe(gulp.dest(paths.styles.out))
-        .pipe(livereload(server));
+        .pipe(gulp.dest(paths.styles.out));
 });
 
 gulp.task('views', function () {
@@ -70,8 +66,7 @@ gulp.task('views', function () {
             }, jadeHelpers)
         }))
         .on('error', handleError)
-        .pipe(gulp.dest(paths.views.out))
-        .pipe(livereload(server));
+        .pipe(gulp.dest(paths.views.out));
 });
 
 gulp.task('clean-i18n', function (next) {
@@ -83,8 +78,7 @@ gulp.task('views-i18n', ['clean-i18n', 'views'], function () {
         .pipe(i18n({ langDir: './locales',
                      createLangDirs: true }))
         .on('error', handleError)
-        .pipe(gulp.dest(paths.viewsi18n.out))
-        .pipe(livereload(server));
+        .pipe(gulp.dest(paths.viewsi18n.out));
 });
 
 /**
@@ -240,21 +234,11 @@ gulp.task('compress', function () {
         .pipe(gulp.dest('www'));
 });
 
-gulp.task('livereload', function (next) {
-    if (server) {
-        livereload(server);
-    }
-    next();
-});
-
-gulp.task('listen', function (next) {
-    server.listen(35729, next);
-});
 gulp.task('prepare-challenges', ['copy-challenges', 'apify-challenges']);
 
 gulp.task('build', ['styles', 'views-i18n', 'prepare-challenges']);
 
-gulp.task('watch', ['build', 'listen'], function () {
+gulp.task('watch', ['build'], function () {
     gulp.watch(paths.styles.watch, ['styles']);
     gulp.watch(paths.content.watch, ['prepare-challenges']);
     gulp.watch(paths.views.watch, ['views']);

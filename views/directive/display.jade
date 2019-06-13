@@ -30,6 +30,8 @@
         a.action.action-save(ng-if='mode === "playground"', ng-click='save()')
             i.icon-save
             | ${{ directive.save }}$
+            .action-dropdown
+                a.action(ng-click='setWallpaper()') Set as Wallpaper
 
         a.action.action-reset(ng-if='mode === "challenge"', ng-click='resetCode()')
             i.icon-reset
