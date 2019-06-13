@@ -24,7 +24,7 @@ class MakeArt {
         if (args.kind === ActivationKind.file) {
             const [file] = args.files;
             this.loadFile(file);
-            console.log('=>')
+            console.log('this.loadFile(file) =>',this.loadFile(file))
         } else if (args.kind === ActivationKind.shareTarget) {
             const { data } = args.shareOperation
             console.log('data =>')
@@ -42,9 +42,11 @@ class MakeArt {
         console.log('readFile() => 1')
         return file.openReadAsync()
             .then((stream) => {
+                console.log('stream =>', stream)
                 const inputStream = stream.getInputStreamAt(0);
+                console.log('inputStream =>', inputStream)
                 var dataReader = new Windows.Storage.Streams.DataReader(inputStream);
-                console.log('dataReader =>')
+                console.log('dataReader =>', dataReader)
                 return dataReader.loadAsync(stream.size)
                     .then((loaded) => {
                         const text = dataReader.readString(loaded);
@@ -58,11 +60,12 @@ class MakeArt {
         return this.readFile(file)
             .then((text) => {
                 console.log('index.js loadFile text =>',text)
+                console.log('window.MakeArt loadFile  =>',window.MakeArt)
                 window.MakeArt.app.loadCode(text);
             });
     }
     shareFile(file, properties) {
-        console.log('shareFile() => 1')
+        console.log('shareFile() => ', this.readFile(file))
         return this.readFile(file)
             .then((text) => {
                 const share = {
