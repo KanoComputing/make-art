@@ -24,7 +24,9 @@ class MakeArt {
         if (args.kind === ActivationKind.file) {
             const [file] = args.files;
             this.loadFile(file);
-            console.log('this.loadFile(file) =>',this.loadFile(file))
+            // for test
+            let thisLoadFile = this.loadFile(file);
+            console.log('this.loadFile(file) =>',thisLoadFile)
         } else if (args.kind === ActivationKind.shareTarget) {
             const { data } = args.shareOperation
             console.log('data =>')
@@ -50,7 +52,7 @@ class MakeArt {
                 return dataReader.loadAsync(stream.size)
                     .then((loaded) => {
                         const text = dataReader.readString(loaded);
-                        console.log('text =>',text)
+                        console.log('text =>',text.length)
                         return text;
                     });
             });
@@ -59,13 +61,15 @@ class MakeArt {
         console.log('loadFile() => 1')
         return this.readFile(file)
             .then((text) => {
-                console.log('index.js loadFile text =>',text)
+                console.log('index.js loadFile text =>',text.length)
                 console.log('window.MakeArt loadFile  =>',window.MakeArt)
                 window.MakeArt.app.loadCode(text);
             });
     }
     shareFile(file, properties) {
-        console.log('shareFile() => ', this.readFile(file))
+        // for test
+        let thisShareFile = this.loadFile(file);
+        console.log('shareFile()/loadfile => ',thisShareFile)
         return this.readFile(file)
             .then((text) => {
                 const share = {
