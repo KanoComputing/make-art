@@ -4,7 +4,6 @@
 "use strict";
 const path = require('path');
 function run() {
-    console.log('solve.js => 1')
     var fileName = process.argv[2],
         challenge;
     if (!fileName) {

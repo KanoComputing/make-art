@@ -58,7 +58,6 @@ class MakeArt {
             });
     }
     loadFile(file) {
-        console.log('loadFile() => 1')
         return this.readFile(file)
             .then((text) => {
                 console.log('index.js loadFile text =>',text.length)

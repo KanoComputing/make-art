@@ -2,6 +2,9 @@ header: .main-navigation.page-width(ng-if='offline || !selectedWorld || !selecte
 
     a.logo(href='/')
         img(ng-src='{{ _config.UI_ROOT + "assets/layout/draw-logo@2x.png" }}', alt='main logo')
+    div.routeShow
+        | ${{'Hello!'}} 
+        | ${{app.$location.path}} 
     //- if !offline
     //-     a.kano-logo(href='http://www.kano.me', target='_blank')
 
