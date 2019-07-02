@@ -1,3 +1,6 @@
+"use strict";
+import { createService } from './lib/service/HandleActivation';
+
 class MakeArt {
     constructor(bus, config) {
         this.root = document.createElement('div');
@@ -11,12 +14,12 @@ class MakeArt {
             config.APP_ROOT = `${config.UI_ROOT}www/`;
             window.MakeArt.app.constant('_config', config);
             window.MakeArt.bootstrap(this.root);
-            if (config.launchActivatedEventArgs) {
-                console.log('launchActivatedEventArgs() => 1')
-                this.handleActivation(config.launchActivatedEventArgs)
-            }
+            createService(config, function(args){
+                this.handleActivation(args)
+            })
         });
     }
+
     handleActivation(args) {
         console.log('handleActivation() => 1')
         const { ActivationKind } = Windows.ApplicationModel.Activation;
@@ -26,7 +29,7 @@ class MakeArt {
             this.loadFile(file);
             // for test
             let thisLoadFile = this.loadFile(file);
-            console.log('this.loadFile(file) =>',thisLoadFile)
+            console.log('this.loadFile(file) =>', thisLoadFile)
         } else if (args.kind === ActivationKind.shareTarget) {
             const { data } = args.shareOperation
             console.log('data =>')
@@ -34,7 +37,7 @@ class MakeArt {
                 data.getStorageItemsAsync()
                     .done((items) => {
                         const [item] = items;
-                        console.log('item =>',[item])
+                        console.log('item =>', [item])
                         this.shareFile(item, data.properties);
                     });
             }
@@ -52,7 +55,7 @@ class MakeArt {
                 return dataReader.loadAsync(stream.size)
                     .then((loaded) => {
                         const text = dataReader.readString(loaded);
-                        console.log('text =>',text.length)
+                        console.log('text =>', text.length)
                         return text;
                     });
             });
@@ -60,15 +63,15 @@ class MakeArt {
     loadFile(file) {
         return this.readFile(file)
             .then((text) => {
-                console.log('index.js loadFile text =>',text.length)
-                console.log('window.MakeArt loadFile  =>',window.MakeArt)
+                console.log('index.js loadFile text =>', text.length)
+                console.log('window.MakeArt loadFile  =>', window.MakeArt)
                 window.MakeArt.app.loadCode(text);
             });
     }
     shareFile(file, properties) {
         // for test
         let thisShareFile = this.loadFile(file);
-        console.log('shareFile()/loadfile => ',thisShareFile)
+        console.log('shareFile()/loadfile => ', thisShareFile)
         return this.readFile(file)
             .then((text) => {
                 const share = {
