@@ -53,11 +53,21 @@ def _get_image_from_str(img_str):
     return image_data
 
 
-def _save(data):
+def _generate_share_filenames(filename):
+    code_path = os.path.join(CHALLENGE_DIR, '{}.draw'.format(filename))
+    json_path = os.path.join(CHALLENGE_DIR, '{}.json'.format(filename))
+    img_path = os.path.join(CHALLENGE_DIR, '{}.png'.format(filename))
+
+    return code_path, json_path, img_path
+
+
+def _save(data, filename=None):
     '''
     Save the current creation in the user home directory
     '''
-    filename = data['filename']
+    if not filename:
+        filename = data['filename']
+
     try:
         desc = data['description']
     except KeyError:
@@ -65,9 +75,7 @@ def _save(data):
     code = data['code']
     image = _get_image_from_str(data['image'])
 
-    filepath = os.path.join(CHALLENGE_DIR, '{}.draw'.format(filename))
-    json_path = os.path.join(CHALLENGE_DIR, '{}.json'.format(filename))
-    img_path = os.path.join(CHALLENGE_DIR, '{}.png'.format(filename))
+    filepath, json_path, img_path = _generate_share_filenames(filename)
 
     with open(filepath, 'w') as f:
         f.write(code)
@@ -149,6 +157,51 @@ def save_wallpaper(filename):
             f.write(img_data)
 
     return ''
+
+
+@server.route("/challenge/unifiedShare", methods=['POST'])
+def unified_share():
+    import kano_webengine.constants as RC
+    data = json.loads(request.data)
+
+    filename = '.make-art.unified-share'
+    dummy_tmp_filename, tmp_filepath = _save(data, filename)
+
+    rc = os.system(
+        'kano-share-container {share_pkg_file} --app-title={app_name}'
+        .format(
+            share_pkg_file=tmp_filepath,
+            app_name=APP_NAME
+        )
+    )
+
+    # Cleanup temporary files
+    tmp_paths = _generate_share_filenames(filename)
+
+    for tmp_path in tmp_paths:
+        if not os.path.exists(tmp_path):
+            continue
+
+        try:
+            os.remove(tmp_path)
+        except OSError:
+            pass
+
+    if rc == RC.RC_SUCCESS:
+        increment_app_state_variable_with_dialog(APP_NAME, 'shared', 1)
+        return ''
+    elif rc == RC.RC_NO_INTERNET:
+        return 'No internet'
+    elif rc == RC.RC_NO_KANO_WORLD_LOGIN:
+        return 'No Kano World login'
+    elif rc == RC.RC_SHARE_FILE_NOT_FOUND:
+        return 'No share file found'
+    elif rc == RC.RC_CONNECTION_ERROR:
+        return 'Connection error'
+    elif rc == RC.RC_USER_CANCEL:
+        return 'User cancelled'
+    else:
+        return 'Unkown error'
 
 
 @server.route("/challenge/web/<path:filename>", methods=['POST'])
