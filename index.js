@@ -11,7 +11,6 @@ class MakeArt {
         document.head.appendChild(link);
         import('./lib/index.js').then(() => {
             config.APP_ROOT = `${config.UI_ROOT}www/`;
-            config.launchActivatedEventArgs = 'true';
             window.MakeArt.app.constant('_config', config);
             window.MakeArt.bootstrap(this.root);
         });
