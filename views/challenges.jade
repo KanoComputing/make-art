@@ -72,35 +72,6 @@ include ./partial/header
                     .detail
                         h5 ${{ challenges.certificate }}$
 
-        div(ng-if='shares && selectedWorld.type !== "campaign"')
-
-            h3.page-title
-                i.icon-share
-                | ${{ challenges.latest_shares }}$
-
-            ul.shares-list
-
-                li(ng-repeat='share in shares')
-                    a(href='{{cfg.WORLD_URL}}/shared/{{ share.slug }}')
-
-                        .cover(ng-style='{ "background-image": "url(" + share.cover_url + ")" }')
-
-                        .detail
-                            h5
-                                | {{ share.title }}
-                                em ${{ challenges.by }}$ {{ share.user.username }}
-
-                li
-                    a.highlight.browse(
-                        href='{{cfg.WORLD_URL}}/shares/make-art',
-                        ng-click='browseMore($event)',
-                        target='_blank'
-                        )
-
-                        .cover(ng-style='{"background-image": "url(/assets/challenges/images/browse.png)"}')
-
-                        .detail
-                            h5 ${{ challenges.browse_more }}$
 
 include ./partial/selected-challenge
 include ./partial/grab-keyboard
