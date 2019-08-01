@@ -4,11 +4,11 @@
 	dh $@
 
 override_dh_auto_build:
+	# NodeJS and npm
+	# cd po && ./lang-extract-doc-strings
+	# cd po && ./lang-extract-strings
 	# sudo apt update
 	sudo apt-get update --yes
-	# NodeJS and npm
-	cd po && ./lang-extract-doc-strings
-	cd po && ./lang-extract-strings
 	# Add NPM repository and install Node
 	curl --silent --location https://deb.nodesource.com/setup_6.x | bash -
 	apt-get install --yes nodejs
@@ -18,9 +18,10 @@ override_dh_auto_build:
 	# install yarn
 	sudo apt install yarn
 	# Actually build
-	npm install
-	./node_modules/bower/bin/bower --allow-root install
-	NODE_ENV=production OFFLINE=true npm run build
-	dh_lintian
+	yarn build
+	# npm install
+	# ./node_modules/bower/bin/bower --allow-root install
+	# NODE_ENV=production OFFLINE=true npm run build
+	# dh_lintian
 
 override_dh_auto_install override_dh_auto_test:
