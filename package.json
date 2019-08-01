@@ -24,7 +24,6 @@
     },
     "license": "MIT",
     "dependencies": {
-        "@kano/kwc-auth": "^3.0.0-beta.18",
         "angular": "^1.7.8",
         "angular-route": "^1.7.8",
         "coffeescript": "^2.4.1",

@@ -33,12 +33,6 @@ module.exports = {
             [require.resolve('coffeescript/lib/coffeescript-browser-compiler-legacy/coffeescript.js')]: 'window'
         },
         replaces: [{
-            // Special polymer patch. Fixes an issue for IE and Edge
-            include: [require.resolve('@polymer/polymer/lib/legacy/polymer.dom.js')],
-            values: {
-                'observerHandle.disconnect();': 'observerHandle && observerHandle.disconnect();',
-            },
-        }, {
             include: [
                 require.resolve('marked/marked.min.js'),
                 require.resolve('coffeescript/lib/coffeescript-browser-compiler-legacy/coffeescript.js'),
