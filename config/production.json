@@ -1,1 +1,7 @@
-{}
+{
+    "CONFIG": {
+        "AUTH_INTEGRATION_URL": "https://art.auth.kano.me/integration.js",
+        "AUTH_SIGNUP_URL": "https://art.auth.kano.me/index.html?env=production#signup",
+        "AUTH_LOGIN_URL": "https://art.auth.kano.me/index.html?env=production#login"
+    }
+}

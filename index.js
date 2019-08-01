@@ -5,6 +5,7 @@ class MakeArt {
         this.root = document.createElement('div');
         this.root.appendChild(document.createElement('ng-view'));
         window.CONFIG = config.CONFIG;
+        window.ENV = config.ENV;
         const link = document.createElement('link');
         link.rel = 'stylesheet';
         link.href = `${config.UI_ROOT}www/css/main.css`;
@@ -14,7 +15,7 @@ class MakeArt {
             window.MakeArt.app.constant('_config', config);
             window.MakeArt.bootstrap(this.root);
         });
-    }    
+    }
 }
 
 Shell.define(MakeArt);
