@@ -33,10 +33,6 @@ module.exports = {
             [require.resolve('coffeescript/lib/coffeescript-browser-compiler-legacy/coffeescript.js')]: 'window'
         },
         replaces: [{
-            values: {
-                'observerHandle.disconnect();': 'observerHandle && observerHandle.disconnect();',
-            },
-        }, {
             include: [
                 require.resolve('marked/marked.min.js'),
                 require.resolve('coffeescript/lib/coffeescript-browser-compiler-legacy/coffeescript.js'),
