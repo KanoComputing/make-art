@@ -8,7 +8,7 @@ override_dh_auto_build:
 	# cd po && ./lang-extract-doc-strings
 	# cd po && ./lang-extract-strings
 	# sudo apt update
-	sudo apt-get update --yes
+	apt-get update
 	# Add NPM repository and install Node
 	curl --silent --location https://deb.nodesource.com/setup_6.x | bash -
 	apt-get install --yes nodejs
@@ -16,7 +16,7 @@ override_dh_auto_build:
 	curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 	echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 	# install yarn
-	sudo apt install yarn
+	apt install yarn
 	# Actually build
 	yarn build
 	# npm install
