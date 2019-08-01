@@ -4,16 +4,22 @@
 	dh $@
 
 override_dh_auto_build:
+	env
 	# NodeJS and npm
-	cd po && ./lang-extract-doc-strings
-	cd po && ./lang-extract-strings
-	# Add NPM repository and install Node
+	# cd po && ./lang-extract-doc-strings
+	# cd po && ./lang-extract-strings
+	# Add NPM repository
 	curl --silent --location https://deb.nodesource.com/setup_6.x | bash -
-	apt-get install --yes nodejs
+	# Prerequisites for yarn
+	curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
+	echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
+	# update
+	apt-get update
+	# install Node and yarn
+	apt-get install --yes nodejs yarn
+	apt-get autoremove
 	# Actually build
-	npm install
-	./node_modules/bower/bin/bower --allow-root install
-	NODE_ENV=production OFFLINE=true npm run build
-	dh_lintian
+	yarn
+	yarn build
 
 override_dh_auto_install override_dh_auto_test:
