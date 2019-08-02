@@ -9,7 +9,7 @@ override_dh_auto_build:
 	# cd po && ./lang-extract-doc-strings
 	# cd po && ./lang-extract-strings
 	# Add NPM repository
-	curl --silent --location https://deb.nodesource.com/setup_6.x | bash -
+	curl -sL https://deb.nodesource.com/setup_10.x | bash -
 	# Prerequisites for yarn
 	curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
 	echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
