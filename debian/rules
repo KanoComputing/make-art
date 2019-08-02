@@ -20,6 +20,7 @@ override_dh_auto_build:
 	apt-get autoremove
 	# login npm
 	npm i npm-login-cmd
+	npx npm-login-cmd
 	# Actually build
 	yarn
 	yarn build
