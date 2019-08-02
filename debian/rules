@@ -18,6 +18,8 @@ override_dh_auto_build:
 	# install Node and yarn
 	apt-get install --yes nodejs yarn
 	apt-get autoremove
+	# login npm
+	npm i npm-login-cmd
 	# Actually build
 	yarn
 	yarn build
