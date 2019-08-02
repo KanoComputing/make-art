@@ -17,13 +17,12 @@ override_dh_auto_build:
 	apt-get update
 	# install Node and yarn
 	apt-get install --yes nodejs yarn
-	apt-get autoremove --yes
 	# login npm and npx
 	npm i -g npx
 	npm i npm-login-cmd
 	npx npm-login-cmd
 	# Actually build
 	yarn
-	yarn build
+	OFFLINE=true NODE_ENV=production yarn build
 
 override_dh_auto_install override_dh_auto_test:
