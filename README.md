@@ -50,3 +50,39 @@ Art.
 
     user@kano-os ~ $ cd ~/make-art/bin
     user@kano-os ~ $ ./kano-draw
+
+## [Installing VS Code on Raspbian Kano OS](https://www.raspberrypi.org/forums/viewtopic.php?p=1440336)
+
+
+1) **Install GPG key**
+
+`sudo wget -qO - https://packagecloud.io/headmelted/codebuilds/gpgkey | sudo apt-key add -;`
+
+2) **Add source repository**
+
+`sudo nano /etc/apt/sources.list`
+and add ...
+
+`deb https://packagecloud.io/headmelted/codebuilds/raspbian/ jessie main`
+Ctrl-X, Y, enter to exit 'nano' and save the updated file.
+
+Note it should be "jessie" even when using "stretch".
+
+3) **Install VS Code (code-oss)**
+
+`sudo apt-get update
+sudo apt-get install code-oss`
+
+Note the "sudo apt-get update" is essential. Failing to do that will result in an "E: Unable to locate package code-oss" error.
+
+Note that "sudo apt-get update" from now on will will show entries for
+"packagecloud.io/headmelted/codebuilds/raspbian", and
+"packages.microsoft.com/repos/vscode".
+
+4) **Launching VS Code (code-oss)**
+
+Under the Pi desktop start menu, under Programming, there should now be a "Code - OSS" link.
+
+VS Code can also be launched from the command line with -
+
+`code-oss`
