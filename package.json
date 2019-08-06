@@ -33,9 +33,10 @@
     },
     "devDependencies": {
         "@kano/eslint-config": "^1.0.1",
-        "@kano/kit-app-shell-cli": "0.0.3-alpha.35",
+        "@kano/kit-app-shell-cli": "0.0.3-alpha.58",
+        "@kano/kit-app-shell-ios": "0.0.3-alpha.58",
         "@kano/kit-app-shell-uwp": "^0.0.3-alpha.37",
-        "@kano/kit-app-shell-web": "0.0.3-alpha.35",
+        "@kano/kit-app-shell-web": "0.0.3-alpha.58",
         "@types/ace": "0.0.42",
         "@types/angular": "^1.6.54",
         "api-service": "^1.0.8",
