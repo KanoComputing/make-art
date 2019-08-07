@@ -1,6 +1,7 @@
 bin/* /usr/bin
 kano_draw /usr/lib/python2.7/dist-packages
-www/* /usr/share/kano-draw
+
+out/www/* /usr/share/kano-draw
 
 kdesktop/Draw.lnk usr/share/kano-desktop/kdesk/kdesktop/
 kdesktop/kano-draw.xml /usr/share/mime/packages/
@@ -12,3 +13,4 @@ icon/kano-draw.app usr/share/applications
 media /usr/share/kano-draw/
 
 kano-content-blacklist/kano-draw.json /usr/share/kano-content/blacklists
+ 
