@@ -1,0 +1,124 @@
+{
+    "challenges": [
+        {
+            "id": "pong",
+            "title": "Pong",
+            "cover": "pixel-pong.png",
+            "index": 1,
+            "hasNext": true
+        },
+        {
+            "id": "ship",
+            "title": "Asteroids Ship",
+            "cover": "pixel-ship.png",
+            "index": 2,
+            "hasNext": true
+        },
+        {
+            "id": "tetris",
+            "title": "Tetris",
+            "cover": "pixel-tetris.png",
+            "index": 3,
+            "hasNext": true
+        },
+        {
+            "id": "chest",
+            "title": "Loot Chest",
+            "cover": "pixel-chest.png",
+            "index": 4,
+            "hasNext": true
+        },
+        {
+            "id": "variables",
+            "title": "Variables",
+            "cover": "pixel-variables.png",
+            "index": 5,
+            "hasNext": true
+        },
+        {
+            "id": "sword",
+            "title": "Diamond Sword",
+            "cover": "pixel-sword.png",
+            "index": 6,
+            "hasNext": true
+        },
+        {
+            "id": "steve",
+            "title": "Steve",
+            "cover": "pixel-steve.png",
+            "index": 7,
+            "hasNext": true
+        },
+        {
+            "id": "mage",
+            "title": "RPG Mage",
+            "cover": "pixel-mage.png",
+            "index": 8,
+            "hasNext": true
+        },
+        {
+            "id": "forloop",
+            "title": "For Loop",
+            "cover": "pixel-forloop.png",
+            "index": 9,
+            "hasNext": true
+        },
+        {
+            "id": "gradient",
+            "title": "8-bit sunset",
+            "cover": "pixel-gradient.png",
+            "index": 10,
+            "hasNext": true
+        },
+        {
+            "id": "colorfrenzy",
+            "title": "Color Frenzy",
+            "cover": "pixel-colorfrenzy.png",
+            "index": 11,
+            "hasNext": true
+        },
+        {
+            "id": "grassblock",
+            "title": "8-bit Grass Block",
+            "cover": "pixel-grassblock.png",
+            "index": 12,
+            "hasNext": true
+        },
+        {
+            "id": "diamondblock",
+            "title": "8-bit Diamond Block",
+            "cover": "pixel-diamondblock.png",
+            "index": 13,
+            "hasNext": false
+        }
+    ],
+    "id": "pixelhack",
+    "name": "Pixel Hack",
+    "description": "This is a group of challenges for the hour of code",
+    "world_path": "worlds/pixelhack",
+    "cover": "world_covers/pixelhack",
+    "css_class": "pixelhack",
+    "type": "campaign",
+    "share_strategy": "optional",
+    "certificate_after": 2,
+    "display_menu": true,
+    "hero_header": {
+        "links": [
+            {
+                "image": "pixelhack/teacher-pack.svg",
+                "location": "/assets/guides/PixelHackEducatorGuide.zip",
+                "text": "Download the teacher resource guide"
+            },
+            {
+                "image": "pixelhack/about-kano.svg",
+                "location": "https://world.kano.me/start",
+                "text": "Learn more about Kano"
+            }
+        ]
+    },
+    "socialText": {
+        "email": "Hack your way through video game history with Pixel Hack from Kano!",
+        "facebook": "Hack your way through video game history with #PixelHack from Kano",
+        "twitter": "Hack your way through video game history with #PixelHack from @TeamKano!\nhttp://art.kano.me/challenges/pixelhack/"
+    }
+}

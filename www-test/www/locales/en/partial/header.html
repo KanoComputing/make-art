@@ -1,0 +1,22 @@
+
+<header>
+  <div ng-if="offline || !selectedWorld || !selectedWorld.display_menu" class="main-navigation page-width"><a href="/" class="logo"><img ng-src="{{ _config.UI_ROOT + &quot;assets/layout/draw-logo@2x.png&quot; }}" alt="main logo"/></a>
+    <ul class="nav nav-left">
+      <li><a href="/challenges" ng-class="{ active: basePath === &quot;challenge&quot; || basePath === &quot;challenges&quot; }"><i class="icon-menu"></i>Challenges</a></li>
+      <li><a href="/playground" ng-class="{ active: basePath === &quot;playground&quot; }"><i class="icon-game"></i>Playground</a></li>
+    </ul>
+    <ul ng-cloak="ng-cloak" class="nav nav-right">
+      <li class="discover"><a ng-if="!offline" id="discover-kano" href="http://world.kano.me/start" target="_blank"><i class="icon-cpu"></i>Discover Kano</a></li>
+      <li ng-if="!offline &amp;&amp; !loggedIn"><a href="" ng-click="auth.openModal(&quot;login&quot;)"><i class="icon-login"></i>Login</a></li>
+      <li ng-if="!offline &amp;&amp; !loggedIn"><a href="" ng-click="auth.openModal(&quot;signup&quot;)" class="signup">Sign up</a></li>
+      <li ng-if="!offline &amp;&amp; loggedIn"><a ng-href="http://world.kano.me/users/{{ user.username }}" target="_blank" class="user-display">
+          <div class="avatar"><img ng-src="{{ user.avatar.urls.circle || cfg.DEFAULT_AVATAR }}"/></div>{{ user.username }}</a></li>
+      <li ng-if="!offline &amp;&amp; loggedIn"><a href="" ng-click="logout()"><i class="icon-logout"></i>Logout</a></li>
+      <li>
+        <button ng-click="shutdown()" ng-if="offline" class="close"><i class="icon-cross"></i></button>
+      </li>
+    </ul>
+  </div>
+</header>
+<!-- Uncomment to enable banner-->
+<!-- include banner-->

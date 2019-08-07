@@ -1,0 +1,7 @@
+
+<div ng-if="selectedWorld.hero_header &amp;&amp; !offline" class="hero-header">
+  <div class="hero-image"></div>
+  <div class="hero-links"><a ng-repeat="link in selectedWorld.hero_header.links" ng-href="{{link.location}}" target="_blank" title="{{link.text}}" class="hero-link">
+      <div class="hero-link-thumbnail"><img ng-src="/assets/{{link.image}}" class="hero-link-image"/></div>
+      <div class="hero-link-text">{{link.text}}</div></a></div>
+</div>

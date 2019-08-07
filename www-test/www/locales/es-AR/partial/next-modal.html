@@ -1,0 +1,29 @@
+
+<div ng-if="nextModal" class="modal-overlay flexcenter-top">
+  <div class="modal-inner modal-next-challenge center">
+    <div ng-style="{ &quot;background-image&quot;: &quot;url(&quot; + _config.UI_ROOT + &quot;assets/challenges/images/&quot; + next.cover +&quot;)&quot; }" class="cover"></div>
+    <button ng-click="closeNextModal()" class="close"><i class="icon-cross"></i></button>
+    <div class="detail">
+      <div class="title">Siguiente:<span>{{ next.title }}</span><a ng-href="/challenges/{{selectedWorld.id}}" ng-if="next.locked" class="button button-success">{{ selectedWorld ? 'Atrás' + selectedWorld.name : 'Menú' }}</a><a ng-href="/challenge/{{selectedWorld.id}}/{{next.id}}" ng-if="!next.locked" class="button button-success">Empezar</a></div>
+      <p class="description">{{ next.description }}</p>
+      <p ng-if="next.locked" class="description small">Vuelve mañana para continuar con este desafío</p>
+    </div>
+    <div ng-if="creation &amp;&amp; !mailTab" class="social-sharing">
+      <div class="image"><img ng-src="{{ creation.cover_url }}"/></div>
+      <div class="detail"><span class="title">{{ creation.title }}</span>
+        <div class="description">{{ creation.description }}</div>
+      </div>
+      <div class="buttons"><a ng-click="openMailTab()" class="button button-mail"><i class="icon-mail"></i></a><a ng-click="facebookShare(creation)" class="button button-facebook"><img ng-src="{{ _config.UI_ROOT + &quot;assets/button-icons/facebook-white.png&quot; }}" title="Compartir en Facebook"/></a><a target="_new" ng-href="{{ buildURL(creation) }}" class="button button-twitter"><img ng-src="{{ _config.UI_ROOT + &quot;assets/button-icons/twitter-white.png&quot; }}" title="Compartir en Twitter"/></a></div>
+    </div>
+    <div ng-if="mailTab" class="mail-tab center"><span>Compartir vía correo electrónico</span>
+      <form ng-submit="sendMail(creation)" name="mailForm">
+        <div ng-if="error" class="box box-danger">{{ error }}</div>
+        <div class="email">
+          <input ng-model="creation.email" placeholder="Email address" type="email" required="required"/>
+        </div>
+        <button type="submit" ng-disabled="mailForm.$invalid" ng-class="{ &quot;disabled&quot; : mailForm.$invalid }" ng-if="!loading" class="button-success">Enviar</button>
+        <div ng-if="loading" class="spinner"></div>
+      </form>
+    </div>
+  </div>
+</div>

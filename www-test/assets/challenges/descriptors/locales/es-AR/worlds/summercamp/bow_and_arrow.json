@@ -1,0 +1,110 @@
+{
+    "id": "bow_and_arrow",
+    "title": "Arco y flecha",
+    "short_title": "Arco y flecha",
+    "icon_class": "challenge_bow",
+    "description": "Lanzar una flecha con el arco a un determinado punto es un arte que requiere mucha concentración. Este desafío consiste en dibujar el arco e intentar dejarlo quieto mientras tiembla tu mano... tal como lo han hecho muchas civilizaciones más de mil años atrás para cazar y alimentarse ¡El arco más antiguo fue encontrado en Dinamarca y es del año 9000 A.C!",
+    "cover": "summercamp/day_15.png",
+    "completion_text": "¡Haz click en Refrescar y verás el blanco moverse mientras buscas sostener el arco! Intenta deshacerte del fondo movedizo para que sea más fácil dar en el blanco. También puedes intentar convertir tu arco en una ballesta.",
+    "difficulty": 1,
+    "startAt": 0,
+    "summerCamp": true,
+    "rewards": null,
+    "steps": [
+        {
+            "hint": "El clima de hoy es agradable...no hay viento que nos desvíe las flechas. Configura el fondo a azul - **escribe** `background blue`.",
+            "solution": "background blue"
+        },
+        {
+            "hint": "Queremos que el fondo se agite, así que comenzaremos por dibujarlo en un punto aleatorio. **escribe** `moveTo (random -20, 0), (random 240, 260)`.",
+            "solution": "moveTo (random -20, 0), (random 240, 260)",
+            "validate": "__moveTo ?\\( *random +-20, +0 *\\), +\\( *random +240, +260 *\\)"
+        },
+        {
+            "hint": "Nuestro blanco está en un campo de césped, configuremos el color a verde usando `color green`",
+            "solution": "color green"
+        },
+        {
+            "hint": "Dibuja el césped usando `rectangle`, y hazlo de un tamaño de `550` píxeles de alto por `300` píxeles de ancho",
+            "solution": "rectangle 550, 300"
+        },
+        {
+            "hint": "Vamos a mover el cursor para dibujar la diana que contiene el blanco y los anillos - **escribe** `move 275, 10`",
+            "solution": "move 275, 10"
+        },
+        {
+            "hint": "Primero dibujaremos las patas de madera que la sostienen - **escribe** `stroke brown, 15`",
+            "solution": "stroke brown, 15"
+        },
+        {
+            "hint": "Dibuja la pata izquierda - **escribe** `line -80, 120`",
+            "solution": "line -80, 120"
+        },
+        {
+            "hint": "... y ahora la pata derecha - **escribe** `line 80, 120`",
+            "solution": "line 80, 120"
+        },
+        {
+            "hint": "Vamos a dibujar una diana con anillos blancos y rojos - **escribe** `stroke white, 50`",
+            "solution": "stroke white, 50"
+        },
+        {
+            "hint": "Ahora configura el interior del círculo a rojo - **escribe** `color red`",
+            "solution": "color red"
+        },
+        {
+            "hint": "Primero, dibuja un círculo con un radio de 80 píxeles - **escribe** `circle 80`",
+            "solution": "circle 80"
+        },
+        {
+            "hint": "Ahora dibuja otro círculo usando `circle` de un radio de `30` píxeles",
+            "solution": "circle 30"
+        },
+        {
+            "hint": "Mueve el cursor para dibujar la punta de la flecha - **escribe** `moveTo 250, 220`",
+            "solution": "moveTo 250, 220"
+        },
+        {
+            "hint": "Nuestra punta de la flecha tendrá un fino borde gris - **escribe** `stroke gray, 1`",
+            "solution": "stroke gray, 1"
+        },
+        {
+            "hint": "Tendrá un `color dimgray`, es un tono de gris",
+            "solution": "color dimgray"
+        },
+        {
+            "hint": "Dibuja la punta de la flecha como si fuera un diamante - **escribe** `polygon -10, 40, 0, 80, 10, 40`",
+            "solution": "polygon -10, 40, 0, 80, 10, 40"
+        },
+        {
+            "hint": "Ahora vamos a mover el cursor para dibujar el palo de la flecha - **escribe** `move 0, 40`",
+            "solution": "move 0, 40"
+        },
+        {
+            "hint": "La flecha estará hecha de una liviana madera color marrón - **escribe** `stroke lightbrown, 20`",
+            "solution": "stroke lightbrown, 20"
+        },
+        {
+            "hint": "Dibuja una línea - **escribe** `line 200, 360`",
+            "solution": "line 200, 360"
+        },
+        {
+            "hint": "Lo último que dibujaremos será el arco. Mueve el cursor fuera de la pantalla - **escribe** `moveTo 800, 375`",
+            "solution": "moveTo 800, 375"
+        },
+        {
+            "hint": "Claro que vamos a dibujarlo con forma de arco, dibújalo con un trazo grueso de color madera oscura - **escribe** `stroke darkbrown, 40`",
+            "solution": "stroke darkbrown, 40"
+        },
+        {
+            "hint": "No queremos que el arco tenga relleno, únicamente necesitamos el borde - **escribe** `color null`",
+            "solution": "color null"
+        },
+        {
+            "hint": "Dibuja el arco - **escribe** `arc 500, 0, 2`",
+            "solution": "arc 500, 0, 2"
+        }
+    ],
+    "index": 15,
+    "hasNext": true
+}

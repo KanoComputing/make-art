@@ -1,0 +1,119 @@
+{
+    "id": "cinema",
+    "title": "Relájate viendo una película",
+    "short_title": "Cine",
+    "icon_class": "challenge_cinema",
+    "description": "En 1895 y luego de transmitir una presentación de los hermanos Skladanowsky que consistía en una seguidilla de películas cortas de 6 segundos de duración acompañadas de una pieza musical, el teatro Berlín Wintergarten se convirtió en el primer teatro-cine. Desafortunadamente, el teatro fue destruido en 1944 durante la Segunda Guerra Mundial a causa de bombardeos.",
+    "cover": "summercamp/day_14.png",
+    "completion_text": "¿Qué tan divertido es un cine si no transmite una película? Intenta dibujar una escena de tu película favorita en la pantalla grande y tal vez algunos amigos mirando la película contigo. ¡No olvides las palomitas de maíz!",
+    "difficulty": 2,
+    "startAt": 0,
+    "summerCamp": true,
+    "rewards": {
+        "wallpaper": 1
+    },
+    "steps": [
+        {
+            "hint": "Está oscuro en el cine. Configura el fondo,`background` a negro o `black`, en inglés",
+            "solution": "background black"
+        },
+        {
+            "hint": "En una nueva línea configura el trazo a `0` usando `stroke`",
+            "solution": "stroke 0"
+        },
+        {
+            "hint": "Primero, mueve el cursor para dibujar el piso - **escribe** `moveTo 0, 300`",
+            "solution": "moveTo 0, 300"
+        },
+        {
+            "hint": "Configura el `color` del piso a gris o `gray`",
+            "solution": "color gray"
+        },
+        {
+            "hint": "Dibuja el piso usando un rectángulo - **escribe** `rectangle 500, 200`",
+            "solution": "rectangle 500, 200"
+        },
+        {
+            "hint": "Ahora, mueve el cursor para ubicar la pantalla - **escribe** `moveTo 50, 20`",
+            "solution": "moveTo 50, 20"
+        },
+        {
+            "hint": "Configura el `color` de la pantalla a blanco, `white` en inglés",
+            "solution": "color white"
+        },
+        {
+            "hint": "La pantalla es un rectángulo perfecto de `400` por `250`, recuerda usar la función `rectangle`",
+            "solution": "rectangle 400, 250"
+        },
+        {
+            "hint": "¡Increíble! Este teatro necesita cortinas - **escribe** `moveTo 0`",
+            "solution": "moveTo 0"
+        },
+        {
+            "hint": "Configura el `color` de las cortinas a rojo o `red`",
+            "solution": "color red"
+        },
+        {
+            "hint": "Dibuja un rectángulo vertical usando `rectangle` Hazlo de un tamaño de `30` por `330`",
+            "solution": "rectangle 30, 330"
+        },
+        {
+            "hint": "Ahora dibuja una cortina horizontal de un tamaño de `500` por `10`",
+            "solution": "rectangle 500, 10"
+        },
+        {
+            "hint": "¡Se ve genial! Ubica la cortina de la derecha - **escribe** `move 470`",
+            "solution": "move 470"
+        },
+        {
+            "hint": "Dibuja una cortina vertical, igual a la de la izquierda",
+            "solution": "rectangle 30, 330"
+        },
+        {
+            "hint": "Este cine necesita asientos - **escribe** `moveTo 0, 360`",
+            "solution": "moveTo 0, 360"
+        },
+        {
+            "hint": "Configura el borde de los asientos usando `stroke` Hazlo anaranjado o `orangered` y de un tamaño de `10`.",
+            "solution": "stroke orangered, 10"
+        },
+        {
+            "hint": "Vamos a dibujar 3 filas de 6 asientos usando un ciclo - **escribe** `for x in [ 1 .. 3 ]`",
+            "solution": "for x in [ 1 .. 3 ]"
+        },
+        {
+            "hint": "Configura el `color` de los asientos a rojo o en inglés: `red`",
+            "solution": "    color red"
+        },
+        {
+            "hint": "Usa la función `rectangle` para los asientos, hazlos de un tamaño de `500` por `40`",
+            "solution": "    rectangle 500, 40"
+        },
+        {
+            "hint": "Mueve el cursor para dibujar la parte de atrás de los asientos - **escribe** `move 0, 50`",
+            "solution": "    move 0, 50"
+        },
+        {
+            "hint": "Dentro del ciclo, abre un segundo ciclo para la parte de atrás de los asientos - **escribe** `for y in [ 1 .. 6 ]`",
+            "solution": "    for y in [ 1 .. 6 ]"
+        },
+        {
+            "hint": "Configura el `color` de la parte trasera de los asientos a rojo oscuro o `darkred`",
+            "solution": "        color darkred"
+        },
+        {
+            "hint": "¡Brillante! Ya casi está listo. Ahora dibuja la parte trasera de los asientos usando un arco - **escribe** `arc 60, 0, 1`",
+            "solution": "        arc 60, 0, 1"
+        },
+        {
+            "hint": "Ahora separa los asientos entre sí una distancia de `130` píxeles a la derecha",
+            "solution": "        move 130"
+        },
+        {
+            "hint": "Por último, asegúrate de que los asientos estén ubicados correctamente - presiona **Enter**, luego la tecla **Borrar** una sola vez y **escribe** `move -800` dentro del **primer** ciclo",
+            "solution": "    move -800"
+        }
+    ],
+    "index": 14,
+    "hasNext": true
+}

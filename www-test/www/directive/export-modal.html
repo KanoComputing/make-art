@@ -1,0 +1,22 @@
+
+<div ng-if="open" class="modal-overlay">
+  <div class="modal-inner export-menu">
+    <button ng-click="close()" class="close">&times;</button>
+    <h2 class="center">{{ action === 'share' ? '${{ directive.save_to_gallery }}$' : '${{ directive.save_drawing }}$' }}</h2>
+    <div class="row">
+      <form ng-submit="submit()" name="exportForm">
+        <div ng-if="error" class="box box-danger">{{ error }}</div>
+        <div class="col-6"><img ng-src="{{ imageURL }}" class="created-image"/></div>
+        <div class="col-6">
+          <input ng-model="meta.title" placeholder="${{ directive.title }}$" type="text" required="required" class="filename"/>
+          <textarea ng-model="meta.description" placeholder="${{ directive.description }}$" class="description"></textarea>
+          <div class="buttons center">
+            <button type="submit" ng-disabled="exportForm.$invalid" ng-class="{ &quot;disabled&quot; : exportForm.$invalid }" ng-if="!loading" class="button-success"><i ng-class="&quot;icon-&quot; + action"></i>${{ directive.save }}$</button>
+            <button ng-if="optional &amp;&amp; !loading" ng-click="skipSharing()" class="button-success skip">${{ directive.skip }}$</button>
+            <div ng-if="loading" class="spinner"></div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+
+<div ng-if="selectedWorld.id !== &quot;pixelhack&quot;" class="banner"><a href="/challenges/pixelhack"><span>Pixel Hack:</span>   programa el camino históricamente recorrido por el arte en videojuegos.</a>
+  <div ng-if="banner.showModal" class="modal-overlay">
+    <div ng-style="{'display': banner.showModal ? 'block' : 'none'}" class="modal-inner modal-challenge-info center">
+      <div class="cover"></div>
+      <button ng-click="banner.closeModal()" class="close"><i class="icon-cross"></i></button>
+      <div class="detail">
+        <h3>Bienvenido a Pixel Hack</h3>
+        <p>Comienza tu aventura en programación dibujando Ping Pong y otros juegos retro. Avanza a arte en 8-bits para tus propias creaciones de personajes de Minecraft y más. Muéstranos cómo hackear nuestros desafíos. Gana la insignia Pixel Master.</p>
+        <p>¡Suerte Hackeando!</p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,95 @@
+{
+    "id": "flashlight",
+    "title": "¡Luces!",
+    "short_title": "Linterna",
+    "icon_class": "challenge_flashlight",
+    "description": "Antes de las linternas se usaban antorchas encendidas con fuego; la llama permitía alumbrar el camino de muchos exploradores. Con la llegada de la electricidad y la invención de las pilas en 1887, los caminos eran alumbrados con bombillas de luz incandescente. Si bien la tecnología de las linternas ha evolucionado, siguen siendo tan útiles como siempre. Mientras tanto, las antorchas que se usaban antes hoy se pueden encontrar en actos de circo donde son arrojadas al aire para hacer malabares.",
+    "cover": "summercamp/day_12.png",
+    "completion_text": "Eres un aventurero con una linterna en la oscuridad. ¿Qué has descubierto gracias a la luz de tu linterna? Intenta dibujar un zorro o una lechuza ululando en un árbol.",
+    "difficulty": 1,
+    "startAt": 0,
+    "summerCamp": true,
+    "rewards": {
+        "outfit": 1
+    },
+    "steps": [
+        {
+            "hint": "¡Afuera está oscureciendo! Configura el fondo usando `background` de azul oscuro o `darkblue` en inglés",
+            "solution": "background darkblue"
+        },
+        {
+            "hint": "Configura el trazo usando `stroke` a `0`, en este desafío no lo necesitaremos",
+            "solution": "stroke 0"
+        },
+        {
+            "hint": "Mueve el cursor a donde estará la linterna - **escribe** `moveTo 200, 200`",
+            "solution": "moveTo 200, 200"
+        },
+        {
+            "hint": "Configura el `color` de la linterna a un tono de gris o `dimgray` en inglés",
+            "solution": "color dimgray"
+        },
+        {
+            "hint": "Dibuja la cabeza de tu linterna usando un rectángulo - **escribe** `rectangle 100, 50`",
+            "solution": "rectangle 100, 50"
+        },
+        {
+            "hint": "Ahora mueve el cursor hacia abajo para dibujar el cuello de la linterna - **escribe** `move 0, 50`",
+            "solution": "move 0, 50"
+        },
+        {
+            "hint": "Configura el `color` de esta parte de la linterna a gris o `gray`",
+            "solution": "color gray"
+        },
+        {
+            "hint": "Dibuja un polígono - **escribe** `polygon 20, 40, 80, 40, 100, 0`",
+            "solution": "polygon 20, 40, 80, 40, 100, 0"
+        },
+        {
+            "hint": "¡Emocionante! Ahora mueve el cursor hacia abajo para dibujar el cuerpo - **escribe** `move 20, 40`",
+            "solution": "move 20, 40"
+        },
+        {
+            "hint": "Configura el `color` a gris oscuro o `darkgray`",
+            "solution": "color darkgray"
+        },
+        {
+            "hint": "Dibuja el cuerpo de la linterna usando la función `rectangle` `60` por `200`",
+            "solution": "rectangle 60, 200"
+        },
+        {
+            "hint": "Lo único que falta ahora es el botón de encendido. Configura el `color` a `dimgray`",
+            "solution": "color dimgray"
+        },
+        {
+            "hint": "Ahora mueve el cursor hacia abajo para dibujar el botón - **escribe** `move 30, 50`",
+            "solution": "move 30, 50"
+        },
+        {
+            "hint": "Dibuja una elipse - **escribe** `ellipse 10, 30`",
+            "solution": "ellipse 10, 30"
+        },
+        {
+            "hint": "Configura el `color` del botón a rojo o `red`",
+            "solution": "color red"
+        },
+        {
+            "hint": "Dibuja el botón con una elipse - **escribe** `ellipse 10, 20`",
+            "solution": "ellipse 10, 20"
+        },
+        {
+            "hint": "¡Encendiste la linterna! Configura el color del rayo de luz  - **escribe** `color \"rgba(255, 255, 0, 0.8)\"`",
+            "solution": "color \"rgba(255, 255, 0, 0.8)\""
+        },
+        {
+            "hint": "Coloca el rayo de luz enfrente de la linterna - **escribe** `move -50, -140`",
+            "solution": "move -50, -140"
+        },
+        {
+            "hint": "Dibuja el rayo de luz usando la función polygon - **escribe** `polygon 100, 0, 180, -300, -80, -300`",
+            "solution": "polygon 100, 0, 180, -300, -80, -300"
+        }
+    ],
+    "index": 12,
+    "hasNext": true
+}

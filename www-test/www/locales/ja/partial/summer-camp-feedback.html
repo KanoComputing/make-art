@@ -1,0 +1,99 @@
+
+<div ng-if="feedbackOpen" class="modal-overlay">
+  <div ng-controller="SummerCampFeedbackController" ng-class="screen_no != 2 ? &quot;badge-screen&quot; : &quot;form-screen&quot;" class="modal-inner center summercamp-feedback">
+    <button ng-click="closeFeedback()" class="cross">&times;</button>
+    <div ng-if="screen_no == 1" class="screen">
+      <div class="top">
+        <h3 class="title">Summer Camp Completed!</h3>
+        <h4 class="byline">Give us some feedback to claim your badge</h4>
+      </div>
+      <div class="bottom">
+        <div class="badge locked"></div>
+        <div class="center"><a ng-click="next()" class="button large button-success">unlock badge</a></div>
+      </div>
+    </div>
+    <div ng-if="screen_no == 2" class="screen">
+      <div class="top">
+        <h3 class="title">Make us better</h3>
+        <h4 class="byline">And get a Summer Camp badge!</h4>
+      </div>
+      <div class="bottom">
+        <form name="responseForm">
+          <ul>
+            <li class="prompt">
+              <div class="question">What did you like the most?</div>
+              <input ng-model="responses.like_most" maxlength="100" required="required" class="answer"/>
+            </li>
+            <li class="prompt">
+              <div class="question">What didn't you like?</div>
+              <input ng-model="responses.like_least" maxlength="100" required="required" class="answer"/>
+            </li>
+            <li class="prompt">
+              <div class="question">How likely are you to recommend Kano to a friend?</div>
+              <div class="answer rating">
+                <ul class="scale">
+                  <li class="rating-number">
+                    <input id="rating-scale-1" type="radio" name="recommend" ng-model="responses.recommend_scale" ng-value="1" required="required"/>
+                    <label for="rating-scale-1">1</label>
+                  </li>
+                  <li class="rating-number">
+                    <input id="rating-scale-2" type="radio" name="recommend" ng-model="responses.recommend_scale" ng-value="2" required="required"/>
+                    <label for="rating-scale-2">2</label>
+                  </li>
+                  <li class="rating-number">
+                    <input id="rating-scale-3" type="radio" name="recommend" ng-model="responses.recommend_scale" ng-value="3" required="required"/>
+                    <label for="rating-scale-3">3</label>
+                  </li>
+                  <li class="rating-number">
+                    <input id="rating-scale-4" type="radio" name="recommend" ng-model="responses.recommend_scale" ng-value="4" required="required"/>
+                    <label for="rating-scale-4">4</label>
+                  </li>
+                  <li class="rating-number">
+                    <input id="rating-scale-5" type="radio" name="recommend" ng-model="responses.recommend_scale" ng-value="5" required="required"/>
+                    <label for="rating-scale-5">5</label>
+                  </li>
+                  <li class="rating-number">
+                    <input id="rating-scale-6" type="radio" name="recommend" ng-model="responses.recommend_scale" ng-value="6" required="required"/>
+                    <label for="rating-scale-6">6</label>
+                  </li>
+                  <li class="rating-number">
+                    <input id="rating-scale-7" type="radio" name="recommend" ng-model="responses.recommend_scale" ng-value="7" required="required"/>
+                    <label for="rating-scale-7">7</label>
+                  </li>
+                  <li class="rating-number">
+                    <input id="rating-scale-8" type="radio" name="recommend" ng-model="responses.recommend_scale" ng-value="8" required="required"/>
+                    <label for="rating-scale-8">8</label>
+                  </li>
+                  <li class="rating-number">
+                    <input id="rating-scale-9" type="radio" name="recommend" ng-model="responses.recommend_scale" ng-value="9" required="required"/>
+                    <label for="rating-scale-9">9</label>
+                  </li>
+                  <li class="rating-number">
+                    <input id="rating-scale-10" type="radio" name="recommend" ng-model="responses.recommend_scale" ng-value="10" required="required"/>
+                    <label for="rating-scale-10">10</label>
+                  </li>
+                </ul><span class="rating-label left">Never</span><span class="rating-label right">Likely</span>
+                <div class="clear"></div>
+              </div>
+            </li>
+            <li class="prompt">
+              <div class="question">What should we do next?</div>
+              <input ng-model="responses.what_next" maxlength="100" required="required" class="answer"/>
+            </li>
+          </ul>
+          <div class="center"><a ng-click="responseForm.$valid &amp;&amp; next()" ng-class="responseForm.$invalid ? 'disabled': '' " class="button large button-success">Send and claim badge</a></div>
+        </form>
+      </div>
+    </div>
+    <div ng-if="screen_no == 3" class="screen">
+      <div class="top">
+        <h3 class="title">Thanks! Here's your badge</h3>
+        <h4 class="byline">Check it out on your Kano World profile</h4>
+      </div>
+      <div class="bottom">
+        <div class="badge unlocked"></div>
+        <div class="center"><a ng-href="http://world.kano.me/users/{{ user.username }}/progress" class="button large button-success">Go to profile</a></div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+
+<div ng-if="selectedChallenge &amp;&amp; !offline" class="modal-overlay flexcenter">
+  <div class="modal-inner modal-challenge-info center">
+    <div ng-style="{ &quot;background-image&quot;: &quot;url(&quot; + _config.UI_ROOT + &quot;assets/challenges/images/&quot; + selectedChallenge.cover +&quot;)&quot; }" class="cover"></div>
+    <button ng-click="deselectedChallenge()" class="close"><i class="icon-cross"></i></button>
+    <div class="detail">
+      <div class="detail-content">
+        <h3>{{ selectedChallenge.title }}</h3>
+        <p class="description">{{ selectedChallenge.description }}</p><a ng-href="/challenge/{{selectedWorld.id}}/{{selectedChallenge.id}}" class="button button-success">Empezar</a>
+      </div>
+    </div>
+  </div>
+</div>

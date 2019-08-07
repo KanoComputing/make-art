@@ -1,0 +1,14 @@
+
+<div ng-show="isOpen" class="modal-overlay">
+  <div class="modal-inner split-modal load-menu">
+    <button ng-click="isOpen = false" class="close">&times;</button>
+    <h2 class="center">Load</h2>
+    <h4 class="center">Load from where</h4>
+    <div class="bottom-section center"><span>
+        <button class="button large">Your Kano
+          <input type="file" accept=".draw" onChange="angular.element(this).scope().load(this)" class="transparent"/>
+        </button></span>
+      <button ng-click="load.web()" class="button large">Internet</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,48 @@
+{
+    "id": "bespokedesign",
+    "title": "Bespoke Design",
+    "description": "Bring out your own personality with a twist on this subtle tweed pattern",
+    "code": "",
+    "steps": [
+        {
+            "hint": "This is an opportunity for you to bring out your own personality with a twist on the classic herringbone zigzag pattern. We’ll make it a bright Boateng orange by typing `stroke orange, 2`",
+            "solution": "stroke orange, 2"
+        },
+        {
+            "hint": "Move into position with `move -50, -50`",
+            "solution": "move -50, -50"
+        },
+        {
+            "hint": "To loop down the canvas, type `for i in [0 ... 10]`",
+            "solution": "for i in [0 ... 10]"
+        },
+        {
+            "hint": "Our zigzag’s direction switches between up and down, to keep track we’ll use a variable. Type `direction = 20`",
+            "solution": "    direction = 20"
+        },
+        {
+            "hint": "Next, we’ll make another loop to travel across the canvas. Type `for j in [0 ... 10]`",
+            "solution": "    for j in [0 ... 10]"
+        },
+        {
+            "hint": "Draw the line with `line 10, direction`",
+            "solution": "        line 10, direction"
+        },
+        {
+            "hint": "Then we’ll move the drawing cursor into position at the end of the line with `move 10, direction`",
+            "solution": "        move 10, direction"
+        },
+        {
+            "hint": "We’ll change direction of our zigzag by multiplying it by negative one. Type `direction *= -1`",
+            "solution": "        direction *= -1"
+        },
+        {
+            "hint": "Exit the second loop by pressing `BACKSPACE` once. Next, type `move -100, 10`, making sure you only have one tab before it.",
+            "solution": "    move -100, 10"
+        }
+    ],
+    "completion_text": "This herringbone pattern has been worn by many thousands of men and women throughout history. Ozwald Boateng uses it every now and then, but still manages to create a suit that becomes a unique expression of the wearer’s personality. Being true to yourself doesn’t mean you have to do something nobody else is doing, sometimes it means taking what you know and making it yours. Play around with the colors here—find something that feels right for you.",
+    "cover": "ozwaldboateng/bespokedesign.png",
+    "index": 7,
+    "hasNext": true
+}

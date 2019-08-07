@@ -1,0 +1,14 @@
+
+<div ng-if="selectedWorld.id !== &quot;pixelhack&quot;" class="banner"><a href="/challenges/pixelhack"><span>${{ partial.pixel_hack }}$</span>   ${{ partial.code_your_way_through_the_history }}$</a>
+  <div ng-if="banner.showModal" class="modal-overlay">
+    <div ng-style="{'display': banner.showModal ? 'block' : 'none'}" class="modal-inner modal-challenge-info center">
+      <div class="cover"></div>
+      <button ng-click="banner.closeModal()" class="close"><i class="icon-cross"></i></button>
+      <div class="detail">
+        <h3>${{ partial.welcome_to_pixel_hack }}$</h3>
+        <p>${{ partial.start_your_coding_adventure }}$</p>
+        <p>${{ partial.happy_hacking }}$</p>
+      </div>
+    </div>
+  </div>
+</div>

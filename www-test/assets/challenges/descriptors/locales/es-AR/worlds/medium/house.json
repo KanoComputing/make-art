@@ -1,0 +1,89 @@
+{
+    "id": "house",
+    "title": "Casa",
+    "description": "¡Dibuja una casa acogedora!",
+    "code": "",
+    "startAt": 1,
+    "steps": [
+        {
+            "hint": "¡Empecemos por el cielo! Configura el color del fondo a azul, usando los comandos en inglés",
+            "solution": "background blue"
+        },
+        {
+            "hint": "Ahora configura el trazo a 0 usando stroke",
+            "solution": "stroke 0"
+        },
+        {
+            "hint": "Muévete hacia la izquierda y arriba, **escribe** `move -150, -50`",
+            "solution": "move -150, -50"
+        },
+        {
+            "hint": "Ahora configura el color a beige ¡se dice igual en inglés!",
+            "solution": "color beige"
+        },
+        {
+            "hint": "Ahora dibuja un rectángulo, **escribe** `rectangle 300, 200`",
+            "solution": "rectangle 300, 200"
+        },
+        {
+            "hint": "Muévete hacia la derecha y arriba, **escribe** `move 150, -100`",
+            "solution": "move 150, -100"
+        },
+        {
+            "hint": "Configura el color a rojo oscuro, o darkred en inglés, para el techo",
+            "solution": "color darkred"
+        },
+        {
+            "hint": "Ahora dibujemos el techo, **escribe** `polygon 170, 100, -170, 100`",
+            "solution": "polygon 170, 100, -170, 100"
+        },
+        {
+            "hint": "Muévete hacia la izquierda y abajo, **escribe** `move -250, 300`",
+            "solution": "move -250, 300"
+        },
+        {
+            "hint": "Ahora configura el color a verde para hacer el césped",
+            "solution": "color green"
+        },
+        {
+            "hint": "Dibuja un rectángulo para el césped con las siguientes medidas 500, 100 usando `rectangle`",
+            "solution": "rectangle 500, 100"
+        },
+        {
+            "hint": "Muévete hacia la derecha y arriba, **escribe** `move 220, -80`",
+            "solution": "move 220, -80"
+        },
+        {
+            "hint": "Ahora configura el color a marrón (o brown en inglés) para hacer la puerta de madera",
+            "solution": "color brown"
+        },
+        {
+            "hint": "Dibuja un rectángulo para la puerta con las siguientes medidas 60, 80",
+            "solution": "rectangle 60, 80"
+        },
+        {
+            "hint": "Configura el color a 'aqua' para las ventanas",
+            "solution": "color aqua"
+        },
+        {
+            "hint": "Muévete hacia la izquierda y arriba, **escribe** `move -80, -80`",
+            "solution": "move -80, -80"
+        },
+        {
+            "hint": "Dibuja un cuadrado de 50 de tamaño, **escribe** `square 50`",
+            "solution": "square 50"
+        },
+        {
+            "hint": "Muévete hacia la derecha, **escribe** `move 170`",
+            "solution": "move 170"
+        },
+        {
+            "hint": "Dibuja otro cuadrado de 50 de tamaño",
+            "solution": "square 50"
+        }
+    ],
+    "completion_text": "¡Construiste una increíble casa usando código!",
+    "cover": "house.png",
+    "index": 4,
+    "hasNext": true
+}

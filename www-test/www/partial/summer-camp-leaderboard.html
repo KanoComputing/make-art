@@ -1,0 +1,20 @@
+
+<div ng-controller="SummerCampLeaderboardController" class="summercamp-leaderboard">
+  <h1>Leaderboard</h1>
+  <h2>Can you reach the top?</h2>
+  <div ng-if="leaderboard_entries" class="leaderboard-title">
+    <div class="header"><span class="position">Rank</span>
+      <div class="detail"><span class="challenges">Challenges</span><span class="points">Points</span></div>
+    </div>
+    <div class="header"><span class="position">Rank</span>
+      <div class="detail"><span class="challenges">Challenges</span><span class="points">Points</span></div>
+    </div>
+  </div>
+  <ul class="leaderboard">
+    <li ng-repeat="leaderboard_entry in leaderboard_entries" ng-class="{user: leaderboard_entry.isUser}" class="leaderboard-entry"><a href="http://world.kano.me/users/{{ leaderboard_entry.username }}"></a>
+      <div class="position">{{ leaderboard_entry.rank }}</div>
+      <div class="detail"><img ng-src="{{ leaderboard_entry.avatar }}" class="avatar"/><span class="user">{{ leaderboard_entry.username }}</span><span class="points">{{ leaderboard_entry.xp }}</span><span class="challenges-complete">{{ leaderboard_entry.challengeNo - 1 }}</span></div>
+    </li>
+    <div ng-if="!leaderboard_entries || !leaderboard_entries.length" class="spinner"></div>
+  </ul>
+</div>

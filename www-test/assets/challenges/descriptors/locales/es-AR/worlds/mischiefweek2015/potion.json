@@ -1,0 +1,98 @@
+{
+    "id": "potion",
+    "title": "Frasco de Poción",
+    "description": "Elabora tu propia poción programando.",
+    "start_date": "2015-10-29T06:00:00",
+    "code": "",
+    "startAt": 2,
+    "completion_text": "¡Bien hecho! Puedes cambiar el color de tu poción al que tú quieras configurando potionColor. El vidrio lo haces opacando el blanco. Usando la función en inglés opacity(white, .4) le dará un buen efecto con cualquier color que elijas.",
+    "cover": "mischiefweek2015/mw-004-potion.png",
+    "steps": [
+        {
+            "hint": "Queremos utilizar figuras sólidas para este desafío, entonces **escribe** `stroke 0`",
+            "solution": "stroke 0"
+        },
+        {
+            "hint": "Para que parezca oscuro configura el fondo con `background charcoal`",
+            "solution": "background charcoal"
+        },
+        {
+            "hint": "Vamos a configurar una variable para el color de nuestra poción. Para hacerlo **escribe** `potionColor = purple`",
+            "solution": "potionColor = purple"
+        },
+        {
+            "hint": "Muévete a la pocición con `move 0, 50`",
+            "solution": "move 0, 50"
+        },
+        {
+            "hint": "Configura el color de dibujo con `color potionColor`",
+            "solution": "color potionColor"
+        },
+        {
+            "hint": "Finalmente podemos dibujar la poción con `circle 90`",
+            "solution": "circle 90"
+        },
+        {
+            "hint": "Queremos que el frasco esté completamente lleno, vamos a usar una línea para hacerlo. Configura el estilo de la línea con `stroke potionColor, 40`",
+            "solution": "stroke potionColor, 40"
+        },
+        {
+            "hint": "Dibuja la línea desde el medio con `line 0, -120`.",
+            "solution": "line 0, -120"
+        },
+        {
+            "hint": "Configura el trazo a cero para hacer el vidrio del frasco. **Escribe** `stroke 0`",
+            "solution": "stroke 0"
+        },
+        {
+            "hint": "Agreguemos otro círculo al interior del frasco para darle un toque natural a nuestra poción. Muévete hacia arriba y a la derecha con `move 30, -30`.",
+            "solution": "move 30, -30"
+        },
+        {
+            "hint": "Configura el color de dibujo a un tono más oscuro del elegido para la poción con `color darken(potionColor, 10)`",
+            "solution": "color darken(potionColor, 10)"
+        },
+        {
+            "hint": "Finalmente dibuja el círculo con `circle 20`",
+            "solution": "circle 20"
+        },
+        {
+            "hint": "Muévete otra vez al centro con `move -30, 30`",
+            "solution": "move -30, 30"
+        },
+        {
+            "hint": "Configura el color del vidrio del frasco haciéndolo opaco el blanco, usa `color opacity(white, .4)`",
+            "solution": "color opacity(white, .4)"
+        },
+        {
+            "hint": "Luego dibuja el frasco haciendo un arco. **Escribe** `arc 100, 1.4, 1.6`",
+            "solution": "arc 100, 1.4, 1.6"
+        },
+        {
+            "hint": "Observa cómo el arco casi llega a completar un círculo entero pero deja un espacio para encontrarse con el cuello de la botella. Dibujemos un corcho. **Escribe** `move 0, -130`",
+            "solution": "move 0, -130"
+        },
+        {
+            "hint": "Configura el color de dibujo para el corcho con `color tan`",
+            "solution": "color tan"
+        },
+        {
+            "hint": "Dibuja el corcho con `polygon 20, 0, 30, -40, -30, -40, -20, 0`",
+            "solution": "polygon 20, 0, 30, -40, -30, -40, -20, 0"
+        },
+        {
+            "hint": "Ahora para el cuello del frasco, configuremos el trazo otra vez a color blanco transparente . **Escribe** `stroke 60, opacity(white, .4)`",
+            "solution": "stroke 60, opacity(white, .4)"
+        },
+        {
+            "hint": "Muévete un poco hacia arriba para el cuello con `move 0, -25`",
+            "solution": "move 0, -25"
+        },
+        {
+            "hint": "Finalmente dibuja el cuello de la botella con `line 0, 60`",
+            "solution": "line 0, 60"
+        }
+    ],
+    "index": 4,
+    "hasNext": true
+}
