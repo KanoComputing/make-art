@@ -13,4 +13,3 @@ icon/kano-draw.app usr/share/applications
 media /usr/share/kano-draw/
 
 kano-content-blacklist/kano-draw.json /usr/share/kano-content/blacklists
- 
