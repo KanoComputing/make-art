@@ -22,7 +22,9 @@ override_dh_auto_build:
 	npm i npm-login-cmd
 	npx npm-login-cmd
 	# Actually build
-	yarn
+	yarn add --dev @kano/kit-app-shell-web
 	OFFLINE=true NODE_ENV=production yarn build
+	OFFLINE=true NODE_ENV=production yarn build:web
+
 
 override_dh_auto_install override_dh_auto_test:
