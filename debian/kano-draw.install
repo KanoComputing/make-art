@@ -3,6 +3,9 @@ kano_draw /usr/lib/python2.7/dist-packages
 
 out/www/* /usr/share/kano-draw
 node_modules/@kano/styles/fonts/* /usr/share/kano-draw/www/www/fonts
+resources/icon-set/fonts/icomoon* /usr/share/kano-draw/www/www/fonts
+/assets/layout/                   /usr/share/kano-draw/www/www/fonts
+
 
 kdesktop/Draw.lnk usr/share/kano-desktop/kdesk/kdesktop/
 kdesktop/kano-draw.xml /usr/share/mime/packages/
