@@ -6,7 +6,7 @@
 override_dh_auto_build:
 	env
 	# NodeJS and npm
-	# cd po && ./lang-extract-doc-strings
+	# cd po && ./lang-extract-doc-stringsgit
 	# cd po && ./lang-extract-strings
 	# Add NPM repository
 	curl -sL https://deb.nodesource.com/setup_10.x | bash -
@@ -22,7 +22,7 @@ override_dh_auto_build:
 	npm i npm-login-cmd
 	npx npm-login-cmd
 	# Actually build
-	yarn add --dev @kano/kit-app-shell-web
+	yarn --verbose
 	OFFLINE=true NODE_ENV=production yarn build
 	OFFLINE=true NODE_ENV=production yarn build:web
 
