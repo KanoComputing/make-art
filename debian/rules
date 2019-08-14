@@ -4,8 +4,8 @@
 	dh $@
 
 override_dh_auto_build:
-	env
 	# NodeJS and npm
+	# FIXME - these must be fix for internationalization languages 
 	# cd po && ./lang-extract-doc-stringsgit
 	# cd po && ./lang-extract-strings
 	# Add NPM repository
@@ -22,7 +22,7 @@ override_dh_auto_build:
 	npm i npm-login-cmd
 	npx npm-login-cmd
 	# Actually build
-	yarn --verbose
+	yarn
 	OFFLINE=true NODE_ENV=production yarn build
 	OFFLINE=true NODE_ENV=production yarn build:web
 
