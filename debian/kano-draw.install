@@ -5,7 +5,7 @@ out/www/*                                                /usr/share/kano-draw
 # node_modules/@kano/styles/fonts/*                     /usr/share/kano-draw/www/www/
 node_modules/                                          /usr/share/kano-draw/www/www/
 resources/icon-set/fonts/*                             /usr/share/kano-draw/
-# /assets/layout/                                        /usr/share/kano-draw/www/www/fonts
+# /assets/layout/                                         /usr/share/kano-draw/www/www/fonts
 
 
 kdesktop/Draw.lnk usr/share/kano-desktop/kdesk/kdesktop/
