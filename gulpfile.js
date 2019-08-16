@@ -39,7 +39,7 @@ var gulp = require('gulp'),
 function handleError(error) {
     console.log(color.bold('[ error caught ]:\n') + color.red(error));
 }
-
+console.log(env, "<=====ENV")
 gulp.task('styles', function () {
     return gulp.src(paths.styles.src)
         .pipe(stylus({

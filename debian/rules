@@ -23,8 +23,9 @@ override_dh_auto_build:
 	npx npm-login-cmd
 	# Actually build
 	yarn
-	OFFLINE=true NODE_ENV=production yarn build
-	OFFLINE=true NODE_ENV=production yarn build:web
+	yarn install
+	OFFLINE=true NODE_ENV=production yarn build --production
+	OFFLINE=true NODE_ENV=production yarn build:web --production
 
 
 override_dh_auto_install override_dh_auto_test:
