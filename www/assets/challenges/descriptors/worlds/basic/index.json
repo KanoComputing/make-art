@@ -1,0 +1,54 @@
+{
+    "challenges": [
+        {
+            "id": "sunnyday",
+            "title": "Sunny Day",
+            "cover": "sunny-day.png",
+            "index": 1,
+            "hasNext": true
+        },
+        {
+            "id": "swissflag",
+            "title": "Swiss Flag",
+            "cover": "swissflag.png",
+            "index": 2,
+            "hasNext": true
+        },
+        {
+            "id": "stare",
+            "title": "Stare in the dark",
+            "cover": "stare.png",
+            "index": 3,
+            "hasNext": true
+        },
+        {
+            "id": "smiley",
+            "title": "Your first face",
+            "cover": "smiley.png",
+            "index": 4,
+            "hasNext": true
+        },
+        {
+            "id": "baloon",
+            "title": "Blue Balloon",
+            "cover": "blue-baloon.png",
+            "index": 5,
+            "hasNext": true
+        },
+        {
+            "id": "stickman",
+            "title": "Stickman",
+            "cover": "stickman.png",
+            "index": 6,
+            "hasNext": false
+        }
+    ],
+    "id": "basic",
+    "name": "Basic",
+    "description": "This is a first set of challenges which will make you started with Make-Art",
+    "world_path": "worlds/basic",
+    "cover": "world_covers/basic",
+    "css_class": "basic-challenges",
+    "type": "normal",
+    "share_strategy": "optional"
+}

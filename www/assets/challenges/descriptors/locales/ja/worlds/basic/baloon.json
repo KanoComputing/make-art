@@ -1,0 +1,44 @@
+{
+    "id": "baloon",
+    "title": "青い風船",
+    "cover": "blue-baloon.png",
+    "description": "多辺形で空を飛ぶ風船を描こう！",
+    "startAt": 2,
+    "steps": [
+        {
+            "hint": "鉛筆の色を青に変えよう。`color blue`を**タイプ**",
+            "solution": "color blue"
+        },
+        {
+            "hint": "筆の幅を0にして、線を描かないようにしよう。",
+            "solution": "stroke 0"
+        },
+        {
+            "hint": "100の大きさの円形を描こう。",
+            "solution": "circle 100"
+        },
+        {
+            "hint": "100歩で下に動こう。`move 0, 100`を**タイプ**",
+            "solution": "move 0, 100"
+        },
+        {
+            "hint": "結び目を描こう。`polygon 15, 15, -15, 15`を**タイプ**",
+            "solution": "polygon 15, 15, -15, 15"
+        },
+        {
+            "hint": "もう少し下に動こう。`move 0, 15`を**タイプ**",
+            "solution": "move 0, 15"
+        },
+        {
+            "hint": "太くて黒い筆を選ぼう。`stroke black, 5`を**タイプ**",
+            "solution": "stroke black, 5"
+        },
+        {
+            "hint": "風船の糸を描こう。`line 0, 200`を**タイプ**",
+            "solution": "line 0, 200"
+        }
+    ],
+    "completion_text": "素晴らしい風船！次に進む前に色を変えてみない？",
+    "index": 5,
+    "hasNext": true
+}

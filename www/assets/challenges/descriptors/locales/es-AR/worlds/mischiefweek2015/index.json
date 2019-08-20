@@ -1,0 +1,69 @@
+{
+    "challenges": [
+        {
+            "id": "skull",
+            "title": "Calavera",
+            "cover": "mischiefweek2015/mw-001-skull.png",
+            "index": 1,
+            "hasNext": true,
+            "start_date": "2015-10-26T06:00:00"
+        },
+        {
+            "id": "cat",
+            "title": "Gato Misterioso",
+            "cover": "mischiefweek2015/mw-002-cat.png",
+            "index": 2,
+            "hasNext": true,
+            "start_date": "2015-10-27T06:00:00"
+        },
+        {
+            "id": "pumpkin",
+            "title": "Calabaza",
+            "cover": "mischiefweek2015/mw-003-pumpkin.png",
+            "index": 3,
+            "hasNext": true,
+            "start_date": "2015-10-28T06:00:00"
+        },
+        {
+            "id": "potion",
+            "title": "Frasco de Poción",
+            "cover": "mischiefweek2015/mw-004-potion.png",
+            "index": 4,
+            "hasNext": true,
+            "start_date": "2015-10-29T06:00:00"
+        },
+        {
+            "id": "ghost",
+            "title": "Fantasma",
+            "cover": "mischiefweek2015/mw-005-ghost.png",
+            "index": 5,
+            "hasNext": true,
+            "start_date": "2015-10-30T06:00:00"
+        },
+        {
+            "id": "spiderweb",
+            "title": "Telaraña",
+            "cover": "mischiefweek2015/mw-006-spiderweb.png",
+            "index": 6,
+            "hasNext": true,
+            "start_date": "2015-10-31T06:00:00"
+        },
+        {
+            "id": "hauntedhouse",
+            "title": "Casa Embrujada",
+            "cover": "mischiefweek2015/mw-007-hauntedhouse.png",
+            "index": 7,
+            "hasNext": false,
+            "start_date": "2015-11-01T06:00:00"
+        }
+    ],
+    "id": "mischiefweek2015",
+    "name": "Semana de travesuras",
+    "description": "Este es un mundo dedicado a Halloween",
+    "world_path": "worlds/mischiefweek2015",
+    "cover": "world_covers/mischiefweek",
+    "css_class": "mischiefweek2015",
+    "type": "campaign",
+    "share_strategy": "optional",
+    "sales_popup_after": 2
+}

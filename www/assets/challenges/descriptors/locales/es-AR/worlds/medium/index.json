@@ -1,0 +1,71 @@
+{
+    "challenges": [
+        {
+            "id": "shrinking",
+            "title": "Círculos que se encogen",
+            "cover": "shrinking.png",
+            "index": 1,
+            "hasNext": true
+        },
+        {
+            "id": "random",
+            "title": "¡Aleatorio!",
+            "cover": "random.png",
+            "index": 2,
+            "hasNext": true
+        },
+        {
+            "id": "starry",
+            "title": "Cielo estrellado",
+            "cover": "starry-sky.png",
+            "index": 3,
+            "hasNext": true
+        },
+        {
+            "id": "house",
+            "title": "Casa",
+            "cover": "house.png",
+            "index": 4,
+            "hasNext": true
+        },
+        {
+            "id": "dots",
+            "title": "Patrón de puntos",
+            "cover": "dots.png",
+            "index": 5,
+            "hasNext": true
+        },
+        {
+            "id": "gradient",
+            "title": "Arcoíris en degradé",
+            "cover": "gradient.png",
+            "index": 6,
+            "hasNext": true
+        },
+        {
+            "id": "planet",
+            "title": "Pintor de planetas",
+            "cover": "planet.png",
+            "index": 7,
+            "hasNext": true
+        },
+        {
+            "id": "pizza",
+            "title": "Pizza",
+            "cover": "pizza.png",
+            "index": 8,
+            "hasNext": false
+        }
+    ],
+    "id": "medium",
+    "name": "Medio",
+    "description": "Desafíos de nivel medio",
+    "world_path": "worlds/medium",
+    "cover": "world_covers/medium",
+    "css_class": "medium",
+    "dependency": [
+        "basic"
+    ],
+    "type": "normal",
+    "share_strategy": "optional"
+}

@@ -1,0 +1,141 @@
+{
+    "id": "cat",
+    "title": "Gato Misterioso",
+    "cover": "mischiefweek2015/mw-002-cat.png",
+    "description": "Crea un gato misterioso programando",
+    "start_date": "2015-10-27T06:00:00",
+    "startAt": 2,
+    "completion_text": "Buen trabajo ¡Hiciste un gato negro súper misterioso! Intenta cambiarle el color o quizás su cola. No olvides compartir tu gato cuando acabes.",
+    "steps": [
+        {
+            "hint": "Podemos hacer del fondo algo negro y escalofriante **escribiendo** `background black`.",
+            "solution": "background black"
+        },
+        {
+            "hint": "Configura el trazo a 0 así evitamos dibujar líneas. **Escribe** `stroke 0`",
+            "solution": "stroke 0"
+        },
+        {
+            "hint": "Ahora configuremos el color de la luna. **Escribe** `color lightgray`",
+            "solution": "color lightgray"
+        },
+        {
+            "hint": "Dibuja un círculo grande para la luna. **Escribe** `circle 230`.",
+            "solution": "circle 230"
+        },
+        {
+            "hint": "Ahora muévete hacia abajo para poder dibujar el césped. **Escribe** `moveTo 250, 500`.",
+            "solution": "moveTo 250, 500"
+        },
+        {
+            "hint": "Es de noche, por eso usaremos un verde oscuro para el césped. **Escribe** `color darkgreen`.",
+            "solution": "color darkgreen"
+        },
+        {
+            "hint": "Dibujemos una loma cubierta de césped usando una elipse. **Escribe** `ellipse 300, 100`",
+            "solution": "ellipse 300, 100"
+        },
+        {
+            "hint": "Ahora configura el color de tu gato. Para hacerlo negro, **escribe** `color black`.",
+            "solution": "color black"
+        },
+        {
+            "hint": "Mueve el cursor para dibujarlo en el medio **Escribe** `moveTo 250, 250`.",
+            "solution": "moveTo 250, 250"
+        },
+        {
+            "hint": "Dibujemos la cabeza con una elipse. **Escribe** `ellipse 60, 40`.",
+            "solution": "ellipse 60, 40"
+        },
+        {
+            "hint": "Vamos a movernos hacia la derecha y hacia arriba para dibujar una oreja. **Escribe** `moveTo 280, 220`.",
+            "solution": "moveTo 280, 220"
+        },
+        {
+            "hint": "¡Vamos a usar la función polygon para dibujarle una linda y punteaguda oreja! **Escribe** `polygon 0, -40, 28, 20, close`.",
+            "solution": "polygon 0, -40, 28, 20, close"
+        },
+        {
+            "hint": "Muévete hacia la izquierda para poder dibujar la otra oreja. **Escribe** `move -60`.",
+            "solution": "move -60"
+        },
+        {
+            "hint": "¡Esta oreja es un reflejo de la anterior! **Escribe** `polygon 0, -40, -28, 20, close`.",
+            "solution": "polygon 0, -40, -28, 20, close"
+        },
+        {
+            "hint": "Dibujemos el cuello. **Escribe** `moveTo 250, 310`.",
+            "solution": "moveTo 250, 310"
+        },
+        {
+            "hint": "¡Dibújalo usando una elipse! **Escribe** `ellipse 30, 50`.",
+            "solution": "ellipse 30, 50"
+        },
+        {
+            "hint": "Ahora haremos el cuerpo. **Escribe** `moveTo 250, 360`.",
+            "solution": "moveTo 250, 360"
+        },
+        {
+            "hint": "¡Utilizaremos una elipse más grande esta vez! **Escribe** `ellipse 50, 60`.",
+            "solution": "ellipse 50, 60"
+        },
+        {
+            "hint": "¡Ahora necesitamos movernos hacia abajo y a la derecha para hacerle la cola! **escribe** `moveTo 320, 380`.",
+            "solution": "moveTo 320, 380"
+        },
+        {
+            "hint": "Vamos a utilizar un truco con la función text para hacerle una cola curva. **Escribe** `font 150`.",
+            "solution": "font 150"
+        },
+        {
+            "hint": "Utilizaremos el texto en negrita. Para activarla **escribe** `bold true`.",
+            "solution": "bold true"
+        },
+        {
+            "hint": "¡Bien! Ahora dibuja la cola **escribiendo** `text 'S'`.",
+            "solution": "text 'S'"
+        },
+        {
+            "hint": "Finalmente, haremos los ojos. **Escribe** `moveTo 225, 250`.",
+            "solution": "moveTo 225, 250"
+        },
+        {
+            "hint": "Configura el color a amarillo, yellow en inglés. **Escribe** `color yellow`.",
+            "solution": "color yellow"
+        },
+        {
+            "hint": "Dibujaremos el primer ojo usando una elipse. **Escribe** `ellipse 14, 6`.",
+            "solution": "ellipse 14, 6"
+        },
+        {
+            "hint": "Ahora para la pupila, configura el color a negro. **Escribe** `color black`.",
+            "solution": "color black"
+        },
+        {
+            "hint": "Dibuja un círculo de un radio de 6. **Escribe** `circle 6`.",
+            "solution": "circle 6"
+        },
+        {
+            "hint": "¡Genial! Ahora muévete hacia la derecha para dibujar el otro ojo. **Escribe** `moveTo 275, 250`.",
+            "solution": "moveTo 275, 250"
+        },
+        {
+            "hint": "Configura el color de dibujo a amarillo. **Escribe** `color yellow`.",
+            "solution": "color yellow"
+        },
+        {
+            "hint": "Dibuja la misma elipse que dibujaste antes. **Escribe** `ellipse 14,6`.",
+            "solution": "ellipse 14, 6"
+        },
+        {
+            "hint": "Configura el color otra vez a negro. **Escribe** `color black`.",
+            "solution": "color black"
+        },
+        {
+            "hint": "Por último, dibuja la segunda pupila. **Escribe** `circle 6`.",
+            "solution": "circle 6"
+        }
+    ],
+    "index": 2,
+    "hasNext": true
+}

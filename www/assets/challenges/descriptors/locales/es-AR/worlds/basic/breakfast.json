@@ -1,0 +1,197 @@
+{
+    "id": "breakfast",
+    "title": "Desayuno",
+    "description": "¡Dibuja un desayuno inglés de tocino y huevos!",
+    "startAt": 2,
+    "fatherDay": true,
+    "steps": [
+        {
+            "hint": "Configura el color del fondo a azul - **escribe** `background blue`",
+            "solution": "background blue"
+        },
+        {
+            "hint": "Configura el trazo a 0, para evitar dibujar líneas",
+            "solution": "stroke 0"
+        },
+        {
+            "hint": "Configura el color a blanco",
+            "solution": "color white"
+        },
+        {
+            "hint": "Dibuja un círculo de 240 de tamaño",
+            "solution": "\n#Plate\ncircle 240",
+            "validate": "circle 240"
+        },
+        {
+            "hint": "Configura el color a `'#eee'` - **escribe** `color '#eee'`",
+            "solution": "color '#eee'"
+        },
+        {
+            "hint": "Dibuja un círculo de 200 de tamaño",
+            "solution": "circle 200"
+        },
+        {
+            "hint": "Muévete arriba y hacia la izquierda - **escribe** `move -70, -70`",
+            "solution": "\n#Egg\nmove -70, -70",
+            "validate": "move -70,-70"
+        },
+        {
+            "hint": "Configura el color a blanco",
+            "solution": "color  white"
+        },
+        {
+            "hint": "Dibuja un círculo de 80 de tamaño",
+            "solution": "circle 80"
+        },
+        {
+            "hint": "Configura el color a amarillo",
+            "solution": "color yellow"
+        },
+        {
+            "hint": "Dibuja un círculo de 30 de tamaño",
+            "solution": "circle 30"
+        },
+        {
+            "hint": "Muévete arriba y hacia la derecha - **escribe** `move 90, -60`",
+            "solution": "\n#Bacon 1\nmove 90, -60",
+            "validate": "move 90,-60"
+        },
+        {
+            "hint": "Configura el color a rojo",
+            "solution": "color red"
+        },
+        {
+            "hint": "Dibuja un rectángulo de un tamaño de 60 por 200 - **escribe** `rectangle 60, 200`",
+            "solution": "rectangle 60, 200"
+        },
+        {
+            "hint": "Muévete 30 hacia la derecha - **escribe** `move 30`",
+            "solution": "move 30"
+        },
+        {
+            "hint": "Configura el color a `'#aa0000'` - **escribe** `color '#aa0000'`",
+            "solution": "color '#aa0000'"
+        },
+        {
+            "hint": "Dibuja un rectángulo de un tamaño de 30 por 200 - **escribe** `rectangle 30, 200`",
+            "solution": "rectangle 30, 200"
+        },
+        {
+            "hint": "Muévete hacia abajo y a la izquierda - **escribe** `move -3, 10`",
+            "solution": "move -3, 10"
+        },
+        {
+            "hint": "Configura el color a blanco",
+            "solution": "color white"
+        },
+        {
+            "hint": "Dibuja un rectángulo de un tamaño de 6 por 180 - **escribe** `rectangle 6, 180`",
+            "solution": "rectangle 6, 180"
+        },
+        {
+            "hint": "Muévete hacia abajo y a la derecha - **escribe** `move 40, 50`",
+            "solution": "\n#Bacon 2\nmove 40, 50",
+            "validate": "move 40, 50"
+        },
+        {
+            "hint": "Configura el color a rojo",
+            "solution": "color red"
+        },
+        {
+            "hint": "Dibuja un rectángulo de un tamaño de 60 por 200 - **escribe** `rectangle 60, 200`",
+            "solution": "rectangle 60, 200"
+        },
+        {
+            "hint": "Muévete hacia la derecha 30 - **escribe** `move 30`",
+            "solution": "move 30"
+        },
+        {
+            "hint": "Configura el color a`'#aa0000'` - **escribe** `color '#aa0000'`",
+            "solution": "color '#aa0000'"
+        },
+        {
+            "hint": "Dibuja un rectángulo de un tamaño de 30 por 200 - **escribe** `rectangle 30, 200`",
+            "solution": "rectangle 30, 200"
+        },
+        {
+            "hint": "Muévete hacia abajo y a la izquierda - **escribe** `move -3, 10`",
+            "solution": "move -3, 10"
+        },
+        {
+            "hint": "Configura el color a blanco",
+            "solution": "color white"
+        },
+        {
+            "hint": "Dibuja un rectángulo de un tamaño de 6 por 180 - **escribe** `rectangle 6, 180`",
+            "solution": "rectangle 6, 180"
+        },
+        {
+            "hint": "Muévete hacia abajo y a la izquierda - **escribe** `move -200, 150`",
+            "solution": "\n#Tomato 1\nmove -200, 150",
+            "validate": "move -200, 150"
+        },
+        {
+            "hint": "Configura el color a rojo",
+            "solution": "color red"
+        },
+        {
+            "hint": "Dibuja un círculo de 40 de tamaño",
+            "solution": "circle 40"
+        },
+        {
+            "hint": "Configura el color a `'#cc4444'` - **escribe** `color '#cc4444'`",
+            "solution": "color '#cc4444'"
+        },
+        {
+            "hint": "Dibuja un círculo de 35 de tamaño",
+            "solution": "circle 35"
+        },
+        {
+            "hint": "Configura el color a `'#aa4444'` - **escribe** `color '#aa4444'`",
+            "solution": "color '#aa4444'"
+        },
+        {
+            "hint": "Dibuja una elipse de un tamaño de 30 por 10",
+            "solution": "ellipse 30, 10"
+        },
+        {
+            "hint": "Dibuja una elipse de un tamaño de 10 por 30",
+            "solution": "ellipse 10, 30"
+        },
+        {
+            "hint": "Muévete hacia abajo y a la derecha - **escribe** `move 70, 50`",
+            "solution": "\n#Tomato 2\nmove 70, 50",
+            "validate": "move 70, 50"
+        },
+        {
+            "hint": "Configura el color a rojo",
+            "solution": "color red"
+        },
+        {
+            "hint": "Dibuja un círculo de un tamaño de 40",
+            "solution": "circle 40"
+        },
+        {
+            "hint": "Configura el color a `'#cc4444'` - **escribe** `color '#cc4444'`",
+            "solution": "color '#cc4444'"
+        },
+        {
+            "hint": "Dibuja un círculo de un tamaño de 35",
+            "solution": "circle 35"
+        },
+        {
+            "hint": "Configura el color a `'#aa4444'` - **escribe** `color '#aa4444'`",
+            "solution": "color '#aa4444'"
+        },
+        {
+            "hint": "Dibuja una elipse de un tamaño de 30 por 10",
+            "solution": "ellipse 30, 10"
+        },
+        {
+            "hint": "Dibuja una elipse de un tamaño de 10 por 30",
+            "solution": "ellipse 10, 30"
+        }
+    ],
+    "completion_text": "¡Bien hecho!"
+    "cover": "breakfast.png"
+}

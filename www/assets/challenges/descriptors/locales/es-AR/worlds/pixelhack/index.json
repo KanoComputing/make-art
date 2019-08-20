@@ -1,0 +1,109 @@
+{
+    "challenges": [
+        {
+            "id": "pong",
+            "title": "Pong",
+            "cover": "pixel-pong.png",
+            "index": 1,
+            "hasNext": true
+        },
+        {
+            "id": "ship",
+            "title": "Asteroides",
+            "cover": "pixel-ship.png",
+            "index": 2,
+            "hasNext": true
+        },
+        {
+            "id": "tetris",
+            "title": "Tetris",
+            "cover": "pixel-tetris.png",
+            "index": 3,
+            "hasNext": true
+        },
+        {
+            "id": "chest",
+            "title": "Cofre",
+            "cover": "pixel-chest.png",
+            "index": 4,
+            "hasNext": true
+        },
+        {
+            "id": "variables",
+            "title": "Variables",
+            "cover": "pixel-variables.png",
+            "index": 5,
+            "hasNext": true
+        },
+        {
+            "id": "sword",
+            "title": "Espada de diamantes",
+            "cover": "pixel-sword.png",
+            "index": 6,
+            "hasNext": true
+        },
+        {
+            "id": "steve",
+            "title": "Steve",
+            "cover": "pixel-steve.png",
+            "index": 7,
+            "hasNext": true
+        },
+        {
+            "id": "mage",
+            "title": "Maga",
+            "cover": "pixel-mage.png",
+            "index": 8,
+            "hasNext": true
+        },
+        {
+            "id": "forloop",
+            "title": "For Loop",
+            "cover": "pixel-forloop.png",
+            "index": 9,
+            "hasNext": true
+        },
+        {
+            "id": "gradient",
+            "title": "Atardecer en 8-bits",
+            "cover": "pixel-gradient.png",
+            "index": 10,
+            "hasNext": true
+        },
+        {
+            "id": "colorfrenzy",
+            "title": "Frenesí de colores",
+            "cover": "pixel-colorfrenzy.png",
+            "index": 11,
+            "hasNext": true
+        },
+        {
+            "id": "grassblock",
+            "title": "Bloque de hierba en 8-bits",
+            "cover": "pixel-grassblock.png",
+            "index": 12,
+            "hasNext": true
+        },
+        {
+            "id": "diamondblock",
+            "title": "Bloque de diamantes en 8-bits",
+            "cover": "pixel-diamondblock.png",
+            "index": 13,
+            "hasNext": false
+        }
+    ],
+    "id": "pixelhack",
+    "name": "Pixel Hack",
+    "description": "Este es un grupo de desafíos para la hora de programación",
+    "world_path": "worlds/pixelhack",
+    "cover": "world_covers/pixelhack",
+    "css_class": "pixelhack",
+    "type": "campaign",
+    "share_strategy": "optional",
+    "certificate_after": 2,
+    "socialText": {
+        "email": "¡Hackea tu propio camino a lo largo de la historia de los videojuegos con Pixel Hack desde Kano!",
+        "facebook": "¡Hackea tu propio camino a lo largo de la historia de los videojuegos con #PixelHack desde Kano!",
+        "twitter": "¡Hackea tu propio camino a lo largo de la historia de los videojuegos con #PixelHack desde @TeamKano! \nhttp://art.kano.me/challenges/pixelhack/"
+    }
+}

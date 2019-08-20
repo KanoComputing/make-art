@@ -1,0 +1,97 @@
+{
+    "id": "forloop",
+    "title": "For Loop",
+    "description": "Usa un Ciclo for para crear fácilmente una viborita.",
+    "startAt": 2,
+    "steps": [
+        {
+            "hint": "Vamos a recrear el clásico juego de la serpiente usando el poder de los ciclos for. For significa por en inglés y esta función útil nos permite evitar dibujar círculo por círculo. Primero configura un fondo sucio - **escribe** `background tan`",
+            "solution": "background tan"
+        },
+        {
+            "hint": "Configura el trazo a 0 **escribe** `stroke 0`",
+            "solution": "stroke 0"
+        },
+        {
+            "hint": "Primero posicionemos la cabeza de la viborita **escribe** `moveTo 80,250`",
+            "solution": "moveTo 80,250"
+        },
+        {
+            "hint": "Configura un color de víbora **escribe** `color olivedrab`",
+            "solution": "color olivedrab"
+        },
+        {
+            "hint": "Dibuja un círculo de 30 píxeles de tamaño para la cabeza",
+            "solution": "circle 30"
+        },
+        {
+            "hint": "Este es el momento en el que configuraremos el ciclo, usando la función for. El primer número indica dónde comenzar a contar y el segundo hasta qué número contar. Entonces 1 .. 7 hace que la computadora cuente hasta 7 - **escribe** `for [1 .. 7]`",
+            "solution": "for [1 .. 7]"
+        },
+        {
+            "hint": "Cualquier cosa dentro de este ciclo se repetirá 7 veces, necesitamos utilizar la función move para posicionar cada parte del cuerpo - **escribe** `move 50,0`",
+            "solution": "    move 50,0"
+        },
+        {
+            "hint": "Configura el color del cuerpo - **escribe** `color olivedrab`",
+            "solution": "    color olivedrab"
+        },
+        {
+            "hint": "Una vez que dibujemos un círculo, verás como se repite el código una cierta cantidad de veces - **escribe** `circle 30`",
+            "solution": "    circle 30"
+        },
+        {
+            "hint": "Agreguemos cuadrados para que el cuerpo parezca más segmentado, fíjate que aparecen 7 figuras por cada línea del código - **escribe** `square 30`",
+            "solution": "    square 30"
+        },
+        {
+            "hint": "Le agregaremos otro detalle a la cola, configura el color a verde oscuro, darkgreen en inglés",
+            "solution": "    color darkgreen"
+        },
+        {
+            "hint": "Dibuja otro círculo, el código todavía está programado para que se repita 7 veces - **escribe** `circle 20`",
+            "solution": "    circle 20"
+        },
+        {
+            "hint": "Finalmente, dibuja un cuadrado de un tamaño de 20 píxeles",
+            "solution": "    square 20"
+        },
+        {
+            "hint": "Para lo siguiente asegúrate de estar fuera del ciclo for presionando la tecla borrar. Vamos a dibujar el ojo - **escribe** `moveTo 70,240`",
+            "solution": "moveTo 70,240"
+        },
+        {
+            "hint": "Cambia el `color` de dibujo a negro",
+            "solution": "color black"
+        },
+        {
+            "hint": "Dibuja una `ellipse` de 10 píxeles de ancho y 5 de alto.",
+            "solution": "ellipse 10,5"
+        },
+        {
+            "hint": "Finalmente le dibujaremos una lengua, para que pueda silbar como toda víbora - **escribe** `color salmon`",
+            "solution": "color salmon"
+        },
+        {
+            "hint": "Posiciónala en la cara - **escribe** `move -15, 20`",
+            "solution": "move -15, 20"
+        },
+        {
+            "hint": "Dibujaremos un rectángulo con el ancho en negativo para hacer que la lengua salga directo de la boca - **escribe** `rectangle -20,4`",
+            "solution": "rectangle -20,4"
+        }
+    ],
+    "completion_text": "Ya has experimentado cómo hacer arte con menos líneas de códigos usando ciclos de manera inteligente. ¿Por qué no intentar cambiar el número 7 y ver qué sucede?",
+    "gallery": {
+        "cover_path": "/assets/challenges/images/pixelremixes/",
+        "remixes": [
+            "snake-tiny.png",
+            "snake-apple.png",
+            "snake-corner.png"
+        ]
+    },
+    "cover": "pixel-forloop.png",
+    "guide": "#### Nueva palabra\n**for i in [rangoMinimo ... rangoMax]**| for in [0 .. 10]\n\nEl ciclo for ejecuta el comando tantas veces como lo indique el rango. 10 veces para un rango de [0 … 10] y 20 veces para un rango de [0 â€¦ 20].\n\n#### Lo que crearás\n1. Vamos a recrear el clásico juego de la Viborita usando el poder de los ciclos para evitar dibujar círculo por círculo. Primero configura un fondo sucio  - **escribe** `background tan`\n2. Configura el trazo a 0 **escribe** `stroke 0`\n3. Primero posicionemos la cabeza de la viborita **escribe** `moveTo 80,250`\n4. Configura un color de víbora **escribe** `color olivedrab`\n5. Dibuja un círculo de 30 píxeles de tamaño para la cabeza\n6. Este es el momento en el que configuraremos el ciclo, usando la función for. El primer número indica dónde comenzar a contar y el segundo hasta qué número contar. Entonces 1 .. 7 hace que la computadora cuente hasta 7 - **escribe** `for [1 .. 7]`\n7. Cualquier cosa dentro de este ciclo se repetirá 7 veces, necesitamos utilizar la función move para posicionar cada parte del cuerpo - **escribe** `move 50,0`\n8. Configura el color del cuerpo - **escribe** `color olivedrab`\n9.Una vez que dibujemos un círculo, verás como se repite el código una cierta cantidad de veces - **escribe** `circle 30`\n10. Agreguemos cuadrados para que el cuerpo parezca más segmentado, fíjate que aparecen 7 figuras por cada línea del código - **escribe** `square 30`\n11. Le agregaremos otro detalle a la cola, configura el color a verde oscuro, darkgreen en inglés\n12. Dibuja otro círculo, el código todavía está programado para que se repita 7 veces - **escribe** `circle 20`\n13. Finalmente, dibuja un cuadrado de un tamaño de 20 píxeles\n14. Para lo siguiente asegúrate de estar fuera del ciclo for presionando la tecla borrar. Vamos a dibujar el ojo - **escribe** `moveTo 70,240`\n15. Cambia el `color` de dibujo a negro\n16. Dibuja una `ellipse` de 10 píxeles de ancho y 5 de alto.\n17. Finalmente le dibujaremos una lengua, para que pueda silbar como toda víbora - **escribe** `color salmon`\n18. Posiciónala en la cara - **escribe** `move -15, 20`\n19. Dibujaremos un rectángulo con el ancho en negativo para hacer que la lengua salga directo de la boca - **escribe** `rectangle -20,4`\n\n#### Lo que hackearás\nEl encanto del ciclo es que puedes cambiar el código una vez y todas las figuras que has dibujado se actualizarán. Esta es otro motivo por el cual utilizar los ciclos, puedes realizar grandes cambios sin necesidad de ingresar muchos códigos.\n\n#### Informe\n¿Cuántas veces has escrito el mismo comando una y otra vez en los últimos desafíos? En el desafío de la viborita, su cuerpo está compuesto por muchos círculos. En lugar de escribir un comando por cada círculo, ¡la computadora puede hacerlo por ti!\n",
+    "index": 9,
+    "hasNext": true
+}
