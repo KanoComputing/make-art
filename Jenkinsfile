@@ -16,7 +16,7 @@ pipeline {
         stage('install dependencies') {
             steps {
                 script {
-                    docker.image('node:10-alpine').inside {
+                    docker.image('kanocomputing/node-gyp:10').inside('-u root') {
                         sh "apk update && apk upgrade && apk add --no-cache bash git openssh"
                         sh "mkdir -p ~/.ssh && ssh-keyscan github.com >> ~/.ssh/known_hosts"
                         withCredentials([string(credentialsId: 'npm-read-only', variable: 'NPM_TOKEN')]) {
