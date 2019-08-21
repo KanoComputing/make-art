@@ -17,10 +17,14 @@ pipeline {
             steps {
                 script {
                     docker.image('node:10-alpine').inside {
+                        sh "apk update && apk upgrade && apk add --no-cache bash git openssh"
+                        sh "mkdir -p ~/.ssh && ssh-keyscan github.com >> ~/.ssh/known_hosts"
                         withCredentials([string(credentialsId: 'npm-read-only', variable: 'NPM_TOKEN')]) {
                             sh "echo \"//registry.npmjs.org/:_authToken=${NPM_TOKEN}\" > .npmrc"
                         }
-                        sh "yarn"
+                        sshagent(['read-only-github']) {
+                            sh "yarn"
+                        }
                     }
                 }
             }
