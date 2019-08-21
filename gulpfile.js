@@ -62,7 +62,7 @@ gulp.task('views', function () {
                 segmentioId     : segmentioId,
                 facebookAppId   : facebookAppId,
                 api_url         : api_url,
-                api_url_v2         : api_url_v2,
+                api_url_v2      : api_url_v2,
                 world_url       : world_url,
                 testmode        : testmode,
                 challenges_url  : "/assets/challenges/descriptors",
