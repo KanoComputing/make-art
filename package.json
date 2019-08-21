@@ -13,7 +13,7 @@
         "rollup": "rollup",
         "kash": "kash",
         "kart": "kart",
-        "build:web": "kash build web . -o out/www --bundle-only",
+        "build:web": "kash build web . -o out/www",
         "build:uwp": "yarn build && kash build uwp . -o out --bundle-only",
         "find-app:uwp": "node ./utils/find-app.js"
     },
