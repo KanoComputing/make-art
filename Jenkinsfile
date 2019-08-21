@@ -28,7 +28,7 @@ pipeline {
         stage('build') {
             steps {
                 script {
-                    def e = env.BRANCH_NAME === 'master' ? 'staging' : 'production';
+                    def e = env.BRANCH_NAME == 'master' ? 'staging' : 'production';
                     docker.image('node:10-alpine').inside {
                         sh "yarn build"
                         sh "yarn build:web --env=${e}"
