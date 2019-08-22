@@ -638,6 +638,11 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
+"@kano/common@^1.0.1":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@kano/common/-/common-1.0.4.tgz#681b877bc83e28cac266f2855d2aeba3efa0f76a"
+  integrity sha512-0SwAeRe1UU/5hii6ScPqfoLrK73Jsjh2WXz8n1waNF5M8/0iiogEREtJJs6/T2Nlsk0ZD9tZrCCI4xOPgezv8g==
+
 "@kano/common@^1.0.2":
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/@kano/common/-/common-1.0.4.tgz#681b877bc83e28cac266f2855d2aeba3efa0f76a"
@@ -829,6 +834,13 @@
     innosetup-compiler "^5.5.9"
     mkdirp "^0.5.1"
     rimraf "^2.6.2"
+
+"@kano/telemetry@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@kano/telemetry/-/telemetry-1.0.2.tgz#2f207e4ed54bf5dfa87e57d50c3be1d1c4a50dab"
+  integrity sha512-cHZxNHyD1I2pSpvlr+nPTEbauEUvDgotMDW+NKWwpklco3Q62ulHQ+ZTeeFYAXy95VS3pafEsQAMWvtrg7bdsg==
+  dependencies:
+    "@kano/common" "^1.0.1"
 
 "@kano/web-bus@^1.0.0-alpha.14":
   version "1.0.0-alpha.14"

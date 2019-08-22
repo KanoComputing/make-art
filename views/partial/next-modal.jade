@@ -26,20 +26,3 @@
             .detail
                 span.title {{ creation.title }}
                 .description {{ creation.description }}
-
-            .buttons
-                a.button.button-mail(ng-click='openMailTab()')
-                    i.icon-mail
-
-        .mail-tab.center(ng-if='mailTab')
-            span ${{ partial.share_by_email }}$
-            
-            form(ng-submit='sendMail(creation)' name='mailForm')
-                .box.box-danger(ng-if='error') {{ error }}
-
-                .email
-                    input(ng-model='creation.email', placeholder='Email address', type='email', required)
-
-                button.button-success(type='submit', ng-disabled='mailForm.$invalid', ng-class='{ "disabled" : mailForm.$invalid }', ng-if='!loading') ${{ partial.send }}$
-
-                .spinner(ng-if='loading')
