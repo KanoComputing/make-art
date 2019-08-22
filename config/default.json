@@ -26,5 +26,6 @@
         "API_URL_V2": "https://worldapi.kes.kano.me",
         "CHALLENGES_URL": "/assets/challenges/descriptors"
     },
-    "SHARING_URL": "https://staging.sharing.kano.me"
+    "SHARING_URL": "https://staging.sharing.kano.me",
+    "TELEMETRY_URL": "https://telemetry.kessandbox.co.uk/batch"
 }
