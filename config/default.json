@@ -2,7 +2,8 @@
     "APP_NAME": "Make Art",
     "APP_DESCRIPTION": "Make Art with code",
     "ICONS": {
-        "UWP": "icon/kano-draw.png"
+        "UWP": "icon/kano-draw.png",
+        "FAVICON": "icon/kano-draw.png"
     },
     "UWP": {
         "PACKAGE_NAME": "KanoComputing.MakeArt",
