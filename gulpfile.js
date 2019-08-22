@@ -17,7 +17,6 @@ var gulp = require('gulp'),
     server = lr(),
     env = process.env.NODE_ENV || 'development',
     production = env === 'production',
-    unknown_user = process.env.UNKNOWN_USER || null,
     api_url = process.env.API_URL || null,
     api_url_v2 = process.env.API_URL_V2 || null,
     world_url = process.env.WORLD_URL || null,
@@ -60,7 +59,6 @@ gulp.task('views', function () {
                 api_url_v2      : api_url_v2,
                 world_url       : world_url,
                 challenges_url  : "/assets/challenges/descriptors",
-                unknown_user    : unknown_user
             }, jadeHelpers)
         }))
         .on('error', handleError)
