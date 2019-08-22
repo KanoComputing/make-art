@@ -61,7 +61,6 @@ gulp.task('views', function () {
                 api_url         : api_url,
                 api_url_v2      : api_url_v2,
                 world_url       : world_url,
-                testmode        : testmode,
                 challenges_url  : "/assets/challenges/descriptors",
                 unknown_user    : unknown_user
             }, jadeHelpers)

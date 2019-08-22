@@ -13,9 +13,10 @@
         "rollup": "rollup",
         "kash": "kash",
         "kart": "kart",
-        "build:web": "kash build web . -o out/www",
+        "build:web": "kash build web . -o out/www --bundle-only",
         "build:uwp": "yarn build && kash build uwp . -o out --bundle-only",
-        "find-app:uwp": "node ./utils/find-app.js"
+        "find-app:uwp": "node ./utils/find-app.js",
+        "update-kash": "yarn add --dev @kano/kit-app-shell-cli @kano/kit-app-shell-web @kano/kit-app-shell-uwp"
     },
     "author": "Kano Computing",
     "repository": {
@@ -32,10 +33,9 @@
     },
     "devDependencies": {
         "@kano/eslint-config": "^1.0.1",
-        "@kano/kit-app-shell-cli": "0.0.3-alpha.61",
-        "@kano/kit-app-shell-uwp": "0.0.3-alpha.62",
-        "@kano/kit-app-shell-web": "0.0.3-alpha.61",
-        "@kano/styles": "3.1.3",
+        "@kano/kit-app-shell-cli": "^0.0.3-alpha.64",
+        "@kano/kit-app-shell-uwp": "^0.0.3-alpha.64",
+        "@kano/kit-app-shell-web": "^0.0.3-alpha.64",
         "@types/ace": "0.0.42",
         "@types/angular": "^1.6.54",
         "api-service": "^1.0.8",

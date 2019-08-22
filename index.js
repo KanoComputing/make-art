@@ -2,7 +2,7 @@
 
 class MakeArt {
     constructor(kash) {
-        const { config } = kash
+        const { config } = kash;
         this.root = document.createElement('div');
         this.root.appendChild(document.createElement('ng-view'));
         window.CONFIG = config.CONFIG;

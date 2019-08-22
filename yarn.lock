@@ -697,17 +697,12 @@
     eslint-plugin-html "^4.0.2"
     eslint-plugin-import "^2.15.0"
 
-"@kano/icons-rendering@^3.0.16":
-  version "3.0.16"
-  resolved "https://registry.yarnpkg.com/@kano/icons-rendering/-/icons-rendering-3.0.16.tgz#a41691096adc045a5cf5072639006bd2b8e424dd"
-  integrity sha512-FHkdtwgOX2VuyMM3YsFQ0/VVMoB7i55Hb0skC1CvU99UZT3gzNQgPtrpAQOKiO9W42ewbNNhANkW50DHnJXqxg==
-
-"@kano/kit-app-shell-cli@0.0.3-alpha.61":
-  version "0.0.3-alpha.61"
-  resolved "https://registry.yarnpkg.com/@kano/kit-app-shell-cli/-/kit-app-shell-cli-0.0.3-alpha.61.tgz#9be1182ba410c0eda5ce6503de362c84babcb534"
-  integrity sha512-tQe7QQWXqxt6qkMnhSPySZhLER5Pi4PSFnnHakcF2EnIVP7oIvxRFHNoamenxIcSkHEh9SSXMYKrCh7qY5oLMA==
+"@kano/kit-app-shell-cli@^0.0.3-alpha.64":
+  version "0.0.3-alpha.64"
+  resolved "https://registry.yarnpkg.com/@kano/kit-app-shell-cli/-/kit-app-shell-cli-0.0.3-alpha.64.tgz#57bdb949c527d6c231875f8dd6b5aed076494cd9"
+  integrity sha512-OiYyTdkNnNmNPoeZvloXAFzxJxCs8EKQj4Xkas5EvsFDnoV2vc2ooAqzXietgh/fIuLQKB0yscy5HmCtm+UdvQ==
   dependencies:
-    "@kano/kit-app-shell-core" "^0.0.3-alpha.61"
+    "@kano/kit-app-shell-core" "^0.0.3-alpha.64"
     chalk "^2.4.1"
     deepmerge "^3.2.0"
     enquirer "^2.2.0"
@@ -716,10 +711,10 @@
     pretty-bytes "^5.1.0"
     sywac "^1.2.1"
 
-"@kano/kit-app-shell-core@^0.0.3-alpha.61":
-  version "0.0.3-alpha.61"
-  resolved "https://registry.yarnpkg.com/@kano/kit-app-shell-core/-/kit-app-shell-core-0.0.3-alpha.61.tgz#74151d553d72dfcfcac687a23b070dcee3472a48"
-  integrity sha512-JSIUoqZMfMWWdUClBqB1brbHrdoVgW32J1NUkjoCABfi5B+lhomp0/+9vC1TvKUTLSfPXRXFdJbpQIrF5rOiKw==
+"@kano/kit-app-shell-core@^0.0.3-alpha.64":
+  version "0.0.3-alpha.64"
+  resolved "https://registry.yarnpkg.com/@kano/kit-app-shell-core/-/kit-app-shell-core-0.0.3-alpha.64.tgz#216ecc16769ca49bd9bfdcbd8e724a0c6bd955e6"
+  integrity sha512-v1c7LjkDmwtXeI1ADZWB0rv66oAqmqMJ4vppkwpxNYH3YY+eX9FyBZlDNOXZ0kbxN3tGtrnU6PVq1zmx5QVaSw==
   dependencies:
     "@babel/core" "^7.2.2"
     "@babel/plugin-syntax-dynamic-import" "^7.2.0"
@@ -752,12 +747,12 @@
     walk-parse5 "^1.0.0"
     wd "^1.11.1"
 
-"@kano/kit-app-shell-electron@^0.0.3-alpha.62":
-  version "0.0.3-alpha.62"
-  resolved "https://registry.yarnpkg.com/@kano/kit-app-shell-electron/-/kit-app-shell-electron-0.0.3-alpha.62.tgz#3f3d26675971664159de36acf802f43ea14c86aa"
-  integrity sha512-6KtbAQbOh/+5mjaXRwVp/FYQzdtk/8h4oXLDxPIrRzUU3MlWvmqhf7vZ0gTNb5MFyAEH9k+x2gRcp0Yvcmy4UQ==
+"@kano/kit-app-shell-electron@^0.0.3-alpha.64":
+  version "0.0.3-alpha.64"
+  resolved "https://registry.yarnpkg.com/@kano/kit-app-shell-electron/-/kit-app-shell-electron-0.0.3-alpha.64.tgz#d36d9c4ffc2aad1b2959f64b4421924d3943c3e4"
+  integrity sha512-3HsQyU1S9USJxpRkExnTx3+Uv3U6UiU7l7QOZ2Uev6hIJUvabdV0rAPKqIVm3vlcw4oEd/QCTNx5CW0OT65R3A==
   dependencies:
-    "@kano/kit-app-shell-core" "^0.0.3-alpha.61"
+    "@kano/kit-app-shell-core" "^0.0.3-alpha.64"
     chromedriver "2.37"
     electron "3.1.0"
     electron-link "^0.3.2"
@@ -771,13 +766,13 @@
     rollup-plugin-node-resolve "^4.0.0"
     rollup-plugin-replace "^2.1.0"
 
-"@kano/kit-app-shell-uwp@0.0.3-alpha.62":
-  version "0.0.3-alpha.62"
-  resolved "https://registry.yarnpkg.com/@kano/kit-app-shell-uwp/-/kit-app-shell-uwp-0.0.3-alpha.62.tgz#f90b1a3a666ceabd23c9ba3d59a0a93a22145d24"
-  integrity sha512-e/3oQ6V7w9sv6bW3u2s0PhCCFpNfrbXxxSE2EoeG2YMLa7d5NLx2Q4BOfPI30V7tDHGmE6H9JC+CxL0imCSHoQ==
+"@kano/kit-app-shell-uwp@^0.0.3-alpha.64":
+  version "0.0.3-alpha.64"
+  resolved "https://registry.yarnpkg.com/@kano/kit-app-shell-uwp/-/kit-app-shell-uwp-0.0.3-alpha.64.tgz#d981e28fa4617c083aefa02242c499a4ab68e966"
+  integrity sha512-uqHUmfs9Vqr/UN/3/hjRqJxEwggonUB8nKtrPPkYoD2abwRUNmisTeSSyl3C4Yq2Jzq85owIQbToOWcuWsoW4w==
   dependencies:
     "@kano/devices-sdk-uwp" "^1.0.0-alpha.11"
-    "@kano/kit-app-shell-windows-store" "^0.0.3-alpha.62"
+    "@kano/kit-app-shell-windows-store" "^0.0.3-alpha.64"
     "@kano/web-bus" "^1.0.0-alpha.14"
     "@webcomponents/shadycss" "^1.9.0"
     "@webcomponents/webcomponentsjs" "^2.2.7"
@@ -789,13 +784,13 @@
     sharp "^0.22.1"
     text-encoding "^0.7.0"
 
-"@kano/kit-app-shell-web@0.0.3-alpha.61":
-  version "0.0.3-alpha.61"
-  resolved "https://registry.yarnpkg.com/@kano/kit-app-shell-web/-/kit-app-shell-web-0.0.3-alpha.61.tgz#3d1d3d827b5889db2e268e4e8d37a43635911e17"
-  integrity sha512-MiLyVRUg3Ft/mYvkAlvx7qnn5eIkzI33/hmYPpljRFCvL49cpqg4yZGHMbGlo5G7nURu/YtlUWiXtvkNLkwbwQ==
+"@kano/kit-app-shell-web@^0.0.3-alpha.64":
+  version "0.0.3-alpha.64"
+  resolved "https://registry.yarnpkg.com/@kano/kit-app-shell-web/-/kit-app-shell-web-0.0.3-alpha.64.tgz#82474accf764d05740250a873240ca0c65d0c5a8"
+  integrity sha512-DgQEgC4PB8oYe50p99jzxQrZj+EZy4dg5o3TW62iacNSKAMIBjsiDh4qEdBoOT9T/buuIFgCEnYUewrfhalbhQ==
   dependencies:
     "@kano/es6-server" "^1.0.3"
-    "@kano/kit-app-shell-core" "^0.0.3-alpha.61"
+    "@kano/kit-app-shell-core" "^0.0.3-alpha.64"
     "@kano/web-bus" "^1.0.0-alpha.14"
     "@webcomponents/shadycss" "^1.9.1"
     "@webcomponents/webcomponentsjs" "^2.2.9"
@@ -806,15 +801,16 @@
     livereload "^0.7.0"
     rimraf "^2.6.2"
     serve-static "^1.13.2"
+    sharp "^0.22.1"
     text-encoding "^0.7.0"
 
-"@kano/kit-app-shell-windows-store@^0.0.3-alpha.62":
-  version "0.0.3-alpha.62"
-  resolved "https://registry.yarnpkg.com/@kano/kit-app-shell-windows-store/-/kit-app-shell-windows-store-0.0.3-alpha.62.tgz#0d6b2ad9907ab1e80ade03b5bf59e4c95d0a6d52"
-  integrity sha512-flkHA+Bwpi2O1fNoMrGDkYJndI66BWWFK0/PFPXwjTWwX2V/1UguUCxPZ9Fdrx2j/T3nuVNBX8F0Ra14QMg9hA==
+"@kano/kit-app-shell-windows-store@^0.0.3-alpha.64":
+  version "0.0.3-alpha.64"
+  resolved "https://registry.yarnpkg.com/@kano/kit-app-shell-windows-store/-/kit-app-shell-windows-store-0.0.3-alpha.64.tgz#c0b368f61f27fa58d3f3652342e761c7ee30666a"
+  integrity sha512-uOqRm95TLPXPQl/gaFeJlFqqusYPm2Y9DMlUVoH+qvFC5aGoUt8/opoy4MHWxMrnIMWmmV0kEG9XMiWjvERV+A==
   dependencies:
-    "@kano/kit-app-shell-core" "^0.0.3-alpha.61"
-    "@kano/kit-app-shell-windows" "^0.0.3-alpha.62"
+    "@kano/kit-app-shell-core" "^0.0.3-alpha.64"
+    "@kano/kit-app-shell-windows" "^0.0.3-alpha.64"
     chalk "^2.4.1"
     electron-windows-store "^2.1.0"
     elementtree "^0.1.7"
@@ -822,24 +818,17 @@
     rimraf "^2.6.2"
     sharp "^0.22.1"
 
-"@kano/kit-app-shell-windows@^0.0.3-alpha.62":
-  version "0.0.3-alpha.62"
-  resolved "https://registry.yarnpkg.com/@kano/kit-app-shell-windows/-/kit-app-shell-windows-0.0.3-alpha.62.tgz#060dbefa85d7257c45153c33cc81c7513ec63479"
-  integrity sha512-0s07EKCSEEVzZNN/xvnAanbxdn3MSuXEkqSpE/jU/4BclToPUXqS7Y3fCnGzjWRbGYk5VyDyuBusb66w6MVMrg==
+"@kano/kit-app-shell-windows@^0.0.3-alpha.64":
+  version "0.0.3-alpha.64"
+  resolved "https://registry.yarnpkg.com/@kano/kit-app-shell-windows/-/kit-app-shell-windows-0.0.3-alpha.64.tgz#877aae23de2dd73a00b026aba5ac1359dcf1ec95"
+  integrity sha512-RFuMfFwddksjmLvf1QaI+AntRg3ePWY8LGQ7kTjC0wA7lAz7ctkkFb0k+kakV7jS+BP8+MxvSjk4L+/LmmZjZQ==
   dependencies:
-    "@kano/kit-app-shell-core" "^0.0.3-alpha.61"
-    "@kano/kit-app-shell-electron" "^0.0.3-alpha.62"
+    "@kano/kit-app-shell-core" "^0.0.3-alpha.64"
+    "@kano/kit-app-shell-electron" "^0.0.3-alpha.64"
     electron-packager "^12.2.0"
     innosetup-compiler "^5.5.9"
     mkdirp "^0.5.1"
     rimraf "^2.6.2"
-
-"@kano/styles@3.1.3":
-  version "3.1.3"
-  resolved "https://registry.yarnpkg.com/@kano/styles/-/styles-3.1.3.tgz#789337eea49b63e580926fc12454709d07487ebd"
-  integrity sha512-CKAD68zEXrTi0r95Azy+4ng+A7akZL2F+aPW5ck1aQxDqE6pAzA0pDKTR+/bdSssTe3uO+UlAlE/uCYyQ2iXng==
-  dependencies:
-    "@kano/icons-rendering" "^3.0.16"
 
 "@kano/web-bus@^1.0.0-alpha.14":
   version "1.0.0-alpha.14"
