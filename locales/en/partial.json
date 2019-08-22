@@ -25,8 +25,6 @@
     "next_up": "Next up:",
     "back_to_world": "'Back to ' + selectedWorld.name",
     "come_back_tomorrow_to_continue": "Come back tomorrow to continue this challenge",
-    "share_on_facebook": "Share on Facebook",
-    "share_on_twitter": "Share on Twitter",
     "email_address": "Email address",
     "share_with_friends": "Share with friends:",
     "skip_sharing": "Skip sharing",
