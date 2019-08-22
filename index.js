@@ -1,7 +1,8 @@
 "use strict";
 
 class MakeArt {
-    constructor(bus, config) {
+    constructor(kash) {
+        const { config } = kash
         this.root = document.createElement('div');
         this.root.appendChild(document.createElement('ng-view'));
         window.CONFIG = config.CONFIG;
