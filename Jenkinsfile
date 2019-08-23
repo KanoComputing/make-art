@@ -1,55 +1,74 @@
 #!groovy
-node {
-    stage('check environment') {
-        if (env.BRANCH_NAME=="master" || env.BRANCH_NAME=="jenkins") {
-            env.NODE_ENV = "staging"
-        } else if (env.BRANCH_NAME=="prod") {
-            env.NODE_ENV = "production"
+@Library('kanolib') _
+
+def utils;
+
+pipeline {
+    agent {
+        label 'ubuntu_18.04_with_docker'
+    }
+    stages {
+        stage('checkout') {
+            steps {
+                checkout scm
+            }
         }
-
-        if (env.NODE_ENV == "staging") {
-            load "/var/lib/jenkins/userContent/make-art-config/staging.env"
-        } else if (env.NODE_ENV == "production") {
-            load "/var/lib/jenkins/userContent/make-art-config/prod.env"
+        stage('install dependencies') {
+            steps {
+                script {
+                    docker.image('kanocomputing/node-gyp:10').inside('-u root') {
+                        sh "apk update && apk upgrade && apk add --no-cache bash git openssh"
+                        sh "mkdir -p ~/.ssh && ssh-keyscan github.com >> ~/.ssh/known_hosts"
+                        withCredentials([string(credentialsId: 'npm-read-only', variable: 'NPM_TOKEN')]) {
+                            sh "echo \"//registry.npmjs.org/:_authToken=${NPM_TOKEN}\" > .npmrc"
+                        }
+                        sshagent(['read-only-github']) {
+                            sh "yarn"
+                        }
+                    }
+                }
+            }
+        }
+        stage('build') {
+            steps {
+                script {
+                    def e = env.BRANCH_NAME == 'master' ? 'staging' : 'production';
+                    docker.image('node:10-alpine').inside {
+                        sh "yarn build"
+                        sh "yarn build:web --env=${e}"
+                    }
+                }
+            }
+        }
+        stage('release') {
+            steps {
+                script {
+                    if (env.BRANCH_NAME != "master") {
+                        return;
+                    }
+                    docker.image('ughly/alpine-aws-cli').inside {
+                        withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'kart', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]) {
+                            sh 'aws s3 sync ./out/www s3://art-staging.kano.me --acl public-read'
+                        }
+                    }
+                }
+            }
         }
     }
-
-    stage('checkout') {
-        checkout scm
-    }
-
-    stage('clean') {
-        sh "rm -rf node_modules"
-    }
-
-    stage('install dependencies') {
-        sh "npm install --ignore-scripts"
-        sh "bower i"
-    }
-
-    stage('build') {
-        sh "gulp default"
-    }
-
-    stage('compress') {
-        sh "gulp compress"
-    }
-
-    stage('deploy') {
-        if (env.BRANCH_NAME == "jenkins") {
-            echo 'deploy skipped'
-        } else if (env.NODE_ENV=="staging") {
-            deploy_staging()
-        } else if (env.NODE_ENV=="production") {
-            deploy_prod()
+    post {
+        regression {
+            script {
+                email.notifyCulprits()
+            }
+        }
+        fixed {
+            script {
+                email.notifyCulprits()
+            }
         }
     }
-}
-
-def deploy_staging() {
-    sh 'aws s3 sync ./www s3://art-staging.kano.me --region eu-west-1 --cache-control "max-age=600"'
-}
-
-def deploy_prod() {
-    sh 'aws s3 sync ./www s3://make-art-site-prod --region us-west-1 --cache-control "max-age=600"'
+    options {
+        buildDiscarder(logRotator(numToKeepStr: '20'))
+        timeout(time: 60, unit: 'MINUTES')
+    }
 }

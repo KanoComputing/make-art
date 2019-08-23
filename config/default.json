@@ -3,6 +3,7 @@
     "APP_DESCRIPTION": "Make Art with code",
     "ICONS": {
         "UWP": "icon/kano-draw-windows.png"
+        "FAVICON": "icon/kano-draw.png"
     },
     "UWP": {
         "PACKAGE_NAME": "KanoComputing.MakeArt",
@@ -18,16 +19,12 @@
                 "CONTENT_TYPE": "text/draw",
                 "FILE_TYPE": ".draw"
             }]
-        }, {
-            "TYPE": "SHARE_TARGET",
-            "DESCRIPTION": "Share on Kano World",
-            "DATA_FORMAT": "StorageItems",
-            "SUPPORTED_FILE_TYPES": [".draw"]
         }]
     },
     "BACKGROUND_COLOR": "#51555c",
     "CONFIG": {
         "API_URL_V2": "https://worldapi-dev.kano.me",
         "CHALLENGES_URL": "/assets/challenges/descriptors"
-    }
+    },
+    "SHARING_URL": "https://staging.sharing.kano.me"
 }
