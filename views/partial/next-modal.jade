@@ -31,12 +31,6 @@
                 a.button.button-mail(ng-click='openMailTab()')
                     i.icon-mail
 
-                a.button.button-facebook(ng-click='facebookShare(creation)')
-                    img(ng-src='{{ _config.UI_ROOT + "assets/button-icons/facebook-white.png" }}' title='${{ partial.share_on_facebook }}$')
-
-                a.button.button-twitter(target='_new', ng-href='{{ buildURL(creation) }}')
-                    img(ng-src='{{ _config.UI_ROOT + "assets/button-icons/twitter-white.png" }}' title='${{ partial.share_on_twitter }}$')
-
         .mail-tab.center(ng-if='mailTab')
             span ${{ partial.share_by_email }}$
             

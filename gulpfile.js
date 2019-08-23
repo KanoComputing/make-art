@@ -17,14 +17,10 @@ var gulp = require('gulp'),
     server = lr(),
     env = process.env.NODE_ENV || 'development',
     production = env === 'production',
-    segmentioId = process.env.SEGMENTIO_ID || null,
-    facebookAppId = process.env.FACEBOOK_APP_ID || null,
-    unknown_user = process.env.UNKNOWN_USER || null,
     api_url = process.env.API_URL || null,
     api_url_v2 = process.env.API_URL_V2 || null,
     world_url = process.env.WORLD_URL || null,
     offline = process.env.OFFLINE === 'true',
-    testmode = process.env.TEST_MODE === 'true',
     chDescriptorsPath = 'assets/challenges/descriptors/',
     libPath = 'lib/challenges/',
     locales = ["", "ja", "es-AR"],
@@ -39,7 +35,7 @@ var gulp = require('gulp'),
 function handleError(error) {
     console.log(color.bold('[ error caught ]:\n') + color.red(error));
 }
-
+console.log(env, "<=====ENV")
 gulp.task('styles', function () {
     return gulp.src(paths.styles.src)
         .pipe(stylus({
@@ -59,14 +55,10 @@ gulp.task('views', function () {
                 env             : env,
                 production      : production,
                 offline         : offline,
-                segmentioId     : segmentioId,
-                facebookAppId   : facebookAppId,
                 api_url         : api_url,
-                api_url_v2         : api_url_v2,
+                api_url_v2      : api_url_v2,
                 world_url       : world_url,
-                testmode        : testmode,
                 challenges_url  : "/assets/challenges/descriptors",
-                unknown_user    : unknown_user
             }, jadeHelpers)
         }))
         .on('error', handleError)

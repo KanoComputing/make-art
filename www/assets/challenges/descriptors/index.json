@@ -51,9 +51,7 @@
             "certificate_after": 2,
             "share_strategy": "optional",
             "socialText": {
-                "email": "Hack your way through video game history with Pixel Hack from Kano!",
-                "facebook": "Hack your way through video game history with #PixelHack from Kano",
-                "twitter": "Hack your way through video game history with #PixelHack from @TeamKano!\nhttp://art.kano.me/challenges/pixelhack/"
+                "email": "Hack your way through video game history with Pixel Hack from Kano!"
             },
             "challenges_num": 13
         },

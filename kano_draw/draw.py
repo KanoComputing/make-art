@@ -4,7 +4,6 @@ from kano.webapp import WebApp
 class Draw(WebApp):
     def __init__(self, load_path='', make=False, play=False):
         super(Draw, self).__init__()
-
         base_url = 'http://localhost:8000/{path}'
 
         if make:

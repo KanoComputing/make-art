@@ -102,8 +102,6 @@
     "share_strategy": "optional",
     "certificate_after": 2,
     "socialText": {
-        "email": "¡Hackea tu propio camino a lo largo de la historia de los videojuegos con Pixel Hack desde Kano!",
-        "facebook": "¡Hackea tu propio camino a lo largo de la historia de los videojuegos con #PixelHack desde Kano!",
-        "twitter": "¡Hackea tu propio camino a lo largo de la historia de los videojuegos con #PixelHack desde @TeamKano! \nhttp://art.kano.me/challenges/pixelhack/"
+        "email": "¡Hackea tu propio camino a lo largo de la historia de los videojuegos con Pixel Hack desde Kano!"
     }
 }

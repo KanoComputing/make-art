@@ -25,8 +25,6 @@
     "next_up": "次は：",
     "back_to_world": "selectedWorld.name + 'へ戻る'",
     "come_back_tomorrow_to_continue": "明日戻ってきて、このチャレンジを続けよう。",
-    "share_on_facebook": "Facebookで共有する",
-    "share_on_twitter": "Twitterで共有する",
     "email_address": "メールアドレス",
     "share_with_friends": "友達と共有する：",
     "skip_sharing": "共有しない",

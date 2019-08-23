@@ -3,7 +3,7 @@ html(lang='en',  xmlns:ng="http://angularjs.org")
     head
         //- Generic
         meta(charset='UTF-8')
-        link(rel="shortcut icon", href="/favicon.ico", type="image/x-icon")
+        link(rel="shortcut icon", href="/www/favicon.ico", type="image/x-icon")
 
         //- SEO
         meta(name="google-site-verification" content="OCQroE3v9jKgCFFNBnVeejsgn4Qb5IvNbr_oUyoU-Tw")
@@ -51,16 +51,13 @@ html(lang='en',  xmlns:ng="http://angularjs.org")
             window.CONFIG = {
                 PRODUCTION      : #{production},
                 OFFLINE         : #{offline},
-                SEGMENTIO_ID    : '#{segmentioId}',
-                FACEBOOK_APP_ID : '#{facebookAppId}',
                 API_URL         : '#{api_url}',
                 API_URL_V2      : '#{api_url_v2}',
                 WORLD_URL       : '#{world_url}',
                 CHALLENGES_URL  : '#{challenges_url}',
-                TEST_MODE       : #{testmode},
-                ENV             : '#{env}',
-                UNKNOWN_USER    : '#{unknown_user}'
+                ENV             : '#{env}'
             };
+            console.log(window.CONFIG, "<= window.CONFIG")
 
         //- App
         script(type='text/javascript').
