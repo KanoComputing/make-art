@@ -1,26 +1,25 @@
-header: .main-navigation.page-width(ng-if='offline || !selectedWorld || !selectedWorld.display_menu')
+header: .main-navigation.page-width
 
     a.logo(href='/')
-        img(ng-src='{{ _config.UI_ROOT + "assets/layout/logo.png" }}', alt='main logo')
-        div.title
-        | ${{ partial.make_art }}$
+        img(ng-src='{{ _config.UI_ROOT + "assets/layout/header-logo.svg" }}', alt='main logo')
     //- if !offline
     //-     a.kano-logo(href='http://www.kano.me', target='_blank')
 
     ul.nav.nav-left
 
         li: a(href='/challenges', ng-class='{ active: basePath === "challenge" || basePath === "challenges" }')
-            i.icon-menu
+            div.big.icon(ng-bind-html='icons.challenges | trust')
             | ${{ challenges.challenges }}$
 
         li: a(href='/playground', ng-class='{ active: basePath === "playground" }')
-            i.icon-game
+            div.icon(ng-bind-html='icons.create | trust')
             | ${{ challenges.playground }}$
 
+        li: a(href='https://world.kano.me')
+            div.big.icon(ng-bind-html='icons.world | trust')
+            | ${{ challenges.kano_world }}$
+
     ul.nav.nav-right(ng-cloak)
-        li.discover: a(ng-if="!offline" id='discover-kano', href='http://world.kano.me/start', target='_blank')
-            i.icon-cpu
-            | ${{ partial.discover_kano }}$
 
         li(ng-if='!offline && !loggedIn'): a(href='', ng-click='auth.openModal("login")')
             i.icon-login
@@ -39,6 +38,3 @@ header: .main-navigation.page-width(ng-if='offline || !selectedWorld || !selecte
             | ${{ partial.logout }}$
 
         li: button.close(ng-click='shutdown()', ng-if='offline'): i.icon-cross
-
-// Uncomment to enable banner
-// include banner

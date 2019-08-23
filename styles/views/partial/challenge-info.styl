@@ -1,13 +1,19 @@
 @media (max-height 400px)
     .modal-challenge-info
-        width 25%
-        min-width 223px
-        min-height 102px
+
+        .cover
+            background-size cover
+            background-position center center
+            width 240px
+            height 240px
+
+        .detail
+            padding 16px
 
 @media (min-height 401px)
     .modal-challenge-info
-        width 25%
-        height 57%
+        display flex
+        flex-direction column
         min-height 380px
         padding 0
 
@@ -23,12 +29,13 @@
             font-size 18px
 
         .cover
-            min-height 70%
             background-size cover
             background-position center center
+            width 420px
+            height 420px
 
         .detail
-            min-height 30%
+            padding 32px
             display flex
             flex-direction column
             justify-content center

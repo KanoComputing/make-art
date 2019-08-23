@@ -1,3 +1,13 @@
+@keyframes challenge-in {
+    from {
+        transform: translateY(50%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
 
 .page-challenges
     .weekday
@@ -14,11 +24,6 @@
             height 400px
             z-index -1
 
-            &.pull-left
-                left -200px
-            &.pull-right
-                right -200px
-
         .header
             position relative
             z-index 0
@@ -30,20 +35,7 @@
         .image
             top -40px
 
-            &.pull-left
-                bg-image("pixelhack/cubes-left", 400px 400px, false, no-repeat)
-
-            &.pull-right
-                bg-image("pixelhack/cubes-right", 400px 400px, false, no-repeat)
-
     &.mischiefweek2015
-        .image
-            &.pull-left
-                bg-image("mischiefweek/web-left", 400px 400px, false, no-repeat)
-
-            &.pull-right
-                bg-image("mischiefweek/web-right", 400px 400px, false, no-repeat)
-
         .header
             bg-image("mischiefweek/mischief-header", 100% 160px, false, no-repeat)
 
@@ -95,6 +87,25 @@
             box-sizing: border-box
             margin 0 20px 20px 0
             width 48%
+            animation-name challenge-in
+            animation-duration 300ms
+            animation-fill-mode both
+            animation-timing-function ease-out
+
+            &:nth-of-type(2)
+                animation-delay 50ms
+            &:nth-of-type(3)
+                animation-delay 100ms
+            &:nth-of-type(4)
+                animation-delay 150ms
+            &:nth-of-type(5)
+                animation-delay 200ms
+            &:nth-of-type(6)
+                animation-delay 250ms
+            &:nth-of-type(7)
+                animation-delay 300ms
+            &:nth-of-type(8)
+                animation-delay 350ms
 
             a.world-cover
                 width 100%
@@ -103,6 +114,10 @@
                 background-color #626770
                 position relative
                 border-radius(3px 3px 3px 3px)
+                transition transform 150ms linear
+
+                &:hover
+                    transform: scale(1.02);
 
                 h4
                     position absolute

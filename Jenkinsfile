@@ -48,7 +48,8 @@ pipeline {
                     }
                     docker.image('ughly/alpine-aws-cli').inside {
                         withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'kart', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]) {
-                            sh 'aws s3 sync ./out/www s3://art-staging.kano.me --acl public-read'
+                            sh 'aws s3 rm s3://art-staging.kano.me --recursive'
+                            sh 'aws s3 cp ./out/www s3://art-staging.kano.me --recursive --acl public-read'
                         }
                     }
                 }

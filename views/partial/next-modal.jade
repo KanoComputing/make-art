@@ -18,11 +18,3 @@
 
             p.description.small(ng-if='next.locked') ${{ partial.come_back_tomorrow_to_continue }}$
 
-
-        .social-sharing(ng-if='creation && !mailTab')
-            .image
-                img(ng-src='{{ creation.cover_url }}')
-
-            .detail
-                span.title {{ creation.title }}
-                .description {{ creation.description }}
