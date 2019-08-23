@@ -2,8 +2,8 @@
     "APP_NAME": "Make Art",
     "APP_DESCRIPTION": "Make Art with code",
     "ICONS": {
-        "UWP": "icon/kano-draw-windows.png"
-        "FAVICON": "icon/kano-draw.png"
+        "UWP": "icon/kano-draw-windows.png",
+        "FAVICON": "icon/kano-draw-windows.png"
     },
     "UWP": {
         "PACKAGE_NAME": "KanoComputing.MakeArt",
@@ -13,7 +13,7 @@
         "EXTENSIONS": [{
             "TYPE": "FILE_TYPE_ASSOCIATION",
             "NAME": "make-art",
-            "LOGO": "assets/kano-draw.png",
+            "LOGO": "assets/kano-draw-windows.png",
             "DISPLAY_NAME": "Make Art",
             "SUPPORTED_FILE_TYPES": [{
                 "CONTENT_TYPE": "text/draw",
@@ -23,7 +23,7 @@
     },
     "BACKGROUND_COLOR": "#51555c",
     "CONFIG": {
-        "API_URL_V2": "https://worldapi-dev.kano.me",
+        "API_URL_V2": "https://worldapi.kes.kano.me",
         "CHALLENGES_URL": "/assets/challenges/descriptors"
     },
     "SHARING_URL": "https://staging.sharing.kano.me"

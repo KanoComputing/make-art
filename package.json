@@ -28,7 +28,6 @@
         "angular": "^1.7.8",
         "angular-route": "^1.7.8",
         "coffeescript": "^2.4.1",
-        "kano-world-sdk": "^3.0.15",
         "marked": "^0.6.2"
     },
     "devDependencies": {
@@ -41,7 +40,6 @@
         "api-service": "^1.0.8",
         "babel-eslint": "^10.0.1",
         "chai": "3.2.x",
-        "cli-color": "^1.4.0",
         "del": "1.1.1",
         "eslint": "^5.16.0",
         "fast-glob": "^2.2.6",
@@ -58,10 +56,6 @@
         "lodash": "^4.17.11",
         "mocha": "2.3.x",
         "nib": "^1.1.2",
-        "rollup": "^1.10.1",
-        "rollup-plugin-commonjs": "^9.3.4",
-        "rollup-plugin-node-resolve": "^4.2.3",
-        "rollup-plugin-replace": "^2.2.0",
         "tiny-lr": "0.0.9"
     }
 }

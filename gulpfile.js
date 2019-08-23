@@ -6,7 +6,6 @@ var gulp = require('gulp'),
     livereload = require('gulp-livereload'),
     jadeHelpers = require('./utils/jadeHelpers'),
     _ = require('lodash'),
-    color = require('cli-color'),
     uglify = require('gulp-uglify'),
     ngAnnotate = require('gulp-ng-annotate'),
     griddy = require('griddy'),
@@ -33,7 +32,7 @@ var gulp = require('gulp'),
     };
 
 function handleError(error) {
-    console.log(color.bold('[ error caught ]:\n') + color.red(error));
+    console.error(error);
 }
 console.log(env, "<=====ENV")
 gulp.task('styles', function () {
