@@ -1,14 +1,5 @@
 .modal-next-challenge
-    width 25%
     padding 0
-
-    h3, p
-        text-transform none
-
-    h3
-        smooth-font()
-        font-weight bold
-        margin-bottom 5px
 
     p
         font-size 18px
@@ -30,11 +21,42 @@
             flex 1
             order 2
 
-    .cover
-        min-height 400px
-        background-size cover
-        background-position center center
-
     .detail
         padding 20px
-        
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+
+@media (max-height 400px)
+    .modal-next-challenge
+        .cover
+            background-size cover
+            background-position center center
+            height 240px
+
+        .detail
+            padding 16px
+
+@media (min-height 401px)
+    .modal-next-challenge
+        display flex
+        flex-direction column
+        min-height 380px
+        padding 0
+
+        h3, p
+            text-transform none
+
+        h3
+            smooth-font()
+            font-weight bold
+            margin-bottom 5px
+
+        p
+            font-size 18px
+
+        .cover
+            background-size cover
+            background-position center center
+            width 420px
+            height 420px

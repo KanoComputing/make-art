@@ -638,12 +638,14 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@kano/common@^1.0.1":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@kano/common/-/common-1.0.4.tgz#681b877bc83e28cac266f2855d2aeba3efa0f76a"
-  integrity sha512-0SwAeRe1UU/5hii6ScPqfoLrK73Jsjh2WXz8n1waNF5M8/0iiogEREtJJs6/T2Nlsk0ZD9tZrCCI4xOPgezv8g==
+"@kano/api-client@^3.4.18":
+  version "3.4.18"
+  resolved "https://registry.yarnpkg.com/@kano/api-client/-/api-client-3.4.18.tgz#ec5faf6b3c726e34031d4e027ad3dee02f5a2c27"
+  integrity sha512-9exKl4Y4aHTn6LpAYhZ4c0O17YvV3iBR5GQb7fYuhfY/le2GaR87Cys3iebx+2YV87ahE0C0SeYYdA0I8hIA/w==
+  dependencies:
+    "@kano/gamification-engine" "^2.5.5"
 
-"@kano/common@^1.0.2":
+"@kano/common@^1.0.1", "@kano/common@^1.0.2":
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/@kano/common/-/common-1.0.4.tgz#681b877bc83e28cac266f2855d2aeba3efa0f76a"
   integrity sha512-0SwAeRe1UU/5hii6ScPqfoLrK73Jsjh2WXz8n1waNF5M8/0iiogEREtJJs6/T2Nlsk0ZD9tZrCCI4xOPgezv8g==
@@ -692,7 +694,7 @@
     serve-static "^1.13.2"
     sywac "^1.2.1"
 
-"@kano/eslint-config@^1.0.1":
+"@kano/eslint-config@^1.0.0", "@kano/eslint-config@^1.0.1":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@kano/eslint-config/-/eslint-config-1.0.1.tgz#dab9a1e9dfbe562fd96eb217c0a77ef872b18c9e"
   integrity sha512-5kTiGWel43kP4/IuTtJp+sS56KOJB9iDWNOrhIhx5jLjiD/7ZNnAoDmMp3oV3UIFFQugElO1ArsYIbgiwU5EWw==
@@ -701,6 +703,15 @@
     eslint-config-airbnb-base "^13.1.0"
     eslint-plugin-html "^4.0.2"
     eslint-plugin-import "^2.15.0"
+
+"@kano/gamification-engine@^2.5.5":
+  version "2.5.5"
+  resolved "https://registry.yarnpkg.com/@kano/gamification-engine/-/gamification-engine-2.5.5.tgz#2df73aba3029bda72c7f99e3f511cde747ab6676"
+  integrity sha512-kTunXeYqgeIRHypu4rpwEAES8jXM12okL2LjCqPnI4VGMhBMUr9lnj0h+iyYmygNw9wZhGhiDeOfyBmlHjbNvw==
+  dependencies:
+    "@kano/eslint-config" "^1.0.0"
+    clone "^2.1.0"
+    commander "^2.9.0"
 
 "@kano/kit-app-shell-cli@^0.0.3-alpha.64":
   version "0.0.3-alpha.64"
@@ -1961,6 +1972,11 @@ clone@^1.0.0, clone@^1.0.2:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/clone/-/clone-1.0.4.tgz#da309cc263df15994c688ca902179ca3c7cd7c7e"
   integrity sha1-2jCcwmPfFZlMaIypAheco8fNfH4=
+
+clone@^2.1.0:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/clone/-/clone-2.1.2.tgz#1b7f4b9f591f1e8f83670401600345a02887435f"
+  integrity sha1-G39Ln1kfHo+DZwQBYANFoCiHQ18=
 
 code-point-at@^1.0.0:
   version "1.1.0"

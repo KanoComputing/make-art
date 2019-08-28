@@ -13,8 +13,8 @@
         "rollup": "rollup",
         "kash": "kash",
         "kart": "kart",
-        "build:web": "kash build web . -o out/www --bundle-only",
-        "build:uwp": "yarn build && kash build uwp . -o out --bundle-only",
+        "build:web": "kash build web . -o out/www",
+        "build:uwp": "yarn build && kash build uwp . -o out",
         "find-app:uwp": "node ./utils/find-app.js",
         "update-kash": "yarn add --dev @kano/kit-app-shell-cli @kano/kit-app-shell-web @kano/kit-app-shell-uwp"
     },
@@ -25,6 +25,7 @@
     },
     "license": "MIT",
     "dependencies": {
+        "@kano/api-client": "^3.4.18",
         "@kano/telemetry": "^1.0.2",
         "angular": "^1.7.8",
         "angular-route": "^1.7.8",
