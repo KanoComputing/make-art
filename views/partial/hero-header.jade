@@ -1,8 +1,2 @@
 .hero-header(ng-if='selectedWorld.hero_header && !offline')
     .hero-image(style='background-image: url({{ _config.UI_ROOT + "assets/pixelhack/pixelhack-hero.jpg" }})')
-    .hero-links
-        a.hero-link(ng-repeat='link in selectedWorld.hero_header.links' ng-href='{{link.location}}' target='_blank' title='{{link.text}}')
-            .hero-link-thumbnail
-                img.hero-link-image(ng-src='/www/assets/{{link.image}}')
-            .hero-link-text
-                | {{link.text}}

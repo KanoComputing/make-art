@@ -97,6 +97,7 @@ function apifyChallengeFn(next) {
                 'description',
                 'world_path',
                 'cover',
+                'noHeader',
                 'css_class',
                 'visibility',
                 'dependency',
@@ -106,7 +107,6 @@ function apifyChallengeFn(next) {
                 'certificate_after',
                 'display_menu',
                 'hero_header',
-                'updateForm',
                 'socialText'
             ],
             countNext = 0,
