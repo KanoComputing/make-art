@@ -17,6 +17,7 @@ You can try the app [here »](http://art.kano.me/)
 Build the app before running it
 
 - `yarn build`
+- `yarn build:web --env=production`
 
 ## Run
 

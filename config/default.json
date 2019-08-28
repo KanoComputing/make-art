@@ -23,8 +23,28 @@
     },
     "BACKGROUND_COLOR": "#51555c",
     "CONFIG": {
+        "DEBUG_LEVEL"     : 1,
+        "PRODUCTION"      : false,
+        "OFFLINE"         : false,
+        "API_URL"         : false,
         "API_URL_V2": "https://worldapi.kes.kano.me",
-        "CHALLENGES_URL": "assets/challenges/descriptors"
+        "WORLD_URL"       : false,
+        "CHALLENGES_URL": "assets/challenges/descriptors",
+        "DOMAIN_CFG": {
+            "hourofcode.kano.me": {
+                "mapToWorld": "pixelhack",
+                "hideShares": true
+            },
+            "csedweek.kano.me": {
+                "mapToWorld": "pixelhack",
+                "hideShares": true
+            }
+        },
+        "DEFAULT_AVATAR"  : "https://s3-eu-west-1.amazonaws.com/world.kano.me/users/avatars/563890fec4d6960800c721f7/avatar-circle.png",
+        "languageSynonyms": {
+            "color": ["colour"],
+            "grey": ["gray"]
+        }
     },
     "SHARING_URL": "https://staging.sharing.kano.me",
     "TELEMETRY_URL": "https://telemetry.kessandbox.co.uk/batch"

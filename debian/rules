@@ -24,8 +24,8 @@ override_dh_auto_build:
 	# Actually build
 	yarn
 	yarn install
-	OFFLINE=true NODE_ENV=production yarn build --production
-	OFFLINE=true NODE_ENV=production yarn build:web --production
+	OFFLINE=true NODE_ENV=production yarn build --env=production
+	OFFLINE=true NODE_ENV=production yarn build:web --env=production
 
 
 override_dh_auto_install override_dh_auto_test:
