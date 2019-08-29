@@ -38,3 +38,43 @@ data "aws_route53_zone" "main" {
   name         = "${var.domain}"
   private_zone = false
 }
+
+
+resource "aws_route53_record" "dev" {
+  provider = "aws.main"
+  zone_id  = "${data.aws_route53_zone.main.zone_id}"
+  name     = "art-dev.kano.me"
+  type     = "A"
+
+  alias {
+    name    = "${module.dev.cf_domain_name}"
+    zone_id = "${module.dev.cf_hosted_zone_id}"
+    evaluate_target_health = false
+  }
+}
+
+resource "aws_route53_record" "staging" {
+  provider = "aws.main"
+  zone_id  = "${data.aws_route53_zone.main.zone_id}"
+  name     = "art-staging.kano.me"
+  type     = "A"
+
+  alias {
+    name    = "${module.staging.cf_domain_name}"
+    zone_id = "${module.staging.cf_hosted_zone_id}"
+    evaluate_target_health = false
+  }
+}
+
+resource "aws_route53_record" "prod" {
+  provider = "aws.main"
+  zone_id  = "${data.aws_route53_zone.main.zone_id}"
+  name     = "art-prod.kano.me"
+  type     = "A"
+
+  alias {
+    name    = "${module.prod.cf_domain_name}"
+    zone_id = "${module.prod.cf_hosted_zone_id}"
+    evaluate_target_health = false
+  }
+}
