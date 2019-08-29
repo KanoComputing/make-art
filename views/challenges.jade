@@ -6,8 +6,8 @@
             span {{ selectedWorld ? selectedWorld.name : '${{ challenges.challenges }}$'}}
             .quests
                 a(href='/challenges')
-                    i.icon-arrow-left
-                    | ${{ challenges.challenges }}$
+                    div.big.icon(ng-bind-html='icons.back | trust')
+                    span ${{ challenges.challenges }}$
 
         .header(ng-if="selectedWorld && !selectedWorld.noHeader" ng-style='{ "background-image": selectedWorld.id && "url(" + _config.UI_ROOT + "assets/" + selectedWorld.id + "/header.png)" }')
 
