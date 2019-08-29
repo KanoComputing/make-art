@@ -8,8 +8,8 @@
             "world_path": "worlds/basic",
             "css_class": "basic-challenges",
             "share_strategy": "optional",
-            "type": "normal"
-
+            "type": "normal",
+            "noHeader": true
         },
         {
             "id": "medium",
@@ -20,7 +20,8 @@
             "css_class": "medium",
             "dependency": ["basic"],
             "share_strategy": "optional",
-            "type": "normal"
+            "type": "normal",
+            "noHeader": true
         },
         {
             "id": "pixelhack",
@@ -56,8 +57,8 @@
             "world_path": "worlds/summercamp",
             "css_class": "_summercamp",
             "share_strategy": "optional",
-            "type": "campaign"
-
+            "type": "campaign",
+            "noHeader": true
         },
         {
             "id": "mischiefweek2015",
@@ -80,7 +81,8 @@
             "css_class": "ozwaldboateng",
             "type": "campaign",
             "share_strategy": "optional",
-            "sales_popup_after": 2
+            "sales_popup_after": 2,
+            "noHeader": true
         }
     ]
 }

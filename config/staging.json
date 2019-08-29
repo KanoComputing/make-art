@@ -1,7 +1,7 @@
 {
     "CONFIG": {
         "API_URL": "https://api-staging.kano.me",
-        "API_URL_V2": "https://worldapi-staging.kes.kano.me",
+        "API_URL_V2": "https://worldapi-dev.kes.kano.me",
         "WORLD_URL": "https://world-staging.kano.me",
         "AUTH_INTEGRATION_URL": "https://staging.auth.kano.me/integration.js",
         "AUTH_SIGNUP_URL": "https://staging.auth.kano.me/index.html?env=staging#signup",
