@@ -3,7 +3,7 @@
 
 resource "aws_acm_certificate" "cert" {
   provider          = "aws.cloudfront"
-  domain_name       = "*.sharing.${var.domain}"
+  domain_name       = "*.${var.domain}"
   validation_method = "DNS"
   lifecycle {
     create_before_destroy = true
