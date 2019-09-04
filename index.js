@@ -1,4 +1,4 @@
-"use strict";
+// inject:ga
 import { Telemetry } from './lib/core/telemetry.js';
 import { TelemetryReporter } from './lib/core/reporter.js';
 import i18n from './lib/i18n.js';
