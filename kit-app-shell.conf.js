@@ -34,6 +34,13 @@ module.exports = {
         },
         replaces: [{
             include: [
+                require.resolve('./index.js'),
+            ],
+            values: {
+                [`// inject:ga`]: `import './ga.js';`,
+            },
+        },{
+            include: [
                 require.resolve('marked/marked.min.js'),
                 require.resolve('coffeescript/lib/coffeescript-browser-compiler-legacy/coffeescript.js'),
             ],
