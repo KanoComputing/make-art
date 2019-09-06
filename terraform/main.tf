@@ -92,6 +92,7 @@ module "prod" {
   source       = "git@github.com:KanoComputing/kes-terraform-modules//modules/aws/s3-cloudfront-website"
 
   fqdn                = "art-prod.kano.me"
+  aliases = ["art.kano.me"]
   ssl_certificate_arn = "${aws_acm_certificate_validation.cert.certificate_arn}"
   allowed_ips         = "${local.cf_ips}"
 
