@@ -67,6 +67,9 @@ pipeline {
         }
     }
     post {
+        always {
+            jiraSendBuildInfo site: 'kanocomputing.atlassian.net'
+        }
         regression {
             script {
                 email.notifyCulprits()
