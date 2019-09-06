@@ -3,7 +3,9 @@
 
 resource "aws_acm_certificate" "cert" {
   provider          = "aws.cloudfront"
-  domain_name       = "*.${var.domain}"
+  domain_name       = "art.kano.me"
+
+  subject_alternative_names = ["art-dev.kano.me", "art-staging.kano.me", "art-prod.kano.me"]
   validation_method = "DNS"
   lifecycle {
     create_before_destroy = true
@@ -11,13 +13,17 @@ resource "aws_acm_certificate" "cert" {
 }
 
 resource "aws_route53_record" "cert_validation" {
-  provider = "aws.main"
-  name     = "${aws_acm_certificate.cert.domain_validation_options.0.resource_record_name}"
-  type     = "${aws_acm_certificate.cert.domain_validation_options.0.resource_record_type}"
-  zone_id  = "${data.aws_route53_zone.main.id}"
-  records  = ["${aws_acm_certificate.cert.domain_validation_options.0.resource_record_value}"]
-  ttl      = 60
-  lifecycle {
+  count = "4"
+
+  provider = "aws.cloudfront"
+  zone_id  = "${element(data.aws_route53_zone.main.*.id, 0)}"
+
+  name    = "${lookup(aws_acm_certificate.cert.domain_validation_options[count.index], "resource_record_name")}"
+  type    = "${lookup(aws_acm_certificate.cert.domain_validation_options[count.index], "resource_record_type")}"
+  records = ["${lookup(aws_acm_certificate.cert.domain_validation_options[count.index], "resource_record_value")}"]
+  ttl     = 60
+
+    lifecycle {
     create_before_destroy = true
   }
 }
@@ -25,7 +31,7 @@ resource "aws_route53_record" "cert_validation" {
 resource "aws_acm_certificate_validation" "cert" {
   provider                = "aws.cloudfront"
   certificate_arn         = "${aws_acm_certificate.cert.arn}"
-  validation_record_fqdns = ["${aws_route53_record.cert_validation.fqdn}"]
+  validation_record_fqdns = ["${aws_route53_record.cert_validation.*.fqdn}"]
   lifecycle {
     create_before_destroy = true
   }
