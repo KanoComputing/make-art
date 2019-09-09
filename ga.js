@@ -191,5 +191,5 @@ window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 
-gtag('config', 'UA-45135100-24');
+gtag('config', 'UA-147463164-1');
 ga('set', 'anonymizeIp', true);
