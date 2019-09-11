@@ -13,7 +13,7 @@
         "EXTENSIONS": [{
             "TYPE": "FILE_TYPE_ASSOCIATION",
             "NAME": "make-art",
-            "LOGO": "assets/kano-draw-windows.png",
+            "LOGO": "icon/kano-draw-windows.png",
             "DISPLAY_NAME": "Make Art",
             "SUPPORTED_FILE_TYPES": [{
                 "CONTENT_TYPE": "text/draw",
@@ -21,7 +21,7 @@
             }]
         }]
     },
-    "BACKGROUND_COLOR": "#51555c",
+    "BACKGROUND_COLOR": "#333333",
     "CONFIG": {
         "DEBUG_LEVEL"     : 1,
         "PRODUCTION"      : false,

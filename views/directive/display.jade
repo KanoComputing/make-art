@@ -17,7 +17,7 @@
 
             p ${{ directive.error_text }}$
 
-    .actions
+    .actions(ng-class="mode")
         
         .position-indicator
             i(ng-class="{'icon-mouse-pointer': mouse, 'icon-plus': !mouse}")
@@ -35,11 +35,15 @@
             i.icon-reset
             | ${{ directive.reset }}$
 
+        a.action.action-set-wallpaper(ng-if='canSetWallapper() && mode === "playground"', ng-click='setWallpaper()')
+            i.icon-reset
+            | ${{ directive.set_wallpaper }}$
+
         .action.action-load(ng-show='mode === "playground"')
             i.icon-arrow-up
             | ${{ directive.load }}$
             input.file-load(type='file', accept='.draw')
 
-        export-modal(display='this', action='"save"')
-        export-modal(display='this', action='"share"')
+export-modal(display='this', action='"save"')
+export-modal(display='this', action='"share"')
 
