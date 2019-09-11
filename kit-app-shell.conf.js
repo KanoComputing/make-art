@@ -20,6 +20,7 @@ module.exports = {
             './assets/sounds/**/*',
             './assets/summercamp/**/*',
             './assets/*.png',
+            './icon/*.png',
             './www/css/**/*',
             './www/directive/**/*',
             './www/fonts/**/*',
