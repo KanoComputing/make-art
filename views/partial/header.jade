@@ -29,8 +29,8 @@ header: .main-navigation.page-width
             | ${{ partial.signup }}$
 
         li(ng-if='!offline && loggedIn')
-            a.user-display(ng-href='http://world.kano.me/users/{{ user.username }}', target='_blank')
-                .avatar: img(ng-src='{{ user.avatar.urls.circle || cfg.DEFAULT_AVATAR }}')
+            a.user-display(ng-href='http://world.kano.me/profile/creations', target='_blank')
+                .avatar: img(ng-src='{{ user.avatar }}')
                 | {{ user.username }}
 
         li(ng-if='!offline && loggedIn'): a(href='', ng-click='logout()')
