@@ -16,6 +16,7 @@ override_dh_auto_build:
 	# install Node and yarn
 	apt-get install --yes nodejs yarn
 	#login in npm
+	mkdir -p ~/
 	echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
 	# Actually build
 	yarn
