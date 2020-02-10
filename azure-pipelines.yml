@@ -1,0 +1,73 @@
+# Universal Windows Platform
+# Build a Universal Windows Platform project using Visual Studio.
+# Add steps that test and distribute an app, save build artifacts, and more:
+# https://aka.ms/yaml
+#
+# Requires MakeArt_StoreKey.pfx and MakeArt_StoreKey_Pass secrets to
+# be configured and available to the pipeline.
+#
+# Currently, the Windows Store app is an online-only app and points to the live
+# website where Make Art is deployed. For the time being, this pipeline only
+# builds the Windows app and therefore should only trigger when changes to the
+# app are made.
+
+
+trigger:
+  branches:
+    include:
+      - master
+  paths:
+    include:
+      - platforms/win/*
+
+pr:
+  branches:
+    include:
+      - '*'
+  paths:
+    include:
+      - platforms/win/*
+
+pool:
+  vmImage: 'windows-latest'
+
+variables:
+  solution: '**/*.sln'
+  buildPlatform: 'x86|x64'
+  buildConfiguration: 'Release'
+  appxPackageDir: '$(Build.ArtifactStagingDirectory)\AppxPackages\\'
+  storeKey: 'MakeArt_StoreKey.pfx'
+
+steps:
+  - task: DownloadSecureFile@1
+    displayName: 'Download the app Microsoft Store certificate'
+    inputs:
+      secureFile: '$(storeKey)'
+
+  - task: CopyFiles@2
+    displayName: 'Copy certificate to project'
+    inputs:
+      SourceFolder: '$(Agent.TempDirectory)'
+      Contents: '$(storeKey)'
+      TargetFolder: '$(Build.SourcesDirectory)\platforms\win\MakeArt\\'
+
+  - task: NuGetToolInstaller@1
+
+  - task: NuGetCommand@2
+    inputs:
+      restoreSolution: '$(solution)'
+
+  - task: VSBuild@1
+    displayName: 'Build app with Visual Studio'
+    inputs:
+      platform: 'any cpu'
+      solution: '$(solution)'
+      configuration: '$(buildConfiguration)'
+      msbuildArgs: '/p:AppxBundlePlatforms="$(buildPlatform)" /p:AppxPackageDir="$(appxPackageDir)" /p:AppxBundle=Always /p:UapAppxPackageBuildMode=CI /p:PackageCertificatePassword="$(MakeArt_StoreKey_Pass)"'
+
+  - task: PublishBuildArtifacts@1
+    displayName: 'Publish Windows app build artifacts'
+    inputs:
+      PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+      ArtifactName: 'WinMakeArt'
+      publishLocation: 'Container'
