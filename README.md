@@ -1,6 +1,8 @@
-# Make Art
+## Make Art
 
-> An app for learning programming using a basic CoffeeScript drawing API
+[![Deployment Status](https://vsrm.dev.azure.com/KanoComputing/_apis/public/Release/badge/7918f3eb-d68a-49f3-bccd-9ffe2f542c55/5/5)](https://vsrm.dev.azure.com/KanoComputing/_apis/public/Release/badge/7918f3eb-d68a-49f3-bccd-9ffe2f542c55/5/5)
+
+App for learning programming using a basic CoffeeScript drawing API
 
 ![Screenshot of the App](make-art-screenshot.png)
 
