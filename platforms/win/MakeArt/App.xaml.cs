@@ -15,6 +15,10 @@ using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
 using Windows.Foundation.Metadata;
 
+using KanoComputing.AppUpdate;
+
+using MakeArt.BackgroundTasks;
+
 
 namespace MakeArt
 {
@@ -23,6 +27,8 @@ namespace MakeArt
     /// </summary>
     sealed partial class App : Application
     {
+        private readonly bool MandatoryUpdate;
+
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
@@ -36,6 +42,9 @@ namespace MakeArt
 
             var localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
             localSettings.Values["BASE_URI"] = baseUri;
+
+            IAppUpdater updater = new AppUpdater();
+            this.MandatoryUpdate = updater.IsMandatoryUpdateAvailableFlagSet();
         }
 
         void SetupApp()
@@ -102,6 +111,12 @@ namespace MakeArt
                     }
                 }
             }
+            // Ensure all app background tasks are registered and start those
+            // that trigger when the app launches. When mandatory updates are
+            // available, background tasks are deactivated.
+            if (!this.MandatoryUpdate) {
+                _ = TaskManager.RegisterAllBackgroundTasksAsync(true);
+            }
 
             var localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
             var uri = localSettings.Values["BASE_URI"] as string;
@@ -130,7 +145,9 @@ namespace MakeArt
             if (rootFrame != null)
             {
                 bool isInternetConnected = NetworkInterface.GetIsNetworkAvailable();
-                if (!isInternetConnected) {
+                if (this.MandatoryUpdate) {
+                    rootFrame.Navigate(typeof(MandatoryUpdate));
+                } else if (!isInternetConnected) {
                     rootFrame.Navigate(typeof(OfflinePage), uri);
                 } else {
                     rootFrame.Navigate(typeof(MainPage), uri);
