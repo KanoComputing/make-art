@@ -1,26 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
+﻿/**
+ * App.xaml.cs
+ */
+
+
+using System;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Net.NetworkInformation;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
+using Windows.ApplicationModel.Resources;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Windows.Foundation.Metadata;
-using System.Diagnostics;
-using Windows.ApplicationModel.Background;
-using System.Threading.Tasks;
 
-using Windows.ApplicationModel.Resources;
-using System.Net.NetworkInformation;
 
 namespace MakeArt
 {
@@ -29,7 +23,6 @@ namespace MakeArt
     /// </summary>
     sealed partial class App : Application
     {
-        private Logger Log = Logger.getLogger();
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
@@ -72,7 +65,6 @@ namespace MakeArt
         /// <param name="e">Details about the launch request and process.</param>
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
-            Log.Channel.LogEvent("App Launched");
             SetupApp();
 
             bool canEnablePrelaunch = ApiInformation.IsMethodPresent("Windows.ApplicationModel.Core.CoreApplication", "EnablePrelaunch");
@@ -139,7 +131,7 @@ namespace MakeArt
             {
                 bool isInternetConnected = NetworkInterface.GetIsNetworkAvailable();
                 if (!isInternetConnected) {
-                    rootFrame.Navigate(typeof(Offline), uri);
+                    rootFrame.Navigate(typeof(OfflinePage), uri);
                 } else {
                     rootFrame.Navigate(typeof(MainPage), uri);
                 }
@@ -165,8 +157,6 @@ namespace MakeArt
         /// <param name="e">Details about the suspend request.</param>
         private void OnSuspending(object sender, SuspendingEventArgs e)
         {
-            Log.Channel.LogEvent("Suspending App");
-            Log.Dispose();
             var deferral = e.SuspendingOperation.GetDeferral();
             //TODO: Save application state and stop any background activity
             deferral.Complete();
