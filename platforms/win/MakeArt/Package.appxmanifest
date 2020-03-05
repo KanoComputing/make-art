@@ -23,7 +23,7 @@
             <uap:ShowOn Tile="square150x150Logo"/>
           </uap:ShowNameOnTiles>
         </uap:DefaultTile>
-        <uap:SplashScreen Image="Assets\SplashScreen.png" />
+        <uap:SplashScreen Image="Assets\SplashScreen.png"  BackgroundColor="#333333"/>
       </uap:VisualElements>
       <Extensions>
         <uap:Extension Category="windows.protocol">
