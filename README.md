@@ -1,6 +1,7 @@
 ## Make Art
 
-[![Deployment Status](https://vsrm.dev.azure.com/KanoComputing/_apis/public/Release/badge/7918f3eb-d68a-49f3-bccd-9ffe2f542c55/5/5)](https://vsrm.dev.azure.com/KanoComputing/_apis/public/Release/badge/7918f3eb-d68a-49f3-bccd-9ffe2f542c55/5/5)
+[![Build Status](https://dev.azure.com/KanoComputing/Kano%20PC/_apis/build/status/KanoComputing.make-art?branchName=master)](https://dev.azure.com/KanoComputing/Kano%20PC/_build?definitionId=26&_a=summary)
+[![Deployment Status](https://vsrm.dev.azure.com/KanoComputing/_apis/public/Release/badge/7918f3eb-d68a-49f3-bccd-9ffe2f542c55/5/5)](https://dev.azure.com/KanoComputing/Kano%20PC/_release?_a=releases&view=mine&definitionId=5)
 
 App for learning programming using a basic CoffeeScript drawing API
 
