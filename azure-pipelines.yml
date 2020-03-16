@@ -52,8 +52,10 @@ steps:
       TargetFolder: '$(Build.SourcesDirectory)\platforms\win\MakeArt\\'
 
   - task: NuGetToolInstaller@1
+    displayName: 'Install NuGet client'
 
   - task: NuGetCommand@2
+    displayName: 'Fetch project NuGet dependencies'
     inputs:
       restoreSolution: '$(solution)'
 

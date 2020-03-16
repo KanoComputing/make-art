@@ -15,6 +15,8 @@ using System.Threading.Tasks;
 using Windows.ApplicationModel.Background;
 using Windows.Storage;
 
+using KanoComputing.Display;
+
 
 namespace MakeArt.BackgroundTasks {
     public sealed class UpdateTask : IBackgroundTask {
@@ -30,6 +32,10 @@ namespace MakeArt.BackgroundTasks {
             try {
                 await CleanUpBackgroundTasksAsync();
                 CleanUpLocalSettings();
+
+                // Configure the application to launch maximised for the first time.
+                IWindowManager windowManager = new WindowManager();
+                windowManager.MaximiseWindow();
 
                 Debug.WriteLine("UpdateTask: Finished successfully");
 

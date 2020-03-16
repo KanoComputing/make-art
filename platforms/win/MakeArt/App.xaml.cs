@@ -16,6 +16,7 @@ using Windows.UI.Xaml.Navigation;
 using Windows.Foundation.Metadata;
 
 using KanoComputing.AppUpdate;
+using KanoComputing.Display;
 
 using MakeArt.BackgroundTasks;
 
@@ -50,6 +51,10 @@ namespace MakeArt
         void SetupApp()
         {
             Frame rootFrame = Window.Current.Content as Frame;
+
+            // Configure the application to launch maximised for the first time.
+            IWindowManager windowManager = new WindowManager();
+            windowManager.MaximiseWindow();
 
             // Do not repeat app initialization when the Window already has content,
             // just ensure that the window is active
