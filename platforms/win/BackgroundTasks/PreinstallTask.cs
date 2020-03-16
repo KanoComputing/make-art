@@ -16,6 +16,8 @@ using System.Diagnostics;
 using Windows.ApplicationModel.Background;
 using Windows.Foundation;
 
+using KanoComputing.Display;
+
 
 namespace MakeArt.BackgroundTasks {
     public sealed class PreinstallTask : IBackgroundTask {
@@ -27,7 +29,11 @@ namespace MakeArt.BackgroundTasks {
                 // Register all app background tasks.
                 IAsyncOperation<bool> registerTask = TaskManager.RegisterAllBackgroundTasksAsync(false);
                 await registerTask;
-                
+
+                // Configure the application to launch maximised for the first time.
+                IWindowManager windowManager = new WindowManager();
+                windowManager.MaximiseWindow();
+
                 Debug.WriteLine("PreinstallTask: Finished successfully");
             }
             catch (Exception e) {
