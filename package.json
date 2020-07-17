@@ -55,7 +55,7 @@
         "gulp-stylus": "2.7.0",
         "gulp-uglify": "^2.1.2",
         "kart": "^0.9.2",
-        "lodash": "^4.17.11",
+        "lodash": "^4.17.19",
         "mocha": "2.3.x",
         "nib": "^1.1.2",
         "tiny-lr": "0.0.9"
