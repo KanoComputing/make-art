@@ -9,6 +9,7 @@ App for learning programming using a basic CoffeeScript drawing API
 
 You can try the app [here »](http://art.kano.me/)
 
+
 ## Setup
 
     git clone git@github.com:KanoComputing/make-art.git
@@ -90,3 +91,9 @@ Under the Pi desktop start menu, under Programming, there should now be a "Code 
 VS Code can also be launched from the command line with -
 
 `code-oss`
+
+
+## Runbooks
+
+ * [Setup for Windows Application Development](https://kanocomputing.atlassian.net/wiki/spaces/PC/pages/2562916353/Setup+for+Windows+Application+Development)
+ * [Continuous Integration and Delivery Processes](https://kanocomputing.atlassian.net/wiki/spaces/PC/pages/620232712/Continuous+Integration+and+Delivery+Processes)
