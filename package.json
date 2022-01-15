@@ -30,7 +30,7 @@
         "angular": "^1.7.8",
         "angular-route": "^1.7.8",
         "coffeescript": "^2.4.1",
-        "marked": "^0.6.2"
+        "marked": "^4.0.10"
     },
     "devDependencies": {
         "@kano/eslint-config": "^1.0.1",
